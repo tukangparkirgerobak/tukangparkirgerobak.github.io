@@ -1,0 +1,682 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha256-L/W5Wfqfa0sdBNIKN9cG6QA5F2qx4qICmU2VgLruv9Y=" crossorigin="anonymous" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/css/lightbox.min.css" integrity="sha256-tBxlolRHP9uMsEFKVk+hk//ekOlXOixLKvye5W2WR5c=" crossorigin="anonymous" />
+		<link href="https://fonts.googleapis.com/css?family=Mr+Dafoe" rel="stylesheet" type="text/css">
+
+		<style type="text/css">
+			html,body{font-family:"Open Sans",Arial,sans-serif;font-size:14px;font-weight:400;background:#f3f3f3 url(http://mechanics.civil.tohoku.ac.jp/bear/nisikozo/s5img1696.gif
+) no-repeat center center fixed;background-size:cover;height:100%}#title{font-family:"Mr Dafoe",Times,serif;font-size:34px;background:rgba(255,255,255,.8);margin-bottom:34px}.header{padding-bottom:13px;margin-bottom:13px;border-bottom:1px solid #eee}a{color:#26ADE4;text-decoration:none}#title a{color:#333;margin-left:21px}#title a:hover{text-decoration:none;color:#26ADE4}.sidebar ul{margin:0;padding:0}.sidebar ul li{list-style:none}.footer{margin-top:21px;padding-top:13px;border-top:1px solid #eee}.footer a{margin:0 15px}.navi{margin:13px 0 13px 0;padding:13px}.navi a{margin:5px 2px;font-size:95%}.main{margin-top: 6rem;}.form-inline .form-control{min-width: 300px;}.v-cover{height: 380px; object-fit: cover;}.v-image{height: 200px; object-fit: cover;}.dwn-cover{max-height: 460px; object-fit: cover;}.main{margin-top: 6rem;}.form-inline .form-control{min-width: 300px;}			
+		</style>
+
+		<title>棒材の支配方程式</title>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/", 
+  "@type": "Article", 
+  "author": {
+    "@type": "Person",
+    "name": "James"
+  },
+  "headline": "棒材の支配方程式",
+  "datePublished": "2021-04-24",
+  "image": [http://mechanics.civil.tohoku.ac.jp/bear/civil/edu/edu3/img149.gif,https://image.slidesharecdn.com/japanesenonlinearmultiscaleanalysis20181207-181207031052/95/japanese-nonlinear-multiscale-analysis-20181207-1-638.jpg?cb=1544152341,1Pl8WDiOXxPOPM],
+  "publisher": {
+    "@type": "Organization",
+    "name": "Tukang Parkir Gerobak",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://via.placeholder.com/512.png?text=棒材の支配方程式",
+      "width": 512,
+      "height": 512
+    }
+  }
+}
+</script>
+		<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-957NGNKQ70"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-957NGNKQ70');
+</script>
+
+<script type='text/javascript' src='//jc32arlvqpv8.com/1a/82/2e/1a822ef8a40a0fbab3c4ea12a5d2bb02.js'></script>
+</head>
+	<body>
+		<header class="bg-white fixed-top">			
+			<nav class="navbar navbar-light bg-white mb-0">
+				<div class="container justify-content-center justify-content-sm-between">	
+				  <a href="/" title="Blog" class="navbar-brand mb-1">Blog</a>
+				  				</div>			  
+			</nav>				
+		</header>
+		<main class="main container bg-white">
+			<div class="col-md-12 my-4" align="center">
+				<div class="d-block p-4">
+	<br/><center>
+<!-- TOP BANNER ADS -->
+</center><br/>
+</div>			</div>
+			<div class="row header">
+				<div class="col-sm-12 text-center p-2">
+						<h1>棒材の支配方程式</h1>
+
+	
+	<div class="navi text-center">
+										<a class="badge badge-success" href="/%EF%BC%92%E6%AC%A1%E6%96%B9%E7%A8%8B%E5%BC%8F-%E5%82%BE%E3%81%8D-%E5%88%87%E7%89%87-excel.html">２次方程式 傾き 切片 excel</a>
+											<a class="badge badge-light" href="/%E6%9C%AB%E3%81%A3%E5%AD%90%E3%81%AE%E4%B8%80%E4%BA%BA%E5%A8%98%E3%81%A8%E3%81%8A%E5%85%84%E3%81%A1%E3%82%83%E3%82%93%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%AE%E6%9C%9D%E6%80%A7%E6%B4%BB-%E9%9C%A7%E5%B3%B6%E3%81%95%E3%81%8F%E3%82%89-avg.html">末っ子の一人娘とお兄ちゃんお父さんの朝性活 霧島さくら avg</a>
+											<a class="badge badge-dark" href="/%E7%B7%9A%E5%BD%A2%E6%96%B9%E7%A8%8B%E5%BC%8F%E3%81%A8%E7%B7%9A%E5%BD%A2%E8%A8%88%E7%94%BB%E6%B3%95-%E5%88%9D%E6%AD%A9%E3%81%8B%E3%82%89%E3%81%AE%E6%95%B0%E5%AD%A6-2.html">線形方程式と線形計画法 初歩からの数学 2</a>
+											<a class="badge badge-info" href="/%E7%AD%86%E7%A6%8D%E5%88%A9%E3%81%AE%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93.html">筆禍利のお父さん</a>
+											<a class="badge badge-primary" href="/%EF%BC%93%E6%AC%A1%E6%96%B9%E7%A8%8B%E5%BC%8F-%EF%BC%93%E3%81%A4%E3%81%AE%E8%A7%A3-%EF%BC%92%E3%81%A4%E3%81%8C%E7%AD%89%E3%81%97%E3%81%84-%E8%A7%A3%E3%81%A8%E4%BF%82%E6%95%B0.html">３次方程式 ３つの解 ２つが等しい 解と係数</a>
+											<a class="badge badge-dark" href="/%E9%81%A9%E9%BD%A2%E6%9C%9F%E6%83%91%E3%80%85%E3%83%AD%E3%83%9E%E3%83%B3%E3%82%B9-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%8C%E5%A4%89-2017.html">適齢期惑々ロマンス お父さんが変 2017</a>
+											<a class="badge badge-success" href="/%E9%80%A3%E7%AB%8B1%E6%AC%A1%E6%96%B9%E7%A8%8B%E5%BC%8F-%E6%9C%80%E3%82%82%E5%B0%91%E3%81%AA%E3%81%84%E8%A8%88%E7%AE%97%E9%87%8F%E3%81%A7%E3%81%AE%E8%A7%A3%E6%B3%95.html">連立1次方程式 最も少ない計算量での解法</a>
+											<a class="badge badge-secondary" href="/%E6%9C%80%E5%B0%8F2%E4%B9%97%E6%B3%95-%E6%AD%A3%E8%A6%8F%E6%96%B9%E7%A8%8B%E5%BC%8F-2%E6%AC%A1.html">最小2乗法 正規方程式 2次</a>
+											<a class="badge badge-success" href="/%E7%9B%B8%E5%AF%BE-%E8%AB%96-%E7%9A%84-%E3%83%9C%E3%83%AB%E3%83%84%E3%83%9E%E3%83%B3-%E6%96%B9%E7%A8%8B%E5%BC%8F.html">相対 論 的 ボルツマン 方程式</a>
+											<a class="badge badge-light" href="/%E8%A4%87%E7%B4%A0%E6%95%B0-%E3%81%A8%E6%96%B9%E7%A8%8B%E5%BC%8F-%E3%83%88%E3%83%A9%E3%82%A4.html">複素数 と方程式 トライ</a>
+											<a class="badge badge-light" href="/%E7%95%B0%E4%BA%BA%E3%81%9F%E3%81%A1%E3%81%A8%E3%81%AE%E5%A4%8F-%E7%A7%81%E3%81%AE%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93.html">異人たちとの夏 私のお父さん</a>
+											<a class="badge badge-secondary" href="/%E7%82%AD%E9%85%B8%E3%81%8C%E5%BC%BE%E3%81%91%E3%82%8B%E3%82%B9%E3%83%94%E3%83%BC%E3%83%89-%E6%96%B9%E7%A8%8B%E5%BC%8F.html">炭酸が弾けるスピード 方程式</a>
+											<a class="badge badge-secondary" href="/%E7%B4%94%E5%90%8D%E3%82%82%E3%82%82-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%AE%E5%A4%A7%E9%87%8F%E4%B8%AD%E5%87%BA%E3%81%97%E7%97%99%E6%94%A3%E3%82%A2%E3%82%AF%E3%83%A1.html">純名もも お父さんの大量中出し痙攣アクメ</a>
+											<a class="badge badge-success" href="/%E9%80%A3%E7%AB%8B2%E5%85%83%E4%B8%80%E6%AC%A1%E4%B8%8D%E5%AE%9A%E6%96%B9%E7%A8%8B%E5%BC%8F.html">連立2元一次不定方程式</a>
+											<a class="badge badge-info" href="/%E7%88%B6%E5%B3%B6-%E6%B0%B4-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E4%BB%8A%E4%BD%95%E3%81%97%E3%81%A6%E3%82%8B.html">父島 水 お父さん今何してる</a>
+						</div>
+<center>
+	<!-- MIDDLE BANNER ADS -->
+<script type="text/javascript">
+	atOptions = {
+		'key' : '2b77887421e2587a1a1b1d7c8a31a9e0',
+		'format' : 'iframe',
+		'height' : 250,
+		'width' : 300,
+		'params' : {}
+	};
+	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://jc32arlvqpv8.com/2b77887421e2587a1a1b1d7c8a31a9e0/invoke.js"></scr' + 'ipt>');
+</script>
+		
+	</center>
+					
+				</div>
+			</div>
+			<div class="row content mb-4">
+				<div class="col-md-12">					
+					
+	
+	<div class="card-columns">
+						
+	  <div class='card'>
+	  	<a href="http://mechanics.civil.tohoku.ac.jp/bear/civil/edu/edu3/img149.gif" data-lightbox="roadtrip" data-title="目的">
+						<img class="card-img" src="http://mechanics.civil.tohoku.ac.jp/bear/civil/edu/edu3/img149.gif" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0nC5OgwKksjj3dkuw7dJ3jKPiEDvfnHjRfs9-s9GUNe0G4HAaeXiL1Nyl7ck5KdTJxZo';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				目的
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://mechanics.civil.tohoku.ac.jp/bear/nisikozo/s2img1475.gif" data-lightbox="roadtrip" data-title="8 2 支配方程式と境界条件">
+						<img class="card-img" src="http://mechanics.civil.tohoku.ac.jp/bear/nisikozo/s2img1475.gif" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqe1ruf16M-4aTdOJecZQZZkcyafu4RzDvI-8Q6LMNdg5wA2JI30HVlDSeqlWu6bcV6sY';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				8 2 支配方程式と境界条件
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://mechanics.civil.tohoku.ac.jp/bear/nisikozo/s2img1446.gif" data-lightbox="roadtrip" data-title="8 2 支配方程式と境界条件">
+						<img class="card-img" src="http://mechanics.civil.tohoku.ac.jp/bear/nisikozo/s2img1446.gif" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTptUQ-9i0SSLc90z8eXKBoBJ_QCIu1qaUszZnWP-dsB4KxA_CEa-gpoLGr2bxECXizVQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				8 2 支配方程式と境界条件
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://gijutsuya.net/wp-content/uploads/2017/02/5e1cc9284384f3caafc9b0afa3e90095-300x207.jpg" data-lightbox="roadtrip" data-title="弾性体を表現する支配方程式 技術屋 Net">
+						<img class="card-img" src="https://gijutsuya.net/wp-content/uploads/2017/02/5e1cc9284384f3caafc9b0afa3e90095-300x207.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToqa_uA9-IFlEIcl6tiyrsRoTdOJfzz-haAbGO1DbiEwjqWz2IT9KL45XMOiTghAkQN0k';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				弾性体を表現する支配方程式 技術屋 Net
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://cdn-ak.f.st-hatena.com/images/fotolife/y/y-d-spast-impe1/20171222/20171222011128.png" data-lightbox="roadtrip" data-title="大学３年初期に知っておきたかった弾性力学のこと １ 狼に埋もれる">
+						<img class="card-img" src="https://cdn-ak.f.st-hatena.com/images/fotolife/y/y-d-spast-impe1/20171222/20171222011128.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgIN2h5hK-NKV6ijtEfzJ364uG-SZMST95mf9Rn0LzjFMkI9Mxk40QPnann9rlWFtHdeA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				大学３年初期に知っておきたかった弾性力学のこと １ 狼に埋もれる
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://gijutsuya.net/wp-content/uploads/2017/02/6bd20c5403c6db059dfbcdcb16104957-300x266.jpg" data-lightbox="roadtrip" data-title="弾性体を表現する支配方程式 技術屋 Net">
+						<img class="card-img" src="https://gijutsuya.net/wp-content/uploads/2017/02/6bd20c5403c6db059dfbcdcb16104957-300x266.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0XFiK8jtRYHNwL9-kky1_3tgtLGxW_qJtNUSkmcq37MoupZ0ckga8a4QquX0_hpQ8pPM';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				弾性体を表現する支配方程式 技術屋 Net
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+				<div class='card'>	
+			<div class="d-block p-4">
+	</div>		  	
+		  	<h3 class="h6 p-2"><b></b></h3>
+					</div>
+		
+						
+	  <div class='card'>
+	  	<a href="https://image.slidesharecdn.com/japanesenonlinearmultiscaleanalysis20181207-181207031052/95/japanese-nonlinear-multiscale-analysis-20181207-1-638.jpg?cb=1544152341" data-lightbox="roadtrip" data-title="Japanese Nonlinear Multiscale Analysis 20181207">
+						<img class="card-img" src="https://image.slidesharecdn.com/japanesenonlinearmultiscaleanalysis20181207-181207031052/95/japanese-nonlinear-multiscale-analysis-20181207-1-638.jpg?cb=1544152341" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgZTKmfj7v4CyUsJaw9xu3kiD_hEQqeD71qqxRG9r9wLqQ3-osKKRH1sFWUTmb-7FzCuc';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Japanese Nonlinear Multiscale Analysis 20181207
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://www.isc.meiji.ac.jp/~re00079/HT.2020/pict/HT202031.jpg" data-lightbox="roadtrip" data-title="伝熱工学 2020年度 春学期 3年生">
+						<img class="card-img" src="http://www.isc.meiji.ac.jp/~re00079/HT.2020/pict/HT202031.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXN_lQE0pDVfIW6UePWzjmgLLRqiHQGr-MJKY1hGTOJr5cvaVDKS2kRUFVKOeM6xAoU00';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				伝熱工学 2020年度 春学期 3年生
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://mechanics.civil.tohoku.ac.jp/bear/nisifigs/f040111.gif" data-lightbox="roadtrip" data-title="4 1 梁の境界値問題">
+						<img class="card-img" src="http://mechanics.civil.tohoku.ac.jp/bear/nisifigs/f040111.gif" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxuxZNWk2wfAc5cAJr33STg9BjqXix6c4x-sFfB_4VBeQnrCTxdwWBqKTOhJEZvFOTKj8';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				4 1 梁の境界値問題
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://mechanics.civil.tohoku.ac.jp/bear/nisikozo/s1img1099.gif" data-lightbox="roadtrip" data-title="4 1 梁の境界値問題">
+						<img class="card-img" src="http://mechanics.civil.tohoku.ac.jp/bear/nisikozo/s1img1099.gif" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPaHnnUAXFEQ3JR52Nf149XGhMBUBrIwa1mCVL6bLOvXjq6kDVuxHcn090_R5bXjTsBP4';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				4 1 梁の境界値問題
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://image.slidesharecdn.com/japanesenonlinearmultiscaleanalysis20181207-181207031052/95/japanese-nonlinear-multiscale-analysis-20181207-10-638.jpg?cb=1544152341" data-lightbox="roadtrip" data-title="Japanese Nonlinear Multiscale Analysis 20181207">
+						<img class="card-img" src="https://image.slidesharecdn.com/japanesenonlinearmultiscaleanalysis20181207-181207031052/95/japanese-nonlinear-multiscale-analysis-20181207-10-638.jpg?cb=1544152341" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR42KQex0_HSl7AeP4ojs3UQaOFQdrybNS8UiT3exFbBPdQqMSOVAyRdktetfC2RB0vym0';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Japanese Nonlinear Multiscale Analysis 20181207
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://mechanics.civil.tohoku.ac.jp/bear/nisikozo/s1img1153.gif" data-lightbox="roadtrip" data-title="4 1 梁の境界値問題">
+						<img class="card-img" src="http://mechanics.civil.tohoku.ac.jp/bear/nisikozo/s1img1153.gif" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWhzGov8oU2Iyy8sH6jb7GsyKxKVEXONaOFtu-IPHwf6_gcNW2mUsWo1CNkfNGIeu3eGI';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				4 1 梁の境界値問題
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://mechanics.civil.tohoku.ac.jp/bear/nisifigs/f060201.gif" data-lightbox="roadtrip" data-title="6 4 梁 柱の力学">
+						<img class="card-img" src="http://mechanics.civil.tohoku.ac.jp/bear/nisifigs/f060201.gif" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0SwaCOgnLa3CtXiN92F4mw2PY-6vV54Jp6OLDfWhxQsChCj6J2ZkxB-GBiRjBZnCFRj0';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				6 4 梁 柱の力学
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://mechanics.civil.tohoku.ac.jp/bear/nisikozo/s5img1102.gif" data-lightbox="roadtrip" data-title="D 1 支配方程式">
+						<img class="card-img" src="http://mechanics.civil.tohoku.ac.jp/bear/nisikozo/s5img1102.gif" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLj3rEj2gjF3M6SurCiz6hh8vox2kC7P_Kqa3Y-2tORrsbuAEV24ZSqjZBHhdPlxRvatw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				D 1 支配方程式
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="r3Zzvc_SI1YxTM" data-lightbox="roadtrip" data-title="Http Kuroda Yz Yamagata U Ac Jp Zairiki I 2016 Final Test Pdf">
+						<img class="card-img" src="r3Zzvc_SI1YxTM" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3P4kRe1rWlqhmptgCls8w2A8gt1Eq4c0RnRLYULlKA3n2llxa9Eixa6RApXzu2FchzXg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Http Kuroda Yz Yamagata U Ac Jp Zairiki I 2016 Final Test Pdf
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://image.slidesharecdn.com/japanesenonlinearmultiscaleanalysis20181207-181207031052/95/japanese-nonlinear-multiscale-analysis-20181207-2-638.jpg?cb=1544152341" data-lightbox="roadtrip" data-title="Japanese Nonlinear Multiscale Analysis 20181207">
+						<img class="card-img" src="https://image.slidesharecdn.com/japanesenonlinearmultiscaleanalysis20181207-181207031052/95/japanese-nonlinear-multiscale-analysis-20181207-2-638.jpg?cb=1544152341" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNgKHMa5TIx5eLQDMYI__7eff0HnhiSxANYnshJgxrMXcn2tFUxWv-uk_7pdrCJZXaC38';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Japanese Nonlinear Multiscale Analysis 20181207
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="TiKdRbugzySm4M" data-lightbox="roadtrip" data-title="2">
+						<img class="card-img" src="TiKdRbugzySm4M" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqJ-q4_WeNOvGB3SxaUCCCLKum59_fz0AdUig603lqatjA7ezTvoALpcWNW1IMNzlSvA4';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				2
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="OOhXkCSUJjls1M" data-lightbox="roadtrip" data-title="2">
+						<img class="card-img" src="OOhXkCSUJjls1M" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuWI-wBP1qgfxyDikb_tUfHNvGQjTAcqVy1F6l84RWyAAWsa6laoBw4hccAcXHl3aGZy0';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				2
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://image.slidesharecdn.com/japanesenonlinearmultiscaleanalysis20181207-181207031052/95/japanese-nonlinear-multiscale-analysis-20181207-11-638.jpg?cb=1544152341" data-lightbox="roadtrip" data-title="Japanese Nonlinear Multiscale Analysis 20181207">
+						<img class="card-img" src="https://image.slidesharecdn.com/japanesenonlinearmultiscaleanalysis20181207-181207031052/95/japanese-nonlinear-multiscale-analysis-20181207-11-638.jpg?cb=1544152341" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEPS8kqErMZWz6LsqY2J8EFGV-KJOHdLzHlf2_S_mOoycTSs4PE0wcRDAi5uRaBYyLhQ4';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Japanese Nonlinear Multiscale Analysis 20181207
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://mechanics.civil.tohoku.ac.jp/bear/nisifigs/f040110.gif" data-lightbox="roadtrip" data-title="4 1 梁の境界値問題">
+						<img class="card-img" src="http://mechanics.civil.tohoku.ac.jp/bear/nisifigs/f040110.gif" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ--uYsj6L522ed8R77m6RH5_1xHJd1YsVQuG0YYAF2_huPV_0kgg0ZnsFPPKbIegOM30Y';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				4 1 梁の境界値問題
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="1Pl8WDiOXxPOPM" data-lightbox="roadtrip" data-title="Http Www Eng Osaka Cu Ac Jp Syllabus Pdfs Syllabus2012 Mech Pdf">
+						<img class="card-img" src="1Pl8WDiOXxPOPM" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsf7bpXjc3Nf6WRERaVSMMXD-rbDuOgk0yig';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Http Www Eng Osaka Cu Ac Jp Syllabus Pdfs Syllabus2012 Mech Pdf
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://mechanics.civil.tohoku.ac.jp/bear/civil/edu/edu4/img12.gif" data-lightbox="roadtrip" data-title="委員会報告 大学における力学教育">
+						<img class="card-img" src="http://mechanics.civil.tohoku.ac.jp/bear/civil/edu/edu4/img12.gif" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRioCUu7o_b45a8esxQIBdQPWlJ9ZyA1sgZFA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				委員会報告 大学における力学教育
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://image.slidesharecdn.com/japanesenonlinearmultiscaleanalysis20181207-181207031052/95/japanese-nonlinear-multiscale-analysis-20181207-8-638.jpg?cb=1544152341" data-lightbox="roadtrip" data-title="Japanese Nonlinear Multiscale Analysis 20181207">
+						<img class="card-img" src="https://image.slidesharecdn.com/japanesenonlinearmultiscaleanalysis20181207-181207031052/95/japanese-nonlinear-multiscale-analysis-20181207-8-638.jpg?cb=1544152341" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4g_bgi6OjOqx9ZGifL46YhwZKoO-V7TfTnA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Japanese Nonlinear Multiscale Analysis 20181207
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="MWMMEDy3fyh_7M" data-lightbox="roadtrip" data-title="2">
+						<img class="card-img" src="MWMMEDy3fyh_7M" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAtiyaAwEkGa-GFdvVMl1NL8H2kb-lWLRTEQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				2
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="/search?q=%E6%A7%8B%E6%88%90%E5%BC%8F+%E5%8C%96%E5%AD%A6&amp;tbm=isch" data-lightbox="roadtrip" data-title="3">
+						<img class="card-img" src="/search?q=%E6%A7%8B%E6%88%90%E5%BC%8F+%E5%8C%96%E5%AD%A6&amp;tbm=isch" onerror="this.onerror=null;this.src='/search?q=%E6%A7%8B%E6%88%90%E5%BC%8F+%E5%8C%96%E5%AD%A6&amp;tbm=isch';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				3
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="1F3HnJlKgNsLUM" data-lightbox="roadtrip" data-title="2">
+						<img class="card-img" src="1F3HnJlKgNsLUM" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7kQniJLBsFfeOZomAZIW56PO1wMWzPkAYTQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				2
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="eSIkARJat9v5oM" data-lightbox="roadtrip" data-title="2">
+						<img class="card-img" src="eSIkARJat9v5oM" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpetqXjTHwriEJM8f5-saW3v4g6OyRu9qJdw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				2
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://mechanics.civil.tohoku.ac.jp/bear/nisikozo/s5img1696.gif" data-lightbox="roadtrip" data-title="I 1 1次元の熱伝導問題">
+						<img class="card-img" src="http://mechanics.civil.tohoku.ac.jp/bear/nisikozo/s5img1696.gif" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPpuCwvb-Yd4NmoVwMRulQnZXKf3SnaQjggw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				I 1 1次元の熱伝導問題
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="YzFo5fccvf5ANM" data-lightbox="roadtrip" data-title="Http Www St Nagasaki U Ac Jp Wp Wp Content Uploads 2016 05 Math Relation H28 Pdf">
+						<img class="card-img" src="YzFo5fccvf5ANM" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpcnIOlysGXI4hxZeIBSN3gqZhdHrTWOLgWg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Http Www St Nagasaki U Ac Jp Wp Wp Content Uploads 2016 05 Math Relation H28 Pdf
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="5RFI7cvlxd-ixM" data-lightbox="roadtrip" data-title="2">
+						<img class="card-img" src="5RFI7cvlxd-ixM" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfDYCLxHk3wI1lLarAa3RVkB0W2KWuO9ucjA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				2
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://astamuse.com/ja/drawing/JP/2013/030/138/A/000036.png" data-lightbox="roadtrip" data-title="2013 030138号 構造解析方法 Astamuse">
+						<img class="card-img" src="https://astamuse.com/ja/drawing/JP/2013/030/138/A/000036.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbgFqCiGnveD-xZi3-yAJKvb4_43BTSqh5gg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				2013 030138号 構造解析方法 Astamuse
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="JFmOI69IkM6U_M" data-lightbox="roadtrip" data-title="2">
+						<img class="card-img" src="JFmOI69IkM6U_M" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBIdO5hYqL1LA0xszJDZy3YlBkaJBLz5tAIg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				2
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://i1.rgstatic.net/publication/322700090_Numerical_Analysis_on_Eutectic_Melting_of_Boron_Carbide_Control_Rod_Materials_with_a_Particle_Method/links/5a6a02c10f7e9b01f3efc017/largepreview.png" data-lightbox="roadtrip" data-title="Pdf Numerical Analysis On Eutectic Melting Of Boron Carbide Control Rod Materials With A Particle Method">
+						<img class="card-img" src="https://i1.rgstatic.net/publication/322700090_Numerical_Analysis_on_Eutectic_Melting_of_Boron_Carbide_Control_Rod_Materials_with_a_Particle_Method/links/5a6a02c10f7e9b01f3efc017/largepreview.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnca9eUSKxUtHDYknUyNknsevK_dkpfPqXhQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Pdf Numerical Analysis On Eutectic Melting Of Boron Carbide Control Rod Materials With A Particle Method
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+		
+	</div>
+
+		 
+		
+		
+				</div>
+				<div class="col-sm-12 widget">
+					<div class="d-block p-4">
+	<center>
+		<!-- BOTTOM BANNER ADS -->
+<script async="async" data-cfasync="false" src="//jc32arlvqpv8.com/eb47a424ae325c90cca32780149785c3/invoke.js"></script>
+<div id="container-eb47a424ae325c90cca32780149785c3"></div>
+
+	</center>
+</div>				</div>
+			</div>
+			<div class="row footer">
+				<div class="col-md-12 text-center py-4">
+										<a href="/p/dmca.html">Dmca</a>
+										<a href="/p/contact.html">Contact</a>
+										<a href="/p/privacy-policy.html">Privacy Policy</a>
+										<a href="/p/copyright.html">Copyright</a>
+					
+				</div>
+			</div>
+		</main>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js" integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js" integrity="sha256-CtKylYan+AJuoH8jrMht1+1PMhMqrKnB8K5g012WN5I=" crossorigin="anonymous"></script>
+		
+		<!-- Footer CSS JS -->
+		
+		
+		
+			<script type='text/javascript' src='//jc32arlvqpv8.com/ef/d5/10/efd510237a3143727bed46803ec35b8d.js'></script>
+</body>
+</html>

@@ -1,0 +1,682 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha256-L/W5Wfqfa0sdBNIKN9cG6QA5F2qx4qICmU2VgLruv9Y=" crossorigin="anonymous" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/css/lightbox.min.css" integrity="sha256-tBxlolRHP9uMsEFKVk+hk//ekOlXOixLKvye5W2WR5c=" crossorigin="anonymous" />
+		<link href="https://fonts.googleapis.com/css?family=Mr+Dafoe" rel="stylesheet" type="text/css">
+
+		<style type="text/css">
+			html,body{font-family:"Open Sans",Arial,sans-serif;font-size:14px;font-weight:400;background:#f3f3f3 url(3XxKH8Gbrg359M
+) no-repeat center center fixed;background-size:cover;height:100%}#title{font-family:"Mr Dafoe",Times,serif;font-size:34px;background:rgba(255,255,255,.8);margin-bottom:34px}.header{padding-bottom:13px;margin-bottom:13px;border-bottom:1px solid #eee}a{color:#26ADE4;text-decoration:none}#title a{color:#333;margin-left:21px}#title a:hover{text-decoration:none;color:#26ADE4}.sidebar ul{margin:0;padding:0}.sidebar ul li{list-style:none}.footer{margin-top:21px;padding-top:13px;border-top:1px solid #eee}.footer a{margin:0 15px}.navi{margin:13px 0 13px 0;padding:13px}.navi a{margin:5px 2px;font-size:95%}.main{margin-top: 6rem;}.form-inline .form-control{min-width: 300px;}.v-cover{height: 380px; object-fit: cover;}.v-image{height: 200px; object-fit: cover;}.dwn-cover{max-height: 460px; object-fit: cover;}.main{margin-top: 6rem;}.form-inline .form-control{min-width: 300px;}			
+		</style>
+
+		<title>移流方程式 移流拡散方程式</title>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/", 
+  "@type": "Article", 
+  "author": {
+    "@type": "Person",
+    "name": "James"
+  },
+  "headline": "移流方程式 移流拡散方程式",
+  "datePublished": "2021-04-24",
+  "image": [https://slidesplayer.net/slide/17688021/105/images/14/%E5%95%8F1-3+%E8%A7%A3%E8%AA%AC+%E4%BA%8C%E9%9A%8E%E3%81%AE%E5%81%8F%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B%E5%BC%8F%E3%81%AE%E5%88%86%E9%A1%9E+%EF%BC%9A%E5%8F%8C%E6%9B%B2%E5%9E%8B+%EF%BC%9A%E6%94%BE%E7%89%A9%E5%9E%8B+%EF%BC%9A%E6%A5%95%E5%86%86%E5%9E%8B+%E7%86%B1%E6%B5%81%E4%BD%93%E3%81%A7%E3%82%88%E3%81%8F%E5%87%BA%E3%81%A6%E3%81%8F%E3%82%8B%E5%81%8F%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B%E5%BC%8F+%E3%83%BB%E5%8F%8C%E6%9B%B2%E5%9E%8B+%EF%BC%88%E6%B3%A2%E5%8B%95%E6%96%B9%E7%A8%8B%E5%BC%8F%EF%BC%89+%E3%82%82%E3%81%97%E3%81%8F%E3%81%AF.jpg,https://takun-physics.net/wp-content/uploads/2020/05/1-5.png,https://image.slidesharecdn.com/advancedgpgpu09-160307060541/95/2015gpgpu9-5-638.jpg?cb=1457495372],
+  "publisher": {
+    "@type": "Organization",
+    "name": "Tukang Parkir Gerobak",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://via.placeholder.com/512.png?text=移流方程式 移流拡散方程式",
+      "width": 512,
+      "height": 512
+    }
+  }
+}
+</script>
+		<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-957NGNKQ70"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-957NGNKQ70');
+</script>
+
+<script type='text/javascript' src='//jc32arlvqpv8.com/1a/82/2e/1a822ef8a40a0fbab3c4ea12a5d2bb02.js'></script>
+</head>
+	<body>
+		<header class="bg-white fixed-top">			
+			<nav class="navbar navbar-light bg-white mb-0">
+				<div class="container justify-content-center justify-content-sm-between">	
+				  <a href="/" title="Blog" class="navbar-brand mb-1">Blog</a>
+				  				</div>			  
+			</nav>				
+		</header>
+		<main class="main container bg-white">
+			<div class="col-md-12 my-4" align="center">
+				<div class="d-block p-4">
+	<br/><center>
+<!-- TOP BANNER ADS -->
+</center><br/>
+</div>			</div>
+			<div class="row header">
+				<div class="col-sm-12 text-center p-2">
+						<h1>移流方程式 移流拡散方程式</h1>
+
+	
+	<div class="navi text-center">
+										<a class="badge badge-light" href="/%E7%BE%8E%E5%A4%A7%E7%94%9F%E3%81%AE%E3%83%97%E3%83%AA%E3%82%B1%E3%83%84%E5%A8%98%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%AB%E3%83%8C%E3%83%BC%E3%83%89%E3%83%A2%E3%83%87%E3%83%AB%E3%82%92%E3%81%8A%E9%A1%98%E3%81%84%E3%81%97%E3%81%9F%E3%82%89%E8%88%88%E5%A5%AE%E3%81%97%E3%81%A6%E4%B8%AD%E5%87%BA%E3%81%97%E3%81%95%E3%82%8C%E3%81%BE%E3%81%97%E3%81%9F-%E6%A1%90%E8%B0%B7%E3%81%AA%E3%81%8A.html">美大生のプリケツ娘お父さんにヌードモデルをお願いしたら興奮して中出しされました 桐谷なお</a>
+											<a class="badge badge-light" href="/%E7%B7%9A%E5%BD%A2%E6%96%B9%E7%A8%8B%E5%BC%8F-%E8%A7%A3%E3%81%AE%E6%A7%8B%E9%80%A0.html">線形方程式 解の構造</a>
+											<a class="badge badge-danger" href="/%EF%BC%92%E6%AC%A1%E6%96%B9%E7%A8%8B%E5%BC%8F-%E3%82%BF%E3%82%A4%E3%83%AB-%E6%8E%88%E6%A5%AD.html">２次方程式 タイル 授業</a>
+											<a class="badge badge-info" href="/%E7%A7%81%E3%81%AE%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93-%E3%82%AB%E3%83%90%E3%83%AC%E3%83%83%E3%82%BF.html">私のお父さん カバレッタ</a>
+											<a class="badge badge-danger" href="/%E8%A4%87%E6%95%B0%E5%88%86%E9%85%8D%E6%96%B9%E7%A8%8B%E5%BC%8F-%E5%B0%8F%E5%AD%A6%E7%94%9F.html">複数分配方程式 小学生</a>
+											<a class="badge badge-success" href="/%E7%94%B7%E3%81%AE%E3%81%8A%E6%B4%92%E8%90%BD%E3%81%AE%E6%96%B9%E7%A8%8B%E5%BC%8F-%E3%81%9F%E3%81%8B%E3%81%8C%E8%A6%8B%E3%81%9F%E7%9B%AE%E3%81%A7%E6%90%8D%E3%82%92%E3%81%97%E3%81%AA%E3%81%84-%E8%AC%9B%E8%AB%87%E7%A4%BE-%E6%A3%AE%E5%B2%A1%E5%BC%98-%E6%A3%AE%E5%B2%A1%E5%BC%98-%E4%B8%AD%E5%8F%A4-afb.html">男のお洒落の方程式 たかが見た目で損をしない 講談社 森岡弘 森岡弘 中古 afb</a>
+											<a class="badge badge-primary" href="/%E6%B3%A3%E3%81%91%E3%82%8B%E8%A9%B1-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%A8%E3%81%8A%E6%AF%8D%E3%81%95%E3%82%93-%E3%81%A9%E3%81%A3%E3%81%A1%E3%81%AB%E3%81%A4%E3%81%8F-%E6%84%9F%E5%8B%95.html">泣ける話 お父さんとお母さん どっちにつく 感動</a>
+											<a class="badge badge-success" href="/%EF%BC%92%E3%81%A4%E3%81%AE%E6%96%B9%E7%A8%8B%E5%BC%8F%E3%81%AE%E4%BA%A4%E7%82%B9.html">２つの方程式の交点</a>
+											<a class="badge badge-info" href="/%E6%B5%B7%E5%A4%96-%E3%81%BE%E3%82%8B%E3%81%A7%E3%82%AA%E3%83%A4%E3%82%B8%E3%81%A0%E3%81%AAw-%E5%AE%B6%E3%81%AB%E3%81%84%E3%82%8B%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E6%84%9F%E3%81%8C%E3%81%99%E3%81%94%E3%81%84%E6%97%A5%E6%9C%AC%E3%81%AE%E7%8C%AB%E3%81%8C%E8%A9%B1%E9%A1%8C%E3%81%AB-%E6%B5%B7%E5%A4%96%E3%81%AE%E5%8F%8D%E5%BF%9C.html">海外 まるでオヤジだなw 家にいるお父さん感がすごい日本の猫が話題に 海外の反応</a>
+											<a class="badge badge-danger" href="/%E7%82%B9%E3%81%A8%E5%B9%B3%E9%9D%A2%E3%81%AE%E6%96%B9%E7%A8%8B%E5%BC%8F-%E8%A8%88%E7%AE%97.html">点と平面の方程式 計算</a>
+											<a class="badge badge-primary" href="/%E7%A8%BC%E3%81%90-%E4%BA%BA-%E3%81%AE-%E6%A0%AA-%E6%8A%95%E8%B3%87-%E5%84%84-%E8%B6%85%E3%81%88-%E3%81%AE-%E6%96%B9%E7%A8%8B%E5%BC%8F-5.html">稼ぐ 人 の 株 投資 億 超え の 方程式 5</a>
+											<a class="badge badge-info" href="/%E7%99%BD%E7%9F%B3%E3%82%8A%E3%82%93-%E5%BD%BC%E6%B0%8F%E3%81%AE%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%AB.html">白石りん 彼氏のお父さんに</a>
+											<a class="badge badge-secondary" href="/%E7%B4%A0%E4%BA%BA%E5%88%9D%E6%92%AE%E3%82%8A-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93-%E3%81%94%E3%82%81%E3%82%93%E3%81%AA%E3%81%95%E3%81%84-%E7%9A%84%E5%A0%B4.html">素人初撮り お父さん ごめんなさい 的場</a>
+											<a class="badge badge-warning" href="/%E6%B0%B8%E5%B9%B4%E6%96%B9%E7%A8%8B%E5%BC%8F-%E4%BF%82%E6%95%B0-%E8%A6%8F%E6%A0%BC%E5%8C%96.html">永年方程式 係数 規格化</a>
+											<a class="badge badge-warning" href="/%E8%A4%87%E7%B4%A0%E6%95%B0%E5%B9%B3%E9%9D%A2-%E6%A5%95%E5%86%86%E3%81%AE%E6%96%B9%E7%A8%8B%E5%BC%8F.html">複素数平面 楕円の方程式</a>
+						</div>
+<center>
+	<!-- MIDDLE BANNER ADS -->
+<script type="text/javascript">
+	atOptions = {
+		'key' : '2b77887421e2587a1a1b1d7c8a31a9e0',
+		'format' : 'iframe',
+		'height' : 250,
+		'width' : 300,
+		'params' : {}
+	};
+	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://jc32arlvqpv8.com/2b77887421e2587a1a1b1d7c8a31a9e0/invoke.js"></scr' + 'ipt>');
+</script>
+		
+	</center>
+					
+				</div>
+			</div>
+			<div class="row content mb-4">
+				<div class="col-md-12">					
+					
+	
+	<div class="card-columns">
+						
+	  <div class='card'>
+	  	<a href="https://math-fun.net/wp-content/uploads/2020/02/conv_whole.gif" data-lightbox="roadtrip" data-title="移流拡散方程式 その解き方 熱方程式への関数変換 趣味の大学数学">
+						<img class="card-img" src="https://math-fun.net/wp-content/uploads/2020/02/conv_whole.gif" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReBuNkZ_re920cbeDCitb0MFZOOrqPvzttXmCmmrnkla8OCZUgon-aUMSIW4rRpKylWs0';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				移流拡散方程式 その解き方 熱方程式への関数変換 趣味の大学数学
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://teru-hide.com/wp-content/uploads/2019/03/3-1_Pe-1024x771.png" data-lightbox="roadtrip" data-title="第3 1回 定常移流拡散方程式 離散化 Python 工学系大学院生のブログ">
+						<img class="card-img" src="https://teru-hide.com/wp-content/uploads/2019/03/3-1_Pe-1024x771.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSFdGcdZcvv3LCUUjUxNqaG3GFo5G4EzKLlZ-yCiX80zVV9Kcd3jE3OJ4LZViVWs89C98';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				第3 1回 定常移流拡散方程式 離散化 Python 工学系大学院生のブログ
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://teru-hide.com/wp-content/uploads/2019/03/3-3_c-10D1.png" data-lightbox="roadtrip" data-title="第3 3回 定常移流拡散方程式 Python 工学系大学院生のブログ">
+						<img class="card-img" src="https://teru-hide.com/wp-content/uploads/2019/03/3-3_c-10D1.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVXU9HzQOgwuC5GnkyBQ3pRb-uqRI6DBIBdcnQ0YUz4yfrqu_xumkyDrisLmZwChSw5Pc';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				第3 3回 定常移流拡散方程式 Python 工学系大学院生のブログ
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://ums.futene.net/wiki/FEM/advection/advec_1d_reynolds.png" data-lightbox="roadtrip" data-title="Fem For Advection Diffusion Equation">
+						<img class="card-img" src="http://ums.futene.net/wiki/FEM/advection/advec_1d_reynolds.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZL7gjRf6RF-XRM9G208E2kBR1v6SEKQZbq0nEye8JbChU-NhDTsurB4aQN6LnewDKBcI';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Fem For Advection Diffusion Equation
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://cdn-ak.f.st-hatena.com/images/fotolife/m/mutsumunemitsutan/20181022/20181022213314.png" data-lightbox="roadtrip" data-title="有限要素法 1次元非定常移流拡散方程式をgalerkin法で解く C コード付き 数学とか語学とか楽しいよね">
+						<img class="card-img" src="https://cdn-ak.f.st-hatena.com/images/fotolife/m/mutsumunemitsutan/20181022/20181022213314.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0G8C89rlr_WNoHefBmz9-4k6T_CTLSp6rnVOMrnmpk6wcr_fcbRYRe8JLq9BbdxpBr7M';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				有限要素法 1次元非定常移流拡散方程式をgalerkin法で解く C コード付き 数学とか語学とか楽しいよね
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://takun-physics.net/wp-content/uploads/2020/05/1-5.png" data-lightbox="roadtrip" data-title="第4回python流体の数値計算 １次元移流方程式を差分法で実装する 宇宙に入ったカマキリ">
+						<img class="card-img" src="https://takun-physics.net/wp-content/uploads/2020/05/1-5.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1ejJYNgkx37GmGIpSGqsA6PNDr-yLg4MwWTRyzEcLKQnyvZh2vibPpKdoVG80vTx7PcM';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				第4回python流体の数値計算 １次元移流方程式を差分法で実装する 宇宙に入ったカマキリ
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+				<div class='card'>	
+			<div class="d-block p-4">
+	</div>		  	
+		  	<h3 class="h6 p-2"><b></b></h3>
+					</div>
+		
+						
+	  <div class='card'>
+	  	<a href="https://blog.katty.in/wp-content/uploads/2010/01/fig3.gif" data-lightbox="roadtrip" data-title="移流項と拡散項 三度の飯とエレクトロン">
+						<img class="card-img" src="https://blog.katty.in/wp-content/uploads/2010/01/fig3.gif" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzaN9yhV7L8B_noWvyQn_LLtX47aS693PZ_LmJIWaGqLJocg3zfNzvxMD2p56Ev1ryH4E';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				移流項と拡散項 三度の飯とエレクトロン
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://math-fun.net/wp-content/uploads/2020/02/trans_1d_gauss.gif" data-lightbox="roadtrip" data-title="移流方程式 輸送方程式 とその解き方を解説 趣味の大学数学">
+						<img class="card-img" src="https://math-fun.net/wp-content/uploads/2020/02/trans_1d_gauss.gif" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ74RPIUYt8YhOZiPpfWl90AbewWxTnC8Huh_xSd-ExGtY5Br6xUKIEiYROVWCCu7zg7v0';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				移流方程式 輸送方程式 とその解き方を解説 趣味の大学数学
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://i.ytimg.com/vi/J-tI0PwVFwM/hqdefault.jpg" data-lightbox="roadtrip" data-title="移流拡散方程式 Youtube">
+						<img class="card-img" src="https://i.ytimg.com/vi/J-tI0PwVFwM/hqdefault.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1p1vWLhPgSA5PKD-CxO_IWnzjDaAx0xkH4h17DTA2fmNC1pRUHw7gk-9FgD-1SVNY3JM';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				移流拡散方程式 Youtube
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.coronasha.co.jp/imgs/cover/9784339043266.jpg" data-lightbox="roadtrip" data-title="はじめてのcfd 移流拡散方程式 コロナ社">
+						<img class="card-img" src="https://www.coronasha.co.jp/imgs/cover/9784339043266.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQE-oQ0AUHfsyYKTRwh3zU8pdCHCWuCCvwUtFqwDAIYumstNtJ3c2rGJnPhk-3sCiszEI';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				はじめてのcfd 移流拡散方程式 コロナ社
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://i.ytimg.com/vi/2Oa9kGGe-iU/hqdefault.jpg" data-lightbox="roadtrip" data-title="移流拡散方程式 ラグランジュ補間 Youtube">
+						<img class="card-img" src="https://i.ytimg.com/vi/2Oa9kGGe-iU/hqdefault.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqKuDzc4OxwVV8-LNRtNO4kzyouDKexvYCqiQvjTTg6XV9jYlYLyO5iCzwZr6wM2Lc5QM';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				移流拡散方程式 ラグランジュ補間 Youtube
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://www11.plala.or.jp/faw/CAI_Related/Intr_CFD/sozai/Zu-8.gif" data-lightbox="roadtrip" data-title="4">
+						<img class="card-img" src="http://www11.plala.or.jp/faw/CAI_Related/Intr_CFD/sozai/Zu-8.gif" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdbRAGhCZXdnE8WaL7VtE_qbkDeF5ndCV5PAaq71NPyQcHDb4S3Wg0hTQ2EzLvrM_qJ9I';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				4
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://takun-physics.net/wp-content/uploads/2020/05/3-8.png" data-lightbox="roadtrip" data-title="第8 3回python流体の数値計算 バーガース方程式の一般解 コール ホップ変換によって拡散方程式になる 宇宙に入ったカマキリ">
+						<img class="card-img" src="https://takun-physics.net/wp-content/uploads/2020/05/3-8.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNpA_zY96jl0vBOYy4VDqJkfEyqGXjCZ3DTXZQOgBKRhgkLI9k3EyuR9hs2kjbELAv5qE';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				第8 3回python流体の数値計算 バーガース方程式の一般解 コール ホップ変換によって拡散方程式になる 宇宙に入ったカマキリ
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://www.slis.tsukuba.ac.jp/~fujisawa.makoto.fu/cgi-bin/wiki/index.php?plugin=ref&amp;page=%B6%EB%B7%C1%C7%C8%20-%20%A5%BB%A5%DF%A5%E9%A5%B0%A5%E9%A5%F3%A5%B8%A5%E5%CB%A1&amp;src=rectan_sl.jpg" data-lightbox="roadtrip" data-title="移流法 Pukiwiki For Pbcg Lab">
+						<img class="card-img" src="http://www.slis.tsukuba.ac.jp/~fujisawa.makoto.fu/cgi-bin/wiki/index.php?plugin=ref&amp;page=%B6%EB%B7%C1%C7%C8%20-%20%A5%BB%A5%DF%A5%E9%A5%B0%A5%E9%A5%F3%A5%B8%A5%E5%CB%A1&amp;src=rectan_sl.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLkbIxCD0KPHTMJJYZzHal3EZbYorUqrq_LvZXipYWgOqQS3ESXkrA9CNSY6PcSLIjAws';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				移流法 Pukiwiki For Pbcg Lab
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://image.slidesharecdn.com/advancedgpgpu09-160307060541/95/2015gpgpu9-5-638.jpg?cb=1457495372" data-lightbox="roadtrip" data-title="2015年度先端gpgpuシミュレーション工学特論 第9回 偏微分方程式の差分計算 移流方程式">
+						<img class="card-img" src="https://image.slidesharecdn.com/advancedgpgpu09-160307060541/95/2015gpgpu9-5-638.jpg?cb=1457495372" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQL95WzQXkxnQ_G7v4pYvIQy9r5Q89Gc-AYb7nz8-iN0XHpifqk2A7pcUzC6rGVA4wsv9U';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				2015年度先端gpgpuシミュレーション工学特論 第9回 偏微分方程式の差分計算 移流方程式
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://takun-physics.net/wp-content/uploads/2019/05/1-1.png" data-lightbox="roadtrip" data-title="1次元の移流方程式を前進差分 後退差分 中心差分で解く Fortranコードあり 宇宙に入ったカマキリ">
+						<img class="card-img" src="https://takun-physics.net/wp-content/uploads/2019/05/1-1.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjXJUl9r-yGe0yz6dbJPx4Z3QP596e0M5sA-Jeha7xWk02A10JsbUExbJOA30yFTba8bc';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				1次元の移流方程式を前進差分 後退差分 中心差分で解く Fortranコードあり 宇宙に入ったカマキリ
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://mepl1.riam.kyushu-u.ac.jp/~isobe/lectures/poI/eqs/ts.png" data-lightbox="roadtrip" data-title="4 海洋物理学の準備 ー流体の運動方程式 連続式">
+						<img class="card-img" src="http://mepl1.riam.kyushu-u.ac.jp/~isobe/lectures/poI/eqs/ts.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBoEl9tI8k6P36sZtHProIMNhbedrGdSJxewJXgCZhdk9IAoF-TjYIrusAEF1q0SccP4g';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				4 海洋物理学の準備 ー流体の運動方程式 連続式
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://math-fun.net/wp-content/uploads/2018/07/SC000432.jpg" data-lightbox="roadtrip" data-title="花粉の広がりを数式で予測する 拡散方程式とは 趣味の大学数学">
+						<img class="card-img" src="https://math-fun.net/wp-content/uploads/2018/07/SC000432.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSksswXTuYIHpi2W_iot-VBU3DxbXme4oc8wrjSJ9LywvUidpc7jRF8dhRebuwpO0ex1Bc';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				花粉の広がりを数式で予測する 拡散方程式とは 趣味の大学数学
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="3XxKH8Gbrg359M" data-lightbox="roadtrip" data-title="Http Www Oishi Info Waseda Ac Jp Takayasu Classes Slides Sim Adeq Pdf">
+						<img class="card-img" src="3XxKH8Gbrg359M" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQb431dioxAptHCGRkL8QcXsfNmVV2mV6jAQ-fI0bKe83-1UkvwVmTD65NEb69g_njTuho';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Http Www Oishi Info Waseda Ac Jp Takayasu Classes Slides Sim Adeq Pdf
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://takun-physics.net/wp-content/uploads/2020/05/1-9.png" data-lightbox="roadtrip" data-title="第8 2回python流体の数値計算 バーガース方程式の非線形項は異なる波数間での相互作用が生じるという意味 宇宙に入ったカマキリ">
+						<img class="card-img" src="https://takun-physics.net/wp-content/uploads/2020/05/1-9.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkCZZLwtkDXKpTKiMGRFBvri1YcfY2RSV3Wx8L7sAKg2Y7T2IgFh8Hssao7KDHRTgrL0k';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				第8 2回python流体の数値計算 バーガース方程式の非線形項は異なる波数間での相互作用が生じるという意味 宇宙に入ったカマキリ
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://itpass.scitec.kobe-u.ac.jp/exp/fy2012/120727/practice/adv_dt1e-3.gif" data-lightbox="roadtrip" data-title="移流方程式の数値計算と可視化">
+						<img class="card-img" src="https://itpass.scitec.kobe-u.ac.jp/exp/fy2012/120727/practice/adv_dt1e-3.gif" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGuAFI3jBiwzUF3NoVF-WFcgCbRyX4n9o_Wg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				移流方程式の数値計算と可視化
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://annakwn.sakuraweb.com/fluid/images/advection.png" data-lightbox="roadtrip" data-title="小林研の朝ゼミ 平日毎日09 00 10 00 の 一部の日程をお借りして １ C言語のプログラミング ２ 数値計算 数値シミュレーション ３ 流体現象の数値シミュレーションの紹介をさせて頂いています このページでは一部をまとめています">
+						<img class="card-img" src="http://annakwn.sakuraweb.com/fluid/images/advection.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcF3d6WcTSflTseVJqF3lMv3WXSdhs3RiDSA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				小林研の朝ゼミ 平日毎日09 00 10 00 の 一部の日程をお借りして １ C言語のプログラミング ２ 数値計算 数値シミュレーション ３ 流体現象の数値シミュレーションの紹介をさせて頂いています このページでは一部をまとめています
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://image.slidesharecdn.com/advancedgpgpu11-160307061027/95/2015gpgpu11cpu-8-638.jpg?cb=1457495391" data-lightbox="roadtrip" data-title="2015年度先端gpgpuシミュレーション工学特論 第11回 数値流体力学への応用 支配方程式 Cpuプログラム">
+						<img class="card-img" src="https://image.slidesharecdn.com/advancedgpgpu11-160307061027/95/2015gpgpu11cpu-8-638.jpg?cb=1457495391" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCMsHFBSyjFiNI6qG4MKNVdOk_mGdvBWkutA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				2015年度先端gpgpuシミュレーション工学特論 第11回 数値流体力学への応用 支配方程式 Cpuプログラム
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://cdn.image.st-hatena.com/image/square/5e862e6581919efa133978c77ddcddf9f9acc3b6/backend=imagemagick;height=180;version=1;width=180/https%3A%2F%2Fcdn-ak.f.st-hatena.com%2Fimages%2Ffotolife%2FZ%2FZellij%2F20140805%2F20140805220621.png" data-lightbox="roadtrip" data-title="移流方程式 Advection Equation 大人になってからの再学習">
+						<img class="card-img" src="https://cdn.image.st-hatena.com/image/square/5e862e6581919efa133978c77ddcddf9f9acc3b6/backend=imagemagick;height=180;version=1;width=180/https%3A%2F%2Fcdn-ak.f.st-hatena.com%2Fimages%2Ffotolife%2FZ%2FZellij%2F20140805%2F20140805220621.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmvaQhAKdlHoi6Opbj-JFp6S0CW-LAPO2W9w';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				移流方程式 Advection Equation 大人になってからの再学習
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="3XxKH8Gbrg359M" data-lightbox="roadtrip" data-title="Http Www Oishi Info Waseda Ac Jp Takayasu Classes Slides Sim Adeq Pdf">
+						<img class="card-img" src="3XxKH8Gbrg359M" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZZJgVjrtsqo8h26RIEG_c2U2FOSagapLchA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Http Www Oishi Info Waseda Ac Jp Takayasu Classes Slides Sim Adeq Pdf
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://slidesplayer.net/slide/17688021/105/images/14/%E5%95%8F1-3+%E8%A7%A3%E8%AA%AC+%E4%BA%8C%E9%9A%8E%E3%81%AE%E5%81%8F%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B%E5%BC%8F%E3%81%AE%E5%88%86%E9%A1%9E+%EF%BC%9A%E5%8F%8C%E6%9B%B2%E5%9E%8B+%EF%BC%9A%E6%94%BE%E7%89%A9%E5%9E%8B+%EF%BC%9A%E6%A5%95%E5%86%86%E5%9E%8B+%E7%86%B1%E6%B5%81%E4%BD%93%E3%81%A7%E3%82%88%E3%81%8F%E5%87%BA%E3%81%A6%E3%81%8F%E3%82%8B%E5%81%8F%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B%E5%BC%8F+%E3%83%BB%E5%8F%8C%E6%9B%B2%E5%9E%8B+%EF%BC%88%E6%B3%A2%E5%8B%95%E6%96%B9%E7%A8%8B%E5%BC%8F%EF%BC%89+%E3%82%82%E3%81%97%E3%81%8F%E3%81%AF.jpg" data-lightbox="roadtrip" data-title="計算力学技術者２級 熱流体力学分野の解析技術者 認定試験対策講習会 1章 計算力学のための数学の基礎 Ppt Download">
+						<img class="card-img" src="https://slidesplayer.net/slide/17688021/105/images/14/%E5%95%8F1-3+%E8%A7%A3%E8%AA%AC+%E4%BA%8C%E9%9A%8E%E3%81%AE%E5%81%8F%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B%E5%BC%8F%E3%81%AE%E5%88%86%E9%A1%9E+%EF%BC%9A%E5%8F%8C%E6%9B%B2%E5%9E%8B+%EF%BC%9A%E6%94%BE%E7%89%A9%E5%9E%8B+%EF%BC%9A%E6%A5%95%E5%86%86%E5%9E%8B+%E7%86%B1%E6%B5%81%E4%BD%93%E3%81%A7%E3%82%88%E3%81%8F%E5%87%BA%E3%81%A6%E3%81%8F%E3%82%8B%E5%81%8F%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B%E5%BC%8F+%E3%83%BB%E5%8F%8C%E6%9B%B2%E5%9E%8B+%EF%BC%88%E6%B3%A2%E5%8B%95%E6%96%B9%E7%A8%8B%E5%BC%8F%EF%BC%89+%E3%82%82%E3%81%97%E3%81%8F%E3%81%AF.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHpwknfNSFruWAmaS8QpRgXn6GSguqmNKqBA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				計算力学技術者２級 熱流体力学分野の解析技術者 認定試験対策講習会 1章 計算力学のための数学の基礎 Ppt Download
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F271340%2F0f7f05dc-4063-2bb3-7e99-74dc66dd60f9.gif?ixlib=rb-1.2.2&amp;auto=format&amp;gif-q=60&amp;q=75&amp;s=5b8c118caad64f1bada55b94778f5889" data-lightbox="roadtrip" data-title="Python 流体シミュレーション 線形から非線形へ Qiita">
+						<img class="card-img" src="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F271340%2F0f7f05dc-4063-2bb3-7e99-74dc66dd60f9.gif?ixlib=rb-1.2.2&amp;auto=format&amp;gif-q=60&amp;q=75&amp;s=5b8c118caad64f1bada55b94778f5889" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbCX7GtANwVuPT-QwmIMJ7xDtE6TPr2eAe4A';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Python 流体シミュレーション 線形から非線形へ Qiita
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://blog-ac-eng-teu.cocolog-nifty.com/blog/images/1_20201112173801.png" data-lightbox="roadtrip" data-title="拡散方程式の解 江頭教授 東京工科大学 工学部 応用化学科 ブログ">
+						<img class="card-img" src="https://blog-ac-eng-teu.cocolog-nifty.com/blog/images/1_20201112173801.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKtGmQ9AkhH8K6-E_HLUOHQZBojnRCfcSpeQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				拡散方程式の解 江頭教授 東京工科大学 工学部 応用化学科 ブログ
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.envuniv.net/image/fig_kakusan3dim.gif" data-lightbox="roadtrip" data-title="三次元拡散方程式 環境の大学">
+						<img class="card-img" src="https://www.envuniv.net/image/fig_kakusan3dim.gif" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdoaJe8yy1InIxRUs59MpN778pQ9iGJhebIA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				三次元拡散方程式 環境の大学
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://takun-physics.net/wp-content/uploads/2020/05/1-15.png" data-lightbox="roadtrip" data-title="第11回python流体の数値計算 2次元移流方程式をgoogle Colabでアニメーション作成する 宇宙に入ったカマキリ">
+						<img class="card-img" src="https://takun-physics.net/wp-content/uploads/2020/05/1-15.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqFRpxtfzO9ORVkwbc1AZt8S2Kj7BNe5EVDw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				第11回python流体の数値計算 2次元移流方程式をgoogle Colabでアニメーション作成する 宇宙に入ったカマキリ
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://blog.katty.in/wp-content/uploads/2010/01/fig2.gif" data-lightbox="roadtrip" data-title="移流項と拡散項 三度の飯とエレクトロン">
+						<img class="card-img" src="https://blog.katty.in/wp-content/uploads/2010/01/fig2.gif" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRck1AQio7DLvC5IrUOGy1vJaD33Tl1lVVzNw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				移流項と拡散項 三度の飯とエレクトロン
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://qiita-image-store.s3.amazonaws.com/0/57594/beee5381-d2c0-e382-deb4-a6f8439e56b3.gif" data-lightbox="roadtrip" data-title="Eigenを用いた2次元移流拡散方程式の数値計算 Qiita">
+						<img class="card-img" src="https://qiita-image-store.s3.amazonaws.com/0/57594/beee5381-d2c0-e382-deb4-a6f8439e56b3.gif" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfNOOnFbYQ9BxvMzz4gWSSNNhM5dtJugRIZw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Eigenを用いた2次元移流拡散方程式の数値計算 Qiita
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://i.ytimg.com/vi/dXJsbZ2CS4M/hqdefault.jpg" data-lightbox="roadtrip" data-title="Python 有限体積法 1 次元の線型移流方程式 矩形波の移流 アニメーションサンプル 数値流体解析の基礎 Visual C とgnuplotによる圧縮性 非圧縮性流体解析 Youtube">
+						<img class="card-img" src="https://i.ytimg.com/vi/dXJsbZ2CS4M/hqdefault.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQA7Ih6vo3avvROOM_O9QYD6y5rKXkAArr51w';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Python 有限体積法 1 次元の線型移流方程式 矩形波の移流 アニメーションサンプル 数値流体解析の基礎 Visual C とgnuplotによる圧縮性 非圧縮性流体解析 Youtube
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+		
+	</div>
+
+		 
+		
+		
+				</div>
+				<div class="col-sm-12 widget">
+					<div class="d-block p-4">
+	<center>
+		<!-- BOTTOM BANNER ADS -->
+<script async="async" data-cfasync="false" src="//jc32arlvqpv8.com/eb47a424ae325c90cca32780149785c3/invoke.js"></script>
+<div id="container-eb47a424ae325c90cca32780149785c3"></div>
+
+	</center>
+</div>				</div>
+			</div>
+			<div class="row footer">
+				<div class="col-md-12 text-center py-4">
+										<a href="/p/dmca.html">Dmca</a>
+										<a href="/p/contact.html">Contact</a>
+										<a href="/p/privacy-policy.html">Privacy Policy</a>
+										<a href="/p/copyright.html">Copyright</a>
+					
+				</div>
+			</div>
+		</main>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js" integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js" integrity="sha256-CtKylYan+AJuoH8jrMht1+1PMhMqrKnB8K5g012WN5I=" crossorigin="anonymous"></script>
+		
+		<!-- Footer CSS JS -->
+		
+		
+		
+			<script type='text/javascript' src='//jc32arlvqpv8.com/ef/d5/10/efd510237a3143727bed46803ec35b8d.js'></script>
+</body>
+</html>

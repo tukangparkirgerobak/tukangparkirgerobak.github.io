@@ -1,0 +1,682 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha256-L/W5Wfqfa0sdBNIKN9cG6QA5F2qx4qICmU2VgLruv9Y=" crossorigin="anonymous" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/css/lightbox.min.css" integrity="sha256-tBxlolRHP9uMsEFKVk+hk//ekOlXOixLKvye5W2WR5c=" crossorigin="anonymous" />
+		<link href="https://fonts.googleapis.com/css?family=Mr+Dafoe" rel="stylesheet" type="text/css">
+
+		<style type="text/css">
+			html,body{font-family:"Open Sans",Arial,sans-serif;font-size:14px;font-weight:400;background:#f3f3f3 url(https://reference.wolfram.com/language/ref/Files/DSolveValue.ja/O_10.png
+) no-repeat center center fixed;background-size:cover;height:100%}#title{font-family:"Mr Dafoe",Times,serif;font-size:34px;background:rgba(255,255,255,.8);margin-bottom:34px}.header{padding-bottom:13px;margin-bottom:13px;border-bottom:1px solid #eee}a{color:#26ADE4;text-decoration:none}#title a{color:#333;margin-left:21px}#title a:hover{text-decoration:none;color:#26ADE4}.sidebar ul{margin:0;padding:0}.sidebar ul li{list-style:none}.footer{margin-top:21px;padding-top:13px;border-top:1px solid #eee}.footer a{margin:0 15px}.navi{margin:13px 0 13px 0;padding:13px}.navi a{margin:5px 2px;font-size:95%}.main{margin-top: 6rem;}.form-inline .form-control{min-width: 300px;}.v-cover{height: 380px; object-fit: cover;}.v-image{height: 200px; object-fit: cover;}.dwn-cover{max-height: 460px; object-fit: cover;}.main{margin-top: 6rem;}.form-inline .form-control{min-width: 300px;}			
+		</style>
+
+		<title>移動物体 準定常熱伝導方程式</title>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/", 
+  "@type": "Article", 
+  "author": {
+    "@type": "Person",
+    "name": "James"
+  },
+  "headline": "移動物体 準定常熱伝導方程式",
+  "datePublished": "2021-04-24",
+  "image": [https://slidesplayer.net/slide/17532698/103/images/7/2%E6%AC%A1%E5%85%83%E5%AE%9A%E5%B8%B8%E7%86%B1%E4%BC%9D%E5%B0%8E+%E7%86%B1%E6%BA%90%E3%81%AE%E3%81%82%E3%82%8B%E9%9D%9E%E5%AE%9A%E5%B8%B83%E6%AC%A1%E5%85%83%E7%86%B1%E4%BC%9D%E5%B0%8E%E6%96%B9%E7%A8%8B%E5%BC%8F+%E7%86%B1%E6%BA%90%E3%81%AE%E3%81%AA%E3%81%84%E5%AE%9A%E5%B8%B82%E6%AC%A1%E5%85%83%E7%86%B1%E4%BC%9D%E5%B0%8E%E6%96%B9%E7%A8%8B%E5%BC%8F+%E3%83%A9%E3%83%97%E3%83%A9%E3%82%B9%E6%96%B9%E7%A8%8B%E5%BC%8F+y+T%3DT2.jpg,https://patentimages.storage.googleapis.com/e8/9b/83/98ab0c402ab8eb/2004536553-36.png,https://pic3.zhimg.com/80/v2-2db71ad6389666c64f96e7a9c55745f2_1440w.jpg],
+  "publisher": {
+    "@type": "Organization",
+    "name": "Tukang Parkir Gerobak",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://via.placeholder.com/512.png?text=移動物体 準定常熱伝導方程式",
+      "width": 512,
+      "height": 512
+    }
+  }
+}
+</script>
+		<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-957NGNKQ70"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-957NGNKQ70');
+</script>
+
+<script type='text/javascript' src='//jc32arlvqpv8.com/1a/82/2e/1a822ef8a40a0fbab3c4ea12a5d2bb02.js'></script>
+</head>
+	<body>
+		<header class="bg-white fixed-top">			
+			<nav class="navbar navbar-light bg-white mb-0">
+				<div class="container justify-content-center justify-content-sm-between">	
+				  <a href="/" title="Blog" class="navbar-brand mb-1">Blog</a>
+				  				</div>			  
+			</nav>				
+		</header>
+		<main class="main container bg-white">
+			<div class="col-md-12 my-4" align="center">
+				<div class="d-block p-4">
+	<br/><center>
+<!-- TOP BANNER ADS -->
+</center><br/>
+</div>			</div>
+			<div class="row header">
+				<div class="col-sm-12 text-center p-2">
+						<h1>移動物体 準定常熱伝導方程式</h1>
+
+	
+	<div class="navi text-center">
+										<a class="badge badge-secondary" href="/%E9%A0%91%E5%BC%B5%E3%82%8B%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%82%92%E5%BF%9C%E6%8F%B4%E3%81%97%E3%81%BE%E3%81%99.html">頑張るお父さんを応援します</a>
+											<a class="badge badge-info" href="/%E8%BF%91%E8%A6%AA%E5%BC%B7%E5%A7%A6-%E7%A7%81-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%AB%E3%81%8A%E3%81%97%E3%81%8A%E3%81%8D%E3%81%95%E3%82%8C%E3%81%A6%E7%8A%AF%E3%81%95%E3%82%8C%E3%81%A1%E3%82%83%E3%81%84%E3%81%BE%E3%81%97%E3%81%9F-4.html">近親強姦 私 お父さんにおしおきされて犯されちゃいました 4</a>
+											<a class="badge badge-secondary" href="/%E9%AD%94%E6%B3%95%E3%81%AE%E3%81%8A%E5%A5%BD%E3%81%BF%E7%84%BC%E3%81%8D%E7%B2%89-cm-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93.html">魔法のお好み焼き粉 cm お父さん</a>
+											<a class="badge badge-info" href="/%E6%A5%95%E5%86%86%E5%9E%8B%E6%96%B9%E7%A8%8B%E5%BC%8F%E3%81%A8%E8%BF%91%E5%B9%B3%E8%A1%A1%E5%8A%9B%E5%AD%A6%E7%B3%BB.html">楕円型方程式と近平衡力学系</a>
+											<a class="badge badge-success" href="/%E8%A7%A3%E3%81%A8%E4%BF%82%E6%95%B0%E3%81%AE%E9%96%A2%E4%BF%82-%E9%AB%98%E6%AC%A1%E6%96%B9%E7%A8%8B%E5%BC%8F.html">解と係数の関係 高次方程式</a>
+											<a class="badge badge-warning" href="/%E9%9D%9E%E7%B7%9A%E5%BD%A2%E6%96%B9%E7%A8%8B%E5%BC%8F-c%E8%A8%80%E8%AA%9E.html">非線形方程式 c言語</a>
+											<a class="badge badge-success" href="/%EF%BC%93%E6%AC%A1%E6%96%B9%E7%A8%8B%E5%BC%8F-%EF%BC%92%E3%81%A4%E3%81%AE%E8%A7%A3-%E8%A7%A3%E3%81%A8%E4%BF%82%E6%95%B0.html">３次方程式 ２つの解 解と係数</a>
+											<a class="badge badge-dark" href="/%E7%88%B6%E5%AD%90%E5%AE%B6%E5%BA%AD%E8%82%B2%E3%81%A1%E3%81%AE%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%A3%E5%AD%90%E5%A8%98%E3%81%AF%E8%BA%AB%E3%82%82%E5%BF%83%E3%82%82%E3%81%9C%E3%81%87%E3%82%93%E3%81%B6%E3%83%91%E3%83%91%E3%81%AE%E3%83%A2%E3%83%8E.html">父子家庭育ちのお父さんっ子娘は身も心もぜぇんぶパパのモノ</a>
+											<a class="badge badge-light" href="/%E8%B6%B3%E3%81%8C%E3%81%8F%E3%81%9D%E3%81%86-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93.html">足がくそう お父さん</a>
+											<a class="badge badge-success" href="/%E7%B4%A0%E4%BA%BA%E3%81%8A%E5%AC%A2%E3%81%95%E3%82%93-%E3%83%A9%E3%83%83%E3%83%971%E6%9E%9A%E9%9A%94%E3%81%A6%E3%81%A6%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%A8%E3%83%87%E3%82%A3%E3%83%BC%E3%83%97%E3%82%AD%E3%82%B9%E3%81%97%E3%81%A6%E3%81%BF%E3%81%BE%E3%81%9B%E3%82%93%E3%81%8B.html">素人お嬢さん ラップ1枚隔ててお父さんとディープキスしてみませんか</a>
+											<a class="badge badge-success" href="/%E9%9D%92%E5%A4%8F%E5%90%9F%E8%94%B5%E3%81%AE%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93.html">青夏吟蔵のお父さん</a>
+											<a class="badge badge-info" href="/%E9%80%9A%E5%A4%9C-%E5%A9%BF%E3%81%AE%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93.html">通夜 婿のお父さん</a>
+											<a class="badge badge-warning" href="/%E7%A7%81%E3%81%8F%E3%81%97%E3%82%82%E4%BF%84%E3%81%AB%E3%81%AF%E4%BF%A1%E3%81%98%E3%82%89%E3%82%8C%E3%81%AA%E3%81%84%E3%81%8A%E8%A9%B1%E3%81%AA%E3%81%AE%E3%81%A7%E3%81%99%E3%81%8C-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93-%E3%81%8A%E8%8A%B1%E5%A5%BD%E3%81%8D%E3%81%A0%E3%81%8B%E3%82%89%E3%81%8A%E8%8A%B1%E8%A6%8B%E3%81%AB%E8%A1%8C%E3%81%93%E3%81%86-%E3%81%A8%E3%81%8A%E8%A9%B1%E3%81%97%E3%81%A6%E3%81%8A%E3%82%8A%E3%81%BE%E3%81%97%E3%81%9F.html">私くしも俄には信じられないお話なのですが お父さん お花好きだからお花見に行こう とお話しておりました</a>
+											<a class="badge badge-warning" href="/%E8%B5%A4%E3%81%A1%E3%82%83%E3%82%93-%E3%83%90%E3%83%BC%E3%82%B5%E3%82%B9-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93-%E3%81%AE-%E3%82%B2%E3%83%BC%E3%83%A0.html">赤ちゃん バーサス お父さん の ゲーム</a>
+											<a class="badge badge-primary" href="/%E7%86%B1-%E6%96%B9%E7%A8%8B%E5%BC%8F-%E3%83%8E%E3%82%A4%E3%83%9E%E3%83%B3-%E6%9D%A1%E4%BB%B6.html">熱 方程式 ノイマン 条件</a>
+						</div>
+<center>
+	<!-- MIDDLE BANNER ADS -->
+<script type="text/javascript">
+	atOptions = {
+		'key' : '2b77887421e2587a1a1b1d7c8a31a9e0',
+		'format' : 'iframe',
+		'height' : 250,
+		'width' : 300,
+		'params' : {}
+	};
+	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://jc32arlvqpv8.com/2b77887421e2587a1a1b1d7c8a31a9e0/invoke.js"></scr' + 'ipt>');
+</script>
+		
+	</center>
+					
+				</div>
+			</div>
+			<div class="row content mb-4">
+				<div class="col-md-12">					
+					
+	
+	<div class="card-columns">
+						
+	  <div class='card'>
+	  	<a href="https://pic3.zhimg.com/80/v2-3b03d10e327fe5b509d1e6eda697886a_1440w.jpg" data-lightbox="roadtrip" data-title="No 3 准稳态法材料导热系数测定 知乎">
+						<img class="card-img" src="https://pic3.zhimg.com/80/v2-3b03d10e327fe5b509d1e6eda697886a_1440w.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQz_2hxENTorhs7MAolGJian8Ecfjj8F3Ph0gsXDfuTGmxBfWRuQmckBhuq_iSewBIVFfs';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				No 3 准稳态法材料导热系数测定 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://slidesplayer.net/slide/17532698/103/images/7/2%E6%AC%A1%E5%85%83%E5%AE%9A%E5%B8%B8%E7%86%B1%E4%BC%9D%E5%B0%8E+%E7%86%B1%E6%BA%90%E3%81%AE%E3%81%82%E3%82%8B%E9%9D%9E%E5%AE%9A%E5%B8%B83%E6%AC%A1%E5%85%83%E7%86%B1%E4%BC%9D%E5%B0%8E%E6%96%B9%E7%A8%8B%E5%BC%8F+%E7%86%B1%E6%BA%90%E3%81%AE%E3%81%AA%E3%81%84%E5%AE%9A%E5%B8%B82%E6%AC%A1%E5%85%83%E7%86%B1%E4%BC%9D%E5%B0%8E%E6%96%B9%E7%A8%8B%E5%BC%8F+%E3%83%A9%E3%83%97%E3%83%A9%E3%82%B9%E6%96%B9%E7%A8%8B%E5%BC%8F+y+T%3DT2.jpg" data-lightbox="roadtrip" data-title="熱伝導方程式の導出 熱伝導 物質の移動を伴わずに高温側から低温側へ熱が伝わる現象 対流 輻射 フーリエの法則fourier S Law Ppt Download">
+						<img class="card-img" src="https://slidesplayer.net/slide/17532698/103/images/7/2%E6%AC%A1%E5%85%83%E5%AE%9A%E5%B8%B8%E7%86%B1%E4%BC%9D%E5%B0%8E+%E7%86%B1%E6%BA%90%E3%81%AE%E3%81%82%E3%82%8B%E9%9D%9E%E5%AE%9A%E5%B8%B83%E6%AC%A1%E5%85%83%E7%86%B1%E4%BC%9D%E5%B0%8E%E6%96%B9%E7%A8%8B%E5%BC%8F+%E7%86%B1%E6%BA%90%E3%81%AE%E3%81%AA%E3%81%84%E5%AE%9A%E5%B8%B82%E6%AC%A1%E5%85%83%E7%86%B1%E4%BC%9D%E5%B0%8E%E6%96%B9%E7%A8%8B%E5%BC%8F+%E3%83%A9%E3%83%97%E3%83%A9%E3%82%B9%E6%96%B9%E7%A8%8B%E5%BC%8F+y+T%3DT2.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3JtIQ_TlxSNyRiU1npspiQcrwFr-FVKA__fwoD1Oz8kl8tMFpgEL1HjMkEAPDxb3k2Ck';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				熱伝導方程式の導出 熱伝導 物質の移動を伴わずに高温側から低温側へ熱が伝わる現象 対流 輻射 フーリエの法則fourier S Law Ppt Download
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://slidesplayer.net/slide/17532698/103/images/2/X%E6%96%B9%E5%90%91%E3%81%B8%E3%81%AE%E7%86%B1%E7%A7%BB%E5%8B%95%E9%87%8F+x%3Dx%E3%81%AB%E3%81%8A%E3%81%84%E3%81%A6%E3%80%81+%E6%99%82%E9%96%93dt%E3%81%AE%E9%96%93%E3%81%AB%E9%9D%A2dydz%E3%81%AB%E6%B5%81%E5%85%A5%E3%81%99%E3%82%8B%E7%86%B1%E9%87%8FdQxi%E3%81%AF%E3%80%81+%E4%B8%80%E6%96%B9%E3%80%81x%3Dx%2Bdx%E3%81%AB%E3%81%8A%E3%81%84%E3%81%A6%E3%80%81.jpg" data-lightbox="roadtrip" data-title="熱伝導方程式の導出 熱伝導 物質の移動を伴わずに高温側から低温側へ熱が伝わる現象 対流 輻射 フーリエの法則fourier S Law Ppt Download">
+						<img class="card-img" src="https://slidesplayer.net/slide/17532698/103/images/2/X%E6%96%B9%E5%90%91%E3%81%B8%E3%81%AE%E7%86%B1%E7%A7%BB%E5%8B%95%E9%87%8F+x%3Dx%E3%81%AB%E3%81%8A%E3%81%84%E3%81%A6%E3%80%81+%E6%99%82%E9%96%93dt%E3%81%AE%E9%96%93%E3%81%AB%E9%9D%A2dydz%E3%81%AB%E6%B5%81%E5%85%A5%E3%81%99%E3%82%8B%E7%86%B1%E9%87%8FdQxi%E3%81%AF%E3%80%81+%E4%B8%80%E6%96%B9%E3%80%81x%3Dx%2Bdx%E3%81%AB%E3%81%8A%E3%81%84%E3%81%A6%E3%80%81.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIb8UvC_DCUKBcKCsEEaOugfW8uj-nfASD0IyXyKnZfWSueRtepUvYrfEIeFjvm6Wj4KI';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				熱伝導方程式の導出 熱伝導 物質の移動を伴わずに高温側から低温側へ熱が伝わる現象 対流 輻射 フーリエの法則fourier S Law Ppt Download
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://ds0.cc.yamaguchi-u.ac.jp/~fukuyo/img/heat-02-01.png" data-lightbox="roadtrip" data-title="One Dimensional Heat Conduction Example 2">
+						<img class="card-img" src="http://ds0.cc.yamaguchi-u.ac.jp/~fukuyo/img/heat-02-01.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQp2jtH-zOms3hW-jErqtiScyPjvZkV6n3z9wysjEC5yfNamx31wj3N5h1o9QDUUG-WPJc';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				One Dimensional Heat Conduction Example 2
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic1.zhimg.com/v2-4909e891501d88c17355e26acf431784_b.jpg" data-lightbox="roadtrip" data-title="No 3 准稳态法材料导热系数测定 知乎">
+						<img class="card-img" src="https://pic1.zhimg.com/v2-4909e891501d88c17355e26acf431784_b.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_vjILzshciB7s1fcl9nky06VNNp1r91PA6UainO1bYsvY8o3XncMT1wpeHq_eHn8HdAc';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				No 3 准稳态法材料导热系数测定 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://slidesplayer.net/slide/17532698/103/images/6/%E7%86%B1%E4%BC%9D%E5%B0%8E%E6%96%B9%E7%A8%8B%E5%BC%8F%E3%81%AE%E5%B7%AE%E5%88%86%E5%8C%96+%E5%B7%AE%E5%88%86%E5%8C%96%E3%81%99%E3%82%8B+Al%E3%81%AE%CE%B1%EF%BC%9D96.8%5Bmm2%2Fs%5D+%CE%94t%3D+%CE%94x%3D0.1+l%EF%BC%9D1%5Bmm%5D.jpg" data-lightbox="roadtrip" data-title="熱伝導方程式の導出 熱伝導 物質の移動を伴わずに高温側から低温側へ熱が伝わる現象 対流 輻射 フーリエの法則fourier S Law Ppt Download">
+						<img class="card-img" src="https://slidesplayer.net/slide/17532698/103/images/6/%E7%86%B1%E4%BC%9D%E5%B0%8E%E6%96%B9%E7%A8%8B%E5%BC%8F%E3%81%AE%E5%B7%AE%E5%88%86%E5%8C%96+%E5%B7%AE%E5%88%86%E5%8C%96%E3%81%99%E3%82%8B+Al%E3%81%AE%CE%B1%EF%BC%9D96.8%5Bmm2%2Fs%5D+%CE%94t%3D+%CE%94x%3D0.1+l%EF%BC%9D1%5Bmm%5D.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQPVlKErW0CCXN-bKUk7lenTVgdsObxlMcg-eKNL4zthRXxf3swcx1YjD3QFy0srkUQHw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				熱伝導方程式の導出 熱伝導 物質の移動を伴わずに高温側から低温側へ熱が伝わる現象 対流 輻射 フーリエの法則fourier S Law Ppt Download
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+				<div class='card'>	
+			<div class="d-block p-4">
+	</div>		  	
+		  	<h3 class="h6 p-2"><b></b></h3>
+					</div>
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.newton.com.tw/img/c/74e/cGcq5CMwQTO4MTOiVmMmJTMkR2M5EmNzEWOhZTZwgjYmNTMyEDM5MTOlBDMv0WZ0l2LjlGcvU2apFmYv02bj5SdklWYi5yYyN3Ztl2LvoDc0RHa.jpg" data-lightbox="roadtrip" data-title="差分法 例子 常微分方程 熱傳導方程 顯式方法 隱式方法 準確度及誤差 資料分析速 中文百科全書">
+						<img class="card-img" src="https://www.newton.com.tw/img/c/74e/cGcq5CMwQTO4MTOiVmMmJTMkR2M5EmNzEWOhZTZwgjYmNTMyEDM5MTOlBDMv0WZ0l2LjlGcvU2apFmYv02bj5SdklWYi5yYyN3Ztl2LvoDc0RHa.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR58Ts0YVWuNNud0EHqCtWHgP2Xw1UKFJnJjKhHANzv3xChipN_lN0gM36hKQfj3ryT_Jw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				差分法 例子 常微分方程 熱傳導方程 顯式方法 隱式方法 準確度及誤差 資料分析速 中文百科全書
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="nHYIAtbSyeOKRM" data-lightbox="roadtrip" data-title="Http Www Ocw Titech Ac Jp Index Php Module General Action Download File 201326550 1 0 15 Pdf Type Cal Jwc 201326550">
+						<img class="card-img" src="nHYIAtbSyeOKRM" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxzzomXxaqkXbDL2jEd6gBrApTZCVo3Q53jRKQ0zxyC8WTCmOYEsD61dSsdZb0FYIKKzg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Http Www Ocw Titech Ac Jp Index Php Module General Action Download File 201326550 1 0 15 Pdf Type Cal Jwc 201326550
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic2.zhimg.com/v2-76c5b2f0d8c6ad1a431d70c5b676dd99_b.jpg" data-lightbox="roadtrip" data-title="No 3 准稳态法材料导热系数测定 知乎">
+						<img class="card-img" src="https://pic2.zhimg.com/v2-76c5b2f0d8c6ad1a431d70c5b676dd99_b.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSx6PlhQO9cDLuhZebolBa5fykAdhxEq4ouO0EPIMEGsyZZSFof3Kjd0JtPyIf608TFMQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				No 3 准稳态法材料导热系数测定 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://docsplayer.net/docs-images/92/108393465/images/25-0.jpg" data-lightbox="roadtrip" data-title="Microsoft Powerpoint 第5章 対流熱伝達 講義用 H27 Ppt 互換モード Pdf 無料ダウンロード">
+						<img class="card-img" src="https://docsplayer.net/docs-images/92/108393465/images/25-0.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyUf52XLfwlOslHGGrZUuhSh2nDWXhpkXBUuApPO91ct44HDqcOB0QFvqs5Q38l-C0AUM';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Microsoft Powerpoint 第5章 対流熱伝達 講義用 H27 Ppt 互換モード Pdf 無料ダウンロード
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://blogimg.goo.ne.jp/user_image/29/5a/d7d54f6bed6e9ba4a4bc702a6cbc3de8.png" data-lightbox="roadtrip" data-title="伝熱工学 東京大学機械工学 庄司正弘 とね日記">
+						<img class="card-img" src="https://blogimg.goo.ne.jp/user_image/29/5a/d7d54f6bed6e9ba4a4bc702a6cbc3de8.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBEWt16mSc8e7pyp7qPuvPiF4IjsnBh56vOEtwGVxr_LgxlKc0gcW8DMXjlbfJjphYNYU';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				伝熱工学 東京大学機械工学 庄司正弘 とね日記
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.yumpu.com/sv/image/facebook/21816579.jpg" data-lightbox="roadtrip" data-title="國科會工程處航空太空學門研究發展規劃書 國立成功大學航空太空">
+						<img class="card-img" src="https://www.yumpu.com/sv/image/facebook/21816579.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT73AZ97w4O1vr06O_qxEYmAy9M4x6bzg5ETycMTQlx6D77XBBn2MakM6dM64eJ-UCSmXQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				國科會工程處航空太空學門研究發展規劃書 國立成功大學航空太空
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="wVZyzn_cUC-daM" data-lightbox="roadtrip" data-title="Http Www Ocw Titech Ac Jp Index Php Module General Action Download File 201326550 7 0 19 Pdf Type Cal Jwc 201326550">
+						<img class="card-img" src="wVZyzn_cUC-daM" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKirpVQfVhzsd-Mo1oWjCPxZdWn5iJkotQkGS-27L28j9TLLBBtfJdGmYfg_rQi4Pqw_E';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Http Www Ocw Titech Ac Jp Index Php Module General Action Download File 201326550 7 0 19 Pdf Type Cal Jwc 201326550
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://slidesplayer.net/slide/16501785/96/images/19/%E3%81%93%E3%81%AE%E5%BC%8F%E3%81%AF%EF%BC%9F+%CF%81Cp%E3%81%A7%E5%89%B2%E3%82%8B+%CE%B1%E3%81%AF%E4%BD%95%EF%BC%9F%E3%80%81%E5%8D%98%E4%BD%8D%E3%81%AF%EF%BC%9F+%2819-14%2C+p.+280%29+%E7%86%B1%E4%BC%9D%E5%B0%8E%E6%96%B9%E7%A8%8B%E5%BC%8F%28%E7%86%B1%E6%8B%A1%E6%95%A3%E6%96%B9%E7%A8%8B%E5%BC%8F%EF%BC%89+%CE%B1%EF%BC%9A%E7%86%B1%E6%8B%A1%E6%95%A3%E7%8E%87%5Bm2%2Fs%5D.jpg" data-lightbox="roadtrip" data-title="Chapter 26 Steady State Molecular Diffusion Ppt Download">
+						<img class="card-img" src="https://slidesplayer.net/slide/16501785/96/images/19/%E3%81%93%E3%81%AE%E5%BC%8F%E3%81%AF%EF%BC%9F+%CF%81Cp%E3%81%A7%E5%89%B2%E3%82%8B+%CE%B1%E3%81%AF%E4%BD%95%EF%BC%9F%E3%80%81%E5%8D%98%E4%BD%8D%E3%81%AF%EF%BC%9F+%2819-14%2C+p.+280%29+%E7%86%B1%E4%BC%9D%E5%B0%8E%E6%96%B9%E7%A8%8B%E5%BC%8F%28%E7%86%B1%E6%8B%A1%E6%95%A3%E6%96%B9%E7%A8%8B%E5%BC%8F%EF%BC%89+%CE%B1%EF%BC%9A%E7%86%B1%E6%8B%A1%E6%95%A3%E7%8E%87%5Bm2%2Fs%5D.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvYi0fXz18B7a9UhCxmCONp9e4AlCQpANN5cZ_Y5Vj-8eC3g2aK6ppI-Jc5gu1DReoD0o';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Chapter 26 Steady State Molecular Diffusion Ppt Download
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="RfmBkMv9V0NZ1M" data-lightbox="roadtrip" data-title="Http Chur Chu Edu Tw Bitstream 987654321 5961 1 Nc094chpi0598003 Pdf">
+						<img class="card-img" src="RfmBkMv9V0NZ1M" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmiGCwAXni2dZIt3Ueg047PKJQI2iLallZzVxgU6w43nM7lg7j1jNQI1Lwo0SVNJLLYas';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Http Chur Chu Edu Tw Bitstream 987654321 5961 1 Nc094chpi0598003 Pdf
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic1.zhimg.com/v2-909573251cde9c4c4edf2a24b59ed0b8_b.jpg" data-lightbox="roadtrip" data-title="No 3 准稳态法材料导热系数测定 知乎">
+						<img class="card-img" src="https://pic1.zhimg.com/v2-909573251cde9c4c4edf2a24b59ed0b8_b.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_Rp8O3aYGj4zi_C_08-ceowroYCTozb1GM1w_oQWjxwhVqAYInzLSqL8riiHkO4gQoe0';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				No 3 准稳态法材料导热系数测定 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://patentimages.storage.googleapis.com/3b/17/d4/a10280d8a45ede/2011219912-85.png" data-lightbox="roadtrip" data-title="Jp2011219912a 被覆剤の摩擦およびフィラメント間の結合を調節するための粒子によりコーティングされた繊維製品 Google Patents">
+						<img class="card-img" src="https://patentimages.storage.googleapis.com/3b/17/d4/a10280d8a45ede/2011219912-85.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOHxflqp_HZeErQtEiTDaWNhMspjFm8uDj0qLAblnM-RaNIM7DwFJd91kZ-P1C_RGMUuo';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Jp2011219912a 被覆剤の摩擦およびフィラメント間の結合を調節するための粒子によりコーティングされた繊維製品 Google Patents
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://reference.wolfram.com/language/ref/Files/DSolveValue.ja/O_29.png" data-lightbox="roadtrip" data-title="Dsolvevalue Wolfram言語ドキュメント">
+						<img class="card-img" src="https://reference.wolfram.com/language/ref/Files/DSolveValue.ja/O_29.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXLTqiCKzd8eFQpnv5G5Z7CdyVnFTV-RUMov1xUCsLTNq6HGnxgItw90lTjmjc4a1hIlA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Dsolvevalue Wolfram言語ドキュメント
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Heatequation_exampleB_frames.svg/186px-Heatequation_exampleB_frames.svg.png" data-lightbox="roadtrip" data-title="熱傳導方程式 维基百科 自由的百科全书">
+						<img class="card-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Heatequation_exampleB_frames.svg/186px-Heatequation_exampleB_frames.svg.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQj-dku4B6LNo9byd-kj3qrmhVjUF_hND38owxOLkCYYKjlihVfAEv_ic1geqtP7TmAnsw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				熱傳導方程式 维基百科 自由的百科全书
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Temp_Rod_homobc.svg/300px-Temp_Rod_homobc.svg.png" data-lightbox="roadtrip" data-title="熱傳導方程式 维基百科 自由的百科全书">
+						<img class="card-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Temp_Rod_homobc.svg/300px-Temp_Rod_homobc.svg.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvv2hjWrICjh_DJT9p7DWlc4Pt58X-27DPwchIa0nv4mTAaGNpsjGRSZUbOI3VCSRlPw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				熱傳導方程式 维基百科 自由的百科全书
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="tTspb2Xv4VwZ5M" data-lightbox="roadtrip" data-title="Https Www Kz Tsukuba Ac Jp Abe Ohp Heat Chapter4 Pdf">
+						<img class="card-img" src="tTspb2Xv4VwZ5M" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaF01dSk_WdIlsule7Liqe1ht9vtFf6RwPGg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Https Www Kz Tsukuba Ac Jp Abe Ohp Heat Chapter4 Pdf
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic1.zhimg.com/v2-8ecee6f42676535db86e8b2e5cc6aa33_720w.jpg?source=172ae18b" data-lightbox="roadtrip" data-title="No 3 准稳态法材料导热系数测定 知乎">
+						<img class="card-img" src="https://pic1.zhimg.com/v2-8ecee6f42676535db86e8b2e5cc6aa33_720w.jpg?source=172ae18b" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdclgafFJlHFwJ6qzGs7rzsqU-hKr8bIn4qQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				No 3 准稳态法材料导热系数测定 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://chemeng.web.fc2.com/ExcelCe/exhc16.png" data-lightbox="roadtrip" data-title="Excelによる伝熱工学 非定常伝熱">
+						<img class="card-img" src="https://chemeng.web.fc2.com/ExcelCe/exhc16.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0zQKsrNwd9JRK3Zb_oBqd3q_G5gbOilZBEg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Excelによる伝熱工学 非定常伝熱
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic1.zhimg.com/80/v2-dff05620306196613c8280d0f108b360_1440w.jpg" data-lightbox="roadtrip" data-title="F75otgy E0njdm">
+						<img class="card-img" src="https://pic1.zhimg.com/80/v2-dff05620306196613c8280d0f108b360_1440w.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2hogfMKMfF0YLYebKj6fyrNqE4yjsQwtYmw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				F75otgy E0njdm
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://slidesplayer.net/17532698/103/images/slide_1.jpg" data-lightbox="roadtrip" data-title="熱伝導方程式の導出 熱伝導 物質の移動を伴わずに高温側から低温側へ熱が伝わる現象 対流 輻射 フーリエの法則fourier S Law Ppt Download">
+						<img class="card-img" src="https://slidesplayer.net/17532698/103/images/slide_1.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjoSMk34gtkjlGzcb8gSVxcZwf8aPVEel6vw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				熱伝導方程式の導出 熱伝導 物質の移動を伴わずに高温側から低温側へ熱が伝わる現象 対流 輻射 フーリエの法則fourier S Law Ppt Download
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic3.zhimg.com/80/v2-2db71ad6389666c64f96e7a9c55745f2_1440w.jpg" data-lightbox="roadtrip" data-title="F75otgy E0njdm">
+						<img class="card-img" src="https://pic3.zhimg.com/80/v2-2db71ad6389666c64f96e7a9c55745f2_1440w.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYR6LO6YHN1shXyMpiA5ZZ2wmHbpldbqskMw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				F75otgy E0njdm
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://docsplayer.net/docs-images/95/122521238/images/28-0.jpg" data-lightbox="roadtrip" data-title="4d F736f F F696e74202d2091e6328fcd E9f8cb392e88fed944d936093b1298d758b F E291e892c789c1292e B8cdd8 Pdf Free Download">
+						<img class="card-img" src="https://docsplayer.net/docs-images/95/122521238/images/28-0.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSq6QsdzFGD6YiVr0s54r9k5uN2VaQ3z2GYuQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				4d F736f F F696e74202d2091e6328fcd E9f8cb392e88fed944d936093b1298d758b F E291e892c789c1292e B8cdd8 Pdf Free Download
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://multimedia.okwave.jp/image/questions/22/222716/222716_L.jpg" data-lightbox="roadtrip" data-title="2物体間の1次元非定常熱伝導 Okwave">
+						<img class="card-img" src="https://multimedia.okwave.jp/image/questions/22/222716/222716_L.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuPoCqhfXXC3gBE3owdTI4hA5RfOi1tCcc9g';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				2物体間の1次元非定常熱伝導 Okwave
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic2.zhimg.com/v2-72c3df2fec987e43c5f067fd73846679_b.jpg" data-lightbox="roadtrip" data-title="No 3 准稳态法材料导热系数测定 知乎">
+						<img class="card-img" src="https://pic2.zhimg.com/v2-72c3df2fec987e43c5f067fd73846679_b.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSY3n2tsyap_jFNLB_Q-EKWvWkQfEQfRyi2OQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				No 3 准稳态法材料导热系数测定 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="y0Nqd4G5ExUymM" data-lightbox="roadtrip" data-title="Https Inis Iaea Org Collection Nclcollectionstore Public 22 052 22052454 Pdf">
+						<img class="card-img" src="y0Nqd4G5ExUymM" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBpy5umdNkb0KJ-Am985SyJGqHWu_BUJDeTw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Https Inis Iaea Org Collection Nclcollectionstore Public 22 052 22052454 Pdf
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://patentimages.storage.googleapis.com/e8/9b/83/98ab0c402ab8eb/2004536553-36.png" data-lightbox="roadtrip" data-title="Jp2004536553a Whole Cell Engineering By Essentially Partial Mutation Of The Primordial Genome Combination Of Mutations And Arbitrary Repetition Google Patents">
+						<img class="card-img" src="https://patentimages.storage.googleapis.com/e8/9b/83/98ab0c402ab8eb/2004536553-36.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSF0WPlzPb6TBjPQQ_Hejf07eIng-KJd8vvBw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Jp2004536553a Whole Cell Engineering By Essentially Partial Mutation Of The Primordial Genome Combination Of Mutations And Arbitrary Repetition Google Patents
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="C2q2FzyfXrfeVM" data-lightbox="roadtrip" data-title="Https Ynu Repo Nii Ac Jp Action Repository Uri Item Id 4349 File Id 20 File No 1 Nc Session Ghd6b1jdpn72nngct445moo0d1">
+						<img class="card-img" src="C2q2FzyfXrfeVM" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjxssW4DEXCM1AfDCPom8o4EaAvCRLv3fLfg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Https Ynu Repo Nii Ac Jp Action Repository Uri Item Id 4349 File Id 20 File No 1 Nc Session Ghd6b1jdpn72nngct445moo0d1
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://reference.wolfram.com/language/ref/Files/DSolveValue.ja/O_10.png" data-lightbox="roadtrip" data-title="Dsolvevalue Wolfram言語ドキュメント">
+						<img class="card-img" src="https://reference.wolfram.com/language/ref/Files/DSolveValue.ja/O_10.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUzHj8xUPCnx-TeK0qWkVSCpr4wrIWwsV8BA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Dsolvevalue Wolfram言語ドキュメント
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+		
+	</div>
+
+		 
+		
+		
+				</div>
+				<div class="col-sm-12 widget">
+					<div class="d-block p-4">
+	<center>
+		<!-- BOTTOM BANNER ADS -->
+<script async="async" data-cfasync="false" src="//jc32arlvqpv8.com/eb47a424ae325c90cca32780149785c3/invoke.js"></script>
+<div id="container-eb47a424ae325c90cca32780149785c3"></div>
+
+	</center>
+</div>				</div>
+			</div>
+			<div class="row footer">
+				<div class="col-md-12 text-center py-4">
+										<a href="/p/dmca.html">Dmca</a>
+										<a href="/p/contact.html">Contact</a>
+										<a href="/p/privacy-policy.html">Privacy Policy</a>
+										<a href="/p/copyright.html">Copyright</a>
+					
+				</div>
+			</div>
+		</main>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js" integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js" integrity="sha256-CtKylYan+AJuoH8jrMht1+1PMhMqrKnB8K5g012WN5I=" crossorigin="anonymous"></script>
+		
+		<!-- Footer CSS JS -->
+		
+		
+		
+			<script type='text/javascript' src='//jc32arlvqpv8.com/ef/d5/10/efd510237a3143727bed46803ec35b8d.js'></script>
+</body>
+</html>

@@ -1,0 +1,682 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha256-L/W5Wfqfa0sdBNIKN9cG6QA5F2qx4qICmU2VgLruv9Y=" crossorigin="anonymous" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/css/lightbox.min.css" integrity="sha256-tBxlolRHP9uMsEFKVk+hk//ekOlXOixLKvye5W2WR5c=" crossorigin="anonymous" />
+		<link href="https://fonts.googleapis.com/css?family=Mr+Dafoe" rel="stylesheet" type="text/css">
+
+		<style type="text/css">
+			html,body{font-family:"Open Sans",Arial,sans-serif;font-size:14px;font-weight:400;background:#f3f3f3 url(https://pic3.zhimg.com/v2-0be567c97a0a37a2a3251007a414447e_b.jpg
+) no-repeat center center fixed;background-size:cover;height:100%}#title{font-family:"Mr Dafoe",Times,serif;font-size:34px;background:rgba(255,255,255,.8);margin-bottom:34px}.header{padding-bottom:13px;margin-bottom:13px;border-bottom:1px solid #eee}a{color:#26ADE4;text-decoration:none}#title a{color:#333;margin-left:21px}#title a:hover{text-decoration:none;color:#26ADE4}.sidebar ul{margin:0;padding:0}.sidebar ul li{list-style:none}.footer{margin-top:21px;padding-top:13px;border-top:1px solid #eee}.footer a{margin:0 15px}.navi{margin:13px 0 13px 0;padding:13px}.navi a{margin:5px 2px;font-size:95%}.main{margin-top: 6rem;}.form-inline .form-control{min-width: 300px;}.v-cover{height: 380px; object-fit: cover;}.v-image{height: 200px; object-fit: cover;}.dwn-cover{max-height: 460px; object-fit: cover;}.main{margin-top: 6rem;}.form-inline .form-control{min-width: 300px;}			
+		</style>
+
+		<title>連立差分方程式 解法</title>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/", 
+  "@type": "Article", 
+  "author": {
+    "@type": "Person",
+    "name": "James"
+  },
+  "headline": "連立差分方程式 解法",
+  "datePublished": "2021-04-24",
+  "image": [https://pic2.zhimg.com/v2-b4012e482bbab468983dff76d0ecd651_b.jpg,https://pic2.zhimg.com/v2-a536ee62a9b61a97d649620fa38e3261_b.jpg,https://pic1.zhimg.com/v2-7b1485913127e4e9b582d2e461a98200_b.jpg],
+  "publisher": {
+    "@type": "Organization",
+    "name": "Tukang Parkir Gerobak",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://via.placeholder.com/512.png?text=連立差分方程式 解法",
+      "width": 512,
+      "height": 512
+    }
+  }
+}
+</script>
+		<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-957NGNKQ70"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-957NGNKQ70');
+</script>
+
+<script type='text/javascript' src='//jc32arlvqpv8.com/1a/82/2e/1a822ef8a40a0fbab3c4ea12a5d2bb02.js'></script>
+</head>
+	<body>
+		<header class="bg-white fixed-top">			
+			<nav class="navbar navbar-light bg-white mb-0">
+				<div class="container justify-content-center justify-content-sm-between">	
+				  <a href="/" title="Blog" class="navbar-brand mb-1">Blog</a>
+				  				</div>			  
+			</nav>				
+		</header>
+		<main class="main container bg-white">
+			<div class="col-md-12 my-4" align="center">
+				<div class="d-block p-4">
+	<br/><center>
+<!-- TOP BANNER ADS -->
+</center><br/>
+</div>			</div>
+			<div class="row header">
+				<div class="col-sm-12 text-center p-2">
+						<h1>連立差分方程式 解法</h1>
+
+	
+	<div class="navi text-center">
+										<a class="badge badge-primary" href="/%E7%86%B1-%E6%96%AD%E7%86%B1-%E7%AD%89%E6%B8%A9-2%E6%AC%A1%E6%96%B9%E7%A8%8B%E5%BC%8F.html">熱 断熱 等温 2次方程式</a>
+											<a class="badge badge-success" href="/%E6%B3%95%E7%B7%9A%E3%81%AE%E6%96%B9%E7%A8%8B%E5%BC%8F-%E8%A8%BC%E6%98%8E.html">法線の方程式 証明</a>
+											<a class="badge badge-warning" href="/%E7%A7%81%E3%81%AF%E8%B2%B4%E6%96%B9%E3%81%AE%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%AB%E4%BC%9A%E3%81%84%E3%81%9F%E3%81%84%E8%8B%B1%E8%AA%9E.html">私は貴方のお父さんに会いたい英語</a>
+											<a class="badge badge-secondary" href="/%E7%86%B1%E5%8C%96%E5%AD%A6%E6%96%B9%E7%A8%8B%E5%BC%8F-%E6%B0%B4-%E7%8A%B6%E6%85%8B.html">熱化学方程式 水 状態</a>
+											<a class="badge badge-info" href="/%E7%9B%B4%E7%B7%9A-%E3%81%AE-%E6%96%B9%E7%A8%8B%E5%BC%8F-%E3%82%B0%E3%83%A9%E3%83%95.html">直線 の 方程式 グラフ</a>
+											<a class="badge badge-secondary" href="/%E7%82%B9a%E3%82%92%E9%80%9A%E3%82%8Aab%E3%81%AB%E5%B9%B3%E8%A1%8C%E3%81%AA%E7%9B%B4%E7%B7%9A%E3%81%AE%E6%96%B9%E7%A8%8B%E5%BC%8F.html">点aを通りabに平行な直線の方程式</a>
+											<a class="badge badge-success" href="/%E7%A7%81%E3%81%AE%E6%96%B9%E7%A8%8B%E5%BC%8F%E3%81%AE%E6%96%B9%E3%81%8C%E8%B3%A2%E3%81%8B%E3%81%A3%E3%81%9F.html">私の方程式の方が賢かった</a>
+											<a class="badge badge-secondary" href="/%E7%9B%AE%E3%81%AE%E4%BF%9D%E9%A4%8A-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93.html">目の保養 お父さん</a>
+											<a class="badge badge-light" href="/%E7%86%B1%E5%8C%96%E5%AD%A6%E6%96%B9%E7%A8%8B%E5%BC%8F-%E7%87%83%E7%84%BC%E7%86%B1-%E5%85%AC%E5%BC%8F.html">熱化学方程式 燃焼熱 公式</a>
+											<a class="badge badge-danger" href="/%E7%94%B0%E4%B8%AD%E7%9F%A5%E4%B9%8B-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%AE%E8%87%AA%E5%B7%B1%E6%BA%80%E8%B6%B3.html">田中知之 お父さんの自己満足</a>
+											<a class="badge badge-secondary" href="/%E7%90%83%E5%BA%A7%E6%A8%99%E7%B3%BB-%E7%86%B1%E4%BC%9D%E5%B0%8E%E6%96%B9%E7%A8%8B%E5%BC%8F-%E5%B0%8E%E5%87%BA.html">球座標系 熱伝導方程式 導出</a>
+											<a class="badge badge-secondary" href="/%E8%99%9A%E6%95%B0%E8%A7%A3%E3%81%AE2%E6%AC%A1%E6%96%B9%E7%A8%8B%E5%BC%8F.html">虚数解の2次方程式</a>
+											<a class="badge badge-dark" href="/%E9%9D%9E%E7%B7%9A%E5%BD%A2%E6%96%B9%E7%A8%8B%E5%BC%8F-%E4%BA%8C%E5%88%86%E6%B3%95-%E8%8B%B1%E8%AA%9E.html">非線形方程式 二分法 英語</a>
+											<a class="badge badge-danger" href="/%E7%B7%9A%E5%BD%A2%E5%A4%89%E6%8F%9Bf%E3%81%AB%E3%82%88%E3%81%A3%E3%81%A6%E7%A7%BB%E3%82%8B%E7%9B%B4%E7%B7%9A%E3%81%AE%E6%96%B9%E7%A8%8B%E5%BC%8F%E3%82%92%E6%B1%82%E3%82%81%E3%82%88.html">線形変換fによって移る直線の方程式を求めよ</a>
+											<a class="badge badge-light" href="/%E8%B2%B4%E5%A5%B3%E3%81%AE%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%AF%E5%85%83%E6%B0%97%E3%81%A7%E3%81%99-%E8%8B%B1%E4%BC%9A%E8%A9%B1.html">貴女のお父さんは元気です 英会話</a>
+						</div>
+<center>
+	<!-- MIDDLE BANNER ADS -->
+<script type="text/javascript">
+	atOptions = {
+		'key' : '2b77887421e2587a1a1b1d7c8a31a9e0',
+		'format' : 'iframe',
+		'height' : 250,
+		'width' : 300,
+		'params' : {}
+	};
+	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://jc32arlvqpv8.com/2b77887421e2587a1a1b1d7c8a31a9e0/invoke.js"></scr' + 'ipt>');
+</script>
+		
+	</center>
+					
+				</div>
+			</div>
+			<div class="row content mb-4">
+				<div class="col-md-12">					
+					
+	
+	<div class="card-columns">
+						
+	  <div class='card'>
+	  	<a href="https://images2015.cnblogs.com/blog/917868/201604/917868-20160416163559895-1193687068.png" data-lightbox="roadtrip" data-title="第一章时间序列基础 差分方程和求解 二 旅鼠 博客园">
+						<img class="card-img" src="https://images2015.cnblogs.com/blog/917868/201604/917868-20160416163559895-1193687068.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHaxiWQ3UwnGdLqpThX3iUpoHEzte-YdcM-dVdFJ23eCOWwclJElHU7Cmud9gm1uwMJh0';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				第一章时间序列基础 差分方程和求解 二 旅鼠 博客园
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Crank-Nicolson-stencil.svg/440px-Crank-Nicolson-stencil.svg.png" data-lightbox="roadtrip" data-title="有限差分法 Wikiwand">
+						<img class="card-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Crank-Nicolson-stencil.svg/440px-Crank-Nicolson-stencil.svg.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAORohz_Hgo1_pdJVCli3_oJgMg2gEN2cJbf4mnWH2hejek1cgX_1aLQ5l70vmjR2ZDMY';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				有限差分法 Wikiwand
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://images2015.cnblogs.com/blog/917868/201604/917868-20160416163558316-980878542.png" data-lightbox="roadtrip" data-title="第一章时间序列基础 差分方程和求解 二 旅鼠 博客园">
+						<img class="card-img" src="https://images2015.cnblogs.com/blog/917868/201604/917868-20160416163558316-980878542.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRllVWfNpfPxk4IPkTrb9aOzUyZh1t4xfxgsnNYr6_m66gefn0KyhCogCa-aRU8MI1ZiG0';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				第一章时间序列基础 差分方程和求解 二 旅鼠 博客园
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://images2015.cnblogs.com/blog/917868/201604/917868-20160416163559316-131930692.png" data-lightbox="roadtrip" data-title="第一章时间序列基础 差分方程和求解 二 旅鼠 博客园">
+						<img class="card-img" src="https://images2015.cnblogs.com/blog/917868/201604/917868-20160416163559316-131930692.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfHdYadUn6ywRDusJ2Vj9QoO90Bq41rJuyyTWqgPyBrAKXD7kGSAz0blT42Cv4DBoYuI0';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				第一章时间序列基础 差分方程和求解 二 旅鼠 博客园
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Finite_Differences.svg/440px-Finite_Differences.svg.png" data-lightbox="roadtrip" data-title="有限差分法 Wikiwand">
+						<img class="card-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Finite_Differences.svg/440px-Finite_Differences.svg.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXrv9BVo9jVBDer_VZniqmyOwwAvO40-LbIR5lZhWkqP7852WT3MneRLYXP08Gg0uqqpM';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				有限差分法 Wikiwand
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic2.zhimg.com/v2-8f28f72b0942624da87c3b356fb714e1_b.jpg" data-lightbox="roadtrip" data-title="时间序列基础 差分方程和求解 知乎">
+						<img class="card-img" src="https://pic2.zhimg.com/v2-8f28f72b0942624da87c3b356fb714e1_b.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5BD_MQ9OWe1zF7BHfHvRRLpxne0debUV78EIj71_ntTSjGASLKUqMnKv2bRWa8cGVzg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				时间序列基础 差分方程和求解 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+				<div class='card'>	
+			<div class="d-block p-4">
+	</div>		  	
+		  	<h3 class="h6 p-2"><b></b></h3>
+					</div>
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic2.zhimg.com/v2-a536ee62a9b61a97d649620fa38e3261_b.jpg" data-lightbox="roadtrip" data-title="时间序列基础 差分方程和求解 知乎">
+						<img class="card-img" src="https://pic2.zhimg.com/v2-a536ee62a9b61a97d649620fa38e3261_b.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQreNzT6bLL_SUT37ZxDobk-1aWlRC4ykRiOKQX0_X67xW2OnOPgJ9NXYgMyQURYdq9o7o';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				时间序列基础 差分方程和求解 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://i0.wp.com/jp.mathworks.com/help/symbolic/ugztransforms_f1-123225_002.png" data-lightbox="roadtrip" data-title="Matlab 方程式近似解連立1次方程式 Liudong">
+						<img class="card-img" src="https://i0.wp.com/jp.mathworks.com/help/symbolic/ugztransforms_f1-123225_002.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDwwfFtEqWxaxoEKo0Yv3--0YK0kaSxuwA5FbE-KwuEmHC7YCDdgWsfofUZxeza5ZaUYc';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Matlab 方程式近似解連立1次方程式 Liudong
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic1.zhimg.com/80/v2-b4be2b4c5a98ab0f2de3b739c032e7cc_1440w.jpg" data-lightbox="roadtrip" data-title="时间序列基础 差分方程和求解 知乎">
+						<img class="card-img" src="https://pic1.zhimg.com/80/v2-b4be2b4c5a98ab0f2de3b739c032e7cc_1440w.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8eADAY605ZORtvlO8LEjhnjhsogB31zCMXNc1IHnZiehhgPBHOyxMX5o6yxMyyPkyXuY';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				时间序列基础 差分方程和求解 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic2.zhimg.com/v2-b4012e482bbab468983dff76d0ecd651_b.jpg" data-lightbox="roadtrip" data-title="时间序列基础 差分方程和求解 知乎">
+						<img class="card-img" src="https://pic2.zhimg.com/v2-b4012e482bbab468983dff76d0ecd651_b.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYz5G-BVI1LRH-1WD83LscpeWk9Spr-1cfL0ZsuvvlfCNM2w7q1hPpIcqOyrGkt2-tqNw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				时间序列基础 差分方程和求解 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://i0.wp.com/4.bp.blogspot.com/-shCnl6Ki-YM/XZO2JXTSHTI/AAAAAAAAADw/qQabz7FuBR0opo0lpV1CB851D_3qJNW9ACLcBGAsYHQ/s1600/Fig.4.1.png" data-lightbox="roadtrip" data-title="Matlab 方程式近似解連立1次方程式 Liudong">
+						<img class="card-img" src="https://i0.wp.com/4.bp.blogspot.com/-shCnl6Ki-YM/XZO2JXTSHTI/AAAAAAAAADw/qQabz7FuBR0opo0lpV1CB851D_3qJNW9ACLcBGAsYHQ/s1600/Fig.4.1.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTB3iTyXlzv7N6qLn0uWpiZC99wNAxAkotVuusFjRDOe9EgvkSbanfFJNLiC72Wncfz9qc';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Matlab 方程式近似解連立1次方程式 Liudong
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.newton.com.tw/img/c/74e/cGcq5CMwQTO4MTOiVmMmJTMkR2M5EmNzEWOhZTZwgjYmNTMyEDM5MTOlBDMv0WZ0l2LjlGcvU2apFmYv02bj5SdklWYi5yYyN3Ztl2LvoDc0RHa.jpg" data-lightbox="roadtrip" data-title="差分法 例子 常微分方程 熱傳導方程 顯式方法 隱式方法 準確度及誤差 資料分析速 中文百科全書">
+						<img class="card-img" src="https://www.newton.com.tw/img/c/74e/cGcq5CMwQTO4MTOiVmMmJTMkR2M5EmNzEWOhZTZwgjYmNTMyEDM5MTOlBDMv0WZ0l2LjlGcvU2apFmYv02bj5SdklWYi5yYyN3Ztl2LvoDc0RHa.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR58Ts0YVWuNNud0EHqCtWHgP2Xw1UKFJnJjKhHANzv3xChipN_lN0gM36hKQfj3ryT_Jw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				差分法 例子 常微分方程 熱傳導方程 顯式方法 隱式方法 準確度及誤差 資料分析速 中文百科全書
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://imgv2-1-f.scribdassets.com/img/document/27092561/original/1d020a6f3d/1615155567?v=1" data-lightbox="roadtrip" data-title="Scilab 常微分教學">
+						<img class="card-img" src="https://imgv2-1-f.scribdassets.com/img/document/27092561/original/1d020a6f3d/1615155567?v=1" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZBSogde2uqBg4cOS7pkfG5mbB5aw7EmrVnzOcwkJPzrpcWiydvQKjhFcR54uoeZ-behA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Scilab 常微分教學
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://images2015.cnblogs.com/blog/917868/201604/917868-20160416163624316-631060387.png" data-lightbox="roadtrip" data-title="第一章时间序列基础 差分方程和求解 二 旅鼠 博客园">
+						<img class="card-img" src="https://images2015.cnblogs.com/blog/917868/201604/917868-20160416163624316-631060387.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGpDBA1YXIkuyAaoutaC7liWCIrIcoIX_pmOvUQpmGuAvyfhFRwuzLIvF2QIMOYv3tvyc';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				第一章时间序列基础 差分方程和求解 二 旅鼠 博客园
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic1.zhimg.com/v2-54ac3b44e1965e428c2fd463edd41ed8_b.jpg" data-lightbox="roadtrip" data-title="计算流体力学 差分方法 知乎">
+						<img class="card-img" src="https://pic1.zhimg.com/v2-54ac3b44e1965e428c2fd463edd41ed8_b.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIxVwnFkxHCsBwUD3s8b7BYnGGcIUnYlaGvYEEgAlUs-yXcEQLUU4EMyTijkm571tHmKI';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				计算流体力学 差分方法 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://images2015.cnblogs.com/blog/917868/201604/917868-20160416163616895-1016855650.jpg" data-lightbox="roadtrip" data-title="第一章时间序列基础 差分方程和求解 二 旅鼠 博客园">
+						<img class="card-img" src="https://images2015.cnblogs.com/blog/917868/201604/917868-20160416163616895-1016855650.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4OW17G35epGWytgocs-VIvIO9RY5S3nviPYr-03qzSpZEY6yeQVM_cUVuLnwJwhpenw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				第一章时间序列基础 差分方程和求解 二 旅鼠 博客园
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic1.zhimg.com/v2-7b1485913127e4e9b582d2e461a98200_b.jpg" data-lightbox="roadtrip" data-title="计算流体力学 差分方法 知乎">
+						<img class="card-img" src="https://pic1.zhimg.com/v2-7b1485913127e4e9b582d2e461a98200_b.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSU4uTr1DeKgoLuy_m2xvdzWicekrZV6Fckmp1wn8PBjkW1mjrjNr6gvqK1-hIGCNx4PJc';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				计算流体力学 差分方法 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://image1.slideserve.com/3497819/matlab-l.jpg" data-lightbox="roadtrip" data-title="Ppt Matlab 程式設計常微分方程與聯立微分方程模擬powerpoint Presentation Id 3497819">
+						<img class="card-img" src="https://image1.slideserve.com/3497819/matlab-l.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSntg4tH-94P8gXDPXVa8N6zLI_syV2OSVXPVzS9j9Jw8ZeVzob5pr8Yy17wFsIa3aMUS8';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Ppt Matlab 程式設計常微分方程與聯立微分方程模擬powerpoint Presentation Id 3497819
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://img-blog.csdnimg.cn/20190430120652321.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5ODMxMTYz,size_16,color_FFFFFF,t_70" data-lightbox="roadtrip" data-title="偏微分方程的数值解 二 一维状态空间的偏微分方程的matlab 解法 冷月无声的博客 Csdn博客 Matlab解偏微分方程">
+						<img class="card-img" src="https://img-blog.csdnimg.cn/20190430120652321.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5ODMxMTYz,size_16,color_FFFFFF,t_70" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrSCb9vQsty1KqmeW8oB801bXEFN47_DjwMsEjgTPeAYf2bVD5J55J3FnByElmZ3GsHfI';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				偏微分方程的数值解 二 一维状态空间的偏微分方程的matlab 解法 冷月无声的博客 Csdn博客 Matlab解偏微分方程
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic2.zhimg.com/v2-1cc3d0b6d403b2f81e2df11f6de7f3de_1440w.jpg?source=172ae18b" data-lightbox="roadtrip" data-title="微分方程数值解法 专题 1 常微分方程的有限差分方法 知乎">
+						<img class="card-img" src="https://pic2.zhimg.com/v2-1cc3d0b6d403b2f81e2df11f6de7f3de_1440w.jpg?source=172ae18b" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTv6-ptvMjqblloaZhb1-y__MUIBehpzqvVJ5bZRNqfd8Ft7FHgcxBdWyyfy8mT0DpwzeA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				微分方程数值解法 专题 1 常微分方程的有限差分方法 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic3.zhimg.com/v2-0be567c97a0a37a2a3251007a414447e_b.jpg" data-lightbox="roadtrip" data-title="有限差分法 1 构造差分格式及稳定性分析 知乎">
+						<img class="card-img" src="https://pic3.zhimg.com/v2-0be567c97a0a37a2a3251007a414447e_b.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGLPB0bgT3nC3VcI2-a80Q0Tpo2VzU1oJXcQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				有限差分法 1 构造差分格式及稳定性分析 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic1.zhimg.com/v2-4706260b1784f4877fb5e83fc4f1f22b_1440w.jpg?source=172ae18b" data-lightbox="roadtrip" data-title="数值偏微分方程 差分法 Python 知乎">
+						<img class="card-img" src="https://pic1.zhimg.com/v2-4706260b1784f4877fb5e83fc4f1f22b_1440w.jpg?source=172ae18b" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1-quCXrum_aN4K6f90StnFBAgGQG3gj357w';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				数值偏微分方程 差分法 Python 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic3.zhimg.com/80/v2-125be250d09797b6579704c1bdd150ea_1440w.jpg" data-lightbox="roadtrip" data-title="计算流体力学 差分方法 知乎">
+						<img class="card-img" src="https://pic3.zhimg.com/80/v2-125be250d09797b6579704c1bdd150ea_1440w.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTznWY49SOqMEjZWHOvDOf_Z2UN5tgbmPfb9g';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				计算流体力学 差分方法 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://imgv2-1-f.scribdassets.com/img/document/146657007/149x198/2faf22c7e7/1544779667?v=1" data-lightbox="roadtrip" data-title="Scilab 常微分教學">
+						<img class="card-img" src="https://imgv2-1-f.scribdassets.com/img/document/146657007/149x198/2faf22c7e7/1544779667?v=1" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6zwfQRrsEvf3O3TvO8x3MICDKX3Bp9WM2eA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Scilab 常微分教學
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://static.wikia.nocookie.net/e7a0b4e79bbee7bbb4e59fba/images/6/63/%247%40BAP%245%60-%29Y_%607HG82%24PBK.png/revision/latest?cb=20200424123553&amp;path-prefix=zh" data-lightbox="roadtrip" data-title="數學入門 破盾维基wiki Fandom">
+						<img class="card-img" src="https://static.wikia.nocookie.net/e7a0b4e79bbee7bbb4e59fba/images/6/63/%247%40BAP%245%60-%29Y_%607HG82%24PBK.png/revision/latest?cb=20200424123553&amp;path-prefix=zh" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYSQplc2dbsZZASUNk7c8M9PsKms7_G7OFeQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				數學入門 破盾维基wiki Fandom
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="QBRZI3jUVOs0CM" data-lightbox="roadtrip" data-title="Http Www Pdr Rto Com Doc Vb Cheer Chapter 2011 Pdf">
+						<img class="card-img" src="QBRZI3jUVOs0CM" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTv-vOym8YCy0GfFku0l6-7rWxro7qTioqPPg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Http Www Pdr Rto Com Doc Vb Cheer Chapter 2011 Pdf
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="QBRZI3jUVOs0CM" data-lightbox="roadtrip" data-title="Http Www Pdr Rto Com Doc Vb Cheer Chapter 2011 Pdf">
+						<img class="card-img" src="QBRZI3jUVOs0CM" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdt4FZuWQAkKEwHGbBRWxSEUKCEVjPZRU8ZQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Http Www Pdr Rto Com Doc Vb Cheer Chapter 2011 Pdf
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://images2015.cnblogs.com/blog/917868/201604/917868-20160416163622598-376646398.png" data-lightbox="roadtrip" data-title="第一章时间序列基础 差分方程和求解 二 旅鼠 博客园">
+						<img class="card-img" src="https://images2015.cnblogs.com/blog/917868/201604/917868-20160416163622598-376646398.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLTWtAVCRn4zCJs4m3j5cksvF_XF4BIOcDKA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				第一章时间序列基础 差分方程和求解 二 旅鼠 博客园
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.3du.tw/res/2020/11-04/22/4be47ae4df3486b74639bcf492f20432.jpg" data-lightbox="roadtrip" data-title="邊界層方程數值解法 自然百科 三度漢語網 三度漢語網">
+						<img class="card-img" src="https://www.3du.tw/res/2020/11-04/22/4be47ae4df3486b74639bcf492f20432.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYrjBQHvtEKnkQQVnR4l9L0tbqh5Xhi462VQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				邊界層方程數值解法 自然百科 三度漢語網 三度漢語網
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic4.zhimg.com/v2-ac35f3e7466b36b688db8dc03aafa473_b.jpg" data-lightbox="roadtrip" data-title="有限差分法 1 构造差分格式及稳定性分析 知乎">
+						<img class="card-img" src="https://pic4.zhimg.com/v2-ac35f3e7466b36b688db8dc03aafa473_b.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUFN3EZTopLpd92RKQ5jECzVv-fAl2xFt4Bw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				有限差分法 1 构造差分格式及稳定性分析 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Airflow-Obstructed-Duct.png/1200px-Airflow-Obstructed-Duct.png" data-lightbox="roadtrip" data-title="微分方程 维基百科 自由的百科全书">
+						<img class="card-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Airflow-Obstructed-Duct.png/1200px-Airflow-Obstructed-Duct.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTd3sed3bSKvJHvbg89pTKayYEFQJVaSeQCjw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				微分方程 维基百科 自由的百科全书
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="tLoLRrG8OUY2BM" data-lightbox="roadtrip" data-title="Http Eportfolio Lib Ksu Edu Tw 4980k086 Repository Fetch Diff Pdf">
+						<img class="card-img" src="tLoLRrG8OUY2BM" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgJ9_nLWdO1Ax7Pg67KYRc5dC8ySqMgurrxA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Http Eportfolio Lib Ksu Edu Tw 4980k086 Repository Fetch Diff Pdf
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Equation_illustration_colour.svg/440px-Equation_illustration_colour.svg.png" data-lightbox="roadtrip" data-title="方程式 Wikiwand">
+						<img class="card-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Equation_illustration_colour.svg/440px-Equation_illustration_colour.svg.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcoXbB9MNJeYBL8ysu9m5K2uUEOge6X_WsvQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				方程式 Wikiwand
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+		
+	</div>
+
+		 
+		
+		
+				</div>
+				<div class="col-sm-12 widget">
+					<div class="d-block p-4">
+	<center>
+		<!-- BOTTOM BANNER ADS -->
+<script async="async" data-cfasync="false" src="//jc32arlvqpv8.com/eb47a424ae325c90cca32780149785c3/invoke.js"></script>
+<div id="container-eb47a424ae325c90cca32780149785c3"></div>
+
+	</center>
+</div>				</div>
+			</div>
+			<div class="row footer">
+				<div class="col-md-12 text-center py-4">
+										<a href="/p/dmca.html">Dmca</a>
+										<a href="/p/contact.html">Contact</a>
+										<a href="/p/privacy-policy.html">Privacy Policy</a>
+										<a href="/p/copyright.html">Copyright</a>
+					
+				</div>
+			</div>
+		</main>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js" integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js" integrity="sha256-CtKylYan+AJuoH8jrMht1+1PMhMqrKnB8K5g012WN5I=" crossorigin="anonymous"></script>
+		
+		<!-- Footer CSS JS -->
+		
+		
+		
+			<script type='text/javascript' src='//jc32arlvqpv8.com/ef/d5/10/efd510237a3143727bed46803ec35b8d.js'></script>
+</body>
+</html>

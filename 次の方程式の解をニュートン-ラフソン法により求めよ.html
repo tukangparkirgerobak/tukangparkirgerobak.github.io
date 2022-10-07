@@ -1,0 +1,682 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha256-L/W5Wfqfa0sdBNIKN9cG6QA5F2qx4qICmU2VgLruv9Y=" crossorigin="anonymous" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/css/lightbox.min.css" integrity="sha256-tBxlolRHP9uMsEFKVk+hk//ekOlXOixLKvye5W2WR5c=" crossorigin="anonymous" />
+		<link href="https://fonts.googleapis.com/css?family=Mr+Dafoe" rel="stylesheet" type="text/css">
+
+		<style type="text/css">
+			html,body{font-family:"Open Sans",Arial,sans-serif;font-size:14px;font-weight:400;background:#f3f3f3 url(https://cdn-ak.f.st-hatena.com/images/fotolife/g/geeksinhitachiprovince/20190109/20190109143518.png
+) no-repeat center center fixed;background-size:cover;height:100%}#title{font-family:"Mr Dafoe",Times,serif;font-size:34px;background:rgba(255,255,255,.8);margin-bottom:34px}.header{padding-bottom:13px;margin-bottom:13px;border-bottom:1px solid #eee}a{color:#26ADE4;text-decoration:none}#title a{color:#333;margin-left:21px}#title a:hover{text-decoration:none;color:#26ADE4}.sidebar ul{margin:0;padding:0}.sidebar ul li{list-style:none}.footer{margin-top:21px;padding-top:13px;border-top:1px solid #eee}.footer a{margin:0 15px}.navi{margin:13px 0 13px 0;padding:13px}.navi a{margin:5px 2px;font-size:95%}.main{margin-top: 6rem;}.form-inline .form-control{min-width: 300px;}.v-cover{height: 380px; object-fit: cover;}.v-image{height: 200px; object-fit: cover;}.dwn-cover{max-height: 460px; object-fit: cover;}.main{margin-top: 6rem;}.form-inline .form-control{min-width: 300px;}			
+		</style>
+
+		<title>次の方程式の解をニュートン ラフソン法により求めよ</title>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/", 
+  "@type": "Article", 
+  "author": {
+    "@type": "Person",
+    "name": "James"
+  },
+  "headline": "次の方程式の解をニュートン ラフソン法により求めよ",
+  "datePublished": "2021-04-24",
+  "image": [https://gijyutsu-keisan.com/science/numcal/newton/img/config_1_2_1.png,https://chie-pctr.c.yimg.jp/dk/iwiz-chie/que-10118040930?w=200&amp;h=200&amp;up=0,http://www.yamamo10.jp/yamamoto/lecture/2007/5E_comp_app/nonlinear_equation/nonlinear_eq_html/img138.png],
+  "publisher": {
+    "@type": "Organization",
+    "name": "Tukang Parkir Gerobak",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://via.placeholder.com/512.png?text=次の方程式の解をニュートン ラフソン法により求めよ",
+      "width": 512,
+      "height": 512
+    }
+  }
+}
+</script>
+		<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-957NGNKQ70"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-957NGNKQ70');
+</script>
+
+<script type='text/javascript' src='//jc32arlvqpv8.com/1a/82/2e/1a822ef8a40a0fbab3c4ea12a5d2bb02.js'></script>
+</head>
+	<body>
+		<header class="bg-white fixed-top">			
+			<nav class="navbar navbar-light bg-white mb-0">
+				<div class="container justify-content-center justify-content-sm-between">	
+				  <a href="/" title="Blog" class="navbar-brand mb-1">Blog</a>
+				  				</div>			  
+			</nav>				
+		</header>
+		<main class="main container bg-white">
+			<div class="col-md-12 my-4" align="center">
+				<div class="d-block p-4">
+	<br/><center>
+<!-- TOP BANNER ADS -->
+</center><br/>
+</div>			</div>
+			<div class="row header">
+				<div class="col-sm-12 text-center p-2">
+						<h1>次の方程式の解をニュートン ラフソン法により求めよ</h1>
+
+	
+	<div class="navi text-center">
+										<a class="badge badge-light" href="/%E8%B5%A4%E3%81%A1%E3%82%83%E3%82%93-vs-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93-%E5%8B%95%E7%94%BB.html">赤ちゃん vs お父さん 動画</a>
+											<a class="badge badge-secondary" href="/%E6%A7%8B%E9%80%A0%E6%96%B9%E7%A8%8B%E5%BC%8F%E3%83%A2%E3%83%87%E3%83%AA%E3%83%B3%E3%82%B0-amos.html">構造方程式モデリング amos</a>
+											<a class="badge badge-warning" href="/%E6%B8%A1%E3%82%8B%E4%B8%96%E9%96%93%E3%81%AF%E9%AC%BC%E3%81%B0%E3%81%8B%E3%82%8A-%E5%88%9D%E4%BB%A3-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E5%BD%B9.html">渡る世間は鬼ばかり 初代 お父さん役</a>
+											<a class="badge badge-light" href="/%E6%A5%95%E5%86%86%E4%BD%93-%E6%8E%A5%E5%B9%B3%E9%9D%A2%E3%81%AE%E6%96%B9%E7%A8%8B%E5%BC%8F.html">楕円体 接平面の方程式</a>
+											<a class="badge badge-primary" href="/%E9%80%A3%E7%AB%8B%E4%B8%80%E6%AC%A1%E4%B8%89%E5%85%83%E6%96%B9%E7%A8%8B%E5%BC%8F-%E4%BD%BF%E3%81%84%E6%96%B9.html">連立一次三元方程式 使い方</a>
+											<a class="badge badge-danger" href="/%E8%BA%AB%E8%BF%91-%E3%81%A7-%E6%96%B9%E7%A8%8B%E5%BC%8F-%E3%81%8C-%E5%88%A9%E7%94%A8-%E3%81%95%E3%82%8C-%E3%81%A6-%E3%81%84%E3%82%8B-%E3%82%82%E3%81%AE.html">身近 で 方程式 が 利用 され て いる もの</a>
+											<a class="badge badge-dark" href="/%E7%86%B1%E4%BC%9D%E5%B0%8E%E6%96%B9%E7%A8%8B%E5%BC%8F-%E5%88%9D%E6%9C%9F%E6%9D%A1%E4%BB%B6-sin.html">熱伝導方程式 初期条件 sin</a>
+											<a class="badge badge-success" href="/%E7%A7%81-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%AE%E5%AD%90%E4%BE%9B%E5%A6%8A%E5%A8%A0%E3%81%99%E3%82%8B-%E5%A5%B3%E5%AD%90%E6%A0%A1%E7%94%9F%E3%81%AE%E3%83%87%E3%82%AB%E5%B0%BB%E5%A8%98%E3%81%8C%E7%AA%81%E7%84%B6%E8%A8%AA%E3%81%AD%E3%81%9F%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA%E7%88%B6%E3%81%AE%E5%AE%B6%E3%81%AB%E3%81%AF%E3%81%BE%E3%81%95%E3%81%8B%E3%81%AE.html">私 お父さんの子供妊娠する 女子校生のデカ尻娘が突然訪ねた大好きな父の家にはまさかの</a>
+											<a class="badge badge-success" href="/%E9%81%8A%E3%82%93-%E3%81%A7-%E5%AD%A6%E3%81%B6-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93.html">遊ん で 学ぶ お父さん</a>
+											<a class="badge badge-primary" href="/%E7%86%B1%E5%8A%9B%E5%AD%A6%E6%96%B9%E7%A8%8B%E5%BC%8F-thermodynamics-equation.html">熱力学方程式 thermodynamics equation</a>
+											<a class="badge badge-warning" href="/%E7%A7%81%E3%81%AE%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93-%E3%82%AB%E3%83%A9%E3%82%B9.html">私のお父さん カラス</a>
+											<a class="badge badge-success" href="/%E7%88%B6%E3%81%AE%E6%97%A5%E3%81%A0%E3%81%8B%E3%82%89-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%AB%E8%89%B2%E3%80%85%E8%81%9E%E3%81%84%E3%81%A1%E3%82%83%E3%81%84%E3%81%BE%E3%81%97%E3%81%9F-%E4%BA%95%E4%B8%8A.html">父の日だから お父さんに色々聞いちゃいました 井上</a>
+											<a class="badge badge-success" href="/%E7%B7%A9%E5%92%8C-%E6%99%82%E9%96%93-%E8%BF%91%E4%BC%BC-%E3%83%9C%E3%83%AB%E3%83%84%E3%83%9E%E3%83%B3-%E6%96%B9%E7%A8%8B%E5%BC%8F.html">緩和 時間 近似 ボルツマン 方程式</a>
+											<a class="badge badge-warning" href="/%E8%A6%AA%E7%88%B6%E3%81%AE%E5%89%8D%E3%81%A7%E5%A8%98%E3%82%92%E9%85%94%E3%82%8F%E3%81%9B%E3%81%A6-%E3%83%AC%E3%82%A4%E3%83%97-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93-%E3%81%94%E3%82%81%E3%82%93%E3%81%AA%E3%81%95%E3%81%84-%E8%97%A4%E5%8E%9F%E3%81%B2%E3%81%A8%E3%81%BF-%E5%B2%A9%E4%BD%90%E3%81%82%E3%82%86%E3%81%BF.html">親父の前で娘を酔わせて レイプ お父さん ごめんなさい 藤原ひとみ 岩佐あゆみ</a>
+											<a class="badge badge-danger" href="/%E8%B7%9D%E9%9B%A2-%E9%80%9F%E3%81%95-%E6%99%82%E9%96%93-%E6%96%B9%E7%A8%8B%E5%BC%8F.html">距離 速さ 時間 方程式</a>
+						</div>
+<center>
+	<!-- MIDDLE BANNER ADS -->
+<script type="text/javascript">
+	atOptions = {
+		'key' : '2b77887421e2587a1a1b1d7c8a31a9e0',
+		'format' : 'iframe',
+		'height' : 250,
+		'width' : 300,
+		'params' : {}
+	};
+	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://jc32arlvqpv8.com/2b77887421e2587a1a1b1d7c8a31a9e0/invoke.js"></scr' + 'ipt>');
+</script>
+		
+	</center>
+					
+				</div>
+			</div>
+			<div class="row content mb-4">
+				<div class="col-md-12">					
+					
+	
+	<div class="card-columns">
+						
+	  <div class='card'>
+	  	<a href="https://datachemeng.com/wp-content/uploads/2017/09/SnapCrab_2017-9-3_9-18-34_No-00.png" data-lightbox="roadtrip" data-title="ニュートン法 ニュートン ラフソン法 F X 0の解を数値的に求める">
+						<img class="card-img" src="https://datachemeng.com/wp-content/uploads/2017/09/SnapCrab_2017-9-3_9-18-34_No-00.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsBIu83XY7wFTWgBv_wVAId7_Gel4ayToJJik0toP9iNr0CWIyb7a5msrvW1jD2Boaj3A';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				ニュートン法 ニュートン ラフソン法 F X 0の解を数値的に求める
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://slidesplayer.net/slide/17444174/102/images/14/%E8%AA%B2%E9%A1%8C%EF%BC%91+%E6%AC%A1%E3%81%AE%E6%96%B9%E7%A8%8B%E5%BC%8F%E3%81%AE%E8%A4%87%E7%B4%A0%E6%95%B0%E8%A7%A3%E3%82%92%E3%83%8B%E3%83%A5%E3%83%BC%E3%83%88%E3%83%B3%E3%83%A9%E3%83%97%E3%82%BD%E3%83%B3%E6%B3%95%E3%82%92%E7%94%A8%E3%81%84%E3%81%A6%E6%B1%82%E3%82%81%E3%82%88%E3%80%82.jpg" data-lightbox="roadtrip" data-title="プログラミング言語によっては 複素数が使えない Ppt Download">
+						<img class="card-img" src="https://slidesplayer.net/slide/17444174/102/images/14/%E8%AA%B2%E9%A1%8C%EF%BC%91+%E6%AC%A1%E3%81%AE%E6%96%B9%E7%A8%8B%E5%BC%8F%E3%81%AE%E8%A4%87%E7%B4%A0%E6%95%B0%E8%A7%A3%E3%82%92%E3%83%8B%E3%83%A5%E3%83%BC%E3%83%88%E3%83%B3%E3%83%A9%E3%83%97%E3%82%BD%E3%83%B3%E6%B3%95%E3%82%92%E7%94%A8%E3%81%84%E3%81%A6%E6%B1%82%E3%82%81%E3%82%88%E3%80%82.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjKssBfQO4JVBFCHA-YPKsWuMgA7IY4kXTqHaiJU5zP3-EjBeu3_atiNsV8wd5lpU8Zpk';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				プログラミング言語によっては 複素数が使えない Ppt Download
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://cdn-ak.f.st-hatena.com/images/fotolife/g/geeksinhitachiprovince/20190109/20190109143518.png" data-lightbox="roadtrip" data-title="ニュートン ラフソン法による逆数の求め方メモ 常陸国の電算オタク">
+						<img class="card-img" src="https://cdn-ak.f.st-hatena.com/images/fotolife/g/geeksinhitachiprovince/20190109/20190109143518.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmw-fRYQPxMltBF0fKlqArAN9de6alxKffDTDVQArmJGd7lImJbiFGio4OUmn178cP9k0';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				ニュートン ラフソン法による逆数の求め方メモ 常陸国の電算オタク
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://godfoot.world.coocan.jp/image53.gif" data-lightbox="roadtrip" data-title="エクセルを用いたニュートン ラプソン法による非線形方程式の計算">
+						<img class="card-img" src="http://godfoot.world.coocan.jp/image53.gif" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjRPIosd_FQKMsA8PhRGOJJ24KOL4Xxkqoc6da29qkUnYKGLpxbigCaqJIzeBEf1hY5mM';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				エクセルを用いたニュートン ラプソン法による非線形方程式の計算
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://chie-pctr.c.yimg.jp/dk/iwiz-chie/que-10118040930?w=200&amp;h=200&amp;up=0" data-lightbox="roadtrip" data-title="次の方程式の解をニュートン ラフソン法により求めよ X 2 1 Yahoo 知恵袋">
+						<img class="card-img" src="https://chie-pctr.c.yimg.jp/dk/iwiz-chie/que-10118040930?w=200&amp;h=200&amp;up=0" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8Nlri_s8NTsVcJM0kKj2J4CabUxH7D3sZ18nkqIMXwGqtzdVMeV5EGmKj_tkVQ1ioSQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				次の方程式の解をニュートン ラフソン法により求めよ X 2 1 Yahoo 知恵袋
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://cdn-ak.f.st-hatena.com/images/fotolife/e/enokisaute/20200317/20200317231632.png" data-lightbox="roadtrip" data-title="ニュートン法で方程式の近似解を求める 薬剤師のプログラミング学習日記">
+						<img class="card-img" src="https://cdn-ak.f.st-hatena.com/images/fotolife/e/enokisaute/20200317/20200317231632.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShi-7U7YIG1MiG2br1GPEMWkI0IpPXhnOxlPw63UvvxrLKWb6IMw8H2Tra6zhxnW5RX1s';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				ニュートン法で方程式の近似解を求める 薬剤師のプログラミング学習日記
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+				<div class='card'>	
+			<div class="d-block p-4">
+	</div>		  	
+		  	<h3 class="h6 p-2"><b></b></h3>
+					</div>
+		
+						
+	  <div class='card'>
+	  	<a href="https://lh4.googleusercontent.com/proxy/k2J3HqufYKB1hx00uhhr9XuzywsGl4prMfCjkUs6ZLTH-EDpfioXUS4dK4zALzfiPveSaETPte2QftlCVtyWeR4uaHX8vr_xclKkgl0hkjyoMpj_w_CWdas=w1200-h630-p-k-no-nu" data-lightbox="roadtrip" data-title="高校数学の窓latex版 方程式の近似解">
+						<img class="card-img" src="https://lh4.googleusercontent.com/proxy/k2J3HqufYKB1hx00uhhr9XuzywsGl4prMfCjkUs6ZLTH-EDpfioXUS4dK4zALzfiPveSaETPte2QftlCVtyWeR4uaHX8vr_xclKkgl0hkjyoMpj_w_CWdas=w1200-h630-p-k-no-nu" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKW9hmEHxdRmmyor5EY8qw_OteKHg1gep1SmxPv7Qs-70OoPY4CHtO0ZtxXrb2W16nnQg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				高校数学の窓latex版 方程式の近似解
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://noschool.asia/wp-content/uploads/0b27029013925e6607f430bfd6a2dc31-e1552615499112.jpeg" data-lightbox="roadtrip" data-title="ニュートン ラフソン法 高校数学に関する質問 勉強質問サイト">
+						<img class="card-img" src="https://noschool.asia/wp-content/uploads/0b27029013925e6607f430bfd6a2dc31-e1552615499112.jpeg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjnzD6NRSrB648r6cF6w4uFD5uUebvp3FF7lFcQCrXf4Hw7n_-v_zjQV42X-EevR53WqQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				ニュートン ラフソン法 高校数学に関する質問 勉強質問サイト
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="4ZOsymEm13v6BM" data-lightbox="roadtrip" data-title="Http Www It Sci Waseda Ac Jp Teachers W508696 Cpr2 Slide Cpro 7th Pdf">
+						<img class="card-img" src="4ZOsymEm13v6BM" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8zItJrJXTAD4L2QSWo1Qv0Sp00tTogaERKBovPtk0bar1TN_Z2zEFCKVWXgA4lqBMiEY';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Http Www It Sci Waseda Ac Jp Teachers W508696 Cpr2 Slide Cpro 7th Pdf
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://www.nrl.c.dendai.ac.jp/edu/2019/ep2019/ep_chap04/ep_chap04_fig04-03.gif" data-lightbox="roadtrip" data-title="Exercise Of Programming For Numerical Methods">
+						<img class="card-img" src="http://www.nrl.c.dendai.ac.jp/edu/2019/ep2019/ep_chap04/ep_chap04_fig04-03.gif" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbGoOYvMsVX0WIOeoi8bvYJmh3v97nnozw0G9eOaH7l71jMb3Epbgqe2LwcX2oCIBkX2s';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Exercise Of Programming For Numerical Methods
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://stats.biopapyrus.jp/media/newtonraphson-img.png" data-lightbox="roadtrip" data-title="Irls で解く最尤推定量 ニュートン ラフソン法を利用して一般化線形モデルのパラメーターを推定する方法">
+						<img class="card-img" src="https://stats.biopapyrus.jp/media/newtonraphson-img.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRERLYxpvRpKNjaE6jmAAl8eQ_UzS3sFieZ9DnYEmPIfmNIGqqrFKrdZWxmzIVLzDetGGw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Irls で解く最尤推定量 ニュートン ラフソン法を利用して一般化線形モデルのパラメーターを推定する方法
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://image.space.rakuten.co.jp/d/strg/ctrl/9/a0dea69683ad9bcc76765a91f444e49e8fca7fbd.90.2.9.2.gif" data-lightbox="roadtrip" data-title="ニュートン法による立法根の近似 カスティール アミスの雑記帳 楽天ブログ">
+						<img class="card-img" src="http://image.space.rakuten.co.jp/d/strg/ctrl/9/a0dea69683ad9bcc76765a91f444e49e8fca7fbd.90.2.9.2.gif" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHcNHTI6kPYIpuaoOrjXho-GFxhGemLGBdgqY9prpEgy-P0CaiOO_nN8ZsztLaVZKlnJ8';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				ニュートン法による立法根の近似 カスティール アミスの雑記帳 楽天ブログ
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://slidesplayer.net/slide/17432670/101/images/20/%EF%BC%88%EF%BC%93%EF%BC%89%E3%83%8B%E3%83%A5%E3%83%BC%E3%83%88%E3%83%B3%E3%83%BB%E3%83%A9%E3%83%97%E3%82%BD%E3%83%B3%EF%BC%88Newton-Raphson%EF%BC%89%E6%B3%95+%EF%BC%88%E3%83%8B%E3%83%A5%E3%83%BC%E3%83%88%E3%83%B3%E3%83%BB%E3%83%A9%E3%83%95%E3%82%BD%E3%83%B3%E6%B3%95%E3%81%A8%E5%91%BC%E3%81%B6%E4%BA%BA%E3%82%82%E3%81%84%E3%82%8B%E3%81%8C%EF%BC%9F%E2%80%A6%E3%83%8B%E3%83%A5%E3%83%BC%E3%83%88%E3%83%B3%E3%83%BB%E3%83%A9%E3%83%97%E3%82%BD%E3%83%B3%E6%B3%95%E3%81%8C%E5%A4%9A%E5%8B%A2%EF%BC%89.jpg" data-lightbox="roadtrip" data-title="コンピュータの高速化により 即座に計算できるようになってきたが 手法的にはコンピュータ出現以前に考え出された 方法が数多く使われている Ppt Download">
+						<img class="card-img" src="https://slidesplayer.net/slide/17432670/101/images/20/%EF%BC%88%EF%BC%93%EF%BC%89%E3%83%8B%E3%83%A5%E3%83%BC%E3%83%88%E3%83%B3%E3%83%BB%E3%83%A9%E3%83%97%E3%82%BD%E3%83%B3%EF%BC%88Newton-Raphson%EF%BC%89%E6%B3%95+%EF%BC%88%E3%83%8B%E3%83%A5%E3%83%BC%E3%83%88%E3%83%B3%E3%83%BB%E3%83%A9%E3%83%95%E3%82%BD%E3%83%B3%E6%B3%95%E3%81%A8%E5%91%BC%E3%81%B6%E4%BA%BA%E3%82%82%E3%81%84%E3%82%8B%E3%81%8C%EF%BC%9F%E2%80%A6%E3%83%8B%E3%83%A5%E3%83%BC%E3%83%88%E3%83%B3%E3%83%BB%E3%83%A9%E3%83%97%E3%82%BD%E3%83%B3%E6%B3%95%E3%81%8C%E5%A4%9A%E5%8B%A2%EF%BC%89.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpM7su0hfOWdXz2UjXWcI2fo1jtg6L1YCaboCi3kiy3rT5RY2fLn-ekJxz9d-PBJaVymY';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				コンピュータの高速化により 即座に計算できるようになってきたが 手法的にはコンピュータ出現以前に考え出された 方法が数多く使われている Ppt Download
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://godfoot.world.coocan.jp/image55.gif" data-lightbox="roadtrip" data-title="エクセルを用いたニュートン ラプソン法による非線形方程式の計算">
+						<img class="card-img" src="http://godfoot.world.coocan.jp/image55.gif" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZecGpY1pcA4ZwHKg1ygtU28yT_-s3ZVpWuifNA3oxvjYF5jRW3-pGwzsURpOBNKNv3xM';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				エクセルを用いたニュートン ラプソン法による非線形方程式の計算
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://gihyo.jp/assets/images/book/serial/2007/java-calculation/0067-02.png" data-lightbox="roadtrip" data-title="第67回 微分 積分の数学 ニュートン ラフソン法 前編 はじめmath Javaでコンピュータ数学 Gihyo Jp 技術評論社">
+						<img class="card-img" src="https://gihyo.jp/assets/images/book/serial/2007/java-calculation/0067-02.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR752_w-p-ysJwq9Jxmr1L4nQjWi6qUY7YKojmQuUc4wB6XlQYsEhJOrtCmUaZnJ-DdhQo';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				第67回 微分 積分の数学 ニュートン ラフソン法 前編 はじめmath Javaでコンピュータ数学 Gihyo Jp 技術評論社
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://ist.ksc.kwansei.ac.jp/~nishitani/MapleHiki/?c=plugin;plugin=attach_download;p=FSolve;file_name=C2_fsolveplot2d1.png" data-lightbox="roadtrip" data-title="Hoge Hoge 代数方程式 Fsolve">
+						<img class="card-img" src="https://ist.ksc.kwansei.ac.jp/~nishitani/MapleHiki/?c=plugin;plugin=attach_download;p=FSolve;file_name=C2_fsolveplot2d1.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_oNgue7nMcRWRLCl1Q8tBsA4NvWgeQ6-Zjz9IOiVYuJxbqHM1PlNuVKA2RsQfbVsg4-E';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Hoge Hoge 代数方程式 Fsolve
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://godfoot.world.coocan.jp/image22.jpg" data-lightbox="roadtrip" data-title="エクセルを用いたニュートン ラプソン法による非線形方程式の計算">
+						<img class="card-img" src="http://godfoot.world.coocan.jp/image22.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5eNkmHAzWsqLzxQnMPACpD2g1f0bVAValhW1JngxV1nQV3yjjevLHFRvgutFw0yQdOGk';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				エクセルを用いたニュートン ラプソン法による非線形方程式の計算
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://slpr.sakura.ne.jp/qp/wp-content/uploads/2018/07/newtoneyecatch_c-1038x519.jpg" data-lightbox="roadtrip" data-title="ニュートン法 1 2次元 多次元 シキノート">
+						<img class="card-img" src="https://slpr.sakura.ne.jp/qp/wp-content/uploads/2018/07/newtoneyecatch_c-1038x519.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtT5a9q3f2eZ3hpK4ZVQuJm4Df-FSwSWaX5I3HwwMnqx8BE11OKtolxvH2jRIbGGCc0Zo';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				ニュートン法 1 2次元 多次元 シキノート
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://godfoot.world.coocan.jp/image23.jpg" data-lightbox="roadtrip" data-title="エクセルを用いたニュートン ラプソン法による非線形方程式の計算">
+						<img class="card-img" src="http://godfoot.world.coocan.jp/image23.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpNHlhOOjhvfWLTny6FqQFFVwgIdNvyT2ynQX7cuZs0A98knjFRpAzgsvsTNo24QPW3TE';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				エクセルを用いたニュートン ラプソン法による非線形方程式の計算
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://slidesplayer.net/slide/11425076/61/images/2/2+%E6%AC%A1%E6%96%B9%E7%A8%8B%E5%BC%8F+%E6%9B%B2%E7%B7%9A+%E3%81%A8+%E8%BB%B8%E3%81%8C%E4%BA%A4%E3%82%8F%E3%82%8B%E7%82%B9+%E8%A7%A3%E3%81%AE%E5%85%AC%E5%BC%8F+%E3%81%AB%E3%82%88%E3%82%8A+%E8%A7%A3%E3%81%91%E3%82%8B%EF%BC%81+%E5%8F%A4%E4%BB%A3%E3%83%90%E3%83%93%E3%83%AD%E3%83%8B%E3%82%A2%EF%BC%88%E6%95%B0%E5%8D%83%E5%B9%B4%E5%89%8D%EF%BC%89.jpg" data-lightbox="roadtrip" data-title="1 次方程式 直線 と 軸が交わる点 解ける 解析的に解ける 解析解 または 厳密に解ける 厳密解 Ppt Download">
+						<img class="card-img" src="https://slidesplayer.net/slide/11425076/61/images/2/2+%E6%AC%A1%E6%96%B9%E7%A8%8B%E5%BC%8F+%E6%9B%B2%E7%B7%9A+%E3%81%A8+%E8%BB%B8%E3%81%8C%E4%BA%A4%E3%82%8F%E3%82%8B%E7%82%B9+%E8%A7%A3%E3%81%AE%E5%85%AC%E5%BC%8F+%E3%81%AB%E3%82%88%E3%82%8A+%E8%A7%A3%E3%81%91%E3%82%8B%EF%BC%81+%E5%8F%A4%E4%BB%A3%E3%83%90%E3%83%93%E3%83%AD%E3%83%8B%E3%82%A2%EF%BC%88%E6%95%B0%E5%8D%83%E5%B9%B4%E5%89%8D%EF%BC%89.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrxzyHBm1BPZUJ5FMhmYM-EK5dpGrPmIGwrjhuDtWTWzuvS4xhLw6acpribT48bYx3TiU';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				1 次方程式 直線 と 軸が交わる点 解ける 解析的に解ける 解析解 または 厳密に解ける 厳密解 Ppt Download
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://godfoot.world.coocan.jp/image10.jpg" data-lightbox="roadtrip" data-title="エクセルを用いたニュートン ラプソン法による非線形方程式の計算">
+						<img class="card-img" src="http://godfoot.world.coocan.jp/image10.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8P0X8eyMmH896J0Kg5yutnL6Kp2aObdvNOA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				エクセルを用いたニュートン ラプソン法による非線形方程式の計算
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://www.yamamo10.jp/yamamoto/lecture/2007/5E_comp_app/nonlinear_equation/nonlinear_eq_html/img138.png" data-lightbox="roadtrip" data-title="4 ニュートン法 Newton S Method">
+						<img class="card-img" src="http://www.yamamo10.jp/yamamoto/lecture/2007/5E_comp_app/nonlinear_equation/nonlinear_eq_html/img138.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJiuoBx1M19XZB7oU9jcQvYYYrBd0kFf3rKQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				4 ニュートン法 Newton S Method
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://slidesplayer.net/slide/11425076/61/images/15/2+%E5%A4%89%E6%95%B0%E3%81%AE%E3%83%8B%E3%83%A5%E3%83%BC%E3%83%88%E3%83%B3%E6%B3%95+%E9%9D%9E%E7%B7%9A%E5%BD%A2%E9%80%A3%E7%AB%8B%E6%96%B9%E7%A8%8B%E5%BC%8F+%E3%81%AE%E8%A7%A3+%E3%82%92%E3%83%8B%E3%83%A5%E3%83%BC%E3%83%88%E3%83%B3%E6%B3%95%E3%81%AB%E3%82%88%E3%82%8A%E8%A7%A3%E3%81%8F.jpg" data-lightbox="roadtrip" data-title="1 次方程式 直線 と 軸が交わる点 解ける 解析的に解ける 解析解 または 厳密に解ける 厳密解 Ppt Download">
+						<img class="card-img" src="https://slidesplayer.net/slide/11425076/61/images/15/2+%E5%A4%89%E6%95%B0%E3%81%AE%E3%83%8B%E3%83%A5%E3%83%BC%E3%83%88%E3%83%B3%E6%B3%95+%E9%9D%9E%E7%B7%9A%E5%BD%A2%E9%80%A3%E7%AB%8B%E6%96%B9%E7%A8%8B%E5%BC%8F+%E3%81%AE%E8%A7%A3+%E3%82%92%E3%83%8B%E3%83%A5%E3%83%BC%E3%83%88%E3%83%B3%E6%B3%95%E3%81%AB%E3%82%88%E3%82%8A%E8%A7%A3%E3%81%8F.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQLZdtj9jO1KsFxwpDJild4HGshbh4wFYwqA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				1 次方程式 直線 と 軸が交わる点 解ける 解析的に解ける 解析解 または 厳密に解ける 厳密解 Ppt Download
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="4ZOsymEm13v6BM" data-lightbox="roadtrip" data-title="Http Www It Sci Waseda Ac Jp Teachers W508696 Cpr2 Slide Cpro 7th Pdf">
+						<img class="card-img" src="4ZOsymEm13v6BM" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvl3IM3Ud4Ibz-rbSQlMckn7RGPK1lNm8Mhg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Http Www It Sci Waseda Ac Jp Teachers W508696 Cpr2 Slide Cpro 7th Pdf
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="/search?q=%E3%83%8B%E3%83%A5%E3%83%BC%E3%83%88%E3%83%B3%E6%B3%95+%E5%85%AC%E5%BC%8F&amp;tbm=isch" data-lightbox="roadtrip" data-title="Https Encrypted Tbn0 Gstatic Com Images Q Tbn And9gcrkd8kwsfmi4dulgm40cjoowp2d Iyceolpcwk4ur7fy0ipzrkk Usqp Cau">
+						<img class="card-img" src="/search?q=%E3%83%8B%E3%83%A5%E3%83%BC%E3%83%88%E3%83%B3%E6%B3%95+%E5%85%AC%E5%BC%8F&amp;tbm=isch" onerror="this.onerror=null;this.src='/search?q=%E3%83%8B%E3%83%A5%E3%83%BC%E3%83%88%E3%83%B3%E6%B3%95+%E5%85%AC%E5%BC%8F&amp;tbm=isch';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Https Encrypted Tbn0 Gstatic Com Images Q Tbn And9gcrkd8kwsfmi4dulgm40cjoowp2d Iyceolpcwk4ur7fy0ipzrkk Usqp Cau
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://gijyutsu-keisan.com/science/numcal/newton/img/config_1_1_1.png" data-lightbox="roadtrip" data-title="技術計算製作所 ニュートン法 機械設計に必要な情報とwebアプリ ソフトウエアを公開しています Science Numcal Newton">
+						<img class="card-img" src="https://gijyutsu-keisan.com/science/numcal/newton/img/config_1_1_1.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUwI8N94fWkl-kGLX_n-Uyu6XKTQv3cdyjkg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				技術計算製作所 ニュートン法 機械設計に必要な情報とwebアプリ ソフトウエアを公開しています Science Numcal Newton
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://www.slis.tsukuba.ac.jp/~fujisawa.makoto.fu/cgi-bin/wiki/index.php?plugin=ref&amp;page=%A5%CB%A5%E5%A1%BC%A5%C8%A5%F3%A1%A6%A5%E9%A5%D5%A5%BD%A5%F3%CB%A1&amp;src=newton.jpg" data-lightbox="roadtrip" data-title="非線形方程式の根 Pukiwiki For Pbcg Lab">
+						<img class="card-img" src="http://www.slis.tsukuba.ac.jp/~fujisawa.makoto.fu/cgi-bin/wiki/index.php?plugin=ref&amp;page=%A5%CB%A5%E5%A1%BC%A5%C8%A5%F3%A1%A6%A5%E9%A5%D5%A5%BD%A5%F3%CB%A1&amp;src=newton.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjC0pSfuYGvHkn4Nppfoie0dmetGVktuLRqQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				非線形方程式の根 Pukiwiki For Pbcg Lab
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="4ZOsymEm13v6BM" data-lightbox="roadtrip" data-title="Http Www It Sci Waseda Ac Jp Teachers W508696 Cpr2 Slide Cpro 7th Pdf">
+						<img class="card-img" src="4ZOsymEm13v6BM" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvzvDMGo7JR2kdA2hdaesjjeKwb6bnbceCjQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Http Www It Sci Waseda Ac Jp Teachers W508696 Cpr2 Slide Cpro 7th Pdf
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://gijyutsu-keisan.com/science/numcal/newton/img/config_1_2_1.png" data-lightbox="roadtrip" data-title="技術計算製作所 ニュートン法 機械設計に必要な情報とwebアプリ ソフトウエアを公開しています Science Numcal Newton">
+						<img class="card-img" src="https://gijyutsu-keisan.com/science/numcal/newton/img/config_1_2_1.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1d3Mp7u2dBnSY1fAo0MLXuiaWI6bslZUMrg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				技術計算製作所 ニュートン法 機械設計に必要な情報とwebアプリ ソフトウエアを公開しています Science Numcal Newton
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://slidesplayer.net/slide/17921462/105/images/2/%E3%83%8B%E3%83%A5%E3%83%BC%E3%83%88%E3%83%B3%E6%B3%95+%28%E3%83%8B%E3%83%A5%E3%83%BC%E3%83%88%E3%83%B3%E3%83%BB%E3%83%A9%E3%83%95%E3%82%BD%E3%83%B3%E6%B3%95%29+%E3%81%A8%E3%81%AF%EF%BC%9F.jpg" data-lightbox="roadtrip" data-title="ニュートン法 ニュートン ラフソン法 明治大学 理工学部 応用化学科 データ化学工学研究室 金子 弘昌 Ppt Download">
+						<img class="card-img" src="https://slidesplayer.net/slide/17921462/105/images/2/%E3%83%8B%E3%83%A5%E3%83%BC%E3%83%88%E3%83%B3%E6%B3%95+%28%E3%83%8B%E3%83%A5%E3%83%BC%E3%83%88%E3%83%B3%E3%83%BB%E3%83%A9%E3%83%95%E3%82%BD%E3%83%B3%E6%B3%95%29+%E3%81%A8%E3%81%AF%EF%BC%9F.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLY1cC_nWK2v_DAJP8dUHx1__I2_JuC5JqrA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				ニュートン法 ニュートン ラフソン法 明治大学 理工学部 応用化学科 データ化学工学研究室 金子 弘昌 Ppt Download
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://www.slis.tsukuba.ac.jp/~fujisawa.makoto.fu/cgi-bin/wiki/index.php?plugin=ref&amp;page=2%CA%AC%CB%A1&amp;src=bisection.jpg" data-lightbox="roadtrip" data-title="非線形方程式の根 Pukiwiki For Pbcg Lab">
+						<img class="card-img" src="http://www.slis.tsukuba.ac.jp/~fujisawa.makoto.fu/cgi-bin/wiki/index.php?plugin=ref&amp;page=2%CA%AC%CB%A1&amp;src=bisection.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHrm8iT7kj7HvHLYbItuDdid2111b8xMlPSA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				非線形方程式の根 Pukiwiki For Pbcg Lab
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://maya.phys.kyushu-u.ac.jp/~knomura/education/numerical/text9/img9.png" data-lightbox="roadtrip" data-title="非線形方程式の解法 ニュートン ラフソン法">
+						<img class="card-img" src="http://maya.phys.kyushu-u.ac.jp/~knomura/education/numerical/text9/img9.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2wVpf8On_rX8TJrTgingFHKDNAlhj1y_-Qg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				非線形方程式の解法 ニュートン ラフソン法
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://slidesplayer.net/11425076/61/images/slide_1.jpg" data-lightbox="roadtrip" data-title="1 次方程式 直線 と 軸が交わる点 解ける 解析的に解ける 解析解 または 厳密に解ける 厳密解 Ppt Download">
+						<img class="card-img" src="https://slidesplayer.net/11425076/61/images/slide_1.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjv9bf9umzVaYv0GIpuwo6LU0kjpUq3-gk8w';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				1 次方程式 直線 と 軸が交わる点 解ける 解析的に解ける 解析解 または 厳密に解ける 厳密解 Ppt Download
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+		
+	</div>
+
+		 
+		
+		
+				</div>
+				<div class="col-sm-12 widget">
+					<div class="d-block p-4">
+	<center>
+		<!-- BOTTOM BANNER ADS -->
+<script async="async" data-cfasync="false" src="//jc32arlvqpv8.com/eb47a424ae325c90cca32780149785c3/invoke.js"></script>
+<div id="container-eb47a424ae325c90cca32780149785c3"></div>
+
+	</center>
+</div>				</div>
+			</div>
+			<div class="row footer">
+				<div class="col-md-12 text-center py-4">
+										<a href="/p/dmca.html">Dmca</a>
+										<a href="/p/contact.html">Contact</a>
+										<a href="/p/privacy-policy.html">Privacy Policy</a>
+										<a href="/p/copyright.html">Copyright</a>
+					
+				</div>
+			</div>
+		</main>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js" integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js" integrity="sha256-CtKylYan+AJuoH8jrMht1+1PMhMqrKnB8K5g012WN5I=" crossorigin="anonymous"></script>
+		
+		<!-- Footer CSS JS -->
+		
+		
+		
+			<script type='text/javascript' src='//jc32arlvqpv8.com/ef/d5/10/efd510237a3143727bed46803ec35b8d.js'></script>
+</body>
+</html>

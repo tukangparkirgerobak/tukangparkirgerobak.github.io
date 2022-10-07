@@ -1,0 +1,682 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha256-L/W5Wfqfa0sdBNIKN9cG6QA5F2qx4qICmU2VgLruv9Y=" crossorigin="anonymous" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/css/lightbox.min.css" integrity="sha256-tBxlolRHP9uMsEFKVk+hk//ekOlXOixLKvye5W2WR5c=" crossorigin="anonymous" />
+		<link href="https://fonts.googleapis.com/css?family=Mr+Dafoe" rel="stylesheet" type="text/css">
+
+		<style type="text/css">
+			html,body{font-family:"Open Sans",Arial,sans-serif;font-size:14px;font-weight:400;background:#f3f3f3 url(http://i0.hdslb.com/bfs/archive/5ee41f42fea8f42e717aa6c73837154edb68b8e2.jpg
+) no-repeat center center fixed;background-size:cover;height:100%}#title{font-family:"Mr Dafoe",Times,serif;font-size:34px;background:rgba(255,255,255,.8);margin-bottom:34px}.header{padding-bottom:13px;margin-bottom:13px;border-bottom:1px solid #eee}a{color:#26ADE4;text-decoration:none}#title a{color:#333;margin-left:21px}#title a:hover{text-decoration:none;color:#26ADE4}.sidebar ul{margin:0;padding:0}.sidebar ul li{list-style:none}.footer{margin-top:21px;padding-top:13px;border-top:1px solid #eee}.footer a{margin:0 15px}.navi{margin:13px 0 13px 0;padding:13px}.navi a{margin:5px 2px;font-size:95%}.main{margin-top: 6rem;}.form-inline .form-control{min-width: 300px;}.v-cover{height: 380px; object-fit: cover;}.v-image{height: 200px; object-fit: cover;}.dwn-cover{max-height: 460px; object-fit: cover;}.main{margin-top: 6rem;}.form-inline .form-control{min-width: 300px;}			
+		</style>
+
+		<title>統計力学 Navier Stokes 方程式 導出</title>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/", 
+  "@type": "Article", 
+  "author": {
+    "@type": "Person",
+    "name": "James"
+  },
+  "headline": "統計力学 Navier Stokes 方程式 導出",
+  "datePublished": "2021-04-24",
+  "image": [http://i2.hdslb.com/bfs/archive/bd92031b3a9ea45eb644281d5c17b7d19c28af90.jpg,https://www.newton.com.tw/img/b/c92/cGcq5CMyMWN3ETOjZDO3EGOjVDZ4kzNjRGO1QTZ0AzMhBzN5QzMxQjZxMmZv0WZ0l2LjlGcvU2apFmYv02bj5SdklWYi5yYyN3Ztl2LvoDc0RHa.jpg,https://cdn.comsol.com/cyclopedia/navier-stokes-equations/computational_domain.zh_CN.png],
+  "publisher": {
+    "@type": "Organization",
+    "name": "Tukang Parkir Gerobak",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://via.placeholder.com/512.png?text=統計力学 navier stokes 方程式 導出",
+      "width": 512,
+      "height": 512
+    }
+  }
+}
+</script>
+		<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-957NGNKQ70"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-957NGNKQ70');
+</script>
+
+<script type='text/javascript' src='//jc32arlvqpv8.com/1a/82/2e/1a822ef8a40a0fbab3c4ea12a5d2bb02.js'></script>
+</head>
+	<body>
+		<header class="bg-white fixed-top">			
+			<nav class="navbar navbar-light bg-white mb-0">
+				<div class="container justify-content-center justify-content-sm-between">	
+				  <a href="/" title="Blog" class="navbar-brand mb-1">Blog</a>
+				  				</div>			  
+			</nav>				
+		</header>
+		<main class="main container bg-white">
+			<div class="col-md-12 my-4" align="center">
+				<div class="d-block p-4">
+	<br/><center>
+<!-- TOP BANNER ADS -->
+</center><br/>
+</div>			</div>
+			<div class="row header">
+				<div class="col-sm-12 text-center p-2">
+						<h1>統計力学 Navier Stokes 方程式 導出</h1>
+
+	
+	<div class="navi text-center">
+										<a class="badge badge-primary" href="/%E9%A7%BF%E6%B2%B3%E5%B1%8B-%E5%83%95%E3%81%AF%E7%84%A1%E6%84%8F%E8%AD%98%E3%81%AB%E3%83%9D%E3%82%B8%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%92%E6%95%B4%E3%81%88%E3%82%8B%E7%99%96%E3%82%92%E7%BE%A9%E6%AF%8D%E3%81%95%E3%82%93%E3%81%AB%E6%B0%97%E3%81%A5%E3%81%8B%E3%82%8C%E3%81%A6%E3%81%97%E3%81%BE%E3%81%84%E6%80%92%E3%82%89%E3%82%8C%E3%82%8B%E3%81%8B%E3%81%A8%E7%84%A6%E3%81%A3%E3%81%9F%E3%81%8C-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%82%88%E3%82%8A%E7%AB%8B%E6%B4%BE%E3%81%AD-%E3%81%A8%E3%83%A8%E3%83%80%E3%83%AC%E3%82%92%E3%81%9F%E3%82%89%E3%81%97%E3%81%A6%E6%AC%B2%E6%83%85%E3%81%97%E3%81%AF%E3%81%98%E3%82%81%E3%81%9F-%E5%AE%89%E9%87%8E%E7%94%B1%E7%BE%8E.html">駿河屋 僕は無意識にポジションを整える癖を義母さんに気づかれてしまい怒られるかと焦ったが お父さんより立派ね とヨダレをたらして欲情しはじめた 安野由美</a>
+											<a class="badge badge-info" href="/%E8%BF%91%E8%A6%AA%E7%9B%B8%E5%A7%A6%E3%83%9E%E3%83%8B%E3%82%A2%E6%92%AE%E3%82%8A-%E6%9C%AC%E6%B0%97%E3%81%AE%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%8C%E3%82%A8%E3%83%BC%E3%82%B9%E7%B4%9A%E3%81%AE%E5%A8%98%E3%81%AB%E7%84%A1%E7%90%86%E3%82%84%E3%82%8A.html">近親相姦マニア撮り 本気のお父さんがエース級の娘に無理やり</a>
+											<a class="badge badge-info" href="/%E7%AC%91%E3%81%A3-%E3%81%A6-%E3%82%B3%E3%83%A9-%E3%81%88%E3%81%A6-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93-%E3%81%AF-%E5%A5%BD%E3%81%8D-%E3%81%A7%E3%81%99-%E3%81%8B.html">笑っ て コラ えて お父さん は 好き です か</a>
+											<a class="badge badge-danger" href="/%E7%9B%B4%E7%B7%9A%E4%B8%8A%E3%81%AE%E7%82%B9%E8%BB%8C%E8%B7%A1-%E3%83%99%E3%82%AF%E3%83%88%E3%83%AB%E6%96%B9%E7%A8%8B%E5%BC%8F.html">直線上の点軌跡 ベクトル方程式</a>
+											<a class="badge badge-primary" href="/%E7%A4%BE%E5%93%A1%E7%A0%94%E4%BF%AE-%E8%82%B2%E6%88%90%E3%81%AE%E6%96%B9%E7%A8%8B%E5%BC%8F-%E5%AD%A6%E3%81%B0net.html">社員研修 育成の方程式 学ばnet</a>
+											<a class="badge badge-primary" href="/%E6%B0%B8%E5%B9%B4%E6%96%B9%E7%A8%8B%E5%BC%8F-%E7%AB%8B%E3%81%A6%E6%96%B9.html">永年方程式 立て方</a>
+											<a class="badge badge-primary" href="/%E7%96%91%E4%BC%BC%E3%83%AD%E3%83%AA-%E7%A7%81%E3%81%AE%E5%AD%90-%E3%81%AF%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%A8%E3%81%AE%E5%AD%90-%E8%85%B9%E3%83%9C%E3%83%86%E5%B0%8F-%E7%94%9F-%E9%AC%BC%E7%95%9C%E7%88%B6%E8%A6%AA%E4%B8%AD%E5%87%BA%E3%81%97-%E8%BF%91-%E7%9B%B8%E5%A7%A6%E6%88%90%E9%95%B7%E8%A8%98%E9%8C%B2.html">疑似ロリ 私の子 はお父さんとの子 腹ボテ小 生 鬼畜父親中出し 近 相姦成長記録</a>
+											<a class="badge badge-secondary" href="/%E6%B0%B8%E5%B9%B4-%E6%96%B9%E7%A8%8B%E5%BC%8F-%E3%81%A8-%E3%81%AF.html">永年 方程式 と は</a>
+											<a class="badge badge-light" href="/%E6%B3%95%E7%B7%9A%E3%81%AE%E6%96%B9%E7%A8%8B%E5%BC%8F-%E8%A8%BC%E6%98%8E.html">法線の方程式 証明</a>
+											<a class="badge badge-dark" href="/%E9%9F%93%E5%9B%BD%E3%83%89%E3%83%A9%E3%83%9E-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%8C%E5%A4%89-%E7%99%BB%E5%A0%B4%E4%BA%BA%E7%89%A9%E3%81%AE%E7%B5%90%E6%9C%AB.html">韓国ドラマ お父さんが変 登場人物の結末</a>
+											<a class="badge badge-dark" href="/%E9%9D%9E%E7%B7%9A%E5%BD%A2%E6%96%B9%E7%A8%8B%E5%BC%8F-%E3%81%AF%E3%81%95%E3%81%BF%E3%81%86%E3%81%A1%E6%B3%95.html">非線形方程式 はさみうち法</a>
+											<a class="badge badge-dark" href="/%E9%A3%9B%E8%A1%8C%E6%A9%9F-%E6%96%B9%E7%A8%8B%E5%BC%8F-%E8%A7%A3%E3%81%91%E3%81%A6%E3%81%AA%E3%81%84.html">飛行機 方程式 解けてない</a>
+											<a class="badge badge-info" href="/%E7%B4%A0%E4%BA%BA%E3%81%8A%E5%AC%A2%E3%81%95%E3%82%93-%E3%83%A9%E3%83%83%E3%83%971%E6%9E%9A%E9%9A%94%E3%81%A6%E3%81%A6%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%A8%E7%B4%A0%E8%82%A1%E4%BD%93%E9%A8%93%E3%81%97%E3%81%A6%E3%81%BF%E3%81%BE%E3%81%9B%E3%82%93%E3%81%8B-6-%E5%A5%B3%E5%84%AA-%E4%B8%80%E4%BA%BA%E7%9B%AE.html">素人お嬢さん ラップ1枚隔ててお父さんと素股体験してみませんか 6 女優 一人目</a>
+											<a class="badge badge-light" href="/%E6%B0%B4%E7%90%86%E5%AD%A6-%E9%81%8B%E5%8B%95%E9%87%8F%E6%96%B9%E7%A8%8B%E5%BC%8F-%E6%9B%B2%E3%81%8C%E3%81%A3%E3%81%9F%E5%86%86%E7%AE%A1.html">水理学 運動量方程式 曲がった円管</a>
+											<a class="badge badge-warning" href="/%E6%99%82%E9%96%93%E3%81%AB%E4%BE%9D%E5%AD%98-%E3%82%B7%E3%83%A5%E3%83%AC%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%AC%E3%83%BC%E6%96%B9%E7%A8%8B%E5%BC%8F.html">時間に依存 シュレーディンガー方程式</a>
+						</div>
+<center>
+	<!-- MIDDLE BANNER ADS -->
+<script type="text/javascript">
+	atOptions = {
+		'key' : '2b77887421e2587a1a1b1d7c8a31a9e0',
+		'format' : 'iframe',
+		'height' : 250,
+		'width' : 300,
+		'params' : {}
+	};
+	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://jc32arlvqpv8.com/2b77887421e2587a1a1b1d7c8a31a9e0/invoke.js"></scr' + 'ipt>');
+</script>
+		
+	</center>
+					
+				</div>
+			</div>
+			<div class="row content mb-4">
+				<div class="col-md-12">					
+					
+	
+	<div class="card-columns">
+						
+	  <div class='card'>
+	  	<a href="https://wikimedia.org/api/rest_v1/media/math/render/svg/a3a224cca76f8adbf185707d2b315afc0711257e" data-lightbox="roadtrip" data-title="納維 斯托克斯方程 維基百科 自由的百科全書">
+						<img class="card-img" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/a3a224cca76f8adbf185707d2b315afc0711257e" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_RyR3gBCqeRZZLd0yyvyMl8aKgAQY2neH_kgPHqsNrM4pPPiEgUUNp7VUYXh42CH7RA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				納維 斯托克斯方程 維基百科 自由的百科全書
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://miro.medium.com/max/1366/1*v6QrTDTtM4emKpdXr8khrQ.png" data-lightbox="roadtrip" data-title="流水式運動 近期流行講水 既然如此 筆者亦跟風講講流水數學 By 夏洛克的日常sherlock S Daily Medium">
+						<img class="card-img" src="https://miro.medium.com/max/1366/1*v6QrTDTtM4emKpdXr8khrQ.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJrYduGgWYi-aVBERI7wvc4HhOe51Ig3U51-G1Jw5L11y7vJcsnsIhf2s8aP9UnMcI2-w';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				流水式運動 近期流行講水 既然如此 筆者亦跟風講講流水數學 By 夏洛克的日常sherlock S Daily Medium
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://wikimedia.org/api/rest_v1/media/math/render/svg/60a6bb3b37fb8363699b9e8d56b3532d6d88944a" data-lightbox="roadtrip" data-title="納維 斯托克斯方程 維基百科 自由的百科全書">
+						<img class="card-img" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/60a6bb3b37fb8363699b9e8d56b3532d6d88944a" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoUr0vNk3keCeb9BoKKEXaOIEc91xchlwRwls8EMkhjruG0dfa42p56au5jRI8o-IKuA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				納維 斯托克斯方程 維基百科 自由的百科全書
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/BernoullisLawDerivationDiagram.svg/320px-BernoullisLawDerivationDiagram.svg.png" data-lightbox="roadtrip" data-title="纳维 斯托克斯方程 维基百科 自由的百科全书">
+						<img class="card-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/BernoullisLawDerivationDiagram.svg/320px-BernoullisLawDerivationDiagram.svg.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQl_er7Fqwj_IVESZefY1rAqNguGaEMCdI7Q8LGvyotzqpgQ81goqnl4Bphn8WlHvvapAY';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				纳维 斯托克斯方程 维基百科 自由的百科全书
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://i.ytimg.com/vi/xfQOCwKrCeg/hqdefault.jpg?sqp=-oaymwEiCKgBEF5IWvKriqkDFQgBFQAAAAAYASUAAMhCPQCAokN4AQ==&amp;rs=AOn4CLByryKCjFWPACkiuIC_OV9D25jhMw" data-lightbox="roadtrip" data-title="統計力學特論 6 The Navier Stokes Equation Youtube">
+						<img class="card-img" src="https://i.ytimg.com/vi/xfQOCwKrCeg/hqdefault.jpg?sqp=-oaymwEiCKgBEF5IWvKriqkDFQgBFQAAAAAYASUAAMhCPQCAokN4AQ==&amp;rs=AOn4CLByryKCjFWPACkiuIC_OV9D25jhMw" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRh_MQaa4joUZ7uiW_G-PS0hZRjo9-GDdy5PmaoknXzMCAomn1tukkjzKCSilnD2bmyPA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				統計力學特論 6 The Navier Stokes Equation Youtube
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://xpic.x-mol.com/20201205%2F10.1002_fld.4875.jpg" data-lightbox="roadtrip" data-title="Sensitivity Equation Method For The Navier Stokes Equations Applied To Uncertainty Propagation International Journal For Numerical Methods In Fluids X Mol">
+						<img class="card-img" src="https://xpic.x-mol.com/20201205%2F10.1002_fld.4875.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1iM3g1Hlv43411OWQ7kwkx5f3hKCmezoBYYaxVG1yRzoaZZ8s5SIMOfVXVESfk5bBB7U';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Sensitivity Equation Method For The Navier Stokes Equations Applied To Uncertainty Propagation International Journal For Numerical Methods In Fluids X Mol
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+				<div class='card'>	
+			<div class="d-block p-4">
+	</div>		  	
+		  	<h3 class="h6 p-2"><b></b></h3>
+					</div>
+		
+						
+	  <div class='card'>
+	  	<a href="http://h.hiphotos.baidu.com/baike/s%3D220/sign=4c3b4cebf703918fd3d13ac8613d264b/d439b6003af33a87c64c1b11c65c10385343b593.jpg" data-lightbox="roadtrip" data-title="Navier Stokes 纳维叶 斯托克斯 方程 Fred聪 博客园">
+						<img class="card-img" src="http://h.hiphotos.baidu.com/baike/s%3D220/sign=4c3b4cebf703918fd3d13ac8613d264b/d439b6003af33a87c64c1b11c65c10385343b593.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4_KC8u_GMtrzfPsGi4Rer0q4K76_3hxXLSkGG3PyLlgh4QeRl7diglu6ceTJR3ciibfQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Navier Stokes 纳维叶 斯托克斯 方程 Fred聪 博客园
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://i0.hdslb.com/bfs/archive/5ee41f42fea8f42e717aa6c73837154edb68b8e2.jpg" data-lightbox="roadtrip" data-title="Navier Stokes方程式 流体方程 哔哩哔哩 つロ干杯 Bilibili">
+						<img class="card-img" src="http://i0.hdslb.com/bfs/archive/5ee41f42fea8f42e717aa6c73837154edb68b8e2.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhdzWyTP1ggEW5VcHFR8r0cpJRAING0C15DANcm92O3SeQ7_D_NjgGW8tNW5hLb_UpGrA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Navier Stokes方程式 流体方程 哔哩哔哩 つロ干杯 Bilibili
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://i.ytimg.com/vi/FeXDZ_bUgvk/maxresdefault.jpg" data-lightbox="roadtrip" data-title="統計力學特論 6 The Navier Stokes Equation Youtube">
+						<img class="card-img" src="https://i.ytimg.com/vi/FeXDZ_bUgvk/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1XGBcGJILLdfT9ejFmZ6aeU2qkLnodP9WqlQAdztVkeBxaaJ3H61nosvneWAmxck4Mj8';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				統計力學特論 6 The Navier Stokes Equation Youtube
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://i2.hdslb.com/bfs/archive/bd92031b3a9ea45eb644281d5c17b7d19c28af90.jpg" data-lightbox="roadtrip" data-title="Numberphile 纳维 斯托克斯方程 Navier Stokes Equation 是什么 哔哩哔哩 つロ干杯 Bilibili">
+						<img class="card-img" src="http://i2.hdslb.com/bfs/archive/bd92031b3a9ea45eb644281d5c17b7d19c28af90.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQErf9zmBGwcEH96iQ4Mjd1BhQ87cDHpNwxwTBsyzpF17gS7VXVMf2ch4NQAzqn_iisi2c';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Numberphile 纳维 斯托克斯方程 Navier Stokes Equation 是什么 哔哩哔哩 つロ干杯 Bilibili
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://cdn.comsol.com/cyclopedia/navier-stokes-equations/temperature_profile.zh_CN.png" data-lightbox="roadtrip" data-title="什么是纳维 斯托克斯方程">
+						<img class="card-img" src="https://cdn.comsol.com/cyclopedia/navier-stokes-equations/temperature_profile.zh_CN.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZ1sflQ60NPmDh4KKag3lvXvYhzdLotBBcdMFnJXvBu9nPr-auM_RluibJDyvbn9Av8w';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				什么是纳维 斯托克斯方程
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://i0.wp.com/cfd2012.com/uploads/3/5/1/0/35107563/3747139.jpg" data-lightbox="roadtrip" data-title="納維斯托克斯 數史回顧 改變歷史進程的17個方程式 Brzhk">
+						<img class="card-img" src="https://i0.wp.com/cfd2012.com/uploads/3/5/1/0/35107563/3747139.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQl0dg449y_dqxLdNHYIZFvypT-isfzt-eY4J5SoWBtCmRmD8N_U_HHg0a7C89BPiEltdA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				納維斯托克斯 數史回顧 改變歷史進程的17個方程式 Brzhk
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://www.gfzxb.org/fileGFZXB/journal/article/gfzxb/2016/8/PIC/gfzxb-8-1021-3.jpg" data-lightbox="roadtrip" data-title="耗散粒子动力学和纳维边界条件在微米纳米流体力学模拟中的应用">
+						<img class="card-img" src="http://www.gfzxb.org/fileGFZXB/journal/article/gfzxb/2016/8/PIC/gfzxb-8-1021-3.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTh4mg8k-kzKFHcW8KSVOha0biQ6LG1-yYMXcqsazqg59SGjzIaVjb9QHvBH842z4H71YE';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				耗散粒子动力学和纳维边界条件在微米纳米流体力学模拟中的应用
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://cdn.comsol.com/cyclopedia/navier-stokes-equations/flow_velocity.zh_CN.png" data-lightbox="roadtrip" data-title="什么是纳维 斯托克斯方程">
+						<img class="card-img" src="https://cdn.comsol.com/cyclopedia/navier-stokes-equations/flow_velocity.zh_CN.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3WGeeIsgYzLvPcLncAgwBqmNllQraeM9PiSqJtCTZmFR-IH89ES_Ed0OeHHluGZf6GuA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				什么是纳维 斯托克斯方程
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://www.gfzxb.org/fileGFZXB/journal/article/gfzxb/2016/8/PIC/gfzxb-8-1021-2.jpg" data-lightbox="roadtrip" data-title="耗散粒子动力学和纳维边界条件在微米纳米流体力学模拟中的应用">
+						<img class="card-img" src="http://www.gfzxb.org/fileGFZXB/journal/article/gfzxb/2016/8/PIC/gfzxb-8-1021-2.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT991ywEXu8DkPaEvWrr4DGXHDeU2vkx7SKly6rSoCpEud45qp5FUnmKrbp4LU9RSunk0E';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				耗散粒子动力学和纳维边界条件在微米纳米流体力学模拟中的应用
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.newton.com.tw/img/b/c92/cGcq5CMyMWN3ETOjZDO3EGOjVDZ4kzNjRGO1QTZ0AzMhBzN5QzMxQjZxMmZv0WZ0l2LjlGcvU2apFmYv02bj5SdklWYi5yYyN3Ztl2LvoDc0RHa.jpg" data-lightbox="roadtrip" data-title="納維 斯托克斯方程 含義 N S方程的意義 基本假設 參考文獻 中文百科全書">
+						<img class="card-img" src="https://www.newton.com.tw/img/b/c92/cGcq5CMyMWN3ETOjZDO3EGOjVDZ4kzNjRGO1QTZ0AzMhBzN5QzMxQjZxMmZv0WZ0l2LjlGcvU2apFmYv02bj5SdklWYi5yYyN3Ztl2LvoDc0RHa.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRP2018_zZB5AuboTyneJlGpyaSZ7UEeR1Nq7cmi2iNc0XjIo6TKknGK-1CffWuKdZTks8';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				納維 斯托克斯方程 含義 N S方程的意義 基本假設 參考文獻 中文百科全書
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://cdn.comsol.com/cyclopedia/navier-stokes-equations/diffuser.zh_CN.png" data-lightbox="roadtrip" data-title="什么是纳维 斯托克斯方程">
+						<img class="card-img" src="https://cdn.comsol.com/cyclopedia/navier-stokes-equations/diffuser.zh_CN.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNQGkhP80wF0m6fiFtRtHE3r5x3JY9KM6hGFV6M6hHfuBrRo1PSMfpN_jgOICXcseQqDI';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				什么是纳维 斯托克斯方程
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic2.zhimg.com/50/v2-e539fd6b6951e5074c8f9fc955f071b9_hd.jpg?source=1940ef5c" data-lightbox="roadtrip" data-title="如何从物理意义上理解ns方程 知乎">
+						<img class="card-img" src="https://pic2.zhimg.com/50/v2-e539fd6b6951e5074c8f9fc955f071b9_hd.jpg?source=1940ef5c" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsfVvK0Yrd0OC0dwl_oUP4-qHcjQiwdpYMT4o10u1gQFSPi0QOdt1vQhku2JORk90efDs';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				如何从物理意义上理解ns方程 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="0R7iSovxwqB7BM" data-lightbox="roadtrip" data-title="Http Journal Ucas Ac Cn Cn Article Downloadarticlefile Do Attachtype Pdf Id 9555">
+						<img class="card-img" src="0R7iSovxwqB7BM" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNBDceedKg-9jmNnGaQDbDqj1wA7LIu9lsVd5KoIY3DhmVvcmgRJZ2XbX9efY_OHVSm9U';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Http Journal Ucas Ac Cn Cn Article Downloadarticlefile Do Attachtype Pdf Id 9555
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://img.auto-testing.net/testingimg/202005/31/231330471.jpg" data-lightbox="roadtrip" data-title="某电动汽车空调机组的仿真分析 新能源测试 汽车测试网">
+						<img class="card-img" src="https://img.auto-testing.net/testingimg/202005/31/231330471.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuELeSOo54x9TziNdGeQdF166eMMUyc9CEYPGWp6rCGziQUqg_XYs1DyyOfbZjxot4F1o';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				某电动汽车空调机组的仿真分析 新能源测试 汽车测试网
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://2.bp.blogspot.com/_V4SYpI93l98/SXLp_sgzcWI/AAAAAAAACEg/6S70Y2YGwtI/s400/fluid-dynamics.jpg" data-lightbox="roadtrip" data-title="Cg Taiwaner 台灣人玩動畫 Fluid Dynamics In Cg 流體力學講座">
+						<img class="card-img" src="http://2.bp.blogspot.com/_V4SYpI93l98/SXLp_sgzcWI/AAAAAAAACEg/6S70Y2YGwtI/s400/fluid-dynamics.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzwPHmbrORtiwbkaFkKA6lSRE5VXRObxGaew';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Cg Taiwaner 台灣人玩動畫 Fluid Dynamics In Cg 流體力學講座
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic1.zhimg.com/v2-04019bc64fb4819268e02b22bb4db6f1_1440w.jpg?source=172ae18b" data-lightbox="roadtrip" data-title="笔记 从湍流的统计开始 湍流理论与模拟 知乎">
+						<img class="card-img" src="https://pic1.zhimg.com/v2-04019bc64fb4819268e02b22bb4db6f1_1440w.jpg?source=172ae18b" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIY0l5oUExT5Uc6l8WeufUahLweOEJVWF9Zw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				笔记 从湍流的统计开始 湍流理论与模拟 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://www.gfzxb.org/fileGFZXB/journal/article/gfzxb/2019/11/PIC/gfzxb20190074chenjizhong-1.jpg" data-lightbox="roadtrip" data-title="泊肃叶流中环形高分子的迁移行为及与线性高分子的差异">
+						<img class="card-img" src="http://www.gfzxb.org/fileGFZXB/journal/article/gfzxb/2019/11/PIC/gfzxb20190074chenjizhong-1.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREICzNOZHbMIvvyFBTekwLzj0lW7nC-mAhmA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				泊肃叶流中环形高分子的迁移行为及与线性高分子的差异
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://embedwistia-a.akamaihd.net/deliveries/e5bbddbce74cd1f50329896ba23bffffa5132aa9.webp?image_crop_resized=1280x480" data-lightbox="roadtrip" data-title="利用基于方程建模求解浅水波动方程 Comsol 博客">
+						<img class="card-img" src="https://embedwistia-a.akamaihd.net/deliveries/e5bbddbce74cd1f50329896ba23bffffa5132aa9.webp?image_crop_resized=1280x480" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT69-C7RdanfABCQfdMLnklnMzorLpf2TqnDQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				利用基于方程建模求解浅水波动方程 Comsol 博客
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://3.bp.blogspot.com/-iSFi21bcGbk/WYB1kCDlLKI/AAAAAAAAAS8/vDnbw2Bw25wjE3Jz4bQ5Bsmjn54UFU0_wCLcBGAs/s1600/20507111_772894942892158_884013243634613662_o.jpg" data-lightbox="roadtrip" data-title="遠得要命的數學王國 Navier Stokes Equation">
+						<img class="card-img" src="https://3.bp.blogspot.com/-iSFi21bcGbk/WYB1kCDlLKI/AAAAAAAAAS8/vDnbw2Bw25wjE3Jz4bQ5Bsmjn54UFU0_wCLcBGAs/s1600/20507111_772894942892158_884013243634613662_o.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3w9aySR7dOeCQtblWvNFBXU_vstUMazVzhw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				遠得要命的數學王國 Navier Stokes Equation
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://www.gfzxb.org/fileGFZXB/journal/article/gfzxb/2016/8/PIC/gfzxb-8-1021-8.jpg" data-lightbox="roadtrip" data-title="耗散粒子动力学和纳维边界条件在微米纳米流体力学模拟中的应用">
+						<img class="card-img" src="http://www.gfzxb.org/fileGFZXB/journal/article/gfzxb/2016/8/PIC/gfzxb-8-1021-8.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgo0cNK_rCGOOMh3S2Gwp-jqTRkcJ82ndkfw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				耗散粒子动力学和纳维边界条件在微米纳米流体力学模拟中的应用
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="A4NIpqE-CHLjaM" data-lightbox="roadtrip" data-title="Http Www Math Ust Hk Makxu Paper Gks Review Pdf">
+						<img class="card-img" src="A4NIpqE-CHLjaM" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTW121R9OX0ttR9CNaxiSY5oJfIrGxK86wgXA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Http Www Math Ust Hk Makxu Paper Gks Review Pdf
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://i0.wp.com/i1.read01.com/SIG=2cp370k/304f445a674b58373154.jpg" data-lightbox="roadtrip" data-title="納維斯托克斯 數史回顧 改變歷史進程的17個方程式 Brzhk">
+						<img class="card-img" src="https://i0.wp.com/i1.read01.com/SIG=2cp370k/304f445a674b58373154.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzwY1R6Gedh48pUaeaKSWf8eFbRjtHAS-aWg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				納維斯托克斯 數史回顧 改變歷史進程的17個方程式 Brzhk
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://cdn.comsol.com/cyclopedia/navier-stokes-equations/computational_domain.zh_CN.png" data-lightbox="roadtrip" data-title="什么是纳维 斯托克斯方程">
+						<img class="card-img" src="https://cdn.comsol.com/cyclopedia/navier-stokes-equations/computational_domain.zh_CN.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLBL_zOMPMehAMvCZVSmfsM8pfeng0kq7fOQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				什么是纳维 斯托克斯方程
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="4qxQCejmPZhm2M" data-lightbox="roadtrip" data-title="Http Dsec Pku Edu Cn Tlu Apde12 Apde1 Pdf">
+						<img class="card-img" src="4qxQCejmPZhm2M" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-saHUkrnxWYhMrAQM6pIhR5V8kJrUpwo8cA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Http Dsec Pku Edu Cn Tlu Apde12 Apde1 Pdf
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.itsfun.com.tw/images/6e/a8/n5GcukTOkljZwEjZ0MmY5MmYxcTMwQ3Lt92Yuc2cthWcuw2cz5SMw9yL6MHc0RHa.jpg" data-lightbox="roadtrip" data-title="納維葉 斯托克斯 Navier Stokes 方程 納維 華人百科">
+						<img class="card-img" src="https://www.itsfun.com.tw/images/6e/a8/n5GcukTOkljZwEjZ0MmY5MmYxcTMwQ3Lt92Yuc2cthWcuw2cz5SMw9yL6MHc0RHa.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWyF3dGeX0xc0tKbDd7C_TvJrBwmzu0xhUag';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				納維葉 斯托克斯 Navier Stokes 方程 納維 華人百科
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://www.ihydrostatics.com/wp-content/uploads/2021/02/5-1612311672.png" data-lightbox="roadtrip" data-title="流体力学的气宗与剑宗 静液压">
+						<img class="card-img" src="http://www.ihydrostatics.com/wp-content/uploads/2021/02/5-1612311672.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOCckKA137KjR2g52euHFKxwNgR8oR5pIO7A';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				流体力学的气宗与剑宗 静液压
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://i1.kknews.cc/SIG=13qtlm6/ctp-vzntr/53p4n6442so446238407p66qoo95sr6q.jpg" data-lightbox="roadtrip" data-title="科學理論的創新越來越難 評n S方程 每日頭條">
+						<img class="card-img" src="https://i1.kknews.cc/SIG=13qtlm6/ctp-vzntr/53p4n6442so446238407p66qoo95sr6q.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAvGz4HH1k_efhkcN7NDnFQk10hSJbCPz3DA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				科學理論的創新越來越難 評n S方程 每日頭條
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+		
+	</div>
+
+		 
+		
+		
+				</div>
+				<div class="col-sm-12 widget">
+					<div class="d-block p-4">
+	<center>
+		<!-- BOTTOM BANNER ADS -->
+<script async="async" data-cfasync="false" src="//jc32arlvqpv8.com/eb47a424ae325c90cca32780149785c3/invoke.js"></script>
+<div id="container-eb47a424ae325c90cca32780149785c3"></div>
+
+	</center>
+</div>				</div>
+			</div>
+			<div class="row footer">
+				<div class="col-md-12 text-center py-4">
+										<a href="/p/dmca.html">Dmca</a>
+										<a href="/p/contact.html">Contact</a>
+										<a href="/p/privacy-policy.html">Privacy Policy</a>
+										<a href="/p/copyright.html">Copyright</a>
+					
+				</div>
+			</div>
+		</main>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js" integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js" integrity="sha256-CtKylYan+AJuoH8jrMht1+1PMhMqrKnB8K5g012WN5I=" crossorigin="anonymous"></script>
+		
+		<!-- Footer CSS JS -->
+		
+		
+		
+			<script type='text/javascript' src='//jc32arlvqpv8.com/ef/d5/10/efd510237a3143727bed46803ec35b8d.js'></script>
+</body>
+</html>

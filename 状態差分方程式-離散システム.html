@@ -1,0 +1,682 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha256-L/W5Wfqfa0sdBNIKN9cG6QA5F2qx4qICmU2VgLruv9Y=" crossorigin="anonymous" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/css/lightbox.min.css" integrity="sha256-tBxlolRHP9uMsEFKVk+hk//ekOlXOixLKvye5W2WR5c=" crossorigin="anonymous" />
+		<link href="https://fonts.googleapis.com/css?family=Mr+Dafoe" rel="stylesheet" type="text/css">
+
+		<style type="text/css">
+			html,body{font-family:"Open Sans",Arial,sans-serif;font-size:14px;font-weight:400;background:#f3f3f3 url(https://sites.google.com/site/marutaro777/_/rsrc/1488706005333/home/sabun-bibun/sabun-bibun03.png
+) no-repeat center center fixed;background-size:cover;height:100%}#title{font-family:"Mr Dafoe",Times,serif;font-size:34px;background:rgba(255,255,255,.8);margin-bottom:34px}.header{padding-bottom:13px;margin-bottom:13px;border-bottom:1px solid #eee}a{color:#26ADE4;text-decoration:none}#title a{color:#333;margin-left:21px}#title a:hover{text-decoration:none;color:#26ADE4}.sidebar ul{margin:0;padding:0}.sidebar ul li{list-style:none}.footer{margin-top:21px;padding-top:13px;border-top:1px solid #eee}.footer a{margin:0 15px}.navi{margin:13px 0 13px 0;padding:13px}.navi a{margin:5px 2px;font-size:95%}.main{margin-top: 6rem;}.form-inline .form-control{min-width: 300px;}.v-cover{height: 380px; object-fit: cover;}.v-image{height: 200px; object-fit: cover;}.dwn-cover{max-height: 460px; object-fit: cover;}.main{margin-top: 6rem;}.form-inline .form-control{min-width: 300px;}			
+		</style>
+
+		<title>状態差分方程式 離散システム</title>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/", 
+  "@type": "Article", 
+  "author": {
+    "@type": "Person",
+    "name": "James"
+  },
+  "headline": "状態差分方程式 離散システム",
+  "datePublished": "2021-04-24",
+  "image": [http://www.02.246.ne.jp/~m-adachi/math/figm2-3.gif,https://slidesplayer.net/slide/14260580/89/images/17/%E5%95%8F+4-4+%E8%A7%A3%E8%AA%AC+%E5%B7%AE%E5%88%86%E6%B3%95%EF%BC%9A%E4%BD%8E%E6%AC%A1%E3%81%AE%E9%9B%A2%E6%95%A3%E5%8C%96%E3%82%92%E3%82%82%E3%81%A1%E3%81%84%E3%81%9F%E5%A0%B4%E5%90%88%EF%BC%8C%E5%B7%AE%E5%88%86%E6%B3%95%E3%81%A8%E6%9C%89%E9%99%90%E4%BD%93%E7%A9%8D%E6%B3%95%E3%81%AF%E5%90%8C%E3%81%98%E3%81%AB%E3%81%AA%E3%82%8B%E3%81%9F%E3%82%81%E5%90%8C%E4%B8%80%E8%A6%96%E3%81%95%E3%82%8C%E3%81%8C%E3%81%A1%E3%81%A7%E3%81%AF%E3%81%82%E3%82%8B%E3%81%8C%EF%BC%8C%E9%9B%A2%E6%95%A3%E5%8C%96%E3%81%99%E3%82%8B%E9%9A%9B%E3%81%AE%E5%9F%BA%E6%9C%AC%E7%9A%84%E8%80%83%E3%81%88%E6%96%B9%E3%81%8C%E7%95%B0%E3%81%AA%E3%82%8B%EF%BC%8E%E5%B7%AE%E5%88%86%E5%95%86%EF%BC%88%E5%B7%AE%E5%88%86%E3%82%B9%E3%82%AD%E3%83%BC%E3%83%A0%EF%BC%89%E3%81%AB%E3%82%88%E3%81%A3%E3%81%A6%E9%80%9F%E5%BA%A6%E3%82%84%E5%9C%A7%E5%8A%9B%E3%81%AE%E5%8B%BE%E9%85%8D%E3%82%92%E8%BF%91%E4%BC%BC%E3%81%97%EF%BC%8C%E6%A9%9F%E6%A2%B0%E7%9A%84%E3%81%AB%E9%9B%A2%E6%95%A3%E5%BC%8F%E3%82%92%E6%A7%8B%E6%88%90%E3%81%97%EF%BC%8C%E6%A7%8B%E9%80%A0%E6%A0%BC%E5%AD%90%E3%81%A7%E7%94%A8%E3%81%84%E3%82%89%E3%82%8C%E3%82%8B%EF%BC%8E.jpg,https://sites.google.com/site/marutaro777/_/rsrc/1488706005333/home/sabun-bibun/sabun-bibun03.png],
+  "publisher": {
+    "@type": "Organization",
+    "name": "Tukang Parkir Gerobak",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://via.placeholder.com/512.png?text=状態差分方程式 離散システム",
+      "width": 512,
+      "height": 512
+    }
+  }
+}
+</script>
+		<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-957NGNKQ70"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-957NGNKQ70');
+</script>
+
+<script type='text/javascript' src='//jc32arlvqpv8.com/1a/82/2e/1a822ef8a40a0fbab3c4ea12a5d2bb02.js'></script>
+</head>
+	<body>
+		<header class="bg-white fixed-top">			
+			<nav class="navbar navbar-light bg-white mb-0">
+				<div class="container justify-content-center justify-content-sm-between">	
+				  <a href="/" title="Blog" class="navbar-brand mb-1">Blog</a>
+				  				</div>			  
+			</nav>				
+		</header>
+		<main class="main container bg-white">
+			<div class="col-md-12 my-4" align="center">
+				<div class="d-block p-4">
+	<br/><center>
+<!-- TOP BANNER ADS -->
+</center><br/>
+</div>			</div>
+			<div class="row header">
+				<div class="col-sm-12 text-center p-2">
+						<h1>状態差分方程式 離散システム</h1>
+
+	
+	<div class="navi text-center">
+										<a class="badge badge-danger" href="/%E8%BF%91%E8%A6%AA-%E7%84%A1%E8%A8%80-%E7%9B%B8%E5%A7%A6-%E9%9A%A3%E3%81%AB%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%8C%E3%81%84%E3%82%8B%E3%81%AE%E3%82%88-%E6%A1%9C%E4%BA%95%E5%BD%A9.html">近親 無言 相姦 隣にお父さんがいるのよ 桜井彩</a>
+											<a class="badge badge-warning" href="/%E8%BF%91%E8%A6%AA-%E7%84%A1%E8%A8%80-%E7%9B%B8%E5%A7%A6-%E9%9A%A3%E3%81%AB%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%8C%E3%81%84%E3%82%8B%E3%81%AE%E3%82%88-%E9%9D%92%E5%B1%B1%E8%91%B5.html">近親 無言 相姦 隣にお父さんがいるのよ 青山葵</a>
+											<a class="badge badge-info" href="/%E7%A7%81-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%AE%E5%AD%90%E4%BE%9B%E5%A6%8A%E5%A8%A0%E3%81%99%E3%82%8B-%E5%A5%B3%E5%AD%90%E6%A0%A1%E7%94%9F%E3%81%AE%E3%83%87%E3%82%AB%E5%B0%BB%E5%A8%98%E3%81%8C%E7%AA%81%E7%84%B6%E8%A8%AA%E3%81%AD%E3%81%9F%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA%E7%88%B6%E3%81%AE%E5%AE%B6%E3%81%AB%E3%81%AF%E3%81%BE%E3%81%95%E3%81%8B%E3%81%AE%E5%A9%9A%E7%B4%84%E8%80%85%E3%81%8C-%E7%B5%B6%E5%AF%BE%E3%81%AB%E5%8F%96%E3%82%89%E3%82%8C%E3%81%BE%E3%81%84%E3%81%A8%E9%A6%AC.html">私 お父さんの子供妊娠する 女子校生のデカ尻娘が突然訪ねた大好きな父の家にはまさかの婚約者が 絶対に取られまいと馬</a>
+											<a class="badge badge-info" href="/%E6%B8%A6%E5%BA%A6%E6%96%B9%E7%A8%8B%E5%BC%8F-%E3%82%B1%E3%83%AB%E3%83%93%E3%83%B3%E3%83%98%E3%83%AB%E3%83%A0%E3%83%9B%E3%83%AB%E3%83%84-%E5%B0%8E%E5%87%BA.html">渦度方程式 ケルビンヘルムホルツ 導出</a>
+											<a class="badge badge-success" href="/%E9%96%B2%E8%A6%A7%E6%B3%A8%E6%84%8F-%E5%BD%BC%E5%A5%B3%E3%81%A8%E3%83%A4%E3%83%83%E3%81%A6%E3%82%8B%E6%99%82%E3%81%AB-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%A9%E3%82%93%E3%81%AA%E6%B0%97%E6%8C%81%E3%81%A1%E3%81%8B.html">閲覧注意 彼女とヤッてる時に お父さんどんな気持ちか</a>
+											<a class="badge badge-danger" href="/%E8%8B%A5%E6%89%8B%E3%82%BB%E3%83%9F%E3%83%8A%E3%83%BC-%E7%99%BA%E5%B1%95%E6%96%B9%E7%A8%8B%E5%BC%8F.html">若手セミナー 発展方程式</a>
+											<a class="badge badge-secondary" href="/%E6%AF%94%E8%BC%83-%E5%8E%9F%E7%90%86-%E7%86%B1-%E6%96%B9%E7%A8%8B%E5%BC%8F.html">比較 原理 熱 方程式</a>
+											<a class="badge badge-info" href="/%E9%A0%82-%E3%83%93%E3%83%BC%E3%83%AB-cm-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93.html">頂 ビール cm お父さん</a>
+											<a class="badge badge-info" href="/%E8%A5%BF%E9%83%B7%E3%81%95%E3%82%93-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E5%9B%9E.html">西郷さん お父さん回</a>
+											<a class="badge badge-danger" href="/%E7%90%B4%E3%83%8E%E8%8B%A5%E3%81%AE-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93-%E3%81%AF-%E8%AA%B0.html">琴ノ若の お父さん は 誰</a>
+											<a class="badge badge-warning" href="/%E6%A0%B9%E5%8F%B7%E3%82%92%E5%90%AB%E3%82%80%E6%96%B9%E7%A8%8B%E5%BC%8F.html">根号を含む方程式</a>
+											<a class="badge badge-danger" href="/%E7%84%A1%E9%99%90%E6%96%B9%E7%A8%8B%E5%BC%8F-mosi-mosi-%E8%89%A6%E9%9A%8A%E3%81%93%E3%82%8C%E3%81%8F%E3%81%97%E3%82%87%E3%82%93.html">無限方程式 mosi mosi 艦隊これくしょん</a>
+											<a class="badge badge-success" href="/%E7%BD%AE%E3%81%8D%E5%A0%B4-%E7%86%9F%E5%A5%B3%E8%A3%85%E5%AD%90%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93.html">置き場 熟女装子お父さん</a>
+											<a class="badge badge-primary" href="/%E9%9B%A2%E5%A9%9A-%E3%81%97%E3%81%9F-%E5%85%83-%E5%A6%BB-%E3%81%AE-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93-%E3%81%8C-%E6%AD%BB%E5%8E%BB.html">離婚 した 元 妻 の お父さん が 死去</a>
+											<a class="badge badge-success" href="/%E7%9F%B3%E7%94%B0%E3%81%95%E3%82%93-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93-%E6%A0%A1%E9%95%B7.html">石田さん お父さん 校長</a>
+						</div>
+<center>
+	<!-- MIDDLE BANNER ADS -->
+<script type="text/javascript">
+	atOptions = {
+		'key' : '2b77887421e2587a1a1b1d7c8a31a9e0',
+		'format' : 'iframe',
+		'height' : 250,
+		'width' : 300,
+		'params' : {}
+	};
+	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://jc32arlvqpv8.com/2b77887421e2587a1a1b1d7c8a31a9e0/invoke.js"></scr' + 'ipt>');
+</script>
+		
+	</center>
+					
+				</div>
+			</div>
+			<div class="row content mb-4">
+				<div class="col-md-12">					
+					
+	
+	<div class="card-columns">
+						
+	  <div class='card'>
+	  	<a href="https://i.ytimg.com/vi/c1mJ4FAL4ac/maxresdefault.jpg" data-lightbox="roadtrip" data-title="制御 連続時間システムの離散化 １分でわかるシステム制御理論 3 Youtube">
+						<img class="card-img" src="https://i.ytimg.com/vi/c1mJ4FAL4ac/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQctuOZ1H_1CtyGngv9yMQxuMs7Vq1QhZw_X8FIzzo2LU9OVlzxOB9ANI3r-7uI_iTKig8';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				制御 連続時間システムの離散化 １分でわかるシステム制御理論 3 Youtube
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://i.ytimg.com/vi/qtDaHFga1WI/maxresdefault.jpg" data-lightbox="roadtrip" data-title="制御 離散時間システムの安定性 １分でわかるシステム制御理論 10 Youtube">
+						<img class="card-img" src="https://i.ytimg.com/vi/qtDaHFga1WI/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpKo-6g9dSHwErugqD-GfbNuDgk04w_SNCDMISwh92NDhSQZ8MJ0cCN_IxYVX0SYrx4HA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				制御 離散時間システムの安定性 １分でわかるシステム制御理論 10 Youtube
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://slidesplayer.net/slide/11500688/62/images/4/%E7%8A%B6%E6%85%8B%E7%A9%BA%E9%96%93%E8%A1%A8%E7%8F%BE%E3%81%A8LTI%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0+%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0+%E7%8A%B6%E6%85%8B%E6%96%B9%E7%A8%8B%E5%BC%8F+%E8%A6%B3%E6%B8%AC%E6%96%B9%E7%A8%8B%E5%BC%8F+LTI%EF%BC%88Linear+Time+Invariant%29+%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0.jpg" data-lightbox="roadtrip" data-title="東京工業大学 機械制御システム専攻 山北 昌毅 Ppt Download">
+						<img class="card-img" src="https://slidesplayer.net/slide/11500688/62/images/4/%E7%8A%B6%E6%85%8B%E7%A9%BA%E9%96%93%E8%A1%A8%E7%8F%BE%E3%81%A8LTI%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0+%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0+%E7%8A%B6%E6%85%8B%E6%96%B9%E7%A8%8B%E5%BC%8F+%E8%A6%B3%E6%B8%AC%E6%96%B9%E7%A8%8B%E5%BC%8F+LTI%EF%BC%88Linear+Time+Invariant%29+%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQlj1zH6jI5MMXo_tKyfiiQ24lz7youY5cYVcJSO2iJWJVRLAATjx9_djigJ6dS-ED5GM';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				東京工業大学 機械制御システム専攻 山北 昌毅 Ppt Download
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://jp.mathworks.com/help/signal/ref/dfilt_statespace.gif" data-lightbox="roadtrip" data-title="離散時間状態空間フィルター Matlab Dfilt Statespace Mathworks 日本">
+						<img class="card-img" src="https://jp.mathworks.com/help/signal/ref/dfilt_statespace.gif" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7QQ8xdGQmjDFBMUvPNV4xY6qfMEa3-cOnZX2nDA4xCaJmoQ_mNWRXBI0-6jYuGRMY_t8';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				離散時間状態空間フィルター Matlab Dfilt Statespace Mathworks 日本
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://slidesplayer.net/slide/11500688/62/images/16/%E7%8A%B6%E6%85%8B%E6%96%B9%E7%A8%8B%E5%BC%8F%E3%81%AE%E4%B8%80%E8%88%AC%E8%A7%A3+%E7%89%A9%E7%90%86%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%81%AF%E9%80%A3%E7%B6%9A%E7%B3%BB%E3%81%AE%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%81%A8%E3%81%97%E3%81%A6%E8%A1%A8%E7%8F%BE%E3%81%95%E3%82%8C%E3%82%8B%E3%81%93%E3%81%A8%E3%81%8C%E6%99%AE%E9%80%9A+%EF%BC%88%E4%B8%80%E8%88%AC%E8%A7%A3%EF%BC%89+%EF%BC%88%E9%81%B7%E7%A7%BB%E8%A1%8C%E5%88%97%EF%BC%89.jpg" data-lightbox="roadtrip" data-title="東京工業大学 機械制御システム専攻 山北 昌毅 Ppt Download">
+						<img class="card-img" src="https://slidesplayer.net/slide/11500688/62/images/16/%E7%8A%B6%E6%85%8B%E6%96%B9%E7%A8%8B%E5%BC%8F%E3%81%AE%E4%B8%80%E8%88%AC%E8%A7%A3+%E7%89%A9%E7%90%86%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%81%AF%E9%80%A3%E7%B6%9A%E7%B3%BB%E3%81%AE%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%81%A8%E3%81%97%E3%81%A6%E8%A1%A8%E7%8F%BE%E3%81%95%E3%82%8C%E3%82%8B%E3%81%93%E3%81%A8%E3%81%8C%E6%99%AE%E9%80%9A+%EF%BC%88%E4%B8%80%E8%88%AC%E8%A7%A3%EF%BC%89+%EF%BC%88%E9%81%B7%E7%A7%BB%E8%A1%8C%E5%88%97%EF%BC%89.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvvMkS39cMdTH5uxpBPQsLrK-AuHbbHKnIzALL6mktl1ORYZSfm0kPGOXs9aB4pL971yw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				東京工業大学 機械制御システム専攻 山北 昌毅 Ppt Download
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://sites.google.com/site/marutaro777/_/rsrc/1488705985321/home/sabun-bibun/sabun-bibun01.png" data-lightbox="roadtrip" data-title="差分方程式 微分方程式ノート Marutaro777">
+						<img class="card-img" src="https://sites.google.com/site/marutaro777/_/rsrc/1488705985321/home/sabun-bibun/sabun-bibun01.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxZX9XUxpAdqqPMWB7BTBhsumsB_Hosk51EnY3wBIS9UBfHr3JE_EEGjl3ArbO_b2WrkU';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				差分方程式 微分方程式ノート Marutaro777
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+				<div class='card'>	
+			<div class="d-block p-4">
+	</div>		  	
+		  	<h3 class="h6 p-2"><b></b></h3>
+					</div>
+		
+						
+	  <div class='card'>
+	  	<a href="https://i1.wp.com/okasho-engineer.com/wp-content/uploads/2020/09/a98b1120712ae2558c294773114e59b3-1-4.jpg?fit=1240%2C1033&amp;ssl=1" data-lightbox="roadtrip" data-title="状態方程式を双一次変換で離散化してみる 理系大学院生の知識の森">
+						<img class="card-img" src="https://i1.wp.com/okasho-engineer.com/wp-content/uploads/2020/09/a98b1120712ae2558c294773114e59b3-1-4.jpg?fit=1240%2C1033&amp;ssl=1" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeuEXBAUf-4Tkcl5Zr0HcmSNNoB_kiS8ZG8jVAZEai9uB6Xi2n2d8rZ_Rzwzc1TPxtvFA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				状態方程式を双一次変換で離散化してみる 理系大学院生の知識の森
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="SXzePTj1R6jpHM" data-lightbox="roadtrip" data-title="Http Lab Sdm Keio Ac Jp Ogi Shibaura Ac13 0121 Pdf">
+						<img class="card-img" src="SXzePTj1R6jpHM" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQI8Qt3cvNohxLY-_22gY-l-h8XXrsFQrpAz22HzG9MyBMtaTU8zeI1XndyeES81BVnzfU';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Http Lab Sdm Keio Ac Jp Ogi Shibaura Ac13 0121 Pdf
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://cdn-ak.f.st-hatena.com/images/fotolife/o/ogyahogya/20151003/20151003162712.png" data-lightbox="roadtrip" data-title="線形システムと制御 初級mathマニアの寝言">
+						<img class="card-img" src="https://cdn-ak.f.st-hatena.com/images/fotolife/o/ogyahogya/20151003/20151003162712.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRv18kIa5-ZskUe5-i4gsz4Vxan4ONwqfXmvfqhaEUubNBCGQXBIVAk2WWkjs1nzWnE2Aw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				線形システムと制御 初級mathマニアの寝言
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://slidesplayer.net/slide/11500688/62/images/23/%E9%9B%A2%E6%95%A3%E6%99%82%E9%96%93%E7%B3%BB%E3%81%AE%E6%99%82%E9%96%93%E9%A0%98%E5%9F%9F%E3%81%AE%E5%85%A5%E5%87%BA%E5%8A%9B%E3%83%A2%E3%83%87%E3%83%AB.jpg" data-lightbox="roadtrip" data-title="東京工業大学 機械制御システム専攻 山北 昌毅 Ppt Download">
+						<img class="card-img" src="https://slidesplayer.net/slide/11500688/62/images/23/%E9%9B%A2%E6%95%A3%E6%99%82%E9%96%93%E7%B3%BB%E3%81%AE%E6%99%82%E9%96%93%E9%A0%98%E5%9F%9F%E3%81%AE%E5%85%A5%E5%87%BA%E5%8A%9B%E3%83%A2%E3%83%87%E3%83%AB.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYy7sRNjiwOyjhnPjXi0kJBKkpDw40tIQTyUeqvTWNlZHLeXcsXUjYeKHXwamuFWXrO1E';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				東京工業大学 機械制御システム専攻 山北 昌毅 Ppt Download
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://www.02.246.ne.jp/~m-adachi/math/figm2-3.gif" data-lightbox="roadtrip" data-title="定理や式の証明 導出詳細 １ 微積分関連 テイラー展開の証明 ヘビサイドの展開定理の証明 ２ 常微分方程式関連 時定数の係数を持つｎ次元の線形常微分 方程式の解の確認 証明 連続 時間システムの離散時間システムへの変換 ３ ラプラス変換関連">
+						<img class="card-img" src="http://www.02.246.ne.jp/~m-adachi/math/figm2-3.gif" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfjzwIQ464N0fnPAXJ3NHi_1QyXNJSKLbaJL7FdxOmPPuFB0odacTExZZuh5FlHUAeXaI';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				定理や式の証明 導出詳細 １ 微積分関連 テイラー展開の証明 ヘビサイドの展開定理の証明 ２ 常微分方程式関連 時定数の係数を持つｎ次元の線形常微分 方程式の解の確認 証明 連続 時間システムの離散時間システムへの変換 ３ ラプラス変換関連
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://slidesplayer.net/slide/11500688/62/images/22/%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%81%AE%E9%9B%A2%E6%95%A3%E5%8C%96%EF%BC%88%EF%BC%93%EF%BC%89+%EF%BC%8B.jpg" data-lightbox="roadtrip" data-title="東京工業大学 機械制御システム専攻 山北 昌毅 Ppt Download">
+						<img class="card-img" src="https://slidesplayer.net/slide/11500688/62/images/22/%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%81%AE%E9%9B%A2%E6%95%A3%E5%8C%96%EF%BC%88%EF%BC%93%EF%BC%89+%EF%BC%8B.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTk9m9Rsdd3tVqni7TAB1zImWsHf881W7cEJEhQO2wtLkJDHnC1ZqY1qmZykobHkccweMs';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				東京工業大学 機械制御システム専攻 山北 昌毅 Ppt Download
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://tajimarobotics.com/wp-content/uploads/2018/08/Vibration-15.png" data-lightbox="roadtrip" data-title="離散的な線形システムの安定性を確認する方法 制御工学入門 Tajima Robotics">
+						<img class="card-img" src="https://tajimarobotics.com/wp-content/uploads/2018/08/Vibration-15.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQItdXzH83UGQYwCa9YL7gtZG8jih3Tn-7JzMPyrenKb5Y29TcHkp8IAVDgApn4LaWOxGQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				離散的な線形システムの安定性を確認する方法 制御工学入門 Tajima Robotics
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://image.slidesharecdn.com/random-170324030521/95/-10-638.jpg?cb=1491532066" data-lightbox="roadtrip" data-title="数値解析と物理学">
+						<img class="card-img" src="https://image.slidesharecdn.com/random-170324030521/95/-10-638.jpg?cb=1491532066" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGCjKzSDGGW5lNz21WyUv6SKeeGkBYr4DK6iw71712UtI9dhUjSVMMcb8hZsHWE1UHyRQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				数値解析と物理学
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://i.ytimg.com/vi/A96JNZd5i_o/maxresdefault.jpg" data-lightbox="roadtrip" data-title="制御工学 離散時間システムpart 1 連続時間状態方程式の離散化 制御理論 3 Youtube">
+						<img class="card-img" src="https://i.ytimg.com/vi/A96JNZd5i_o/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThPhJcS7VHt3_DmObAKRag4d5VGapsHrvxd82uJrKEi1i0nz5X1jKH-EfZx5WeUS0GLSE';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				制御工学 離散時間システムpart 1 連続時間状態方程式の離散化 制御理論 3 Youtube
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://cdn-ak.f.st-hatena.com/images/fotolife/h/hamada7418/20210325/20210325125902.png" data-lightbox="roadtrip" data-title="微分方程式と状態空間モデル The One With">
+						<img class="card-img" src="https://cdn-ak.f.st-hatena.com/images/fotolife/h/hamada7418/20210325/20210325125902.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmWqBghoe9w3Hs7skYLlemnc0BgGONSC-wb0tpQp9V6NS_cfysKVZ3EPaPQj40KOlku_c';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				微分方程式と状態空間モデル The One With
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://research.nii.ac.jp/~nkjm/ssr2011/images/2models.png" data-lightbox="roadtrip" data-title="Ssr2011年度調査研究報告 鍵となる技術">
+						<img class="card-img" src="http://research.nii.ac.jp/~nkjm/ssr2011/images/2models.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQs9dz_yXR_GmlxjOKW4OFhwjjciXVRxkQSg-hI8ARD8FVMWBl2bIrSk3mc79sj6IismDk';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Ssr2011年度調査研究報告 鍵となる技術
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://slidesplayer.net/slide/14260580/89/images/17/%E5%95%8F+4-4+%E8%A7%A3%E8%AA%AC+%E5%B7%AE%E5%88%86%E6%B3%95%EF%BC%9A%E4%BD%8E%E6%AC%A1%E3%81%AE%E9%9B%A2%E6%95%A3%E5%8C%96%E3%82%92%E3%82%82%E3%81%A1%E3%81%84%E3%81%9F%E5%A0%B4%E5%90%88%EF%BC%8C%E5%B7%AE%E5%88%86%E6%B3%95%E3%81%A8%E6%9C%89%E9%99%90%E4%BD%93%E7%A9%8D%E6%B3%95%E3%81%AF%E5%90%8C%E3%81%98%E3%81%AB%E3%81%AA%E3%82%8B%E3%81%9F%E3%82%81%E5%90%8C%E4%B8%80%E8%A6%96%E3%81%95%E3%82%8C%E3%81%8C%E3%81%A1%E3%81%A7%E3%81%AF%E3%81%82%E3%82%8B%E3%81%8C%EF%BC%8C%E9%9B%A2%E6%95%A3%E5%8C%96%E3%81%99%E3%82%8B%E9%9A%9B%E3%81%AE%E5%9F%BA%E6%9C%AC%E7%9A%84%E8%80%83%E3%81%88%E6%96%B9%E3%81%8C%E7%95%B0%E3%81%AA%E3%82%8B%EF%BC%8E%E5%B7%AE%E5%88%86%E5%95%86%EF%BC%88%E5%B7%AE%E5%88%86%E3%82%B9%E3%82%AD%E3%83%BC%E3%83%A0%EF%BC%89%E3%81%AB%E3%82%88%E3%81%A3%E3%81%A6%E9%80%9F%E5%BA%A6%E3%82%84%E5%9C%A7%E5%8A%9B%E3%81%AE%E5%8B%BE%E9%85%8D%E3%82%92%E8%BF%91%E4%BC%BC%E3%81%97%EF%BC%8C%E6%A9%9F%E6%A2%B0%E7%9A%84%E3%81%AB%E9%9B%A2%E6%95%A3%E5%BC%8F%E3%82%92%E6%A7%8B%E6%88%90%E3%81%97%EF%BC%8C%E6%A7%8B%E9%80%A0%E6%A0%BC%E5%AD%90%E3%81%A7%E7%94%A8%E3%81%84%E3%82%89%E3%82%8C%E3%82%8B%EF%BC%8E.jpg" data-lightbox="roadtrip" data-title="計算力学技術者２級 熱流体力学分野の解析技術者 認定試験対策講習会 第４章 数値計算法 Ppt Download">
+						<img class="card-img" src="https://slidesplayer.net/slide/14260580/89/images/17/%E5%95%8F+4-4+%E8%A7%A3%E8%AA%AC+%E5%B7%AE%E5%88%86%E6%B3%95%EF%BC%9A%E4%BD%8E%E6%AC%A1%E3%81%AE%E9%9B%A2%E6%95%A3%E5%8C%96%E3%82%92%E3%82%82%E3%81%A1%E3%81%84%E3%81%9F%E5%A0%B4%E5%90%88%EF%BC%8C%E5%B7%AE%E5%88%86%E6%B3%95%E3%81%A8%E6%9C%89%E9%99%90%E4%BD%93%E7%A9%8D%E6%B3%95%E3%81%AF%E5%90%8C%E3%81%98%E3%81%AB%E3%81%AA%E3%82%8B%E3%81%9F%E3%82%81%E5%90%8C%E4%B8%80%E8%A6%96%E3%81%95%E3%82%8C%E3%81%8C%E3%81%A1%E3%81%A7%E3%81%AF%E3%81%82%E3%82%8B%E3%81%8C%EF%BC%8C%E9%9B%A2%E6%95%A3%E5%8C%96%E3%81%99%E3%82%8B%E9%9A%9B%E3%81%AE%E5%9F%BA%E6%9C%AC%E7%9A%84%E8%80%83%E3%81%88%E6%96%B9%E3%81%8C%E7%95%B0%E3%81%AA%E3%82%8B%EF%BC%8E%E5%B7%AE%E5%88%86%E5%95%86%EF%BC%88%E5%B7%AE%E5%88%86%E3%82%B9%E3%82%AD%E3%83%BC%E3%83%A0%EF%BC%89%E3%81%AB%E3%82%88%E3%81%A3%E3%81%A6%E9%80%9F%E5%BA%A6%E3%82%84%E5%9C%A7%E5%8A%9B%E3%81%AE%E5%8B%BE%E9%85%8D%E3%82%92%E8%BF%91%E4%BC%BC%E3%81%97%EF%BC%8C%E6%A9%9F%E6%A2%B0%E7%9A%84%E3%81%AB%E9%9B%A2%E6%95%A3%E5%BC%8F%E3%82%92%E6%A7%8B%E6%88%90%E3%81%97%EF%BC%8C%E6%A7%8B%E9%80%A0%E6%A0%BC%E5%AD%90%E3%81%A7%E7%94%A8%E3%81%84%E3%82%89%E3%82%8C%E3%82%8B%EF%BC%8E.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSxHJsdJBgvCgNj7P9WEBCN1CRYk4VaXlcr-YhVeei8RDUgEk7HbdcvO4NPIYzGAhwa88';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				計算力学技術者２級 熱流体力学分野の解析技術者 認定試験対策講習会 第４章 数値計算法 Ppt Download
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="rHNoq4VPWO8YeM" data-lightbox="roadtrip" data-title="Http Www Ssc Pe Titech Ac Jp Lectures Signalandanalysis Signalsandsystemsanalysis10 060703 Pdf">
+						<img class="card-img" src="rHNoq4VPWO8YeM" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYpVh1CzihoUR869oqeJF6iUOLjEN_e35Jc3r2KbWfvx7St-89reed_yFqrDvjSu52TAo';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Http Www Ssc Pe Titech Ac Jp Lectures Signalandanalysis Signalsandsystemsanalysis10 060703 Pdf
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://sites.google.com/site/marutaro777/_/rsrc/1488706005333/home/sabun-bibun/sabun-bibun03.png" data-lightbox="roadtrip" data-title="差分方程式 微分方程式ノート Marutaro777">
+						<img class="card-img" src="https://sites.google.com/site/marutaro777/_/rsrc/1488706005333/home/sabun-bibun/sabun-bibun03.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZg8eBlg5L7oGXJbRKd3HmNqSeriduNsU7u5BvnUoE21mVW9Z-X6Ni0eDS6py1L9fLzY4';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				差分方程式 微分方程式ノート Marutaro777
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://reference.wolfram.com/language/tutorial/Files/NDSolveDAE.ja/9.gif" data-lightbox="roadtrip" data-title="微分代数方程式の数値解法 Wolfram言語ドキュメント">
+						<img class="card-img" src="https://reference.wolfram.com/language/tutorial/Files/NDSolveDAE.ja/9.gif" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQi4w_-GR7DZspigLzKqXcdmYVqyzJEXpy3jw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				微分代数方程式の数値解法 Wolfram言語ドキュメント
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="upFt9fpP7_3D1M" data-lightbox="roadtrip" data-title="Http Www Ocw Titech Ac Jp Index Php Module General Action Download File 201527151 9 0 48 Pdf Type Cal Jwc 201527151">
+						<img class="card-img" src="upFt9fpP7_3D1M" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBgnuUAC-8L04wEmKcdCCI_bu09FD860Jv6w';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Http Www Ocw Titech Ac Jp Index Php Module General Action Download File 201527151 9 0 48 Pdf Type Cal Jwc 201527151
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://reference.wolfram.com/language/FEMDocumentation/tutorial/Files/FiniteElementBestPractice.ja/I_9.png" data-lightbox="roadtrip" data-title="有限要素法の使用上のヒント Wolfram言語ドキュメント">
+						<img class="card-img" src="https://reference.wolfram.com/language/FEMDocumentation/tutorial/Files/FiniteElementBestPractice.ja/I_9.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUuLWI9KVfV5kxA8KNMZzXYrzpwl827DRdJw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				有限要素法の使用上のヒント Wolfram言語ドキュメント
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://cdn-ak.f.st-hatena.com/images/fotolife/o/ogyahogya/20151003/20151003163216.png" data-lightbox="roadtrip" data-title="線形システムと制御 初級mathマニアの寝言">
+						<img class="card-img" src="https://cdn-ak.f.st-hatena.com/images/fotolife/o/ogyahogya/20151003/20151003163216.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYokwhrUL3WnLlcbs4oQ1iSGzIZjdaLjkG0A';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				線形システムと制御 初級mathマニアの寝言
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="/search?q=%E5%B7%AE%E5%88%86%E6%96%B9%E7%A8%8B%E5%BC%8F+%E3%83%96%E3%83%AD%E3%83%83%E3%82%AF%E5%9B%B3&amp;tbm=isch" data-lightbox="roadtrip" data-title="Https Encrypted Tbn0 Gstatic Com Images Q Tbn And9gcssdnffjdmth5 Eijvjh1mjjb4l M0kc4erhj0sjln4m7bwneea Usqp Cau">
+						<img class="card-img" src="/search?q=%E5%B7%AE%E5%88%86%E6%96%B9%E7%A8%8B%E5%BC%8F+%E3%83%96%E3%83%AD%E3%83%83%E3%82%AF%E5%9B%B3&amp;tbm=isch" onerror="this.onerror=null;this.src='/search?q=%E5%B7%AE%E5%88%86%E6%96%B9%E7%A8%8B%E5%BC%8F+%E3%83%96%E3%83%AD%E3%83%83%E3%82%AF%E5%9B%B3&amp;tbm=isch';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Https Encrypted Tbn0 Gstatic Com Images Q Tbn And9gcssdnffjdmth5 Eijvjh1mjjb4l M0kc4erhj0sjln4m7bwneea Usqp Cau
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://ysserve.wakasato.jp/Lecture/ControlMecha4/img7.png" data-lightbox="roadtrip" data-title="状態方程式の導入">
+						<img class="card-img" src="http://ysserve.wakasato.jp/Lecture/ControlMecha4/img7.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBFMO0pRIjI-PyL7_VwtRbc3yoDIDRK7jSGw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				状態方程式の導入
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Finite_element_solution.svg/1200px-Finite_element_solution.svg.png" data-lightbox="roadtrip" data-title="離散化 Wikipedia">
+						<img class="card-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Finite_element_solution.svg/1200px-Finite_element_solution.svg.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSf1-L78fZdkPrJM0MeYhrlSA3BmOw0q4onSA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				離散化 Wikipedia
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://www.mech.tohoku-gakuin.ac.jp/rde/contents/course/controlII/fig/statefb.eps.gif" data-lightbox="roadtrip" data-title="状態フィードバックとオブザーバ">
+						<img class="card-img" src="http://www.mech.tohoku-gakuin.ac.jp/rde/contents/course/controlII/fig/statefb.eps.gif" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTA5I3eQl2K9zok_H94PPcNkBTdWGDtRKjr3Q';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				状態フィードバックとオブザーバ
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://tajimarobotics.com/wp-content/uploads/2018/02/splane3-1095x720.png" data-lightbox="roadtrip" data-title="連続的な線形システムの安定性を確認する方法 制御工学入門 Tajima Robotics">
+						<img class="card-img" src="https://tajimarobotics.com/wp-content/uploads/2018/02/splane3-1095x720.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3KHCqRwj8RVCmuECwmaRwhYtgIMfHkq_JCA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				連続的な線形システムの安定性を確認する方法 制御工学入門 Tajima Robotics
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://jp.mathworks.com/help/slcontrol/ug/linearization.png" data-lightbox="roadtrip" data-title="非線形モデルの線形化 Matlab Simulink Mathworks 日本">
+						<img class="card-img" src="https://jp.mathworks.com/help/slcontrol/ug/linearization.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdCiwA9UzI-wsOPOniR7sn3V1KGoatlhpDaA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				非線形モデルの線形化 Matlab Simulink Mathworks 日本
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="ySLt75NcU2Hl8M" data-lightbox="roadtrip" data-title="Http Www Kurims Kyoto U Ac Jp Kyodo Kokyuroku Contents Pdf 2167 12 Pdf">
+						<img class="card-img" src="ySLt75NcU2Hl8M" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT08wVqTXt144TNrfht36e2zJdyqLyuBERbeA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Http Www Kurims Kyoto U Ac Jp Kyodo Kokyuroku Contents Pdf 2167 12 Pdf
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://math-fun.net/wp-content/uploads/2018/07/SC000487.jpg" data-lightbox="roadtrip" data-title="方程式を解かずに 解の軌跡 安定性を調べてみよう 力学系理論入門 趣味の大学数学">
+						<img class="card-img" src="https://math-fun.net/wp-content/uploads/2018/07/SC000487.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAIGzVmSrvVe9poRyGFXlESNMa4g4Ehsofrw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				方程式を解かずに 解の軌跡 安定性を調べてみよう 力学系理論入門 趣味の大学数学
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://www.mech.tohoku-gakuin.ac.jp/rde/contents/course/controlII/fig/dg_adconvert.eps.gif" data-lightbox="roadtrip" data-title="ディジタル制御の基礎">
+						<img class="card-img" src="http://www.mech.tohoku-gakuin.ac.jp/rde/contents/course/controlII/fig/dg_adconvert.eps.gif" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGypocPWM6UaDgc97HIqNuq2iIvuTzYTacPw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				ディジタル制御の基礎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+		
+	</div>
+
+		 
+		
+		
+				</div>
+				<div class="col-sm-12 widget">
+					<div class="d-block p-4">
+	<center>
+		<!-- BOTTOM BANNER ADS -->
+<script async="async" data-cfasync="false" src="//jc32arlvqpv8.com/eb47a424ae325c90cca32780149785c3/invoke.js"></script>
+<div id="container-eb47a424ae325c90cca32780149785c3"></div>
+
+	</center>
+</div>				</div>
+			</div>
+			<div class="row footer">
+				<div class="col-md-12 text-center py-4">
+										<a href="/p/dmca.html">Dmca</a>
+										<a href="/p/contact.html">Contact</a>
+										<a href="/p/privacy-policy.html">Privacy Policy</a>
+										<a href="/p/copyright.html">Copyright</a>
+					
+				</div>
+			</div>
+		</main>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js" integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js" integrity="sha256-CtKylYan+AJuoH8jrMht1+1PMhMqrKnB8K5g012WN5I=" crossorigin="anonymous"></script>
+		
+		<!-- Footer CSS JS -->
+		
+		
+		
+			<script type='text/javascript' src='//jc32arlvqpv8.com/ef/d5/10/efd510237a3143727bed46803ec35b8d.js'></script>
+</body>
+</html>

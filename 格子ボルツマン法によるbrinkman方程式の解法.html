@@ -1,0 +1,682 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha256-L/W5Wfqfa0sdBNIKN9cG6QA5F2qx4qICmU2VgLruv9Y=" crossorigin="anonymous" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/css/lightbox.min.css" integrity="sha256-tBxlolRHP9uMsEFKVk+hk//ekOlXOixLKvye5W2WR5c=" crossorigin="anonymous" />
+		<link href="https://fonts.googleapis.com/css?family=Mr+Dafoe" rel="stylesheet" type="text/css">
+
+		<style type="text/css">
+			html,body{font-family:"Open Sans",Arial,sans-serif;font-size:14px;font-weight:400;background:#f3f3f3 url(https://cdn-ak.f.st-hatena.com/images/fotolife/m/mutsumunemitsutan/20190515/20190515222141.png
+) no-repeat center center fixed;background-size:cover;height:100%}#title{font-family:"Mr Dafoe",Times,serif;font-size:34px;background:rgba(255,255,255,.8);margin-bottom:34px}.header{padding-bottom:13px;margin-bottom:13px;border-bottom:1px solid #eee}a{color:#26ADE4;text-decoration:none}#title a{color:#333;margin-left:21px}#title a:hover{text-decoration:none;color:#26ADE4}.sidebar ul{margin:0;padding:0}.sidebar ul li{list-style:none}.footer{margin-top:21px;padding-top:13px;border-top:1px solid #eee}.footer a{margin:0 15px}.navi{margin:13px 0 13px 0;padding:13px}.navi a{margin:5px 2px;font-size:95%}.main{margin-top: 6rem;}.form-inline .form-control{min-width: 300px;}.v-cover{height: 380px; object-fit: cover;}.v-image{height: 200px; object-fit: cover;}.dwn-cover{max-height: 460px; object-fit: cover;}.main{margin-top: 6rem;}.form-inline .form-control{min-width: 300px;}			
+		</style>
+
+		<title>格子ボルツマン法によるbrinkman方程式の解法</title>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/", 
+  "@type": "Article", 
+  "author": {
+    "@type": "Person",
+    "name": "James"
+  },
+  "headline": "格子ボルツマン法によるbrinkman方程式の解法",
+  "datePublished": "2021-04-24",
+  "image": [0iLUC6A6IeKG8M,Q9x0xWFPyN2fiM,https://astamuse.com/ja/drawing/JP/2010/224/653/A/000002.png],
+  "publisher": {
+    "@type": "Organization",
+    "name": "Tukang Parkir Gerobak",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://via.placeholder.com/512.png?text=格子ボルツマン法によるbrinkman方程式の解法",
+      "width": 512,
+      "height": 512
+    }
+  }
+}
+</script>
+		<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-957NGNKQ70"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-957NGNKQ70');
+</script>
+
+<script type='text/javascript' src='//jc32arlvqpv8.com/1a/82/2e/1a822ef8a40a0fbab3c4ea12a5d2bb02.js'></script>
+</head>
+	<body>
+		<header class="bg-white fixed-top">			
+			<nav class="navbar navbar-light bg-white mb-0">
+				<div class="container justify-content-center justify-content-sm-between">	
+				  <a href="/" title="Blog" class="navbar-brand mb-1">Blog</a>
+				  				</div>			  
+			</nav>				
+		</header>
+		<main class="main container bg-white">
+			<div class="col-md-12 my-4" align="center">
+				<div class="d-block p-4">
+	<br/><center>
+<!-- TOP BANNER ADS -->
+</center><br/>
+</div>			</div>
+			<div class="row header">
+				<div class="col-sm-12 text-center p-2">
+						<h1>格子ボルツマン法によるbrinkman方程式の解法</h1>
+
+	
+	<div class="navi text-center">
+										<a class="badge badge-light" href="/%E9%9D%9E%E7%B7%9A%E5%BD%A2%E6%96%B9%E7%A8%8B%E5%BC%8F-2%E5%88%86%E6%B3%95.html">非線形方程式 2分法</a>
+											<a class="badge badge-light" href="/%E6%9B%B4%E7%94%9F%E6%96%B9%E7%A8%8B%E5%BC%8F%E3%81%A8%E3%81%AF.html">更生方程式とは</a>
+											<a class="badge badge-success" href="/%E6%A7%8B%E9%80%A0%E6%96%B9%E7%A8%8B%E5%BC%8F%E3%83%A2%E3%83%87%E3%83%AA%E3%83%B3%E3%82%B0-%E7%B5%90%E6%9E%9C-%E6%9B%B8%E3%81%8D%E6%96%B9.html">構造方程式モデリング 結果 書き方</a>
+											<a class="badge badge-dark" href="/%E8%8A%B1%E8%BC%AA%E3%81%8F%E3%82%93%E3%81%AE%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93.html">花輪くんのお父さん</a>
+											<a class="badge badge-secondary" href="/%E9%9D%9E-%E5%AE%9A%E5%B8%B8-%E7%86%B1-%E4%BC%9D%E5%B0%8E-%E6%96%B9%E7%A8%8B%E5%BC%8F-%E5%B7%AE%E5%88%86.html">非 定常 熱 伝導 方程式 差分</a>
+											<a class="badge badge-secondary" href="/%E7%A7%81-%E8%B2%B4%E6%96%B9%E3%81%AE%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E8%8B%A6%E6%89%8B%E3%81%8B%E3%82%82-%E6%81%AF%E5%AD%90%E3%81%AE%E5%88%9D%E3%82%81%E3%81%A6%E5%87%BA%E6%9D%A5%E3%81%9F%E5%BD%BC%E5%A5%B3%E3%81%AB%E5%AA%9A%E8%96%AC%E3%82%92%E9%A3%B2%E3%81%BE%E3%81%9B%E5%AF%9D%E5%8F%96%E3%81%A3%E3%81%9F%E5%AB%8C%E3%82%8F%E3%82%8C%E6%9C%80%E4%BD%8E%E8%A6%AA%E7%88%B6%E3%81%AE%E6%97%A5%E5%B8%B8-%E7%94%9F%E6%84%8F%E6%B0%97%E3%81%AA%E5%A5%B3%E5%AD%90-%E7%94%9F%E3%81%8C%E6%B6%8E%E3%82%92%E5%9E%82%E3%82%89%E3%81%97%E3%81%A6%E7%99%BA%E6%83%85-%E3%82%A4%E3%82%AD%E6%BD%AE%E5%90%B9%E3%81%8D.html">私 貴方のお父さん苦手かも 息子の初めて出来た彼女に媚薬を飲ませ寝取った嫌われ最低親父の日常 生意気な女子 生が涎を垂らして発情 イキ潮吹き</a>
+											<a class="badge badge-dark" href="/%E6%A7%8B%E9%80%A0%E6%96%B9%E7%A8%8B%E5%BC%8F%E3%83%A2%E3%83%87%E3%83%AA%E3%83%B3%E3%82%B0-python-stan.html">構造方程式モデリング python stan</a>
+											<a class="badge badge-secondary" href="/%E8%83%BD%E6%96%AF%E7%89%B9%E6%96%B9%E7%A8%8B%E5%BC%8F-randles.html">能斯特方程式 randles</a>
+											<a class="badge badge-success" href="/%E9%87%8F%E5%AD%90-%E7%BE%A4-%E3%81%A8-%E3%83%A4%E3%83%B3-%E3%83%90%E3%82%AF%E3%82%B9%E3%82%BF%E3%83%BC-%E6%96%B9%E7%A8%8B%E5%BC%8F.html">量子 群 と ヤン バクスター 方程式</a>
+											<a class="badge badge-dark" href="/%E9%80%A3%E7%AB%8B1%E6%99%82%E6%96%B9%E7%A8%8B%E5%BC%8F%E3%81%AE%E8%A7%A3.html">連立1時方程式の解</a>
+											<a class="badge badge-success" href="/%E7%A9%BA%E9%96%93-%E5%86%85-%E3%81%AE-%E7%9B%B4%E7%B7%9A-%E3%81%AE-%E6%96%B9%E7%A8%8B%E5%BC%8F.html">空間 内 の 直線 の 方程式</a>
+											<a class="badge badge-light" href="/%E6%9C%9D%E6%97%A9%E3%81%8F%E8%B5%B7%E3%81%8D%E3%82%8B%E3%81%AE%E3%81%AF%E8%8B%A6%E6%89%8B%E3%81%A0%E3%81%A3%E3%81%9F%E3%81%91%E3%81%A9-%E3%81%84%E3%81%A4%E3%81%8B%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%AE%E3%81%8A%E5%BA%97%E3%82%92%E7%B6%99%E3%81%94%E3%81%86%E3%81%A3%E3%81%A6-%E5%8F%B0%E8%A9%9E.html">朝早く起きるのは苦手だったけど いつかお父さんのお店を継ごうって 台詞</a>
+											<a class="badge badge-success" href="/%E6%A5%95%E5%86%86%E3%81%AE%E6%96%B9%E7%A8%8B%E5%BC%8F-%E5%85%AC%E5%BC%8F.html">楕円の方程式 公式</a>
+											<a class="badge badge-dark" href="/%E6%9D%B1%E5%B7%A5-%E5%A4%A7-%E5%9B%B3%E5%BD%A2-%E3%81%A8-%E6%96%B9%E7%A8%8B%E5%BC%8F.html">東工 大 図形 と 方程式</a>
+											<a class="badge badge-secondary" href="/%E6%A5%95%E5%86%86x-2-4-y-2-2-1%E4%B8%8A%E3%81%AE%E7%82%B9-2-1-%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8B%E6%8E%A5%E7%B7%9A%E3%81%AE%E6%96%B9%E7%A8%8B%E5%BC%8F.html">楕円x 2 4 y 2 2 1上の点 2 1 における接線の方程式</a>
+						</div>
+<center>
+	<!-- MIDDLE BANNER ADS -->
+<script type="text/javascript">
+	atOptions = {
+		'key' : '2b77887421e2587a1a1b1d7c8a31a9e0',
+		'format' : 'iframe',
+		'height' : 250,
+		'width' : 300,
+		'params' : {}
+	};
+	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://jc32arlvqpv8.com/2b77887421e2587a1a1b1d7c8a31a9e0/invoke.js"></scr' + 'ipt>');
+</script>
+		
+	</center>
+					
+				</div>
+			</div>
+			<div class="row content mb-4">
+				<div class="col-md-12">					
+					
+	
+	<div class="card-columns">
+						
+	  <div class='card'>
+	  	<a href="3csZdbFKiaT9UM" data-lightbox="roadtrip" data-title="Http Www Ocw Titech Ac Jp Index Php Module General Action Download File 20121228823015 10 0 7 Pdf Type Cal Jwc 20121228823015">
+						<img class="card-img" src="3csZdbFKiaT9UM" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWemE0jqnkXozOEHMU02S_VGgmLoK-6CYaZUOIXcdqZGq2wpfN_sFRRJvbhnOdsf7YO3o';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Http Www Ocw Titech Ac Jp Index Php Module General Action Download File 20121228823015 10 0 7 Pdf Type Cal Jwc 20121228823015
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="Q9x0xWFPyN2fiM" data-lightbox="roadtrip" data-title="2">
+						<img class="card-img" src="Q9x0xWFPyN2fiM" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYgb0Bdvlv_uzJkPQknK8xOjXzQpOccIRmzaTZ7G16HcP0Ikhw_ZbX_gTAM8BzZ0jv5t0';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				2
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://cdn-ak.f.st-hatena.com/images/fotolife/m/mutsumunemitsutan/20190510/20190510000841.png" data-lightbox="roadtrip" data-title="格子ボルツマン法 格子ボルツマン法で1次元拡散方程式を解きます D1q2 C コード付き 数学とか語学とか楽しいよね">
+						<img class="card-img" src="https://cdn-ak.f.st-hatena.com/images/fotolife/m/mutsumunemitsutan/20190510/20190510000841.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5TKoIQvd4EIuad_imfJueTXUOv0w5cFdEiCAsOnmqKXnQhoWlbM8JQh_BeYK8jqT9r_E';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				格子ボルツマン法 格子ボルツマン法で1次元拡散方程式を解きます D1q2 C コード付き 数学とか語学とか楽しいよね
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://images-na.ssl-images-amazon.com/images/I/71muQkeAF9L.jpg" data-lightbox="roadtrip" data-title="格子ボルツマン法 差分格子ボルツマン法 Dvd付き 蔦原 道久 本 通販 Amazon">
+						<img class="card-img" src="https://images-na.ssl-images-amazon.com/images/I/71muQkeAF9L.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSbRHf2FqvsBoONzt9xsE8bEfNM6JDdwoJ4QvtEYED-P2YvXNZLCAIMqGy8msZggiY2Zo';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				格子ボルツマン法 差分格子ボルツマン法 Dvd付き 蔦原 道久 本 通販 Amazon
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://cdn-ak.f.st-hatena.com/images/fotolife/m/mutsumunemitsutan/20190511/20190511124841.png" data-lightbox="roadtrip" data-title="格子ボルツマン法 格子ボルツマン法で1次元バーガース方程式を解きます D1q2 C コード付き 数学とか語学とか楽しいよね">
+						<img class="card-img" src="https://cdn-ak.f.st-hatena.com/images/fotolife/m/mutsumunemitsutan/20190511/20190511124841.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzT71CVGfHHDB4i0wbOqSnZ9ebwdrVCBv-0jivWqfyp0usmssh2Ik-xf5lNvxEMtxom_w';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				格子ボルツマン法 格子ボルツマン法で1次元バーガース方程式を解きます D1q2 C コード付き 数学とか語学とか楽しいよね
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.coronasha.co.jp/imgs/cover/9784339046588.jpg" data-lightbox="roadtrip" data-title="格子ボルツマン法 差分格子ボルツマン法 Dvd付き コロナ社">
+						<img class="card-img" src="https://www.coronasha.co.jp/imgs/cover/9784339046588.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjJwCe5j_xKoslex9UrgbSa7Aj-YxM_krJNrI-etSFuOhjLfxf7L4lwhVCkjecyALRJq8';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				格子ボルツマン法 差分格子ボルツマン法 Dvd付き コロナ社
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+				<div class='card'>	
+			<div class="d-block p-4">
+	</div>		  	
+		  	<h3 class="h6 p-2"><b></b></h3>
+					</div>
+		
+						
+	  <div class='card'>
+	  	<a href="AHqmKsXzh5TlNM" data-lightbox="roadtrip" data-title="Https Www Nagare Or Jp Download Noauth Html Dd Assets Files Download Noauth Nagare 35 4 35 4 Tokushu2 Pdf">
+						<img class="card-img" src="AHqmKsXzh5TlNM" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQG3Dvj64-NWmT8bYSjuS--uzgajlW8a8oraFuYibgZfXA0o8hzqdNM8j2lX56xRPrPmTg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Https Www Nagare Or Jp Download Noauth Html Dd Assets Files Download Noauth Nagare 35 4 35 4 Tokushu2 Pdf
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://images-na.ssl-images-amazon.com/images/I/71doEmJ4C8L.jpg" data-lightbox="roadtrip" data-title="格子気体法 格子ボルツマン法 新しい数値流体力学の手法 道久 蔦原 武 片岡 尚樹 高田 本 通販 Amazon">
+						<img class="card-img" src="https://images-na.ssl-images-amazon.com/images/I/71doEmJ4C8L.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKQyMAZYuIqfryaAe41iL1-Wi14Pgg7c2KglocWz87INWBlaRWsPvDXhv6ufHSkTFzAFU';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				格子気体法 格子ボルツマン法 新しい数値流体力学の手法 道久 蔦原 武 片岡 尚樹 高田 本 通販 Amazon
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://cdn-ak.f.st-hatena.com/images/fotolife/m/mutsumunemitsutan/20190515/20190515222141.png" data-lightbox="roadtrip" data-title="格子ボルツマン法 格子ボルツマン法で2次元拡散方程式を解きます D2q4 C コード付き 数学とか語学とか楽しいよね">
+						<img class="card-img" src="https://cdn-ak.f.st-hatena.com/images/fotolife/m/mutsumunemitsutan/20190515/20190515222141.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSz0CZWm0i8UmsZzw-42Bt-d8YZP8UVpqzBMZF_hqZ8jmUz5h-ekSdMGVoZiXj2hrwXFXU';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				格子ボルツマン法 格子ボルツマン法で2次元拡散方程式を解きます D2q4 C コード付き 数学とか語学とか楽しいよね
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://cdn-ak.f.st-hatena.com/images/fotolife/m/mutsumunemitsutan/20190511/20190511013958.png" data-lightbox="roadtrip" data-title="格子ボルツマン法 格子ボルツマン法で1次元移流拡散方程式を解きます D1q2 C コード付き 数学とか語学とか楽しいよね">
+						<img class="card-img" src="https://cdn-ak.f.st-hatena.com/images/fotolife/m/mutsumunemitsutan/20190511/20190511013958.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiaOFw19GZCEjWgIjv6agCA2csKHnWQSv1MKYRkE9OUWpGVQH_KKhqi2uF85G0jGvvzcc';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				格子ボルツマン法 格子ボルツマン法で1次元移流拡散方程式を解きます D1q2 C コード付き 数学とか語学とか楽しいよね
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="kjoswOFhA1VdzM" data-lightbox="roadtrip" data-title="Http Www Me Osakafu U Ac Jp Htlab Html Pdf 83 Pdf">
+						<img class="card-img" src="kjoswOFhA1VdzM" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTR8wHluzEUDdAC3I6hguohhZqGBps4Oe-CwreR6u_-IE_vBrCzw2g6jyd6Gd3dFV0B-5w';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Http Www Me Osakafu U Ac Jp Htlab Html Pdf 83 Pdf
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://astamuse.com/ja/drawing/JP/2010/224/653/A/000002.png" data-lightbox="roadtrip" data-title="2010 224653号 流体解析方法 流体解析装置 及び流体解析プログラム Astamuse">
+						<img class="card-img" src="https://astamuse.com/ja/drawing/JP/2010/224/653/A/000002.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDoE5QOpcn4tYKKzC-SKica2jn5KCOWyDdDE2mBoq196VbUdSCRn46Zc6DbnN7ozFvL5s';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				2010 224653号 流体解析方法 流体解析装置 及び流体解析プログラム Astamuse
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="0iLUC6A6IeKG8M" data-lightbox="roadtrip" data-title="Https Core Ac Uk Download Pdf 154342527 Pdf">
+						<img class="card-img" src="0iLUC6A6IeKG8M" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwRKIWEHOW8FXpKHSpVTql3MAqKnbyr5GAWMZeJoEplq8kc_K97_4Ej6m_4ZvOQ84xDJw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Https Core Ac Uk Download Pdf 154342527 Pdf
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="bR-AhJa5VZ0vvM" data-lightbox="roadtrip" data-title="Http Www Tsunami Civil Tohoku Ac Jp Hokusai3 J Shibu 19 Araki Pdf">
+						<img class="card-img" src="bR-AhJa5VZ0vvM" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnXl5Pe8wY9YQVrXSyiyoFTHwMYv_EL1M4Xcly1UJOiRHX9yiE6_yutUxI81R-Zi5E4E4';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Http Www Tsunami Civil Tohoku Ac Jp Hokusai3 J Shibu 19 Araki Pdf
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.researchgate.net/profile/Kazuo-Yonekura/publication/285629280/figure/fig5/AS:668237733826561@1536331699077/FHP-grids-and-velocity-vectors-on-the-grid_Q320.jpg" data-lightbox="roadtrip" data-title="Pdf Fast Local Convergence For Flow Topology Optimization Using The Lattice Boltzmann Method With A Modified Newton Method">
+						<img class="card-img" src="https://www.researchgate.net/profile/Kazuo-Yonekura/publication/285629280/figure/fig5/AS:668237733826561@1536331699077/FHP-grids-and-velocity-vectors-on-the-grid_Q320.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxIWw-fj39l2KX37qP7u35uHyXW3XNxtl7Xidfp6coPQQPfnfp6ZjrrWl4wfoWPBC0gM0';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Pdf Fast Local Convergence For Flow Topology Optimization Using The Lattice Boltzmann Method With A Modified Newton Method
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.coronasha.co.jp/imgs/cover/9784339043433.jpg" data-lightbox="roadtrip" data-title="格子気体法 格子ボルツマン法 新しい数値流体力学の手法 Fd付き コロナ社">
+						<img class="card-img" src="https://www.coronasha.co.jp/imgs/cover/9784339043433.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiu13Cop-RvER-wwcqS6k2X52dG-zs0g8idYO9p55rSkVIzAEMZ8aBuxKRMcGtmVrGq1Y';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				格子気体法 格子ボルツマン法 新しい数値流体力学の手法 Fd付き コロナ社
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.researchgate.net/profile/Kazuo-Yonekura/publication/285629280/figure/fig1/AS:440937974374400@1482139213037/Diffuser-problem-the-design-domain-and-boundary-conditions_Q320.jpg" data-lightbox="roadtrip" data-title="Pdf Fast Local Convergence For Flow Topology Optimization Using The Lattice Boltzmann Method With A Modified Newton Method">
+						<img class="card-img" src="https://www.researchgate.net/profile/Kazuo-Yonekura/publication/285629280/figure/fig1/AS:440937974374400@1482139213037/Diffuser-problem-the-design-domain-and-boundary-conditions_Q320.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCFtrJc5ziCdEgZvHTwyvLikLB69ZP3A1KhJfn5BsLqqML1BU3ko8YiyhXWGn2u3HDjag';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Pdf Fast Local Convergence For Flow Topology Optimization Using The Lattice Boltzmann Method With A Modified Newton Method
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="3csZdbFKiaT9UM" data-lightbox="roadtrip" data-title="Http Www Ocw Titech Ac Jp Index Php Module General Action Download File 20121228823015 10 0 7 Pdf Type Cal Jwc 20121228823015">
+						<img class="card-img" src="3csZdbFKiaT9UM" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCgoEiBcIrvB4iOEgp8NQ0vJVCbmmM_6EWOj1yE0UKnFvKk9D-kIpZCvkevBYN4ZNLMBs';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Http Www Ocw Titech Ac Jp Index Php Module General Action Download File 20121228823015 10 0 7 Pdf Type Cal Jwc 20121228823015
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.researchgate.net/profile/Kazuo-Yonekura/publication/285629280/figure/fig4/AS:440937974374403@1482139213121/Pipe-junction-problem-the-design-domain-and-boundary-conditions_Q320.jpg" data-lightbox="roadtrip" data-title="Pdf Fast Local Convergence For Flow Topology Optimization Using The Lattice Boltzmann Method With A Modified Newton Method">
+						<img class="card-img" src="https://www.researchgate.net/profile/Kazuo-Yonekura/publication/285629280/figure/fig4/AS:440937974374403@1482139213121/Pipe-junction-problem-the-design-domain-and-boundary-conditions_Q320.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXhRW6C5gg3zW0sY24ajyddBWABK2ZlWkp-cyApGQey0tiABMc7YudgET61zUIhe37TIY';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Pdf Fast Local Convergence For Flow Topology Optimization Using The Lattice Boltzmann Method With A Modified Newton Method
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.researchgate.net/profile/Kazuo-Yonekura/publication/285629280/figure/fig3/AS:440937974374402@1482139213096/Convergence-history-of-the-diffuser-problem-with-constraint-Re-300-V-06O_Q320.jpg" data-lightbox="roadtrip" data-title="Pdf Fast Local Convergence For Flow Topology Optimization Using The Lattice Boltzmann Method With A Modified Newton Method">
+						<img class="card-img" src="https://www.researchgate.net/profile/Kazuo-Yonekura/publication/285629280/figure/fig3/AS:440937974374402@1482139213096/Convergence-history-of-the-diffuser-problem-with-constraint-Re-300-V-06O_Q320.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6NYkCAPWekqWCAQKMAaCDaxzNHJ79cdJexgUg4v3e5RhIsE0nBNpiBGd4Jhz63C47oSs';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Pdf Fast Local Convergence For Flow Topology Optimization Using The Lattice Boltzmann Method With A Modified Newton Method
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.researchgate.net/profile/Kazuo-Yonekura/publication/285629280/figure/fig2/AS:440937974374401@1482139213062/Convergence-history-of-the-diffuser-problem-Re-200_Q320.jpg" data-lightbox="roadtrip" data-title="Pdf Fast Local Convergence For Flow Topology Optimization Using The Lattice Boltzmann Method With A Modified Newton Method">
+						<img class="card-img" src="https://www.researchgate.net/profile/Kazuo-Yonekura/publication/285629280/figure/fig2/AS:440937974374401@1482139213062/Convergence-history-of-the-diffuser-problem-Re-200_Q320.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSw-RfftGaEcuAa_BsSWv-3cb3oLxEPCNDGWw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Pdf Fast Local Convergence For Flow Topology Optimization Using The Lattice Boltzmann Method With A Modified Newton Method
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://slidesplayer.net/17729458/105/images/slide_1.jpg" data-lightbox="roadtrip" data-title="Gpgpu を用いた格子ボルツマン法による大規模流体音数値解析 Ppt Download">
+						<img class="card-img" src="https://slidesplayer.net/17729458/105/images/slide_1.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMjXf3AE9JoKDpy908mYqFuPzJfjCXeyvLeA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Gpgpu を用いた格子ボルツマン法による大規模流体音数値解析 Ppt Download
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://astamuse.com/ja/drawing/JP/2010/224/653/A/000020.png" data-lightbox="roadtrip" data-title="2010 224653号 流体解析方法 流体解析装置 及び流体解析プログラム Astamuse">
+						<img class="card-img" src="https://astamuse.com/ja/drawing/JP/2010/224/653/A/000020.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDAEgZKyVT4NkFwJJofCxRoHIfL-2J-RU9fA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				2010 224653号 流体解析方法 流体解析装置 及び流体解析プログラム Astamuse
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://i1.rgstatic.net/publication/285629280_Fast_local_convergence_for_flow_topology_optimization_using_the_lattice_Boltzmann_method_with_a_modified_Newton_method/links/5857a64808aeff086bfd1160/largepreview.png" data-lightbox="roadtrip" data-title="Pdf Fast Local Convergence For Flow Topology Optimization Using The Lattice Boltzmann Method With A Modified Newton Method">
+						<img class="card-img" src="https://i1.rgstatic.net/publication/285629280_Fast_local_convergence_for_flow_topology_optimization_using_the_lattice_Boltzmann_method_with_a_modified_Newton_method/links/5857a64808aeff086bfd1160/largepreview.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMxceAdRjWZSg8XrlLd5ozL6hF49RNryV6mA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Pdf Fast Local Convergence For Flow Topology Optimization Using The Lattice Boltzmann Method With A Modified Newton Method
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://cdn.image.st-hatena.com/image/square/34d4357db3d4808fe021cfa9ba7b4e727f2e77a2/backend=imagemagick;height=180;version=1;width=180/https%3A%2F%2Fimages-fe.ssl-images-amazon.com%2Fimages%2FI%2F41LZeq4%252BQQL._SL160_.jpg" data-lightbox="roadtrip" data-title="格子ボルツマン法 格子ボルツマン法で1次元拡散方程式を解きます D1q2 C コード付き 数学とか語学とか楽しいよね">
+						<img class="card-img" src="https://cdn.image.st-hatena.com/image/square/34d4357db3d4808fe021cfa9ba7b4e727f2e77a2/backend=imagemagick;height=180;version=1;width=180/https%3A%2F%2Fimages-fe.ssl-images-amazon.com%2Fimages%2FI%2F41LZeq4%252BQQL._SL160_.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPdxxqT3K0to6Dv0aQIEup6MxhiQX-XWFCgw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				格子ボルツマン法 格子ボルツマン法で1次元拡散方程式を解きます D1q2 C コード付き 数学とか語学とか楽しいよね
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="Db-5tkSlWgKrrM" data-lightbox="roadtrip" data-title="Https Tokyo Metro U Repo Nii Ac Jp Index Php Action Pages View Main Active Action Repository Action Common Download Item Id 7114 Item No 1 Attribute Id 18 File No 1 Page Id 30 Block Id 164">
+						<img class="card-img" src="Db-5tkSlWgKrrM" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8u0gw8ufgajvRQxg6thTHwuO3mzcuPMRacg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Https Tokyo Metro U Repo Nii Ac Jp Index Php Action Pages View Main Active Action Repository Action Common Download Item Id 7114 Item No 1 Attribute Id 18 File No 1 Page Id 30 Block Id 164
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://astamuse.com/ja/drawing/JP/2010/224/653/A/000023.png" data-lightbox="roadtrip" data-title="2010 224653号 流体解析方法 流体解析装置 及び流体解析プログラム Astamuse">
+						<img class="card-img" src="https://astamuse.com/ja/drawing/JP/2010/224/653/A/000023.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeOrQF2TR0I_hgWrUTNlv6ve4oa-kCLHHhmA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				2010 224653号 流体解析方法 流体解析装置 及び流体解析プログラム Astamuse
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://astamuse.com/ja/drawing/JP/2010/224/653/A/000024.png" data-lightbox="roadtrip" data-title="2010 224653号 流体解析方法 流体解析装置 及び流体解析プログラム Astamuse">
+						<img class="card-img" src="https://astamuse.com/ja/drawing/JP/2010/224/653/A/000024.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCZQ0ni5z6mG1hokLtcEtpuQUCJiei2uk84g';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				2010 224653号 流体解析方法 流体解析装置 及び流体解析プログラム Astamuse
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="e2P_zioaJc2KeM" data-lightbox="roadtrip" data-title="Https Toyama Repo Nii Ac Jp Action Repository Uri Item Id 15598 File Id 18 File No 2">
+						<img class="card-img" src="e2P_zioaJc2KeM" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJzEaaLyaVYM4ZgIxn5cx9Jn88LpUrGWp4Zw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Https Toyama Repo Nii Ac Jp Action Repository Uri Item Id 15598 File Id 18 File No 2
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="0iLUC6A6IeKG8M" data-lightbox="roadtrip" data-title="Https Core Ac Uk Download Pdf 154342527 Pdf">
+						<img class="card-img" src="0iLUC6A6IeKG8M" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCWhHVYP8MMPfp_1DbCnyo8efSfyiJYCJKeg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Https Core Ac Uk Download Pdf 154342527 Pdf
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="QiYWtvqY6mdFbM" data-lightbox="roadtrip" data-title="Http Kazy Wikidot Com Local Files Publications Thesis Final Pdf">
+						<img class="card-img" src="QiYWtvqY6mdFbM" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtxxxJdFLL625tuHCi0CAtN-5bmM3Gizb4Ww';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Http Kazy Wikidot Com Local Files Publications Thesis Final Pdf
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://astamuse.com/ja/drawing/JP/2010/224/653/A/000021.png" data-lightbox="roadtrip" data-title="2010 224653号 流体解析方法 流体解析装置 及び流体解析プログラム Astamuse">
+						<img class="card-img" src="https://astamuse.com/ja/drawing/JP/2010/224/653/A/000021.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDHjqczJYX9vHyM2xVkUXWmJ06ZDfb72zlPA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				2010 224653号 流体解析方法 流体解析装置 及び流体解析プログラム Astamuse
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="0iLUC6A6IeKG8M" data-lightbox="roadtrip" data-title="Https Core Ac Uk Download Pdf 154342527 Pdf">
+						<img class="card-img" src="0iLUC6A6IeKG8M" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSySGbW7eW_VaFy5s4rKuGlCMR3SYSSwQGDw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Https Core Ac Uk Download Pdf 154342527 Pdf
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+		
+	</div>
+
+		 
+		
+		
+				</div>
+				<div class="col-sm-12 widget">
+					<div class="d-block p-4">
+	<center>
+		<!-- BOTTOM BANNER ADS -->
+<script async="async" data-cfasync="false" src="//jc32arlvqpv8.com/eb47a424ae325c90cca32780149785c3/invoke.js"></script>
+<div id="container-eb47a424ae325c90cca32780149785c3"></div>
+
+	</center>
+</div>				</div>
+			</div>
+			<div class="row footer">
+				<div class="col-md-12 text-center py-4">
+										<a href="/p/dmca.html">Dmca</a>
+										<a href="/p/contact.html">Contact</a>
+										<a href="/p/privacy-policy.html">Privacy Policy</a>
+										<a href="/p/copyright.html">Copyright</a>
+					
+				</div>
+			</div>
+		</main>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js" integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js" integrity="sha256-CtKylYan+AJuoH8jrMht1+1PMhMqrKnB8K5g012WN5I=" crossorigin="anonymous"></script>
+		
+		<!-- Footer CSS JS -->
+		
+		
+		
+			<script type='text/javascript' src='//jc32arlvqpv8.com/ef/d5/10/efd510237a3143727bed46803ec35b8d.js'></script>
+</body>
+</html>

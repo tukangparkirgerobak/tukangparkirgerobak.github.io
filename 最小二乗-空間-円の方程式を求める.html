@@ -1,0 +1,682 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha256-L/W5Wfqfa0sdBNIKN9cG6QA5F2qx4qICmU2VgLruv9Y=" crossorigin="anonymous" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/css/lightbox.min.css" integrity="sha256-tBxlolRHP9uMsEFKVk+hk//ekOlXOixLKvye5W2WR5c=" crossorigin="anonymous" />
+		<link href="https://fonts.googleapis.com/css?family=Mr+Dafoe" rel="stylesheet" type="text/css">
+
+		<style type="text/css">
+			html,body{font-family:"Open Sans",Arial,sans-serif;font-size:14px;font-weight:400;background:#f3f3f3 url(https://blog-imgs-30-origin.fc2.com/i/m/a/imagingsolution/blog117_1.png
+) no-repeat center center fixed;background-size:cover;height:100%}#title{font-family:"Mr Dafoe",Times,serif;font-size:34px;background:rgba(255,255,255,.8);margin-bottom:34px}.header{padding-bottom:13px;margin-bottom:13px;border-bottom:1px solid #eee}a{color:#26ADE4;text-decoration:none}#title a{color:#333;margin-left:21px}#title a:hover{text-decoration:none;color:#26ADE4}.sidebar ul{margin:0;padding:0}.sidebar ul li{list-style:none}.footer{margin-top:21px;padding-top:13px;border-top:1px solid #eee}.footer a{margin:0 15px}.navi{margin:13px 0 13px 0;padding:13px}.navi a{margin:5px 2px;font-size:95%}.main{margin-top: 6rem;}.form-inline .form-control{min-width: 300px;}.v-cover{height: 380px; object-fit: cover;}.v-image{height: 200px; object-fit: cover;}.dwn-cover{max-height: 460px; object-fit: cover;}.main{margin-top: 6rem;}.form-inline .form-control{min-width: 300px;}			
+		</style>
+
+		<title>最小二乗 空間 円の方程式を求める</title>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/", 
+  "@type": "Article", 
+  "author": {
+    "@type": "Person",
+    "name": "James"
+  },
+  "headline": "最小二乗 空間 円の方程式を求める",
+  "datePublished": "2021-04-24",
+  "image": [https://i.ytimg.com/vi/Vty22FlChPE/maxresdefault.jpg,https://imagingsolution.net/wordpress/wp-content/uploads/2011/06/lsmcircle.png,https://blog-imgs-30-origin.fc2.com/i/m/a/imagingsolution/blog117_3.png],
+  "publisher": {
+    "@type": "Organization",
+    "name": "Tukang Parkir Gerobak",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://via.placeholder.com/512.png?text=最小二乗 空間 円の方程式を求める",
+      "width": 512,
+      "height": 512
+    }
+  }
+}
+</script>
+		<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-957NGNKQ70"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-957NGNKQ70');
+</script>
+
+<script type='text/javascript' src='//jc32arlvqpv8.com/1a/82/2e/1a822ef8a40a0fbab3c4ea12a5d2bb02.js'></script>
+</head>
+	<body>
+		<header class="bg-white fixed-top">			
+			<nav class="navbar navbar-light bg-white mb-0">
+				<div class="container justify-content-center justify-content-sm-between">	
+				  <a href="/" title="Blog" class="navbar-brand mb-1">Blog</a>
+				  				</div>			  
+			</nav>				
+		</header>
+		<main class="main container bg-white">
+			<div class="col-md-12 my-4" align="center">
+				<div class="d-block p-4">
+	<br/><center>
+<!-- TOP BANNER ADS -->
+</center><br/>
+</div>			</div>
+			<div class="row header">
+				<div class="col-sm-12 text-center p-2">
+						<h1>最小二乗 空間 円の方程式を求める</h1>
+
+	
+	<div class="navi text-center">
+										<a class="badge badge-dark" href="/%E6%A5%95%E5%86%86%E3%81%AE%E6%96%B9%E7%A8%8B%E5%BC%8F-%E4%B8%89%E6%AC%A1%E5%85%83.html">楕円の方程式 三次元</a>
+											<a class="badge badge-info" href="/%E7%86%B1%E4%BC%9D%E5%B0%8E%E6%96%B9%E7%A8%8B%E5%BC%8F-1%E6%AC%A1%E5%85%83-%E4%B8%80%E8%88%AC%E8%A7%A3-%E3%83%95%E3%83%BC%E3%83%AA%E3%82%A8%E3%81%AE%E6%B3%95%E5%89%87.html">熱伝導方程式 1次元 一般解 フーリエの法則</a>
+											<a class="badge badge-warning" href="/%E7%86%B1%E4%BC%9D%E5%B0%8E%E6%96%B9%E7%A8%8B%E5%BC%8F-%E6%99%82%E9%96%93%E3%82%B9%E3%82%B1%E3%83%BC%E3%83%AB.html">熱伝導方程式 時間スケール</a>
+											<a class="badge badge-dark" href="/%E9%AB%98%E6%A0%A1%E6%95%B0%E5%AD%A6%E3%82%A2%E3%83%AB%E3%83%95%E3%82%A1-%E5%9B%B3%E5%BD%A2%E3%81%A8%E6%96%B9%E7%A8%8B%E5%BC%8F.html">高校数学アルファ 図形と方程式</a>
+											<a class="badge badge-danger" href="/%E7%88%B6-%E3%82%B2%E3%82%A4-%E4%BD%93%E9%A8%93%E8%AB%87-%E5%8F%8B%E9%81%94%E3%81%AE%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93.html">父 ゲイ 体験談 友達のお父さん</a>
+											<a class="badge badge-success" href="/%E6%9D%B1%E4%BA%AC%E6%96%B0%E8%81%9E-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%AE-%E8%87%AA%E5%88%86%E5%8F%B2-%E8%B4%88%E3%82%8D%E3%81%86.html">東京新聞 お父さんの 自分史 贈ろう</a>
+											<a class="badge badge-danger" href="/%E9%89%84-%E7%99%BA%E7%86%B1%E5%8F%8D%E5%BF%9C-%E7%86%B1%E5%8C%96%E5%AD%A6%E6%96%B9%E7%A8%8B%E5%BC%8F.html">鉄 発熱反応 熱化学方程式</a>
+											<a class="badge badge-light" href="/%E9%87%8F%E5%AD%90%E3%83%A2%E3%83%BC%E3%82%BF%E3%83%BC%E3%81%AE%E6%96%B9%E7%A8%8B%E5%BC%8F.html">量子モーターの方程式</a>
+											<a class="badge badge-warning" href="/%E8%AA%95%E7%94%9F%E6%97%A5%E3%83%97%E3%83%AC%E3%82%BC%E3%83%B3%E3%83%88-%E6%89%8B%E4%BD%9C%E3%82%8A-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%B8.html">誕生日プレゼント 手作り お父さんへ</a>
+											<a class="badge badge-success" href="/%E8%B3%AA%E9%87%8F%E3%81%AE%E8%A8%88%E7%AE%97-%E6%96%B9%E7%A8%8B%E5%BC%8F.html">質量の計算 方程式</a>
+											<a class="badge badge-danger" href="/%E7%88%B6%E3%81%AE%E6%97%A5%E3%81%AA%E3%81%AE%E3%81%A7%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%AB%E8%89%B2%E3%80%85%E8%81%9E%E3%81%84%E3%81%A1%E3%82%83%E3%81%84%E3%81%BE%E3%81%97%E3%81%9F-%E5%BE%8C%E5%8D%8A%E6%88%A6-bilibili.html">父の日なのでお父さんに色々聞いちゃいました 後半戦 bilibili</a>
+											<a class="badge badge-warning" href="/%E7%BE%A9%E7%90%86-%E3%81%AE-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93-%E3%81%8A%E6%AF%8D%E3%81%95%E3%82%93-%E3%83%97%E3%83%AC%E3%82%BC%E3%83%B3%E3%83%88.html">義理 の お父さん お母さん プレゼント</a>
+											<a class="badge badge-light" href="/%E7%9B%B4%E7%B7%9A%E3%81%AE%E6%96%B9%E7%A8%8B%E5%BC%8F-%E8%B7%9D%E9%9B%A2%E3%81%8B%E3%82%89%E5%BA%A7%E6%A8%99.html">直線の方程式 距離から座標</a>
+											<a class="badge badge-secondary" href="/%E6%A0%BC%E5%A5%BD%E3%81%84%E3%81%84%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%AB%E4%BF%BA%E3%81%AF%E3%81%AA%E3%82%8B.html">格好いいお父さんに俺はなる</a>
+											<a class="badge badge-info" href="/%E9%BB%92%E3%81%84%E7%A0%82%E6%BC%A0%E7%A7%81%E3%82%82%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%AE%E3%82%88%E3%81%86%E3%81%AB%E3%81%AA%E3%82%8A%E3%81%9F%E3%81%84.html">黒い砂漠私もお父さんのようになりたい</a>
+						</div>
+<center>
+	<!-- MIDDLE BANNER ADS -->
+<script type="text/javascript">
+	atOptions = {
+		'key' : '2b77887421e2587a1a1b1d7c8a31a9e0',
+		'format' : 'iframe',
+		'height' : 250,
+		'width' : 300,
+		'params' : {}
+	};
+	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://jc32arlvqpv8.com/2b77887421e2587a1a1b1d7c8a31a9e0/invoke.js"></scr' + 'ipt>');
+</script>
+		
+	</center>
+					
+				</div>
+			</div>
+			<div class="row content mb-4">
+				<div class="col-md-12">					
+					
+	
+	<div class="card-columns">
+						
+	  <div class='card'>
+	  	<a href="https://oshiete.xgoo.jp/_/bucket/oshietegoo/images/media/7/542587124_59a8c26baa2dc/M.png" data-lightbox="roadtrip" data-title="空間上の測定された点群から最小二乗法により円 中心 直径 を算出す 数学 教えて Goo">
+						<img class="card-img" src="https://oshiete.xgoo.jp/_/bucket/oshietegoo/images/media/7/542587124_59a8c26baa2dc/M.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhb4dC63uEgKOVwQmapQyA9E7_95BRQVYQdzNFZhho5nNMd7NBIX7RLcLchoH6IAe9U0I';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				空間上の測定された点群から最小二乗法により円 中心 直径 を算出す 数学 教えて Goo
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://examist.jp/wp-content/uploads/mathematics/figure-circle/ennohouteisiki20200925@2x.png" data-lightbox="roadtrip" data-title="高校数学 円の方程式の基本形と一般形 座標軸と接する円 受験の月">
+						<img class="card-img" src="https://examist.jp/wp-content/uploads/mathematics/figure-circle/ennohouteisiki20200925@2x.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROnuFT64uS_0OXDTmHzh98Wh1t2-ZUff5yfSSFfVd__G6FNuRlIKwT_5M2Krv4qAG8Pw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				高校数学 円の方程式の基本形と一般形 座標軸と接する円 受験の月
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://examist.jp/wp-content/uploads/mathematics/space-equation/kyuumen.png" data-lightbox="roadtrip" data-title="高校数学b 空間の球面の方程式 X A Y B Z C R 受験の月">
+						<img class="card-img" src="https://examist.jp/wp-content/uploads/mathematics/space-equation/kyuumen.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlzgUsbwjzcqoTTSwS98ZEH9Hn3KKiNPlk9Q1zsH3Tcr1eckAMhvnwDUdhP51v3LXQjw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				高校数学b 空間の球面の方程式 X A Y B Z C R 受験の月
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.geogebra.org/resource/cxvzD5fp/0rjbvvbWsXtrsCJZ/material-cxvzD5fp.png" data-lightbox="roadtrip" data-title="最小二乗法の計算 Geogebra">
+						<img class="card-img" src="https://www.geogebra.org/resource/cxvzD5fp/0rjbvvbWsXtrsCJZ/material-cxvzD5fp.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRol_mGQcp6jNUzQ8FksPfdFZ63TNO7iCKM89FcXpgCTLVUj7RmSXwvUMCStuCwM8yS1t4';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				最小二乗法の計算 Geogebra
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://cdn-ak.f.st-hatena.com/images/fotolife/s/seetheworld1992/20190315/20190315122007.jpg" data-lightbox="roadtrip" data-title="最小二乗法の基礎をまとめる エンジニアを目指す浪人のブログ">
+						<img class="card-img" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/seetheworld1992/20190315/20190315122007.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoaM976buj4MXBtdRq_Gm2bnJU5-Z1jsJjkNoS5gB5YoqjWCRMww8LjjXSEvF-tq8Ezq8';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				最小二乗法の基礎をまとめる エンジニアを目指す浪人のブログ
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://examist.jp/wp-content/uploads/mathematics/figure-circle/ennosessen2-20201003@2x.png" data-lightbox="roadtrip" data-title="高校数学 円外の点から引いた接線の方程式 受験の月">
+						<img class="card-img" src="https://examist.jp/wp-content/uploads/mathematics/figure-circle/ennosessen2-20201003@2x.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQseiwVWS9fBAPSOhlehHQTpUdz0plLpw_fJP6eGnn_XDoW4O9MxDyAShPiOzaCkNBv4w';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				高校数学 円外の点から引いた接線の方程式 受験の月
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+				<div class='card'>	
+			<div class="d-block p-4">
+	</div>		  	
+		  	<h3 class="h6 p-2"><b></b></h3>
+					</div>
+		
+						
+	  <div class='card'>
+	  	<a href="9xxUKz6ZIjO-nM" data-lightbox="roadtrip" data-title="Https Xn 48s96ub7b0z5f Net En">
+						<img class="card-img" src="9xxUKz6ZIjO-nM" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIKpzCcjSIQn7VzLSdOV4_6nLzhlqLR4Q77m2uw4KkkYt4YGG6jR45ZjCpMLxCcE0E-V8';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Https Xn 48s96ub7b0z5f Net En
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://slash-mochi.net/wp-content/uploads/2019/06/20190629_001.jpg" data-lightbox="roadtrip" data-title="最小二乗法 もちぶろ">
+						<img class="card-img" src="https://slash-mochi.net/wp-content/uploads/2019/06/20190629_001.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPAnwMHNrGw21Dnwz3gPQ0-CcjgDArgQW6_ZbG_Xu66GaLK-DaWJhHck4KnYH-aDzuSWQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				最小二乗法 もちぶろ
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://g-spatial.com/wp-content/uploads/2020/11/11-005.png" data-lightbox="roadtrip" data-title="G空間データソリューションセンター">
+						<img class="card-img" src="http://g-spatial.com/wp-content/uploads/2020/11/11-005.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScQjHHisUkC6i_9P370BG1n4CW-bkZlKJU0oh6LC_HU7rwDxr8FWB2WMh-fj-dAGpgLeI';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				G空間データソリューションセンター
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://noschool.asia/wp-content/uploads/3e216d2c13237e923ea2e25dac04d4f1.jpg" data-lightbox="roadtrip" data-title="図形と方程式 高校数学に関する質問 勉強質問サイト">
+						<img class="card-img" src="https://noschool.asia/wp-content/uploads/3e216d2c13237e923ea2e25dac04d4f1.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8rSM0z_ppk-Rfzw5n6nh2pj_SqrtTqLaWioqnQ5YP5_B_TckYfK7w_34nMcDhHE033Wg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				図形と方程式 高校数学に関する質問 勉強質問サイト
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://i2.wp.com/slash-mochi.net/wp-content/uploads/2019/06/20190629_002.jpg?resize=960%2C540&amp;ssl=1" data-lightbox="roadtrip" data-title="最小二乗法 もちぶろ">
+						<img class="card-img" src="https://i2.wp.com/slash-mochi.net/wp-content/uploads/2019/06/20190629_002.jpg?resize=960%2C540&amp;ssl=1" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTF3rmj2pEWGtgQBPSlLjyJoAeb9g4DgUlRh8tcP8f8bp3aizy6qGScMylXsbS10vTs7WI';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				最小二乗法 もちぶろ
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://nis-lab.moo.jp/mcalcHome/otherDoc/reg_circle/001.jpg" data-lightbox="roadtrip" data-title="円の方程式と最小二乗法">
+						<img class="card-img" src="http://nis-lab.moo.jp/mcalcHome/otherDoc/reg_circle/001.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4FRveGwtyXFCd5hhwQ_UjnXUqDLuablLQR-jay50HBlnjkvC6B-MQq1nWnWGQVL3una0';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				円の方程式と最小二乗法
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://cdn-ak.f.st-hatena.com/images/fotolife/I/IsThisAPen/20190407/20190407123933.jpg" data-lightbox="roadtrip" data-title="3点を通る円の中心と半径 Notes Jp">
+						<img class="card-img" src="https://cdn-ak.f.st-hatena.com/images/fotolife/I/IsThisAPen/20190407/20190407123933.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwR7MJNEuy-7eEtyH3wSJlIbas9HUwL99ExpCkC3ByFUb88GTFp51f7vqsCr0LropscZY';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				3点を通る円の中心と半径 Notes Jp
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://blog-imgs-30-origin.fc2.com/i/m/a/imagingsolution/blog117_1.png" data-lightbox="roadtrip" data-title="平面の方程式 画像処理ソリューション">
+						<img class="card-img" src="https://blog-imgs-30-origin.fc2.com/i/m/a/imagingsolution/blog117_1.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8cxmfJ68moYGcYUtqE3eG6sDO5hb4yECuE5JtxT-PAi3_5Fj8yeN8syRmkYTU9oMYs6I';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				平面の方程式 画像処理ソリューション
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://imagingsolution.net/wordpress/wp-content/uploads/2011/06/lsmcircle.png" data-lightbox="roadtrip" data-title="一般式による最小二乗法 円の最小二乗法 イメージングソリューション">
+						<img class="card-img" src="https://imagingsolution.net/wordpress/wp-content/uploads/2011/06/lsmcircle.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTA_yMTqB7CK63dCHTDQFFtckaom7LGPBlOjGLMBogFDf-e6NtXRH6fnsNZxXk5jyTrdZk';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				一般式による最小二乗法 円の最小二乗法 イメージングソリューション
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://i.ytimg.com/vi/Vty22FlChPE/maxresdefault.jpg" data-lightbox="roadtrip" data-title="円に内接 外接する円の方程式 数学ii 図形と方程式 19 Youtube">
+						<img class="card-img" src="https://i.ytimg.com/vi/Vty22FlChPE/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3LhxCEOnoOLKHeqafAja14VHUjehuLqo5SxYwQ8PcJqIPI3WBl-7FYWnhadcIXpKuLbc';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				円に内接 外接する円の方程式 数学ii 図形と方程式 19 Youtube
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://sysplan.nams.kyushu-u.ac.jp/gen/edu/Algorithms/PlaneFitting/slide4.GIF" data-lightbox="roadtrip" data-title="点群データへの平面のフィッティング">
+						<img class="card-img" src="http://sysplan.nams.kyushu-u.ac.jp/gen/edu/Algorithms/PlaneFitting/slide4.GIF" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_9bO57uSgNPusAKXGvldysI_rWkGCs0Eq63rhq59IYh5fiu2gMgvAtsJ2CF9WgY047j8';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				点群データへの平面のフィッティング
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://reference.wolfram.com/language/NonlinearRegression/tutorial/Files/NonlinearRegression.ja/O_1.png" data-lightbox="roadtrip" data-title="非線形回帰パッケージ Wolfram言語ドキュメント">
+						<img class="card-img" src="https://reference.wolfram.com/language/NonlinearRegression/tutorial/Files/NonlinearRegression.ja/O_1.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNkSpTvfrEyAabSHoerpew3NVhbk1VEPwPq02c6TD4AnfOzY9yedjUZcAh04uMH4hoqBE';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				非線形回帰パッケージ Wolfram言語ドキュメント
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://cdn-ak.f.st-hatena.com/images/fotolife/m/meison_amsl/20151129/20151129120205.png" data-lightbox="roadtrip" data-title="最小二乗法による点群の円フィッティングmatlab Pythonサンプルプログラム Myenigma">
+						<img class="card-img" src="https://cdn-ak.f.st-hatena.com/images/fotolife/m/meison_amsl/20151129/20151129120205.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqV6Hgzy27_FWoI20ceYkVKrZed83vWRhn5k5J0KhyQfmi8FAperpqgoe6qrrtG1LPO0I';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				最小二乗法による点群の円フィッティングmatlab Pythonサンプルプログラム Myenigma
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://2.bp.blogspot.com/_Y8a2jyBLHhI/TK_e29MNcyI/AAAAAAAAKEE/EDqSKoSfwUo/w1200-h630-p-k-no-nu/ls1.png" data-lightbox="roadtrip" data-title="Ozlog 最小二乗法で平面を求める">
+						<img class="card-img" src="http://2.bp.blogspot.com/_Y8a2jyBLHhI/TK_e29MNcyI/AAAAAAAAKEE/EDqSKoSfwUo/w1200-h630-p-k-no-nu/ls1.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpzjmcsUHfB1hkl88zGBx7phzMOvqHBdmuk-_GqIrAUzb_3R7m0YTEn5D9L2p3YmxM_UE';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Ozlog 最小二乗法で平面を求める
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://sysplan.nams.kyushu-u.ac.jp/gen/edu/Algorithms/PlaneFitting/slide5.GIF" data-lightbox="roadtrip" data-title="点群データへの平面のフィッティング">
+						<img class="card-img" src="http://sysplan.nams.kyushu-u.ac.jp/gen/edu/Algorithms/PlaneFitting/slide5.GIF" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwM71elG68AXp5cMF37EtSZPxCK5p0OvHdpw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				点群データへの平面のフィッティング
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://imagingsolution.net/wordpress/wp-content/uploads/2011/06/LeastSquareMethod-7.png" data-lightbox="roadtrip" data-title="最小二乗法で近似曲線を求める方法 イメージングソリューション">
+						<img class="card-img" src="https://imagingsolution.net/wordpress/wp-content/uploads/2011/06/LeastSquareMethod-7.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAur7SpcCIHH-XxRfTrWGjQsYIBf-g6NzcNg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				最小二乗法で近似曲線を求める方法 イメージングソリューション
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://livedoor.blogimg.jp/toridon_p/imgs/3/8/3871e316.jpg" data-lightbox="roadtrip" data-title="円の最小二乗法 とりどんの言いたい放題">
+						<img class="card-img" src="https://livedoor.blogimg.jp/toridon_p/imgs/3/8/3871e316.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-Z49IGK38I4AXDHLM9OhXwNbDA4IzLGLT5w';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				円の最小二乗法 とりどんの言いたい放題
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://blog-imgs-118-origin.fc2.com/d/e/n/denofhardworking/spaceNormVec2.jpg" data-lightbox="roadtrip" data-title="空間上の円の方程式の作り方 Den Of Hardworking">
+						<img class="card-img" src="https://blog-imgs-118-origin.fc2.com/d/e/n/denofhardworking/spaceNormVec2.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMsSfLzri6LhCH19NH7b856N2w-b6PuIdZwA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				空間上の円の方程式の作り方 Den Of Hardworking
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="/search?q=%E7%90%83%E3%81%AE%E4%BD%93%E7%A9%8D&amp;tbm=isch" data-lightbox="roadtrip" data-title="Https Encrypted Tbn0 Gstatic Com Images Q Tbn And9gctmx 932nylmstbylmwyd K 8otmp3gbxbin1 2xd9bi Yduv7h Usqp Cau">
+						<img class="card-img" src="/search?q=%E7%90%83%E3%81%AE%E4%BD%93%E7%A9%8D&amp;tbm=isch" onerror="this.onerror=null;this.src='/search?q=%E7%90%83%E3%81%AE%E4%BD%93%E7%A9%8D&amp;tbm=isch';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Https Encrypted Tbn0 Gstatic Com Images Q Tbn And9gctmx 932nylmstbylmwyd K 8otmp3gbxbin1 2xd9bi Yduv7h Usqp Cau
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://3.bp.blogspot.com/_Y8a2jyBLHhI/TK_dqr-2uRI/AAAAAAAAKDw/Y9FNnd_dvvU/s1600/ls2.png" data-lightbox="roadtrip" data-title="Ozlog 最小二乗法で平面を求める">
+						<img class="card-img" src="http://3.bp.blogspot.com/_Y8a2jyBLHhI/TK_dqr-2uRI/AAAAAAAAKDw/Y9FNnd_dvvU/s1600/ls2.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQak3tBMZfIn8Wyb1521raZwoZ0jeeCwgcvqw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Ozlog 最小二乗法で平面を求める
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://imagingsolution.net/wordpress/wp-content/uploads/2011/06/LeastSquareMethod-1.png" data-lightbox="roadtrip" data-title="最小二乗法で近似曲線を求める方法 イメージングソリューション">
+						<img class="card-img" src="https://imagingsolution.net/wordpress/wp-content/uploads/2011/06/LeastSquareMethod-1.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpjhLZd7CJ9dsZNbq3AhI3JzJnmfoiV9TXHw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				最小二乗法で近似曲線を求める方法 イメージングソリューション
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://blog-imgs-30-origin.fc2.com/i/m/a/imagingsolution/blog117_3.png" data-lightbox="roadtrip" data-title="平面の方程式 画像処理ソリューション">
+						<img class="card-img" src="https://blog-imgs-30-origin.fc2.com/i/m/a/imagingsolution/blog117_3.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkJLyu5kSrdI-5clZOj6qD9_OIng7r0WcjQw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				平面の方程式 画像処理ソリューション
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://livedoor.blogimg.jp/toridon_p/imgs/f/4/f405e3b2.jpg" data-lightbox="roadtrip" data-title="円の最小二乗法 とりどんの言いたい放題">
+						<img class="card-img" src="https://livedoor.blogimg.jp/toridon_p/imgs/f/4/f405e3b2.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ175FHv-vXf56nTbgIDnbCY-1Op2Aog1idXg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				円の最小二乗法 とりどんの言いたい放題
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://reference.wolfram.com/language/tutorial/Files/NDSolveDAE.ja/9.gif" data-lightbox="roadtrip" data-title="微分代数方程式の数値解法 Wolfram言語ドキュメント">
+						<img class="card-img" src="https://reference.wolfram.com/language/tutorial/Files/NDSolveDAE.ja/9.gif" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQi4w_-GR7DZspigLzKqXcdmYVqyzJEXpy3jw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				微分代数方程式の数値解法 Wolfram言語ドキュメント
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://2.bp.blogspot.com/_Y8a2jyBLHhI/TK_etzGYIHI/AAAAAAAAKD8/8BogUkF0U4M/s1600/ls2.png" data-lightbox="roadtrip" data-title="Ozlog 最小二乗法で平面を求める">
+						<img class="card-img" src="http://2.bp.blogspot.com/_Y8a2jyBLHhI/TK_etzGYIHI/AAAAAAAAKD8/8BogUkF0U4M/s1600/ls2.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIuvXY2q4k3WS2CTZT7ucLb-Sj13naMsa1Nw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Ozlog 最小二乗法で平面を求める
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://biolab.sakura.ne.jp/draw-circle.gif" data-lightbox="roadtrip" data-title="円の最小2乗近似と描画にrのoptimxとdraw Circle関数">
+						<img class="card-img" src="https://biolab.sakura.ne.jp/draw-circle.gif" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREl3DOI0vzYgd8iG3PsWRwWNyf67N9f5E0mQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				円の最小2乗近似と描画にrのoptimxとdraw Circle関数
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://1.bp.blogspot.com/_Y8a2jyBLHhI/TK_eHCbQd5I/AAAAAAAAKD4/hPZSiB4kDj0/s1600/ls1.png" data-lightbox="roadtrip" data-title="Ozlog 最小二乗法で平面を求める">
+						<img class="card-img" src="http://1.bp.blogspot.com/_Y8a2jyBLHhI/TK_eHCbQd5I/AAAAAAAAKD4/hPZSiB4kDj0/s1600/ls1.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwW3YYJanq-Rh6vaolPv9VNmEFrznXAytGTQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Ozlog 最小二乗法で平面を求める
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+		
+	</div>
+
+		 
+		
+		
+				</div>
+				<div class="col-sm-12 widget">
+					<div class="d-block p-4">
+	<center>
+		<!-- BOTTOM BANNER ADS -->
+<script async="async" data-cfasync="false" src="//jc32arlvqpv8.com/eb47a424ae325c90cca32780149785c3/invoke.js"></script>
+<div id="container-eb47a424ae325c90cca32780149785c3"></div>
+
+	</center>
+</div>				</div>
+			</div>
+			<div class="row footer">
+				<div class="col-md-12 text-center py-4">
+										<a href="/p/dmca.html">Dmca</a>
+										<a href="/p/contact.html">Contact</a>
+										<a href="/p/privacy-policy.html">Privacy Policy</a>
+										<a href="/p/copyright.html">Copyright</a>
+					
+				</div>
+			</div>
+		</main>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js" integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js" integrity="sha256-CtKylYan+AJuoH8jrMht1+1PMhMqrKnB8K5g012WN5I=" crossorigin="anonymous"></script>
+		
+		<!-- Footer CSS JS -->
+		
+		
+		
+			<script type='text/javascript' src='//jc32arlvqpv8.com/ef/d5/10/efd510237a3143727bed46803ec35b8d.js'></script>
+</body>
+</html>

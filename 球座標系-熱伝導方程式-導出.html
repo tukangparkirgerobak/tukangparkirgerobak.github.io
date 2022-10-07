@@ -1,0 +1,682 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha256-L/W5Wfqfa0sdBNIKN9cG6QA5F2qx4qICmU2VgLruv9Y=" crossorigin="anonymous" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/css/lightbox.min.css" integrity="sha256-tBxlolRHP9uMsEFKVk+hk//ekOlXOixLKvye5W2WR5c=" crossorigin="anonymous" />
+		<link href="https://fonts.googleapis.com/css?family=Mr+Dafoe" rel="stylesheet" type="text/css">
+
+		<style type="text/css">
+			html,body{font-family:"Open Sans",Arial,sans-serif;font-size:14px;font-weight:400;background:#f3f3f3 url(https://pic1.xuehuaimg.com/proxy/csdn/https://images2017.cnblogs.com/blog/1230458/201709/1230458-20170901153149765-1309029971.jpg
+) no-repeat center center fixed;background-size:cover;height:100%}#title{font-family:"Mr Dafoe",Times,serif;font-size:34px;background:rgba(255,255,255,.8);margin-bottom:34px}.header{padding-bottom:13px;margin-bottom:13px;border-bottom:1px solid #eee}a{color:#26ADE4;text-decoration:none}#title a{color:#333;margin-left:21px}#title a:hover{text-decoration:none;color:#26ADE4}.sidebar ul{margin:0;padding:0}.sidebar ul li{list-style:none}.footer{margin-top:21px;padding-top:13px;border-top:1px solid #eee}.footer a{margin:0 15px}.navi{margin:13px 0 13px 0;padding:13px}.navi a{margin:5px 2px;font-size:95%}.main{margin-top: 6rem;}.form-inline .form-control{min-width: 300px;}.v-cover{height: 380px; object-fit: cover;}.v-image{height: 200px; object-fit: cover;}.dwn-cover{max-height: 460px; object-fit: cover;}.main{margin-top: 6rem;}.form-inline .form-control{min-width: 300px;}			
+		</style>
+
+		<title>球座標系 熱伝導方程式 導出</title>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/", 
+  "@type": "Article", 
+  "author": {
+    "@type": "Person",
+    "name": "James"
+  },
+  "headline": "球座標系 熱伝導方程式 導出",
+  "datePublished": "2021-04-24",
+  "image": [https://pic.pimg.tw/chengyu0125/1344990637-929809775.gif,https://i0.wp.com/stat.ameba.jp/user_images/20130106/15/p-opera/18/eb/g/o0329042212365375663.gif,https://web.math.sinica.edu.tw/mathmedia/img/d392/39203f401814.png],
+  "publisher": {
+    "@type": "Organization",
+    "name": "Tukang Parkir Gerobak",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://via.placeholder.com/512.png?text=球座標系 熱伝導方程式 導出",
+      "width": 512,
+      "height": 512
+    }
+  }
+}
+</script>
+		<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-957NGNKQ70"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-957NGNKQ70');
+</script>
+
+<script type='text/javascript' src='//jc32arlvqpv8.com/1a/82/2e/1a822ef8a40a0fbab3c4ea12a5d2bb02.js'></script>
+</head>
+	<body>
+		<header class="bg-white fixed-top">			
+			<nav class="navbar navbar-light bg-white mb-0">
+				<div class="container justify-content-center justify-content-sm-between">	
+				  <a href="/" title="Blog" class="navbar-brand mb-1">Blog</a>
+				  				</div>			  
+			</nav>				
+		</header>
+		<main class="main container bg-white">
+			<div class="col-md-12 my-4" align="center">
+				<div class="d-block p-4">
+	<br/><center>
+<!-- TOP BANNER ADS -->
+</center><br/>
+</div>			</div>
+			<div class="row header">
+				<div class="col-sm-12 text-center p-2">
+						<h1>球座標系 熱伝導方程式 導出</h1>
+
+	
+	<div class="navi text-center">
+										<a class="badge badge-danger" href="/%E6%B0%B8%E9%81%A0%E3%81%AE%E6%9C%88%E3%81%AE%E6%96%B9%E7%A8%8B%E5%BC%8F.html">永遠の月の方程式</a>
+											<a class="badge badge-light" href="/%E7%86%B1%E4%BC%9D%E5%B0%8E%E6%96%B9%E7%A8%8B%E5%BC%8F-%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0-fortran.html">熱伝導方程式 プログラム fortran</a>
+											<a class="badge badge-dark" href="/%E7%A9%BA%E9%96%93%E5%86%85%E3%81%AE2%E7%82%B9%E3%82%92%E9%80%9A%E3%82%8A-%E7%9B%B4%E7%B7%9A%E3%81%AB%E5%B9%B3%E8%A1%8C%E3%81%AA%E5%B9%B3%E9%9D%A2%E3%81%AE%E6%96%B9%E7%A8%8B%E5%BC%8F-%E8%A1%8C%E5%88%97%E5%BC%8F.html">空間内の2点を通り 直線に平行な平面の方程式 行列式</a>
+											<a class="badge badge-success" href="/%E6%A7%8B%E9%80%A0%E6%96%B9%E7%A8%8B%E5%BC%8F%E3%83%A2%E3%83%87%E3%83%AA%E3%83%B3%E3%82%B0-%E8%8B%B1%E8%AA%9E.html">構造方程式モデリング 英語</a>
+											<a class="badge badge-warning" href="/%E8%BF%91%E8%A6%AA-%E7%84%A1%E8%A8%80-%E7%9B%B8%E5%A7%A6-%E9%9A%A3%E3%81%AB%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%8C%E3%81%84%E3%82%8B%E3%81%AE%E3%82%88-%E6%9F%84%E6%9C%AC%E3%82%86%E3%81%8B%E3%82%8A.html">近親 無言 相姦 隣にお父さんがいるのよ 柄本ゆかり</a>
+											<a class="badge badge-primary" href="/%E9%9F%93%E5%9B%BD%E3%83%89%E3%83%A9%E3%83%9E-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93-%E5%BD%B9-%E7%94%BB%E5%83%8F.html">韓国ドラマ お父さん 役 画像</a>
+											<a class="badge badge-success" href="/%E7%99%BD%E4%BA%BA%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%83%95%E3%82%A7%E3%83%A9%E3%83%81%E3%82%AA%E8%AA%BF%E6%95%99gay.html">白人お父さんフェラチオ調教gay</a>
+											<a class="badge badge-light" href="/%E6%AD%A3%E8%A6%8F%E6%96%B9%E7%A8%8B%E5%BC%8F-%E4%BF%82%E6%95%B0%E8%A8%88%E7%AE%97.html">正規方程式 係数計算</a>
+											<a class="badge badge-danger" href="/%E6%B3%A3%E3%81%91%E3%82%8B%E6%AD%8C%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%8A%E6%AF%8D%E3%81%95%E3%82%93.html">泣ける歌お父さんお母さん</a>
+											<a class="badge badge-success" href="/%E9%9B%A3%E9%96%A2%E5%A4%A7%E5%AD%A6-%E5%90%8C%E3%81%98%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%A8%E3%81%8A%E6%AF%8D%E3%81%95%E3%82%93.html">難関大学 同じお父さんとお母さん</a>
+											<a class="badge badge-info" href="/%E9%9B%86%E5%AE%A2%E3%81%AE%E6%96%B9%E7%A8%8B%E5%BC%8F%E3%81%A8%E3%81%AF.html">集客の方程式とは</a>
+											<a class="badge badge-primary" href="/%E6%9C%80%E5%B0%8F%E8%A7%A3-%E3%83%87%E3%83%BC%E3%82%BF%E3%83%95%E3%83%AD%E3%83%BC%E6%96%B9%E7%A8%8B%E5%BC%8F.html">最小解 データフロー方程式</a>
+											<a class="badge badge-info" href="/%E6%AC%A1%E3%81%AE%E6%96%B9%E7%A8%8B%E5%BC%8F%E3%82%92%E8%A7%A3%E3%81%91-x-yx-y-%E3%81%A8%E3%81%AA%E3%82%8B%E8%A7%A3%E3%82%92%E5%85%88%E3%81%AE%E8%A7%A3%E7%AD%94%E6%AC%84%E3%81%AB%E5%85%A5%E5%8A%9B%E3%81%9B%E3%82%88.html">次の方程式を解け x yx y となる解を先の解答欄に入力せよ</a>
+											<a class="badge badge-light" href="/%E6%AF%8D%E8%A6%AA%E3%81%8C%E6%AD%BB%E3%82%93%E3%81%A7%E3%81%93%E3%81%AE%E4%BA%BA%E3%81%8C%E3%81%82%E3%81%AA%E3%81%9F%E3%81%AE%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%82%88.html">母親が死んでこの人があなたのお父さんよ</a>
+											<a class="badge badge-primary" href="/%E8%A1%8C%E5%88%97-%E6%96%B9%E7%A8%8B%E5%BC%8F-3%E6%AC%A1.html">行列 方程式 3次</a>
+						</div>
+<center>
+	<!-- MIDDLE BANNER ADS -->
+<script type="text/javascript">
+	atOptions = {
+		'key' : '2b77887421e2587a1a1b1d7c8a31a9e0',
+		'format' : 'iframe',
+		'height' : 250,
+		'width' : 300,
+		'params' : {}
+	};
+	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://jc32arlvqpv8.com/2b77887421e2587a1a1b1d7c8a31a9e0/invoke.js"></scr' + 'ipt>');
+</script>
+		
+	</center>
+					
+				</div>
+			</div>
+			<div class="row content mb-4">
+				<div class="col-md-12">					
+					
+	
+	<div class="card-columns">
+						
+	  <div class='card'>
+	  	<a href="http://www.isc.meiji.ac.jp/~re00079/HT.2020/pict/HT202033.jpg" data-lightbox="roadtrip" data-title="伝熱工学 2020年度 春学期 3年生">
+						<img class="card-img" src="http://www.isc.meiji.ac.jp/~re00079/HT.2020/pict/HT202033.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwuu7WC5rRmmkbcUT8q4whXxWe7pkON7XaG5E2QpqENC1B_LKzZOfdhsUmfCooE4SV07I';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				伝熱工学 2020年度 春学期 3年生
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic1.xuehuaimg.com/proxy/csdn/https://images2017.cnblogs.com/blog/1230458/201709/1230458-20170901153158765-1150875979.jpg" data-lightbox="roadtrip" data-title="第一章熱傳導方程 台部落">
+						<img class="card-img" src="https://pic1.xuehuaimg.com/proxy/csdn/https://images2017.cnblogs.com/blog/1230458/201709/1230458-20170901153158765-1150875979.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREUErXRBCXdvV6ahf7kNYWSRsGXDBmcKdZEp30efF1aE6njCaUb6Hx_y3Aqa1yx-sPWY4';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				第一章熱傳導方程 台部落
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic1.xuehuaimg.com/proxy/csdn/https://images2017.cnblogs.com/blog/1230458/201709/1230458-20170901153150405-1594694318.jpg" data-lightbox="roadtrip" data-title="第一章熱傳導方程 台部落">
+						<img class="card-img" src="https://pic1.xuehuaimg.com/proxy/csdn/https://images2017.cnblogs.com/blog/1230458/201709/1230458-20170901153150405-1594694318.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiXxUbRLr0Bn-tpTKBqBYpAF6GlerTVr0pw1amre_fdxNesjmGe5Q5v3qvSUnqq79e5eM';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				第一章熱傳導方程 台部落
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://pic.pimg.tw/chengyu0125/1345188803-3138649068.gif" data-lightbox="roadtrip" data-title="圓柱座標形式navier Stoke Equation之推導 Flame2003 S Blogger Since 2011 01 22 痞客邦">
+						<img class="card-img" src="http://pic.pimg.tw/chengyu0125/1345188803-3138649068.gif" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSys1TNNJjlYu56u9gYnQQ1nY6i-3r34VOzcJWjHTGuHcWQ5wwECfTLAwfd3xkao-ian3o';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				圓柱座標形式navier Stoke Equation之推導 Flame2003 S Blogger Since 2011 01 22 痞客邦
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic1.xuehuaimg.com/proxy/csdn/https://images2017.cnblogs.com/blog/1230458/201709/1230458-20170901153153624-1259647172.jpg" data-lightbox="roadtrip" data-title="第一章熱傳導方程 台部落">
+						<img class="card-img" src="https://pic1.xuehuaimg.com/proxy/csdn/https://images2017.cnblogs.com/blog/1230458/201709/1230458-20170901153153624-1259647172.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLtRTl8b9JxOK3RUjvJ6gBbPvO0xzWu8Oh0d_bW6A5YFViHfrcIRnKvx8AFhj4jcZJ4Ho';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				第一章熱傳導方程 台部落
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic1.xuehuaimg.com/proxy/csdn/https://images2017.cnblogs.com/blog/1230458/201709/1230458-20170901153159218-378221974.jpg" data-lightbox="roadtrip" data-title="第一章熱傳導方程 台部落">
+						<img class="card-img" src="https://pic1.xuehuaimg.com/proxy/csdn/https://images2017.cnblogs.com/blog/1230458/201709/1230458-20170901153159218-378221974.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTksdJOKLzBsfj6o3LqAOKkzupOh8J_lVriqzg9z-63lNqjW_jMSCnzQ98fuGD1GQHxcQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				第一章熱傳導方程 台部落
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+				<div class='card'>	
+			<div class="d-block p-4">
+	</div>		  	
+		  	<h3 class="h6 p-2"><b></b></h3>
+					</div>
+		
+						
+	  <div class='card'>
+	  	<a href="http://www.isc.meiji.ac.jp/~re00079/HT.2020/pict/HT202031.jpg" data-lightbox="roadtrip" data-title="伝熱工学 2020年度 春学期 3年生">
+						<img class="card-img" src="http://www.isc.meiji.ac.jp/~re00079/HT.2020/pict/HT202031.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXN_lQE0pDVfIW6UePWzjmgLLRqiHQGr-MJKY1hGTOJr5cvaVDKS2kRUFVKOeM6xAoU00';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				伝熱工学 2020年度 春学期 3年生
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic1.xuehuaimg.com/proxy/csdn/https://images2017.cnblogs.com/blog/1230458/201709/1230458-20170901153157546-2110170552.jpg" data-lightbox="roadtrip" data-title="第一章熱傳導方程 台部落">
+						<img class="card-img" src="https://pic1.xuehuaimg.com/proxy/csdn/https://images2017.cnblogs.com/blog/1230458/201709/1230458-20170901153157546-2110170552.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBy1b0MUMciuS4cLgUtlbdlOFq2MXNl-OEMkAIrP_JswR4Ax_hRfeeTfV1V5djF3f7oAI';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				第一章熱傳導方程 台部落
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic1.xuehuaimg.com/proxy/csdn/https://images2017.cnblogs.com/blog/1230458/201709/1230458-20170901153156749-1354485501.jpg" data-lightbox="roadtrip" data-title="第一章熱傳導方程 台部落">
+						<img class="card-img" src="https://pic1.xuehuaimg.com/proxy/csdn/https://images2017.cnblogs.com/blog/1230458/201709/1230458-20170901153156749-1354485501.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWpOaeSHFYJnJLqSJ6TRSAdlfQPUkamop-JXx679BjOs6MQ7mAC4sfa_5N5y3GbW6_arg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				第一章熱傳導方程 台部落
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://oshiete.xgoo.jp/_/bucket/oshietegoo/images/media/8/1203881_5572fdcda5dc5/M.jpg" data-lightbox="roadtrip" data-title="伝熱工学の問題についての質問です 図に示すように 球内の熱伝導を考 物理学 教えて Goo">
+						<img class="card-img" src="https://oshiete.xgoo.jp/_/bucket/oshietegoo/images/media/8/1203881_5572fdcda5dc5/M.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPiohGv7qkAkQ1ZYutvge_JmU-fhSFa9jn74V7SlQS1lAPkJM_7kQJefOW1vD5XHGeToc';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				伝熱工学の問題についての質問です 図に示すように 球内の熱伝導を考 物理学 教えて Goo
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic.pimg.tw/chengyu0125/1345189039-3922046874.gif" data-lightbox="roadtrip" data-title="圓柱座標形式navier Stoke Equation之推導 Flame2003 S Blogger Since 2011 01 22 痞客邦">
+						<img class="card-img" src="https://pic.pimg.tw/chengyu0125/1345189039-3922046874.gif" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRK8jvshOSvoVUgI98sXLx4VzSF1b_quWXfVByNmPNVHshCs_0ZftsyEbDMuHJMrXSIFww';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				圓柱座標形式navier Stoke Equation之推導 Flame2003 S Blogger Since 2011 01 22 痞客邦
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic1.xuehuaimg.com/proxy/csdn/https://images2017.cnblogs.com/blog/1230458/201709/1230458-20170901153154218-178112749.jpg" data-lightbox="roadtrip" data-title="第一章熱傳導方程 台部落">
+						<img class="card-img" src="https://pic1.xuehuaimg.com/proxy/csdn/https://images2017.cnblogs.com/blog/1230458/201709/1230458-20170901153154218-178112749.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9Y-xfDulIpwzmqlSL1BYg4QkPrv1ivuDRxmOrNmz7s1rsWI3Q1fM8NgzeOw6X_wZrwt0';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				第一章熱傳導方程 台部落
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic.pimg.tw/chengyu0125/1344990637-929809775.gif" data-lightbox="roadtrip" data-title="圓柱座標形式navier Stoke Equation之推導 Flame2003 S Blogger Since 2011 01 22 痞客邦">
+						<img class="card-img" src="https://pic.pimg.tw/chengyu0125/1344990637-929809775.gif" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1ZUx0TZPDMLF_4XEeJrua2calgx9M3Hx0s1p4m8TKQnJUfp_KutdXOna4tseg9xeSeWY';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				圓柱座標形式navier Stoke Equation之推導 Flame2003 S Blogger Since 2011 01 22 痞客邦
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://www.isc.meiji.ac.jp/~re00079/HT.2020/pict/HT202032.jpg" data-lightbox="roadtrip" data-title="伝熱工学 2020年度 春学期 3年生">
+						<img class="card-img" src="http://www.isc.meiji.ac.jp/~re00079/HT.2020/pict/HT202032.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTa_wOTrknicszobrE9ommNQd5fA0jHL8ftfqQ_p3vLdYNRpBe_o1ErgUjhpz2LP3ExtHo';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				伝熱工学 2020年度 春学期 3年生
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://i.ytimg.com/vi/MIiCKt6pl6U/maxresdefault.jpg" data-lightbox="roadtrip" data-title="球座標旋度推導 Youtube">
+						<img class="card-img" src="https://i.ytimg.com/vi/MIiCKt6pl6U/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtUCyMOvOr6vZ2LfulFKYDPF_6BbOCzVjXP4y2LJrag1DGIbpcy7YGYZypTpHqfJhszSA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				球座標旋度推導 Youtube
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic1.xuehuaimg.com/proxy/csdn/https://images2017.cnblogs.com/blog/1230458/201709/1230458-20170901153149765-1309029971.jpg" data-lightbox="roadtrip" data-title="第一章熱傳導方程 台部落">
+						<img class="card-img" src="https://pic1.xuehuaimg.com/proxy/csdn/https://images2017.cnblogs.com/blog/1230458/201709/1230458-20170901153149765-1309029971.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSA0pVMS4e7eNdTuTiteIKdO6mhJPq538kwdiy3HP_QY9QlzTPPwO95a1iiQVEq_lO3KA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				第一章熱傳導方程 台部落
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic1.xuehuaimg.com/proxy/csdn/https://images2017.cnblogs.com/blog/1230458/201709/1230458-20170901153149390-1758556152.jpg" data-lightbox="roadtrip" data-title="第一章熱傳導方程 台部落">
+						<img class="card-img" src="https://pic1.xuehuaimg.com/proxy/csdn/https://images2017.cnblogs.com/blog/1230458/201709/1230458-20170901153149390-1758556152.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWOnWLGKoKRenwJk0GrufUnCm97hSujX68-5tBaIZiO5x-FEjObNflGduUtDGwEzfuSks';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				第一章熱傳導方程 台部落
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://imageproxy.pimg.tw/zoomcrop?url=https%3A%2F%2Fpic.pimg.tw%2Fchengyu0125%2F1345188803-3138649068_n.gif&amp;width=380&amp;height=228" data-lightbox="roadtrip" data-title="圓柱座標形式navier Stoke Equation之推導 Flame2003 S Blogger Since 2011 01 22 痞客邦">
+						<img class="card-img" src="https://imageproxy.pimg.tw/zoomcrop?url=https%3A%2F%2Fpic.pimg.tw%2Fchengyu0125%2F1345188803-3138649068_n.gif&amp;width=380&amp;height=228" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWhCpyUjnPZE-6A0gpqvu8yKKej_IJy5SFiif9_cZ_271aGkQPsYP5t8BsDTJf05ObYMQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				圓柱座標形式navier Stoke Equation之推導 Flame2003 S Blogger Since 2011 01 22 痞客邦
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://web.math.sinica.edu.tw/mathmedia/img/d392/39203f40182.png" data-lightbox="roadtrip" data-title="39203 圖解梯度 散度與旋度">
+						<img class="card-img" src="https://web.math.sinica.edu.tw/mathmedia/img/d392/39203f40182.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSwsGrjbWemZby7n7ink2LtJpLf_3eg1elOENKSH-uDKXvi_a8rdIWzCHpQ24Sezr8Yfk';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				39203 圖解梯度 散度與旋度
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://i0.wp.com/franciscoalfonsokazuo3110.web.fc2.com/education/geomath/image/spherical_dv.jpg" data-lightbox="roadtrip" data-title="球座標 伝熱工學 2020年度 Itemn">
+						<img class="card-img" src="https://i0.wp.com/franciscoalfonsokazuo3110.web.fc2.com/education/geomath/image/spherical_dv.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaQMTrFkX00Mk4jr6sQxYpqJ5rHndJ-zqFRFNppKgyXxty95w_758eoQGgBvqFdHoYp0w';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				球座標 伝熱工學 2020年度 Itemn
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://www.isc.meiji.ac.jp/~re00079/HT.2020/pict/HT202042.jpg" data-lightbox="roadtrip" data-title="伝熱工学 2020年度 春学期 3年生">
+						<img class="card-img" src="http://www.isc.meiji.ac.jp/~re00079/HT.2020/pict/HT202042.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5UWzN5-DA7dA_IV4r_fiAjgihNUJHNKxDJg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				伝熱工学 2020年度 春学期 3年生
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://web.math.sinica.edu.tw/mathmedia/img/d392/39203f401811.png" data-lightbox="roadtrip" data-title="39203 圖解梯度 散度與旋度">
+						<img class="card-img" src="https://web.math.sinica.edu.tw/mathmedia/img/d392/39203f401811.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIA2IeDksxiwgLo8T_5J1ElQWbptrycibkfQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				39203 圖解梯度 散度與旋度
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.coursehero.com/thumb/e7/00/e7008dac3fd1035bc9e175baa775096ccb781912_180.jpg" data-lightbox="roadtrip" data-title="圖解梯度散度旋度 Pdf 數學傳播39 2 期pp 30 55 圖解梯度 散度與旋度林琦焜 如果s 代表向量函數 S Course Hero">
+						<img class="card-img" src="https://www.coursehero.com/thumb/e7/00/e7008dac3fd1035bc9e175baa775096ccb781912_180.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9qe4Y_uUe1lOIDyocCwOnf69jXDu0zCDKiQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				圖解梯度散度旋度 Pdf 數學傳播39 2 期pp 30 55 圖解梯度 散度與旋度林琦焜 如果s 代表向量函數 S Course Hero
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://web.math.sinica.edu.tw/mathmedia/img/d392/39203f40188.png" data-lightbox="roadtrip" data-title="39203 圖解梯度 散度與旋度">
+						<img class="card-img" src="https://web.math.sinica.edu.tw/mathmedia/img/d392/39203f40188.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgwmd6jflpmQzM16FXhKrTYZZyn3cMte5bQg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				39203 圖解梯度 散度與旋度
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="/search?q=%E5%9C%93%E6%9F%B1%E5%BA%A7%E6%A8%99&amp;tbm=isch" data-lightbox="roadtrip" data-title="Https Encrypted Tbn0 Gstatic Com Images Q Tbn And9gcrl986z Oqshinglyhzyfarm4rnvlo Yjc0earebhwcbs8cr5oa Usqp Cau">
+						<img class="card-img" src="/search?q=%E5%9C%93%E6%9F%B1%E5%BA%A7%E6%A8%99&amp;tbm=isch" onerror="this.onerror=null;this.src='/search?q=%E5%9C%93%E6%9F%B1%E5%BA%A7%E6%A8%99&amp;tbm=isch';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Https Encrypted Tbn0 Gstatic Com Images Q Tbn And9gcrl986z Oqshinglyhzyfarm4rnvlo Yjc0earebhwcbs8cr5oa Usqp Cau
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://wikimedia.org/api/rest_v1/media/math/render/svg/719655fccdf7f1f48ae8f9f333070347b9f535ff" data-lightbox="roadtrip" data-title="欧拉方程 流体动力学 维基百科 自由的百科全书">
+						<img class="card-img" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/719655fccdf7f1f48ae8f9f333070347b9f535ff" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSB0w0GTOBxT2UWpWLojjBByd2t54b9oyaiNQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				欧拉方程 流体动力学 维基百科 自由的百科全书
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.coursehero.com/thumb/93/56/93562dd8d4b6250f3075ad665382b4265601675e_180.jpg" data-lightbox="roadtrip" data-title="圖解梯度散度旋度 Pdf 數學傳播39 2 期pp 30 55 圖解梯度 散度與旋度林琦焜 如果s 代表向量函數 S Course Hero">
+						<img class="card-img" src="https://www.coursehero.com/thumb/93/56/93562dd8d4b6250f3075ad665382b4265601675e_180.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKDuk77-O__YELM_rjVfcC0ERETTgAPL9uzw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				圖解梯度散度旋度 Pdf 數學傳播39 2 期pp 30 55 圖解梯度 散度與旋度林琦焜 如果s 代表向量函數 S Course Hero
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic1.xuehuaimg.com/proxy/csdn/https://images2017.cnblogs.com/blog/1230458/201709/1230458-20170901153155515-1993975795.jpg" data-lightbox="roadtrip" data-title="第一章熱傳導方程 台部落">
+						<img class="card-img" src="https://pic1.xuehuaimg.com/proxy/csdn/https://images2017.cnblogs.com/blog/1230458/201709/1230458-20170901153155515-1993975795.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIm22lWxh7UY-RuZhOKQ5IySki3fgHXr1z5w';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				第一章熱傳導方程 台部落
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="wUw9vF0iD36vrM" data-lightbox="roadtrip" data-title="Http Www Kz Tsukuba Ac Jp Abe Ohp Heat Chapter2 Pdf">
+						<img class="card-img" src="wUw9vF0iD36vrM" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTx1Og2mGmTR2z3OEwPNgxkRJIB2UHZ6iQzYQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Http Www Kz Tsukuba Ac Jp Abe Ohp Heat Chapter2 Pdf
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://web.math.sinica.edu.tw/mathmedia/img/d392/39203f401812.png" data-lightbox="roadtrip" data-title="39203 圖解梯度 散度與旋度">
+						<img class="card-img" src="https://web.math.sinica.edu.tw/mathmedia/img/d392/39203f401812.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3fstTJiY0Rd7qQQEx6kDVb95MwVi1pV4TLQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				39203 圖解梯度 散度與旋度
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://i0.wp.com/stat.ameba.jp/user_images/20130106/15/p-opera/18/eb/g/o0329042212365375663.gif" data-lightbox="roadtrip" data-title="球座標 伝熱工學 2020年度 Itemn">
+						<img class="card-img" src="https://i0.wp.com/stat.ameba.jp/user_images/20130106/15/p-opera/18/eb/g/o0329042212365375663.gif" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8zq-oNedxe56Yhozq6wyXhJ06FXrCxj6r8Q';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				球座標 伝熱工學 2020年度 Itemn
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://web.math.sinica.edu.tw/mathmedia/img/d392/39203f401814.png" data-lightbox="roadtrip" data-title="39203 圖解梯度 散度與旋度">
+						<img class="card-img" src="https://web.math.sinica.edu.tw/mathmedia/img/d392/39203f401814.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpxSsk3D8NtSiWOXl-dpK3pMGYMqBf_eUEtA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				39203 圖解梯度 散度與旋度
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.yumpu.com/xx/image/facebook/39709516.jpg" data-lightbox="roadtrip" data-title="Epa 88 U1e1 03 001 E œae E C A ƒa E C">
+						<img class="card-img" src="https://www.yumpu.com/xx/image/facebook/39709516.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRY1kSKuT1qPaYD4GnUJyna-tdXNxcxdqibUg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Epa 88 U1e1 03 001 E œae E C A ƒa E C
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+		
+	</div>
+
+		 
+		
+		
+				</div>
+				<div class="col-sm-12 widget">
+					<div class="d-block p-4">
+	<center>
+		<!-- BOTTOM BANNER ADS -->
+<script async="async" data-cfasync="false" src="//jc32arlvqpv8.com/eb47a424ae325c90cca32780149785c3/invoke.js"></script>
+<div id="container-eb47a424ae325c90cca32780149785c3"></div>
+
+	</center>
+</div>				</div>
+			</div>
+			<div class="row footer">
+				<div class="col-md-12 text-center py-4">
+										<a href="/p/dmca.html">Dmca</a>
+										<a href="/p/contact.html">Contact</a>
+										<a href="/p/privacy-policy.html">Privacy Policy</a>
+										<a href="/p/copyright.html">Copyright</a>
+					
+				</div>
+			</div>
+		</main>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js" integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js" integrity="sha256-CtKylYan+AJuoH8jrMht1+1PMhMqrKnB8K5g012WN5I=" crossorigin="anonymous"></script>
+		
+		<!-- Footer CSS JS -->
+		
+		
+		
+			<script type='text/javascript' src='//jc32arlvqpv8.com/ef/d5/10/efd510237a3143727bed46803ec35b8d.js'></script>
+</body>
+</html>

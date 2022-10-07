@@ -1,0 +1,682 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha256-L/W5Wfqfa0sdBNIKN9cG6QA5F2qx4qICmU2VgLruv9Y=" crossorigin="anonymous" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/css/lightbox.min.css" integrity="sha256-tBxlolRHP9uMsEFKVk+hk//ekOlXOixLKvye5W2WR5c=" crossorigin="anonymous" />
+		<link href="https://fonts.googleapis.com/css?family=Mr+Dafoe" rel="stylesheet" type="text/css">
+
+		<style type="text/css">
+			html,body{font-family:"Open Sans",Arial,sans-serif;font-size:14px;font-weight:400;background:#f3f3f3 url(https://pic1.zhimg.com/80/v2-e0c7e392d65d29056dd3eebe2bfa4aa8_1440w.jpg
+) no-repeat center center fixed;background-size:cover;height:100%}#title{font-family:"Mr Dafoe",Times,serif;font-size:34px;background:rgba(255,255,255,.8);margin-bottom:34px}.header{padding-bottom:13px;margin-bottom:13px;border-bottom:1px solid #eee}a{color:#26ADE4;text-decoration:none}#title a{color:#333;margin-left:21px}#title a:hover{text-decoration:none;color:#26ADE4}.sidebar ul{margin:0;padding:0}.sidebar ul li{list-style:none}.footer{margin-top:21px;padding-top:13px;border-top:1px solid #eee}.footer a{margin:0 15px}.navi{margin:13px 0 13px 0;padding:13px}.navi a{margin:5px 2px;font-size:95%}.main{margin-top: 6rem;}.form-inline .form-control{min-width: 300px;}.v-cover{height: 380px; object-fit: cover;}.v-image{height: 200px; object-fit: cover;}.dwn-cover{max-height: 460px; object-fit: cover;}.main{margin-top: 6rem;}.form-inline .form-control{min-width: 300px;}			
+		</style>
+
+		<title>時間依存 Schrodinger方程式 Python</title>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/", 
+  "@type": "Article", 
+  "author": {
+    "@type": "Person",
+    "name": "James"
+  },
+  "headline": "時間依存 Schrodinger方程式 Python",
+  "datePublished": "2021-04-24",
+  "image": [https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.amazonaws.com%2F0%2F192457%2F3e551403-893b-cfb5-6094-a862422adbff.gif?ixlib=rb-1.2.2&amp;auto=format&amp;gif-q=60&amp;q=75&amp;s=2a8c44a9b0dbf1612369b4dd4cc973ad,http://img30.360buyimg.com/popWaterMark/jfs/t1/87672/6/11645/356134/5e37cb8bE409e3a23/5fbcf8c2cceb07b6.jpg,https://pic2.zhimg.com/80/v2-dbbc363e62d291d9ed7e1463166ef639_1440w.jpg],
+  "publisher": {
+    "@type": "Organization",
+    "name": "Tukang Parkir Gerobak",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://via.placeholder.com/512.png?text=時間依存 schrodinger方程式 python",
+      "width": 512,
+      "height": 512
+    }
+  }
+}
+</script>
+		<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-957NGNKQ70"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-957NGNKQ70');
+</script>
+
+<script type='text/javascript' src='//jc32arlvqpv8.com/1a/82/2e/1a822ef8a40a0fbab3c4ea12a5d2bb02.js'></script>
+</head>
+	<body>
+		<header class="bg-white fixed-top">			
+			<nav class="navbar navbar-light bg-white mb-0">
+				<div class="container justify-content-center justify-content-sm-between">	
+				  <a href="/" title="Blog" class="navbar-brand mb-1">Blog</a>
+				  				</div>			  
+			</nav>				
+		</header>
+		<main class="main container bg-white">
+			<div class="col-md-12 my-4" align="center">
+				<div class="d-block p-4">
+	<br/><center>
+<!-- TOP BANNER ADS -->
+</center><br/>
+</div>			</div>
+			<div class="row header">
+				<div class="col-sm-12 text-center p-2">
+						<h1>時間依存 Schrodinger方程式 Python</h1>
+
+	
+	<div class="navi text-center">
+										<a class="badge badge-info" href="/%E6%A0%97%E5%8E%9F%E3%81%95%E3%82%93-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%A8%E5%91%BC%E3%81%B3%E3%81%AA%E3%81%95%E3%81%84.html">栗原さん お父さんと呼びなさい</a>
+											<a class="badge badge-info" href="/%E9%80%A3%E7%AB%8B1%E6%AC%A1%E6%96%B9%E7%A8%8B%E5%BC%8F-%E8%A1%8C%E5%88%97-%E6%AD%A3%E5%89%87.html">連立1次方程式 行列 正則</a>
+											<a class="badge badge-warning" href="/%E6%B5%B7%E5%A4%96-%E3%82%AF%E3%83%AA%E3%82%B9%E3%83%9E%E3%82%B9%E7%B5%B5%E6%9C%AC-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%8C%E3%82%82%E3%81%BF%E3%81%AE%E6%9C%A8%E3%82%92.html">海外 クリスマス絵本 お父さんがもみの木を</a>
+											<a class="badge badge-success" href="/%E7%99%BD%E7%8A%AC%E3%81%AE%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93.html">白犬のお父さん</a>
+											<a class="badge badge-dark" href="/%E9%AB%98-%E6%AC%A1-%E6%96%B9%E7%A8%8B%E5%BC%8F-p-%E3%82%92-q-%E3%81%A7-%E8%A1%A8%E3%81%99.html">高 次 方程式 p を q で 表す</a>
+											<a class="badge badge-secondary" href="/%E7%A8%B2%E7%9B%9B-%E4%BA%BA%E7%94%9F-%E3%81%AE-%E6%96%B9%E7%A8%8B%E5%BC%8F.html">稲盛 人生 の 方程式</a>
+											<a class="badge badge-dark" href="/%E9%9D%9E%E7%B7%9A%E5%9E%8B%E7%99%BA%E5%B1%95%E6%96%B9%E7%A8%8B%E5%BC%8F%E3%81%AE%E5%AE%9F%E8%A7%A3%E6%9E%90%E7%9A%84%E6%96%B9%E6%B3%95-%E8%A8%82%E6%AD%A3.html">非線型発展方程式の実解析的方法 訂正</a>
+											<a class="badge badge-success" href="/%E8%A6%AA%E5%AD%90%E3%81%B5%E3%82%8C%E3%81%82%E3%81%84-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E9%81%8A%E5%9C%92%E5%9C%B0.html">親子ふれあい お父さん遊園地</a>
+											<a class="badge badge-light" href="/%E7%9B%B8%E6%A8%A1%E5%8E%9F-%E4%BA%95%E4%B8%8A%E5%B0%9A%E5%BC%A5%E3%81%AE%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%8C%E3%82%82%E3%81%A3%E3%81%A6%E3%81%84%E3%82%8B%E3%82%A2%E3%83%91%E3%83%BC%E3%83%88.html">相模原 井上尚弥のお父さんがもっているアパート</a>
+											<a class="badge badge-warning" href="/%E9%80%9F%E5%BA%A6-%E8%B7%9D%E9%9B%A2-%E6%99%82%E9%96%93-%E6%96%B9%E7%A8%8B%E5%BC%8F.html">速度 距離 時間 方程式</a>
+											<a class="badge badge-success" href="/%E9%96%A2%E6%95%B0-%E4%B8%8D%E5%AE%9A%E6%96%B9%E7%A8%8B%E5%BC%8F%E3%81%AE%E4%B8%80%E9%83%A8.html">関数 不定方程式の一部</a>
+											<a class="badge badge-success" href="/%E7%8A%AC%E7%A5%9E%E3%82%B5%E3%83%BC%E3%82%AB%E3%82%B9%E5%9B%A3-%E6%AD%8C%E8%A9%9E-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%8A%E6%AF%8D%E3%81%95%E3%82%93%E5%85%88%E7%AB%8B%E3%81%A4%E4%B8%8D%E5%B9%B8.html">犬神サーカス団 歌詞 お父さんお母さん先立つ不幸</a>
+											<a class="badge badge-primary" href="/%E7%9B%B4%E7%B7%9A%E3%81%AE%E6%96%B9%E7%A8%8B%E5%BC%8F-%E5%B0%84%E5%BD%B1%E7%A9%BA%E9%96%93.html">直線の方程式 射影空間</a>
+											<a class="badge badge-primary" href="/%E7%86%9F%E5%A5%B3%E8%A3%85%E5%AD%90%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93-%E5%A8%98%E3%81%AE%E5%BD%BC%E6%B0%8F%E3%81%AB%E7%8A%AF%E3%81%95%E3%82%8C%E3%81%A6-rar.html">熟女装子お父さん 娘の彼氏に犯されて rar</a>
+											<a class="badge badge-success" href="/%E7%BE%A9%E7%90%86%E3%81%AE%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93-%E3%81%8A%E7%BE%A9%E6%AF%8D%E3%81%95%E3%82%93%E3%81%B8%E3%81%AE%E3%83%A1%E3%83%83%E3%82%BB%E3%83%BC%E3%82%B8.html">義理のお父さん お義母さんへのメッセージ</a>
+						</div>
+<center>
+	<!-- MIDDLE BANNER ADS -->
+<script type="text/javascript">
+	atOptions = {
+		'key' : '2b77887421e2587a1a1b1d7c8a31a9e0',
+		'format' : 'iframe',
+		'height' : 250,
+		'width' : 300,
+		'params' : {}
+	};
+	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://jc32arlvqpv8.com/2b77887421e2587a1a1b1d7c8a31a9e0/invoke.js"></scr' + 'ipt>');
+</script>
+		
+	</center>
+					
+				</div>
+			</div>
+			<div class="row content mb-4">
+				<div class="col-md-12">					
+					
+	
+	<div class="card-columns">
+						
+	  <div class='card'>
+	  	<a href="https://pic3.zhimg.com/80/v2-a4ed8461744231feac3834982f692b52_1440w.jpg" data-lightbox="roadtrip" data-title="Bs4ted4jyuld1m">
+						<img class="card-img" src="https://pic3.zhimg.com/80/v2-a4ed8461744231feac3834982f692b52_1440w.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlTFXmC1RZjtwGgC6M5wrfsPL1O87L_3Mxa0lhDEs9BiY3cZAYUHZY4r-hBicohMMUz34';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Bs4ted4jyuld1m
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://jakevdp.github.io/downloads/videos/schrodinger_barrier_frame.png" data-lightbox="roadtrip" data-title="Quantum Python Animating The Schrodinger Equation Pythonic Perambulations">
+						<img class="card-img" src="http://jakevdp.github.io/downloads/videos/schrodinger_barrier_frame.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWBVTkgkU2Vp8sfaXVCRMpoG3DRFdp8XkK9NQIrxoerO6D2qHZbsGB0wJlKQJsIWZZzQs';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Quantum Python Animating The Schrodinger Equation Pythonic Perambulations
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic4.zhimg.com/80/v2-08372587b3d25018debebf1a162a3877_1440w.jpg" data-lightbox="roadtrip" data-title="用python学量子力学 1 知乎">
+						<img class="card-img" src="https://pic4.zhimg.com/80/v2-08372587b3d25018debebf1a162a3877_1440w.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlcifQ0ePnkh1qwIbpGc8S3k13s4mPJdlY4kz_QtENdKOZVgUI1qIa-QNThMvjPc0weCc';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				用python学量子力学 1 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic1.zhimg.com/80/v2-e0c7e392d65d29056dd3eebe2bfa4aa8_1440w.jpg" data-lightbox="roadtrip" data-title="用python学量子力学 1 知乎">
+						<img class="card-img" src="https://pic1.zhimg.com/80/v2-e0c7e392d65d29056dd3eebe2bfa4aa8_1440w.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHqzg3fGQCpFwZJXUQnxixxqtUgo_ka9uFGnyXZsorcMuhg0GWUzycLYIx98pb-YN4srk';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				用python学量子力学 1 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic2.zhimg.com/80/v2-045c33d6da64b72ab40359f1a7e5377d_1440w.jpg" data-lightbox="roadtrip" data-title="用python学量子力学 1 知乎">
+						<img class="card-img" src="https://pic2.zhimg.com/80/v2-045c33d6da64b72ab40359f1a7e5377d_1440w.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBNflfXCX2RWxU3d-Cs8899h6FR0zFreijxn76TzJyj0s8ao1T2qhHgZ0erpr-1fRfvNs';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				用python学量子力学 1 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic1.zhimg.com/80/v2-c110bdf4ffb44799f0b2cc1f685b2994_1440w.jpg" data-lightbox="roadtrip" data-title="用python学量子力学 1 知乎">
+						<img class="card-img" src="https://pic1.zhimg.com/80/v2-c110bdf4ffb44799f0b2cc1f685b2994_1440w.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2XzdbKd-fVLk537Vr_QOZCK1ZZ1wxOqfPS2e_kiuhkR4BXvCD9LYW8uMr3_E_fXf2z0o';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				用python学量子力学 1 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+				<div class='card'>	
+			<div class="d-block p-4">
+	</div>		  	
+		  	<h3 class="h6 p-2"><b></b></h3>
+					</div>
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic1.zhimg.com/80/v2-611f42fcd39d599fc4f803b458b5f188_1440w.jpg" data-lightbox="roadtrip" data-title="用python学量子力学 1 知乎">
+						<img class="card-img" src="https://pic1.zhimg.com/80/v2-611f42fcd39d599fc4f803b458b5f188_1440w.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmzIuWJyH0YWEiRMTABitmmhp3VTckluyE7lQoISisxDLyRiYf0fd93aL-891TY7psKTg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				用python学量子力学 1 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic2.zhimg.com/80/v2-dbbc363e62d291d9ed7e1463166ef639_1440w.jpg" data-lightbox="roadtrip" data-title="用python学量子力学 1 知乎">
+						<img class="card-img" src="https://pic2.zhimg.com/80/v2-dbbc363e62d291d9ed7e1463166ef639_1440w.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTI4pzXXkKKdi7oTgd9WZzNhxPi6szaBCQMoyVcMnOaIRDwsZWTUYLyLL31oICXnAd0zZI';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				用python学量子力学 1 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://repository-images.githubusercontent.com/185252519/427cff80-a940-11e9-8ae9-3a9b75f08029" data-lightbox="roadtrip" data-title="Schrodinger Equation Github Topics Github">
+						<img class="card-img" src="https://repository-images.githubusercontent.com/185252519/427cff80-a940-11e9-8ae9-3a9b75f08029" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSDjZ7OC6odLYYsscp8msfrE9JlKSaeJBFOhk70i4NW_LeUfVnhUrpHbK6L3lKGs6Uecg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Schrodinger Equation Github Topics Github
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic3.zhimg.com/80/v2-8e9edbc47e8b30e8bfdc7cdae26ae68a_1440w.jpg" data-lightbox="roadtrip" data-title="用python学量子力学 1 知乎">
+						<img class="card-img" src="https://pic3.zhimg.com/80/v2-8e9edbc47e8b30e8bfdc7cdae26ae68a_1440w.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyyLT8ewnSaaqIDrYWWWtS2vBdUtKn-nStSH2FWnYweMXWljW8GAGmZeMD2JDCJIjJEdE';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				用python学量子力学 1 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://vlight.me/images/5ad6a8f4a3f6d.png" data-lightbox="roadtrip" data-title="数值python 求解方程 Greatx S Blog">
+						<img class="card-img" src="https://vlight.me/images/5ad6a8f4a3f6d.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqu56g3_SVKYFYDtE24ADCkhTUH6tvNWAqr17tNj4ckhbK8PreZhfJt2WyHDtN_yXVV28';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				数值python 求解方程 Greatx S Blog
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic2.zhimg.com/v2-6baf8d3a67a19d7c53512c04a9a45bfb_ipico.jpg?source=172ae18b" data-lightbox="roadtrip" data-title="用python学量子力学 1 知乎">
+						<img class="card-img" src="https://pic2.zhimg.com/v2-6baf8d3a67a19d7c53512c04a9a45bfb_ipico.jpg?source=172ae18b" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5b8fkpQCXjwuhhtptC0NAwcBKZ2T7G1FkeQzjps2PEAH8v3jvpI69S0CFtrN3Aqb9xOQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				用python学量子力学 1 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic2.zhimg.com/80/v2-b9de1f81d20d4c43a4b1bcfe7ef45ae1_1440w.jpg" data-lightbox="roadtrip" data-title="用python学量子力学 1 知乎">
+						<img class="card-img" src="https://pic2.zhimg.com/80/v2-b9de1f81d20d4c43a4b1bcfe7ef45ae1_1440w.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQe4y9qoApzlLmM1xQDIwkS-Mfv_R9O2BLzwcz8-qCvHGREeRw5PsM7rckPHaAJCqF_QBM';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				用python学量子力学 1 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://computing-blog.com/wp-content/uploads/2020/09/image-15.png" data-lightbox="roadtrip" data-title="Solving The Time Dependent Schrodinger Equation Physics With Python">
+						<img class="card-img" src="https://computing-blog.com/wp-content/uploads/2020/09/image-15.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSClBTpISbn4_FFgcjr5hQK4VR6-nQ77RlcL2LsMWo1gBOOupGeO_s7qyPURMPM4jLGLoY';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Solving The Time Dependent Schrodinger Equation Physics With Python
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://ichi.pro/assets/images/max/640/1*Ml50ixccw8M0Fc5U57xl6Q.png" data-lightbox="roadtrip" data-title="シュレディンガー方程式の有限差分解">
+						<img class="card-img" src="https://ichi.pro/assets/images/max/640/1*Ml50ixccw8M0Fc5U57xl6Q.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKxfrWbNpqBhC8NR33VaJFZ76En56i-w0l3JVNN7JgV8RH39YmM6tddSlyI6SeLNQAa94';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				シュレディンガー方程式の有限差分解
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic1.zhimg.com/v2-8e58b08753e92b472c4005f8dd9003fe_ipico.jpg?source=172ae18b" data-lightbox="roadtrip" data-title="用python学量子力学 1 知乎">
+						<img class="card-img" src="https://pic1.zhimg.com/v2-8e58b08753e92b472c4005f8dd9003fe_ipico.jpg?source=172ae18b" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgDJGAlfcV_iKEz8Do7fS3NHzpk8MXQDfop6hlseMmqi6VTzZgM8wusFjNXQr1m8KrXV4';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				用python学量子力学 1 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://computing-blog.com/wp-content/uploads/2020/09/image-12.png" data-lightbox="roadtrip" data-title="Solving The Time Dependent Schrodinger Equation Physics With Python">
+						<img class="card-img" src="https://computing-blog.com/wp-content/uploads/2020/09/image-12.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIlCp64qfq0vWwwgD706L4Eo22Z5z1TNuO8EiKOD7m2LGkaGrBiPzmiBvHUr-qU3L3Iko';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Solving The Time Dependent Schrodinger Equation Physics With Python
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.zhihu.com/equation?tex=%7Bdf+%5Cover+dx%7D+%3D+%5Cbegin%7Bbmatrix%7D++0+%26+1+%26+0+%26++0+%26+...%26+0+%26+0+%5C%5C+++++++++++++++++++++++++++++++++++++++++++++++-1+%26+0+%26+1+%26++0+%26...%26+0+%26+0+%5C%5C++++++++++0+%26+-1+%26+0+%26+1+%26+...%26+0+%26+0+%5C%5C+0+%26++0+%26+-1+%26+0+%26+...%26+0+%26+0+%5C%5C+...+%26++...+%26+...+%26+...+%26+...%26+...+%26+...%5C%5C+0+%26++0+%26+0+%26+0+%26+...%26+0+%26+1+%5C%5C+0+%26++0+%26+0+%26+0+%26++...%26+-1+%26+0+%5C%5C+%5Cend%7Bbmatrix%7D++%5Cbegin%7Bbmatrix%7D+f%28a%29+%5C%5C+f%28a%2Bh%29+%5C%5C+f%28a%2B2h%29+%5C%5C+f%28a%2B3h%29+%5C%5C+...+%5C%5C+f%28a+%2B+%28n-2%29+h%29+%5C%5C+f%28b%29++%5Cend%7Bbmatrix%7D+%2F+%282h%29+%3D+D+%7Cf%5Crangle++" data-lightbox="roadtrip" data-title="用python学量子力学 1 知乎">
+						<img class="card-img" src="https://www.zhihu.com/equation?tex=%7Bdf+%5Cover+dx%7D+%3D+%5Cbegin%7Bbmatrix%7D++0+%26+1+%26+0+%26++0+%26+...%26+0+%26+0+%5C%5C+++++++++++++++++++++++++++++++++++++++++++++++-1+%26+0+%26+1+%26++0+%26...%26+0+%26+0+%5C%5C++++++++++0+%26+-1+%26+0+%26+1+%26+...%26+0+%26+0+%5C%5C+0+%26++0+%26+-1+%26+0+%26+...%26+0+%26+0+%5C%5C+...+%26++...+%26+...+%26+...+%26+...%26+...+%26+...%5C%5C+0+%26++0+%26+0+%26+0+%26+...%26+0+%26+1+%5C%5C+0+%26++0+%26+0+%26+0+%26++...%26+-1+%26+0+%5C%5C+%5Cend%7Bbmatrix%7D++%5Cbegin%7Bbmatrix%7D+f%28a%29+%5C%5C+f%28a%2Bh%29+%5C%5C+f%28a%2B2h%29+%5C%5C+f%28a%2B3h%29+%5C%5C+...+%5C%5C+f%28a+%2B+%28n-2%29+h%29+%5C%5C+f%28b%29++%5Cend%7Bbmatrix%7D+%2F+%282h%29+%3D+D+%7Cf%5Crangle++" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVBGelqrJS84gHDqIDmiU5ji1cY8jNJ-ByixNZ2QEipRw_0-AVFh7iblijfkGdqbQcvw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				用python学量子力学 1 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic1.zhimg.com/v2-e0bce5941f417e18f5bc4b8320648a99_720w.jpg?source=172ae18b" data-lightbox="roadtrip" data-title="用python 学哈密顿力学 2 知乎">
+						<img class="card-img" src="https://pic1.zhimg.com/v2-e0bce5941f417e18f5bc4b8320648a99_720w.jpg?source=172ae18b" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ49DhruVNQhWoVVfAX1Ahf1sFW_4sDsvOSsIN8ZtgFPJcmCu33yDgOREncsU7VS1YqIT0';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				用python 学哈密顿力学 2 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://img10.360buyimg.com/imgzone/jfs/t1/87271/21/3083/278221/5ddcb876E6c271d1f/71feb89163154cf8.png" data-lightbox="roadtrip" data-title="张三慧大学物理学第四版第4版第四版力学 热学 电磁学 光学 量子物理 学习辅导与习题解 摘要书评试读 京东图书">
+						<img class="card-img" src="https://img10.360buyimg.com/imgzone/jfs/t1/87271/21/3083/278221/5ddcb876E6c271d1f/71feb89163154cf8.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8Ywkkq7lbN8Ae4XN2AsUZrF8CToaQqSWlOJn-i4Ky1zwU7Wmmv7e-_sFbLf5s2NpafR8';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				张三慧大学物理学第四版第4版第四版力学 热学 电磁学 光学 量子物理 学习辅导与习题解 摘要书评试读 京东图书
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic3.zhimg.com/v2-62d0f2e0569d393aac14e70824d3969e_b.jpg" data-lightbox="roadtrip" data-title="手把手教你用python处理非平稳时间序列 附代码 知乎">
+						<img class="card-img" src="https://pic3.zhimg.com/v2-62d0f2e0569d393aac14e70824d3969e_b.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLwQ_VoOf1QY8tE-YtdE994T_kHDcDmZ7nSQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				手把手教你用python处理非平稳时间序列 附代码 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic3.zhimg.com/v2-d5de0d766b873eaed4f9907c6b0563b6_b.jpg" data-lightbox="roadtrip" data-title="手把手教你用python处理非平稳时间序列 附代码 知乎">
+						<img class="card-img" src="https://pic3.zhimg.com/v2-d5de0d766b873eaed4f9907c6b0563b6_b.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPzU5ifQcgNHw7xzU7lziH4QjizuaithYgCw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				手把手教你用python处理非平稳时间序列 附代码 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic3.zhimg.com/v2-a784b346101775cf46e4d288455464da_b.jpg" data-lightbox="roadtrip" data-title="手把手教你用python处理非平稳时间序列 附代码 知乎">
+						<img class="card-img" src="https://pic3.zhimg.com/v2-a784b346101775cf46e4d288455464da_b.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAPZD7Pi-gO5CzMNdpBY6QgbHiHMZv4470fg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				手把手教你用python处理非平稳时间序列 附代码 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic1.zhimg.com/v2-9fef7f91d68e8a386eef458291e18f80_b.jpg" data-lightbox="roadtrip" data-title="手把手教你用python处理非平稳时间序列 附代码 知乎">
+						<img class="card-img" src="https://pic1.zhimg.com/v2-9fef7f91d68e8a386eef458291e18f80_b.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjMx0xv4Fj2bWoEntlzob1rTYSMSs_24FWIA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				手把手教你用python处理非平稳时间序列 附代码 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://img30.360buyimg.com/popWaterMark/jfs/t1/87672/6/11645/356134/5e37cb8bE409e3a23/5fbcf8c2cceb07b6.jpg" data-lightbox="roadtrip" data-title="张三慧大学物理学第四版第4版第四版力学 热学 电磁学 光学 量子物理 学习辅导与习题解 摘要书评试读 京东图书">
+						<img class="card-img" src="http://img30.360buyimg.com/popWaterMark/jfs/t1/87672/6/11645/356134/5e37cb8bE409e3a23/5fbcf8c2cceb07b6.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR94XFZ8lSzqoV8amirhjZwxEXayRo4DFc2BA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				张三慧大学物理学第四版第4版第四版力学 热学 电磁学 光学 量子物理 学习辅导与习题解 摘要书评试读 京东图书
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://img30.360buyimg.com/popWaterMark/jfs/t1/87787/6/11540/305913/5e37cb8bEb7a09e95/9d3311ed279a51c0.jpg" data-lightbox="roadtrip" data-title="张三慧大学物理学第四版第4版第四版力学 热学 电磁学 光学 量子物理 学习辅导与习题解 摘要书评试读 京东图书">
+						<img class="card-img" src="http://img30.360buyimg.com/popWaterMark/jfs/t1/87787/6/11540/305913/5e37cb8bEb7a09e95/9d3311ed279a51c0.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQncMAZ33g6pZxOg31suXQ_RdGRjjgV9FKlKg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				张三慧大学物理学第四版第4版第四版力学 热学 电磁学 光学 量子物理 学习辅导与习题解 摘要书评试读 京东图书
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://img30.360buyimg.com/popWaterMark/jfs/t1/89421/33/11493/249550/5e37cb8bE2debc592/4f17682543d3d076.jpg" data-lightbox="roadtrip" data-title="张三慧大学物理学第四版第4版第四版力学 热学 电磁学 光学 量子物理 学习辅导与习题解 摘要书评试读 京东图书">
+						<img class="card-img" src="http://img30.360buyimg.com/popWaterMark/jfs/t1/89421/33/11493/249550/5e37cb8bE2debc592/4f17682543d3d076.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIO09H32w-xt8C36n0r5sDLVj2eF4962OCHA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				张三慧大学物理学第四版第4版第四版力学 热学 电磁学 光学 量子物理 学习辅导与习题解 摘要书评试读 京东图书
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://img30.360buyimg.com/popWaterMark/jfs/t1/85939/2/11477/232803/5e37cb89Ee8f779fc/70656c80d9472535.jpg" data-lightbox="roadtrip" data-title="张三慧大学物理学第四版第4版第四版力学 热学 电磁学 光学 量子物理 学习辅导与习题解 摘要书评试读 京东图书">
+						<img class="card-img" src="http://img30.360buyimg.com/popWaterMark/jfs/t1/85939/2/11477/232803/5e37cb89Ee8f779fc/70656c80d9472535.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTN7SUf8ziWxEid8k6myOo3pX8wzLC60BKtVw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				张三慧大学物理学第四版第4版第四版力学 热学 电磁学 光学 量子物理 学习辅导与习题解 摘要书评试读 京东图书
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://img30.360buyimg.com/popWaterMark/jfs/t1/94916/40/11644/187871/5e37cb8aE4f1d96d5/8cd46a7def2e12e5.jpg" data-lightbox="roadtrip" data-title="张三慧大学物理学第四版第4版第四版力学 热学 电磁学 光学 量子物理 学习辅导与习题解 摘要书评试读 京东图书">
+						<img class="card-img" src="http://img30.360buyimg.com/popWaterMark/jfs/t1/94916/40/11644/187871/5e37cb8aE4f1d96d5/8cd46a7def2e12e5.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0ICp1awZelpMo4W4-pLP1sMg715xiSf6QGg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				张三慧大学物理学第四版第4版第四版力学 热学 电磁学 光学 量子物理 学习辅导与习题解 摘要书评试读 京东图书
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://img30.360buyimg.com/popWaterMark/jfs/t1/95292/33/11649/258392/5e37cb8cEf024d3ba/18488bc6142cfb49.jpg" data-lightbox="roadtrip" data-title="张三慧大学物理学第四版第4版第四版力学 热学 电磁学 光学 量子物理 学习辅导与习题解 摘要书评试读 京东图书">
+						<img class="card-img" src="http://img30.360buyimg.com/popWaterMark/jfs/t1/95292/33/11649/258392/5e37cb8cEf024d3ba/18488bc6142cfb49.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDltt8PEavenn-HxL39A7vKNCapL12Hm8xfg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				张三慧大学物理学第四版第4版第四版力学 热学 电磁学 光学 量子物理 学习辅导与习题解 摘要书评试读 京东图书
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://d229noksprj98s.cloudfront.net/wp-content/uploads/2020/10/probing-nonclassicality-with-matrices-of-phase-space-distributions.png" data-lightbox="roadtrip" data-title="量子蒸汽朋克入侵 科學美國人">
+						<img class="card-img" src="https://d229noksprj98s.cloudfront.net/wp-content/uploads/2020/10/probing-nonclassicality-with-matrices-of-phase-space-distributions.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5qW8gd-kUCZ4qGALBglVucAtbsbNOr5uMZQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				量子蒸汽朋克入侵 科學美國人
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://img30.360buyimg.com/popWaterMark/jfs/t1/91923/1/11593/234379/5e37cb8cEe2b3442b/bf115a007cbee9cf.jpg" data-lightbox="roadtrip" data-title="张三慧大学物理学第四版第4版第四版力学 热学 电磁学 光学 量子物理 学习辅导与习题解 摘要书评试读 京东图书">
+						<img class="card-img" src="http://img30.360buyimg.com/popWaterMark/jfs/t1/91923/1/11593/234379/5e37cb8cEe2b3442b/bf115a007cbee9cf.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdlOqiluVbWNkGoTHL6mdDWe7Kfuxf-i6a9A';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				张三慧大学物理学第四版第4版第四版力学 热学 电磁学 光学 量子物理 学习辅导与习题解 摘要书评试读 京东图书
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.amazonaws.com%2F0%2F192457%2F3e551403-893b-cfb5-6094-a862422adbff.gif?ixlib=rb-1.2.2&amp;auto=format&amp;gif-q=60&amp;q=75&amp;s=2a8c44a9b0dbf1612369b4dd4cc973ad" data-lightbox="roadtrip" data-title="Pythonによる科学 技術計算 時間に依存する1次元シュレディンガー方程式の数値解法 量子ダイナミクス 散乱現象 トンネル効果 偏微分方程式 量子力学 Qiita">
+						<img class="card-img" src="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.amazonaws.com%2F0%2F192457%2F3e551403-893b-cfb5-6094-a862422adbff.gif?ixlib=rb-1.2.2&amp;auto=format&amp;gif-q=60&amp;q=75&amp;s=2a8c44a9b0dbf1612369b4dd4cc973ad" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9pu9XahlbEuX5sQfBc40m4qHEnhFyIstTCA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Pythonによる科学 技術計算 時間に依存する1次元シュレディンガー方程式の数値解法 量子ダイナミクス 散乱現象 トンネル効果 偏微分方程式 量子力学 Qiita
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+		
+	</div>
+
+		 
+		
+		
+				</div>
+				<div class="col-sm-12 widget">
+					<div class="d-block p-4">
+	<center>
+		<!-- BOTTOM BANNER ADS -->
+<script async="async" data-cfasync="false" src="//jc32arlvqpv8.com/eb47a424ae325c90cca32780149785c3/invoke.js"></script>
+<div id="container-eb47a424ae325c90cca32780149785c3"></div>
+
+	</center>
+</div>				</div>
+			</div>
+			<div class="row footer">
+				<div class="col-md-12 text-center py-4">
+										<a href="/p/dmca.html">Dmca</a>
+										<a href="/p/contact.html">Contact</a>
+										<a href="/p/privacy-policy.html">Privacy Policy</a>
+										<a href="/p/copyright.html">Copyright</a>
+					
+				</div>
+			</div>
+		</main>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js" integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js" integrity="sha256-CtKylYan+AJuoH8jrMht1+1PMhMqrKnB8K5g012WN5I=" crossorigin="anonymous"></script>
+		
+		<!-- Footer CSS JS -->
+		
+		
+		
+			<script type='text/javascript' src='//jc32arlvqpv8.com/ef/d5/10/efd510237a3143727bed46803ec35b8d.js'></script>
+</body>
+</html>

@@ -1,0 +1,682 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha256-L/W5Wfqfa0sdBNIKN9cG6QA5F2qx4qICmU2VgLruv9Y=" crossorigin="anonymous" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/css/lightbox.min.css" integrity="sha256-tBxlolRHP9uMsEFKVk+hk//ekOlXOixLKvye5W2WR5c=" crossorigin="anonymous" />
+		<link href="https://fonts.googleapis.com/css?family=Mr+Dafoe" rel="stylesheet" type="text/css">
+
+		<style type="text/css">
+			html,body{font-family:"Open Sans",Arial,sans-serif;font-size:14px;font-weight:400;background:#f3f3f3 url(https://cdn.comsol.com/wordpress/sites/1/2019/11/hyperthermia-therapy-multiphysics-couplings.png
+) no-repeat center center fixed;background-size:cover;height:100%}#title{font-family:"Mr Dafoe",Times,serif;font-size:34px;background:rgba(255,255,255,.8);margin-bottom:34px}.header{padding-bottom:13px;margin-bottom:13px;border-bottom:1px solid #eee}a{color:#26ADE4;text-decoration:none}#title a{color:#333;margin-left:21px}#title a:hover{text-decoration:none;color:#26ADE4}.sidebar ul{margin:0;padding:0}.sidebar ul li{list-style:none}.footer{margin-top:21px;padding-top:13px;border-top:1px solid #eee}.footer a{margin:0 15px}.navi{margin:13px 0 13px 0;padding:13px}.navi a{margin:5px 2px;font-size:95%}.main{margin-top: 6rem;}.form-inline .form-control{min-width: 300px;}.v-cover{height: 380px; object-fit: cover;}.v-image{height: 200px; object-fit: cover;}.dwn-cover{max-height: 460px; object-fit: cover;}.main{margin-top: 6rem;}.form-inline .form-control{min-width: 300px;}			
+		</style>
+
+		<title>生物学的熱方程式</title>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/", 
+  "@type": "Article", 
+  "author": {
+    "@type": "Person",
+    "name": "James"
+  },
+  "headline": "生物学的熱方程式",
+  "datePublished": "2021-04-24",
+  "image": [https://warbletoncouncil.org/img/science/reaccin-endotrmica-caractersticas-ecuaciones-y-ejemplos-6.webp,https://cdn.comsol.com/wordpress/sites/1/2019/11/settings-window-liver-material.png,https://cdn.comsol.com/wordpress/sites/1/2019/11/thermal-damage-settings-arrhenius-kinetics.png],
+  "publisher": {
+    "@type": "Organization",
+    "name": "Tukang Parkir Gerobak",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://via.placeholder.com/512.png?text=生物学的熱方程式",
+      "width": 512,
+      "height": 512
+    }
+  }
+}
+</script>
+		<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-957NGNKQ70"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-957NGNKQ70');
+</script>
+
+<script type='text/javascript' src='//jc32arlvqpv8.com/1a/82/2e/1a822ef8a40a0fbab3c4ea12a5d2bb02.js'></script>
+</head>
+	<body>
+		<header class="bg-white fixed-top">			
+			<nav class="navbar navbar-light bg-white mb-0">
+				<div class="container justify-content-center justify-content-sm-between">	
+				  <a href="/" title="Blog" class="navbar-brand mb-1">Blog</a>
+				  				</div>			  
+			</nav>				
+		</header>
+		<main class="main container bg-white">
+			<div class="col-md-12 my-4" align="center">
+				<div class="d-block p-4">
+	<br/><center>
+<!-- TOP BANNER ADS -->
+</center><br/>
+</div>			</div>
+			<div class="row header">
+				<div class="col-sm-12 text-center p-2">
+						<h1>生物学的熱方程式</h1>
+
+	
+	<div class="navi text-center">
+										<a class="badge badge-warning" href="/%E7%86%B1%E4%BC%9D%E5%B0%8E%E6%96%B9%E7%A8%8B%E5%BC%8F-%E7%99%BA%E7%86%B1%E9%A0%85.html">熱伝導方程式 発熱項</a>
+											<a class="badge badge-success" href="/%E7%BE%A9%E7%90%86%E3%81%AE%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%A8.html">義理のお父さんと</a>
+											<a class="badge badge-success" href="/%E7%9F%B3%E4%BA%95%E3%81%AE%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%82%E3%82%8A%E3%81%8C%E3%81%A8%E3%81%86-%E6%98%A0%E7%94%BB.html">石井のお父さんありがとう 映画</a>
+											<a class="badge badge-warning" href="/%E7%A7%81-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93-%E3%81%AE-%E5%AD%90%E4%BE%9B-%E5%A6%8A%E5%A8%A0-%E3%81%99%E3%82%8B.html">私 お父さん の 子供 妊娠 する</a>
+											<a class="badge badge-success" href="/%E6%AF%8D%E4%B9%B3%E3%81%8C%E6%9F%93%E3%81%BF%E5%87%BA%E3%82%8B%E6%84%9B%E5%A8%98-%E6%84%9B%E7%BE%8E-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93-%E7%A7%81%E3%81%AE%E3%83%9F%E3%83%AB%E3%82%AF%E3%81%9F%E3%81%8F%E3%81%95%E3%82%93%E6%90%BE%E3%81%A3%E3%81%A6%E6%AC%B2%E3%81%97%E3%81%84%E3%81%AE.html">母乳が染み出る愛娘 愛美 お父さん 私のミルクたくさん搾って欲しいの</a>
+											<a class="badge badge-danger" href="/%E8%BF%91%E8%A6%AA-%E7%84%A1%E8%A8%80-%E7%9B%B8%E5%A7%A6-%E9%9A%A3%E3%81%AB%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%8C%E3%81%84%E3%82%8B%E3%81%AE%E3%82%88-%E7%AF%A0%E7%94%B0%E3%81%82%E3%82%86%E3%81%BF.html">近親 無言 相姦 隣にお父さんがいるのよ 篠田あゆみ</a>
+											<a class="badge badge-warning" href="/%E7%A7%81-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%AE%E5%AD%90%E4%BE%9B%E5%A6%8A%E5%A8%A0%E3%81%99%E3%82%8B-%E5%A5%B3%E5%AD%90%E6%A0%A1%E7%94%9F%E3%81%AE%E3%83%87%E3%82%AB%E5%B0%BB%E5%A8%98%E3%81%8C%E7%AA%81%E7%84%B6%E8%A8%AA%E3%81%AD.html">私 お父さんの子供妊娠する 女子校生のデカ尻娘が突然訪ね</a>
+											<a class="badge badge-secondary" href="/%E6%99%82%E9%96%93-%E3%81%AB-%E4%BE%9D%E5%AD%98-%E3%81%99%E3%82%8B-%E3%82%B7%E3%83%A5%E3%83%AC%E3%83%BC-%E3%83%87%E3%82%A3%E3%83%B3%E3%82%AC%E3%83%BC-%E6%96%B9%E7%A8%8B%E5%BC%8F.html">時間 に 依存 する シュレー ディンガー 方程式</a>
+											<a class="badge badge-warning" href="/%EF%BC%92%E6%AC%A1%E6%96%B9%E7%A8%8B%E5%BC%8F-%E9%80%86%E9%96%A2%E6%95%B0.html">２次方程式 逆関数</a>
+											<a class="badge badge-light" href="/%E8%A6%AA%E5%8F%8B%E3%81%AE%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%AB%E4%B8%AD%E5%87%BA%E3%81%97%E3%81%95%E3%82%8C%E3%82%8B%E3%81%AA%E3%82%93%E3%81%A6-%E5%BE%8C%E8%97%A4%E9%87%8C%E9%A6%99-%E6%B3%A2%E5%A4%9A%E9%87%8E%E7%B5%90%E8%A1%A3.html">親友のお父さんに中出しされるなんて 後藤里香 波多野結衣</a>
+											<a class="badge badge-info" href="/%E7%A7%81%E3%81%AF%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%AB%E8%B2%B7%E3%81%A3%E3%81%A6%E3%82%82%E3%82%89%E3%81%A3%E3%81%9F%E6%99%82%E8%A8%88%E3%82%92%E6%8C%81%E3%81%A3%E3%81%A6%E3%81%84%E3%82%8B%E8%8B%B1%E8%AA%9E.html">私はお父さんに買ってもらった時計を持っている英語</a>
+											<a class="badge badge-danger" href="/%E9%9D%9E%E7%B7%9A%E5%9E%8B%E7%99%BA%E5%B1%95%E6%96%B9%E7%A8%8B%E5%BC%8F%E3%81%AE%E5%AE%9F%E8%A7%A3%E6%9E%90%E7%9A%84%E6%96%B9%E6%B3%95-%E8%A9%95%E5%88%A4.html">非線型発展方程式の実解析的方法 評判</a>
+											<a class="badge badge-light" href="/%E8%A2%AB%E5%AE%B3%E8%80%85%E3%81%AE%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93-%E3%83%84%E3%82%A4%E3%83%83%E3%82%BF%E3%83%BC.html">被害者のお父さん ツイッター</a>
+											<a class="badge badge-dark" href="/%E7%88%86%E8%A3%82-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93-%E6%84%8F%E5%9C%B0-%E6%99%B4.html">爆裂 お父さん 意地 晴</a>
+											<a class="badge badge-success" href="/%E7%9B%B8%E5%A7%A6-%E9%9A%A3%E3%81%AB%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%8C%E3%81%84%E3%82%8B%E3%81%AE%E3%82%88-%E7%AC%B9%E5%B1%B1%E5%B8%8C.html">相姦 隣にお父さんがいるのよ 笹山希</a>
+						</div>
+<center>
+	<!-- MIDDLE BANNER ADS -->
+<script type="text/javascript">
+	atOptions = {
+		'key' : '2b77887421e2587a1a1b1d7c8a31a9e0',
+		'format' : 'iframe',
+		'height' : 250,
+		'width' : 300,
+		'params' : {}
+	};
+	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://jc32arlvqpv8.com/2b77887421e2587a1a1b1d7c8a31a9e0/invoke.js"></scr' + 'ipt>');
+</script>
+		
+	</center>
+					
+				</div>
+			</div>
+			<div class="row content mb-4">
+				<div class="col-md-12">					
+					
+	
+	<div class="card-columns">
+						
+	  <div class='card'>
+	  	<a href="https://cdn.comsol.com/wordpress/sites/1/2019/11/liver-damage-numerical-prediction.png" data-lightbox="roadtrip" data-title="生物组织中的传热与热损伤分析 Comsol 博客">
+						<img class="card-img" src="https://cdn.comsol.com/wordpress/sites/1/2019/11/liver-damage-numerical-prediction.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPy27iBDmHj4z_KLAp6ToXQBen885Q8YV6E2LoaDoDEDlge4FTT6RSBCaeqoovf3YUdu4';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				生物组织中的传热与热损伤分析 Comsol 博客
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://cdn.comsol.com/wordpress/sites/2/2019/11/COMSOL_Blog_ModelImgs_TumorAblation_ogImg-1.png" data-lightbox="roadtrip" data-title="生物组织中的传热与热损伤分析 Comsol 博客">
+						<img class="card-img" src="https://cdn.comsol.com/wordpress/sites/2/2019/11/COMSOL_Blog_ModelImgs_TumorAblation_ogImg-1.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRB6OFdRoBl4a8KwUlu6PO6UjGIxh-iX_6rn_xSHMNCapVos9oXb53gZu8vQMVY245x2II';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				生物组织中的传热与热损伤分析 Comsol 博客
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://i.kyhistotechs.com/img/international-journal-of-impotence-research/84/engineering-analysis-bioheat-equation.jpg" data-lightbox="roadtrip" data-title="生物热方程和阴茎血流动力学关系在勃起功能障碍诊断中的工程分析 第二部分 使用anova和taguchi方法进行模型优化国际阳痿研究杂志">
+						<img class="card-img" src="https://i.kyhistotechs.com/img/international-journal-of-impotence-research/84/engineering-analysis-bioheat-equation.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZjup6OFNruZE-A_tvGjCBxhDDFmwdRN7xZoazUE6VY4mYEobmrBrXM7ptrLO8_FNkrQE';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				生物热方程和阴茎血流动力学关系在勃起功能障碍诊断中的工程分析 第二部分 使用anova和taguchi方法进行模型优化国际阳痿研究杂志
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://cdn.comsol.com/wordpress/sites/1/2019/11/numerical-prediction-tissue-damage.png" data-lightbox="roadtrip" data-title="生物组织中的传热与热损伤分析 Comsol 博客">
+						<img class="card-img" src="https://cdn.comsol.com/wordpress/sites/1/2019/11/numerical-prediction-tissue-damage.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQja-jOgCIAkIumk-3n5Ksr2oGKFY4cYdNWywZJoqWStGy13IQVnupF2JscNTAsWXafsWw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				生物组织中的传热与热损伤分析 Comsol 博客
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://nimg.ws.126.net/?url=http%3A%2F%2Fdingyue.ws.126.net%2F2020%2F1101%2F07365a30p00qj44fe00abd200u000j5g00g200a8.png&amp;thumbnail=650x2147483647&amp;quality=80&amp;type=jpg" data-lightbox="roadtrip" data-title="6国名校 豪华天团 论剑合成生物学 千亿新市场潜力 本世纪标志性新兴科技之一 赵国屏 保罗 化学 遗传学 网易订阅">
+						<img class="card-img" src="https://nimg.ws.126.net/?url=http%3A%2F%2Fdingyue.ws.126.net%2F2020%2F1101%2F07365a30p00qj44fe00abd200u000j5g00g200a8.png&amp;thumbnail=650x2147483647&amp;quality=80&amp;type=jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTN0B2uM1aDdaL0Z9nq4qJ68M0UP3hasW3iTVhBY-HFFJZym_vmD1rLcOtHzuwiZHyBlNo';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				6国名校 豪华天团 论剑合成生物学 千亿新市场潜力 本世纪标志性新兴科技之一 赵国屏 保罗 化学 遗传学 网易订阅
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://cdn.comsol.com/wordpress/sites/1/2019/11/probe-positions-temperature-distribution.png" data-lightbox="roadtrip" data-title="生物组织中的传热与热损伤分析 Comsol 博客">
+						<img class="card-img" src="https://cdn.comsol.com/wordpress/sites/1/2019/11/probe-positions-temperature-distribution.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQr7iT9HNnoT3uIueWH0Gon_dqApV8tF4Zr7nL30DkJjJWrIfZpVyeLCoQYZd37G0VovkE';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				生物组织中的传热与热损伤分析 Comsol 博客
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+				<div class='card'>	
+			<div class="d-block p-4">
+	</div>		  	
+		  	<h3 class="h6 p-2"><b></b></h3>
+					</div>
+		
+						
+	  <div class='card'>
+	  	<a href="https://img95.699pic.com/xsj/0p/o1/jq.jpg!/fw/700/watermark/url/L3hzai93YXRlcl9kZXRhaWwyLnBuZw/align/southeast" data-lightbox="roadtrip" data-title="人脑的形状scienctific 符号 数学 化学 生物学 物理 几何的公式和方程式黑色背景3d 插图照片 正版商用图片0po1jq 摄图新视界">
+						<img class="card-img" src="https://img95.699pic.com/xsj/0p/o1/jq.jpg!/fw/700/watermark/url/L3hzai93YXRlcl9kZXRhaWwyLnBuZw/align/southeast" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQImrtbfoyT4PDipqSmEbWdNS1sh_c2zbJ4-c4borQeAny_QmQOLZfVb0vSxheiKIGbRgQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				人脑的形状scienctific 符号 数学 化学 生物学 物理 几何的公式和方程式黑色背景3d 插图照片 正版商用图片0po1jq 摄图新视界
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://cdn.comsol.com/wordpress/sites/1/2019/11/thermal-damage-settings-arrhenius-kinetics.png" data-lightbox="roadtrip" data-title="生物组织中的传热与热损伤分析 Comsol 博客">
+						<img class="card-img" src="https://cdn.comsol.com/wordpress/sites/1/2019/11/thermal-damage-settings-arrhenius-kinetics.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShui25Uqdg5ZtBG4q_1MulYG56lHtxAIf2K1lyGb8SyGFlSRWAprQIU1duQBOOFdFYC-U';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				生物组织中的传热与热损伤分析 Comsol 博客
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://cdn.comsol.com/wordpress/sites/1/2019/11/hyperthermia-therapy-multiphysics-couplings.png" data-lightbox="roadtrip" data-title="生物组织中的传热与热损伤分析 Comsol 博客">
+						<img class="card-img" src="https://cdn.comsol.com/wordpress/sites/1/2019/11/hyperthermia-therapy-multiphysics-couplings.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYCDta1IKJPKTYkzizcRojf73qgTYFFy3mBijq9irPlQ3YO-f1IOYioc_h-mgH-NiqhTA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				生物组织中的传热与热损伤分析 Comsol 博客
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Elmer-pump-heatequation.png/350px-Elmer-pump-heatequation.png" data-lightbox="roadtrip" data-title="微分方程 维基百科 自由的百科全书">
+						<img class="card-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Elmer-pump-heatequation.png/350px-Elmer-pump-heatequation.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRFy6JGLeZlewrQ1E8MfhaEFTPVuSREmyrqlwa41kprfP8PyzYPw_yUR8KWiyV9sLtr-s';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				微分方程 维基百科 自由的百科全书
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Airflow-Obstructed-Duct.png/1200px-Airflow-Obstructed-Duct.png" data-lightbox="roadtrip" data-title="微分方程 维基百科 自由的百科全书">
+						<img class="card-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Airflow-Obstructed-Duct.png/1200px-Airflow-Obstructed-Duct.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrTxXWUsLkZQpRMwSMxhx5Pkd0_xE01cq3x2x3Ex5vJmbtuEeI1yFlh1pFgtlRdJmAsak';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				微分方程 维基百科 自由的百科全书
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://warbletoncouncil.org/img/science/reaccin-endotrmica-caractersticas-ecuaciones-y-ejemplos-6.webp" data-lightbox="roadtrip" data-title="吸热反应 特征 方程式和例子 科学">
+						<img class="card-img" src="https://warbletoncouncil.org/img/science/reaccin-endotrmica-caractersticas-ecuaciones-y-ejemplos-6.webp" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTndfinRQONCzP42oZRwGOhnaxjJl_zWGVZgrlj6FvTRDIgibZ7Q9LSlDSoEoFFn1TpHQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				吸热反应 特征 方程式和例子 科学
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://nimg.ws.126.net/?url=http%3A%2F%2Fdingyue.ws.126.net%2F2020%2F1227%2Ffeb663b6p00qlzv870044d200ku00bog00id00aa.png&amp;thumbnail=650x2147483647&amp;quality=80&amp;type=jpg" data-lightbox="roadtrip" data-title="诺奖技术酶定向进化工程缘何成为合成生物学领域 吸金王 丨专访瑞德林生物刘建 阿诺德 化学 网易订阅">
+						<img class="card-img" src="https://nimg.ws.126.net/?url=http%3A%2F%2Fdingyue.ws.126.net%2F2020%2F1227%2Ffeb663b6p00qlzv870044d200ku00bog00id00aa.png&amp;thumbnail=650x2147483647&amp;quality=80&amp;type=jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVlvkH9X3ntqvxDzFSD6ZAKrCZacs1Lb547u0mRQz9SzBTDXQxPmXWkR1ybrU_3KM45f0';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				诺奖技术酶定向进化工程缘何成为合成生物学领域 吸金王 丨专访瑞德林生物刘建 阿诺德 化学 网易订阅
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://upload.wikimedia.org/wikipedia/commons/c/c7/Z-scheme_zh.png" data-lightbox="roadtrip" data-title="光合作用 维基百科 自由的百科全书">
+						<img class="card-img" src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Z-scheme_zh.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwnT1Au82WePC3aJjbdZW-TGYLVjTsdAJvbdS7F39RXO2nMZJHwcFqIqqYsbF84gTRYw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				光合作用 维基百科 自由的百科全书
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://cdn.comsol.com/wordpress/sites/1/2019/11/settings-window-liver-material.png" data-lightbox="roadtrip" data-title="生物组织中的传热与热损伤分析 Comsol 博客">
+						<img class="card-img" src="https://cdn.comsol.com/wordpress/sites/1/2019/11/settings-window-liver-material.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfsDf56R6mKm1XrW1_7i-fVIqP6s6JtcQv8R7CZ8bX0CEtSCjfLIGBtGZkG5GQ975wiLY';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				生物组织中的传热与热损伤分析 Comsol 博客
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic3.zhimg.com/v2-6a2c114b6d86faaea7c2935e091e1ce6_b.jpg" data-lightbox="roadtrip" data-title="2021年东北师范大学生物学考研经验贴分享 知乎">
+						<img class="card-img" src="https://pic3.zhimg.com/v2-6a2c114b6d86faaea7c2935e091e1ce6_b.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWGo7Y8R5jbswxFULnfFWL5002uV7jRPpJp_fCa71NUoyN2PVCUnjrxOEwFBlK2Foifn8';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				2021年东北师范大学生物学考研经验贴分享 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://i1.hdslb.com/bfs/archive/6e44249d6ad66616315978f126874d858e99458f.jpg" data-lightbox="roadtrip" data-title="第3课时热化学方程式 哔哩哔哩 つロ干杯 Bilibili">
+						<img class="card-img" src="http://i1.hdslb.com/bfs/archive/6e44249d6ad66616315978f126874d858e99458f.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6nvmG4REVAbEj7k058vLbA2AljjDk1MIJtxMS4bEy9fBV20xCTPeehyoYx4bjRH-j0dQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				第3课时热化学方程式 哔哩哔哩 つロ干杯 Bilibili
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://nimg.ws.126.net/?url=http%3A%2F%2Fdingyue.ws.126.net%2F2020%2F1125%2Fd1a39077j00qkcppl001pd200u000gwg00id00ac.jpg&amp;thumbnail=650x2147483647&amp;quality=80&amp;type=jpg" data-lightbox="roadtrip" data-title="Ib 生物 我 致力于拯救全人类 英语 生物学 化学 数学 科学 网易订阅">
+						<img class="card-img" src="https://nimg.ws.126.net/?url=http%3A%2F%2Fdingyue.ws.126.net%2F2020%2F1125%2Fd1a39077j00qkcppl001pd200u000gwg00id00ac.jpg&amp;thumbnail=650x2147483647&amp;quality=80&amp;type=jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSfKU2uo25VMXONAOYlHYMSA-ugnOUSLeCQD2AjNIUvmR73KIe4YSpxpXkaAlz-_EHRNI';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Ib 生物 我 致力于拯救全人类 英语 生物学 化学 数学 科学 网易订阅
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://img.google-info.cn/storage/big/1601706.jpg?9cce68c2b1a2fc031cf72e8bf77ff8c8=5612e201e861e57e8aae684998fa23d7" data-lightbox="roadtrip" data-title="这是什么希尔方程 生物化学 百科全书">
+						<img class="card-img" src="https://img.google-info.cn/storage/big/1601706.jpg?9cce68c2b1a2fc031cf72e8bf77ff8c8=5612e201e861e57e8aae684998fa23d7" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRw2p74A05wB1FAooHqXdTXPoVBdOzPjba_QrIQvCFHDzeyG6UlnJ4HVo-Xx_r0hXKGNJs';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				这是什么希尔方程 生物化学 百科全书
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic3.zhimg.com/80/v2-3d4c83c041ce4542018137eb122a6936_1440w.jpg" data-lightbox="roadtrip" data-title="2021年东北师范大学生物学考研经验贴分享 知乎">
+						<img class="card-img" src="https://pic3.zhimg.com/80/v2-3d4c83c041ce4542018137eb122a6936_1440w.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2ejcR-lf3xpoOwsgOFUhI1k9ELRBCaU8oIcPd91nrXSl3z5JwgyEaKO7r_aBYYAvY6I8';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				2021年东北师范大学生物学考研经验贴分享 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://cdn.comsol.com/wordpress/sites/2/2020/03/COMSOL_Blog_ModelImgs_PackBedReactor_CoverImg.png" data-lightbox="roadtrip" data-title="多孔介质中的热平衡与热非平衡传热 Comsol 博客">
+						<img class="card-img" src="https://cdn.comsol.com/wordpress/sites/2/2020/03/COMSOL_Blog_ModelImgs_PackBedReactor_CoverImg.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvoJ1REojeWXuLu2aixAcb6RZsk7XN6SzP0w';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				多孔介质中的热平衡与热非平衡传热 Comsol 博客
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic4.zhimg.com/v2-7fdee895a5e9bd632cef3db7c00e61b7_b.jpg" data-lightbox="roadtrip" data-title="海洋科学 考研择校推荐 知乎">
+						<img class="card-img" src="https://pic4.zhimg.com/v2-7fdee895a5e9bd632cef3db7c00e61b7_b.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPvfKZgAKslsQ-wiWJs5lwIxsU3Uz08_1XPw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				海洋科学 考研择校推荐 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://gss0.baidu.com/-4o3dSag_xI4khGko9WTAnF6hhy/zhidao/pic/item/2fdda3cc7cd98d100576496f273fb80e7aec90c9.jpg" data-lightbox="roadtrip" data-title="高中生物化学方程式 三人行教育网 Www 3rxing Org">
+						<img class="card-img" src="https://gss0.baidu.com/-4o3dSag_xI4khGko9WTAnF6hhy/zhidao/pic/item/2fdda3cc7cd98d100576496f273fb80e7aec90c9.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyLo58dl8JRs5z7ALYTDunYNL93JnmOEzLIw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				高中生物化学方程式 三人行教育网 Www 3rxing Org
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic1.zhimg.com/v2-35b8501180e7893fba34920ce4890220_b.jpg" data-lightbox="roadtrip" data-title="清华学霸总结 高中热化学方程式 考点知识归纳 全网独一份 知乎">
+						<img class="card-img" src="https://pic1.zhimg.com/v2-35b8501180e7893fba34920ce4890220_b.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHEUGxBPfdnM2B2p3s_gSfwV5zfWfEwrs15w';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				清华学霸总结 高中热化学方程式 考点知识归纳 全网独一份 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://nimg.ws.126.net/?url=http%3A%2F%2Fdingyue.ws.126.net%2F2020%2F1008%2Fb86fe607j00qhvjes001sc000g300jym.jpg&amp;thumbnail=650x2147483647&amp;quality=80&amp;type=jpg" data-lightbox="roadtrip" data-title="初中必考化学方程式 13张图一网打尽 单质 通性 网易订阅">
+						<img class="card-img" src="https://nimg.ws.126.net/?url=http%3A%2F%2Fdingyue.ws.126.net%2F2020%2F1008%2Fb86fe607j00qhvjes001sc000g300jym.jpg&amp;thumbnail=650x2147483647&amp;quality=80&amp;type=jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNdPmT9BjR2IZm2WjP0xwca7B9PbtKWXYG5A';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				初中必考化学方程式 13张图一网打尽 单质 通性 网易订阅
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.biotechknowledgestudy.com/wp-content/uploads/2020/07/20191017085154242.png" data-lightbox="roadtrip" data-title="生物化学与分子生物学 酶促反应动力学 听课笔记 九 生物知识学习">
+						<img class="card-img" src="https://www.biotechknowledgestudy.com/wp-content/uploads/2020/07/20191017085154242.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9NmWN2hlxj3eMCU9HFS5T48B75Ks7Ofe5Vw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				生物化学与分子生物学 酶促反应动力学 听课笔记 九 生物知识学习
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://n.sinaimg.cn/sinakd10108/224/w576h448/20201123/d861-kefmphc6415379.jpg" data-lightbox="roadtrip" data-title="为什么我们不是球形 数学家艾伦 图灵对生物学的天才想法">
+						<img class="card-img" src="http://n.sinaimg.cn/sinakd10108/224/w576h448/20201123/d861-kefmphc6415379.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQErJxRYsMTpsJgdSiJH2tn43Jq2OIitBBjiQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				为什么我们不是球形 数学家艾伦 图灵对生物学的天才想法
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic.weblogographic.com/img/news/992/difference-between-heat-formation.jpg" data-lightbox="roadtrip" data-title="形成热和反应热之间的差异 2021 新闻">
+						<img class="card-img" src="https://pic.weblogographic.com/img/news/992/difference-between-heat-formation.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkYHkdGvVEOBPQ9KqNQGfcJGJpRrd-YIqcLA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				形成热和反应热之间的差异 2021 新闻
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic4.zhimg.com/v2-3c8d279cd327323f316b7de4cfc560f0_720w.jpg?source=172ae18b" data-lightbox="roadtrip" data-title="浙科版生物必修部分学考水平原文填空 知乎">
+						<img class="card-img" src="https://pic4.zhimg.com/v2-3c8d279cd327323f316b7de4cfc560f0_720w.jpg?source=172ae18b" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRr7MxSTHA91P9DuhpsKg4qcyBPkoXH6q8vTw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				浙科版生物必修部分学考水平原文填空 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://i0.hdslb.com/bfs/archive/1d701e9397e2c0b7b0e13a9c8509f32236ef1f01.jpg@320w_200h.webp" data-lightbox="roadtrip" data-title="生物散热 搜索结果 哔哩哔哩弹幕视频网 つロ乾杯 Bilibili">
+						<img class="card-img" src="https://i0.hdslb.com/bfs/archive/1d701e9397e2c0b7b0e13a9c8509f32236ef1f01.jpg@320w_200h.webp" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9a_pLStPqkKdPfsawdQWKhETlAdUFywNbBQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				生物散热 搜索结果 哔哩哔哩弹幕视频网 つロ乾杯 Bilibili
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Transketolase_%2B_TPP.png/400px-Transketolase_%2B_TPP.png" data-lightbox="roadtrip" data-title="酶 维基百科 自由的百科全书">
+						<img class="card-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Transketolase_%2B_TPP.png/400px-Transketolase_%2B_TPP.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaTQzbxOdacpFVcIapVTaCUVnPqn0XHLPFMw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				酶 维基百科 自由的百科全书
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic2.zhimg.com/v2-d4c15128d22ca731dce9403e80937cb9_b.jpg" data-lightbox="roadtrip" data-title="2021年东北师范大学生物学考研经验贴分享 知乎">
+						<img class="card-img" src="https://pic2.zhimg.com/v2-d4c15128d22ca731dce9403e80937cb9_b.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRn5ReEOBeorOMbmEQqMzWzPMvXlxsNTF8m0g';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				2021年东北师范大学生物学考研经验贴分享 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://p4.itc.cn/q_70/images03/20210109/236c9b0dc17848f7a53d483a81ffd089.jpeg" data-lightbox="roadtrip" data-title="高中生物学教材中用人名命名的专业术语及其由来 细胞">
+						<img class="card-img" src="http://p4.itc.cn/q_70/images03/20210109/236c9b0dc17848f7a53d483a81ffd089.jpeg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8YsHKc4ygszmgvbG7pEK7haDfGraQgJobqw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				高中生物学教材中用人名命名的专业术语及其由来 细胞
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+		
+	</div>
+
+		 
+		
+		
+				</div>
+				<div class="col-sm-12 widget">
+					<div class="d-block p-4">
+	<center>
+		<!-- BOTTOM BANNER ADS -->
+<script async="async" data-cfasync="false" src="//jc32arlvqpv8.com/eb47a424ae325c90cca32780149785c3/invoke.js"></script>
+<div id="container-eb47a424ae325c90cca32780149785c3"></div>
+
+	</center>
+</div>				</div>
+			</div>
+			<div class="row footer">
+				<div class="col-md-12 text-center py-4">
+										<a href="/p/dmca.html">Dmca</a>
+										<a href="/p/contact.html">Contact</a>
+										<a href="/p/privacy-policy.html">Privacy Policy</a>
+										<a href="/p/copyright.html">Copyright</a>
+					
+				</div>
+			</div>
+		</main>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js" integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js" integrity="sha256-CtKylYan+AJuoH8jrMht1+1PMhMqrKnB8K5g012WN5I=" crossorigin="anonymous"></script>
+		
+		<!-- Footer CSS JS -->
+		
+		
+		
+			<script type='text/javascript' src='//jc32arlvqpv8.com/ef/d5/10/efd510237a3143727bed46803ec35b8d.js'></script>
+</body>
+</html>

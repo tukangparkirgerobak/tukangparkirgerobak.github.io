@@ -1,0 +1,682 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha256-L/W5Wfqfa0sdBNIKN9cG6QA5F2qx4qICmU2VgLruv9Y=" crossorigin="anonymous" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/css/lightbox.min.css" integrity="sha256-tBxlolRHP9uMsEFKVk+hk//ekOlXOixLKvye5W2WR5c=" crossorigin="anonymous" />
+		<link href="https://fonts.googleapis.com/css?family=Mr+Dafoe" rel="stylesheet" type="text/css">
+
+		<style type="text/css">
+			html,body{font-family:"Open Sans",Arial,sans-serif;font-size:14px;font-weight:400;background:#f3f3f3 url(https://sugaku.fun/wp-content/uploads/2018/12/2018-12-25_171403.png
+) no-repeat center center fixed;background-size:cover;height:100%}#title{font-family:"Mr Dafoe",Times,serif;font-size:34px;background:rgba(255,255,255,.8);margin-bottom:34px}.header{padding-bottom:13px;margin-bottom:13px;border-bottom:1px solid #eee}a{color:#26ADE4;text-decoration:none}#title a{color:#333;margin-left:21px}#title a:hover{text-decoration:none;color:#26ADE4}.sidebar ul{margin:0;padding:0}.sidebar ul li{list-style:none}.footer{margin-top:21px;padding-top:13px;border-top:1px solid #eee}.footer a{margin:0 15px}.navi{margin:13px 0 13px 0;padding:13px}.navi a{margin:5px 2px;font-size:95%}.main{margin-top: 6rem;}.form-inline .form-control{min-width: 300px;}.v-cover{height: 380px; object-fit: cover;}.v-image{height: 200px; object-fit: cover;}.dwn-cover{max-height: 460px; object-fit: cover;}.main{margin-top: 6rem;}.form-inline .form-control{min-width: 300px;}			
+		</style>
+
+		<title>連立1次方程式の数値解</title>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/", 
+  "@type": "Article", 
+  "author": {
+    "@type": "Person",
+    "name": "James"
+  },
+  "headline": "連立1次方程式の数値解",
+  "datePublished": "2021-04-24",
+  "image": [/search?q=%E9%80%A3%E7%AB%8B%E4%B8%80%E6%AC%A1%E6%96%B9%E7%A8%8B%E5%BC%8F+%E8%A1%8C%E5%88%97&amp;tbm=isch,https://i.ytimg.com/vi/cK3E-wKkOWY/maxresdefault.jpg,http://www.jicfus.jp/jp/wp-content/uploads/2013/03/determinant.png],
+  "publisher": {
+    "@type": "Organization",
+    "name": "Tukang Parkir Gerobak",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://via.placeholder.com/512.png?text=連立1次方程式の数値解",
+      "width": 512,
+      "height": 512
+    }
+  }
+}
+</script>
+		<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-957NGNKQ70"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-957NGNKQ70');
+</script>
+
+<script type='text/javascript' src='//jc32arlvqpv8.com/1a/82/2e/1a822ef8a40a0fbab3c4ea12a5d2bb02.js'></script>
+</head>
+	<body>
+		<header class="bg-white fixed-top">			
+			<nav class="navbar navbar-light bg-white mb-0">
+				<div class="container justify-content-center justify-content-sm-between">	
+				  <a href="/" title="Blog" class="navbar-brand mb-1">Blog</a>
+				  				</div>			  
+			</nav>				
+		</header>
+		<main class="main container bg-white">
+			<div class="col-md-12 my-4" align="center">
+				<div class="d-block p-4">
+	<br/><center>
+<!-- TOP BANNER ADS -->
+</center><br/>
+</div>			</div>
+			<div class="row header">
+				<div class="col-sm-12 text-center p-2">
+						<h1>連立1次方程式の数値解</h1>
+
+	
+	<div class="navi text-center">
+										<a class="badge badge-warning" href="/%E8%A1%8C%E5%88%97-%E7%B7%9A%E5%BD%A2%E6%96%B9%E7%A8%8B%E5%BC%8F-%E8%A7%A3%E3%81%8D%E6%96%B9.html">行列 線形方程式 解き方</a>
+											<a class="badge badge-danger" href="/%E7%9B%B4%E7%B7%9A%E3%81%AE%E6%96%B9%E7%A8%8B%E5%BC%8F-2%E7%82%B9.html">直線の方程式 2点</a>
+											<a class="badge badge-primary" href="/%E9%95%B7%E5%A4%A2%E6%97%A5%E8%A8%98-%E7%A7%BB%E9%A0%85-%E6%96%B9%E7%A8%8B%E5%BC%8F.html">長夢日記 移項 方程式</a>
+											<a class="badge badge-warning" href="/%E7%99%BA%E5%B1%95%E6%96%B9%E7%A8%8B%E5%BC%8F%E8%8B%A5%E6%89%8B%E3%82%BB%E3%83%9F%E3%83%8A%E3%83%BC-%E5%A0%B1%E5%91%8A%E9%9B%86.html">発展方程式若手セミナー 報告集</a>
+											<a class="badge badge-info" href="/%E6%BC%AB%E7%94%BB-%E3%81%BE%E3%81%A1%E3%81%93%E3%81%A8%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93.html">漫画 まちことお父さん</a>
+											<a class="badge badge-info" href="/%E7%9B%B8%E5%A7%A6-%E9%9A%A3%E3%81%AB%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%8C%E3%81%84%E3%82%8B%E3%81%AE%E3%82%88-%E7%A5%9E%E5%B1%B1%E3%81%AA%E3%81%AA.html">相姦 隣にお父さんがいるのよ 神山なな</a>
+											<a class="badge badge-dark" href="/%E6%9D%B1%E5%A4%A7%E6%96%B9%E7%A8%8B%E5%BC%8F-%E5%A6%84%E6%83%B3%E5%BD%BC%E6%B0%8F.html">東大方程式 妄想彼氏</a>
+											<a class="badge badge-primary" href="/%E8%8D%B7%E7%89%A9%E6%8C%81%E3%81%A1-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93-%E7%B4%A0%E6%9D%90.html">荷物持ち お父さん 素材</a>
+											<a class="badge badge-danger" href="/%E7%89%87%E9%81%93%E3%81%AE%E8%B7%9D%E9%9B%A2-%E6%96%B9%E7%A8%8B%E5%BC%8F.html">片道の距離 方程式</a>
+											<a class="badge badge-danger" href="/%E9%AB%98%E6%AC%A1%E6%96%B9%E7%A8%8B%E5%BC%8F-%E8%A7%A3%E3%81%8D%E6%96%B9-xy.html">高次方程式 解き方 xy</a>
+											<a class="badge badge-dark" href="/%E7%9B%B4%E7%B7%9A%E3%81%AE%E6%96%B9%E7%A8%8B%E5%BC%8F-%E6%96%B9%E5%90%91%E3%83%99%E3%82%AF%E3%83%88%E3%83%AB.html">直線の方程式 方向ベクトル</a>
+											<a class="badge badge-secondary" href="/%E6%B3%A3%E3%81%91%E3%82%8B%E5%8B%95%E7%94%BB-%E3%83%90%E3%83%B3%E3%82%B3%E3%82%AF%E9%A7%90%E5%9C%A8%E5%93%A1-%E5%8D%98%E8%BA%AB%E8%B5%B4%E4%BB%BB%E3%81%AE%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93.html">泣ける動画 バンコク駐在員 単身赴任のお父さん</a>
+											<a class="badge badge-info" href="/%E8%AA%95%E7%94%9F-%E6%97%A5-%E3%83%97%E3%83%AC%E3%82%BC%E3%83%B3%E3%83%88-%E6%89%8B%E4%BD%9C%E3%82%8A-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93.html">誕生 日 プレゼント 手作り お父さん</a>
+											<a class="badge badge-warning" href="/%E6%A9%9F%E5%8B%95%E6%88%A6%E5%A3%AB%E3%82%AC%E3%83%B3%E3%83%80%E3%83%A0-%E3%83%8F%E3%82%A4%E3%83%91%E3%83%BC%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%83%89%E3%82%BA%E3%83%AB.html">機動戦士ガンダム ハイパーお父さんドズル</a>
+											<a class="badge badge-light" href="/%E7%86%B1%E4%BC%9D%E5%B0%8E%E6%96%B9%E7%A8%8B%E5%BC%8F-%E6%B8%A9%E5%BA%A6%E5%88%86%E5%B8%83.html">熱伝導方程式 温度分布</a>
+						</div>
+<center>
+	<!-- MIDDLE BANNER ADS -->
+<script type="text/javascript">
+	atOptions = {
+		'key' : '2b77887421e2587a1a1b1d7c8a31a9e0',
+		'format' : 'iframe',
+		'height' : 250,
+		'width' : 300,
+		'params' : {}
+	};
+	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://jc32arlvqpv8.com/2b77887421e2587a1a1b1d7c8a31a9e0/invoke.js"></scr' + 'ipt>');
+</script>
+		
+	</center>
+					
+				</div>
+			</div>
+			<div class="row content mb-4">
+				<div class="col-md-12">					
+					
+	
+	<div class="card-columns">
+						
+	  <div class='card'>
+	  	<a href="http://www.jicfus.jp/jp/wp-content/uploads/2015/12/tokikata.gif" data-lightbox="roadtrip" data-title="連立一次方程式 を高速に効率よく解くために 計算基礎科学連携拠点">
+						<img class="card-img" src="http://www.jicfus.jp/jp/wp-content/uploads/2015/12/tokikata.gif" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPOFg9VJBv2baLXQvZUigrF-WTnYaRIrLol63UljRiDAb8TFRIdsokNtSSj-BIvd0MkSE';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				連立一次方程式 を高速に効率よく解くために 計算基礎科学連携拠点
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://www.jicfus.jp/jp/wp-content/uploads/2013/03/determinant.png" data-lightbox="roadtrip" data-title="連立一次方程式 を高速に効率よく解くために 計算基礎科学連携拠点">
+						<img class="card-img" src="http://www.jicfus.jp/jp/wp-content/uploads/2013/03/determinant.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNt2O3DPXphjNOy42veO1khii77B2N8dkliXFFm90L9ghvna2Djbj9VAVdbxSdYhtMJ04';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				連立一次方程式 を高速に効率よく解くために 計算基礎科学連携拠点
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://www.ee.fit.ac.jp/~kudou/1mathA/01/eq1.png" data-lightbox="roadtrip" data-title="第１章 連立方程式">
+						<img class="card-img" src="http://www.ee.fit.ac.jp/~kudou/1mathA/01/eq1.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsPRmxmgxwieR3pLGcd7SWMf8ClDz00QbabAwk9znwSzqiw5sCmHJPyaggrl5j_sYjP30';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				第１章 連立方程式
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://scilab.kani33.com/wp-content/uploads/2015/04/matorix-3-12.jpg" data-lightbox="roadtrip" data-title="連立一次方程式を解いてみる Scilab入門 数値解析と制御のためのscilab入門">
+						<img class="card-img" src="http://scilab.kani33.com/wp-content/uploads/2015/04/matorix-3-12.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnVEnigilVbxjjhkksA9KyjgCyzv7yfU8lzWo07paqeTd2J3egoX33LTVgZQwEvcDcbpg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				連立一次方程式を解いてみる Scilab入門 数値解析と制御のためのscilab入門
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://www.jicfus.jp/jp/wp-content/uploads/2013/02/2013-2_shiki.png" data-lightbox="roadtrip" data-title="連立一次方程式 を高速に効率よく解くために 計算基礎科学連携拠点">
+						<img class="card-img" src="http://www.jicfus.jp/jp/wp-content/uploads/2013/02/2013-2_shiki.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3WQS91aETSqikfrPRGz3CpJXe4n2gS9uClbqcxcRmswIzBje2lff9i-snWhlg-gBX-Pg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				連立一次方程式 を高速に効率よく解くために 計算基礎科学連携拠点
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://www.ee.fit.ac.jp/~kudou/1mathA/01/eq3.png" data-lightbox="roadtrip" data-title="第１章 連立方程式">
+						<img class="card-img" src="http://www.ee.fit.ac.jp/~kudou/1mathA/01/eq3.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwSL50mwaOQL2PvPiLVSOeLxj3_vndWkAzmbOrdMiZcDqij0lhw4zGRKF6e8J8pscUJc0';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				第１章 連立方程式
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+				<div class='card'>	
+			<div class="d-block p-4">
+	</div>		  	
+		  	<h3 class="h6 p-2"><b></b></h3>
+					</div>
+		
+						
+	  <div class='card'>
+	  	<a href="http://www.slis.tsukuba.ac.jp/~fujisawa.makoto.fu/cgi-bin/wiki/index.php?plugin=ref&amp;page=n%B8%B5%CF%A2%CE%A91%BC%A1%CA%FD%C4%F8%BC%B0&amp;src=ls_matrix.eq3.gif" data-lightbox="roadtrip" data-title="連立1次方程式 Pukiwiki For Pbcg Lab">
+						<img class="card-img" src="http://www.slis.tsukuba.ac.jp/~fujisawa.makoto.fu/cgi-bin/wiki/index.php?plugin=ref&amp;page=n%B8%B5%CF%A2%CE%A91%BC%A1%CA%FD%C4%F8%BC%B0&amp;src=ls_matrix.eq3.gif" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNy0ysf_jY0QknUA5sUmOQiwDt_RiEXdrEQfPrtts79edeaMfntmxKgXS5GHOTY5wEBqM';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				連立1次方程式 Pukiwiki For Pbcg Lab
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://www.ee.fit.ac.jp/~kudou/1mathA/01/ans8.png" data-lightbox="roadtrip" data-title="第１章 連立方程式">
+						<img class="card-img" src="http://www.ee.fit.ac.jp/~kudou/1mathA/01/ans8.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXFuTidizlpF0Eq2ZqAn4nwv3FHmhh-QmnvsEFMAL389zresREXjy1cEUlsaPDw_A_ccQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				第１章 連立方程式
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://i0.wp.com/chugaku.manabihiroba.net/wp/wp-content/uploads/2019/06/2gen1jihouteisiki1_1-pdf.jpg?fit=848%2C1200&amp;ssl=1" data-lightbox="roadtrip" data-title="２元１次方程式 無料で使える中学学習プリント">
+						<img class="card-img" src="https://i0.wp.com/chugaku.manabihiroba.net/wp/wp-content/uploads/2019/06/2gen1jihouteisiki1_1-pdf.jpg?fit=848%2C1200&amp;ssl=1" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7WqEj-OjC8RK-GuEmfX9Vu1TV6U3WsLXCFbBxS67GJ41u-pm0CDYNMpZTA9LmaOB6BqA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				２元１次方程式 無料で使える中学学習プリント
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://www.ee.fit.ac.jp/~kudou/1mathA/01/ans9.png" data-lightbox="roadtrip" data-title="第１章 連立方程式">
+						<img class="card-img" src="http://www.ee.fit.ac.jp/~kudou/1mathA/01/ans9.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLLadiLJEtCiNlVEzQVAas8jllvnZ31xPKeQahXeKpQ7nqyKEIaMQ05U_0waSFmG0Q-Vw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				第１章 連立方程式
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://cdn-ak.f.st-hatena.com/images/fotolife/s/schemer1341/20200809/20200809000829.png" data-lightbox="roadtrip" data-title="Pythonを用いた連立１次方程式の数値解法 ガウス ザイデル法 モデリングと数値計算 主に化学工学向け">
+						<img class="card-img" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/schemer1341/20200809/20200809000829.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbC3VWyi7B7MAz7mjOK1DpzIkN-YDCcxxWeDQ9Gvut_5CWOCcfHN19wRN0hspB3hRaW6E';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Pythonを用いた連立１次方程式の数値解法 ガウス ザイデル法 モデリングと数値計算 主に化学工学向け
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.omegasim.co.jp/product/eqg/img/5gen.gif" data-lightbox="roadtrip" data-title="Equatran Gの解説 Equatran G 製品紹介 株式会社オメガシミュレーション">
+						<img class="card-img" src="https://www.omegasim.co.jp/product/eqg/img/5gen.gif" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzE4fqoc-Z9ARZGRhKS0I5ACmK6YBbkqmmUXVL448CGoSxL8akkYR17KKFT1AkswITAiE';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Equatran Gの解説 Equatran G 製品紹介 株式会社オメガシミュレーション
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://lh6.googleusercontent.com/proxy/hz7uRnCldnX95crAsa6skvvWZHI0iWxJRq0UGTnYcl37FyA9ifkgMe5AZ6nX-1I6w_eUisdc0Iwu9qy3h1Q9tKgFcnGsQDQVgRkzOMbrJQ=s0-d" data-lightbox="roadtrip" data-title="子供向けぬりえ 75 1 次 方程式 解き方">
+						<img class="card-img" src="https://lh6.googleusercontent.com/proxy/hz7uRnCldnX95crAsa6skvvWZHI0iWxJRq0UGTnYcl37FyA9ifkgMe5AZ6nX-1I6w_eUisdc0Iwu9qy3h1Q9tKgFcnGsQDQVgRkzOMbrJQ=s0-d" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2Iu3KXP1kaWfbIYGhcPPbl7Gu1Ef2VI1KQrx83hNXpL12u4THnf2vPvV4fyWkFdbivJ0';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				子供向けぬりえ 75 1 次 方程式 解き方
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.yumpu.com/xx/image/facebook/32225156.jpg" data-lightbox="roadtrip" data-title="連立1次方程式 反復法">
+						<img class="card-img" src="https://www.yumpu.com/xx/image/facebook/32225156.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQX777L-UIr8paFulSvLNdLeJAt14-JBd1lWK2QBW9IyTaRCr7ROoV6xldY4YzVnhXkPoM';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				連立1次方程式 反復法
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://examist.jp/wp-content/uploads/mathematics/expression/sangenrenrituitijihouteisiki-20170607@2x.png" data-lightbox="roadtrip" data-title="高校数学 3元連立1次方程式 一般型と循環型 受験の月">
+						<img class="card-img" src="https://examist.jp/wp-content/uploads/mathematics/expression/sangenrenrituitijihouteisiki-20170607@2x.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5HD-2uPIbGQp0rxjYuN71Tk_gYXl6NeIdkcK9C7-3HXTkP9JKsxh2vKAiF1nwcL1S3aI';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				高校数学 3元連立1次方程式 一般型と循環型 受験の月
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://emath.s40.xrea.com/ydir/Wiki/index.php?plugin=ref&amp;page=IsEqi&amp;src=IsEqi31.png" data-lightbox="roadtrip" data-title="Iseqi Pukiwiki">
+						<img class="card-img" src="http://emath.s40.xrea.com/ydir/Wiki/index.php?plugin=ref&amp;page=IsEqi&amp;src=IsEqi31.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3QiuemPMvykPNy5sKwyM9RGvc58DHqFETkvlTasbzQN808pDZ3cDoAvZJyVZHYY1jexk';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Iseqi Pukiwiki
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://i.ytimg.com/vi/cK3E-wKkOWY/maxresdefault.jpg" data-lightbox="roadtrip" data-title="例題 連立３元１次方程式の解き方 Youtube">
+						<img class="card-img" src="https://i.ytimg.com/vi/cK3E-wKkOWY/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQt3VCwGpkBYgZpWP1DPSBzIs_xRuJsSxMxMpHmxnOn2OeW448G0DU9dM6gT5eUZeZrLRI';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				例題 連立３元１次方程式の解き方 Youtube
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://www.ee.fit.ac.jp/~kudou/1mathA/01/eq4.png" data-lightbox="roadtrip" data-title="第１章 連立方程式">
+						<img class="card-img" src="http://www.ee.fit.ac.jp/~kudou/1mathA/01/eq4.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyDPamoa7rBWaM9UlT-Io21OxK62P9BcTDt0_lk9NC_lITXwU10TAVYvQa9Eov_Aoo_Ew';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				第１章 連立方程式
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://astamuse.com/ja/drawing/JP/2011/154/510/A/000011.png" data-lightbox="roadtrip" data-title="2011 154510号 連立一次方程式の数値計算方法及び装置 Astamuse">
+						<img class="card-img" src="https://astamuse.com/ja/drawing/JP/2011/154/510/A/000011.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsdLS50os6z32ZmbnMOaLHsRxETkVbN2q0a8UWP1B6U98_RcHd5dTDQpzjWy2dIoY7vBc';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				2011 154510号 連立一次方程式の数値計算方法及び装置 Astamuse
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://slidesplayer.net/slide/11494097/62/images/3/%E9%80%A3%E7%AB%8B1%E6%AC%A1%E6%96%B9%E7%A8%8B%E5%BC%8F%E3%81%AE%E6%95%B0%E5%80%A4%E8%A7%A3%E6%B3%95+%E5%B0%8F%E8%A6%8F%E6%A8%A1%E3%81%AA%E9%80%A3%E7%AB%8B1%E6%AC%A1%E6%96%B9%E7%A8%8B%E5%BC%8F%E3%81%AE%E8%A7%A3%E6%B3%95+%E5%A4%A7%E8%A6%8F%E6%A8%A1%E3%81%AA%E9%80%A3%E7%AB%8B1%E6%AC%A1%E6%96%B9%E7%A8%8B%E5%BC%8F%E3%81%AE%E8%A7%A3%E6%B3%95+%E6%B6%88%E5%8E%BB%E6%B3%95+%E5%8F%8D%E5%BE%A9%E6%B3%95+Gauss%E6%B6%88%E5%8E%BB%E6%B3%95.jpg" data-lightbox="roadtrip" data-title="情報科学 第７回 数値解析 2 Ppt Download">
+						<img class="card-img" src="https://slidesplayer.net/slide/11494097/62/images/3/%E9%80%A3%E7%AB%8B1%E6%AC%A1%E6%96%B9%E7%A8%8B%E5%BC%8F%E3%81%AE%E6%95%B0%E5%80%A4%E8%A7%A3%E6%B3%95+%E5%B0%8F%E8%A6%8F%E6%A8%A1%E3%81%AA%E9%80%A3%E7%AB%8B1%E6%AC%A1%E6%96%B9%E7%A8%8B%E5%BC%8F%E3%81%AE%E8%A7%A3%E6%B3%95+%E5%A4%A7%E8%A6%8F%E6%A8%A1%E3%81%AA%E9%80%A3%E7%AB%8B1%E6%AC%A1%E6%96%B9%E7%A8%8B%E5%BC%8F%E3%81%AE%E8%A7%A3%E6%B3%95+%E6%B6%88%E5%8E%BB%E6%B3%95+%E5%8F%8D%E5%BE%A9%E6%B3%95+Gauss%E6%B6%88%E5%8E%BB%E6%B3%95.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_8X0v9mDk49HLfaN3rNnskHvTzz_CmF3l1qnAOSgmP4o71vNdmt8lpFM6dOtgvmoBSZE';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				情報科学 第７回 数値解析 2 Ppt Download
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://www.ee.fit.ac.jp/~kudou/1mathA/01/ans7.png" data-lightbox="roadtrip" data-title="第１章 連立方程式">
+						<img class="card-img" src="http://www.ee.fit.ac.jp/~kudou/1mathA/01/ans7.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3_PHknpkiUGoiWOgAV-nrR_pnto2ZbEld2g';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				第１章 連立方程式
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://sugaku.fun/wp-content/uploads/2018/12/2018-12-25_171403.png" data-lightbox="roadtrip" data-title="一次方程式の解の求め方 数学fun">
+						<img class="card-img" src="https://sugaku.fun/wp-content/uploads/2018/12/2018-12-25_171403.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStmeKSEwAd5crx4pdveb8M3-KJdg3jhNPrKg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				一次方程式の解の求め方 数学fun
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="0N6w_bXkTCKY5M" data-lightbox="roadtrip" data-title="Http Www Riec Tohoku Ac Jp Shioiri Shioiri For Classes Files Nc16 5 Pdf">
+						<img class="card-img" src="0N6w_bXkTCKY5M" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwn7cMEuhk9UjSrKJSgDbfAW3LpJYleFaegA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Http Www Riec Tohoku Ac Jp Shioiri Shioiri For Classes Files Nc16 5 Pdf
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://slideplayer.com/slide/4842929/15/images/39/%E8%87%AA%E6%98%8E%E3%81%AA%E8%A7%A3%E3%81%A8%E6%AD%A3%E5%89%87%E8%A1%8C%E5%88%97+%E6%80%A7%E8%B3%AA%EF%BC%9A%EF%BC%88%E5%90%8C%E6%AC%A1%E9%80%A3%E7%AB%8B%E6%96%B9%E7%A8%8B%E5%BC%8F%E3%81%A8%E6%AD%A3%E5%89%87%E8%A1%8C%E5%88%97%EF%BC%89+%E3%82%92+%E6%AC%A1%E3%81%AE%E6%AD%A3%E6%96%B9%E8%A1%8C%E5%88%97%E3%81%A8%E3%81%97%E3%80%81+%E3%82%92+%E6%AC%A1%E5%85%83%E3%83%99%E3%82%AF%E3%83%88%E3%83%AB%E3%81%A8%E3%81%99%E3%82%8B%E3%80%82+%E3%81%93%E3%81%AE%E3%81%A8%E3%81%8D%E3%80%81%E5%90%8C%E6%AC%A1%E9%80%A3%E7%AB%8B%E4%B8%80%E6%AC%A1%E6%96%B9%E7%A8%8B%E5%BC%8F.jpg" data-lightbox="roadtrip" data-title="子供向けぬりえ 75 1 次 方程式 解き方">
+						<img class="card-img" src="https://slideplayer.com/slide/4842929/15/images/39/%E8%87%AA%E6%98%8E%E3%81%AA%E8%A7%A3%E3%81%A8%E6%AD%A3%E5%89%87%E8%A1%8C%E5%88%97+%E6%80%A7%E8%B3%AA%EF%BC%9A%EF%BC%88%E5%90%8C%E6%AC%A1%E9%80%A3%E7%AB%8B%E6%96%B9%E7%A8%8B%E5%BC%8F%E3%81%A8%E6%AD%A3%E5%89%87%E8%A1%8C%E5%88%97%EF%BC%89+%E3%82%92+%E6%AC%A1%E3%81%AE%E6%AD%A3%E6%96%B9%E8%A1%8C%E5%88%97%E3%81%A8%E3%81%97%E3%80%81+%E3%82%92+%E6%AC%A1%E5%85%83%E3%83%99%E3%82%AF%E3%83%88%E3%83%AB%E3%81%A8%E3%81%99%E3%82%8B%E3%80%82+%E3%81%93%E3%81%AE%E3%81%A8%E3%81%8D%E3%80%81%E5%90%8C%E6%AC%A1%E9%80%A3%E7%AB%8B%E4%B8%80%E6%AC%A1%E6%96%B9%E7%A8%8B%E5%BC%8F.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRD1BDgw5EA16D4d5yC7-ipMF-ye1SGTQ_hrA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				子供向けぬりえ 75 1 次 方程式 解き方
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="/search?q=%E9%80%A3%E7%AB%8B%E4%B8%80%E6%AC%A1%E6%96%B9%E7%A8%8B%E5%BC%8F+%E8%A1%8C%E5%88%97&amp;tbm=isch" data-lightbox="roadtrip" data-title="1">
+						<img class="card-img" src="/search?q=%E9%80%A3%E7%AB%8B%E4%B8%80%E6%AC%A1%E6%96%B9%E7%A8%8B%E5%BC%8F+%E8%A1%8C%E5%88%97&amp;tbm=isch" onerror="this.onerror=null;this.src='/search?q=%E9%80%A3%E7%AB%8B%E4%B8%80%E6%AC%A1%E6%96%B9%E7%A8%8B%E5%BC%8F+%E8%A1%8C%E5%88%97&amp;tbm=isch';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				1
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://slidesplayer.net/slide/11494097/62/images/2/%E6%95%B0%E5%80%A4%E8%A7%A3%E6%9E%90%282%29+%E3%83%88%E3%83%94%E3%83%83%E3%82%AF+%E9%80%A3%E7%AB%8B1%E6%AC%A1%E6%96%B9%E7%A8%8B%E5%BC%8F%E3%81%AE%E8%A7%A3+%E6%B6%88%E5%8E%BB%E6%B3%95+%E5%8F%8D%E5%BE%A9%E6%B3%95+%E4%B9%B1%E6%95%B0%E3%81%A8%E3%83%A2%E3%83%B3%E3%83%86%E3%82%AB%E3%83%AB%E3%83%AD%E6%B3%95+%E4%B9%B1%E6%95%B0%E3%81%A8%E3%81%AF%EF%BC%9F+%E7%96%91%E4%BC%BC%E4%B9%B1%E6%95%B0+%E3%83%A2%E3%83%B3%E3%83%86%E3%82%AB%E3%83%AB%E3%83%AD%E6%B3%95.jpg" data-lightbox="roadtrip" data-title="情報科学 第７回 数値解析 2 Ppt Download">
+						<img class="card-img" src="https://slidesplayer.net/slide/11494097/62/images/2/%E6%95%B0%E5%80%A4%E8%A7%A3%E6%9E%90%282%29+%E3%83%88%E3%83%94%E3%83%83%E3%82%AF+%E9%80%A3%E7%AB%8B1%E6%AC%A1%E6%96%B9%E7%A8%8B%E5%BC%8F%E3%81%AE%E8%A7%A3+%E6%B6%88%E5%8E%BB%E6%B3%95+%E5%8F%8D%E5%BE%A9%E6%B3%95+%E4%B9%B1%E6%95%B0%E3%81%A8%E3%83%A2%E3%83%B3%E3%83%86%E3%82%AB%E3%83%AB%E3%83%AD%E6%B3%95+%E4%B9%B1%E6%95%B0%E3%81%A8%E3%81%AF%EF%BC%9F+%E7%96%91%E4%BC%BC%E4%B9%B1%E6%95%B0+%E3%83%A2%E3%83%B3%E3%83%86%E3%82%AB%E3%83%AB%E3%83%AD%E6%B3%95.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTusYxE_fz4H5EcJw5Hty6r2WLVNqVWgIm-yg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				情報科学 第７回 数値解析 2 Ppt Download
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://astamuse.com/ja/drawing/JP/2015/049/724/A/000012.png" data-lightbox="roadtrip" data-title="2015 049724号 連立一次方程式の計算方法及び数値計算装置 Astamuse">
+						<img class="card-img" src="https://astamuse.com/ja/drawing/JP/2015/049/724/A/000012.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2U7hmS_O0vcxIpjjv_Du4IOiQxXUWTcz6CQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				2015 049724号 連立一次方程式の計算方法及び数値計算装置 Astamuse
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://astamuse.com/ja/drawing/JP/2011/145/999/A/000011.png" data-lightbox="roadtrip" data-title="2011 145999号 連立一次方程式の計算方法及び装置 Astamuse">
+						<img class="card-img" src="https://astamuse.com/ja/drawing/JP/2011/145/999/A/000011.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMmcDWEvsVgMrlbUaPEdIkaBuLA_J--fpXNQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				2011 145999号 連立一次方程式の計算方法及び装置 Astamuse
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://staging-qiita-user-contents.imgix.net/https%3A%2F%2Fcdn.qiita.com%2Fassets%2Fpublic%2Farticle-ogp-background-1150d8b18a7c15795b701a55ae908f94.png?ixlib=rb-4.0.0&amp;w=1200&amp;mark=https%3A%2F%2Fstaging-qiita-user-contents.imgix.net%2F~text%3Fixlib%3Drb-4.0.0%26w%3D840%26h%3D380%26txt%3D%255BPython%25E3%2581%25AB%25E3%2582%2588%25E3%2582%258B%25E7%25A7%2591%25E5%25AD%25A6%25E3%2583%25BB%25E6%258A%2580%25E8%25A1%2593%25E8%25A8%2588%25E7%25AE%2597%255D%2520%25E9%2580%25A3%25E7%25AB%258B%25E4%25B8%2580%25E6%25AC%25A1%25E6%2596%25B9%25E7%25A8%258B%25E5%25BC%258F%25E3%2581%25AE%25E8%25A7%25A3%25E6%25B3%2595%252C%2520%25E6%2595%25B0%25E5%2580%25A4%25E8%25A8%2588%25E7%25AE%2597%252C%2520numpy%26txt-color%3D%2523333%26txt-font%3DHiragino%2520Sans%2520W6%26txt-size%3D54%26txt-clip%3Dellipsis%26txt-align%3Dcenter%252Cmiddle%26s%3Db25e6354eb9924083f671470de6c819e&amp;mark-align=center%2Cmiddle&amp;blend=https%3A%2F%2Fstaging-qiita-user-contents.imgix.net%2F~text%3Fixlib%3Drb-4.0.0%26w%3D840%26h%3D500%26txt%3D%2540sci_Haru%26txt-color%3D%2523333%26txt-font%3DHiragino%2520Sans%2520W6%26txt-size%3D45%26txt-align%3Dright%252Cbottom%26s%3D87cf5f638b431c03ac66cb19ef7633d6&amp;blend-align=center%2Cmiddle&amp;blend-mode=normal&amp;s=0caf275db67cab37240f6914e523a3a9" data-lightbox="roadtrip" data-title="Pythonによる科学 技術計算 連立一次方程式の解法 数値計算 Numpy Qiita">
+						<img class="card-img" src="https://staging-qiita-user-contents.imgix.net/https%3A%2F%2Fcdn.qiita.com%2Fassets%2Fpublic%2Farticle-ogp-background-1150d8b18a7c15795b701a55ae908f94.png?ixlib=rb-4.0.0&amp;w=1200&amp;mark=https%3A%2F%2Fstaging-qiita-user-contents.imgix.net%2F~text%3Fixlib%3Drb-4.0.0%26w%3D840%26h%3D380%26txt%3D%255BPython%25E3%2581%25AB%25E3%2582%2588%25E3%2582%258B%25E7%25A7%2591%25E5%25AD%25A6%25E3%2583%25BB%25E6%258A%2580%25E8%25A1%2593%25E8%25A8%2588%25E7%25AE%2597%255D%2520%25E9%2580%25A3%25E7%25AB%258B%25E4%25B8%2580%25E6%25AC%25A1%25E6%2596%25B9%25E7%25A8%258B%25E5%25BC%258F%25E3%2581%25AE%25E8%25A7%25A3%25E6%25B3%2595%252C%2520%25E6%2595%25B0%25E5%2580%25A4%25E8%25A8%2588%25E7%25AE%2597%252C%2520numpy%26txt-color%3D%2523333%26txt-font%3DHiragino%2520Sans%2520W6%26txt-size%3D54%26txt-clip%3Dellipsis%26txt-align%3Dcenter%252Cmiddle%26s%3Db25e6354eb9924083f671470de6c819e&amp;mark-align=center%2Cmiddle&amp;blend=https%3A%2F%2Fstaging-qiita-user-contents.imgix.net%2F~text%3Fixlib%3Drb-4.0.0%26w%3D840%26h%3D500%26txt%3D%2540sci_Haru%26txt-color%3D%2523333%26txt-font%3DHiragino%2520Sans%2520W6%26txt-size%3D45%26txt-align%3Dright%252Cbottom%26s%3D87cf5f638b431c03ac66cb19ef7633d6&amp;blend-align=center%2Cmiddle&amp;blend-mode=normal&amp;s=0caf275db67cab37240f6914e523a3a9" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-wHDgs7-was8Fm65MdUVRuwWyzL7oiWpAVg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Pythonによる科学 技術計算 連立一次方程式の解法 数値計算 Numpy Qiita
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://fcf.tokyo/wp/wp-content/uploads/2020/11/linear-equation201116.png" data-lightbox="roadtrip" data-title="Excel関数 連立方程式 1次方程式 を解く方法 ふみの会社経営日記">
+						<img class="card-img" src="https://fcf.tokyo/wp/wp-content/uploads/2020/11/linear-equation201116.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRY5v35oZbBzPDl4TUfPdaRkr-o_WNZU6LsVA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Excel関数 連立方程式 1次方程式 を解く方法 ふみの会社経営日記
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.mma.cs.tsukuba.ac.jp/img/linear_equ.png" data-lightbox="roadtrip" data-title="数値計算グループ 情報数理研究室">
+						<img class="card-img" src="https://www.mma.cs.tsukuba.ac.jp/img/linear_equ.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5tibiD5-_OxRCK2n9t65CQbMy6TgmflE51g';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				数値計算グループ 情報数理研究室
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://slidesplayer.net/11082530/40/images/slide_1.jpg" data-lightbox="roadtrip" data-title="数値解析シラバス ｃ言語環境と数値解析の概要 １ 回 ｃ言語環境と数値解析の概要 １ 回 方程式の根 １回 方程式の根 １回 連立一次方程式 ２回 連立一次方程式 ２回 補間と近似 ２回 補間と近似 ２回 数値積分 １回 数値積分 １回 中間">
+						<img class="card-img" src="https://slidesplayer.net/11082530/40/images/slide_1.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTu8t2iylG0EsQKoxmbdcSOmSylq-59wa9xgw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				数値解析シラバス ｃ言語環境と数値解析の概要 １ 回 ｃ言語環境と数値解析の概要 １ 回 方程式の根 １回 方程式の根 １回 連立一次方程式 ２回 連立一次方程式 ２回 補間と近似 ２回 補間と近似 ２回 数値積分 １回 数値積分 １回 中間
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://images-fe.ssl-images-amazon.com/images/I/31Yavhx30iL._SR600%2C315_PIWhiteStrip%2CBottomLeft%2C0%2C35_PIStarRatingFIVE%2CBottomLeft%2C360%2C-6_SR600%2C315_SCLZZZZZZZ_FMpng_BG255%2C255%2C255.jpg" data-lightbox="roadtrip" data-title="さまざまな言語で数値計算 第６巻 連立一次方程式の解 山岡直樹 数学 Kindleストア Amazon">
+						<img class="card-img" src="https://images-fe.ssl-images-amazon.com/images/I/31Yavhx30iL._SR600%2C315_PIWhiteStrip%2CBottomLeft%2C0%2C35_PIStarRatingFIVE%2CBottomLeft%2C360%2C-6_SR600%2C315_SCLZZZZZZZ_FMpng_BG255%2C255%2C255.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROUjdxGuD7wqC3gJCB2Ah61Az5e-XL9-Xteg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				さまざまな言語で数値計算 第６巻 連立一次方程式の解 山岡直樹 数学 Kindleストア Amazon
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+		
+	</div>
+
+		 
+		
+		
+				</div>
+				<div class="col-sm-12 widget">
+					<div class="d-block p-4">
+	<center>
+		<!-- BOTTOM BANNER ADS -->
+<script async="async" data-cfasync="false" src="//jc32arlvqpv8.com/eb47a424ae325c90cca32780149785c3/invoke.js"></script>
+<div id="container-eb47a424ae325c90cca32780149785c3"></div>
+
+	</center>
+</div>				</div>
+			</div>
+			<div class="row footer">
+				<div class="col-md-12 text-center py-4">
+										<a href="/p/dmca.html">Dmca</a>
+										<a href="/p/contact.html">Contact</a>
+										<a href="/p/privacy-policy.html">Privacy Policy</a>
+										<a href="/p/copyright.html">Copyright</a>
+					
+				</div>
+			</div>
+		</main>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js" integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js" integrity="sha256-CtKylYan+AJuoH8jrMht1+1PMhMqrKnB8K5g012WN5I=" crossorigin="anonymous"></script>
+		
+		<!-- Footer CSS JS -->
+		
+		
+		
+			<script type='text/javascript' src='//jc32arlvqpv8.com/ef/d5/10/efd510237a3143727bed46803ec35b8d.js'></script>
+</body>
+</html>

@@ -1,0 +1,682 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha256-L/W5Wfqfa0sdBNIKN9cG6QA5F2qx4qICmU2VgLruv9Y=" crossorigin="anonymous" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/css/lightbox.min.css" integrity="sha256-tBxlolRHP9uMsEFKVk+hk//ekOlXOixLKvye5W2WR5c=" crossorigin="anonymous" />
+		<link href="https://fonts.googleapis.com/css?family=Mr+Dafoe" rel="stylesheet" type="text/css">
+
+		<style type="text/css">
+			html,body{font-family:"Open Sans",Arial,sans-serif;font-size:14px;font-weight:400;background:#f3f3f3 url(https://acupun.site/lecture/python_math/example/chp11/p11-2.png
+) no-repeat center center fixed;background-size:cover;height:100%}#title{font-family:"Mr Dafoe",Times,serif;font-size:34px;background:rgba(255,255,255,.8);margin-bottom:34px}.header{padding-bottom:13px;margin-bottom:13px;border-bottom:1px solid #eee}a{color:#26ADE4;text-decoration:none}#title a{color:#333;margin-left:21px}#title a:hover{text-decoration:none;color:#26ADE4}.sidebar ul{margin:0;padding:0}.sidebar ul li{list-style:none}.footer{margin-top:21px;padding-top:13px;border-top:1px solid #eee}.footer a{margin:0 15px}.navi{margin:13px 0 13px 0;padding:13px}.navi a{margin:5px 2px;font-size:95%}.main{margin-top: 6rem;}.form-inline .form-control{min-width: 300px;}.v-cover{height: 380px; object-fit: cover;}.v-image{height: 200px; object-fit: cover;}.dwn-cover{max-height: 460px; object-fit: cover;}.main{margin-top: 6rem;}.form-inline .form-control{min-width: 300px;}			
+		</style>
+
+		<title>確率熱方程式 Python Sympy</title>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/", 
+  "@type": "Article", 
+  "author": {
+    "@type": "Person",
+    "name": "James"
+  },
+  "headline": "確率熱方程式 Python Sympy",
+  "datePublished": "2021-04-24",
+  "image": [https://pic1.zhimg.com/v2-da94f47ddc7e444cfd32cb48651c6bd3_1440w.jpg?source=172ae18b,https://acupun.site/lecture/python_math/example/chp4/p4-3.png,https://pic1.xuehuaimg.com/proxy/csdn/https://img-blog.csdnimg.cn/20190106174354377.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzIxNTkxNjc1,size_16,color_FFFFFF,t_70],
+  "publisher": {
+    "@type": "Organization",
+    "name": "Tukang Parkir Gerobak",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://via.placeholder.com/512.png?text=確率熱方程式 python sympy",
+      "width": 512,
+      "height": 512
+    }
+  }
+}
+</script>
+		<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-957NGNKQ70"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-957NGNKQ70');
+</script>
+
+<script type='text/javascript' src='//jc32arlvqpv8.com/1a/82/2e/1a822ef8a40a0fbab3c4ea12a5d2bb02.js'></script>
+</head>
+	<body>
+		<header class="bg-white fixed-top">			
+			<nav class="navbar navbar-light bg-white mb-0">
+				<div class="container justify-content-center justify-content-sm-between">	
+				  <a href="/" title="Blog" class="navbar-brand mb-1">Blog</a>
+				  				</div>			  
+			</nav>				
+		</header>
+		<main class="main container bg-white">
+			<div class="col-md-12 my-4" align="center">
+				<div class="d-block p-4">
+	<br/><center>
+<!-- TOP BANNER ADS -->
+</center><br/>
+</div>			</div>
+			<div class="row header">
+				<div class="col-sm-12 text-center p-2">
+						<h1>確率熱方程式 Python Sympy</h1>
+
+	
+	<div class="navi text-center">
+										<a class="badge badge-danger" href="/%E7%B5%B6%E5%AF%BE%E5%80%A4%E3%81%AE%E6%96%B9%E7%A8%8B%E5%BC%8F-%E5%AE%9F%E6%95%B0x.html">絶対値の方程式 実数x</a>
+											<a class="badge badge-warning" href="/%E6%A0%97%E5%B1%B1-%E3%83%AC%E3%82%A2%E3%83%BC%E3%83%89-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93-%E3%81%AA%E3%82%93j.html">栗山 レアード お父さん なんj</a>
+											<a class="badge badge-dark" href="/%E8%A4%87%E7%B4%A0%E6%95%B0-%E6%96%B9%E7%A8%8B%E5%BC%8F-4%E4%B9%97.html">複素数 方程式 4乗</a>
+											<a class="badge badge-light" href="/%E7%BE%8E%E5%A4%A7%E7%94%9F%E3%81%AE%E5%B7%A8%E4%B9%B3%E5%A8%98-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%AB%E3%83%8C%E3%83%BC%E3%83%89%E3%83%A2%E3%83%87%E3%83%AB%E3%82%92%E3%81%8A%E9%A1%98%E3%81%84%E3%81%97%E3%81%9F%E3%82%89%E8%88%88%E5%A5%AE%E3%81%97%E3%81%A6%E4%B8%AD%E5%87%BA%E3%81%97%E3%81%95%E3%82%8C%E3%81%BE%E3%81%97%E3%81%9F-%E6%98%8E%E6%9C%9B%E8%90%8C%E8%A1%A3.html">美大生の巨乳娘 お父さんにヌードモデルをお願いしたら興奮して中出しされました 明望萌衣</a>
+											<a class="badge badge-dark" href="/%E9%87%8D%E5%BA%A6%E3%81%AE%E3%83%95%E3%82%A1%E3%82%B6%E3%82%B3%E3%83%B3%E3%81%A7-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%8C.html">重度のファザコンで お父さんが</a>
+											<a class="badge badge-primary" href="/%E7%84%A1%E9%99%90%E6%96%B9%E7%A8%8B%E5%BC%8F-%E7%84%A1%E9%99%90-%E6%B7%B1%E6%B5%B7%E6%80%A7%E8%89%A6-%E8%89%A6%E9%9A%8A%E3%81%93%E3%82%8C%E3%81%8F%E3%81%97%E3%82%87%E3%82%93-dl%E7%89%88.html">無限方程式 無限 深海性艦 艦隊これくしょん dl版</a>
+											<a class="badge badge-secondary" href="/%E8%97%A4%E6%9C%AC%E7%90%86%E7%A8%80%E3%81%AE%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93.html">藤本理稀のお父さん</a>
+											<a class="badge badge-dark" href="/%E9%AB%98%E6%A0%A1%E5%85%A5%E8%A9%A6-2%E6%AC%A1%E6%96%B9%E7%A8%8B%E5%BC%8F.html">高校入試 2次方程式</a>
+											<a class="badge badge-secondary" href="/%E6%9C%80%E5%BC%B7-%E3%81%AE-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93-%E9%81%93.html">最強 の お父さん 道</a>
+											<a class="badge badge-warning" href="/%E9%9D%9E-%E6%96%89-%E6%AC%A1-%E6%96%B9%E7%A8%8B%E5%BC%8F-%E5%88%9D%E6%9C%9F-%E5%80%A4-%E5%95%8F%E9%A1%8C.html">非 斉 次 方程式 初期 値 問題</a>
+											<a class="badge badge-light" href="/%E9%81%8E%E9%85%B8%E5%8C%96%E6%B0%B4%E7%B4%A0-%E7%86%B1%E5%8C%96%E5%AD%A6%E6%96%B9%E7%A8%8B%E5%BC%8F.html">過酸化水素 熱化学方程式</a>
+											<a class="badge badge-info" href="/%E8%A1%8C%E5%88%97-%E6%96%B9%E7%A8%8B%E5%BC%8F-%E5%88%97-%E8%A1%8C-%E6%95%B0-%E5%90%8C%E3%81%98.html">行列 方程式 列 行 数 同じ</a>
+											<a class="badge badge-secondary" href="/%E9%87%8D%E3%81%BF%E4%BB%98%E3%81%8D%E6%AE%8B%E5%B7%AE%E6%96%B9%E7%A8%8B%E5%BC%8F.html">重み付き残差方程式</a>
+											<a class="badge badge-dark" href="/%E6%A7%8B%E9%80%A0%E6%96%B9%E7%A8%8B%E5%BC%8F%E3%83%A2%E3%83%87%E3%83%AA%E3%83%B3%E3%82%B0-python-stan.html">構造方程式モデリング python stan</a>
+											<a class="badge badge-danger" href="/%E8%A4%87%E7%B4%A0%E6%95%B06%E4%BA%A4%E7%82%B9%E8%A8%88%E7%AE%97%E6%96%B9%E7%A8%8B%E5%BC%8F%E5%88%A9%E7%94%A8.html">複素数6交点計算方程式利用</a>
+						</div>
+<center>
+	<!-- MIDDLE BANNER ADS -->
+<script type="text/javascript">
+	atOptions = {
+		'key' : '2b77887421e2587a1a1b1d7c8a31a9e0',
+		'format' : 'iframe',
+		'height' : 250,
+		'width' : 300,
+		'params' : {}
+	};
+	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://jc32arlvqpv8.com/2b77887421e2587a1a1b1d7c8a31a9e0/invoke.js"></scr' + 'ipt>');
+</script>
+		
+	</center>
+					
+				</div>
+			</div>
+			<div class="row content mb-4">
+				<div class="col-md-12">					
+					
+	
+	<div class="card-columns">
+						
+	  <div class='card'>
+	  	<a href="https://pic1.zhimg.com/v2-da94f47ddc7e444cfd32cb48651c6bd3_1440w.jpg?source=172ae18b" data-lightbox="roadtrip" data-title="Sympy 符号计算基本教程 知乎">
+						<img class="card-img" src="https://pic1.zhimg.com/v2-da94f47ddc7e444cfd32cb48651c6bd3_1440w.jpg?source=172ae18b" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjrCHWlJgFFeSdX65IzbxcrNJ4anrmNMsn7X5Oj6gBQvXa9l_5ZBWOWWwZzW5Nt4ZWO7Q';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Sympy 符号计算基本教程 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://i.imgur.com/JOF93JE.png" data-lightbox="roadtrip" data-title="一個地球人在臺北 Python 符號運算套件 Sympy">
+						<img class="card-img" src="https://i.imgur.com/JOF93JE.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNvluHvqdk5wQbgkvS4MQ8SLyY26FjX1li75CqFy71Ji_W8CtfeT1aX5tQsfOU6X5AUbQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				一個地球人在臺北 Python 符號運算套件 Sympy
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://img-blog.csdn.net/2018052820382357?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMjgxMDUz/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" data-lightbox="roadtrip" data-title="用sympy库解常微分方程 Jason Hhuang的博客 Csdn博客">
+						<img class="card-img" src="https://img-blog.csdn.net/2018052820382357?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMjgxMDUz/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1ec-f8zsm_3w3PNajA3_MFIQ1PCqYkl_iASmeZUsm-hAifU4aoJnP6IGGKJvNHQLXttI';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				用sympy库解常微分方程 Jason Hhuang的博客 Csdn博客
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic1.xuehuaimg.com/proxy/csdn/https://img-blog.csdnimg.cn/20190106174354377.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzIxNTkxNjc1,size_16,color_FFFFFF,t_70" data-lightbox="roadtrip" data-title="有界線性方程組求解 Python實現 利用sympy推導公式 然後用scipy解線性方程組 台部落">
+						<img class="card-img" src="https://pic1.xuehuaimg.com/proxy/csdn/https://img-blog.csdnimg.cn/20190106174354377.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzIxNTkxNjc1,size_16,color_FFFFFF,t_70" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT72wlf3XHl7YOpGKrko0q_mkeqcQ9wsEO4SdfMt0EHqHT-qVskuTdUFS4t7KYQ3oQso-k';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				有界線性方程組求解 Python實現 利用sympy推導公式 然後用scipy解線性方程組 台部落
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://img-blog.csdn.net/20180528203131771?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMjgxMDUz/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" data-lightbox="roadtrip" data-title="用sympy库解常微分方程 Jason Hhuang的博客 Csdn博客">
+						<img class="card-img" src="https://img-blog.csdn.net/20180528203131771?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMjgxMDUz/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBjW2cjiuO009xBQVUxjX78cTbzB1I4_QTPI_Ztb_ZQtZT7PP7IaHP6OV4j8jLSWUkc-g';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				用sympy库解常微分方程 Jason Hhuang的博客 Csdn博客
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://acupun.site/lecture/python_math/example/chp11/p11-5a.png" data-lightbox="roadtrip" data-title="陳擎文教學網 Python求解數學式 高中數學 大學數學 工程數學數學 微積分">
+						<img class="card-img" src="https://acupun.site/lecture/python_math/example/chp11/p11-5a.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAjmz9OTwRX0H8QbdVeWi5MN12e5sBOycLlnEB1cJsXJEZ1vYIMrnJcwGxBIVkQsvhjSQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				陳擎文教學網 Python求解數學式 高中數學 大學數學 工程數學數學 微積分
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+				<div class='card'>	
+			<div class="d-block p-4">
+	</div>		  	
+		  	<h3 class="h6 p-2"><b></b></h3>
+					</div>
+		
+						
+	  <div class='card'>
+	  	<a href="https://lh6.googleusercontent.com/proxy/-U_yFOFOwUPLsBR6JH4Wo_iC9-waLWaZy8SfF8PVKcPARHxiaLBztUu7Vn-ZPNGKu56H=w1200-h630-p-k-no-nu" data-lightbox="roadtrip" data-title="Python 符號運算套件 Sympy 一個地球人在臺北">
+						<img class="card-img" src="https://lh6.googleusercontent.com/proxy/-U_yFOFOwUPLsBR6JH4Wo_iC9-waLWaZy8SfF8PVKcPARHxiaLBztUu7Vn-ZPNGKu56H=w1200-h630-p-k-no-nu" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOwb2zPmGPOTzvxSMS5nOpTo89iHEdczuEBEwUx_lOFtJgw6jEEYDEKNbFUAalol-eJBY';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Python 符號運算套件 Sympy 一個地球人在臺北
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://img-blog.csdnimg.cn/20201020165243987.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80ODYxNTgzMg==,size_16,color_FFFFFF,t_70" data-lightbox="roadtrip" data-title="Python 利用sympy模块进行数学计算 Fo Bi 的博客 Csdn博客">
+						<img class="card-img" src="https://img-blog.csdnimg.cn/20201020165243987.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80ODYxNTgzMg==,size_16,color_FFFFFF,t_70" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQweMo2rXmkrFX7rTqDLqi968HQ4whUzI6QdejmuItWTKYtZ41zByZkdUk57dWKqPJ-zo';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Python 利用sympy模块进行数学计算 Fo Bi 的博客 Csdn博客
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.sympy.org/static/images/main_features_examples/plotting11.png" data-lightbox="roadtrip" data-title="特性">
+						<img class="card-img" src="https://www.sympy.org/static/images/main_features_examples/plotting11.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXkw4cZSFFJXlmEERt9wlcGCk4Cy2LL9iQBPggWCEzwoOSVVzivD8xxHJS9BrWDtkQUNU';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				特性
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic2.zhimg.com/v2-b001e78c33712da3eabc616d4b134969_b.jpg" data-lightbox="roadtrip" data-title="Sympy 符号计算基本教程 知乎">
+						<img class="card-img" src="https://pic2.zhimg.com/v2-b001e78c33712da3eabc616d4b134969_b.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_0PD2fjpkJZOd5igydOzviqiIJbMhx6C0zg9aKkkyEFDfaERpKajJDjm8sJ1l2z-JXjM';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Sympy 符号计算基本教程 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.sympy.org/static/images/main_features_examples/printing1.png" data-lightbox="roadtrip" data-title="特性">
+						<img class="card-img" src="https://www.sympy.org/static/images/main_features_examples/printing1.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQO-FT9zwt-_Kbnnf2NO0z--DBpZfEZT7WD38fz8q8ZNUKjQRSmrZVMvQv8267Z5Aw7YCE';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				特性
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://acupun.site/lecture/python_math/example/chp7/latex/p7-5b.png" data-lightbox="roadtrip" data-title="陳擎文教學網 Python求解數學式 高中數學 大學數學 工程數學數學 微積分">
+						<img class="card-img" src="https://acupun.site/lecture/python_math/example/chp7/latex/p7-5b.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSN6bJlAmUrprS53ymEANxMrwtCBPv04EjjfgElVUqj3WR98NDvXQMch2uPvJL9EdBDckc';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				陳擎文教學網 Python求解數學式 高中數學 大學數學 工程數學數學 微積分
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://acupun.site/lecture/python_math/example/chp9/p9-1.png" data-lightbox="roadtrip" data-title="陳擎文教學網 Python求解數學式 高中數學 大學數學 工程數學數學 微積分">
+						<img class="card-img" src="https://acupun.site/lecture/python_math/example/chp9/p9-1.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1ywDJZQ0CO4dyYOnH3QZhkbIY31bZrEvit6NoUviXoDCTHvEAsHNAoeSUrxefM1BNu2k';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				陳擎文教學網 Python求解數學式 高中數學 大學數學 工程數學數學 微積分
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://acupun.site/lecture/python_math/example/chp6/latex/p6-2.png" data-lightbox="roadtrip" data-title="陳擎文教學網 Python求解數學式 高中數學 大學數學 工程數學數學 微積分">
+						<img class="card-img" src="https://acupun.site/lecture/python_math/example/chp6/latex/p6-2.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSO1f-lHy2a94JlCTi_qfCHRW9GjOsn78hB-J3JOxZfyL7DRyjhL23JHbMQadI00m87XTM';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				陳擎文教學網 Python求解數學式 高中數學 大學數學 工程數學數學 微積分
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://miro.medium.com/max/1400/1*bBiVxG81x6DZYPf8R8CuZw.png" data-lightbox="roadtrip" data-title="陳擎文教學網 Python求解數學式 高中數學 大學數學 工程數學數學 微積分">
+						<img class="card-img" src="https://miro.medium.com/max/1400/1*bBiVxG81x6DZYPf8R8CuZw.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxYdCLGvnUBW7dXwuNd9bnO9IyBncHX8YM9jk6PVPTJjqQFMIqj927wCVlF4I0X4DXz4I';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				陳擎文教學網 Python求解數學式 高中數學 大學數學 工程數學數學 微積分
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic1.zhimg.com/v2-165578104f5f3677234031d0f0649074_b.jpg" data-lightbox="roadtrip" data-title="Sympy 符号计算基本教程 知乎">
+						<img class="card-img" src="https://pic1.zhimg.com/v2-165578104f5f3677234031d0f0649074_b.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTS-zasCil4cLZh0D20SzUglbXZ04N9Py2R-y-F0Nc206NcmcxGZn3wMJmlmZx8X_sjkgo';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Sympy 符号计算基本教程 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://acupun.site/lecture/python_math/example/chp10/p0-3.png" data-lightbox="roadtrip" data-title="陳擎文教學網 Python求解數學式 高中數學 大學數學 工程數學數學 微積分">
+						<img class="card-img" src="https://acupun.site/lecture/python_math/example/chp10/p0-3.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFf5um0HSaHAaVHYKwR4DPjzvzOIXuZFoqLQq2LCCDsPkTKvxySVRa-HR7piODJmnnlw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				陳擎文教學網 Python求解數學式 高中數學 大學數學 工程數學數學 微積分
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://fayolchang.github.io/hexoblog/2015/05/03/sympy-tutorial/sympy-tutorial_30_0.png" data-lightbox="roadtrip" data-title="Sympy Tutorial Machine Learning Algorithms And Others">
+						<img class="card-img" src="http://fayolchang.github.io/hexoblog/2015/05/03/sympy-tutorial/sympy-tutorial_30_0.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTo24ZM05_ZBzQP9pjoVm84xiTdRPgkZnoJNciai6DG_peASmm-wbUkPO9juZfL2xodDYQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Sympy Tutorial Machine Learning Algorithms And Others
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.sympy.org/static/images/main_features_examples/printing2.png" data-lightbox="roadtrip" data-title="特性">
+						<img class="card-img" src="https://www.sympy.org/static/images/main_features_examples/printing2.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWFtlyIZBpDDGV7U2E8tztogmairSVUrHifFhqVqseyoUslZ-13zWaXjt9uLCqeTN7oQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				特性
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://acupun.site/lecture/python_math/example/chp7/latex/p7-2b.png" data-lightbox="roadtrip" data-title="陳擎文教學網 Python求解數學式 高中數學 大學數學 工程數學數學 微積分">
+						<img class="card-img" src="https://acupun.site/lecture/python_math/example/chp7/latex/p7-2b.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxPitWKTZ4nRZiANhHnuIRBcF2HJ3xZHu-mGHX3PMDy9XqTK7Nwpd7MP6koT1zzl4nr04';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				陳擎文教學網 Python求解數學式 高中數學 大學數學 工程數學數學 微積分
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic4.zhimg.com/80/v2-3b2fc546872c68cf1d5b844dd121304b_1440w.jpg" data-lightbox="roadtrip" data-title="用python 来研究数学 Sympy 符号工具包介绍 知乎">
+						<img class="card-img" src="https://pic4.zhimg.com/80/v2-3b2fc546872c68cf1d5b844dd121304b_1440w.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0WNLW7RmhuWnLLijwHu_Q82d8SXNmTtA2KQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				用python 来研究数学 Sympy 符号工具包介绍 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://img2018.cnblogs.com/blog/1322499/201907/1322499-20190713145719606-859776866.png" data-lightbox="roadtrip" data-title="Python Sympy科学计算与数据处理 方程 微分 微分方程 积分 蔡军帅 博客园">
+						<img class="card-img" src="https://img2018.cnblogs.com/blog/1322499/201907/1322499-20190713145719606-859776866.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRmHSUjqlU2pPBgDY2HSirAczSNOyiRvmqZQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Python Sympy科学计算与数据处理 方程 微分 微分方程 积分 蔡军帅 博客园
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://acupun.site/lecture/python_math/example/chp10/p10-5.png" data-lightbox="roadtrip" data-title="陳擎文教學網 Python求解數學式 高中數學 大學數學 工程數學數學 微積分">
+						<img class="card-img" src="https://acupun.site/lecture/python_math/example/chp10/p10-5.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3dqz1_lrxs2jU_Vo-llCBhi2Ncpo4mKty1g';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				陳擎文教學網 Python求解數學式 高中數學 大學數學 工程數學數學 微積分
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://acupun.site/lecture/python_math/example/chp11/p11-2.png" data-lightbox="roadtrip" data-title="陳擎文教學網 Python求解數學式 高中數學 大學數學 工程數學數學 微積分">
+						<img class="card-img" src="https://acupun.site/lecture/python_math/example/chp11/p11-2.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0N0bSQ6mAH2j_n9Z4XCd0rJ_VDNCgJ_zapQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				陳擎文教學網 Python求解數學式 高中數學 大學數學 工程數學數學 微積分
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://acupun.site/lecture/python_math/example/chp10/p10-6.png" data-lightbox="roadtrip" data-title="陳擎文教學網 Python求解數學式 高中數學 大學數學 工程數學數學 微積分">
+						<img class="card-img" src="https://acupun.site/lecture/python_math/example/chp10/p10-6.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnPybdrgwVrjU6iBq-UUAurSUhopyvrxVsaA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				陳擎文教學網 Python求解數學式 高中數學 大學數學 工程數學數學 微積分
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://img-blog.csdn.net/20170208213138869?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZ2l0aHViXzM1OTU3MTg4/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" data-lightbox="roadtrip" data-title="Sympy 解方程 Rezero S Blog Csdn博客 Sympy 解方程">
+						<img class="card-img" src="https://img-blog.csdn.net/20170208213138869?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZ2l0aHViXzM1OTU3MTg4/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTq-1Ub5lDyWe7hYYDrY4cEr6fcWnR49u32dA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Sympy 解方程 Rezero S Blog Csdn博客 Sympy 解方程
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.sympy.org/static/images/main_features_examples/plotting10.png" data-lightbox="roadtrip" data-title="特性">
+						<img class="card-img" src="https://www.sympy.org/static/images/main_features_examples/plotting10.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRscibpEydw68uXr42fpOjLM2ayjFvb5lvKQQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				特性
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://acupun.site/lecture/python_math/example/chp11/p11-0d.png" data-lightbox="roadtrip" data-title="陳擎文教學網 Python求解數學式 高中數學 大學數學 工程數學數學 微積分">
+						<img class="card-img" src="https://acupun.site/lecture/python_math/example/chp11/p11-0d.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQi9s-IL9hPgfpM3v0WXcf2rJ8HZnjhTptt5g';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				陳擎文教學網 Python求解數學式 高中數學 大學數學 工程數學數學 微積分
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://oscimg.oschina.net/oscnet/489452b4a3bf2e9026365ed02dfffd319eb.png" data-lightbox="roadtrip" data-title="Sympy首页 文档和下载 Python代数计算库 Oschina 中文开源技术交流社区">
+						<img class="card-img" src="https://oscimg.oschina.net/oscnet/489452b4a3bf2e9026365ed02dfffd319eb.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwHagrmJEzvpB9cXTQd7LM0fnAjB0nWzPixQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Sympy首页 文档和下载 Python代数计算库 Oschina 中文开源技术交流社区
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.sympy.org/static/images/main_features_examples/plotting1.png" data-lightbox="roadtrip" data-title="特性">
+						<img class="card-img" src="https://www.sympy.org/static/images/main_features_examples/plotting1.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-mnV5QFyuW-Vk4W5me9NIWQO3NglIEHcXaA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				特性
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://acupun.site/lecture/python_math/example/chp2/p2-4b.png" data-lightbox="roadtrip" data-title="陳擎文教學網 Python求解數學式 高中數學 大學數學 工程數學數學 微積分">
+						<img class="card-img" src="https://acupun.site/lecture/python_math/example/chp2/p2-4b.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOnUj2tjOGYdp25YW8rSN6-d0n7fGaZeRkeA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				陳擎文教學網 Python求解數學式 高中數學 大學數學 工程數學數學 微積分
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://acupun.site/lecture/python_math/example/chp4/p4-3.png" data-lightbox="roadtrip" data-title="陳擎文教學網 Python求解數學式 高中數學 大學數學 工程數學數學 微積分">
+						<img class="card-img" src="https://acupun.site/lecture/python_math/example/chp4/p4-3.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSL79ab8PBjBGqO9JYHSs0QrRyKMvEQWHT5JA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				陳擎文教學網 Python求解數學式 高中數學 大學數學 工程數學數學 微積分
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic3.zhimg.com/v2-1f9e24acd60832c01257872f3ba525ca_b.jpg" data-lightbox="roadtrip" data-title="Sympy 符号计算基本教程 知乎">
+						<img class="card-img" src="https://pic3.zhimg.com/v2-1f9e24acd60832c01257872f3ba525ca_b.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROIX0zi23nnQ3NovCoDKh84suZK65H0QAT8w';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Sympy 符号计算基本教程 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+		
+	</div>
+
+		 
+		
+		
+				</div>
+				<div class="col-sm-12 widget">
+					<div class="d-block p-4">
+	<center>
+		<!-- BOTTOM BANNER ADS -->
+<script async="async" data-cfasync="false" src="//jc32arlvqpv8.com/eb47a424ae325c90cca32780149785c3/invoke.js"></script>
+<div id="container-eb47a424ae325c90cca32780149785c3"></div>
+
+	</center>
+</div>				</div>
+			</div>
+			<div class="row footer">
+				<div class="col-md-12 text-center py-4">
+										<a href="/p/dmca.html">Dmca</a>
+										<a href="/p/contact.html">Contact</a>
+										<a href="/p/privacy-policy.html">Privacy Policy</a>
+										<a href="/p/copyright.html">Copyright</a>
+					
+				</div>
+			</div>
+		</main>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js" integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js" integrity="sha256-CtKylYan+AJuoH8jrMht1+1PMhMqrKnB8K5g012WN5I=" crossorigin="anonymous"></script>
+		
+		<!-- Footer CSS JS -->
+		
+		
+		
+			<script type='text/javascript' src='//jc32arlvqpv8.com/ef/d5/10/efd510237a3143727bed46803ec35b8d.js'></script>
+</body>
+</html>

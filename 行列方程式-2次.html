@@ -1,0 +1,682 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha256-L/W5Wfqfa0sdBNIKN9cG6QA5F2qx4qICmU2VgLruv9Y=" crossorigin="anonymous" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/css/lightbox.min.css" integrity="sha256-tBxlolRHP9uMsEFKVk+hk//ekOlXOixLKvye5W2WR5c=" crossorigin="anonymous" />
+		<link href="https://fonts.googleapis.com/css?family=Mr+Dafoe" rel="stylesheet" type="text/css">
+
+		<style type="text/css">
+			html,body{font-family:"Open Sans",Arial,sans-serif;font-size:14px;font-weight:400;background:#f3f3f3 url(https://icu-hsuzuki.github.io/science/class/linear1/lecnote/2-1.gif
+) no-repeat center center fixed;background-size:cover;height:100%}#title{font-family:"Mr Dafoe",Times,serif;font-size:34px;background:rgba(255,255,255,.8);margin-bottom:34px}.header{padding-bottom:13px;margin-bottom:13px;border-bottom:1px solid #eee}a{color:#26ADE4;text-decoration:none}#title a{color:#333;margin-left:21px}#title a:hover{text-decoration:none;color:#26ADE4}.sidebar ul{margin:0;padding:0}.sidebar ul li{list-style:none}.footer{margin-top:21px;padding-top:13px;border-top:1px solid #eee}.footer a{margin:0 15px}.navi{margin:13px 0 13px 0;padding:13px}.navi a{margin:5px 2px;font-size:95%}.main{margin-top: 6rem;}.form-inline .form-control{min-width: 300px;}.v-cover{height: 380px; object-fit: cover;}.v-image{height: 200px; object-fit: cover;}.dwn-cover{max-height: 460px; object-fit: cover;}.main{margin-top: 6rem;}.form-inline .form-control{min-width: 300px;}			
+		</style>
+
+		<title>行列方程式 2次</title>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/", 
+  "@type": "Article", 
+  "author": {
+    "@type": "Person",
+    "name": "James"
+  },
+  "headline": "行列方程式 2次",
+  "datePublished": "2021-04-24",
+  "image": [https://s0.wp.com/latex.php?latex=%5Cdisplaystyle++%5Cbegin%7Baligned%7D++%26%7E%7Eax%5E2%2Bbx%2Bc%3D0%5C%5C++%5CRightarrow%26%7E%7E4a%5E2x%5E2%2B4abx%3D-4ac%5C%5C++%5CRightarrow%26%7E%7E4a%5E2x%5E2%2B4abx%2Bb%5E2%3Db%5E2-4ac%5C%5C++%5CRightarrow%26%7E%7E%282ax%2Bb%29%5E2%3Db%5E2-4ac%5C%5C++%5CRightarrow%26%7E%7E2ax%2Bb%3D%5Cpm%5Csqrt%7Bb%5E2-4ac%7D%5C%5C++%5CRightarrow%26%7E%7Ex%3D%5Cfrac%7B-b%5Cpm%5Csqrt%7Bb%5E2-4ac%7D%7D%7B2a%7D++%5Cend%7Baligned%7D&amp;bg=ffffff&amp;fg=000000&amp;s=0&amp;c=20201002,https://pic2.zhimg.com/v2-d76c8c40eaf1c8eeb53e83cedbc7e149_b.jpg,http://www.ee.fit.ac.jp/~kudou/1mathA/01/eq1.png],
+  "publisher": {
+    "@type": "Organization",
+    "name": "Tukang Parkir Gerobak",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://via.placeholder.com/512.png?text=行列方程式 2次",
+      "width": 512,
+      "height": 512
+    }
+  }
+}
+</script>
+		<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-957NGNKQ70"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-957NGNKQ70');
+</script>
+
+<script type='text/javascript' src='//jc32arlvqpv8.com/1a/82/2e/1a822ef8a40a0fbab3c4ea12a5d2bb02.js'></script>
+</head>
+	<body>
+		<header class="bg-white fixed-top">			
+			<nav class="navbar navbar-light bg-white mb-0">
+				<div class="container justify-content-center justify-content-sm-between">	
+				  <a href="/" title="Blog" class="navbar-brand mb-1">Blog</a>
+				  				</div>			  
+			</nav>				
+		</header>
+		<main class="main container bg-white">
+			<div class="col-md-12 my-4" align="center">
+				<div class="d-block p-4">
+	<br/><center>
+<!-- TOP BANNER ADS -->
+</center><br/>
+</div>			</div>
+			<div class="row header">
+				<div class="col-sm-12 text-center p-2">
+						<h1>行列方程式 2次</h1>
+
+	
+	<div class="navi text-center">
+										<a class="badge badge-info" href="/%E6%99%82%E9%96%93%E5%BE%AE%E5%88%86%E3%81%AE%E6%96%B9%E7%A8%8B%E5%BC%8F-%E8%8B%B1%E8%AA%9E.html">時間微分の方程式 英語</a>
+											<a class="badge badge-dark" href="/%E7%B6%BE%E6%B3%A2-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%AE%E3%81%93%E3%81%A8.html">綾波 お父さんのこと</a>
+											<a class="badge badge-primary" href="/%E7%94%BA%E5%86%85%E3%81%AE%E9%81%8B%E5%8B%95%E4%BC%9A%E3%82%92%E9%A0%91%E5%BC%B5%E3%82%8B%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93.html">町内の運動会を頑張るお父さん</a>
+											<a class="badge badge-dark" href="/%E9%9B%BB%E8%A9%B1%E3%81%97%E3%81%A6%E3%81%84%E3%81%BE%E3%81%97%E3%81%9F%E3%81%8C-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%82%82-%E6%BC%82%E6%B5%81%E9%83%B5%E4%BE%BF%E5%B1%80.html">電話していましたが お父さんも 漂流郵便局</a>
+											<a class="badge badge-success" href="/%E7%90%86%E6%83%B3%E6%B0%97%E4%BD%93%E3%81%AE%E5%AF%86%E5%BA%A6%E6%96%B9%E7%A8%8B%E5%BC%8F.html">理想気体の密度方程式</a>
+											<a class="badge badge-info" href="/%E7%89%B9%E5%88%A5%E3%81%AA%E7%B5%86%E5%89%B5%E8%86%8F-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%8C%E9%96%8B%E7%99%BA%E3%81%97%E3%81%9F.html">特別な絆創膏 お父さんが開発した</a>
+											<a class="badge badge-success" href="/%E8%BF%91%E8%A6%AA%E7%9B%B8%E5%A7%A6-%E7%84%A1%E8%A8%80-%E9%9A%A3%E3%81%AB%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%8C%E3%81%84%E3%82%8B%E3%81%AE%E3%82%88-%E6%A4%8E%E5%90%8D%E3%82%86%E3%81%AA.html">近親相姦 無言 隣にお父さんがいるのよ 椎名ゆな</a>
+											<a class="badge badge-warning" href="/%E8%B2%B4%E6%96%B9%E3%81%8C%E5%83%95%E3%81%AE%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%A0%E3%81%A3%E3%81%9F%E3%82%93%E3%81%A7%E3%81%99%E3%81%AD-%E5%95%86%E5%A3%B2.html">貴方が僕のお父さんだったんですね 商売</a>
+											<a class="badge badge-secondary" href="/%E9%A0%AD%E3%81%AE%E7%88%BD%E3%82%84%E3%81%8B%E3%81%AA%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93.html">頭の爽やかなお父さん</a>
+											<a class="badge badge-info" href="/%E6%A5%95%E5%86%86%E3%81%AE%E6%96%B9%E7%A8%8B%E5%BC%8F-%E5%90%8C%E5%80%A4.html">楕円の方程式 同値</a>
+											<a class="badge badge-warning" href="/%E6%9C%80%E6%84%9B%E3%81%AE%E5%A8%98-%E8%BF%91%E8%A6%AA%E7%9B%B8%E5%A7%A6swap-%E5%8A%A0%E9%80%9F%E3%81%99%E3%82%8B%E7%88%B6%E3%81%AE%E6%AC%B2%E6%9C%9B-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E4%BB%A5%E5%A4%96%E3%81%AE%E7%94%B7%E6%80%A7%E3%81%A8%E5%88%9D%E3%82%81%E3%81%A6%E9%81%8E%E3%81%94%E3%81%97%E3%81%9F2%E6%B3%8A3%E6%97%A5%E9%96%93-%E5%A4%A7%E4%B9%B1%E4%BA%A4%E7%B7%A8.html">最愛の娘 近親相姦swap 加速する父の欲望 お父さん以外の男性と初めて過ごした2泊3日間 大乱交編</a>
+											<a class="badge badge-light" href="/%E9%9D%9E%E7%B7%9A%E5%BD%A2%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B%E5%BC%8F-%E5%B7%AE%E5%88%86%E6%96%B9%E7%A8%8B%E5%BC%8F.html">非線形微分方程式 差分方程式</a>
+											<a class="badge badge-danger" href="/%E9%AB%98-%E6%99%BA%E8%83%BD-%E6%96%B9%E7%A8%8B%E5%BC%8F-%E7%B7%9A%E4%B8%8A-%E7%9C%8B.html">高 智能 方程式 線上 看</a>
+											<a class="badge badge-primary" href="/%E7%8B%AC%E7%AB%8B%E3%81%97%E3%81%9F%E6%96%B9%E7%A8%8B%E5%BC%8F.html">独立した方程式</a>
+											<a class="badge badge-dark" href="/%E6%A5%B5-%E6%96%B9%E7%A8%8B%E5%BC%8F-%E4%BA%8C%E4%B9%97.html">極 方程式 二乗</a>
+						</div>
+<center>
+	<!-- MIDDLE BANNER ADS -->
+<script type="text/javascript">
+	atOptions = {
+		'key' : '2b77887421e2587a1a1b1d7c8a31a9e0',
+		'format' : 'iframe',
+		'height' : 250,
+		'width' : 300,
+		'params' : {}
+	};
+	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://jc32arlvqpv8.com/2b77887421e2587a1a1b1d7c8a31a9e0/invoke.js"></scr' + 'ipt>');
+</script>
+		
+	</center>
+					
+				</div>
+			</div>
+			<div class="row content mb-4">
+				<div class="col-md-12">					
+					
+	
+	<div class="card-columns">
+						
+	  <div class='card'>
+	  	<a href="http://www.eisaijuku.join-us.jp/renritu-houteishiki-no-gyoretu-shiki-2x2.GIF" data-lightbox="roadtrip" data-title="連立方程式の行列解">
+						<img class="card-img" src="http://www.eisaijuku.join-us.jp/renritu-houteishiki-no-gyoretu-shiki-2x2.GIF" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJGE3UhC8j-bvInOmjasYk7608DeNZiDB8trd6uiDO4thTK_wwTM8R1F0vCofGEeH2saI';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				連立方程式の行列解
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://www.eisaijuku.join-us.jp/renritu-houteishiki-no-gyoretu-shiki2-2x2.GIF" data-lightbox="roadtrip" data-title="連立方程式の行列解">
+						<img class="card-img" src="http://www.eisaijuku.join-us.jp/renritu-houteishiki-no-gyoretu-shiki2-2x2.GIF" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeigwUjtVLOZLnz8z4bLfbu25dr4k-KEQUpPDMTHjLo-6pZicu3BF4htM6C8E-nIbpY7A';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				連立方程式の行列解
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://www.eisaijuku.join-us.jp/renritu-houteishiki-no-gyoretu-shiki-3x3.GIF" data-lightbox="roadtrip" data-title="連立方程式の行列解">
+						<img class="card-img" src="http://www.eisaijuku.join-us.jp/renritu-houteishiki-no-gyoretu-shiki-3x3.GIF" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4hBDKZZsRXupDHj5AXKx7TUGn9H56kdCb1295jmBytA7F2ogCCFTFkH8UoFwu0ov-TkY';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				連立方程式の行列解
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://www.akita-pu.ac.jp/system/elect/ins/kusakari/japanese/teaching/Old/LinearAlgebra/2005/note/6/Slide05.gif" data-lightbox="roadtrip" data-title="2元１次連立方程式から２次の行列式へ">
+						<img class="card-img" src="http://www.akita-pu.ac.jp/system/elect/ins/kusakari/japanese/teaching/Old/LinearAlgebra/2005/note/6/Slide05.gif" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR64WVuE-c_onHpl3Q6tQKTcSrSDgDg48EwYuiCbZOxsIBlsjANS_1YZ5iaDVOdC1XQ7WI';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				2元１次連立方程式から２次の行列式へ
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://cdn-ak.f.st-hatena.com/images/fotolife/g/gould2007/20080126/20080126215145.png" data-lightbox="roadtrip" data-title="行列と二次曲線 整数解 連立方程式 難関大学への数学">
+						<img class="card-img" src="https://cdn-ak.f.st-hatena.com/images/fotolife/g/gould2007/20080126/20080126215145.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZbOM0Niy0__UzelJq7JUveCRXZ4emoW6EUCuw1C2wyatrxsVDv7hqFv20WVZXmdFxVuY';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				行列と二次曲線 整数解 連立方程式 難関大学への数学
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://icu-hsuzuki.github.io/science/class/linear1/lecnote/1-1.gif" data-lightbox="roadtrip" data-title="Intro Linear Note">
+						<img class="card-img" src="https://icu-hsuzuki.github.io/science/class/linear1/lecnote/1-1.gif" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrYBFs3J4om-Tree3ZRYidTgBxhlGE_Io1QMkm_qr-yTQDkqvZj20W4wOI9j_MJSAFz5o';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Intro Linear Note
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+				<div class='card'>	
+			<div class="d-block p-4">
+	</div>		  	
+		  	<h3 class="h6 p-2"><b></b></h3>
+					</div>
+		
+						
+	  <div class='card'>
+	  	<a href="https://i.ytimg.com/vi/COcFZ60-fbk/maxresdefault.jpg" data-lightbox="roadtrip" data-title="例題 克拉瑪公式解二元一次方程組 Youtube">
+						<img class="card-img" src="https://i.ytimg.com/vi/COcFZ60-fbk/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMubRiUyl3TGIBqYygXSro42QJUItqs6eT-QxjTE2jTyIK1H3le36MgdMC1Ee9NN9Z_L8';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				例題 克拉瑪公式解二元一次方程組 Youtube
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://s0.wp.com/latex.php?latex=%5Cdisplaystyle++%5Cbegin%7Baligned%7D++%26%7E%7Eax%5E2%2Bbx%2Bc%3D0%5C%5C++%5CRightarrow%26%7E%7E4a%5E2x%5E2%2B4abx%3D-4ac%5C%5C++%5CRightarrow%26%7E%7E4a%5E2x%5E2%2B4abx%2Bb%5E2%3Db%5E2-4ac%5C%5C++%5CRightarrow%26%7E%7E%282ax%2Bb%29%5E2%3Db%5E2-4ac%5C%5C++%5CRightarrow%26%7E%7E2ax%2Bb%3D%5Cpm%5Csqrt%7Bb%5E2-4ac%7D%5C%5C++%5CRightarrow%26%7E%7Ex%3D%5Cfrac%7B-b%5Cpm%5Csqrt%7Bb%5E2-4ac%7D%7D%7B2a%7D++%5Cend%7Baligned%7D&amp;bg=ffffff&amp;fg=000000&amp;s=0&amp;c=20201002" data-lightbox="roadtrip" data-title="從推導一元二次方程的公式解看個性 線代啟示錄">
+						<img class="card-img" src="https://s0.wp.com/latex.php?latex=%5Cdisplaystyle++%5Cbegin%7Baligned%7D++%26%7E%7Eax%5E2%2Bbx%2Bc%3D0%5C%5C++%5CRightarrow%26%7E%7E4a%5E2x%5E2%2B4abx%3D-4ac%5C%5C++%5CRightarrow%26%7E%7E4a%5E2x%5E2%2B4abx%2Bb%5E2%3Db%5E2-4ac%5C%5C++%5CRightarrow%26%7E%7E%282ax%2Bb%29%5E2%3Db%5E2-4ac%5C%5C++%5CRightarrow%26%7E%7E2ax%2Bb%3D%5Cpm%5Csqrt%7Bb%5E2-4ac%7D%5C%5C++%5CRightarrow%26%7E%7Ex%3D%5Cfrac%7B-b%5Cpm%5Csqrt%7Bb%5E2-4ac%7D%7D%7B2a%7D++%5Cend%7Baligned%7D&amp;bg=ffffff&amp;fg=000000&amp;s=0&amp;c=20201002" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdUHU-szYRR_JkuKX81mPYmUCI2NtkCZGCuvegYNdQMVuT5UOjNZJ4mBJivEWX9nyq4EY';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				從推導一元二次方程的公式解看個性 線代啟示錄
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://linear-algebra.com/wp-content/uploads/2018/07/%E9%80%A3%E7%AB%8B%E6%96%B9%E7%A8%8B%E5%BC%8F%E3%81%A8%E9%80%86%E8%A1%8C%E5%88%97%EF%BC%91.png" data-lightbox="roadtrip" data-title="逆行列を求めて 実際に連立方程式を解いてみよう 線形代数を宇宙一わかりやすく解説してみるサイト">
+						<img class="card-img" src="https://linear-algebra.com/wp-content/uploads/2018/07/%E9%80%A3%E7%AB%8B%E6%96%B9%E7%A8%8B%E5%BC%8F%E3%81%A8%E9%80%86%E8%A1%8C%E5%88%97%EF%BC%91.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4o0W1XQyGbbSzGWjY6QeyIWlA_xd7enfyFX6qJ2gr5sb6YE4MJKJ2s8Ghpggwg6easw0';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				逆行列を求めて 実際に連立方程式を解いてみよう 線形代数を宇宙一わかりやすく解説してみるサイト
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://gss0.baidu.com/-4o3dSag_xI4khGko9WTAnF6hhy/zhidao/pic/item/838ba61ea8d3fd1f9dc75c603c4e251f94ca5f9a.jpg" data-lightbox="roadtrip" data-title="二阶矩阵方程 三人行教育网 Www 3rxing Org">
+						<img class="card-img" src="https://gss0.baidu.com/-4o3dSag_xI4khGko9WTAnF6hhy/zhidao/pic/item/838ba61ea8d3fd1f9dc75c603c4e251f94ca5f9a.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBc1pODSkUBESMa8zlBiq6IQ__WLeZ79uyqWXe24i6fHFnXPC0tODBcGtrtDew6lm5SSU';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				二阶矩阵方程 三人行教育网 Www 3rxing Org
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.maixj.net/pics/uploads/2016/11/xd-4.jpg" data-lightbox="roadtrip" data-title="用行列式直接写出联立方程的解 云上小悟">
+						<img class="card-img" src="https://www.maixj.net/pics/uploads/2016/11/xd-4.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLy0rlork7pfDtwfe8UWWeBzdhC4lUyqSJMavbf_G-RFBesYay9UQ8p1eWQfaCdnrhfkI';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				用行列式直接写出联立方程的解 云上小悟
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://sun.ac.jp/prof/hnagano/image/math272-7.jpg" data-lightbox="roadtrip" data-title="第4回講義 基礎数学 数学入門">
+						<img class="card-img" src="https://sun.ac.jp/prof/hnagano/image/math272-7.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYqAasRvGBb6cfxxYB0Ri-E_tXEJHQR2lnEw1_JjKlvMAIUvXofItx5ekJOQnLl9DyAtc';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				第4回講義 基礎数学 数学入門
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://math-note.xyz/wp-content/uploads/2020/03/%E9%80%A3%E7%AB%8B%EF%BC%91%E6%AC%A1%E6%96%B9%E7%A8%8B%E5%BC%8F.png" data-lightbox="roadtrip" data-title="連立１次方程式の掃き出し法と行列の基本変形">
+						<img class="card-img" src="https://math-note.xyz/wp-content/uploads/2020/03/%E9%80%A3%E7%AB%8B%EF%BC%91%E6%AC%A1%E6%96%B9%E7%A8%8B%E5%BC%8F.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkjjQDU8q8aI_aL2IfT93gtU2BGVXU0YY2YUlBaymRFgYdfY4Qe9xB09vokAFL-5HQr7c';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				連立１次方程式の掃き出し法と行列の基本変形
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://icu-hsuzuki.github.io/science/class/linear1/lecnote/2-1.gif" data-lightbox="roadtrip" data-title="Intro Linear Note">
+						<img class="card-img" src="https://icu-hsuzuki.github.io/science/class/linear1/lecnote/2-1.gif" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRx9eBT9gMpGHHSiLtJ3SUYPdSx_f2T2h-h4TruZEl3uDgKnI_Qq9x3CVukEsE4CENl83A';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Intro Linear Note
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://i.ytimg.com/vi/R3kKGRlBZfg/maxresdefault.jpg" data-lightbox="roadtrip" data-title="例題 克拉瑪公式解二元一次方程組進階 Youtube">
+						<img class="card-img" src="https://i.ytimg.com/vi/R3kKGRlBZfg/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkV1bfcsYzzzkK-z-MoeMSJqrsjV2zcoRhIwlC-eGQ52s-NPo_8b18OisETQLDgBefvN4';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				例題 克拉瑪公式解二元一次方程組進階 Youtube
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic4.zhimg.com/v2-071edbb5a7394268a3a00585a3667cfb_b.jpg" data-lightbox="roadtrip" data-title="学习线性代数 持续更新 知乎">
+						<img class="card-img" src="https://pic4.zhimg.com/v2-071edbb5a7394268a3a00585a3667cfb_b.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSABlDa_5ODeTeNIGFMj--Zd_4ZdwJY_SN_vnhwjLCPJ8BVLabTC9Dd4vgofkbMl2LBhEg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				学习线性代数 持续更新 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://www.iwata-system-support.com/CAE_HomePage/vector/vector13/jsextout7_fig201.gif" data-lightbox="roadtrip" data-title="1 13 2行2列の行列の逆行列">
+						<img class="card-img" src="http://www.iwata-system-support.com/CAE_HomePage/vector/vector13/jsextout7_fig201.gif" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTPCfHrA_ez0qTH9Ao_POyA4RQmn61nn-w6mDN3lYPqYgWFuIcvBrTQvPpYlVLpW2mXhA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				1 13 2行2列の行列の逆行列
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://www.ee.fit.ac.jp/~kudou/1mathA/01/eq1.png" data-lightbox="roadtrip" data-title="第１章 連立方程式">
+						<img class="card-img" src="http://www.ee.fit.ac.jp/~kudou/1mathA/01/eq1.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsPRmxmgxwieR3pLGcd7SWMf8ClDz00QbabAwk9znwSzqiw5sCmHJPyaggrl5j_sYjP30';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				第１章 連立方程式
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic2.zhimg.com/v2-d76c8c40eaf1c8eeb53e83cedbc7e149_b.jpg" data-lightbox="roadtrip" data-title="学习线性代数 持续更新 知乎">
+						<img class="card-img" src="https://pic2.zhimg.com/v2-d76c8c40eaf1c8eeb53e83cedbc7e149_b.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQt_z8AddrVnkjZgE9V5-vdatIqwKkWkk6TFJmGbOy6LtLOo5sOKcoE-N3XqK9TPW1SJwQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				学习线性代数 持续更新 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://image.slidesharecdn.com/topos-180513063150/95/-24-638.jpg?cb=1526194385" data-lightbox="roadtrip" data-title="連立方程式の解き方 線形代数とグレブナー基底">
+						<img class="card-img" src="https://image.slidesharecdn.com/topos-180513063150/95/-24-638.jpg?cb=1526194385" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdfC2640hUY2U40doeF6kZdiGmQI-f5eT28uYFSJYnjGy5ozhQhRDzb-9wRRxi6SNmut0';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				連立方程式の解き方 線形代数とグレブナー基底
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://sun.ac.jp/prof/hnagano/image/h21kisomath1-05-12.jpg" data-lightbox="roadtrip" data-title="第4回講義 基礎数学 数学入門">
+						<img class="card-img" src="https://sun.ac.jp/prof/hnagano/image/h21kisomath1-05-12.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWlnWryGtCwyI9IIhDDCzsLtKOrp_mvK8m3A';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				第4回講義 基礎数学 数学入門
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://racco.mikeneko.jp/Kougi/98s/Kisoenshuu1/7-09-p01.gif" data-lightbox="roadtrip" data-title="基礎数学演習ｉ">
+						<img class="card-img" src="http://racco.mikeneko.jp/Kougi/98s/Kisoenshuu1/7-09-p01.gif" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHHj-vkc2f5zrEdqP7ccJ1IajoSN9O2c_9Vw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				基礎数学演習ｉ
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://i0.hdslb.com/bfs/archive/1f1c28cdda332e79a34917f51f53029b83e5f4cb.jpg" data-lightbox="roadtrip" data-title="21 6 1 二元二次方程组的解法 哔哩哔哩 つロ干杯 Bilibili">
+						<img class="card-img" src="http://i0.hdslb.com/bfs/archive/1f1c28cdda332e79a34917f51f53029b83e5f4cb.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtCtmY0c0rBhTqFH1pAUvUbb0TcQ5Jh0MJ6w';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				21 6 1 二元二次方程组的解法 哔哩哔哩 つロ干杯 Bilibili
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://i.imgur.com/PwXYQUE.png" data-lightbox="roadtrip" data-title="打遍天下 一元二次方程式 的無敵手 克拉瑪公式 Ishewh的創作 巴哈姆特">
+						<img class="card-img" src="https://i.imgur.com/PwXYQUE.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIWdvqclM69xsKamZSHTYqeDmdlT3ZCSD4AQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				打遍天下 一元二次方程式 的無敵手 克拉瑪公式 Ishewh的創作 巴哈姆特
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="/search?q=%E4%BA%8C%E5%85%83%E4%B8%80%E6%AC%A1%E6%96%B9%E7%A8%8B&amp;tbm=isch" data-lightbox="roadtrip" data-title="Https Encrypted Tbn0 Gstatic Com Images Q Tbn And9gcrvl2u8viqrrrjui57rdxtisk96j4fszrnlgy6k Ivfpbtmjfnh Usqp Cau">
+						<img class="card-img" src="/search?q=%E4%BA%8C%E5%85%83%E4%B8%80%E6%AC%A1%E6%96%B9%E7%A8%8B&amp;tbm=isch" onerror="this.onerror=null;this.src='/search?q=%E4%BA%8C%E5%85%83%E4%B8%80%E6%AC%A1%E6%96%B9%E7%A8%8B&amp;tbm=isch';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Https Encrypted Tbn0 Gstatic Com Images Q Tbn And9gcrvl2u8viqrrrjui57rdxtisk96j4fszrnlgy6k Ivfpbtmjfnh Usqp Cau
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://img-blog.csdnimg.cn/img_convert/448e16828552e9f145fbab08c8515fe9.png" data-lightbox="roadtrip" data-title="三元二次方程组的解法 特殊二元二次方程组的解法 2 Ada 苏婉妤的博客 Csdn博客">
+						<img class="card-img" src="https://img-blog.csdnimg.cn/img_convert/448e16828552e9f145fbab08c8515fe9.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRik6UP8uWBrLtqH57vTB0QHa6QKhEY0f3Ruw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				三元二次方程组的解法 特殊二元二次方程组的解法 2 Ada 苏婉妤的博客 Csdn博客
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://twgreatdaily.com/images/elastic/rY_/rY_zBm8BMH2_cNUgDL5u.jpg" data-lightbox="roadtrip" data-title="线性代数之非齐次线性方程的求解方法总结">
+						<img class="card-img" src="https://twgreatdaily.com/images/elastic/rY_/rY_zBm8BMH2_cNUgDL5u.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR94P7dyFRJsFXCYOt9b8DPudQB2dYJcHgFLA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				线性代数之非齐次线性方程的求解方法总结
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://www.eisaijuku.join-us.jp/renritu-houteishiki-no-gyoretu-shiki2-3x3.GIF" data-lightbox="roadtrip" data-title="連立方程式の行列解">
+						<img class="card-img" src="http://www.eisaijuku.join-us.jp/renritu-houteishiki-no-gyoretu-shiki2-3x3.GIF" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRTd0sSp3GB4S9wY1eBX4VO7ombI314QQp4g';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				連立方程式の行列解
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://4.bp.blogspot.com/_vKsuip0OBuo/S77P1ETrbfI/AAAAAAAAAV4/JJLuwQsfIGk/s1600/1.jpg" data-lightbox="roadtrip" data-title="科學月刊 范德蒙行列式">
+						<img class="card-img" src="http://4.bp.blogspot.com/_vKsuip0OBuo/S77P1ETrbfI/AAAAAAAAAV4/JJLuwQsfIGk/s1600/1.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQN2koSP4oicUFMRoX0_-tQ6w4WZgp7H0-OOg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				科學月刊 范德蒙行列式
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.maixj.net/pics/uploads/2016/11/xd-6.png" data-lightbox="roadtrip" data-title="用行列式直接写出联立方程的解 云上小悟">
+						<img class="card-img" src="https://www.maixj.net/pics/uploads/2016/11/xd-6.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBLRnZbucg4kXx6Vm5b7qOFb_fk3F9QV8GSg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				用行列式直接写出联立方程的解 云上小悟
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://icu-hsuzuki.github.io/science/class/linear1/lecnote/10-2.gif" data-lightbox="roadtrip" data-title="Intro Linear Note">
+						<img class="card-img" src="https://icu-hsuzuki.github.io/science/class/linear1/lecnote/10-2.gif" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpTmvx6FHJWedYPzIXz4NTmR98hJUIBbAPkg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Intro Linear Note
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://cdn.slidesharecdn.com/ss_thumbnails/3-2-120603234542-phpapp02-thumbnail-4.jpg?cb=1338768292" data-lightbox="roadtrip" data-title="3 2行列式">
+						<img class="card-img" src="https://cdn.slidesharecdn.com/ss_thumbnails/3-2-120603234542-phpapp02-thumbnail-4.jpg?cb=1338768292" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNxdP3HiKyxvvm4fKq7mpBDsBOfICMZF1uCA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				3 2行列式
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://s0.wp.com/latex.php?latex=%5Cdisplaystyle++%5Cbegin%7Baligned%7D++%26%7E%7Eax%5E2%2Bbx%2Bc%3D0%5C%5C++%5CRightarrow%26%7E%7Ex%5E2%2B%5Cfrac%7Bb%7D%7Ba%7Dx%3D-%5Cfrac%7Bc%7D%7Ba%7D%5C%5C++%5CRightarrow%26%7E%7Ex%5E2%2B%5Cfrac%7Bb%7D%7Ba%7Dx%2B%5Cfrac%7Bb%5E2%7D%7B4a%5E2%7D%3D%5Cfrac%7Bb%5E2%7D%7B4a%5E2%7D-%5Cfrac%7Bc%7D%7Ba%7D%5C%5C++%5CRightarrow%26%7E%7E%5Cleft%28x%2B%5Cfrac%7Bb%7D%7B2a%7D%5Cright%29%5E2%3D%5Cfrac%7Bb%5E2-4ac%7D%7B4a%5E2%7D%5C%5C++%5CRightarrow%26%7E%7Ex%2B%5Cfrac%7Bb%7D%7B2a%7D%3D%5Cfrac%7B%5Cpm%5Csqrt%7Bb%5E2-4ac%7D%7D%7B2a%7D%5C%5C++%5CRightarrow%26%7E%7Ex%3D%5Cfrac%7B-b%5Cpm%5Csqrt%7Bb%5E2-4ac%7D%7D%7B2a%7D++%5Cend%7Baligned%7D&amp;bg=ffffff&amp;fg=000000&amp;s=0&amp;c=20201002" data-lightbox="roadtrip" data-title="從推導一元二次方程的公式解看個性 線代啟示錄">
+						<img class="card-img" src="https://s0.wp.com/latex.php?latex=%5Cdisplaystyle++%5Cbegin%7Baligned%7D++%26%7E%7Eax%5E2%2Bbx%2Bc%3D0%5C%5C++%5CRightarrow%26%7E%7Ex%5E2%2B%5Cfrac%7Bb%7D%7Ba%7Dx%3D-%5Cfrac%7Bc%7D%7Ba%7D%5C%5C++%5CRightarrow%26%7E%7Ex%5E2%2B%5Cfrac%7Bb%7D%7Ba%7Dx%2B%5Cfrac%7Bb%5E2%7D%7B4a%5E2%7D%3D%5Cfrac%7Bb%5E2%7D%7B4a%5E2%7D-%5Cfrac%7Bc%7D%7Ba%7D%5C%5C++%5CRightarrow%26%7E%7E%5Cleft%28x%2B%5Cfrac%7Bb%7D%7B2a%7D%5Cright%29%5E2%3D%5Cfrac%7Bb%5E2-4ac%7D%7B4a%5E2%7D%5C%5C++%5CRightarrow%26%7E%7Ex%2B%5Cfrac%7Bb%7D%7B2a%7D%3D%5Cfrac%7B%5Cpm%5Csqrt%7Bb%5E2-4ac%7D%7D%7B2a%7D%5C%5C++%5CRightarrow%26%7E%7Ex%3D%5Cfrac%7B-b%5Cpm%5Csqrt%7Bb%5E2-4ac%7D%7D%7B2a%7D++%5Cend%7Baligned%7D&amp;bg=ffffff&amp;fg=000000&amp;s=0&amp;c=20201002" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhWrmH9MyrWRln8y7KoPxOBww1TKouEXc__w';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				從推導一元二次方程的公式解看個性 線代啟示錄
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+		
+	</div>
+
+		 
+		
+		
+				</div>
+				<div class="col-sm-12 widget">
+					<div class="d-block p-4">
+	<center>
+		<!-- BOTTOM BANNER ADS -->
+<script async="async" data-cfasync="false" src="//jc32arlvqpv8.com/eb47a424ae325c90cca32780149785c3/invoke.js"></script>
+<div id="container-eb47a424ae325c90cca32780149785c3"></div>
+
+	</center>
+</div>				</div>
+			</div>
+			<div class="row footer">
+				<div class="col-md-12 text-center py-4">
+										<a href="/p/dmca.html">Dmca</a>
+										<a href="/p/contact.html">Contact</a>
+										<a href="/p/privacy-policy.html">Privacy Policy</a>
+										<a href="/p/copyright.html">Copyright</a>
+					
+				</div>
+			</div>
+		</main>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js" integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js" integrity="sha256-CtKylYan+AJuoH8jrMht1+1PMhMqrKnB8K5g012WN5I=" crossorigin="anonymous"></script>
+		
+		<!-- Footer CSS JS -->
+		
+		
+		
+			<script type='text/javascript' src='//jc32arlvqpv8.com/ef/d5/10/efd510237a3143727bed46803ec35b8d.js'></script>
+</body>
+</html>

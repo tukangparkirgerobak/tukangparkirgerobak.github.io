@@ -1,0 +1,682 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha256-L/W5Wfqfa0sdBNIKN9cG6QA5F2qx4qICmU2VgLruv9Y=" crossorigin="anonymous" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/css/lightbox.min.css" integrity="sha256-tBxlolRHP9uMsEFKVk+hk//ekOlXOixLKvye5W2WR5c=" crossorigin="anonymous" />
+		<link href="https://fonts.googleapis.com/css?family=Mr+Dafoe" rel="stylesheet" type="text/css">
+
+		<style type="text/css">
+			html,body{font-family:"Open Sans",Arial,sans-serif;font-size:14px;font-weight:400;background:#f3f3f3 url(https://techhere.jp/wp/wp-content/uploads/2020/04/978-4297105082-scaled.jpg
+) no-repeat center center fixed;background-size:cover;height:100%}#title{font-family:"Mr Dafoe",Times,serif;font-size:34px;background:rgba(255,255,255,.8);margin-bottom:34px}.header{padding-bottom:13px;margin-bottom:13px;border-bottom:1px solid #eee}a{color:#26ADE4;text-decoration:none}#title a{color:#333;margin-left:21px}#title a:hover{text-decoration:none;color:#26ADE4}.sidebar ul{margin:0;padding:0}.sidebar ul li{list-style:none}.footer{margin-top:21px;padding-top:13px;border-top:1px solid #eee}.footer a{margin:0 15px}.navi{margin:13px 0 13px 0;padding:13px}.navi a{margin:5px 2px;font-size:95%}.main{margin-top: 6rem;}.form-inline .form-control{min-width: 300px;}.v-cover{height: 380px; object-fit: cover;}.v-image{height: 200px; object-fit: cover;}.dwn-cover{max-height: 460px; object-fit: cover;}.main{margin-top: 6rem;}.form-inline .form-control{min-width: 300px;}			
+		</style>
+
+		<title>構造方程式モデリング Python Stan</title>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/", 
+  "@type": "Article", 
+  "author": {
+    "@type": "Person",
+    "name": "James"
+  },
+  "headline": "構造方程式モデリング Python Stan",
+  "datePublished": "2021-04-24",
+  "image": [https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F143765%2Fe990b402-d606-bb03-a1e9-a97a00bf116f.png?ixlib=rb-1.2.2&amp;auto=format&amp;gif-q=60&amp;q=75&amp;s=8288fcfcf5d8b94f721802c6b78d1850,https://staging-qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F342646%2Fd207d085-035f-b963-d395-2e573dd2143c.png?ixlib=rb-4.0.0&amp;auto=format&amp;gif-q=60&amp;q=75&amp;s=df11913d8297a8b48877fc7e40df693f,http://kamonohashiperry.com/wordpress/wp-content/uploads/2017/06/jirou_rating_histogram.jpeg],
+  "publisher": {
+    "@type": "Organization",
+    "name": "Tukang Parkir Gerobak",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://via.placeholder.com/512.png?text=構造方程式モデリング python stan",
+      "width": 512,
+      "height": 512
+    }
+  }
+}
+</script>
+		<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-957NGNKQ70"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-957NGNKQ70');
+</script>
+
+<script type='text/javascript' src='//jc32arlvqpv8.com/1a/82/2e/1a822ef8a40a0fbab3c4ea12a5d2bb02.js'></script>
+</head>
+	<body>
+		<header class="bg-white fixed-top">			
+			<nav class="navbar navbar-light bg-white mb-0">
+				<div class="container justify-content-center justify-content-sm-between">	
+				  <a href="/" title="Blog" class="navbar-brand mb-1">Blog</a>
+				  				</div>			  
+			</nav>				
+		</header>
+		<main class="main container bg-white">
+			<div class="col-md-12 my-4" align="center">
+				<div class="d-block p-4">
+	<br/><center>
+<!-- TOP BANNER ADS -->
+</center><br/>
+</div>			</div>
+			<div class="row header">
+				<div class="col-sm-12 text-center p-2">
+						<h1>構造方程式モデリング Python Stan</h1>
+
+	
+	<div class="navi text-center">
+										<a class="badge badge-dark" href="/%E9%AB%98%E6%AC%A1%E6%96%B9%E7%A8%8B%E5%BC%8F%E3%81%AE%E8%A7%A3.html">高次方程式の解</a>
+											<a class="badge badge-warning" href="/%E7%BE%A9%E7%90%86%E3%81%AE%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%8C%E3%81%AA%E3%81%8F%E3%81%AA%E3%81%A3%E3%81%9F%E3%81%A8%E3%81%8D-%E3%83%A1%E3%83%BC%E3%83%AB.html">義理のお父さんがなくなったとき メール</a>
+											<a class="badge badge-info" href="/%E7%B6%BE%E6%B3%A2-%E6%82%AA%E3%81%8F%E3%81%84%E3%81%86%E3%81%AE%E3%81%AF-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93.html">綾波 悪くいうのは お父さん</a>
+											<a class="badge badge-light" href="/%E7%90%83%E9%9D%A2%E3%81%AE%E3%83%99%E3%82%AF%E3%83%88%E3%83%AB%E6%96%B9%E7%A8%8B%E5%BC%8F.html">球面のベクトル方程式</a>
+											<a class="badge badge-info" href="/%E8%8D%B7%E7%89%A9-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93-%E8%BF%BD%E3%81%84%E6%8A%9C%E3%81%8B%E3%81%AA%E3%81%84%E3%81%A7.html">荷物 お父さん 追い抜かないで</a>
+											<a class="badge badge-light" href="/%E9%81%A9%E6%AD%A3%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0%E3%82%B5%E3%82%A4%E3%82%BA-%E6%96%B9%E7%A8%8B%E5%BC%8F.html">適正フレームサイズ 方程式</a>
+											<a class="badge badge-info" href="/%E9%9F%93%E3%83%89%E3%83%A9-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%AF.html">韓ドラ お父さんは</a>
+											<a class="badge badge-secondary" href="/%E7%86%B1%E5%8C%96%E5%AD%A6%E6%96%B9%E7%A8%8B%E5%BC%8F-%E6%B0%B4-%E6%B0%97%E4%BD%93.html">熱化学方程式 水 気体</a>
+											<a class="badge badge-success" href="/%E7%88%86%E8%A3%82%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93akb48-%E5%8B%95%E7%94%BB.html">爆裂お父さんakb48 動画</a>
+											<a class="badge badge-dark" href="/%E9%98%BF%E9%83%A8%E4%B8%80%E4%BA%8C%E4%B8%89%E3%81%AE%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%AF.html">阿部一二三のお父さんは</a>
+											<a class="badge badge-danger" href="/%E6%9D%B1%E6%B5%B7%E4%BD%8F%E5%AE%85-cm-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93.html">東海住宅 cm お父さん</a>
+											<a class="badge badge-warning" href="/%E9%96%A2%E6%95%B0%E6%8E%A5%E7%B7%9A%E3%81%AE%E6%96%B9%E7%A8%8B%E5%BC%8F.html">関数接線の方程式</a>
+											<a class="badge badge-secondary" href="/%E6%AF%8D%E3%81%AE%E5%AE%9F%E5%AE%B6%E3%81%AE%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93.html">母の実家のお父さん</a>
+											<a class="badge badge-info" href="/%E7%B4%A0%E4%BA%BA%E3%81%8A%E5%AC%A2%E3%81%95%E3%82%93-%E3%83%A9%E3%83%83%E3%83%971%E6%9E%9A%E9%9A%94%E3%81%A6%E3%81%A6%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%A8%E7%B4%A0%E8%82%A1%E4%BD%93%E9%A8%93%E3%81%97%E3%81%A6%E3%81%BF%E3%81%BE%E3%81%9B%E3%82%93%E3%81%8B-6-%E5%A5%B3%E5%84%AA.html">素人お嬢さん ラップ1枚隔ててお父さんと素股体験してみませんか 6 女優</a>
+											<a class="badge badge-primary" href="/%E7%A7%BB%E6%B5%81%E6%96%B9%E7%A8%8B%E5%BC%8F-2%E6%AC%A1%E5%85%83.html">移流方程式 2次元</a>
+						</div>
+<center>
+	<!-- MIDDLE BANNER ADS -->
+<script type="text/javascript">
+	atOptions = {
+		'key' : '2b77887421e2587a1a1b1d7c8a31a9e0',
+		'format' : 'iframe',
+		'height' : 250,
+		'width' : 300,
+		'params' : {}
+	};
+	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://jc32arlvqpv8.com/2b77887421e2587a1a1b1d7c8a31a9e0/invoke.js"></scr' + 'ipt>');
+</script>
+		
+	</center>
+					
+				</div>
+			</div>
+			<div class="row content mb-4">
+				<div class="col-md-12">					
+					
+	
+	<div class="card-columns">
+						
+	  <div class='card'>
+	  	<a href="http://y-okamoto-psy1949.la.coocan.jp/Python/sampleprgs/PsychoDAM/chap7_structequ/index.files/image002.jpg" data-lightbox="roadtrip" data-title="共分散構造分析 Stan Python">
+						<img class="card-img" src="http://y-okamoto-psy1949.la.coocan.jp/Python/sampleprgs/PsychoDAM/chap7_structequ/index.files/image002.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkxFulES1O43Q1PYinlQJfnTWb4iG3S1NIZ7vemyV-5OPlPccCf-_HWjK6nV5AUeDwzZE';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				共分散構造分析 Stan Python
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://norimune.net/wp/wp-content/uploads/2016/12/had2stan1.jpg" data-lightbox="roadtrip" data-title="Stanで構造方程式モデリングをやってみた Sunny Side Up">
+						<img class="card-img" src="https://norimune.net/wp/wp-content/uploads/2016/12/had2stan1.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS52GhSU-ycGl83E6-Nwtan73A4FJHQru3cJd5UxeCjff5C5mWwsM9rKLbq_q_eAI9vQe8';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Stanで構造方程式モデリングをやってみた Sunny Side Up
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F143765%2F6266e129-4c60-3d0f-922b-f47937dfd99b.png?ixlib=rb-1.2.2&amp;auto=format&amp;gif-q=60&amp;q=75&amp;s=5a4b3bb26f1277aebf86370e6a2cd6ad" data-lightbox="roadtrip" data-title="Pythonによる構造方程式モデリング Sem 共分散構造分析入門 Qiita">
+						<img class="card-img" src="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F143765%2F6266e129-4c60-3d0f-922b-f47937dfd99b.png?ixlib=rb-1.2.2&amp;auto=format&amp;gif-q=60&amp;q=75&amp;s=5a4b3bb26f1277aebf86370e6a2cd6ad" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_tsPB95oqb2GWhf5kOIrhsqas2cIRaTO-SWZScq3WeKaBb4naTWS3_O99fesgZD5yKRI';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Pythonによる構造方程式モデリング Sem 共分散構造分析入門 Qiita
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://staging-qiita-user-contents.imgix.net/https%3A%2F%2Fcdn.qiita.com%2Fassets%2Fpublic%2Farticle-ogp-background-1150d8b18a7c15795b701a55ae908f94.png?ixlib=rb-4.0.0&amp;w=1200&amp;mark=https%3A%2F%2Fstaging-qiita-user-contents.imgix.net%2F~text%3Fixlib%3Drb-4.0.0%26w%3D840%26h%3D380%26txt%3DPython%25E3%2581%25A7%25E6%25A7%258B%25E9%2580%25A0%25E6%2596%25B9%25E7%25A8%258B%25E5%25BC%258F%25E3%2583%25A2%25E3%2583%2587%25E3%2583%25AA%25E3%2583%25B3%25E3%2582%25B0%2520%2528SEM%2529%2520%25E3%2580%259Csemopy%25E3%2581%25AE%25E3%2583%2581%25E3%2583%25A5%25E3%2583%25BC%25E3%2583%2588%25E3%2583%25AA%25E3%2582%25A2%25E3%2583%25AB%25E3%2582%2592%25E8%25A9%25A6%25E3%2581%2597%25E3%2581%25A6%25E3%2581%25BF%25E3%2582%258B%25E3%2580%259C%26txt-color%3D%2523333%26txt-font%3DHiragino%2520Sans%2520W6%26txt-size%3D54%26txt-clip%3Dellipsis%26txt-align%3Dcenter%252Cmiddle%26s%3Ddbd4c0c06d4741883c7b7c944d7a89e3&amp;mark-align=center%2Cmiddle&amp;blend=https%3A%2F%2Fstaging-qiita-user-contents.imgix.net%2F~text%3Fixlib%3Drb-4.0.0%26w%3D840%26h%3D500%26txt%3D%2540roki18d%26txt-color%3D%2523333%26txt-font%3DHiragino%2520Sans%2520W6%26txt-size%3D45%26txt-align%3Dright%252Cbottom%26s%3D68bd2faf0851d18b737263a8ff94e216&amp;blend-align=center%2Cmiddle&amp;blend-mode=normal&amp;s=5c66fd93a683034c4cc7f0cc0f2d4f66" data-lightbox="roadtrip" data-title="Pythonで構造方程式モデリング Sem Semopyのチュートリアルを試してみる Qiita">
+						<img class="card-img" src="https://staging-qiita-user-contents.imgix.net/https%3A%2F%2Fcdn.qiita.com%2Fassets%2Fpublic%2Farticle-ogp-background-1150d8b18a7c15795b701a55ae908f94.png?ixlib=rb-4.0.0&amp;w=1200&amp;mark=https%3A%2F%2Fstaging-qiita-user-contents.imgix.net%2F~text%3Fixlib%3Drb-4.0.0%26w%3D840%26h%3D380%26txt%3DPython%25E3%2581%25A7%25E6%25A7%258B%25E9%2580%25A0%25E6%2596%25B9%25E7%25A8%258B%25E5%25BC%258F%25E3%2583%25A2%25E3%2583%2587%25E3%2583%25AA%25E3%2583%25B3%25E3%2582%25B0%2520%2528SEM%2529%2520%25E3%2580%259Csemopy%25E3%2581%25AE%25E3%2583%2581%25E3%2583%25A5%25E3%2583%25BC%25E3%2583%2588%25E3%2583%25AA%25E3%2582%25A2%25E3%2583%25AB%25E3%2582%2592%25E8%25A9%25A6%25E3%2581%2597%25E3%2581%25A6%25E3%2581%25BF%25E3%2582%258B%25E3%2580%259C%26txt-color%3D%2523333%26txt-font%3DHiragino%2520Sans%2520W6%26txt-size%3D54%26txt-clip%3Dellipsis%26txt-align%3Dcenter%252Cmiddle%26s%3Ddbd4c0c06d4741883c7b7c944d7a89e3&amp;mark-align=center%2Cmiddle&amp;blend=https%3A%2F%2Fstaging-qiita-user-contents.imgix.net%2F~text%3Fixlib%3Drb-4.0.0%26w%3D840%26h%3D500%26txt%3D%2540roki18d%26txt-color%3D%2523333%26txt-font%3DHiragino%2520Sans%2520W6%26txt-size%3D45%26txt-align%3Dright%252Cbottom%26s%3D68bd2faf0851d18b737263a8ff94e216&amp;blend-align=center%2Cmiddle&amp;blend-mode=normal&amp;s=5c66fd93a683034c4cc7f0cc0f2d4f66" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaZc85X4hnqKQ527FaF8Nd4RoswoxX8hmb3jyI6J54rCeQmI8PRGP16zQwbjVKh-GfG6E';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Pythonで構造方程式モデリング Sem Semopyのチュートリアルを試してみる Qiita
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://norimune.net/wp/wp-content/uploads/2016/12/had2stan6.jpg" data-lightbox="roadtrip" data-title="Stanで構造方程式モデリングをやってみた Sunny Side Up">
+						<img class="card-img" src="https://norimune.net/wp/wp-content/uploads/2016/12/had2stan6.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHn9vfZGnZ4k1c7fKZh6bo-qsXtYE98_9WQaOThrXf01a2vedKQjWi_nJ0GT2Tj_Ghvog';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Stanで構造方程式モデリングをやってみた Sunny Side Up
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://norimune.net/wp/wp-content/uploads/2016/12/had2stan16.jpg" data-lightbox="roadtrip" data-title="Stanで構造方程式モデリングをやってみた Sunny Side Up">
+						<img class="card-img" src="https://norimune.net/wp/wp-content/uploads/2016/12/had2stan16.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9W5t38n7xAQhnz2ZP-gksvWm1ODCTAiYKcmQ-efTjIxhKDGDaHLQGNxMRf5tqoEjjQ_8';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Stanで構造方程式モデリングをやってみた Sunny Side Up
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+				<div class='card'>	
+			<div class="d-block p-4">
+	</div>		  	
+		  	<h3 class="h6 p-2"><b></b></h3>
+					</div>
+		
+						
+	  <div class='card'>
+	  	<a href="https://staging-qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F342646%2Fd207d085-035f-b963-d395-2e573dd2143c.png?ixlib=rb-4.0.0&amp;auto=format&amp;gif-q=60&amp;q=75&amp;s=df11913d8297a8b48877fc7e40df693f" data-lightbox="roadtrip" data-title="Pythonで構造方程式モデリング Sem Semopyのチュートリアルを試してみる Qiita">
+						<img class="card-img" src="https://staging-qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F342646%2Fd207d085-035f-b963-d395-2e573dd2143c.png?ixlib=rb-4.0.0&amp;auto=format&amp;gif-q=60&amp;q=75&amp;s=df11913d8297a8b48877fc7e40df693f" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPc1OuVLZAdRRLOIxAVj0In3n1ITdFuidsqEsrZ-cJaYsXY6z_do26iTVGeYArM2niVnI';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Pythonで構造方程式モデリング Sem Semopyのチュートリアルを試してみる Qiita
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://staging-qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F342646%2Faf5a1139-b66e-065b-4214-7db5ecbe207e.png?ixlib=rb-4.0.0&amp;auto=format&amp;gif-q=60&amp;q=75&amp;s=69eb6fc4c03e94af41b0b3e475d643cf" data-lightbox="roadtrip" data-title="Pythonで構造方程式モデリング Sem Semopyのチュートリアルを試してみる Qiita">
+						<img class="card-img" src="https://staging-qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F342646%2Faf5a1139-b66e-065b-4214-7db5ecbe207e.png?ixlib=rb-4.0.0&amp;auto=format&amp;gif-q=60&amp;q=75&amp;s=69eb6fc4c03e94af41b0b3e475d643cf" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCgvvvIiGS2xZwkh0bmUqPB45ME6fRo7-uOGtfqWvnMz5pKmENufbeWUqo58E898rEIRA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Pythonで構造方程式モデリング Sem Semopyのチュートリアルを試してみる Qiita
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://staging-qiita-user-contents.imgix.net/https%3A%2F%2Fcdn.qiita.com%2Fassets%2Fpublic%2Farticle-ogp-background-1150d8b18a7c15795b701a55ae908f94.png?ixlib=rb-4.0.0&amp;w=1200&amp;mark=https%3A%2F%2Fstaging-qiita-user-contents.imgix.net%2F~text%3Fixlib%3Drb-4.0.0%26w%3D840%26h%3D380%26txt%3Dlavaan%25E3%2581%25A8Rstan%25E3%2581%25AB%25E3%2582%2588%25E3%2582%258B%25E6%25A7%258B%25E9%2580%25A0%25E6%2596%25B9%25E7%25A8%258B%25E5%25BC%258F%25E3%2583%25A2%25E3%2583%2587%25E3%2583%25AA%25E3%2583%25B3%25E3%2582%25B0%25E3%2581%25AE%25E5%259F%25BA%25E6%259C%25AC%26txt-color%3D%2523333%26txt-font%3DHiragino%2520Sans%2520W6%26txt-size%3D54%26txt-clip%3Dellipsis%26txt-align%3Dcenter%252Cmiddle%26s%3D35d8814609a0c35460eccc52ed9cc2bd&amp;mark-align=center%2Cmiddle&amp;blend=https%3A%2F%2Fstaging-qiita-user-contents.imgix.net%2F~text%3Fixlib%3Drb-4.0.0%26w%3D840%26h%3D500%26txt%3D%2540saltcooky%26txt-color%3D%2523333%26txt-font%3DHiragino%2520Sans%2520W6%26txt-size%3D45%26txt-align%3Dright%252Cbottom%26s%3D3fa6b3f51c37c538f10bd43eb0961992&amp;blend-align=center%2Cmiddle&amp;blend-mode=normal&amp;s=e75a89e7cf1d7d3d28d0401513af3fa1" data-lightbox="roadtrip" data-title="Lavaanとrstanによる構造方程式モデリングの基本 Qiita">
+						<img class="card-img" src="https://staging-qiita-user-contents.imgix.net/https%3A%2F%2Fcdn.qiita.com%2Fassets%2Fpublic%2Farticle-ogp-background-1150d8b18a7c15795b701a55ae908f94.png?ixlib=rb-4.0.0&amp;w=1200&amp;mark=https%3A%2F%2Fstaging-qiita-user-contents.imgix.net%2F~text%3Fixlib%3Drb-4.0.0%26w%3D840%26h%3D380%26txt%3Dlavaan%25E3%2581%25A8Rstan%25E3%2581%25AB%25E3%2582%2588%25E3%2582%258B%25E6%25A7%258B%25E9%2580%25A0%25E6%2596%25B9%25E7%25A8%258B%25E5%25BC%258F%25E3%2583%25A2%25E3%2583%2587%25E3%2583%25AA%25E3%2583%25B3%25E3%2582%25B0%25E3%2581%25AE%25E5%259F%25BA%25E6%259C%25AC%26txt-color%3D%2523333%26txt-font%3DHiragino%2520Sans%2520W6%26txt-size%3D54%26txt-clip%3Dellipsis%26txt-align%3Dcenter%252Cmiddle%26s%3D35d8814609a0c35460eccc52ed9cc2bd&amp;mark-align=center%2Cmiddle&amp;blend=https%3A%2F%2Fstaging-qiita-user-contents.imgix.net%2F~text%3Fixlib%3Drb-4.0.0%26w%3D840%26h%3D500%26txt%3D%2540saltcooky%26txt-color%3D%2523333%26txt-font%3DHiragino%2520Sans%2520W6%26txt-size%3D45%26txt-align%3Dright%252Cbottom%26s%3D3fa6b3f51c37c538f10bd43eb0961992&amp;blend-align=center%2Cmiddle&amp;blend-mode=normal&amp;s=e75a89e7cf1d7d3d28d0401513af3fa1" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSamNJYsECtqzw3XXcFFLxkC8pudTiIxapC8bTWecfX2jbYqfaembXgllmmv--wqVzETEk';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Lavaanとrstanによる構造方程式モデリングの基本 Qiita
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="lkf9MTtb5mm3RM" data-lightbox="roadtrip" data-title="Https Ytake2 Github Io Adcal Ctsem Ctsem Html">
+						<img class="card-img" src="lkf9MTtb5mm3RM" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmDUE9UywCHSrO_G29DBlp1GjFTvhvlSFN0xK3N6Y_LjdszLytha2WznqG8-YaawvntVA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Https Ytake2 Github Io Adcal Ctsem Ctsem Html
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://kamonohashiperry.com/wordpress/wp-content/uploads/2017/06/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88-2017-06-04-22.00.01.png" data-lightbox="roadtrip" data-title="ラーメン二郎の某飲食店レビューサイトデータに対して共分散構造分析をしてみる かものはしの分析ブログ">
+						<img class="card-img" src="http://kamonohashiperry.com/wordpress/wp-content/uploads/2017/06/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88-2017-06-04-22.00.01.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgbJqeXSN3qQBCaInXNW7HEcKRDDN29gU2F-EArpRZGyBk-j5VPHN40l3u3k8Nix8ooHI';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				ラーメン二郎の某飲食店レビューサイトデータに対して共分散構造分析をしてみる かものはしの分析ブログ
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://norimune.net/wp/wp-content/uploads/2016/12/had2stan3.jpg" data-lightbox="roadtrip" data-title="Stanで構造方程式モデリングをやってみた Sunny Side Up">
+						<img class="card-img" src="https://norimune.net/wp/wp-content/uploads/2016/12/had2stan3.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP8f_rub1U2_wAqg0ucG21tYJL-MV49_V5bWRL6g2yXJr6Yh_r88GEoGqH3EcN2Wb8Yw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Stanで構造方程式モデリングをやってみた Sunny Side Up
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.macromill.com/wp-content/uploads/images/service/data_analysis/sem-covariance-structure-analysis/image_007.png" data-lightbox="roadtrip" data-title="共分散構造分析 Sem マーケティングリサーチのマクロミル マクロミル">
+						<img class="card-img" src="https://www.macromill.com/wp-content/uploads/images/service/data_analysis/sem-covariance-structure-analysis/image_007.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2LBidAemtI-PnZvgg_BIbFF9eguireeGARI9JPZoQUyC9Z-08e8SDUIznSIy5YKxJrt8';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				共分散構造分析 Sem マーケティングリサーチのマクロミル マクロミル
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="lkf9MTtb5mm3RM" data-lightbox="roadtrip" data-title="Https Ytake2 Github Io Adcal Ctsem Ctsem Html">
+						<img class="card-img" src="lkf9MTtb5mm3RM" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwVWx_IIOvcyPsF1kUBr5FPHAYu059GD1TE5cRhjZyUXtUipDGlV91EN1HPBgZ0mk85ms';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Https Ytake2 Github Io Adcal Ctsem Ctsem Html
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F143765%2Fe990b402-d606-bb03-a1e9-a97a00bf116f.png?ixlib=rb-1.2.2&amp;auto=format&amp;gif-q=60&amp;q=75&amp;s=8288fcfcf5d8b94f721802c6b78d1850" data-lightbox="roadtrip" data-title="Pythonによる構造方程式モデリング Sem 共分散構造分析入門 Qiita">
+						<img class="card-img" src="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F143765%2Fe990b402-d606-bb03-a1e9-a97a00bf116f.png?ixlib=rb-1.2.2&amp;auto=format&amp;gif-q=60&amp;q=75&amp;s=8288fcfcf5d8b94f721802c6b78d1850" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmz50EBFpFi2J4GN9BO3QAUTTdjiU3Aw07AmsNKBafogNM3-FJHxfQsKHor1LKmYxbJ-E';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Pythonによる構造方程式モデリング Sem 共分散構造分析入門 Qiita
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://cdn-ak.f.st-hatena.com/images/fotolife/r/rmizutaa/20201229/20201229143151.png" data-lightbox="roadtrip" data-title="共分散構造分析を試す Rmizutaの日記">
+						<img class="card-img" src="https://cdn-ak.f.st-hatena.com/images/fotolife/r/rmizutaa/20201229/20201229143151.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2WqRp-hRXYYxhOstznZDU5CgRLe5W_Ff6kZS9H9_vac_Wn7fzKzk6T_hf27EBiY0oNYg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				共分散構造分析を試す Rmizutaの日記
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://kscscr.com/wp-content/uploads/2019/12/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88-2019-12-20-13.30.17-1024x575.png" data-lightbox="roadtrip" data-title="Rとlavaanパッケージで構造方程式モデリング 媒介分析 ブートストラップのサンプル数指定 Kscscr">
+						<img class="card-img" src="https://kscscr.com/wp-content/uploads/2019/12/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88-2019-12-20-13.30.17-1024x575.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR41pvTbLh7ulqtIMDTmLYCnScnxet9E4fpeA0XWDO3nEQ1kLzkfdR8MwkmA4BHQdp3Wgs';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Rとlavaanパッケージで構造方程式モデリング 媒介分析 ブートストラップのサンプル数指定 Kscscr
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://cdn-ak.f.st-hatena.com/images/fotolife/s/saltcooky/20191228/20191228123122.jpg" data-lightbox="roadtrip" data-title="クラウドソーシングにおける真のラベル推定手法 Rstanで実装 名前はまだない">
+						<img class="card-img" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/saltcooky/20191228/20191228123122.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaU0DxXqfFrUUznyxKzQaXgpYKfw3fbT7tfjS5jyy4xCUhRYfYHkYOZh9xGe2PKyzPkaA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				クラウドソーシングにおける真のラベル推定手法 Rstanで実装 名前はまだない
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://images-na.ssl-images-amazon.com/images/I/51wa4-RlYtL._SX352_BO1,204,203,200_.jpg" data-lightbox="roadtrip" data-title="Hhlncpyie7k Mm">
+						<img class="card-img" src="https://images-na.ssl-images-amazon.com/images/I/51wa4-RlYtL._SX352_BO1,204,203,200_.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbAL-Ozvi9OlQHF017j45It_tMuXXKAa4B_bgLwIc31MUl91OWYKDL9Z6WeTKBBfwv-8s';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Hhlncpyie7k Mm
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.synnex.co.jp/cp/ibm/spss/asset/images/package/asset-56mdpi.jpg" data-lightbox="roadtrip" data-title="Ibm Spss Statistics 教育機関向けパッケージ版">
+						<img class="card-img" src="https://www.synnex.co.jp/cp/ibm/spss/asset/images/package/asset-56mdpi.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_Fn6KlgEvOGnV22iI-IB5iVN9McSK6w6qGxT0gevF_AUmXlup0bzuZI5qSfHtegNRhpM';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Ibm Spss Statistics 教育機関向けパッケージ版
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://norimune.net/wp/wp-content/uploads/2016/12/had2stan21.jpg" data-lightbox="roadtrip" data-title="Stanで構造方程式モデリングをやってみた Sunny Side Up">
+						<img class="card-img" src="https://norimune.net/wp/wp-content/uploads/2016/12/had2stan21.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHx1vswIrmsycZfrf0djIl4YZGQTyjezKQFA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Stanで構造方程式モデリングをやってみた Sunny Side Up
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="lkf9MTtb5mm3RM" data-lightbox="roadtrip" data-title="Https Ytake2 Github Io Adcal Ctsem Ctsem Html">
+						<img class="card-img" src="lkf9MTtb5mm3RM" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGFDVljIkz3YuxXjATf2Xws1G-BFbFYqWu9g';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Https Ytake2 Github Io Adcal Ctsem Ctsem Html
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://norimune.net/wp/wp-content/uploads/2016/12/had2stan13.jpg" data-lightbox="roadtrip" data-title="Stanで構造方程式モデリングをやってみた Sunny Side Up">
+						<img class="card-img" src="https://norimune.net/wp/wp-content/uploads/2016/12/had2stan13.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXOU2Cz0FfXzQZDMqqvXHontNcZO7mkeWfBg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Stanで構造方程式モデリングをやってみた Sunny Side Up
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F143765%2F341f30c0-8a36-08e1-c993-78448496d52c.png?ixlib=rb-1.2.2&amp;auto=format&amp;gif-q=60&amp;q=75&amp;s=adb87a8570bef8b7025af32998e71bd3" data-lightbox="roadtrip" data-title="Pythonによる構造方程式モデリング Sem 共分散構造分析入門 Qiita">
+						<img class="card-img" src="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F143765%2F341f30c0-8a36-08e1-c993-78448496d52c.png?ixlib=rb-1.2.2&amp;auto=format&amp;gif-q=60&amp;q=75&amp;s=adb87a8570bef8b7025af32998e71bd3" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQkQM96Ptk4ESDK6I_mpl0LQhFcGu4RJMOtw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Pythonによる構造方程式モデリング Sem 共分散構造分析入門 Qiita
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://cv.bkmkn.kodansha.co.jp/9784065165362/9784065165362_w.jpg" data-lightbox="roadtrip" data-title="実践ｄａｔａ ｓｃｉｅｎｃｅシリーズ ｒとｓｔａｎではじめる ベイズ統計モデリングによるデータ分析入門 馬場 真哉 講談社book倶楽部">
+						<img class="card-img" src="https://cv.bkmkn.kodansha.co.jp/9784065165362/9784065165362_w.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5zmzcwAvXKHh9P0moVIn5l4u0ASjiT5jgMA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				実践ｄａｔａ ｓｃｉｅｎｃｅシリーズ ｒとｓｔａｎではじめる ベイズ統計モデリングによるデータ分析入門 馬場 真哉 講談社book倶楽部
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.researchgate.net/profile/Chiaki-Ishiguro/publication/328947310/figure/fig1/AS:693033393717248@1542243445108/gouzaofangchengshimoderinguwoyongitafanshuomoderunofenxijieguo-zhudianxianhafeiyouyinapasuwoshisu-p-05-p-001.png" data-lightbox="roadtrip" data-title="構造方程式モデリングを用いた仮説モデルの分析結果 注 点線は非有意なパスを示す P 05 P 001 Download Scientific Diagram">
+						<img class="card-img" src="https://www.researchgate.net/profile/Chiaki-Ishiguro/publication/328947310/figure/fig1/AS:693033393717248@1542243445108/gouzaofangchengshimoderinguwoyongitafanshuomoderunofenxijieguo-zhudianxianhafeiyouyinapasuwoshisu-p-05-p-001.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWIxj7Ji26UanPiNxJmVAUbiRhKKFzCrAkrQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				構造方程式モデリングを用いた仮説モデルの分析結果 注 点線は非有意なパスを示す P 05 P 001 Download Scientific Diagram
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://camo.qiitausercontent.com/d88979b739b1576cb99f78132a5b9cef34e0f6a0/68747470733a2f2f71696974612d696d6167652d73746f72652e73332e61702d6e6f727468656173742d312e616d617a6f6e6177732e636f6d2f302f3139373931392f64346333666431302d613564342d643162362d336365612d6632303633393831343332392e6a706567" data-lightbox="roadtrip" data-title="Lavaanとrstanによる構造方程式モデリングの基本 Qiita">
+						<img class="card-img" src="https://camo.qiitausercontent.com/d88979b739b1576cb99f78132a5b9cef34e0f6a0/68747470733a2f2f71696974612d696d6167652d73746f72652e73332e61702d6e6f727468656173742d312e616d617a6f6e6177732e636f6d2f302f3139373931392f64346333666431302d613564342d643162362d336365612d6632303633393831343332392e6a706567" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVqWT4yKnDdErDiyJVX-Ve2fum7-glIs3S2A';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Lavaanとrstanによる構造方程式モデリングの基本 Qiita
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.kyougokumakoto.com/wp-content/uploads/2016/11/peacock-feather-186339_640.jpg" data-lightbox="roadtrip" data-title="入門 構造方程式モデリングを勉強したい人のための本5選 共分散構造分析 構造方程式モデル Sem">
+						<img class="card-img" src="https://www.kyougokumakoto.com/wp-content/uploads/2016/11/peacock-feather-186339_640.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR40Z6A959UWuKjMZFwFCfP-VJ2LmxztE6F5g';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				入門 構造方程式モデリングを勉強したい人のための本5選 共分散構造分析 構造方程式モデル Sem
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://norimune.net/wp/wp-content/uploads/2016/12/had2stan12.jpg" data-lightbox="roadtrip" data-title="Stanで構造方程式モデリングをやってみた Sunny Side Up">
+						<img class="card-img" src="https://norimune.net/wp/wp-content/uploads/2016/12/had2stan12.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsGkX38K_444xD7uIvoh2omcOv_OhBdTrxTw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Stanで構造方程式モデリングをやってみた Sunny Side Up
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://kamonohashiperry.com/wordpress/wp-content/uploads/2017/06/jirou_rating_histogram.jpeg" data-lightbox="roadtrip" data-title="ラーメン二郎の某飲食店レビューサイトデータに対して共分散構造分析をしてみる かものはしの分析ブログ">
+						<img class="card-img" src="http://kamonohashiperry.com/wordpress/wp-content/uploads/2017/06/jirou_rating_histogram.jpeg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0cc6Vwotbi6--oyVBq-1c9_wsaG1xQYt5EA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				ラーメン二郎の某飲食店レビューサイトデータに対して共分散構造分析をしてみる かものはしの分析ブログ
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://cdn-ak.f.st-hatena.com/images/fotolife/s/saltcooky/20200107/20200107000843.png" data-lightbox="roadtrip" data-title="クラウドソーシングにおける真のラベル推定手法 Rstanで実装 名前はまだない">
+						<img class="card-img" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/saltcooky/20200107/20200107000843.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ033KRSguzwm61XtqQ1y9aUwmJbzsAK6y1nA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				クラウドソーシングにおける真のラベル推定手法 Rstanで実装 名前はまだない
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://techhere.jp/wp/wp-content/uploads/2020/04/978-4297105082-scaled.jpg" data-lightbox="roadtrip" data-title="中身 使い方 Rとpythonで学ぶ 実践的 データサイエンス 機械学習 Tech Here">
+						<img class="card-img" src="https://techhere.jp/wp/wp-content/uploads/2020/04/978-4297105082-scaled.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUyL_lQEt7zh7QYEMApK04RI4vtkdBuFeTAg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				中身 使い方 Rとpythonで学ぶ 実践的 データサイエンス 機械学習 Tech Here
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://images-fe.ssl-images-amazon.com/images/I/81kbyrs3ThL._AC_UL160_SR160,160_.jpg" data-lightbox="roadtrip" data-title="M Plusとrによる構造方程式モデリング入門 小杉 考司 清水 裕士 押江 隆 山根 嵩史 平川 真 浅野 良輔 竹林 由武 藤原 翔 徳岡 大 大谷 和大 森 数馬 林 真広 小杉 考司 清水 裕士 本">
+						<img class="card-img" src="https://images-fe.ssl-images-amazon.com/images/I/81kbyrs3ThL._AC_UL160_SR160,160_.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQs96C6vQQuZmWfUHJdPGYdBBhocYQswSEOvw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				M Plusとrによる構造方程式モデリング入門 小杉 考司 清水 裕士 押江 隆 山根 嵩史 平川 真 浅野 良輔 竹林 由武 藤原 翔 徳岡 大 大谷 和大 森 数馬 林 真広 小杉 考司 清水 裕士 本
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+		
+	</div>
+
+		 
+		
+		
+				</div>
+				<div class="col-sm-12 widget">
+					<div class="d-block p-4">
+	<center>
+		<!-- BOTTOM BANNER ADS -->
+<script async="async" data-cfasync="false" src="//jc32arlvqpv8.com/eb47a424ae325c90cca32780149785c3/invoke.js"></script>
+<div id="container-eb47a424ae325c90cca32780149785c3"></div>
+
+	</center>
+</div>				</div>
+			</div>
+			<div class="row footer">
+				<div class="col-md-12 text-center py-4">
+										<a href="/p/dmca.html">Dmca</a>
+										<a href="/p/contact.html">Contact</a>
+										<a href="/p/privacy-policy.html">Privacy Policy</a>
+										<a href="/p/copyright.html">Copyright</a>
+					
+				</div>
+			</div>
+		</main>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js" integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js" integrity="sha256-CtKylYan+AJuoH8jrMht1+1PMhMqrKnB8K5g012WN5I=" crossorigin="anonymous"></script>
+		
+		<!-- Footer CSS JS -->
+		
+		
+		
+			<script type='text/javascript' src='//jc32arlvqpv8.com/ef/d5/10/efd510237a3143727bed46803ec35b8d.js'></script>
+</body>
+</html>

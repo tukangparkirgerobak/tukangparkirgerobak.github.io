@@ -1,0 +1,682 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha256-L/W5Wfqfa0sdBNIKN9cG6QA5F2qx4qICmU2VgLruv9Y=" crossorigin="anonymous" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/css/lightbox.min.css" integrity="sha256-tBxlolRHP9uMsEFKVk+hk//ekOlXOixLKvye5W2WR5c=" crossorigin="anonymous" />
+		<link href="https://fonts.googleapis.com/css?family=Mr+Dafoe" rel="stylesheet" type="text/css">
+
+		<style type="text/css">
+			html,body{font-family:"Open Sans",Arial,sans-serif;font-size:14px;font-weight:400;background:#f3f3f3 url(http://dennou.gaia.h.kyoto-u.ac.jp/library/prepri/2017/kobe-u/170203_okazakis_Mthesis/presen/pub/slide/012.jpeg
+) no-repeat center center fixed;background-size:cover;height:100%}#title{font-family:"Mr Dafoe",Times,serif;font-size:34px;background:rgba(255,255,255,.8);margin-bottom:34px}.header{padding-bottom:13px;margin-bottom:13px;border-bottom:1px solid #eee}a{color:#26ADE4;text-decoration:none}#title a{color:#333;margin-left:21px}#title a:hover{text-decoration:none;color:#26ADE4}.sidebar ul{margin:0;padding:0}.sidebar ul li{list-style:none}.footer{margin-top:21px;padding-top:13px;border-top:1px solid #eee}.footer a{margin:0 15px}.navi{margin:13px 0 13px 0;padding:13px}.navi a{margin:5px 2px;font-size:95%}.main{margin-top: 6rem;}.form-inline .form-control{min-width: 300px;}.v-cover{height: 380px; object-fit: cover;}.v-image{height: 200px; object-fit: cover;}.dwn-cover{max-height: 460px; object-fit: cover;}.main{margin-top: 6rem;}.form-inline .form-control{min-width: 300px;}			
+		</style>
+
+		<title>準地衡方程式</title>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/", 
+  "@type": "Article", 
+  "author": {
+    "@type": "Person",
+    "name": "James"
+  },
+  "headline": "準地衡方程式",
+  "datePublished": "2021-04-24",
+  "image": [https://www.gfd-dennou.org/arch/morikawa/undergrad/sotsuron_poster/pub/slide/011.gif,https://www.gfd-dennou.org/arch/prepri/2016/kobe-u/160609_epasemi_okazakis/pub/slide/022.png,8nHCeKSIiR8cnM],
+  "publisher": {
+    "@type": "Organization",
+    "name": "Tukang Parkir Gerobak",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://via.placeholder.com/512.png?text=準地衡方程式",
+      "width": 512,
+      "height": 512
+    }
+  }
+}
+</script>
+		<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-957NGNKQ70"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-957NGNKQ70');
+</script>
+
+<script type='text/javascript' src='//jc32arlvqpv8.com/1a/82/2e/1a822ef8a40a0fbab3c4ea12a5d2bb02.js'></script>
+</head>
+	<body>
+		<header class="bg-white fixed-top">			
+			<nav class="navbar navbar-light bg-white mb-0">
+				<div class="container justify-content-center justify-content-sm-between">	
+				  <a href="/" title="Blog" class="navbar-brand mb-1">Blog</a>
+				  				</div>			  
+			</nav>				
+		</header>
+		<main class="main container bg-white">
+			<div class="col-md-12 my-4" align="center">
+				<div class="d-block p-4">
+	<br/><center>
+<!-- TOP BANNER ADS -->
+</center><br/>
+</div>			</div>
+			<div class="row header">
+				<div class="col-sm-12 text-center p-2">
+						<h1>準地衡方程式</h1>
+
+	
+	<div class="navi text-center">
+										<a class="badge badge-info" href="/%E9%9D%9E%E7%B7%9A%E5%BD%A2%E6%96%B9%E7%A8%8B%E5%BC%8F-%E6%95%B0%E5%80%A4%E8%A8%88%E7%AE%97-matlab.html">非線形方程式 数値計算 matlab</a>
+											<a class="badge badge-info" href="/%E6%A5%B5%E6%96%B9%E7%A8%8B%E5%BC%8F-%E7%9B%B4%E4%BA%A4%E5%BA%A7%E6%A8%99-%E5%A4%89%E6%8F%9B.html">極方程式 直交座標 変換</a>
+											<a class="badge badge-dark" href="/%E7%A7%81-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%AE%E5%AD%90%E3%81%A9%E3%82%82%E5%A6%8A%E5%A8%A0%E3%81%99%E3%82%8B.html">私 お父さんの子ども妊娠する</a>
+											<a class="badge badge-primary" href="/%E9%9F%93%E3%83%89%E3%83%A9-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%AF.html">韓ドラ お父さんは</a>
+											<a class="badge badge-info" href="/%E7%95%B0%E6%96%B9%E7%9A%84gl%E6%96%B9%E7%A8%8B%E5%BC%8F-%E3%83%AD%E3%83%B3%E3%83%89%E3%83%B3%E4%BE%B5%E5%85%A5.html">異方的gl方程式 ロンドン侵入</a>
+											<a class="badge badge-success" href="/%EF%BC%93%E6%AC%A1%E6%96%B9%E7%A8%8B%E5%BC%8F%E3%82%92%E8%A7%A3%E3%81%8F.html">３次方程式を解く</a>
+											<a class="badge badge-primary" href="/%E8%B2%B4%E6%A7%98%E3%81%AB%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%A8%E5%91%BC%E3%81%B0%E3%82%8C%E3%82%8B%E8%A6%9A%E3%81%88%E3%81%AF%E3%81%AA%E3%81%84.html">貴様にお父さんと呼ばれる覚えはない</a>
+											<a class="badge badge-warning" href="/%E6%9C%AB%E3%81%A3%E5%AD%90%E3%81%AE%E4%B8%80%E4%BA%BA%E5%A8%98%E3%81%A8%E3%81%8A%E5%85%84%E3%81%A1%E3%82%83%E3%82%93%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%AE%E6%9C%9D%E6%80%A7%E6%B4%BB-%E9%9C%A7%E5%B3%B6%E3%81%95%E3%81%8F%E3%82%89-avg.html">末っ子の一人娘とお兄ちゃんお父さんの朝性活 霧島さくら avg</a>
+											<a class="badge badge-dark" href="/%E7%94%B7%E3%81%A0%E3%82%89%E3%81%91%E3%81%AE%E5%AE%B6%E6%97%8F%E3%81%AB%E5%A5%B3%E6%80%A7%E3%81%AF%E7%A7%811%E4%BA%BA-%E5%AE%B6%E4%BA%8B%E3%82%92%E3%81%97%E3%81%AA%E3%81%8C%E3%82%899%E4%BA%BA%E5%85%84%E5%BC%9F-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%A8%E9%80%A3%E7%B6%9A%E3%82%BB%E3%83%83%E3%82%AF%E3%82%B9%E6%9C%9D%E7%94%9F%E6%B4%BB.html">男だらけの家族に女性は私1人 家事をしながら9人兄弟 お父さんと連続セックス朝生活</a>
+											<a class="badge badge-success" href="/%E9%9D%9E%E7%B7%9A%E5%BD%A2-%E6%96%B9%E7%A8%8B%E5%BC%8F-%E5%A4%9A%E9%87%8D-%E8%A7%A3.html">非線形 方程式 多重 解</a>
+											<a class="badge badge-danger" href="/%E8%8A%B1%E5%AB%81-%E3%81%AE-%E6%89%8B%E7%B4%99-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93-%E7%97%85%E6%B0%97.html">花嫁 の 手紙 お父さん 病気</a>
+											<a class="badge badge-warning" href="/%E8%99%9A%E6%95%B0%E8%A7%A3-a-%EF%BC%92%E6%AC%A1%E6%96%B9%E7%A8%8B%E5%BC%8F.html">虚数解 a ２次方程式</a>
+											<a class="badge badge-info" href="/%E6%A5%B5%E5%BA%A7%E6%A8%99-%E6%8E%A5%E7%B7%9A-%E3%81%AE-%E6%96%B9%E7%A8%8B%E5%BC%8F.html">極座標 接線 の 方程式</a>
+											<a class="badge badge-success" href="/%E7%9B%B4%E7%B7%9A%E3%81%AE%E6%96%B9%E7%A8%8B%E5%BC%8F-%E5%B9%B3%E9%9D%A2%E3%81%AE%E6%96%B9%E7%A8%8B%E5%BC%8F-%E4%BA%A4%E7%82%B9.html">直線の方程式 平面の方程式 交点</a>
+											<a class="badge badge-success" href="/%E6%A7%8B%E9%80%A0%E6%96%B9%E7%A8%8B%E5%BC%8F-%E3%83%91%E3%82%B9%E5%9B%B3-%E6%9B%B8%E3%81%8D%E6%96%B9.html">構造方程式 パス図 書き方</a>
+						</div>
+<center>
+	<!-- MIDDLE BANNER ADS -->
+<script type="text/javascript">
+	atOptions = {
+		'key' : '2b77887421e2587a1a1b1d7c8a31a9e0',
+		'format' : 'iframe',
+		'height' : 250,
+		'width' : 300,
+		'params' : {}
+	};
+	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://jc32arlvqpv8.com/2b77887421e2587a1a1b1d7c8a31a9e0/invoke.js"></scr' + 'ipt>');
+</script>
+		
+	</center>
+					
+				</div>
+			</div>
+			<div class="row content mb-4">
+				<div class="col-md-12">					
+					
+	
+	<div class="card-columns">
+						
+	  <div class='card'>
+	  	<a href="https://www.gfd-dennou.org/arch/morikawa/undergrad/sotsuron_poster/pub/slide/011.gif" data-lightbox="roadtrip" data-title="数値予報モデルのための気象力学 準地衡流方程式系 1">
+						<img class="card-img" src="https://www.gfd-dennou.org/arch/morikawa/undergrad/sotsuron_poster/pub/slide/011.gif" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQevO5188BueMb5VtPy13sJ_aDbIJlTh0BcxUWoI00pj2HuDT-iMxSFSM4QMdnjkRXPa9U';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				数値予報モデルのための気象力学 準地衡流方程式系 1
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="zUnunZ9fRLD5OM" data-lightbox="roadtrip" data-title="2">
+						<img class="card-img" src="zUnunZ9fRLD5OM" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUCCV-Tc88jQYXZ9bUSVZQfV3AIoZPWKEefbMRqUHuvyoo2QXFVsWzP_sg9Ls8JX6VTEA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				2
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.gfd-dennou.org/arch/morikawa/undergrad/sotsuron_poster/pub/slide/012.gif" data-lightbox="roadtrip" data-title="数値予報モデルのための気象力学 準地衡流方程式系 2">
+						<img class="card-img" src="https://www.gfd-dennou.org/arch/morikawa/undergrad/sotsuron_poster/pub/slide/012.gif" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1R7QnsriASC3ggK4j3GtmCQ1QgBI4GfAF-Po6tU8Q8QGRtzkf3rWg0amMf5b7kGdMnig';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				数値予報モデルのための気象力学 準地衡流方程式系 2
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://slidesplayer.net/11548869/62/images/slide_1.jpg" data-lightbox="roadtrip" data-title="風成海洋大循環 準地衡流渦位方程式 エクマン層の力学 Ppt Download">
+						<img class="card-img" src="https://slidesplayer.net/11548869/62/images/slide_1.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3Z6gz__Pjg_H7qFh0yiW0et237FPOlrqgLgh8TJFu3UQKq0vlsFgSIScPnJWmZVFYfHA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				風成海洋大循環 準地衡流渦位方程式 エクマン層の力学 Ppt Download
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.zhihu.com/equation?tex=%5Cleft%5C%7B%5Cbegin%7Baligned%7D+%26%5Cleft%28%5Cfrac%7B%5Cpartial%7D%7B%5Cpartial+t%7D+%2B+%5Cbm%7BV%7D%5Ccdot%5Cnabla%2B%5Comega%5Cfrac%7B%5Cpartial%7D%7B%5Cpartial+p%7D%5Cright%29%5Cbm%7BV%7D%2Bf%5Cbm%7Bk%7D%5Ctimes+%5Cbm%7BV%7D%3D-%5Cnabla%5CPhi%5C%5C+%26%5Cnabla%5Ccdot%5Cbm%7BV%7D%2B%5Cfrac%7B%5Cpartial+%5Comega%7D%7B%5Cpartial+p%7D%3D0%5C%5C+%26%5Cfrac%7B%5Cpartial%5CPhi%7D%7B%5Cpartial+p%7D%3D-%5Cfrac%7BRT%7D%7Bp%7D%5C%5C+%26%5Cleft%28%5Cfrac%7B%5Cpartial%7D%7B%5Cpartial+t%7D%2B%5Cbm%7BV%7D%5Ccdot%5Cnabla%5Cright%29T-%5Cfrac%7B%5Csigma+p%7D%7BR%7D%5Comega%3D%5Cfrac%7BJ%7D%7Bc_p%7D+%5Cend%7Baligned%7D%5Cright." data-lightbox="roadtrip" data-title="大尺度大气运动的描述 准地转理论简介 知乎">
+						<img class="card-img" src="https://www.zhihu.com/equation?tex=%5Cleft%5C%7B%5Cbegin%7Baligned%7D+%26%5Cleft%28%5Cfrac%7B%5Cpartial%7D%7B%5Cpartial+t%7D+%2B+%5Cbm%7BV%7D%5Ccdot%5Cnabla%2B%5Comega%5Cfrac%7B%5Cpartial%7D%7B%5Cpartial+p%7D%5Cright%29%5Cbm%7BV%7D%2Bf%5Cbm%7Bk%7D%5Ctimes+%5Cbm%7BV%7D%3D-%5Cnabla%5CPhi%5C%5C+%26%5Cnabla%5Ccdot%5Cbm%7BV%7D%2B%5Cfrac%7B%5Cpartial+%5Comega%7D%7B%5Cpartial+p%7D%3D0%5C%5C+%26%5Cfrac%7B%5Cpartial%5CPhi%7D%7B%5Cpartial+p%7D%3D-%5Cfrac%7BRT%7D%7Bp%7D%5C%5C+%26%5Cleft%28%5Cfrac%7B%5Cpartial%7D%7B%5Cpartial+t%7D%2B%5Cbm%7BV%7D%5Ccdot%5Cnabla%5Cright%29T-%5Cfrac%7B%5Csigma+p%7D%7BR%7D%5Comega%3D%5Cfrac%7BJ%7D%7Bc_p%7D+%5Cend%7Baligned%7D%5Cright." onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSza-Uq-rGqBE8NGYKprV7vVAGDgp-eU5tvhQAvUkqrRXY48AicXoDwl--UaL_4jIvxuuA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				大尺度大气运动的描述 准地转理论简介 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://slidesplayer.net/slide/11548869/62/images/2/%E5%A2%83%E7%95%8C%E5%B1%A4%E3%81%A8%E7%B2%98%E6%80%A7.jpg" data-lightbox="roadtrip" data-title="風成海洋大循環 準地衡流渦位方程式 エクマン層の力学 Ppt Download">
+						<img class="card-img" src="https://slidesplayer.net/slide/11548869/62/images/2/%E5%A2%83%E7%95%8C%E5%B1%A4%E3%81%A8%E7%B2%98%E6%80%A7.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0yyioWpWefunU5YUJuznXXnc9EaYd4GdgEiMIBNNbUdGpP5xXUz3QFP3tytrWxp_dPFM';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				風成海洋大循環 準地衡流渦位方程式 エクマン層の力学 Ppt Download
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+				<div class='card'>	
+			<div class="d-block p-4">
+	</div>		  	
+		  	<h3 class="h6 p-2"><b></b></h3>
+					</div>
+		
+						
+	  <div class='card'>
+	  	<a href="https://slidetodoc.com/presentation_image/43072dbee46724e2ff34e895222cf6c5/image-2.jpg" data-lightbox="roadtrip" data-title="Trenberth Et Al 1998 Jgr M Watanabe Linear">
+						<img class="card-img" src="https://slidetodoc.com/presentation_image/43072dbee46724e2ff34e895222cf6c5/image-2.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTl-kWUc-2yQxXDbD8rrnG05Gx8l4RIQ_RIsO1TbnG7lUcYc0CPeOujJhfv5Dkn4_XFwNE';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Trenberth Et Al 1998 Jgr M Watanabe Linear
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.zhihu.com/equation?tex=%5Cleft%5C%7B%5Cbegin%7Baligned%7D+%26%5Cbm%7BV%7D_g%3D%5Cfrac%7B1%7D%7Bf%7D%5Cbm%7Bk%7D%5Ctimes%5Cnabla%5CPhi%5C%5C+%26%5Cleft%28%5Cfrac%7B%5Cpartial%7D%7B%5Cpartial+t%7D+%2B+%5Cbm%7BV%7D_g%5Ccdot%5Cnabla%5Cright%29%5Cbm%7BV%7D_g%2Bf%5Cbm%7Bk%7D%5Ctimes+%5Cbm%7BV%7D_a%3D0%5C%5C+%26-%5Cfrac%7B1%7D%7Bf%7D%5Cbm%7BV%7D_g%5Ccdot%5Cnabla+f%2B%5Cnabla%5Ccdot%5Cbm%7BV%7D_a%2B%5Cfrac%7B%5Cpartial%5Comega%7D%7B%5Cpartial+p%7D%3D0%5C%5C+%26%5Cfrac%7B%5Cpartial%5CPhi%7D%7B%5Cpartial+p%7D%3D-%5Cfrac%7BRT%7D%7Bp%7D%5C%5C+%26%5Cleft%28%5Cfrac%7B%5Cpartial%7D%7B%5Cpartial+t%7D%2B%5Cbm%7BV%7D_g%5Ccdot%5Cnabla%5Cright%29T-%5Cfrac%7B%5Csigma+p%7D%7BR%7D%5Comega%3D%5Cfrac%7BJ%7D%7Bc_p%7D+%5Cend%7Baligned%7D%5Cright." data-lightbox="roadtrip" data-title="准地转理论补充 不采用b 平面近似的情况 知乎">
+						<img class="card-img" src="https://www.zhihu.com/equation?tex=%5Cleft%5C%7B%5Cbegin%7Baligned%7D+%26%5Cbm%7BV%7D_g%3D%5Cfrac%7B1%7D%7Bf%7D%5Cbm%7Bk%7D%5Ctimes%5Cnabla%5CPhi%5C%5C+%26%5Cleft%28%5Cfrac%7B%5Cpartial%7D%7B%5Cpartial+t%7D+%2B+%5Cbm%7BV%7D_g%5Ccdot%5Cnabla%5Cright%29%5Cbm%7BV%7D_g%2Bf%5Cbm%7Bk%7D%5Ctimes+%5Cbm%7BV%7D_a%3D0%5C%5C+%26-%5Cfrac%7B1%7D%7Bf%7D%5Cbm%7BV%7D_g%5Ccdot%5Cnabla+f%2B%5Cnabla%5Ccdot%5Cbm%7BV%7D_a%2B%5Cfrac%7B%5Cpartial%5Comega%7D%7B%5Cpartial+p%7D%3D0%5C%5C+%26%5Cfrac%7B%5Cpartial%5CPhi%7D%7B%5Cpartial+p%7D%3D-%5Cfrac%7BRT%7D%7Bp%7D%5C%5C+%26%5Cleft%28%5Cfrac%7B%5Cpartial%7D%7B%5Cpartial+t%7D%2B%5Cbm%7BV%7D_g%5Ccdot%5Cnabla%5Cright%29T-%5Cfrac%7B%5Csigma+p%7D%7BR%7D%5Comega%3D%5Cfrac%7BJ%7D%7Bc_p%7D+%5Cend%7Baligned%7D%5Cright." onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwPq5yxX4QfkZkz4Xm8UIWN8S1LCiFOEJRa2udEPr9YIucFy15IK9nrFue55UAXqNzqCQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				准地转理论补充 不采用b 平面近似的情况 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="8PQ00LzjSFsxnM" data-lightbox="roadtrip" data-title="Http Cdn1 Kybimg Com Ohr 2016 09 26 184056 57e8fb3802cbc Pdf">
+						<img class="card-img" src="8PQ00LzjSFsxnM" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4_8tnkJRNZ1CQb6R0sXXtMOJDSek88fPL3OD3vtomk8R_IV_l-vJGsvsIJwrsVg9Exdg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Http Cdn1 Kybimg Com Ohr 2016 09 26 184056 57e8fb3802cbc Pdf
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.zhihu.com/equation?tex=%5Cbegin%7Balign%7D+%5Cfrac%7B%5Cpartial%7D%7B%5Cpartial+p%7D%5Cleft%5B%5Cfrac%7Bf_0%7D%7B%5Csigma%7D%5Cbm%7BV_g%7D%5Ccdot%5Cnabla%5Cleft%28%5Cfrac%7B%5Cpartial%5CPhi%7D%7B%5Cpartial+p%7D%5Cright%29%5Cright%5D+%26%3D+%5Cfrac%7Bf_0%7D%7B%5Csigma%7D%5Cfrac%7B%5Cpartial+%5Cbm%7BV%7D_g%7D%7B%5Cpartial+p%7D%5Ccdot%5Cnabla%5Cfrac%7B%5Cpartial%5CPhi%7D%7B%5Cpartial+p%7D%2B%5Cbm%7BV%7D_g%5Ccdot%5Cnabla%5Cleft%5B%5Cfrac%7B%5Cpartial%7D%7B%5Cpartial+p%7D%5Cleft%28%5Cfrac%7Bf_0%7D%7B%5Csigma%7D%5Cfrac%7B%5Cpartial%5CPhi%7D%7B%5Cpartial+p%7D%5Cright%29%5Cright%5D%5C%5C+%26%3D%5Cfrac%7B1%7D%7B%5Csigma%7D%5Cleft%28%5Cbm%7Bk%7D%5Ctimes%5Cnabla%5Cfrac%7B%5Cpartial%5CPhi%7D%7B%5Cpartial+p%7D%5Cright%29%5Ccdot%5Cnabla%5Cfrac%7B%5Cpartial%5CPhi%7D%7B%5Cpartial+p%7D%2B%5Cbm%7BV%7D_g%5Ccdot%5Cnabla%5Cleft%5B%5Cfrac%7B%5Cpartial%7D%7B%5Cpartial+p%7D%5Cleft%28%5Cfrac%7Bf_0%7D%7B%5Csigma%7D%5Cfrac%7B%5Cpartial%5CPhi%7D%7B%5Cpartial+p%7D%5Cright%29%5Cright%5D%5C%5C+%26%3D%5Cbm%7BV%7D_g%5Ccdot%5Cnabla%5Cleft%5B%5Cfrac%7B%5Cpartial%7D%7B%5Cpartial+p%7D%5Cleft%28%5Cfrac%7Bf_0%7D%7B%5Csigma%7D%5Cfrac%7B%5Cpartial%5CPhi%7D%7B%5Cpartial+p%7D%5Cright%29%5Cright%5D+%5Cend%7Balign%7D" data-lightbox="roadtrip" data-title="大尺度大气运动的描述 准地转理论简介 知乎">
+						<img class="card-img" src="https://www.zhihu.com/equation?tex=%5Cbegin%7Balign%7D+%5Cfrac%7B%5Cpartial%7D%7B%5Cpartial+p%7D%5Cleft%5B%5Cfrac%7Bf_0%7D%7B%5Csigma%7D%5Cbm%7BV_g%7D%5Ccdot%5Cnabla%5Cleft%28%5Cfrac%7B%5Cpartial%5CPhi%7D%7B%5Cpartial+p%7D%5Cright%29%5Cright%5D+%26%3D+%5Cfrac%7Bf_0%7D%7B%5Csigma%7D%5Cfrac%7B%5Cpartial+%5Cbm%7BV%7D_g%7D%7B%5Cpartial+p%7D%5Ccdot%5Cnabla%5Cfrac%7B%5Cpartial%5CPhi%7D%7B%5Cpartial+p%7D%2B%5Cbm%7BV%7D_g%5Ccdot%5Cnabla%5Cleft%5B%5Cfrac%7B%5Cpartial%7D%7B%5Cpartial+p%7D%5Cleft%28%5Cfrac%7Bf_0%7D%7B%5Csigma%7D%5Cfrac%7B%5Cpartial%5CPhi%7D%7B%5Cpartial+p%7D%5Cright%29%5Cright%5D%5C%5C+%26%3D%5Cfrac%7B1%7D%7B%5Csigma%7D%5Cleft%28%5Cbm%7Bk%7D%5Ctimes%5Cnabla%5Cfrac%7B%5Cpartial%5CPhi%7D%7B%5Cpartial+p%7D%5Cright%29%5Ccdot%5Cnabla%5Cfrac%7B%5Cpartial%5CPhi%7D%7B%5Cpartial+p%7D%2B%5Cbm%7BV%7D_g%5Ccdot%5Cnabla%5Cleft%5B%5Cfrac%7B%5Cpartial%7D%7B%5Cpartial+p%7D%5Cleft%28%5Cfrac%7Bf_0%7D%7B%5Csigma%7D%5Cfrac%7B%5Cpartial%5CPhi%7D%7B%5Cpartial+p%7D%5Cright%29%5Cright%5D%5C%5C+%26%3D%5Cbm%7BV%7D_g%5Ccdot%5Cnabla%5Cleft%5B%5Cfrac%7B%5Cpartial%7D%7B%5Cpartial+p%7D%5Cleft%28%5Cfrac%7Bf_0%7D%7B%5Csigma%7D%5Cfrac%7B%5Cpartial%5CPhi%7D%7B%5Cpartial+p%7D%5Cright%29%5Cright%5D+%5Cend%7Balign%7D" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIha07uVhSmjfXhp8o6ffWp3IhFmOriF4kbAfmyrdH1klQpMJzbJWqkosjBiAAhk_qcA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				大尺度大气运动的描述 准地转理论简介 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="on_FaHHczJbbXM" data-lightbox="roadtrip" data-title="Http Www Whoi Edu Fileserver Do Id 60806 Pt 2 P 69346">
+						<img class="card-img" src="on_FaHHczJbbXM" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTV37emrFf_YDAGyqBEZg37nHDP1X21TNjW8P6vdk_eERGnnPPdHBRlpl41mYZXNeVphk';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Http Www Whoi Edu Fileserver Do Id 60806 Pt 2 P 69346
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="gJThxnCtGeAJHM" data-lightbox="roadtrip" data-title="Https Www Mpimet Mpg De Fileadmin Staff Stevensbjorn Teaching Tropical Dynamics Matsuno1966 Pdf">
+						<img class="card-img" src="gJThxnCtGeAJHM" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFw0fT7TWKIsAARFKxNn-FnVzY5Hw7-fGsSjPqSIR5QL5f3MApvVG_CaiSdGpVnCF1w6E';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Https Www Mpimet Mpg De Fileadmin Staff Stevensbjorn Teaching Tropical Dynamics Matsuno1966 Pdf
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://i1.rgstatic.net/publication/293739927_Arming_time_simulation_on_high-speed_coiled_safety_devices/links/5bb72a8ca6fdcc9552d43d47/largepreview.png" data-lightbox="roadtrip" data-title="Pdf Arming Time Simulation On High Speed Coiled Safety Devices">
+						<img class="card-img" src="https://i1.rgstatic.net/publication/293739927_Arming_time_simulation_on_high-speed_coiled_safety_devices/links/5bb72a8ca6fdcc9552d43d47/largepreview.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSalnkdVZxGAPUJLgBxCsb3NqhdZSwrxzTU8cJic1T3B9FMEL_wZDqpnVJf8VjY-rVnCN4';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Pdf Arming Time Simulation On High Speed Coiled Safety Devices
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="M_TvdNyN-7v6tM" data-lightbox="roadtrip" data-title="Http Ir Lib Ncku Edu Tw Retrieve 188624 6010917002 000004 Pdf">
+						<img class="card-img" src="M_TvdNyN-7v6tM" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-Jovt2f94dJWNLLzfXHrWf5ojh1zSMy1RQGpT8zDJzXdu0Q8wV-Ik8yu0_V2-wlq-GDQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Http Ir Lib Ncku Edu Tw Retrieve 188624 6010917002 000004 Pdf
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://dpo.aori.u-tokyo.ac.jp/dmmg/people/iga/research/turbulence/modify_anim.gif" data-lightbox="roadtrip" data-title="Quasi Geostrophic Turbulence">
+						<img class="card-img" src="https://dpo.aori.u-tokyo.ac.jp/dmmg/people/iga/research/turbulence/modify_anim.gif" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2Q9KTrGWGYHF3yklOzssbF02dzzVpHEf67iGtn2vQ2qwB0RG7obbRZMSGqmDZuw5Z_Wo';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Quasi Geostrophic Turbulence
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://wkbjcloudbos.bdimg.com/v1/docconvert274/wk/a3caac5dee8f074a168c96344d650e97/0.jpg?responseContentType=image%2Fjpeg&amp;responseCacheControl=max-age%3D10&amp;responseExpires=Thu%2C%2015%20Apr%202021%2015%3A21%3A57%20%2B0800&amp;authorization=bce-auth-v1%2Ffa1126e91489401fa7cc85045ce7179e%2F2021-04-15T07%3A21%3A47Z%2F-1%2Fhost%2F315d97e612f32f29f866f7165e1a0c9c14d53f087392fa2b2508f13b8d2899d2&amp;x-bce-range=0-45692&amp;token=eyJ0eXAiOiJKSVQiLCJ2ZXIiOiIxLjAiLCJhbGciOiJIUzI1NiIsImV4cCI6MTkyOTUxMTMwNywidXJpIjp0cnVlLCJwYXJhbXMiOlsicmVzcG9uc2VDb250ZW50VHlwZSIsInJlc3BvbnNlQ2FjaGVDb250cm9sIiwicmVzcG9uc2VFeHBpcmVzIiwieC1iY2UtcmFuZ2UiXX0%3D.kQUjJWtCVeMJArJjfGZ2ygkldGLCgUxxZPofs3QB014%3D.1929511307" data-lightbox="roadtrip" data-title="第6章大气中的准地转运动 图文 百度文库">
+						<img class="card-img" src="http://wkbjcloudbos.bdimg.com/v1/docconvert274/wk/a3caac5dee8f074a168c96344d650e97/0.jpg?responseContentType=image%2Fjpeg&amp;responseCacheControl=max-age%3D10&amp;responseExpires=Thu%2C%2015%20Apr%202021%2015%3A21%3A57%20%2B0800&amp;authorization=bce-auth-v1%2Ffa1126e91489401fa7cc85045ce7179e%2F2021-04-15T07%3A21%3A47Z%2F-1%2Fhost%2F315d97e612f32f29f866f7165e1a0c9c14d53f087392fa2b2508f13b8d2899d2&amp;x-bce-range=0-45692&amp;token=eyJ0eXAiOiJKSVQiLCJ2ZXIiOiIxLjAiLCJhbGciOiJIUzI1NiIsImV4cCI6MTkyOTUxMTMwNywidXJpIjp0cnVlLCJwYXJhbXMiOlsicmVzcG9uc2VDb250ZW50VHlwZSIsInJlc3BvbnNlQ2FjaGVDb250cm9sIiwicmVzcG9uc2VFeHBpcmVzIiwieC1iY2UtcmFuZ2UiXX0%3D.kQUjJWtCVeMJArJjfGZ2ygkldGLCgUxxZPofs3QB014%3D.1929511307" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtugE8247Uv3RrRr5lCz4GW53vnYHGqhJVFEbzTBd1cLV000HSbwda17kHWTxTF_Tl68w';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				第6章大气中的准地转运动 图文 百度文库
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://patentimages.storage.googleapis.com/71/84/49/0df896f8fa97e9/CN102662038BD00261.png" data-lightbox="roadtrip" data-title="Cn102662038b 评价低溶解度化合物吸收特性的方法 Google Patents">
+						<img class="card-img" src="https://patentimages.storage.googleapis.com/71/84/49/0df896f8fa97e9/CN102662038BD00261.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXrkccrqOW9pGQAE2eUnZxFuozfM8Y2hi3LxR7sZEA7OTH0noZgxw5Mb0JvcbEDq6eFPo';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Cn102662038b 评价低溶解度化合物吸收特性的方法 Google Patents
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://img.yumpu.com/35947623/1/500x640/eaeecaae-c-1-2-ca-aaaaaaeaeaeaeaec.jpg" data-lightbox="roadtrip" data-title="E œae E C A ƒa E C C">
+						<img class="card-img" src="https://img.yumpu.com/35947623/1/500x640/eaeecaae-c-1-2-ca-aaaaaaeaeaeaeaec.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrmR6j9IxNeuoXWKnwIrMwnofE9cBtwRNbZJ9u1tjPJgb_4cBuJhXSC3qwh9TJbq1FINA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				E œae E C A ƒa E C C
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://i2.kknews.cc/SIG=1soe7c6/39sr00036051r9o64683.jpg" data-lightbox="roadtrip" data-title="初中化學方程式盤點 全是重點 給孩子貼牆上背 中考准拿滿分 每日頭條">
+						<img class="card-img" src="https://i2.kknews.cc/SIG=1soe7c6/39sr00036051r9o64683.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSK2KfbiN8z8pmfL9Nen07SRNmyEI1tpUvxBoIPPN_bKYdNOYey3WMkGlsuB_E-sd_NGas';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				初中化學方程式盤點 全是重點 給孩子貼牆上背 中考准拿滿分 每日頭條
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.gfd-dennou.org/arch/prepri/2016/kobe-u/160609_epasemi_okazakis/pub/slide/017.png" data-lightbox="roadtrip" data-title="準地衡2層モデ ルを用いた地衡流乱流の研究 Barotropic モードのエネルギー方程式">
+						<img class="card-img" src="https://www.gfd-dennou.org/arch/prepri/2016/kobe-u/160609_epasemi_okazakis/pub/slide/017.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuiMHUy1pbUilKJeB5ipxFa6Qhjr0u1F5gtluomXCUyF55e2aaqJgYntOjRncDt55DcGQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				準地衡2層モデ ルを用いた地衡流乱流の研究 Barotropic モードのエネルギー方程式
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="W7YeMIC5Mh72IM" data-lightbox="roadtrip" data-title="2">
+						<img class="card-img" src="W7YeMIC5Mh72IM" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyXvKnYef6VZWzP-4s5pe91XiZHQvyji4KjQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				2
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic1.zhimg.com/v2-f7b06622c42fb41191fc8c6653c5a470_b.jpg" data-lightbox="roadtrip" data-title="高考化学90 的得分点都在这里 逐条整理清晰直观 知乎">
+						<img class="card-img" src="https://pic1.zhimg.com/v2-f7b06622c42fb41191fc8c6653c5a470_b.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEN3wYXTT4g0ANAQqZ-YgwZKeegJXJKsU1WQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				高考化学90 的得分点都在这里 逐条整理清晰直观 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="v6ZJjxDsmNp_HM" data-lightbox="roadtrip" data-title="Https Www Elibrary Imf Org Doc Imf074 03304 9781557758057 03304 9781557758057 Other Formats Source Pdf 03304 9781455238606 Pdf">
+						<img class="card-img" src="v6ZJjxDsmNp_HM" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGfPJgtVUceANhkvPUsgc5erLGrUXhv70ndw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Https Www Elibrary Imf Org Doc Imf074 03304 9781557758057 03304 9781557758057 Other Formats Source Pdf 03304 9781455238606 Pdf
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="7DHlsTzMHZwp0M" data-lightbox="roadtrip" data-title="2">
+						<img class="card-img" src="7DHlsTzMHZwp0M" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSi0hn7BT1VkJoA9a2qAEGJepuxIxlrOkYioA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				2
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://swf.ishare.down.sina.com.cn/L90sEfTkEgl.svg?ssig=74FMWDnEP%2B&amp;Expires=1621554149&amp;KID=sina,ishare&amp;range=0-32449" data-lightbox="roadtrip" data-title="化工原理复习要点下载 Word模板 爱问共享资料">
+						<img class="card-img" src="https://swf.ishare.down.sina.com.cn/L90sEfTkEgl.svg?ssig=74FMWDnEP%2B&amp;Expires=1621554149&amp;KID=sina,ishare&amp;range=0-32449" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRlBIPlh-bQnRvsokXdM2x81MPeFmdxoFuAw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				化工原理复习要点下载 Word模板 爱问共享资料
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="8nHCeKSIiR8cnM" data-lightbox="roadtrip" data-title="Http Www Kurims Kyoto U Ac Jp Kyodo Kokyuroku Contents Pdf 1285 22 Pdf">
+						<img class="card-img" src="8nHCeKSIiR8cnM" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRm4c18k9f2LiorB5-y2QEsk8UYlzvg8O4OwA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Http Www Kurims Kyoto U Ac Jp Kyodo Kokyuroku Contents Pdf 1285 22 Pdf
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://patentimages.storage.googleapis.com/72/94/e3/fe6911a2bd8c82/CN102662038BD00162.png" data-lightbox="roadtrip" data-title="Cn102662038b 评价低溶解度化合物吸收特性的方法 Google Patents">
+						<img class="card-img" src="https://patentimages.storage.googleapis.com/72/94/e3/fe6911a2bd8c82/CN102662038BD00162.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSg4Rg1T-pk8nnj33kQHaga928vdq4vHmG2Bw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Cn102662038b 评价低溶解度化合物吸收特性的方法 Google Patents
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://img.alicdn.com/img/bao/uploaded/i4/i3/2209257199035/O1CN0149EXAe2Gc55BIJDcg_!!2209257199035.png_670x670Q50s50.jpg" data-lightbox="roadtrip" data-title="反应方程 新人首单优惠推荐 2021年4月 淘宝海外">
+						<img class="card-img" src="https://img.alicdn.com/img/bao/uploaded/i4/i3/2209257199035/O1CN0149EXAe2Gc55BIJDcg_!!2209257199035.png_670x670Q50s50.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuAE11bNxciv7epsMmKK3UxU3R_hz89cdQRg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				反应方程 新人首单优惠推荐 2021年4月 淘宝海外
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://img.yumpu.com/37854024/1/500x640/a-ae-c-3-4-caraa.jpg" data-lightbox="roadtrip" data-title="A Ae C C A ˆa A">
+						<img class="card-img" src="https://img.yumpu.com/37854024/1/500x640/a-ae-c-3-4-caraa.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsf9xcKuHXWIUmI2_HTiXv8WRq2VTfr5RGvA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				A Ae C C A ˆa A
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://dennou.gaia.h.kyoto-u.ac.jp/library/prepri/2017/kobe-u/170203_okazakis_Mthesis/presen/pub/slide/012.jpeg" data-lightbox="roadtrip" data-title="準地衡2層モデルを用いた地衡流乱流の波数空間動力学に関する研究 Page 012">
+						<img class="card-img" src="http://dennou.gaia.h.kyoto-u.ac.jp/library/prepri/2017/kobe-u/170203_okazakis_Mthesis/presen/pub/slide/012.jpeg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkW1jAzKpPT92QjOfm4tmDm_EHPUyWozC_nw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				準地衡2層モデルを用いた地衡流乱流の波数空間動力学に関する研究 Page 012
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://slidesplayer.net/11548869/62/images/slide_3.jpg" data-lightbox="roadtrip" data-title="風成海洋大循環 準地衡流渦位方程式 エクマン層の力学 Ppt Download">
+						<img class="card-img" src="https://slidesplayer.net/11548869/62/images/slide_3.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSbL3s9hTTWIzzDkaGwVrF2c6djdBBG4qtwA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				風成海洋大循環 準地衡流渦位方程式 エクマン層の力学 Ppt Download
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.gfd-dennou.org/arch/prepri/2016/kobe-u/160609_epasemi_okazakis/pub/slide/022.png" data-lightbox="roadtrip" data-title="準地衡2層モデ ルを用いた地衡流乱流の研究 Baroclinic モードのエンストロフィー方程式">
+						<img class="card-img" src="https://www.gfd-dennou.org/arch/prepri/2016/kobe-u/160609_epasemi_okazakis/pub/slide/022.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwZSjtzonon1n1ieJ2c_a7TZCKKA-S3DPOyg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				準地衡2層モデ ルを用いた地衡流乱流の研究 Baroclinic モードのエンストロフィー方程式
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="3lov7iXMGeXMnM" data-lightbox="roadtrip" data-title="2">
+						<img class="card-img" src="3lov7iXMGeXMnM" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFE-IYKRttdZMDPGxvxaH7GXLAMcQNuxiXww';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				2
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+		
+	</div>
+
+		 
+		
+		
+				</div>
+				<div class="col-sm-12 widget">
+					<div class="d-block p-4">
+	<center>
+		<!-- BOTTOM BANNER ADS -->
+<script async="async" data-cfasync="false" src="//jc32arlvqpv8.com/eb47a424ae325c90cca32780149785c3/invoke.js"></script>
+<div id="container-eb47a424ae325c90cca32780149785c3"></div>
+
+	</center>
+</div>				</div>
+			</div>
+			<div class="row footer">
+				<div class="col-md-12 text-center py-4">
+										<a href="/p/dmca.html">Dmca</a>
+										<a href="/p/contact.html">Contact</a>
+										<a href="/p/privacy-policy.html">Privacy Policy</a>
+										<a href="/p/copyright.html">Copyright</a>
+					
+				</div>
+			</div>
+		</main>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js" integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js" integrity="sha256-CtKylYan+AJuoH8jrMht1+1PMhMqrKnB8K5g012WN5I=" crossorigin="anonymous"></script>
+		
+		<!-- Footer CSS JS -->
+		
+		
+		
+			<script type='text/javascript' src='//jc32arlvqpv8.com/ef/d5/10/efd510237a3143727bed46803ec35b8d.js'></script>
+</body>
+</html>

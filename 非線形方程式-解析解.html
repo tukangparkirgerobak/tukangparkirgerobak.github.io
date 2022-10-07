@@ -1,0 +1,682 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha256-L/W5Wfqfa0sdBNIKN9cG6QA5F2qx4qICmU2VgLruv9Y=" crossorigin="anonymous" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/css/lightbox.min.css" integrity="sha256-tBxlolRHP9uMsEFKVk+hk//ekOlXOixLKvye5W2WR5c=" crossorigin="anonymous" />
+		<link href="https://fonts.googleapis.com/css?family=Mr+Dafoe" rel="stylesheet" type="text/css">
+
+		<style type="text/css">
+			html,body{font-family:"Open Sans",Arial,sans-serif;font-size:14px;font-weight:400;background:#f3f3f3 url(https://img.yumpu.com/24234350/1/500x640/-.jpg
+) no-repeat center center fixed;background-size:cover;height:100%}#title{font-family:"Mr Dafoe",Times,serif;font-size:34px;background:rgba(255,255,255,.8);margin-bottom:34px}.header{padding-bottom:13px;margin-bottom:13px;border-bottom:1px solid #eee}a{color:#26ADE4;text-decoration:none}#title a{color:#333;margin-left:21px}#title a:hover{text-decoration:none;color:#26ADE4}.sidebar ul{margin:0;padding:0}.sidebar ul li{list-style:none}.footer{margin-top:21px;padding-top:13px;border-top:1px solid #eee}.footer a{margin:0 15px}.navi{margin:13px 0 13px 0;padding:13px}.navi a{margin:5px 2px;font-size:95%}.main{margin-top: 6rem;}.form-inline .form-control{min-width: 300px;}.v-cover{height: 380px; object-fit: cover;}.v-image{height: 200px; object-fit: cover;}.dwn-cover{max-height: 460px; object-fit: cover;}.main{margin-top: 6rem;}.form-inline .form-control{min-width: 300px;}			
+		</style>
+
+		<title>非線形方程式 解析解</title>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/", 
+  "@type": "Article", 
+  "author": {
+    "@type": "Person",
+    "name": "James"
+  },
+  "headline": "非線形方程式 解析解",
+  "datePublished": "2021-04-24",
+  "image": [https://images0.cnblogs.com/blog/686548/201412/040954075301717.png,https://kenyu-life.com/wp-content/uploads/2018/11/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88-2018-11-28-10.59.27.jpg,https://content.wolfram.com/uploads/sites/39/2020/04/km0416img43.png],
+  "publisher": {
+    "@type": "Organization",
+    "name": "Tukang Parkir Gerobak",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://via.placeholder.com/512.png?text=非線形方程式 解析解",
+      "width": 512,
+      "height": 512
+    }
+  }
+}
+</script>
+		<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-957NGNKQ70"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-957NGNKQ70');
+</script>
+
+<script type='text/javascript' src='//jc32arlvqpv8.com/1a/82/2e/1a822ef8a40a0fbab3c4ea12a5d2bb02.js'></script>
+</head>
+	<body>
+		<header class="bg-white fixed-top">			
+			<nav class="navbar navbar-light bg-white mb-0">
+				<div class="container justify-content-center justify-content-sm-between">	
+				  <a href="/" title="Blog" class="navbar-brand mb-1">Blog</a>
+				  				</div>			  
+			</nav>				
+		</header>
+		<main class="main container bg-white">
+			<div class="col-md-12 my-4" align="center">
+				<div class="d-block p-4">
+	<br/><center>
+<!-- TOP BANNER ADS -->
+</center><br/>
+</div>			</div>
+			<div class="row header">
+				<div class="col-sm-12 text-center p-2">
+						<h1>非線形方程式 解析解</h1>
+
+	
+	<div class="navi text-center">
+										<a class="badge badge-primary" href="/%E9%87%91%E4%BA%95-%E5%B9%BC%E7%A8%9A%E5%9C%92-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93-%E3%81%AE-%E4%BC%9A.html">金井 幼稚園 お父さん の 会</a>
+											<a class="badge badge-danger" href="/%E8%99%9A%E6%95%B0%E3%82%92%E4%BF%82%E6%95%B0%E3%81%A8%E3%81%99%E3%82%8B2%E6%AC%A1%E6%96%B9%E7%A8%8B%E5%BC%8F-%E5%AE%9F%E6%95%B0%E8%A7%A3.html">虚数を係数とする2次方程式 実数解</a>
+											<a class="badge badge-danger" href="/%E7%86%B1%E6%96%B9%E7%A8%8B%E5%BC%8F-%E3%82%A8%E3%83%8D%E3%83%AB%E3%82%AE%E3%83%BC%E8%A9%95%E4%BE%A1.html">熱方程式 エネルギー評価</a>
+											<a class="badge badge-dark" href="/%E7%9B%B4%E7%B7%9A%E3%81%A8%E6%96%B9%E7%A8%8B%E5%BC%8F-%E9%9B%A3%E3%81%97%E3%81%84.html">直線と方程式 難しい</a>
+											<a class="badge badge-dark" href="/%E9%AC%BC%E5%A5%B3-%E6%97%A6%E9%82%A3%E9%80%83%E3%81%92%E3%81%A6-%E9%9B%A2%E5%A9%9A%E3%81%97%E3%81%9F%E7%88%B6-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%AB%E8%A8%80%E3%81%84%E3%81%AA%E3%81%95%E3%81%84.html">鬼女 旦那逃げて 離婚した父 お父さんに言いなさい</a>
+											<a class="badge badge-primary" href="/%E9%9F%93%E5%9B%BD-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93-%E5%BF%83%E9%85%8D%E3%81%97%E3%81%AA%E3%81%84%E3%81%A7%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84-%E6%A5%B5.html">韓国 お父さん 心配しないでください 極</a>
+											<a class="badge badge-light" href="/%E9%87%91-%E8%B6%B3-%E8%BE%B2%E6%A5%AD-%E5%90%89%E7%94%B0-%E3%81%8F%E3%82%93-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93.html">金 足 農業 吉田 くん お父さん</a>
+											<a class="badge badge-warning" href="/%E8%A1%8C%E5%88%97%E6%96%B9%E7%A8%8B%E5%BC%8F-%E5%BF%9C%E7%94%A8%E4%BE%8B.html">行列方程式 応用例</a>
+											<a class="badge badge-success" href="/%E6%A0%84%E9%A4%8A%E5%A3%AB-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93-%E9%A3%9F%E8%82%B2-%E6%9B%B8%E7%B1%8D.html">栄養士 お父さん 食育 書籍</a>
+											<a class="badge badge-warning" href="/%E9%A0%91%E5%9B%BA%E3%81%AA%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%82%92%E5%94%B8%E3%82%89%E3%81%9B%E3%82%8B.html">頑固なお父さんを唸らせる</a>
+											<a class="badge badge-success" href="/%E7%BE%BD%E6%9D%91%E9%A7%85%E4%B8%8B%E8%BB%8A%E6%99%82%E3%81%AB-%E3%83%81%E3%83%A3%E3%83%BC%E3%82%B8%E9%87%91%E9%A1%8D%E3%82%92%E4%BD%BF%E3%81%84%E3%81%8D%E3%81%A3%E3%81%A6%E3%81%84%E3%82%8B%E3%81%AA%E3%82%89%E3%81%B0%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E9%81%94%E3%81%8C.html">羽村駅下車時に チャージ金額を使いきっているならばお父さん達が</a>
+											<a class="badge badge-success" href="/%E6%9C%80%E8%89%AF%E8%BF%91%E4%BC%BC%E5%88%86%E6%95%B0%E8%A8%88%E7%AE%97-%E4%B8%8D%E5%AE%9A%E6%96%B9%E7%A8%8B%E5%BC%8F.html">最良近似分数計算 不定方程式</a>
+											<a class="badge badge-success" href="/%E6%9C%80%E6%84%9B%E3%81%AE%E5%A8%98-%E8%BF%91%E8%A6%AA%E7%9B%B8%E5%A7%A6swap-%E5%8A%A0%E9%80%9F%E3%81%99%E3%82%8B%E7%88%B6%E3%81%AE%E6%AC%B2%E6%9C%9B-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E4%BB%A5%E5%A4%96%E3%81%AE%E7%94%B7%E6%80%A7%E3%81%A8%E5%88%9D.html">最愛の娘 近親相姦swap 加速する父の欲望 お父さん以外の男性と初</a>
+											<a class="badge badge-success" href="/%E9%9D%92%E5%B1%B1%E8%8F%9C%E3%80%85-%E9%9A%A3%E3%81%AB%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93.html">青山菜々 隣にお父さん</a>
+											<a class="badge badge-danger" href="/%E7%88%B6%E3%81%AE%E6%97%A5%E3%82%AE%E3%83%95%E3%83%88%E3%81%A7%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%AB%E3%83%97%E3%83%AC%E3%82%BC%E3%83%B3%E3%83%88%E3%81%97%E3%81%9F%E3%81%84%E5%81%A5%E5%BA%B7%E3%82%B0%E3%83%83%E3%82%BA7%E9%81%B8.html">父の日ギフトでお父さんにプレゼントしたい健康グッズ7選</a>
+						</div>
+<center>
+	<!-- MIDDLE BANNER ADS -->
+<script type="text/javascript">
+	atOptions = {
+		'key' : '2b77887421e2587a1a1b1d7c8a31a9e0',
+		'format' : 'iframe',
+		'height' : 250,
+		'width' : 300,
+		'params' : {}
+	};
+	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://jc32arlvqpv8.com/2b77887421e2587a1a1b1d7c8a31a9e0/invoke.js"></scr' + 'ipt>');
+</script>
+		
+	</center>
+					
+				</div>
+			</div>
+			<div class="row content mb-4">
+				<div class="col-md-12">					
+					
+	
+	<div class="card-columns">
+						
+	  <div class='card'>
+	  	<a href="http://2.bp.blogspot.com/_7Yvj12dYtQg/RYvskXC_FqI/AAAAAAAAAGg/W0hxVhSOU1s/s400/12-13.jpg" data-lightbox="roadtrip" data-title="Matlab 之工程應用 12 8 非線性方程式解">
+						<img class="card-img" src="http://2.bp.blogspot.com/_7Yvj12dYtQg/RYvskXC_FqI/AAAAAAAAAGg/W0hxVhSOU1s/s400/12-13.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRH5Z3u2x8pb83SImNUVt0QLhUa-VPvTz3W_GDoFX_JcCoZdUr9YCwvB9ZVG8peqOBhxo0';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Matlab 之工程應用 12 8 非線性方程式解
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://slidesplayer.com/15920657/88/images/slide_1.jpg" data-lightbox="roadtrip" data-title="第二章非线性方程的数值解法非线性方程n次代数方程 超越方程 N 1 2 N 3 4 N 5 求根公式查数学手册 如 Ppt Download">
+						<img class="card-img" src="https://slidesplayer.com/15920657/88/images/slide_1.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5Q8g5b24ZnW4PtLIHHdQkbc0-1fW-kdtdMM3Zu0FJhPxyxdkh6xvQvbUUaoKUVZ2j23c';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				第二章非线性方程的数值解法非线性方程n次代数方程 超越方程 N 1 2 N 3 4 N 5 求根公式查数学手册 如 Ppt Download
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://i0.wp.com/4.bp.blogspot.com/-shCnl6Ki-YM/XZO2JXTSHTI/AAAAAAAAADw/qQabz7FuBR0opo0lpV1CB851D_3qJNW9ACLcBGAsYHQ/s1600/Fig.4.1.png" data-lightbox="roadtrip" data-title="Matlab 方程式近似解連立1次方程式 Liudong">
+						<img class="card-img" src="https://i0.wp.com/4.bp.blogspot.com/-shCnl6Ki-YM/XZO2JXTSHTI/AAAAAAAAADw/qQabz7FuBR0opo0lpV1CB851D_3qJNW9ACLcBGAsYHQ/s1600/Fig.4.1.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTB3iTyXlzv7N6qLn0uWpiZC99wNAxAkotVuusFjRDOe9EgvkSbanfFJNLiC72Wncfz9qc';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Matlab 方程式近似解連立1次方程式 Liudong
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Airflow-Obstructed-Duct.png/1200px-Airflow-Obstructed-Duct.png" data-lightbox="roadtrip" data-title="微分方程 维基百科 自由的百科全书">
+						<img class="card-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Airflow-Obstructed-Duct.png/1200px-Airflow-Obstructed-Duct.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrTxXWUsLkZQpRMwSMxhx5Pkd0_xE01cq3x2x3Ex5vJmbtuEeI1yFlh1pFgtlRdJmAsak';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				微分方程 维基百科 自由的百科全书
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://i0.wp.com/inews.gtimg.com/newsapp_bt/0/11496064132/1000" data-lightbox="roadtrip" data-title="超越方程式解法關于超越方程的解法 Jvvx">
+						<img class="card-img" src="https://i0.wp.com/inews.gtimg.com/newsapp_bt/0/11496064132/1000" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmFrXYEmWThrPx6p-CpNoRH4LiIPY_FXSWrSlp4gxRQyuzMImyNs9lV9Ylly27GqNLyQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				超越方程式解法關于超越方程的解法 Jvvx
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://i0.wp.com/inews.gtimg.com/newsapp_bt/0/11496064129/1000" data-lightbox="roadtrip" data-title="超越方程式解法關于超越方程的解法 Jvvx">
+						<img class="card-img" src="https://i0.wp.com/inews.gtimg.com/newsapp_bt/0/11496064129/1000" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTz2w9_mold1myD7L6XUXBXNEwWSfCCvOLyKr8HLa2PFxpF_KtVC9xm8-IaxH0EJIc3Ag';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				超越方程式解法關于超越方程的解法 Jvvx
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+				<div class='card'>	
+			<div class="d-block p-4">
+	</div>		  	
+		  	<h3 class="h6 p-2"><b></b></h3>
+					</div>
+		
+						
+	  <div class='card'>
+	  	<a href="https://i0.wp.com/i.imgur.com/JeaY3sH.png" data-lightbox="roadtrip" data-title="Matlab 方程式近似解連立1次方程式 Liudong">
+						<img class="card-img" src="https://i0.wp.com/i.imgur.com/JeaY3sH.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLTKPq2JSz9R3eVF16nu2BnysYDx7IHtKiYVMjImRQ3xm-pSaMbTKDpgbE3UOQFv8wDPc';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Matlab 方程式近似解連立1次方程式 Liudong
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://content.wolfram.com/uploads/sites/39/2020/04/km0416img2.png" data-lightbox="roadtrip" data-title="非線形偏微分方程式への有限要素法の適用 Wolfram Blog">
+						<img class="card-img" src="https://content.wolfram.com/uploads/sites/39/2020/04/km0416img2.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4f6Bqc4W0WgUDNFWCeJ52ydvKQAV0iZ7ZyjXzlzvdmrtcF98rby1MQS8e08eNBxlBE4s';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				非線形偏微分方程式への有限要素法の適用 Wolfram Blog
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://content.wolfram.com/uploads/sites/39/2020/04/km0416img3.png" data-lightbox="roadtrip" data-title="非線形偏微分方程式への有限要素法の適用 Wolfram Blog">
+						<img class="card-img" src="https://content.wolfram.com/uploads/sites/39/2020/04/km0416img3.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEC-5Pw7M0dLq7edw769JumWeddwfAyDashZVF0X3vkJmbvokr3mtywABGwQmq3_OEzuM';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				非線形偏微分方程式への有限要素法の適用 Wolfram Blog
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://i0.wp.com/jp.mathworks.com/help/symbolic/ugztransforms_f1-123225_002.png" data-lightbox="roadtrip" data-title="Matlab 方程式近似解連立1次方程式 Liudong">
+						<img class="card-img" src="https://i0.wp.com/jp.mathworks.com/help/symbolic/ugztransforms_f1-123225_002.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDwwfFtEqWxaxoEKo0Yv3--0YK0kaSxuwA5FbE-KwuEmHC7YCDdgWsfofUZxeza5ZaUYc';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Matlab 方程式近似解連立1次方程式 Liudong
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://content.wolfram.com/uploads/sites/39/2020/04/km0416img37.png" data-lightbox="roadtrip" data-title="非線形偏微分方程式への有限要素法の適用 Wolfram Blog">
+						<img class="card-img" src="https://content.wolfram.com/uploads/sites/39/2020/04/km0416img37.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMcqS_gPk2WEkrEC-6VBw2wqADX36yl6rQtHwwmKPA6t15RyvQk1y-NE-RFQPo6ZN_bEM';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				非線形偏微分方程式への有限要素法の適用 Wolfram Blog
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://upload.wikimedia.org/wikipedia/commons/8/8d/Logistic_map_with_parameter_from_0.02_to_4_t_from_0_to_200.gif" data-lightbox="roadtrip" data-title="單峰映象 维基百科 自由的百科全书">
+						<img class="card-img" src="https://upload.wikimedia.org/wikipedia/commons/8/8d/Logistic_map_with_parameter_from_0.02_to_4_t_from_0_to_200.gif" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7ED2yjp4KrXbeVBdvKPsm_ZzznPTvVzdPEl0X1kdDc7rHeHFqTca5Lwi3Be6OurWloQQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				單峰映象 维基百科 自由的百科全书
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://content.wolfram.com/uploads/sites/39/2020/04/km0416img45.png" data-lightbox="roadtrip" data-title="非線形偏微分方程式への有限要素法の適用 Wolfram Blog">
+						<img class="card-img" src="https://content.wolfram.com/uploads/sites/39/2020/04/km0416img45.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxprjQOkM-USayrnjMkq5OHWOTN-Ggs8yuGYxBEdquapOaq98giIYH1i2b2LEn2OgPca8';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				非線形偏微分方程式への有限要素法の適用 Wolfram Blog
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://support.ptc.com/help/mathcad/zh_TW/Tutorials/images/nonlinear_system_of_equations2.png" data-lightbox="roadtrip" data-title="任務1 2 非線性方程組">
+						<img class="card-img" src="http://support.ptc.com/help/mathcad/zh_TW/Tutorials/images/nonlinear_system_of_equations2.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTINgD3znizjYr_txMDlIzgvdGJ4Ndhho5jfBBbmcNvmWC2IwV-_ATiKuqn4-cTlVaMutM';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				任務1 2 非線性方程組
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://images-na.ssl-images-amazon.com/images/I/91aAIB-DMoL.jpg" data-lightbox="roadtrip" data-title="非線形分散型波動方程式 解の漸近挙動 岩波数学叢書 9784000298247 Amazon Com Books">
+						<img class="card-img" src="https://images-na.ssl-images-amazon.com/images/I/91aAIB-DMoL.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqHLEHMEDV_VpOELWxaF9Xg9EMvCca7NcIZceXi1JymL28b75qg-XfYMPt7pldVij68eE';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				非線形分散型波動方程式 解の漸近挙動 岩波数学叢書 9784000298247 Amazon Com Books
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic1.xuehuaimg.com/proxy/csdn/https://img-blog.csdn.net/20171023224110185" data-lightbox="roadtrip" data-title="牛頓 拉夫遜簡單解釋 台部落">
+						<img class="card-img" src="https://pic1.xuehuaimg.com/proxy/csdn/https://img-blog.csdn.net/20171023224110185" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRy9mfDwF9e2Mu9FHLOtaX_ZHljD1blg-yGqm3Aa6JIqVotcLCG6R42IDbNWN1uoFW0TLk';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				牛頓 拉夫遜簡單解釋 台部落
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://images0.cnblogs.com/blog/686548/201412/040954075301717.png" data-lightbox="roadtrip" data-title="用r语言求解非线性方程 R爱好者 博客园">
+						<img class="card-img" src="https://images0.cnblogs.com/blog/686548/201412/040954075301717.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCWLdtApj50dAM_Ra68HvRTRH51oo9zg4VUg-J4fRRpDZS0LDfqnmciQbHNZaLQWJSVkI';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				用r语言求解非线性方程 R爱好者 博客园
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://i0.wp.com/2.bp.blogspot.com/-M7EXVGvN8-Y/XZO2ThEGBhI/AAAAAAAAAD0/xJhXyYwLkYUw1qG7CQqKxwtuo8__jw8GwCLcBGAsYHQ/w1200-h630-p-k-no-nu/C4_ex01.png" data-lightbox="roadtrip" data-title="Matlab 方程式近似解連立1次方程式 Liudong">
+						<img class="card-img" src="https://i0.wp.com/2.bp.blogspot.com/-M7EXVGvN8-Y/XZO2ThEGBhI/AAAAAAAAAD0/xJhXyYwLkYUw1qG7CQqKxwtuo8__jw8GwCLcBGAsYHQ/w1200-h630-p-k-no-nu/C4_ex01.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRDlOuFopXCEwJwc5s4MCOn_mGNn5LhGFpgGQ_GhzgNx6u-36HgCx3h_eAOBY5U8kSC9Y';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Matlab 方程式近似解連立1次方程式 Liudong
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://images-na.ssl-images-amazon.com/images/I/41f5rx3wTdL._SY291_BO1,204,203,200_QL40_ML2_.jpg" data-lightbox="roadtrip" data-title="共立講座21世紀の数学 25 非線形偏微分方程式 Yoshikazu Giga Miho Giga Toshifusa Kimura 9784320015777 Amazon Com Books">
+						<img class="card-img" src="https://images-na.ssl-images-amazon.com/images/I/41f5rx3wTdL._SY291_BO1,204,203,200_QL40_ML2_.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiJLbKFUUv8qwdjK8H8u8IcAtmGXo5lToalv-AhpxFn9YDbA7UrW6hU-o_9gKnc57yjls';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				共立講座21世紀の数学 25 非線形偏微分方程式 Yoshikazu Giga Miho Giga Toshifusa Kimura 9784320015777 Amazon Com Books
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://content.wolfram.com/uploads/sites/39/2020/04/km0416img43.png" data-lightbox="roadtrip" data-title="非線形偏微分方程式への有限要素法の適用 Wolfram Blog">
+						<img class="card-img" src="https://content.wolfram.com/uploads/sites/39/2020/04/km0416img43.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSB0DkJBycZSRux8mwa_HvEAjb9YW_MjJzYD_9IWZ3gaWDC0LF5pwjttDWp4jxhvCEp4oM';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				非線形偏微分方程式への有限要素法の適用 Wolfram Blog
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://upload.wikimedia.org/wikipedia/commons/0/0b/Ybc7289-bw.jpg" data-lightbox="roadtrip" data-title="数值分析 维基百科 自由的百科全书">
+						<img class="card-img" src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Ybc7289-bw.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSkfj8r4halEThGd31fprkvgTvjH0WEX1HQQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				数值分析 维基百科 自由的百科全书
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://img.yumpu.com/24234350/1/500x640/-.jpg" data-lightbox="roadtrip" data-title="複素周回積分による非線形方程式の解法 南山大学">
+						<img class="card-img" src="https://img.yumpu.com/24234350/1/500x640/-.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvofMKofYzSUU2HeOWkavvC8gEpT-U_TLXMw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				複素周回積分による非線形方程式の解法 南山大学
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://m.media-amazon.com/images/I/41D-n10AhCL.jpg" data-lightbox="roadtrip" data-title="Amazon Com Samazamana Gengo De Suti Keisan 5 Hisenkeihouteisiki No Kai Japanese Edition Ebook Yamaoka Naoki Kindle Store">
+						<img class="card-img" src="https://m.media-amazon.com/images/I/41D-n10AhCL.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtXLvbY_wCbwJTyJYU8et7rMC1vTV2wKytFA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Amazon Com Samazamana Gengo De Suti Keisan 5 Hisenkeihouteisiki No Kai Japanese Edition Ebook Yamaoka Naoki Kindle Store
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://content.wolfram.com/uploads/sites/39/2020/04/km0416img27.png" data-lightbox="roadtrip" data-title="非線形偏微分方程式への有限要素法の適用 Wolfram Blog">
+						<img class="card-img" src="https://content.wolfram.com/uploads/sites/39/2020/04/km0416img27.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRRXJmNbNJnJHmV-N9dH8S0yBMGSftMUk6Ag';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				非線形偏微分方程式への有限要素法の適用 Wolfram Blog
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="/search?q=%E5%BE%AE%E5%88%86%E5%85%AC%E5%BC%8F&amp;tbm=isch" data-lightbox="roadtrip" data-title="3">
+						<img class="card-img" src="/search?q=%E5%BE%AE%E5%88%86%E5%85%AC%E5%BC%8F&amp;tbm=isch" onerror="this.onerror=null;this.src='/search?q=%E5%BE%AE%E5%88%86%E5%85%AC%E5%BC%8F&amp;tbm=isch';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				3
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://imgv2-1-f.scribdassets.com/img/document/468666096/original/c233e371a9/1614663160?v=1" data-lightbox="roadtrip" data-title="工程數學ch2">
+						<img class="card-img" src="https://imgv2-1-f.scribdassets.com/img/document/468666096/original/c233e371a9/1614663160?v=1" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFY8vC9UeEoNktHuYQx2NDBXE_fDgNo_VdQA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				工程數學ch2
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://support.ptc.com/help/mathcad/zh_TW/Tutorials/images/nonlinear_system_of_equations3.png" data-lightbox="roadtrip" data-title="任務1 2 非線性方程組">
+						<img class="card-img" src="http://support.ptc.com/help/mathcad/zh_TW/Tutorials/images/nonlinear_system_of_equations3.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsZTWP6hhOf2JmIp0GhOc0JrKz3__VJ6gugg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				任務1 2 非線性方程組
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://sites.google.com/site/lyucingyuwed/_/rsrc/1351409808555/-gong-cheng-shu-xue/yi-jieode/yi-jie-xian-xingo-d-e/bai-nu-li-fang-cheng-shi-jie/%E6%9F%8F%E5%8A%AA%E5%88%A9%E6%96%B9%E7%A8%8B%E8%A7%80%E5%BF%B5%E8%88%87%E8%A7%A3%E6%B3%95.JPG" data-lightbox="roadtrip" data-title="柏努利方程式解 Lyu Cing Yu Wed">
+						<img class="card-img" src="https://sites.google.com/site/lyucingyuwed/_/rsrc/1351409808555/-gong-cheng-shu-xue/yi-jieode/yi-jie-xian-xingo-d-e/bai-nu-li-fang-cheng-shi-jie/%E6%9F%8F%E5%8A%AA%E5%88%A9%E6%96%B9%E7%A8%8B%E8%A7%80%E5%BF%B5%E8%88%87%E8%A7%A3%E6%B3%95.JPG" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3KaP9xFcOw1m3ihfdroCEQ6tllDFcvRSm2Q';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				柏努利方程式解 Lyu Cing Yu Wed
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://imgv2-2-f.scribdassets.com/img/document/29893268/298x396/8b004d886d/1543263111?v=1" data-lightbox="roadtrip" data-title="數值分析">
+						<img class="card-img" src="https://imgv2-2-f.scribdassets.com/img/document/29893268/298x396/8b004d886d/1543263111?v=1" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFtJifJn8TL0dCUR1jiZUg8KspU9XE9g_2ow';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				數值分析
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://slidetodoc.com/presentation_image/17548e1597ba39c069f8057e7fc0f9e6/image-3.jpg" data-lightbox="roadtrip" data-title="C Pp 1617 Include Stdio H Include Math">
+						<img class="card-img" src="https://slidetodoc.com/presentation_image/17548e1597ba39c069f8057e7fc0f9e6/image-3.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRk4xYN3yUlGE7lg8Diy7MwdlQZmNE8wc4Vuw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				C Pp 1617 Include Stdio H Include Math
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://1.bp.blogspot.com/-woscipA1_lM/W3zX5Plg6nI/AAAAAAAADFU/bV1Att_xfQkPfjPwMeE983zTzwoAOHpowCLcBGAs/s1600/Instability-19.bmp" data-lightbox="roadtrip" data-title="流體穩定學第一章">
+						<img class="card-img" src="https://1.bp.blogspot.com/-woscipA1_lM/W3zX5Plg6nI/AAAAAAAADFU/bV1Att_xfQkPfjPwMeE983zTzwoAOHpowCLcBGAs/s1600/Instability-19.bmp" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWkVGm6pFmkn68uY6wkiZe86m2HX54CWYjKw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				流體穩定學第一章
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://content.wolfram.com/uploads/sites/39/2020/04/km0416img44.png" data-lightbox="roadtrip" data-title="非線形偏微分方程式への有限要素法の適用 Wolfram Blog">
+						<img class="card-img" src="https://content.wolfram.com/uploads/sites/39/2020/04/km0416img44.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTA9xVR6irZrpUglwt_BMm99Jwca4q9NBTKnQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				非線形偏微分方程式への有限要素法の適用 Wolfram Blog
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://kenyu-life.com/wp-content/uploads/2018/11/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88-2018-11-28-10.59.27.jpg" data-lightbox="roadtrip" data-title="非線形微分方程式の解を幾何学的に算出する">
+						<img class="card-img" src="https://kenyu-life.com/wp-content/uploads/2018/11/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88-2018-11-28-10.59.27.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpHvxfz-I_ouO1LYT3vP5Bm51pgyWav4rFvA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				非線形微分方程式の解を幾何学的に算出する
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+		
+	</div>
+
+		 
+		
+		
+				</div>
+				<div class="col-sm-12 widget">
+					<div class="d-block p-4">
+	<center>
+		<!-- BOTTOM BANNER ADS -->
+<script async="async" data-cfasync="false" src="//jc32arlvqpv8.com/eb47a424ae325c90cca32780149785c3/invoke.js"></script>
+<div id="container-eb47a424ae325c90cca32780149785c3"></div>
+
+	</center>
+</div>				</div>
+			</div>
+			<div class="row footer">
+				<div class="col-md-12 text-center py-4">
+										<a href="/p/dmca.html">Dmca</a>
+										<a href="/p/contact.html">Contact</a>
+										<a href="/p/privacy-policy.html">Privacy Policy</a>
+										<a href="/p/copyright.html">Copyright</a>
+					
+				</div>
+			</div>
+		</main>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js" integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js" integrity="sha256-CtKylYan+AJuoH8jrMht1+1PMhMqrKnB8K5g012WN5I=" crossorigin="anonymous"></script>
+		
+		<!-- Footer CSS JS -->
+		
+		
+		
+			<script type='text/javascript' src='//jc32arlvqpv8.com/ef/d5/10/efd510237a3143727bed46803ec35b8d.js'></script>
+</body>
+</html>

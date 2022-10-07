@@ -1,0 +1,682 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha256-L/W5Wfqfa0sdBNIKN9cG6QA5F2qx4qICmU2VgLruv9Y=" crossorigin="anonymous" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/css/lightbox.min.css" integrity="sha256-tBxlolRHP9uMsEFKVk+hk//ekOlXOixLKvye5W2WR5c=" crossorigin="anonymous" />
+		<link href="https://fonts.googleapis.com/css?family=Mr+Dafoe" rel="stylesheet" type="text/css">
+
+		<style type="text/css">
+			html,body{font-family:"Open Sans",Arial,sans-serif;font-size:14px;font-weight:400;background:#f3f3f3 url(f6TaKIjeG9E3gM
+) no-repeat center center fixed;background-size:cover;height:100%}#title{font-family:"Mr Dafoe",Times,serif;font-size:34px;background:rgba(255,255,255,.8);margin-bottom:34px}.header{padding-bottom:13px;margin-bottom:13px;border-bottom:1px solid #eee}a{color:#26ADE4;text-decoration:none}#title a{color:#333;margin-left:21px}#title a:hover{text-decoration:none;color:#26ADE4}.sidebar ul{margin:0;padding:0}.sidebar ul li{list-style:none}.footer{margin-top:21px;padding-top:13px;border-top:1px solid #eee}.footer a{margin:0 15px}.navi{margin:13px 0 13px 0;padding:13px}.navi a{margin:5px 2px;font-size:95%}.main{margin-top: 6rem;}.form-inline .form-control{min-width: 300px;}.v-cover{height: 380px; object-fit: cover;}.v-image{height: 200px; object-fit: cover;}.dwn-cover{max-height: 460px; object-fit: cover;}.main{margin-top: 6rem;}.form-inline .form-control{min-width: 300px;}			
+		</style>
+
+		<title>熱伝導方程式 Sor法</title>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/", 
+  "@type": "Article", 
+  "author": {
+    "@type": "Person",
+    "name": "James"
+  },
+  "headline": "熱伝導方程式 Sor法",
+  "datePublished": "2021-04-24",
+  "image": [https://slidetodoc.com/presentation_image/4206d685957dd8ac6e2c8231f24c8e0b/image-6.jpg,https://patentimages.storage.googleapis.com/63/ee/ed/8b770c6ab9ea74/JPOXMLDOC01-appb-M000004.png,https://i0.wp.com/image2.slideserve.com/4987945/slide4-l.jpg],
+  "publisher": {
+    "@type": "Organization",
+    "name": "Tukang Parkir Gerobak",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://via.placeholder.com/512.png?text=熱伝導方程式 sor法",
+      "width": 512,
+      "height": 512
+    }
+  }
+}
+</script>
+		<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-957NGNKQ70"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-957NGNKQ70');
+</script>
+
+<script type='text/javascript' src='//jc32arlvqpv8.com/1a/82/2e/1a822ef8a40a0fbab3c4ea12a5d2bb02.js'></script>
+</head>
+	<body>
+		<header class="bg-white fixed-top">			
+			<nav class="navbar navbar-light bg-white mb-0">
+				<div class="container justify-content-center justify-content-sm-between">	
+				  <a href="/" title="Blog" class="navbar-brand mb-1">Blog</a>
+				  				</div>			  
+			</nav>				
+		</header>
+		<main class="main container bg-white">
+			<div class="col-md-12 my-4" align="center">
+				<div class="d-block p-4">
+	<br/><center>
+<!-- TOP BANNER ADS -->
+</center><br/>
+</div>			</div>
+			<div class="row header">
+				<div class="col-sm-12 text-center p-2">
+						<h1>熱伝導方程式 Sor法</h1>
+
+	
+	<div class="navi text-center">
+										<a class="badge badge-info" href="/%E7%90%83%E9%9D%A2%E3%81%AE%E6%96%B9%E7%A8%8B%E5%BC%8F-%E7%82%B9%E3%82%92%E9%80%9A%E3%82%8B.html">球面の方程式 点を通る</a>
+											<a class="badge badge-dark" href="/%E6%B5%9C%E5%8F%A3%E4%BA%AC%E5%AD%90-%E3%83%A2%E3%83%8B%E3%82%BF%E3%83%AA%E3%83%B3%E3%82%B0-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%8A%E6%AF%8D%E3%81%95%E3%82%93-%E3%83%9B%E3%83%A9%E3%83%BC.html">浜口京子 モニタリング お父さんお母さん ホラー</a>
+											<a class="badge badge-dark" href="/%E8%B5%A4%E3%81%A1%E3%82%83%E3%82%93%E3%81%AE%E8%A8%98%E6%86%B6-%E6%9C%A8%E3%81%AE%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93-%E5%8D%B5.html">赤ちゃんの記憶 木のお父さん 卵</a>
+											<a class="badge badge-info" href="/%E7%A7%81-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%AE%E5%AD%90%E4%BE%9B%E5%A6%8A%E5%A8%A0%E3%81%99%E3%82%8B-%E5%A5%B3%E5%AD%90%E6%A0%A1%E7%94%9F%E3%81%AE%E3%83%87%E3%82%AB%E5%B0%BB%E5%A8%98%E3%81%8C%E7%AA%81%E7%84%B6%E8%A8%AA%E3%81%AD%E3%81%9F.html">私 お父さんの子供妊娠する 女子校生のデカ尻娘が突然訪ねた</a>
+											<a class="badge badge-info" href="/%E7%86%9F%E5%A5%B3%E5%80%B6%E6%A5%BD%E9%83%A8-6782-%E3%82%BB%E3%83%83%E3%82%AF%E3%82%B9%E5%A4%A7%E5%A5%BD%E3%81%8D-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%94%E3%82%81%E3%82%93%E3%81%AA%E3%81%95%E3%81%84.html">熟女倶楽部 6782 セックス大好き お父さんごめんなさい</a>
+											<a class="badge badge-info" href="/%E7%9F%B3%E5%8E%9F-%E3%81%95%E3%82%93%E3%81%BE%E6%9D%B1%E5%A4%A7%E6%96%B9%E7%A8%8B%E5%BC%8F.html">石原 さんま東大方程式</a>
+											<a class="badge badge-dark" href="/%E7%BE%A9%E7%90%86%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93-%E5%8D%B1%E7%AF%A4-%E4%BC%91%E6%9A%87-%E7%94%B3%E8%AB%8B.html">義理お父さん 危篤 休暇 申請</a>
+											<a class="badge badge-light" href="/%E8%87%AA%E5%B7%B1%E7%84%A1%E6%92%9E%E7%9D%80%E6%96%B9%E7%A8%8B%E5%BC%8F-%E8%AA%AD%E3%81%BF%E6%96%B9.html">自己無撞着方程式 読み方</a>
+											<a class="badge badge-dark" href="/%E7%86%B1%E6%A0%B8-%E7%86%B1%E6%96%B9%E7%A8%8B%E5%BC%8F-%E8%A8%BC%E6%98%8E.html">熱核 熱方程式 証明</a>
+											<a class="badge badge-success" href="/%E6%B3%95%E5%89%87%E3%82%92%E8%A6%8B%E3%81%A4%E3%81%91-%E6%96%B9%E7%A8%8B%E5%BC%8F%E3%81%AB%E3%81%99%E3%82%8B-%E5%8D%92%E6%A5%AD%E8%AB%96%E6%96%87.html">法則を見つけ 方程式にする 卒業論文</a>
+											<a class="badge badge-warning" href="/%E6%98%A8%E6%97%A5%E4%BD%95%E9%A3%9F%E3%81%B9%E3%81%9F-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E5%BD%B9.html">昨日何食べた お父さん役</a>
+											<a class="badge badge-warning" href="/%E6%A0%AA-%E6%97%A5%E7%B5%8C225%E5%85%88%E7%89%A9%E5%8B%9D%E5%88%A9%E3%81%AE%E3%83%81%E3%83%A3%E3%83%BC%E3%83%88%E6%96%B9%E7%A8%8B%E5%BC%8F-%E3%83%88%E3%83%AC%E3%83%B3%E3%83%89%E3%81%AE%E8%AA%AD%E3%81%BF%E6%96%B9-%E3%82%A8%E3%83%B3%E3%83%88%E3%83%AA%E3%83%BC%E3%82%BF%E3%82%A4%E3%83%9F%E3%83%B3%E3%82%B0%E3%81%AE%E3%81%A4%E3%81%8B%E3%81%BF%E6%96%B9%E3%82%92%E3%81%95%E3%82%89%E3%81%AB%E5%85%85%E5%AE%9F-%E3%81%A4%E3%81%84%E3%81%A6%E3%82%8B%E4%BB%99%E4%BA%BA.html">株 日経225先物勝利のチャート方程式 トレンドの読み方 エントリータイミングのつかみ方をさらに充実 ついてる仙人</a>
+											<a class="badge badge-info" href="/%E7%B7%9A%E5%BD%A2-%E4%BB%A3%E6%95%B0-%E7%9B%B4%E7%B7%9A-%E3%81%AE-%E6%96%B9%E7%A8%8B%E5%BC%8F.html">線形 代数 直線 の 方程式</a>
+											<a class="badge badge-dark" href="/%E6%B0%B4%E8%B0%B7%E3%81%82%E3%81%8A%E3%81%84-%E7%88%B6%E3%81%A8%E5%A8%98%E3%81%AE%E8%BF%91%E8%A6%AA%E3%82%BB%E3%83%83%E3%82%AF%E3%82%B9-%E9%85%92%E7%99%96%E3%81%8C%E6%82%AA%E3%81%8F-%E8%A6%AA%E9%9B%A2%E3%82%8C%E3%82%82%E5%87%BA%E6%9D%A5%E3%81%AA%E3%81%84%E7%A7%81%E3%81%AF%E3%81%84%E3%81%A4%E3%82%82%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%AB%E8%BF%B7%E6%83%91%E3%82%92%E6%8E%9B%E3%81%91%E3%81%A6%E3%81%84%E3%81%BE%E3%81%99-%E3%81%9D%E3%82%93%E3%81%AA%E3%81%A0%E3%81%8B%E3%82%89%E3%81%82%E3%81%AE%E6%97%A5%E3%82%82-javmix.html">水谷あおい 父と娘の近親セックス 酒癖が悪く 親離れも出来ない私はいつもお父さんに迷惑を掛けています そんなだからあの日も javmix</a>
+											<a class="badge badge-primary" href="/%E6%A0%97%E5%B1%B1-%E3%83%AC%E3%82%A2%E3%83%BC%E3%83%89-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93-%E3%81%AA%E3%82%93j.html">栗山 レアード お父さん なんj</a>
+						</div>
+<center>
+	<!-- MIDDLE BANNER ADS -->
+<script type="text/javascript">
+	atOptions = {
+		'key' : '2b77887421e2587a1a1b1d7c8a31a9e0',
+		'format' : 'iframe',
+		'height' : 250,
+		'width' : 300,
+		'params' : {}
+	};
+	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://jc32arlvqpv8.com/2b77887421e2587a1a1b1d7c8a31a9e0/invoke.js"></scr' + 'ipt>');
+</script>
+		
+	</center>
+					
+				</div>
+			</div>
+			<div class="row content mb-4">
+				<div class="col-md-12">					
+					
+	
+	<div class="card-columns">
+						
+	  <div class='card'>
+	  	<a href="https://other-wiki.zervice.io/wikipedia_zh_all_novid_2018-07/I/m/Heatequation_exampleB_frames.svg.png" data-lightbox="roadtrip" data-title="熱傳導方程式">
+						<img class="card-img" src="https://other-wiki.zervice.io/wikipedia_zh_all_novid_2018-07/I/m/Heatequation_exampleB_frames.svg.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxpAsLMUYKBLTtEYNZP0gzDPtjNq8HsYpbSwftrerLz00jMjF9PzVBBy0vVOScbn14XfI';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				熱傳導方程式
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://img.google-info.cn/storage/big/556557.jpg?92873e213fc0e4caf4f8b403b3455424=40883a86dd18a8ab48cd902ff90357b7" data-lightbox="roadtrip" data-title="熱傳導方程式 热传导方程 或稱熱方程 是一個重要的偏微分">
+						<img class="card-img" src="https://img.google-info.cn/storage/big/556557.jpg?92873e213fc0e4caf4f8b403b3455424=40883a86dd18a8ab48cd902ff90357b7" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQae9oe2YHxqiG0_Ejm8pgDwO6iQ-jTSsWx1yfhbVNNp73z0Aq5FnEJ9s0Y76OgERaHNUQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				熱傳導方程式 热传导方程 或稱熱方程 是一個重要的偏微分
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://i0.wp.com/image2.slideserve.com/4987945/slide33-l.jpg" data-lightbox="roadtrip" data-title="14ipy7pve Nfxm">
+						<img class="card-img" src="https://i0.wp.com/image2.slideserve.com/4987945/slide33-l.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRG0_X2cyZlTNTGLzsO4FlywzvXIlnJg-dTkl88byLpM_oOh9w4NMzOueln8T1aiqynZQA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				14ipy7pve Nfxm
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://slidetodoc.com/presentation_image/4206d685957dd8ac6e2c8231f24c8e0b/image-18.jpg" data-lightbox="roadtrip" data-title="Gaussjordan Void Sweepdouble Pa Double Pt Int N">
+						<img class="card-img" src="https://slidetodoc.com/presentation_image/4206d685957dd8ac6e2c8231f24c8e0b/image-18.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1MhZHyFUwHdywmC6b8Q0R3J02RYwOeI3qooOFUTSkS0EfolL5_eYCE31dhZgbnhtkzp8';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Gaussjordan Void Sweepdouble Pa Double Pt Int N
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://slidetodoc.com/presentation_image/4206d685957dd8ac6e2c8231f24c8e0b/image-15.jpg" data-lightbox="roadtrip" data-title="Gaussjordan Void Sweepdouble Pa Double Pt Int N">
+						<img class="card-img" src="https://slidetodoc.com/presentation_image/4206d685957dd8ac6e2c8231f24c8e0b/image-15.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTge8UCjDlD9kOTHZ49um3GwXCAG_JM2XhRWEgTk0iWn1qTSSQLGvHQRALXDTdGv6YO7vs';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Gaussjordan Void Sweepdouble Pa Double Pt Int N
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://slidetodoc.com/presentation_image/4206d685957dd8ac6e2c8231f24c8e0b/image-10.jpg" data-lightbox="roadtrip" data-title="Gaussjordan Void Sweepdouble Pa Double Pt Int N">
+						<img class="card-img" src="https://slidetodoc.com/presentation_image/4206d685957dd8ac6e2c8231f24c8e0b/image-10.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZIQUCvMqfwEqXzqT6aNlfT0Cnkd9U3lm5pVQDcK3NrHItgHHPzpTYlLLhhQzbEPyk6FY';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Gaussjordan Void Sweepdouble Pa Double Pt Int N
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+				<div class='card'>	
+			<div class="d-block p-4">
+	</div>		  	
+		  	<h3 class="h6 p-2"><b></b></h3>
+					</div>
+		
+						
+	  <div class='card'>
+	  	<a href="https://i0.wp.com/image2.slideserve.com/4987945/slide4-l.jpg" data-lightbox="roadtrip" data-title="14ipy7pve Nfxm">
+						<img class="card-img" src="https://i0.wp.com/image2.slideserve.com/4987945/slide4-l.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnd1tb5_zwi2Q1vD4EpYrvPzqqjThrbbshWSQ0cNKTcm-G5J8q0dnRmvvEHUiPBK78lCs';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				14ipy7pve Nfxm
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Explicit_method-stencil.svg/440px-Explicit_method-stencil.svg.png" data-lightbox="roadtrip" data-title="有限差分法 Wikiwand">
+						<img class="card-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Explicit_method-stencil.svg/440px-Explicit_method-stencil.svg.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtqIyZo-1yv-4bNNHWzzmU9-od9fCFQGx0ZuN1MyDTRYKt0W_lxGzSA8afw3zISv65w2s';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				有限差分法 Wikiwand
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://slidetodoc.com/presentation_image/4206d685957dd8ac6e2c8231f24c8e0b/image-6.jpg" data-lightbox="roadtrip" data-title="Gaussjordan Void Sweepdouble Pa Double Pt Int N">
+						<img class="card-img" src="https://slidetodoc.com/presentation_image/4206d685957dd8ac6e2c8231f24c8e0b/image-6.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiy9CREUimJN2cMqlOtlUsbVzZDBSGmUih0csyM8Zcn-qaZAL54m6SKrji-dgtz3cJerU';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Gaussjordan Void Sweepdouble Pa Double Pt Int N
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://slidetodoc.com/presentation_image/4206d685957dd8ac6e2c8231f24c8e0b/image-3.jpg" data-lightbox="roadtrip" data-title="Gaussjordan Void Sweepdouble Pa Double Pt Int N">
+						<img class="card-img" src="https://slidetodoc.com/presentation_image/4206d685957dd8ac6e2c8231f24c8e0b/image-3.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsy9T18_BZod06t80gH5Uyv09e8OafEXDaeggxgBOMrB6_2lAwr1IZzWxbb4vwsTPBYAY';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Gaussjordan Void Sweepdouble Pa Double Pt Int N
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="f6TaKIjeG9E3gM" data-lightbox="roadtrip" data-title="Https Www Tunghua Com Tw Manager Admin Upload File 738 1599124738105 Pdf">
+						<img class="card-img" src="f6TaKIjeG9E3gM" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrMJ1gBUehfC1nRiosARHJgoR4UizNPh6k8QvuM6r-u2fYyMIvUovxBbQ7-lf9CscZGvU';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Https Www Tunghua Com Tw Manager Admin Upload File 738 1599124738105 Pdf
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://img-blog.csdnimg.cn/20200412203444843.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3OTI1Njgw,size_16,color_FFFFFF,t_70" data-lightbox="roadtrip" data-title="线性方程组的sor迭代法 疯狂的小黑呐的博客 Csdn博客 Sor迭代法">
+						<img class="card-img" src="https://img-blog.csdnimg.cn/20200412203444843.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3OTI1Njgw,size_16,color_FFFFFF,t_70" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSn-rL7aPZccA6o5yQbluUq9wNrCI1EXTCqKQEpIYjrxpNWR5sSHUs1mQNH1BiSEvmKPq0';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				线性方程组的sor迭代法 疯狂的小黑呐的博客 Csdn博客 Sor迭代法
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://slidetodoc.com/presentation_image/4206d685957dd8ac6e2c8231f24c8e0b/image-14.jpg" data-lightbox="roadtrip" data-title="Gaussjordan Void Sweepdouble Pa Double Pt Int N">
+						<img class="card-img" src="https://slidetodoc.com/presentation_image/4206d685957dd8ac6e2c8231f24c8e0b/image-14.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROcKXcMiMRcYA4vX-vpNdfYJOqb2fLuVCkk3d-Ep_j550VkM3B-G3RMPm100N40ZsuszY';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Gaussjordan Void Sweepdouble Pa Double Pt Int N
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://img.yumpu.com/38330893/1/500x640/5.jpg" data-lightbox="roadtrip" data-title="5熱傳導">
+						<img class="card-img" src="https://img.yumpu.com/38330893/1/500x640/5.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRp8v4zP4yA66E7xZHHa6uR2R5OzhKJMRJuRkCbzenB4_LRc7PL_RfBAKI0zL43ldB2Bww';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				5熱傳導
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://i0.wp.com/image2.slideserve.com/4987945/slide17-l.jpg" data-lightbox="roadtrip" data-title="偏微分方程式解法第七章 Ropux">
+						<img class="card-img" src="https://i0.wp.com/image2.slideserve.com/4987945/slide17-l.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUougKfTuIFZnLwynlB6BsrkjPNWUely-pK5Xt2xU-gD8JWOugooJRZQgHhVWHIHwIia8';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				偏微分方程式解法第七章 Ropux
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="f6TaKIjeG9E3gM" data-lightbox="roadtrip" data-title="Https Www Tunghua Com Tw Manager Admin Upload File 738 1599124738105 Pdf">
+						<img class="card-img" src="f6TaKIjeG9E3gM" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdM9w9X5hxq5CFHzIhucVg5g5z4JjUra-IYxZL2RC026mBcBpIHX_3VOrz8wndqB-PQjI';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Https Www Tunghua Com Tw Manager Admin Upload File 738 1599124738105 Pdf
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://slidetodoc.com/presentation_image/4206d685957dd8ac6e2c8231f24c8e0b/image-7.jpg" data-lightbox="roadtrip" data-title="Gaussjordan Void Sweepdouble Pa Double Pt Int N">
+						<img class="card-img" src="https://slidetodoc.com/presentation_image/4206d685957dd8ac6e2c8231f24c8e0b/image-7.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQw_0bHKBD0JErBanCGL2WCVtziZQVvcM5LkpKzb5zPNknqnUS36SvDoKa5hsz5LGfXe4o';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Gaussjordan Void Sweepdouble Pa Double Pt Int N
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://slidetodoc.com/presentation_image/4206d685957dd8ac6e2c8231f24c8e0b/image-2.jpg" data-lightbox="roadtrip" data-title="Gaussjordan Void Sweepdouble Pa Double Pt Int N">
+						<img class="card-img" src="https://slidetodoc.com/presentation_image/4206d685957dd8ac6e2c8231f24c8e0b/image-2.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8h_alP97zKAMkR49Y9Aj11P7rPLEVRf63ST1mzksdbg1nUAzLRaqK2oRnnSm7GU_tXeo';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Gaussjordan Void Sweepdouble Pa Double Pt Int N
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://i0.wp.com/msvlab.hre.ntou.edu.tw/grades/ODE(new)/2002/1/%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B%E4%BD%9C%E5%9C%96%E6%B3%95.jpg" data-lightbox="roadtrip" data-title="偏微分方程應用偏微分方程式 Qqkaii">
+						<img class="card-img" src="https://i0.wp.com/msvlab.hre.ntou.edu.tw/grades/ODE(new)/2002/1/%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B%E4%BD%9C%E5%9C%96%E6%B3%95.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzI7YXiTLpSf-kjBQMoo2uHDFCAykONB8cwUT3-tx7Dm5u4uEdUq6BjXGz_lrH4VDczFQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				偏微分方程應用偏微分方程式 Qqkaii
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="f6TaKIjeG9E3gM" data-lightbox="roadtrip" data-title="Https Www Tunghua Com Tw Manager Admin Upload File 738 1599124738105 Pdf">
+						<img class="card-img" src="f6TaKIjeG9E3gM" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgI135xNNlPg_K8Gm2zRMg2XmWMrJr_x_tJOnJMNEulmVPMwTAx3q6dV6F80FH9D4oy_8';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Https Www Tunghua Com Tw Manager Admin Upload File 738 1599124738105 Pdf
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://slidetodoc.com/presentation_image/4206d685957dd8ac6e2c8231f24c8e0b/image-4.jpg" data-lightbox="roadtrip" data-title="Gaussjordan Void Sweepdouble Pa Double Pt Int N">
+						<img class="card-img" src="https://slidetodoc.com/presentation_image/4206d685957dd8ac6e2c8231f24c8e0b/image-4.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmy0C7ZnYiALeT2u6Rp1YxCzmApf4_3aVU9w';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Gaussjordan Void Sweepdouble Pa Double Pt Int N
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://i0.wp.com/www.pianshen.com/images/350/18f00f9e54d0a0e137009c4d305b1cf6.png" data-lightbox="roadtrip" data-title="14ipy7pve Nfxm">
+						<img class="card-img" src="https://i0.wp.com/www.pianshen.com/images/350/18f00f9e54d0a0e137009c4d305b1cf6.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDcQ3DAAL6dxVndxG5koginRdB89C2QQZasw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				14ipy7pve Nfxm
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://patentimages.storage.googleapis.com/68/28/66/e4b98f35fe4031/JPOXMLDOC01-appb-M000001.png" data-lightbox="roadtrip" data-title="Wo2011024840a1 Method For Thermal Displacement Correction In Machine Tool And Thermal Displacement Correction Device Google Patents">
+						<img class="card-img" src="https://patentimages.storage.googleapis.com/68/28/66/e4b98f35fe4031/JPOXMLDOC01-appb-M000001.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPnF9IyV6sDuNVQY_B4BqBtrKPOMTRgcmUkw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Wo2011024840a1 Method For Thermal Displacement Correction In Machine Tool And Thermal Displacement Correction Device Google Patents
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://patentimages.storage.googleapis.com/63/ee/ed/8b770c6ab9ea74/JPOXMLDOC01-appb-M000004.png" data-lightbox="roadtrip" data-title="Wo2011024840a1 Method For Thermal Displacement Correction In Machine Tool And Thermal Displacement Correction Device Google Patents">
+						<img class="card-img" src="https://patentimages.storage.googleapis.com/63/ee/ed/8b770c6ab9ea74/JPOXMLDOC01-appb-M000004.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOLtK3C5UsxM1YP2hax0-pf-Tq8qCHjTyVSA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Wo2011024840a1 Method For Thermal Displacement Correction In Machine Tool And Thermal Displacement Correction Device Google Patents
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="f6TaKIjeG9E3gM" data-lightbox="roadtrip" data-title="Https Www Tunghua Com Tw Manager Admin Upload File 738 1599124738105 Pdf">
+						<img class="card-img" src="f6TaKIjeG9E3gM" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoIM9ICmfxjICpCQaWaXaUf_6r1btiHkjyMg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Https Www Tunghua Com Tw Manager Admin Upload File 738 1599124738105 Pdf
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://slidetodoc.com/presentation_image/4206d685957dd8ac6e2c8231f24c8e0b/image-13.jpg" data-lightbox="roadtrip" data-title="Gaussjordan Void Sweepdouble Pa Double Pt Int N">
+						<img class="card-img" src="https://slidetodoc.com/presentation_image/4206d685957dd8ac6e2c8231f24c8e0b/image-13.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVNGadkWFsel59EQE-y5nQWroHqlJhllWN6Q';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Gaussjordan Void Sweepdouble Pa Double Pt Int N
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://slidetodoc.com/presentation_image/4206d685957dd8ac6e2c8231f24c8e0b/image-11.jpg" data-lightbox="roadtrip" data-title="Gaussjordan Void Sweepdouble Pa Double Pt Int N">
+						<img class="card-img" src="https://slidetodoc.com/presentation_image/4206d685957dd8ac6e2c8231f24c8e0b/image-11.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEQCtefQTR4KbV_NN_U2OpDPuyOBThFDT-ZQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Gaussjordan Void Sweepdouble Pa Double Pt Int N
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://slidetodoc.com/presentation_image/4206d685957dd8ac6e2c8231f24c8e0b/image-16.jpg" data-lightbox="roadtrip" data-title="Gaussjordan Void Sweepdouble Pa Double Pt Int N">
+						<img class="card-img" src="https://slidetodoc.com/presentation_image/4206d685957dd8ac6e2c8231f24c8e0b/image-16.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQ-sdDyHuURCURQSyCBGAzdOXKEan1aRWc6g';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Gaussjordan Void Sweepdouble Pa Double Pt Int N
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://slidetodoc.com/presentation_image/4206d685957dd8ac6e2c8231f24c8e0b/image-9.jpg" data-lightbox="roadtrip" data-title="Gaussjordan Void Sweepdouble Pa Double Pt Int N">
+						<img class="card-img" src="https://slidetodoc.com/presentation_image/4206d685957dd8ac6e2c8231f24c8e0b/image-9.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSTHh2s4XYf1-t9r_WSwOWh-Q7jgX13NV6Qw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Gaussjordan Void Sweepdouble Pa Double Pt Int N
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="f6TaKIjeG9E3gM" data-lightbox="roadtrip" data-title="Https Www Tunghua Com Tw Manager Admin Upload File 738 1599124738105 Pdf">
+						<img class="card-img" src="f6TaKIjeG9E3gM" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmAjMGr4nXYst6SbW71mfyVR0I0v33z1C_Wg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Https Www Tunghua Com Tw Manager Admin Upload File 738 1599124738105 Pdf
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://upload.wikimedia.org/wikipedia/commons/6/60/Equivalient_thermal_circuit_2.png" data-lightbox="roadtrip" data-title="熱阻 维基百科 自由的百科全书">
+						<img class="card-img" src="https://upload.wikimedia.org/wikipedia/commons/6/60/Equivalient_thermal_circuit_2.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6c4uX7zjYWepjDnyVA-ttXA68fQlD7ZjIGA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				熱阻 维基百科 自由的百科全书
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic3.zhimg.com/80/v2-2dccad64609cb6c53618fa74d7c219aa_1440w.jpg" data-lightbox="roadtrip" data-title="理解牛顿法 知乎">
+						<img class="card-img" src="https://pic3.zhimg.com/80/v2-2dccad64609cb6c53618fa74d7c219aa_1440w.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTR774P5MuSteeTM_MTvnwvn0vaqJOuxLiBXg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				理解牛顿法 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Finite_Differences.svg/220px-Finite_Differences.svg.png" data-lightbox="roadtrip" data-title="有限差分法 维基百科 自由的百科全书">
+						<img class="card-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Finite_Differences.svg/220px-Finite_Differences.svg.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMlBh3aOwWFzH8-DzFBiiq0qQcJoZcukzpMg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				有限差分法 维基百科 自由的百科全书
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+		
+	</div>
+
+		 
+		
+		
+				</div>
+				<div class="col-sm-12 widget">
+					<div class="d-block p-4">
+	<center>
+		<!-- BOTTOM BANNER ADS -->
+<script async="async" data-cfasync="false" src="//jc32arlvqpv8.com/eb47a424ae325c90cca32780149785c3/invoke.js"></script>
+<div id="container-eb47a424ae325c90cca32780149785c3"></div>
+
+	</center>
+</div>				</div>
+			</div>
+			<div class="row footer">
+				<div class="col-md-12 text-center py-4">
+										<a href="/p/dmca.html">Dmca</a>
+										<a href="/p/contact.html">Contact</a>
+										<a href="/p/privacy-policy.html">Privacy Policy</a>
+										<a href="/p/copyright.html">Copyright</a>
+					
+				</div>
+			</div>
+		</main>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js" integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js" integrity="sha256-CtKylYan+AJuoH8jrMht1+1PMhMqrKnB8K5g012WN5I=" crossorigin="anonymous"></script>
+		
+		<!-- Footer CSS JS -->
+		
+		
+		
+			<script type='text/javascript' src='//jc32arlvqpv8.com/ef/d5/10/efd510237a3143727bed46803ec35b8d.js'></script>
+</body>
+</html>

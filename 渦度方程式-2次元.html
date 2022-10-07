@@ -1,0 +1,682 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha256-L/W5Wfqfa0sdBNIKN9cG6QA5F2qx4qICmU2VgLruv9Y=" crossorigin="anonymous" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/css/lightbox.min.css" integrity="sha256-tBxlolRHP9uMsEFKVk+hk//ekOlXOixLKvye5W2WR5c=" crossorigin="anonymous" />
+		<link href="https://fonts.googleapis.com/css?family=Mr+Dafoe" rel="stylesheet" type="text/css">
+
+		<style type="text/css">
+			html,body{font-family:"Open Sans",Arial,sans-serif;font-size:14px;font-weight:400;background:#f3f3f3 url(https://i.ytimg.com/vi/VAvdNNxaBPI/maxresdefault.jpg
+) no-repeat center center fixed;background-size:cover;height:100%}#title{font-family:"Mr Dafoe",Times,serif;font-size:34px;background:rgba(255,255,255,.8);margin-bottom:34px}.header{padding-bottom:13px;margin-bottom:13px;border-bottom:1px solid #eee}a{color:#26ADE4;text-decoration:none}#title a{color:#333;margin-left:21px}#title a:hover{text-decoration:none;color:#26ADE4}.sidebar ul{margin:0;padding:0}.sidebar ul li{list-style:none}.footer{margin-top:21px;padding-top:13px;border-top:1px solid #eee}.footer a{margin:0 15px}.navi{margin:13px 0 13px 0;padding:13px}.navi a{margin:5px 2px;font-size:95%}.main{margin-top: 6rem;}.form-inline .form-control{min-width: 300px;}.v-cover{height: 380px; object-fit: cover;}.v-image{height: 200px; object-fit: cover;}.dwn-cover{max-height: 460px; object-fit: cover;}.main{margin-top: 6rem;}.form-inline .form-control{min-width: 300px;}			
+		</style>
+
+		<title>渦度方程式 2次元</title>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/", 
+  "@type": "Article", 
+  "author": {
+    "@type": "Person",
+    "name": "James"
+  },
+  "headline": "渦度方程式 2次元",
+  "datePublished": "2021-04-24",
+  "image": [https://image.slidesharecdn.com/derivationofvorticityequation-151118105917-lva1-app6891/95/-2-638.jpg?cb=1455207992,W7YeMIC5Mh72IM,http://fnorio.com/0143Rossby_wave/fig1-2-1-02.GIF],
+  "publisher": {
+    "@type": "Organization",
+    "name": "Tukang Parkir Gerobak",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://via.placeholder.com/512.png?text=渦度方程式 2次元",
+      "width": 512,
+      "height": 512
+    }
+  }
+}
+</script>
+		<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-957NGNKQ70"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-957NGNKQ70');
+</script>
+
+<script type='text/javascript' src='//jc32arlvqpv8.com/1a/82/2e/1a822ef8a40a0fbab3c4ea12a5d2bb02.js'></script>
+</head>
+	<body>
+		<header class="bg-white fixed-top">			
+			<nav class="navbar navbar-light bg-white mb-0">
+				<div class="container justify-content-center justify-content-sm-between">	
+				  <a href="/" title="Blog" class="navbar-brand mb-1">Blog</a>
+				  				</div>			  
+			</nav>				
+		</header>
+		<main class="main container bg-white">
+			<div class="col-md-12 my-4" align="center">
+				<div class="d-block p-4">
+	<br/><center>
+<!-- TOP BANNER ADS -->
+</center><br/>
+</div>			</div>
+			<div class="row header">
+				<div class="col-sm-12 text-center p-2">
+						<h1>渦度方程式 2次元</h1>
+
+	
+	<div class="navi text-center">
+										<a class="badge badge-info" href="/%E6%A5%B5%E6%96%B9%E7%A8%8B%E5%BC%8F-%E3%81%A9%E3%81%93%E3%81%BE%E3%81%A7.html">極方程式 どこまで</a>
+											<a class="badge badge-success" href="/%E9%AB%98%E6%AC%A1%E6%96%B9%E7%A8%8B%E5%BC%8F-%E4%B8%80%E8%88%AC%E8%A7%A3-%E6%B1%82%E3%81%BE%E3%82%89%E3%81%AA%E3%81%84.html">高次方程式 一般解 求まらない</a>
+											<a class="badge badge-primary" href="/%E8%A8%88%E7%AE%97%E5%BC%8F-%E6%96%B9%E7%A8%8B%E5%BC%8F-%E5%B9%BE%E3%81%A4%E8%B2%B7%E3%81%A3%E3%81%9F%E3%81%8B.html">計算式 方程式 幾つ買ったか</a>
+											<a class="badge badge-danger" href="/%E9%AC%BC%E5%A4%AA%E9%83%8E-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93-%E6%9C%AC%E5%BD%93%E3%81%AE%E5%A7%BF.html">鬼太郎 お父さん 本当の姿</a>
+											<a class="badge badge-secondary" href="/%E8%A5%BF%E5%8D%83%E8%91%89-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%AE%E5%8F%B0%E6%89%80.html">西千葉 お父さんの台所</a>
+											<a class="badge badge-secondary" href="/%E9%BB%92%E9%89%9B-%E6%98%87%E8%8F%AF-%E7%86%B1%E5%8C%96%E5%AD%A6%E6%96%B9%E7%A8%8B%E5%BC%8F.html">黒鉛 昇華 熱化学方程式</a>
+											<a class="badge badge-danger" href="/%E6%B5%B7%E6%B4%8B%E5%A0%82-%E7%8E%8B%E7%AB%8B%E7%A7%91%E5%AD%A6%E5%8D%9A%E7%89%A9%E9%A4%A8-%E5%AE%87%E5%AE%99%E3%81%AE%E6%96%B9%E7%A8%8B%E5%BC%8F.html">海洋堂 王立科学博物館 宇宙の方程式</a>
+											<a class="badge badge-info" href="/%E6%B5%81%E4%BD%93%E5%8A%9B%E5%AD%A6-%E4%BF%9D%E5%AD%98%E5%BD%A2-%E6%96%B9%E7%A8%8B%E5%BC%8F-%E9%9D%9E%E4%BF%9D%E5%AD%98%E5%9E%8B.html">流体力学 保存形 方程式 非保存型</a>
+											<a class="badge badge-warning" href="/%E8%A8%98%E6%86%B6%E8%A1%93-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%AE%E3%81%8A%E3%81%A3%E3%81%B1%E3%81%84.html">記憶術 お父さんのおっぱい</a>
+											<a class="badge badge-info" href="/%E7%B4%A0%E4%BA%BA%E3%81%8A%E5%AC%A2%E3%81%95%E3%82%93-%E3%83%A9%E3%83%83%E3%83%971%E6%9E%9A%E9%9A%94%E3%81%A6%E3%81%A6%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%A8%E7%B4%A0%E8%82%A1%E4%BD%93%E9%A8%93%E3%81%97%E3%81%A6%E7%99%BA%E5%B0%84%E3%81%A7%E3%81%8D%E3%81%9F%E3%82%89%E8%B3%9E%E9%87%91get.html">素人お嬢さん ラップ1枚隔ててお父さんと素股体験して発射できたら賞金get</a>
+											<a class="badge badge-primary" href="/%E6%B0%B4%E9%85%B8%E5%8C%96%E3%83%8A%E3%83%88%E3%83%AA%E3%82%A6%E3%83%A0-%E6%BA%B6%E8%A7%A3%E7%86%B1-%E7%86%B1%E5%8C%96%E5%AD%A6%E6%96%B9%E7%A8%8B%E5%BC%8F.html">水酸化ナトリウム 溶解熱 熱化学方程式</a>
+											<a class="badge badge-success" href="/%E9%BB%92%E3%82%AE%E3%83%A3%E3%83%AB%E6%97%A6%E9%82%A3%E3%81%AE%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%82%A8%E3%83%AD%E5%8B%95%E7%94%BB.html">黒ギャル旦那のお父さんエロ動画</a>
+											<a class="badge badge-danger" href="/%E9%96%93%E5%8F%96%E3%82%8A%E3%81%AE%E6%96%B9%E7%A8%8B%E5%BC%8F-%E6%84%9F%E6%83%B3.html">間取りの方程式 感想</a>
+											<a class="badge badge-danger" href="/%E6%B7%AB%E3%81%AE%E6%96%B9%E7%A8%8B%E5%BC%8F-%E7%AC%AC%E4%B8%80%E8%A9%B1-%E5%A4%9C%E3%81%AE%E7%8D%A3-%E7%84%A1%E6%96%99%E5%8B%95%E7%94%BB.html">淫の方程式 第一話 夜の獣 無料動画</a>
+											<a class="badge badge-danger" href="/%E7%99%BA%E7%A6%81%E7%89%88-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%8C%E6%9C%AC%E6%B0%97%E3%82%92%E5%87%BA%E3%81%97%E3%81%A1%E3%82%83%E3%81%A3%E3%81%9F.html">発禁版 お父さんが本気を出しちゃった</a>
+						</div>
+<center>
+	<!-- MIDDLE BANNER ADS -->
+<script type="text/javascript">
+	atOptions = {
+		'key' : '2b77887421e2587a1a1b1d7c8a31a9e0',
+		'format' : 'iframe',
+		'height' : 250,
+		'width' : 300,
+		'params' : {}
+	};
+	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://jc32arlvqpv8.com/2b77887421e2587a1a1b1d7c8a31a9e0/invoke.js"></scr' + 'ipt>');
+</script>
+		
+	</center>
+					
+				</div>
+			</div>
+			<div class="row content mb-4">
+				<div class="col-md-12">					
+					
+	
+	<div class="card-columns">
+						
+	  <div class='card'>
+	  	<a href="https://slidesplayer.net/slide/14892837/91/images/5/%E9%A0%86%E5%9C%A7%E9%9D%9E%E7%99%BA%E6%95%A3%E6%B5%81+%E7%B5%B6%E5%AF%BE%E6%B8%A6%E5%BA%A6%E3%81%AE%E4%BF%9D%E5%AD%98+%E9%9D%9E%E7%99%BA%E6%95%A3%EF%BC%88%E4%B8%8A%E6%98%87%E6%B5%81%E3%81%AA%E3%81%97%EF%BC%89%E3%83%BB%E9%A0%86%E5%9C%A7%EF%BC%88%E9%A2%A8%E3%81%AF%E9%AB%98%E5%BA%A6%E3%81%AB%E3%82%88%E3%82%89%E3%81%AA%E3%81%84%EF%BC%89%E3%81%AF2%E6%AC%A1%E5%85%83%E6%B5%81%E3%80%82+%EF%BC%95%EF%BC%90%EF%BC%90%EF%BD%88Pa%E3%81%8F%E3%82%89%E3%81%84%E3%81%A7%E3%82%88%E3%81%84%E8%BF%91%E4%BC%BC%E3%80%82.jpg" data-lightbox="roadtrip" data-title="ロスビー波 Rossby Wave 渦度 Vorticity 順圧非発散流 絶対渦度の保存 ポテンシャル渦度 渦位 Ppt Download">
+						<img class="card-img" src="https://slidesplayer.net/slide/14892837/91/images/5/%E9%A0%86%E5%9C%A7%E9%9D%9E%E7%99%BA%E6%95%A3%E6%B5%81+%E7%B5%B6%E5%AF%BE%E6%B8%A6%E5%BA%A6%E3%81%AE%E4%BF%9D%E5%AD%98+%E9%9D%9E%E7%99%BA%E6%95%A3%EF%BC%88%E4%B8%8A%E6%98%87%E6%B5%81%E3%81%AA%E3%81%97%EF%BC%89%E3%83%BB%E9%A0%86%E5%9C%A7%EF%BC%88%E9%A2%A8%E3%81%AF%E9%AB%98%E5%BA%A6%E3%81%AB%E3%82%88%E3%82%89%E3%81%AA%E3%81%84%EF%BC%89%E3%81%AF2%E6%AC%A1%E5%85%83%E6%B5%81%E3%80%82+%EF%BC%95%EF%BC%90%EF%BC%90%EF%BD%88Pa%E3%81%8F%E3%82%89%E3%81%84%E3%81%A7%E3%82%88%E3%81%84%E8%BF%91%E4%BC%BC%E3%80%82.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0D8OB4v1Z-XeuAfRPsUCcN8f6G00qkHRlmH5-w3MxqxRXJotMpDsbfFp2Y23SoJmxppw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				ロスビー波 Rossby Wave 渦度 Vorticity 順圧非発散流 絶対渦度の保存 ポテンシャル渦度 渦位 Ppt Download
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://fnorio.com/0107fluid_dynamics_in_two_dimensions1/fig3-3-1-01.GIF" data-lightbox="roadtrip" data-title="二次元 非圧縮性 完全流体の力学 ラグランジュの渦定理とは何か">
+						<img class="card-img" src="http://fnorio.com/0107fluid_dynamics_in_two_dimensions1/fig3-3-1-01.GIF" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwyHibTJx8V__Mrv0--K-mz_N2V4HvCp3VmFqUe0F1jGrvdQkKHxM0Ycb16K_pA6UDGO4';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				二次元 非圧縮性 完全流体の力学 ラグランジュの渦定理とは何か
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://image.slidesharecdn.com/advancedgpgpu11-160307061027/95/2015gpgpu11cpu-8-638.jpg?cb=1457495391" data-lightbox="roadtrip" data-title="2015年度先端gpgpuシミュレーション工学特論 第11回 数値流体力学への応用 支配方程式 Cpuプログラム">
+						<img class="card-img" src="https://image.slidesharecdn.com/advancedgpgpu11-160307061027/95/2015gpgpu11cpu-8-638.jpg?cb=1457495391" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQl2ZvhLO5CN0J1DtrutTWaOWip29ajEF9m9UeSL6XOdJtTvKaMLOYzsALFS9WDIeM6C1g';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				2015年度先端gpgpuシミュレーション工学特論 第11回 数値流体力学への応用 支配方程式 Cpuプログラム
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://fnorio.com/0107fluid_dynamics_in_two_dimensions1/fig1-1-2-02.GIF" data-lightbox="roadtrip" data-title="二次元 非圧縮性 完全流体の力学 ラグランジュの渦定理とは何か">
+						<img class="card-img" src="http://fnorio.com/0107fluid_dynamics_in_two_dimensions1/fig1-1-2-02.GIF" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTRf6bNChQ2C-eXHzarPCNhhY4rwxVIXLRP2PRmSvM1UDDDodY4RFAAhxL0zjGoxG7Eow';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				二次元 非圧縮性 完全流体の力学 ラグランジュの渦定理とは何か
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://image.slidesharecdn.com/derivationofvorticityequation-151118105917-lva1-app6891/95/-2-638.jpg?cb=1455207992" data-lightbox="roadtrip" data-title="渦度方程式推導">
+						<img class="card-img" src="https://image.slidesharecdn.com/derivationofvorticityequation-151118105917-lva1-app6891/95/-2-638.jpg?cb=1455207992" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_VOJqR2om3YkmG7gDmy37ULXtAiHZpdRII6cb0zQfBBuMxC7k02A4kiQUQDMEMOmWpHY';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				渦度方程式推導
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://i.ytimg.com/vi/VAvdNNxaBPI/maxresdefault.jpg" data-lightbox="roadtrip" data-title="Ch 4 2 渦度 Youtube">
+						<img class="card-img" src="https://i.ytimg.com/vi/VAvdNNxaBPI/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdOyfVNT9WAfgck3h7kkrPzFJ12l-rjRo--LKWWYFSji4TyWB-tfaqlb2Aru-4GB3gsnI';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Ch 4 2 渦度 Youtube
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+				<div class='card'>	
+			<div class="d-block p-4">
+	</div>		  	
+		  	<h3 class="h6 p-2"><b></b></h3>
+					</div>
+		
+						
+	  <div class='card'>
+	  	<a href="https://cdn-ak.f.st-hatena.com/images/fotolife/m/meteorolo/20181124/20181124210020.png" data-lightbox="roadtrip" data-title="大気の力学 風を表す物理量 気象ゼミごっこ">
+						<img class="card-img" src="https://cdn-ak.f.st-hatena.com/images/fotolife/m/meteorolo/20181124/20181124210020.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR70S7bxD1e2i0prklfYQKlb5Eb_3UIRB8HOxhYYm8TpdrTEhTnphG1vY8f3M4mGWwLwqc';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				大気の力学 風を表す物理量 気象ゼミごっこ
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://i.ytimg.com/vi/kEO5R_bj5kc/hqdefault.jpg" data-lightbox="roadtrip" data-title="Ch 4 4 3渦度方程的應用 Youtube">
+						<img class="card-img" src="https://i.ytimg.com/vi/kEO5R_bj5kc/hqdefault.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaUR2pk-bIsBMZS64ferrdUg4AXkM55dhihOD9SWauv7LPrMHkZm2IaeRinzOkwSYred0';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Ch 4 4 3渦度方程的應用 Youtube
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://image.slidesharecdn.com/advancedgpgpu11-160307061027/95/2015gpgpu11cpu-7-638.jpg?cb=1457495391" data-lightbox="roadtrip" data-title="2015年度先端gpgpuシミュレーション工学特論 第11回 数値流体力学への応用 支配方程式 Cpuプログラム">
+						<img class="card-img" src="https://image.slidesharecdn.com/advancedgpgpu11-160307061027/95/2015gpgpu11cpu-7-638.jpg?cb=1457495391" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQenB48lhC7E27i5Kwl5QfSMb7ElRKILyX5NfmYXUORXHReS17-3Zr1u7mCB_UryoH9mAM';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				2015年度先端gpgpuシミュレーション工学特論 第11回 数値流体力学への応用 支配方程式 Cpuプログラム
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://fnorio.com/0143Rossby_wave/fig1-2-2-02.GIF" data-lightbox="roadtrip" data-title="慣性重力波 1926年 とロスビー波 1939年 そして赤道波 1966年">
+						<img class="card-img" src="http://fnorio.com/0143Rossby_wave/fig1-2-2-02.GIF" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNpGyI_fApqSoT_Ddi0-68q86s1SYNff7Xz02DTvPjlaY-DsvhPh_0i3DTKnk50fTI_0w';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				慣性重力波 1926年 とロスビー波 1939年 そして赤道波 1966年
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://fnorio.com/0107fluid_dynamics_in_two_dimensions1/fig1-2-1-02.GIF" data-lightbox="roadtrip" data-title="二次元 非圧縮性 完全流体の力学 ラグランジュの渦定理とは何か">
+						<img class="card-img" src="http://fnorio.com/0107fluid_dynamics_in_two_dimensions1/fig1-2-1-02.GIF" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRa8UNSBEnll9MTvYwVkdT09ZpLtHiEbBA3Flr0-2kNVLmlNEdScTosWaxSrcZ0RjDIGw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				二次元 非圧縮性 完全流体の力学 ラグランジュの渦定理とは何か
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://image.slidesharecdn.com/0820-150824014134-lva1-app6891/95/chainer-26-638.jpg?cb=1440392672" data-lightbox="roadtrip" data-title="Chainerで流体計算">
+						<img class="card-img" src="https://image.slidesharecdn.com/0820-150824014134-lva1-app6891/95/chainer-26-638.jpg?cb=1440392672" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwc4dMGQfOP5DkdOG-eT7Bc9q0-1waVSDsMr9Rwcu_EDg5UkTH2103qayHvxdSrS9UF98';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Chainerで流体計算
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://fnorio.com/0107fluid_dynamics_in_two_dimensions1/fig1-4-2-02.GIF" data-lightbox="roadtrip" data-title="二次元 非圧縮性 完全流体の力学 ラグランジュの渦定理とは何か">
+						<img class="card-img" src="http://fnorio.com/0107fluid_dynamics_in_two_dimensions1/fig1-4-2-02.GIF" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBXHg8KgvDZ9sejPtt07-lqQgrvc4gXpCmezxbKBTPqBHHLnIlUKY2HU3c70wIewkLr9I';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				二次元 非圧縮性 完全流体の力学 ラグランジュの渦定理とは何か
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://i.ytimg.com/vi/cbedOpKT-oE/maxresdefault.jpg" data-lightbox="roadtrip" data-title="Ch 4 4 1 垂直座標中的渦度方程 Youtube">
+						<img class="card-img" src="https://i.ytimg.com/vi/cbedOpKT-oE/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRn0AEdWrFiLiLdXsPGnD_rB1wG1M3SvSaG86kf6iuZ6cI32BaolGG27d_q4r8xkPo0bzs';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Ch 4 4 1 垂直座標中的渦度方程 Youtube
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://slidesplayer.net/slide/11513025/62/images/3/%E6%B8%A6%E4%BD%8D%E6%96%B9%E7%A8%8B%E5%BC%8F%EF%BC%88%E5%9C%B0%E7%90%83%E6%B5%81%E4%BD%93%E3%81%AE%E8%A7%92%E9%81%8B%E5%8B%95%E9%87%8F%E4%BF%9D%E5%AD%98%E3%81%AE%E5%B0%8E%E5%87%BA%EF%BC%89.jpg" data-lightbox="roadtrip" data-title="渦位 Potential Vorticity と角運動量の保存 Ppt Download">
+						<img class="card-img" src="https://slidesplayer.net/slide/11513025/62/images/3/%E6%B8%A6%E4%BD%8D%E6%96%B9%E7%A8%8B%E5%BC%8F%EF%BC%88%E5%9C%B0%E7%90%83%E6%B5%81%E4%BD%93%E3%81%AE%E8%A7%92%E9%81%8B%E5%8B%95%E9%87%8F%E4%BF%9D%E5%AD%98%E3%81%AE%E5%B0%8E%E5%87%BA%EF%BC%89.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeDg0QZTEHlsVX5MEX8zUOu45TAsVUGlHzVpYvpytpjtwcUlIGfu2YnXIJ8W_cPp-odMg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				渦位 Potential Vorticity と角運動量の保存 Ppt Download
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="8zEZlHZ2ohA_wM" data-lightbox="roadtrip" data-title="Http Www Cs T Kougei Ac Jp Nsim Study Flow Flow4p Pdf">
+						<img class="card-img" src="8zEZlHZ2ohA_wM" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUp6WCYEhgKqYW4N6-swdVZm76FsfBRDgjVyfPu5su_nWzrQDObKoK8JR1ziHvYEXgwvI';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Http Www Cs T Kougei Ac Jp Nsim Study Flow Flow4p Pdf
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F433363%2Fc8a2d827-71a5-8985-a0cf-c3d436d3c96c.jpeg?ixlib=rb-1.2.2&amp;auto=format&amp;gif-q=60&amp;q=75&amp;s=a2cea90cb9f35d73b4d0015d6e50030c" data-lightbox="roadtrip" data-title="趣味でスペクトル法 003 2次元周期流 Qiita">
+						<img class="card-img" src="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F433363%2Fc8a2d827-71a5-8985-a0cf-c3d436d3c96c.jpeg?ixlib=rb-1.2.2&amp;auto=format&amp;gif-q=60&amp;q=75&amp;s=a2cea90cb9f35d73b4d0015d6e50030c" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9Av6EC5zK1FeGj1VixPsyFUo9jHBilAjmCjNpcCPqMumasZZeyfdLjZi8BbS50rPSO4Q';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				趣味でスペクトル法 003 2次元周期流 Qiita
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://wkbjcloudbos.bdimg.com/v1/docconvert1265/wk/dc5ddd2ae4a0e24ef742153ad7593e9f/0.jpg?responseContentType=image%2Fjpeg&amp;responseCacheControl=max-age%3D10&amp;responseExpires=Mon%2C%2015%20Mar%202021%2016%3A28%3A07%20%2B0800&amp;authorization=bce-auth-v1%2Ffa1126e91489401fa7cc85045ce7179e%2F2021-03-15T08%3A27%3A57Z%2F-1%2Fhost%2Fb566dda310b5cb49730ec992378d8e903f7e0062a8e977e8bb3437de0c548ebb&amp;x-bce-range=0-148431&amp;token=eyJ0eXAiOiJKSVQiLCJ2ZXIiOiIxLjAiLCJhbGciOiJIUzI1NiIsImV4cCI6MTkyNjgzNjg3NywidXJpIjp0cnVlLCJwYXJhbXMiOlsicmVzcG9uc2VDb250ZW50VHlwZSIsInJlc3BvbnNlQ2FjaGVDb250cm9sIiwicmVzcG9uc2VFeHBpcmVzIiwieC1iY2UtcmFuZ2UiXX0%3D.om%2FQCQBTy1tyfe7heL%2FxtShshSW6pmPjqdQfPwjbR8M%3D.1926836877" data-lightbox="roadtrip" data-title="第三章2涡度和涡度方程汇总 图文 百度文库">
+						<img class="card-img" src="http://wkbjcloudbos.bdimg.com/v1/docconvert1265/wk/dc5ddd2ae4a0e24ef742153ad7593e9f/0.jpg?responseContentType=image%2Fjpeg&amp;responseCacheControl=max-age%3D10&amp;responseExpires=Mon%2C%2015%20Mar%202021%2016%3A28%3A07%20%2B0800&amp;authorization=bce-auth-v1%2Ffa1126e91489401fa7cc85045ce7179e%2F2021-03-15T08%3A27%3A57Z%2F-1%2Fhost%2Fb566dda310b5cb49730ec992378d8e903f7e0062a8e977e8bb3437de0c548ebb&amp;x-bce-range=0-148431&amp;token=eyJ0eXAiOiJKSVQiLCJ2ZXIiOiIxLjAiLCJhbGciOiJIUzI1NiIsImV4cCI6MTkyNjgzNjg3NywidXJpIjp0cnVlLCJwYXJhbXMiOlsicmVzcG9uc2VDb250ZW50VHlwZSIsInJlc3BvbnNlQ2FjaGVDb250cm9sIiwicmVzcG9uc2VFeHBpcmVzIiwieC1iY2UtcmFuZ2UiXX0%3D.om%2FQCQBTy1tyfe7heL%2FxtShshSW6pmPjqdQfPwjbR8M%3D.1926836877" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwVsplNPocqwBz4D3-ujVtrTrh54ImpRzKUyUIf5oj4sp_UerBgnvJJUcL805bOSCDmcI';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				第三章2涡度和涡度方程汇总 图文 百度文库
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://fnorio.com/0107fluid_dynamics_in_two_dimensions1/fig3-3-2-04.GIF" data-lightbox="roadtrip" data-title="二次元 非圧縮性 完全流体の力学 ラグランジュの渦定理とは何か">
+						<img class="card-img" src="http://fnorio.com/0107fluid_dynamics_in_two_dimensions1/fig3-3-2-04.GIF" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-svLsp83XgMwGYMHW8C-aXG54cjrMW6O3GYcYZEBZhI3MxI2pcxjb8jXSrPuqN1-rLlA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				二次元 非圧縮性 完全流体の力学 ラグランジュの渦定理とは何か
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="wDDKjXBDS74wQM" data-lightbox="roadtrip" data-title="Http Ris Geo Jp Pdf Publication 311 Tanpo Yoshizaki Pdf">
+						<img class="card-img" src="wDDKjXBDS74wQM" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyD1cXH6QUsrgaqxk7uM-ozbB7krkqTm6p8BBcs6Xi35xGuqZvwVk9Kl6pV6kg3XeTn8w';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Http Ris Geo Jp Pdf Publication 311 Tanpo Yoshizaki Pdf
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://wikimedia.org/api/rest_v1/media/math/render/svg/4739d24a8f3f0762b757ac66187089cce975cd00" data-lightbox="roadtrip" data-title="渦度 Wikipedia">
+						<img class="card-img" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/4739d24a8f3f0762b757ac66187089cce975cd00" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQV2OlOEwjyP4yaAfGujtudUIYZVddigee4w';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				渦度 Wikipedia
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="RyxlSD6zSM1VGM" data-lightbox="roadtrip" data-title="Http Dogra Csis Oita U Ac Jp Tkm Lecture Sim2010 Pdf Streamfunction Pdf">
+						<img class="card-img" src="RyxlSD6zSM1VGM" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTu6n5gb7O-oUeioSBKFbDUhYLyREtLnQeWAA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Http Dogra Csis Oita U Ac Jp Tkm Lecture Sim2010 Pdf Streamfunction Pdf
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.gfd-dennou.org/arch/gfdsemi/1999-08-23/ishioka/mgp00012.gif" data-lightbox="roadtrip" data-title="Magicpoint Presentation Foils">
+						<img class="card-img" src="https://www.gfd-dennou.org/arch/gfdsemi/1999-08-23/ishioka/mgp00012.gif" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuJ66K4L8HLJRtEJtu8VbeE3g5AV5I4JATnw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Magicpoint Presentation Foils
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://patentimages.storage.googleapis.com/2e/22/f9/3879c8b60a4ec2/JPOXMLDOC01-appb-M000003.png" data-lightbox="roadtrip" data-title="Wo2012073863a1 Ultrasound Image Capture Device Ultrasound Image Capture Method Ultrasound Image Capture Program Google Patents">
+						<img class="card-img" src="https://patentimages.storage.googleapis.com/2e/22/f9/3879c8b60a4ec2/JPOXMLDOC01-appb-M000003.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZ1fnmSXrLqn1i916O62Whr7apxSY_Bn0uMA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Wo2012073863a1 Ultrasound Image Capture Device Ultrasound Image Capture Method Ultrasound Image Capture Program Google Patents
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://blog-imgs-31-origin.fc2.com/j/i/k/jikosoftcom/image005_20111209201620.png" data-lightbox="roadtrip" data-title="渦度輸送方程式の導出 Cae技術情報局">
+						<img class="card-img" src="https://blog-imgs-31-origin.fc2.com/j/i/k/jikosoftcom/image005_20111209201620.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYZ8Atz3F5ziDMKVQdtvc-14f7PYrQaLJ4Pw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				渦度輸送方程式の導出 Cae技術情報局
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www2.nagare.or.jp/mm/2006/spmodel/ja/sec5.3_1.png" data-lightbox="roadtrip" data-title="5 3 2 次元チャネル領域でのブシネスク熱対流モデル">
+						<img class="card-img" src="https://www2.nagare.or.jp/mm/2006/spmodel/ja/sec5.3_1.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8qQGsw8Q5JVbfZkaFbT2DeLgWWJCWoOtPSg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				5 3 2 次元チャネル領域でのブシネスク熱対流モデル
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="W7YeMIC5Mh72IM" data-lightbox="roadtrip" data-title="2">
+						<img class="card-img" src="W7YeMIC5Mh72IM" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyXvKnYef6VZWzP-4s5pe91XiZHQvyji4KjQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				2
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://cdn.slidesharecdn.com/ss_thumbnails/derivationofvorticityequation-151118105917-lva1-app6891-thumbnail.jpg?cb=1455207992" data-lightbox="roadtrip" data-title="渦度方程式推導">
+						<img class="card-img" src="https://cdn.slidesharecdn.com/ss_thumbnails/derivationofvorticityequation-151118105917-lva1-app6891-thumbnail.jpg?cb=1455207992" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMoBB9_6AYIKr2sfNfIUVbFoFtajBPc1cJBA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				渦度方程式推導
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://nimg.ws.126.net/?url=http%3A%2F%2Fdingyue.ws.126.net%2F2020%2F1215%2Ff81312e4j00qld7yz000lc000u000bom.jpg&amp;thumbnail=650x2147483647&amp;quality=80&amp;type=jpg" data-lightbox="roadtrip" data-title="18个头部短视频动画 它们的广告金主都有谁 二次元 粉丝量 动漫 网易订阅">
+						<img class="card-img" src="https://nimg.ws.126.net/?url=http%3A%2F%2Fdingyue.ws.126.net%2F2020%2F1215%2Ff81312e4j00qld7yz000lc000u000bom.jpg&amp;thumbnail=650x2147483647&amp;quality=80&amp;type=jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTATsO85THBIAC8YYgCNcTsZff5BYJ0duZoXg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				18个头部短视频动画 它们的广告金主都有谁 二次元 粉丝量 动漫 网易订阅
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://fnorio.com/0143Rossby_wave/fig1-2-1-02.GIF" data-lightbox="roadtrip" data-title="慣性重力波 1926年 とロスビー波 1939年 そして赤道波 1966年">
+						<img class="card-img" src="http://fnorio.com/0143Rossby_wave/fig1-2-1-02.GIF" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlfE03EOIkcVXKtjusGL7nu59igztHeF5oSw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				慣性重力波 1926年 とロスビー波 1939年 そして赤道波 1966年
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://www.wanziw.com/uploads/allimg/191027/135HM0R_0.jpg" data-lightbox="roadtrip" data-title="二次元下载网站 Dlsite 公开动画cm 玩资网">
+						<img class="card-img" src="http://www.wanziw.com/uploads/allimg/191027/135HM0R_0.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsC8nnseV4x_ldrGfRsL_HAvccQR7PwWyayA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				二次元下载网站 Dlsite 公开动画cm 玩资网
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="oV_h3Pn9yUFxPM" data-lightbox="roadtrip" data-title="2">
+						<img class="card-img" src="oV_h3Pn9yUFxPM" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyV6B9ZjmhneSJXAe_nssZWTXOOyO0IdMUTQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				2
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://patentimages.storage.googleapis.com/eb/6a/46/1025b9f0f29220/JPOXMLDOC01-appb-M000005.png" data-lightbox="roadtrip" data-title="Wo2012073863a1 Ultrasound Image Capture Device Ultrasound Image Capture Method Ultrasound Image Capture Program Google Patents">
+						<img class="card-img" src="https://patentimages.storage.googleapis.com/eb/6a/46/1025b9f0f29220/JPOXMLDOC01-appb-M000005.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRd2MPKK_YXZUfCa4iQC0UKsbGgAJ6vR9O-yQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Wo2012073863a1 Ultrasound Image Capture Device Ultrasound Image Capture Method Ultrasound Image Capture Program Google Patents
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+		
+	</div>
+
+		 
+		
+		
+				</div>
+				<div class="col-sm-12 widget">
+					<div class="d-block p-4">
+	<center>
+		<!-- BOTTOM BANNER ADS -->
+<script async="async" data-cfasync="false" src="//jc32arlvqpv8.com/eb47a424ae325c90cca32780149785c3/invoke.js"></script>
+<div id="container-eb47a424ae325c90cca32780149785c3"></div>
+
+	</center>
+</div>				</div>
+			</div>
+			<div class="row footer">
+				<div class="col-md-12 text-center py-4">
+										<a href="/p/dmca.html">Dmca</a>
+										<a href="/p/contact.html">Contact</a>
+										<a href="/p/privacy-policy.html">Privacy Policy</a>
+										<a href="/p/copyright.html">Copyright</a>
+					
+				</div>
+			</div>
+		</main>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js" integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js" integrity="sha256-CtKylYan+AJuoH8jrMht1+1PMhMqrKnB8K5g012WN5I=" crossorigin="anonymous"></script>
+		
+		<!-- Footer CSS JS -->
+		
+		
+		
+			<script type='text/javascript' src='//jc32arlvqpv8.com/ef/d5/10/efd510237a3143727bed46803ec35b8d.js'></script>
+</body>
+</html>

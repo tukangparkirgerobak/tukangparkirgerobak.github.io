@@ -1,0 +1,682 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha256-L/W5Wfqfa0sdBNIKN9cG6QA5F2qx4qICmU2VgLruv9Y=" crossorigin="anonymous" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/css/lightbox.min.css" integrity="sha256-tBxlolRHP9uMsEFKVk+hk//ekOlXOixLKvye5W2WR5c=" crossorigin="anonymous" />
+		<link href="https://fonts.googleapis.com/css?family=Mr+Dafoe" rel="stylesheet" type="text/css">
+
+		<style type="text/css">
+			html,body{font-family:"Open Sans",Arial,sans-serif;font-size:14px;font-weight:400;background:#f3f3f3 url(https://reference.wolfram.com/language/ref/Files/DSolveValue.ja/O_17.png
+) no-repeat center center fixed;background-size:cover;height:100%}#title{font-family:"Mr Dafoe",Times,serif;font-size:34px;background:rgba(255,255,255,.8);margin-bottom:34px}.header{padding-bottom:13px;margin-bottom:13px;border-bottom:1px solid #eee}a{color:#26ADE4;text-decoration:none}#title a{color:#333;margin-left:21px}#title a:hover{text-decoration:none;color:#26ADE4}.sidebar ul{margin:0;padding:0}.sidebar ul li{list-style:none}.footer{margin-top:21px;padding-top:13px;border-top:1px solid #eee}.footer a{margin:0 15px}.navi{margin:13px 0 13px 0;padding:13px}.navi a{margin:5px 2px;font-size:95%}.main{margin-top: 6rem;}.form-inline .form-control{min-width: 300px;}.v-cover{height: 380px; object-fit: cover;}.v-image{height: 200px; object-fit: cover;}.dwn-cover{max-height: 460px; object-fit: cover;}.main{margin-top: 6rem;}.form-inline .form-control{min-width: 300px;}			
+		</style>
+
+		<title>離散 時間 代数 リカッチ 方程式</title>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/", 
+  "@type": "Article", 
+  "author": {
+    "@type": "Person",
+    "name": "James"
+  },
+  "headline": "離散 時間 代数 リカッチ 方程式",
+  "datePublished": "2021-04-24",
+  "image": [M5qKlxWGvQ0QhM,https://soblin.github.io/technote/_images/lqr_dp.png,https://jp.mathworks.com/help/control/getstart/regulator.png],
+  "publisher": {
+    "@type": "Organization",
+    "name": "Tukang Parkir Gerobak",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://via.placeholder.com/512.png?text=離散 時間 代数 リカッチ 方程式",
+      "width": 512,
+      "height": 512
+    }
+  }
+}
+</script>
+		<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-957NGNKQ70"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-957NGNKQ70');
+</script>
+
+<script type='text/javascript' src='//jc32arlvqpv8.com/1a/82/2e/1a822ef8a40a0fbab3c4ea12a5d2bb02.js'></script>
+</head>
+	<body>
+		<header class="bg-white fixed-top">			
+			<nav class="navbar navbar-light bg-white mb-0">
+				<div class="container justify-content-center justify-content-sm-between">	
+				  <a href="/" title="Blog" class="navbar-brand mb-1">Blog</a>
+				  				</div>			  
+			</nav>				
+		</header>
+		<main class="main container bg-white">
+			<div class="col-md-12 my-4" align="center">
+				<div class="d-block p-4">
+	<br/><center>
+<!-- TOP BANNER ADS -->
+</center><br/>
+</div>			</div>
+			<div class="row header">
+				<div class="col-sm-12 text-center p-2">
+						<h1>離散 時間 代数 リカッチ 方程式</h1>
+
+	
+	<div class="navi text-center">
+										<a class="badge badge-danger" href="/%E9%A0%AD-%E3%81%AE-%E7%88%BD%E3%82%84%E3%81%8B-%E3%81%AA-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93.html">頭 の 爽やか な お父さん</a>
+											<a class="badge badge-warning" href="/%E7%B1%A0%E6%B1%A0%E8%A2%AB%E5%91%8A%E5%A4%AB%E5%A9%A6-%E4%BF%9D%E9%87%88%E5%BE%8C%E4%BC%9A%E8%A6%8B%E3%81%A7-%E5%85%AC%E9%96%8B%E3%81%8A%E3%81%AE%E3%82%8D%E3%81%91-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%A8%E7%B5%90%E5%A9%9A%E3%81%A7%E3%81%8D%E3%81%A6%E5%B9%B8%E3%81%9B.html">籠池被告夫婦 保釈後会見で 公開おのろけ お父さんと結婚できて幸せ</a>
+											<a class="badge badge-success" href="/%E7%95%8C%E9%9D%A2%E3%81%AE%E6%99%82%E9%96%93%E7%99%BA%E5%B1%95%E6%96%B9%E7%A8%8B%E5%BC%8F.html">界面の時間発展方程式</a>
+											<a class="badge badge-dark" href="/%E6%A8%AA%E7%94%B0%E3%82%81%E3%81%90%E3%81%BF%E3%81%AE%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%AF%E5%85%83%E6%B0%97%E3%81%A7%E3%81%99%E3%81%8B.html">横田めぐみのお父さんは元気ですか</a>
+											<a class="badge badge-warning" href="/%E7%82%B9%E3%81%8B%E3%82%89%E5%BC%95%E3%81%84%E3%81%9F%E6%8E%A5%E7%B7%9A%E3%81%AE%E6%96%B9%E7%A8%8B%E5%BC%8F-3%E6%AC%A1%E9%96%A2%E6%95%B0-2%E6%9C%AC%E5%BC%95%E3%81%91%E3%82%8B-a-1.html">点から引いた接線の方程式 3次関数 2本引ける a 1</a>
+											<a class="badge badge-success" href="/%E7%AE%97%E6%95%B0-%E6%96%B9%E7%A8%8B%E5%BC%8F-%E4%BD%BF%E3%82%8F%E3%81%AA%E3%81%84%E8%A7%A3%E3%81%8D%E6%96%B9.html">算数 方程式 使わない解き方</a>
+											<a class="badge badge-light" href="/%E9%9C%80%E7%B5%A6%E9%96%A2%E6%95%B0-%E6%8E%A8%E8%A8%88-%E5%90%8C%E6%99%82%E6%96%B9%E7%A8%8B%E5%BC%8F.html">需給関数 推計 同時方程式</a>
+											<a class="badge badge-primary" href="/%E8%80%B3-%E3%82%92-%E3%81%99%E3%81%BE%E3%81%9B-%E3%81%B0-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93-%E3%81%AE-%E5%A3%B0.html">耳 を すませ ば お父さん の 声</a>
+											<a class="badge badge-info" href="/%E6%A1%9C%E4%BA%95-%E3%81%8F%E3%82%93-%E3%81%AE-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93.html">桜井 くん の お父さん</a>
+											<a class="badge badge-success" href="/%E8%89%A6%E3%81%93%E3%82%8C-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%AF%E8%A8%B1%E3%81%97%E3%81%BE%E3%81%9B%E3%82%93.html">艦これ お父さんは許しません</a>
+											<a class="badge badge-light" href="/%E9%9B%A2%E5%A9%9A%E3%81%97%E3%81%9F%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%8C%E5%87%BA%E3%81%A6%E3%81%8F%E3%82%8B%E5%A4%A2.html">離婚したお父さんが出てくる夢</a>
+											<a class="badge badge-light" href="/%E7%B5%8C%E5%96%B6%E3%81%AE%E6%96%B9%E7%A8%8B%E5%BC%8F-%E6%A6%8E%E6%9C%AC.html">経営の方程式 榎本</a>
+											<a class="badge badge-success" href="/%E7%BE%8E%E5%A4%A7%E7%94%9F%E3%81%AE%E5%B7%A8%E4%B9%B3%E5%A8%98-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%AB%E3%83%8C%E3%83%BC%E3%83%89%E3%83%A2%E3%83%87%E3%83%AB%E3%82%92%E3%81%8A%E9%A1%98%E3%81%84%E3%81%97%E3%81%9F%E3%82%89%E8%88%88%E5%A5%AE%E3%81%97%E3%81%A6%E4%B8%AD%E5%87%BA%E3%81%97%E3%81%95%E3%82%8C%E3%81%BE%E3%81%97%E3%81%9F-%E4%BA%95%E4%B8%8A%E6%84%9B%E5%94%AF-vip1196.html">美大生の巨乳娘 お父さんにヌードモデルをお願いしたら興奮して中出しされました 井上愛唯 vip1196</a>
+											<a class="badge badge-primary" href="/%E6%9D%91%E3%81%AE%E5%A9%86%E3%81%95%E3%82%93%E3%81%8C-%E6%97%A5%E6%9C%AC%E5%88%80%E3%81%A7%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%82%92%E3%83%96%E3%83%83%E5%88%BA%E3%81%99%E3%82%B7%E3%83%BC%E3%83%B3%E3%82%92%E8%A6%B3%E3%81%A6.html">村の婆さんが 日本刀でお父さんをブッ刺すシーンを観て</a>
+											<a class="badge badge-light" href="/%E6%B7%AB%E3%81%AE%E6%96%B9%E7%A8%8B%E5%BC%8F-%E7%AC%AC%E4%B8%80%E8%A9%B1-%E5%A4%9C%E3%81%AE%E7%8D%A3-%E3%82%A2%E3%83%9E%E3%82%BE%E3%83%B3.html">淫の方程式 第一話 夜の獣 アマゾン</a>
+						</div>
+<center>
+	<!-- MIDDLE BANNER ADS -->
+<script type="text/javascript">
+	atOptions = {
+		'key' : '2b77887421e2587a1a1b1d7c8a31a9e0',
+		'format' : 'iframe',
+		'height' : 250,
+		'width' : 300,
+		'params' : {}
+	};
+	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://jc32arlvqpv8.com/2b77887421e2587a1a1b1d7c8a31a9e0/invoke.js"></scr' + 'ipt>');
+</script>
+		
+	</center>
+					
+				</div>
+			</div>
+			<div class="row content mb-4">
+				<div class="col-md-12">					
+					
+	
+	<div class="card-columns">
+						
+	  <div class='card'>
+	  	<a href="https://camo.qiitausercontent.com/830803c18b1c42cbfcd540da3b6ed9aa596b9828/68747470733a2f2f71696974612d696d6167652d73746f72652e73332e61702d6e6f727468656173742d312e616d617a6f6e6177732e636f6d2f302f3231313931332f38626666313631332d383737662d653663632d313132332d3861663934626439363732382e706e67" data-lightbox="roadtrip" data-title="離散時間代数riccati方程式 Qiita">
+						<img class="card-img" src="https://camo.qiitausercontent.com/830803c18b1c42cbfcd540da3b6ed9aa596b9828/68747470733a2f2f71696974612d696d6167652d73746f72652e73332e61702d6e6f727468656173742d312e616d617a6f6e6177732e636f6d2f302f3231313931332f38626666313631332d383737662d653663632d313132332d3861663934626439363732382e706e67" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTe9xeWiDiSePUBjjTgPpPGQ2y9D6LFlE_tHGBaSnPMIzwaOnWNyLYZr0dGeWOeLr0j69M';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				離散時間代数riccati方程式 Qiita
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://soblin.github.io/technote/_images/lqr_dp.png" data-lightbox="roadtrip" data-title="第3章 離散時間システムの最適制御">
+						<img class="card-img" src="https://soblin.github.io/technote/_images/lqr_dp.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzJBNZdRNZ9iChs5-sChKj8-HLFj3V63Cw8LZu_iMgr_-te2Jp1wNQLWYN0T32Sj5Fgew';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				第3章 離散時間システムの最適制御
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://www.02.246.ne.jp/~m-adachi/math/figm7-1.gif" data-lightbox="roadtrip" data-title="定理や式の証明 導出詳細 １ 微積分関連 テイラー展開の証明 ヘビサイドの展開定理の証明 ２ 常微分方程式関連 時定数の係数を持つｎ次元の線形常微分 方程式の解の確認 証明 連続 時間システムの離散時間システムへの変換 ３ ラプラス変換関連">
+						<img class="card-img" src="http://www.02.246.ne.jp/~m-adachi/math/figm7-1.gif" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyQ2Eq0jNPAubojygzoAym8-KWp1fIj-x3l7GYa1h3SitF9ZE-inO5b0HQpSgD7v8tDYE';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				定理や式の証明 導出詳細 １ 微積分関連 テイラー展開の証明 ヘビサイドの展開定理の証明 ２ 常微分方程式関連 時定数の係数を持つｎ次元の線形常微分 方程式の解の確認 証明 連続 時間システムの離散時間システムへの変換 ３ ラプラス変換関連
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.maplesoft.com/support/helpjp/helpview.aspx?si=1276/file00276/math329.png" data-lightbox="roadtrip" data-title="Linearalgebra Dare Maple Help">
+						<img class="card-img" src="https://www.maplesoft.com/support/helpjp/helpview.aspx?si=1276/file00276/math329.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBvjSROddepLroaOgV1It71j66NfSZYsf5629apY3IHam8dFuu70tpRJ58t2OW30a8Hg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Linearalgebra Dare Maple Help
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://jp.mathworks.com/help/control/ref/lqi1.png" data-lightbox="roadtrip" data-title="線形 2 次積分制御 Matlab Lqi Mathworks 日本">
+						<img class="card-img" src="https://jp.mathworks.com/help/control/ref/lqi1.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZdZXpd4ZKKiFAvkwWrpbVaprAbIOF5xLlQ3rTmn0DowyEhuG2t4gxPJYS1djxA4Bxng';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				線形 2 次積分制御 Matlab Lqi Mathworks 日本
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pbs.twimg.com/profile_images/1282316705268592641/5LTPRw8__400x400.jpg" data-lightbox="roadtrip" data-title="Zepエンジニアリング On Twitter ショート セミナ 確率 統計処理 カルマン フィルタ入門 離散時間リッカチ代数方程式による最適値の求めかた 真値をリアルタイムに推定する信号処理技術をマスタする 自動運転からaiマーケティングまで 現代のキー">
+						<img class="card-img" src="https://pbs.twimg.com/profile_images/1282316705268592641/5LTPRw8__400x400.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRO8j01sz7M-lCZQWRwq84_gakk9sIdaFMlmzMYzWRffexDwSrjTtIrkUOxWRzDE1WR_wE';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Zepエンジニアリング On Twitter ショート セミナ 確率 統計処理 カルマン フィルタ入門 離散時間リッカチ代数方程式による最適値の求めかた 真値をリアルタイムに推定する信号処理技術をマスタする 自動運転からaiマーケティングまで 現代のキー
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+				<div class='card'>	
+			<div class="d-block p-4">
+	</div>		  	
+		  	<h3 class="h6 p-2"><b></b></h3>
+					</div>
+		
+						
+	  <div class='card'>
+	  	<a href="EflmNovIQXm8fM" data-lightbox="roadtrip" data-title="Http Www Kurims Kyoto U Ac Jp Kyodo Kokyuroku Contents Pdf 0889 05 Pdf">
+						<img class="card-img" src="EflmNovIQXm8fM" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgvfPAdg2wt4RreRengvm-WmUNbtd17RWPV2-j_OXCI5vrY3FgyyGKgPgLT-jViSfMSkU';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Http Www Kurims Kyoto U Ac Jp Kyodo Kokyuroku Contents Pdf 0889 05 Pdf
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="M5qKlxWGvQ0QhM" data-lightbox="roadtrip" data-title="Http Imclab Sys Okayama U Ac Jp Kent Dir Opt04 Pdf">
+						<img class="card-img" src="M5qKlxWGvQ0QhM" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsmnb6zt6wTf3WZTenp0_oeIyN0o8NVaGNrmNnQ8CKY26sGa1WDsVDjtmK-v-PoPknV-g';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Http Imclab Sys Okayama U Ac Jp Kent Dir Opt04 Pdf
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://reference.wolfram.com/language/ref/Files/DSolveValue.ja/I_50_405.png" data-lightbox="roadtrip" data-title="Dsolvevalue Wolfram言語ドキュメント">
+						<img class="card-img" src="https://reference.wolfram.com/language/ref/Files/DSolveValue.ja/I_50_405.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2fbL56JnzM7NJ32Mjjvomt8LhkM1zqly2Q6O2Iy0cbZWBdEyDlKG8H7B7D4T1A3ZIdxg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Dsolvevalue Wolfram言語ドキュメント
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://soblin.github.io/technote/_images/cost_to_go.png" data-lightbox="roadtrip" data-title="第3章 離散時間システムの最適制御">
+						<img class="card-img" src="https://soblin.github.io/technote/_images/cost_to_go.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJbBnCY1f_MoeaUwEgqVWGxVu1PD3IulPNXUJbWdSv_z0WyHwf0CFpPQGfFTkC0LXRh7w';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				第3章 離散時間システムの最適制御
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://reference.wolfram.com/language/ref/Files/DSolveValue.ja/O_17.png" data-lightbox="roadtrip" data-title="Dsolvevalue Wolfram言語ドキュメント">
+						<img class="card-img" src="https://reference.wolfram.com/language/ref/Files/DSolveValue.ja/O_17.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKdkHfQGtPDbuyUt2Rr36M1atEVKKk37-LQ6XGUQ36nl7IF6evmevPPzxMehVXrsEtjg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Dsolvevalue Wolfram言語ドキュメント
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://reference.wolfram.com/language/ref/Files/DSolveValue.ja/O_29.png" data-lightbox="roadtrip" data-title="Dsolvevalue Wolfram言語ドキュメント">
+						<img class="card-img" src="https://reference.wolfram.com/language/ref/Files/DSolveValue.ja/O_29.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXLTqiCKzd8eFQpnv5G5Z7CdyVnFTV-RUMov1xUCsLTNq6HGnxgItw90lTjmjc4a1hIlA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Dsolvevalue Wolfram言語ドキュメント
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.maplesoft.com/support/helpjp/helpview.aspx?si=3450/file02450/math623.png" data-lightbox="roadtrip" data-title="Controldesign Kalman Maplesim Help">
+						<img class="card-img" src="https://www.maplesoft.com/support/helpjp/helpview.aspx?si=3450/file02450/math623.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkIhip4hWrerufstK1GCDYGswqcC0J2UbjayS0-5snjFliDIlvBPEaIRH4-XADHPneCw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Controldesign Kalman Maplesim Help
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://astamuse.com/ja/drawing/JP/2017/129/120/A/000025.png" data-lightbox="roadtrip" data-title="2017 129120号 内燃機関の空気経路制御のための離散時間レートベースモデル予測制御方法 Astamuse">
+						<img class="card-img" src="https://astamuse.com/ja/drawing/JP/2017/129/120/A/000025.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyJDeaW2nN4IoedN6OdGykBmmhGmi8yTXBEK6ko37Q_gAOjiXjcci39QXahwzUk-B2AUI';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				2017 129120号 内燃機関の空気経路制御のための離散時間レートベースモデル予測制御方法 Astamuse
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://astamuse.com/ja/drawing/JP/2017/129/120/A/000027.png" data-lightbox="roadtrip" data-title="2017 129120号 内燃機関の空気経路制御のための離散時間レートベースモデル予測制御方法 Astamuse">
+						<img class="card-img" src="https://astamuse.com/ja/drawing/JP/2017/129/120/A/000027.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiKW93LsH5tQ0myVD6bohbV1zaNez6itwAp9sZ5DVkuCPzdMcwmmrmyPIDORZlQ02r-3s';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				2017 129120号 内燃機関の空気経路制御のための離散時間レートベースモデル予測制御方法 Astamuse
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://reference.wolfram.com/language/ref/Files/DSolve.ja/O_36.png" data-lightbox="roadtrip" data-title="Zxqv0gxkxmtqam">
+						<img class="card-img" src="https://reference.wolfram.com/language/ref/Files/DSolve.ja/O_36.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXZkmZc2_RbpJY1Ja0BCimy6f1kQqg_2GvjABZgF0FWR7DFNC3QksAaOyfYcv8Y_jouA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Zxqv0gxkxmtqam
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://www.hanmoto.com/bd/img/9784339028362_1200.jpg" data-lightbox="roadtrip" data-title="確率システムにおける制御理論 向谷 博明 著 文 コロナ社 版元ドットコム">
+						<img class="card-img" src="http://www.hanmoto.com/bd/img/9784339028362_1200.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8Rd9h5W3mdsrecSlK_GvLE1P2FBy9PyHscHFh-44TcGOr6x9lYJPwL9-MJ-iLukwAIPs';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				確率システムにおける制御理論 向谷 博明 著 文 コロナ社 版元ドットコム
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://reference.wolfram.com/language/ref/Files/DSolveValue.ja/O_27.png" data-lightbox="roadtrip" data-title="Dsolvevalue Wolfram言語ドキュメント">
+						<img class="card-img" src="https://reference.wolfram.com/language/ref/Files/DSolveValue.ja/O_27.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZJz8gFkYB2he_ZtcM4N-GeqRGcNHgrMlzXM-XTxScAhVmvRqd9DCaLMM0vjfcZQC9Bw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Dsolvevalue Wolfram言語ドキュメント
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://astamuse.com/ja/drawing/JP/2017/129/120/A/000037.png" data-lightbox="roadtrip" data-title="2017 129120号 内燃機関の空気経路制御のための離散時間レートベースモデル予測制御方法 Astamuse">
+						<img class="card-img" src="https://astamuse.com/ja/drawing/JP/2017/129/120/A/000037.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFUP-yJmh9M82T3hEziAZ8nXVL_RCs3_fTOO-mTZvC_TZ0ODwij4GIeuo6IJ7rC-tA8Es';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				2017 129120号 内燃機関の空気経路制御のための離散時間レートベースモデル予測制御方法 Astamuse
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://www.02.246.ne.jp/~m-adachi/math/figm2-3.gif" data-lightbox="roadtrip" data-title="定理や式の証明 導出詳細 １ 微積分関連 テイラー展開の証明 ヘビサイドの展開定理の証明 ２ 常微分方程式関連 時定数の係数を持つｎ次元の線形常微分 方程式の解の確認 証明 連続 時間システムの離散時間システムへの変換 ３ ラプラス変換関連">
+						<img class="card-img" src="http://www.02.246.ne.jp/~m-adachi/math/figm2-3.gif" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfjzwIQ464N0fnPAXJ3NHi_1QyXNJSKLbaJL7FdxOmPPuFB0odacTExZZuh5FlHUAeXaI';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				定理や式の証明 導出詳細 １ 微積分関連 テイラー展開の証明 ヘビサイドの展開定理の証明 ２ 常微分方程式関連 時定数の係数を持つｎ次元の線形常微分 方程式の解の確認 証明 連続 時間システムの離散時間システムへの変換 ３ ラプラス変換関連
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://reference.wolfram.com/language/ref/Files/DSolveValue.ja/O_12.png" data-lightbox="roadtrip" data-title="Dsolvevalue Wolfram言語ドキュメント">
+						<img class="card-img" src="https://reference.wolfram.com/language/ref/Files/DSolveValue.ja/O_12.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgk5DmgBpYc-oB7gaqLKqzlWR5EkfnvJFOtg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Dsolvevalue Wolfram言語ドキュメント
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="M5qKlxWGvQ0QhM" data-lightbox="roadtrip" data-title="Http Imclab Sys Okayama U Ac Jp Kent Dir Opt04 Pdf">
+						<img class="card-img" src="M5qKlxWGvQ0QhM" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSE4wR24y9T-aJgqrjPpXIIn410ir6XbQYR5A';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Http Imclab Sys Okayama U Ac Jp Kent Dir Opt04 Pdf
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://astamuse.com/ja/drawing/JP/023/18/602/A/000002.png" data-lightbox="roadtrip" data-title="2002 318602号 むだ時間を有するプロセス系に対する離散時間スライディングモード制御装置及び方法 Astamuse">
+						<img class="card-img" src="https://astamuse.com/ja/drawing/JP/023/18/602/A/000002.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREPwLuJU7tc7rrnHHMFA9atSCDS3HvtBCA-A';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				2002 318602号 むだ時間を有するプロセス系に対する離散時間スライディングモード制御装置及び方法 Astamuse
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="guaTl3s8jWDmLM" data-lightbox="roadtrip" data-title="2">
+						<img class="card-img" src="guaTl3s8jWDmLM" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZIzzuEnYuQrLUqmwlpsyWVSVWVVKPcsmEYA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				2
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://jp.mathworks.com/help/control/getstart/regulator.png" data-lightbox="roadtrip" data-title="線形 2 次ガウシアン Lqg 設計 Matlab Simulink Mathworks 日本">
+						<img class="card-img" src="https://jp.mathworks.com/help/control/getstart/regulator.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnRsrlgbPvtEX_VrRBY3T_Nq7ynWXFk-LdXA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				線形 2 次ガウシアン Lqg 設計 Matlab Simulink Mathworks 日本
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.maplesoft.com/support/helpjp/helpview.aspx?si=3450/file02450/math654.png" data-lightbox="roadtrip" data-title="Controldesign Kalman Maplesim Help">
+						<img class="card-img" src="https://www.maplesoft.com/support/helpjp/helpview.aspx?si=3450/file02450/math654.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0xrw3IjyyQo-ymrj421zWxJc5qRGFIkW_6w';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Controldesign Kalman Maplesim Help
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="Du89DjIgyk3KjM" data-lightbox="roadtrip" data-title="Https Www Coronasha Co Jp Np Data Tachiyomi 978 4 339 02836 2 Pdf">
+						<img class="card-img" src="Du89DjIgyk3KjM" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFaB3SsmMAuJVu2t1nmX-ZSYuFqruoLk9zMQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Https Www Coronasha Co Jp Np Data Tachiyomi 978 4 339 02836 2 Pdf
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://i1.rgstatic.net/publication/258723724_A_Real-Time_Algorithm_for_Constrained_Nonlinear_Receding_Horizon_Control_Based_on_Off-Line_Singular_Value_Decomposition/links/555f34bf08ae6f4dcc912e26/largepreview.png" data-lightbox="roadtrip" data-title="Pdf A Real Time Algorithm For Constrained Nonlinear Receding Horizon Control Based On Off Line Singular Value Decomposition">
+						<img class="card-img" src="https://i1.rgstatic.net/publication/258723724_A_Real-Time_Algorithm_for_Constrained_Nonlinear_Receding_Horizon_Control_Based_on_Off-Line_Singular_Value_Decomposition/links/555f34bf08ae6f4dcc912e26/largepreview.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeArAZ5Xm0w35FuAG89PTcdx2sAgBplKJ_Jg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Pdf A Real Time Algorithm For Constrained Nonlinear Receding Horizon Control Based On Off Line Singular Value Decomposition
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.researchgate.net/profile/Shuichi-Adachi-2/publication/310394036/figure/tbl3/AS:738380732174336@1553055093338/shimyureshontiaojian-sanpuringushijian-00025-s-zhiyuruli-u-suteppuruli-feixianxingmoderushijixiangdangnodongzuodian-deshangjingzhi_Q320.jpg" data-lightbox="roadtrip" data-title="Pdf Health Monitoring For Jet Engines Using Robust Filter Based On Nonlinear Model">
+						<img class="card-img" src="https://www.researchgate.net/profile/Shuichi-Adachi-2/publication/310394036/figure/tbl3/AS:738380732174336@1553055093338/shimyureshontiaojian-sanpuringushijian-00025-s-zhiyuruli-u-suteppuruli-feixianxingmoderushijixiangdangnodongzuodian-deshangjingzhi_Q320.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfok2G4IMOL-1qE0nBxJTO3dIxldFJgk9vEw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Pdf Health Monitoring For Jet Engines Using Robust Filter Based On Nonlinear Model
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="1u_OKClENwoHiM" data-lightbox="roadtrip" data-title="Http Hori K U Tokyo Ac Jp Staff Hori Lectures Control Book2 Pdf">
+						<img class="card-img" src="1u_OKClENwoHiM" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzZpuIwoRVuG88NkljGvsXPbsrpl37B0bZYw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Http Hori K U Tokyo Ac Jp Staff Hori Lectures Control Book2 Pdf
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.maplesoft.com/support/helpjp/helpview.aspx?si=3450/file02450/math657.png" data-lightbox="roadtrip" data-title="Controldesign Kalman Maplesim Help">
+						<img class="card-img" src="https://www.maplesoft.com/support/helpjp/helpview.aspx?si=3450/file02450/math657.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVJ7CiPaRvkzakmMNgPQepwo_zd2SO5GdSRA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Controldesign Kalman Maplesim Help
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="M5qKlxWGvQ0QhM" data-lightbox="roadtrip" data-title="Http Imclab Sys Okayama U Ac Jp Kent Dir Opt04 Pdf">
+						<img class="card-img" src="M5qKlxWGvQ0QhM" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzTMkni7LstpBxr5v0HgsoLJWHBwKJooVX_g';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Http Imclab Sys Okayama U Ac Jp Kent Dir Opt04 Pdf
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="uFAAeiPH9XZvmM" data-lightbox="roadtrip" data-title="Http Www Riam Kyushu U Ac Jp Fluid Meeting 19me S2 Papers Article No 03 Pdf">
+						<img class="card-img" src="uFAAeiPH9XZvmM" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNt88J9E7I0uiyRcyauPAdYUK428Rx-1SBzA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Http Www Riam Kyushu U Ac Jp Fluid Meeting 19me S2 Papers Article No 03 Pdf
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+		
+	</div>
+
+		 
+		
+		
+				</div>
+				<div class="col-sm-12 widget">
+					<div class="d-block p-4">
+	<center>
+		<!-- BOTTOM BANNER ADS -->
+<script async="async" data-cfasync="false" src="//jc32arlvqpv8.com/eb47a424ae325c90cca32780149785c3/invoke.js"></script>
+<div id="container-eb47a424ae325c90cca32780149785c3"></div>
+
+	</center>
+</div>				</div>
+			</div>
+			<div class="row footer">
+				<div class="col-md-12 text-center py-4">
+										<a href="/p/dmca.html">Dmca</a>
+										<a href="/p/contact.html">Contact</a>
+										<a href="/p/privacy-policy.html">Privacy Policy</a>
+										<a href="/p/copyright.html">Copyright</a>
+					
+				</div>
+			</div>
+		</main>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js" integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js" integrity="sha256-CtKylYan+AJuoH8jrMht1+1PMhMqrKnB8K5g012WN5I=" crossorigin="anonymous"></script>
+		
+		<!-- Footer CSS JS -->
+		
+		
+		
+			<script type='text/javascript' src='//jc32arlvqpv8.com/ef/d5/10/efd510237a3143727bed46803ec35b8d.js'></script>
+</body>
+</html>

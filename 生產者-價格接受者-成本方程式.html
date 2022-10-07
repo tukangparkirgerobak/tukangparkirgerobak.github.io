@@ -1,0 +1,682 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha256-L/W5Wfqfa0sdBNIKN9cG6QA5F2qx4qICmU2VgLruv9Y=" crossorigin="anonymous" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/css/lightbox.min.css" integrity="sha256-tBxlolRHP9uMsEFKVk+hk//ekOlXOixLKvye5W2WR5c=" crossorigin="anonymous" />
+		<link href="https://fonts.googleapis.com/css?family=Mr+Dafoe" rel="stylesheet" type="text/css">
+
+		<style type="text/css">
+			html,body{font-family:"Open Sans",Arial,sans-serif;font-size:14px;font-weight:400;background:#f3f3f3 url(https://slideplayer.com/slide/5223559/16/images/28/%E7%94%9F%E7%94%A2%E4%B8%8D%E8%B6%B3+6.4+%E6%95%88%E7%8E%87%E5%B8%82%E5%A0%B4+%E7%95%B6%E5%BB%A0%E5%95%86%E6%B8%9B%E5%B0%91%E7%94%A2%E9%87%8F%E8%87%B3%E5%B0%91%E6%96%BC%E6%95%88%E7%8E%87%E6%95%B8%E9%87%8F%E6%99%82%EF%BC%8C%E7%94%A2%E7%94%9F%E7%84%A1%E8%AC%82%E6%90%8D%E5%A4%B1+%E7%84%A1%E8%AC%82%E6%90%8D%E5%A4%B1+%E6%B6%88%E8%B2%BB%E8%80%85%E5%89%A9%E9%A4%98%E5%8F%8A%E7%94%9F%E7%94%A2%E8%80%85%E5%89%A9%E9%A4%98%E7%9A%84%E6%B8%9B%E5%B0%91%E6%98%AF%E4%BE%86%E8%87%AA%E6%96%BC%E7%84%A1%E6%95%88%E7%8E%87%E7%9A%84%E7%94%9F%E7%94%A2.jpg
+) no-repeat center center fixed;background-size:cover;height:100%}#title{font-family:"Mr Dafoe",Times,serif;font-size:34px;background:rgba(255,255,255,.8);margin-bottom:34px}.header{padding-bottom:13px;margin-bottom:13px;border-bottom:1px solid #eee}a{color:#26ADE4;text-decoration:none}#title a{color:#333;margin-left:21px}#title a:hover{text-decoration:none;color:#26ADE4}.sidebar ul{margin:0;padding:0}.sidebar ul li{list-style:none}.footer{margin-top:21px;padding-top:13px;border-top:1px solid #eee}.footer a{margin:0 15px}.navi{margin:13px 0 13px 0;padding:13px}.navi a{margin:5px 2px;font-size:95%}.main{margin-top: 6rem;}.form-inline .form-control{min-width: 300px;}.v-cover{height: 380px; object-fit: cover;}.v-image{height: 200px; object-fit: cover;}.dwn-cover{max-height: 460px; object-fit: cover;}.main{margin-top: 6rem;}.form-inline .form-control{min-width: 300px;}			
+		</style>
+
+		<title>生產者 價格接受者 成本方程式</title>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/", 
+  "@type": "Article", 
+  "author": {
+    "@type": "Person",
+    "name": "James"
+  },
+  "headline": "生產者 價格接受者 成本方程式",
+  "datePublished": "2021-04-24",
+  "image": [https://slidesplayer.com/slide/15044019/91/images/8/%E7%AC%AC%E4%BA%8C%E7%AF%80+%E7%9F%AD%E6%9C%9F%E6%88%90%E6%9C%AC%E5%87%BD%E6%95%B8%E8%88%87%E6%9B%B2%E7%B7%9A+%E4%BB%A5%E4%B8%8B%E5%81%87%E8%A8%AD%EF%BC%9A+%281%29%E5%BB%A0%E5%95%86%E5%8F%AA%E5%83%B1%E7%94%A8%E5%8B%9E%E5%8B%95%28L%29%E8%88%87%E8%B3%87%E6%9C%AC%28K%29%E5%85%A9%E7%A8%AE%E7%94%9F%E7%94%A2%E8%A6%81%E7%B4%A0%E4%BE%86+%E7%94%9F%E7%94%A2%E8%B2%A1%E8%B2%A8%EF%BC%9B.jpg,https://slidesplayer.com/slide/15438657/93/images/15/%E5%8F%A4%E8%AF%BA%E6%A8%A1%E5%9E%8B%E7%9A%84%E6%8E%A8%E5%B9%BF+%E4%BB%A4%E9%9C%80%E6%B1%82%E5%87%BD%E6%95%B0%E4%B8%BA%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%EF%BC%9AP%3Da-bQ%EF%BC%8CP%E6%98%AF%E4%BB%B7%E6%A0%BC%2CQ%E6%98%AF%E4%B8%A4%E4%B8%AA%E7%94%9F%E4%BA%A7%E8%80%85A%E4%B8%8EB%E7%9A%84%E4%BA%A7%E9%87%8F%E4%B9%8B%E5%92%8C%E3%80%82%E8%BE%B9%E9%99%85%E6%88%90%E6%9C%ACMC%3D0%E3%80%82+%E5%9C%A8%E8%B0%83%E6%95%B4%E4%BA%A7%E9%87%8F%E8%BF%87%E7%A8%8B%E4%B8%AD%EF%BC%8CA%E6%8A%8AB%E7%9A%84%E4%BA%A7%E9%87%8FQ2%E7%9C%8B%E4%BD%9C%E6%98%AF%E5%B8%B8%E6%95%B0%EF%BC%8CB%E6%8A%8AA%E7%9A%84%E4%BA%A7%E9%87%8FQ1%E4%BD%9C%E4%B8%BA%E5%B8%B8%E6%95%B0%E3%80%82+A%E7%9A%84%E6%80%BB%E6%94%B6%E7%9B%8A%EF%BC%9A.jpg,https://image2.slideserve.com/3675317/slide39-l.jpg],
+  "publisher": {
+    "@type": "Organization",
+    "name": "Tukang Parkir Gerobak",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://via.placeholder.com/512.png?text=生產者 價格接受者 成本方程式",
+      "width": 512,
+      "height": 512
+    }
+  }
+}
+</script>
+		<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-957NGNKQ70"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-957NGNKQ70');
+</script>
+
+<script type='text/javascript' src='//jc32arlvqpv8.com/1a/82/2e/1a822ef8a40a0fbab3c4ea12a5d2bb02.js'></script>
+</head>
+	<body>
+		<header class="bg-white fixed-top">			
+			<nav class="navbar navbar-light bg-white mb-0">
+				<div class="container justify-content-center justify-content-sm-between">	
+				  <a href="/" title="Blog" class="navbar-brand mb-1">Blog</a>
+				  				</div>			  
+			</nav>				
+		</header>
+		<main class="main container bg-white">
+			<div class="col-md-12 my-4" align="center">
+				<div class="d-block p-4">
+	<br/><center>
+<!-- TOP BANNER ADS -->
+</center><br/>
+</div>			</div>
+			<div class="row header">
+				<div class="col-sm-12 text-center p-2">
+						<h1>生產者 價格接受者 成本方程式</h1>
+
+	
+	<div class="navi text-center">
+										<a class="badge badge-secondary" href="/%E7%99%BA%E8%82%B2%E3%81%97%E3%81%A6%E3%81%8D%E3%81%9F%E5%A8%98%E3%81%AB%E6%AC%B2%E6%83%85%E3%81%97%E3%81%A6%E3%81%97%E3%81%BE%E3%81%84%E8%BF%91%E8%A6%AA%E7%9B%B8%E5%A7%A6%E3%81%97%E3%81%A6%E3%81%97%E3%81%BE%E3%81%86%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93.html">発育してきた娘に欲情してしまい近親相姦してしまうお父さん</a>
+											<a class="badge badge-secondary" href="/%E7%9B%B8%E5%A7%A6-%E9%9A%A3%E3%81%AB%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%8C%E3%81%84%E3%82%8B%E3%81%AE%E3%82%88-%E5%8F%A4%E5%B7%9D%E7%A5%A5%E5%AD%90.html">相姦 隣にお父さんがいるのよ 古川祥子</a>
+											<a class="badge badge-dark" href="/%E8%A4%87%E6%95%B0%E3%81%AE%E7%A9%BA%E9%96%93%E5%BA%A7%E6%A8%99%E3%81%8B%E3%82%89%E5%86%86%E3%81%AE%E6%96%B9%E7%A8%8B%E5%BC%8F%E3%82%92%E5%BE%97%E3%82%8B.html">複数の空間座標から円の方程式を得る</a>
+											<a class="badge badge-info" href="/%E6%B8%A9%E5%8C%85-cm-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93.html">温包 cm お父さん</a>
+											<a class="badge badge-dark" href="/%E7%94%9F%E6%88%90%E7%89%A9-%E5%8F%8D%E5%BF%9C%E7%89%A9-%E7%86%B1%E5%8C%96%E5%AD%A6%E6%96%B9%E7%A8%8B%E5%BC%8F.html">生成物 反応物 熱化学方程式</a>
+											<a class="badge badge-warning" href="/%E7%86%9F%E5%A5%B3%E8%A3%85%E5%AD%90%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93-zip.html">熟女装子お父さん zip</a>
+											<a class="badge badge-info" href="/%E9%9D%9E%E7%B7%9A%E5%BD%A2-%E6%96%B9%E7%A8%8B%E5%BC%8F-%E5%A4%9A%E9%87%8D-%E8%A7%A3.html">非線形 方程式 多重 解</a>
+											<a class="badge badge-dark" href="/%EF%BC%93%E6%AC%A1%E6%96%B9%E7%A8%8B%E5%BC%8F-%EF%BC%92%E3%81%A4%E3%81%8C%E7%AD%89%E3%81%97%E3%81%84-%E8%A7%A3%E3%81%A8%E4%BF%82%E6%95%B0.html">３次方程式 ２つが等しい 解と係数</a>
+											<a class="badge badge-danger" href="/%E9%9D%9E%E6%96%89%E6%AC%A1%E6%96%B9%E7%A8%8B%E5%BC%8F-%E7%89%B9%E6%AE%8A%E8%A7%A3.html">非斉次方程式 特殊解</a>
+											<a class="badge badge-info" href="/%E9%9F%93%E6%B5%81%E3%83%91%E3%83%A9%E3%83%80%E3%82%A4%E3%83%A0%E9%9F%93%E5%9B%BD%E3%81%8C%E8%AD%B0%E5%93%A1%E7%AB%8B%E6%B3%95%E3%81%A7%E6%A8%A1%E7%B4%A2%E3%81%99%E3%82%8B-%E5%85%83%E5%BE%B4%E7%94%A8%E5%B7%A5%E5%95%8F%E9%A1%8C%E3%82%92%E8%A7%A3%E3%81%8F-%E6%96%B9%E7%A8%8B%E5%BC%8F.html">韓流パラダイム韓国が議員立法で模索する 元徴用工問題を解く 方程式</a>
+											<a class="badge badge-primary" href="/%E6%9D%BE%E4%BA%95%E7%A7%80%E5%96%9C%E3%81%AE%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%AE%E8%A8%80%E8%91%89.html">松井秀喜のお父さんの言葉</a>
+											<a class="badge badge-info" href="/%E7%86%B1%E4%BC%9D%E5%B0%8E%E6%96%B9%E7%A8%8B%E5%BC%8F%E3%81%AE%E5%B0%8E%E5%87%BA.html">熱伝導方程式の導出</a>
+											<a class="badge badge-secondary" href="/%E7%89%87%E6%B8%95%E3%82%AD%E3%83%A3%E3%82%B9%E3%82%BF%E3%83%BC%E3%81%AE%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93.html">片渕キャスターのお父さん</a>
+											<a class="badge badge-light" href="/%E7%88%86%E8%A3%82%E3%81%8A%E7%88%B6%E3%81%95%E3%82%9320%E5%91%A8%E5%B9%B4.html">爆裂お父さん20周年</a>
+											<a class="badge badge-dark" href="/%E9%9D%9E%E7%B7%9A%E5%9E%8B%E7%99%BA%E5%B1%95%E6%96%B9%E7%A8%8B%E5%BC%8F%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8B%E8%87%A8%E7%95%8C%E6%A7%8B%E9%80%A0%E3%81%AE%E7%A0%94%E7%A9%B6.html">非線型発展方程式における臨界構造の研究</a>
+						</div>
+<center>
+	<!-- MIDDLE BANNER ADS -->
+<script type="text/javascript">
+	atOptions = {
+		'key' : '2b77887421e2587a1a1b1d7c8a31a9e0',
+		'format' : 'iframe',
+		'height' : 250,
+		'width' : 300,
+		'params' : {}
+	};
+	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://jc32arlvqpv8.com/2b77887421e2587a1a1b1d7c8a31a9e0/invoke.js"></scr' + 'ipt>');
+</script>
+		
+	</center>
+					
+				</div>
+			</div>
+			<div class="row content mb-4">
+				<div class="col-md-12">					
+					
+	
+	<div class="card-columns">
+						
+	  <div class='card'>
+	  	<a href="https://slideplayer.com/slide/5223559/16/images/23/6.3+%E6%88%90%E6%9C%AC%E3%80%81%E5%83%B9%E6%A0%BC%E8%88%87%E7%94%9F%E7%94%A2%E8%80%85%E5%89%A9%E9%A4%98+%E5%9C%96+6.4+%E4%BE%9B%E7%B5%A6%E6%9B%B2%E7%B7%9A%E8%88%87%E7%94%9F%E7%94%A2%E8%80%85%E5%89%A9%E9%A4%98+1.+%E6%8A%AB%E8%96%A9%E5%83%B9%E6%A0%BC%E7%82%BA+%2410%2F%E5%80%8B%EF%BC%8CMax+%E6%AF%8F%E9%80%B1%E7%94%9F%E7%94%A2+100+%E5%80%8B%E6%8A%AB%E8%96%A9.jpg" data-lightbox="roadtrip" data-title="6 市場效率與公平chapter 6 市場效率與公平chapter C H A P T E R C H E C K L I S T 學習本章後 您將能 描述資源配置的方式1 區別價值與價格的差異 定義消費者剩餘">
+						<img class="card-img" src="https://slideplayer.com/slide/5223559/16/images/23/6.3+%E6%88%90%E6%9C%AC%E3%80%81%E5%83%B9%E6%A0%BC%E8%88%87%E7%94%9F%E7%94%A2%E8%80%85%E5%89%A9%E9%A4%98+%E5%9C%96+6.4+%E4%BE%9B%E7%B5%A6%E6%9B%B2%E7%B7%9A%E8%88%87%E7%94%9F%E7%94%A2%E8%80%85%E5%89%A9%E9%A4%98+1.+%E6%8A%AB%E8%96%A9%E5%83%B9%E6%A0%BC%E7%82%BA+%2410%2F%E5%80%8B%EF%BC%8CMax+%E6%AF%8F%E9%80%B1%E7%94%9F%E7%94%A2+100+%E5%80%8B%E6%8A%AB%E8%96%A9.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0SRv7lFPWNGBt2zoA2hHHJsgC7mP2W5R2lXrwhJtETCaL-MJQu3W9VMekq9XiAlnMmJg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				6 市場效率與公平chapter 6 市場效率與公平chapter C H A P T E R C H E C K L I S T 學習本章後 您將能 描述資源配置的方式1 區別價值與價格的差異 定義消費者剩餘
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://slideplayer.com/slide/5223559/16/images/20/6.3+%E6%88%90%E6%9C%AC%E3%80%81%E5%83%B9%E6%A0%BC%E8%88%87%E7%94%9F%E7%94%A2%E8%80%85%E5%89%A9%E9%A4%98+%E5%9C%96+6.3+%E4%BE%9B%E7%B5%A6%E3%80%81%E6%9C%80%E4%BD%8E%E4%BE%9B%E7%B5%A6%E5%83%B9%E6%A0%BC%E8%88%87%E9%82%8A%E9%9A%9B%E6%88%90%E6%9C%AC+%E4%BE%9B%E7%B5%A6%E6%9B%B2%E7%B7%9A%E9%A1%AF%E7%A4%BA%EF%BC%9A+1.+%E5%85%B6%E4%BB%96%E6%A2%9D%E4%BB%B6%E4%B8%8D%E8%AE%8A%E6%99%82%EF%BC%8C%E7%89%B9%E5%AE%9A%E5%83%B9%E6%A0%BC%E4%B8%8B%E7%9A%84%E4%BE%9B%E7%B5%A6%E9%87%8F.jpg" data-lightbox="roadtrip" data-title="6 市場效率與公平chapter 6 市場效率與公平chapter C H A P T E R C H E C K L I S T 學習本章後 您將能 描述資源配置的方式1 區別價值與價格的差異 定義消費者剩餘">
+						<img class="card-img" src="https://slideplayer.com/slide/5223559/16/images/20/6.3+%E6%88%90%E6%9C%AC%E3%80%81%E5%83%B9%E6%A0%BC%E8%88%87%E7%94%9F%E7%94%A2%E8%80%85%E5%89%A9%E9%A4%98+%E5%9C%96+6.3+%E4%BE%9B%E7%B5%A6%E3%80%81%E6%9C%80%E4%BD%8E%E4%BE%9B%E7%B5%A6%E5%83%B9%E6%A0%BC%E8%88%87%E9%82%8A%E9%9A%9B%E6%88%90%E6%9C%AC+%E4%BE%9B%E7%B5%A6%E6%9B%B2%E7%B7%9A%E9%A1%AF%E7%A4%BA%EF%BC%9A+1.+%E5%85%B6%E4%BB%96%E6%A2%9D%E4%BB%B6%E4%B8%8D%E8%AE%8A%E6%99%82%EF%BC%8C%E7%89%B9%E5%AE%9A%E5%83%B9%E6%A0%BC%E4%B8%8B%E7%9A%84%E4%BE%9B%E7%B5%A6%E9%87%8F.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSikZAS1eyY-MxG-rC6IeHBopx4GCKTn_4avWR93gnVS6d68C9z9K200NN_JuuobvF2X5Q';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				6 市場效率與公平chapter 6 市場效率與公平chapter C H A P T E R C H E C K L I S T 學習本章後 您將能 描述資源配置的方式1 區別價值與價格的差異 定義消費者剩餘
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://slideplayer.com/slide/5223559/16/images/24/6.4+%E6%95%88%E7%8E%87%E5%B8%82%E5%A0%B4+%E5%9C%96+6.5+%E6%95%88%E7%8E%87%E5%B8%82%E5%A0%B4+1.+%E5%B8%82%E5%A0%B4%E5%9D%87%E8%A1%A1+2.+%E9%82%8A%E9%9A%9B%E6%88%90%E6%9C%AC%E6%9B%B2%E7%B7%9A+3.+%E9%82%8A%E9%9A%9B%E5%88%A9%E7%9B%8A%E6%9B%B2%E7%B7%9A+4.+%E7%95%B6%E9%82%8A%E9%9A%9B%E6%88%90%E6%9C%AC%E7%AD%89%E6%96%BC%E9%82%8A%E9%9A%9B%E5%88%A9%E7%9B%8A%E6%99%82%EF%BC%8C%E7%82%BA%E6%95%88%E7%8E%87%E6%95%B8%E9%87%8F.jpg" data-lightbox="roadtrip" data-title="6 市場效率與公平chapter 6 市場效率與公平chapter C H A P T E R C H E C K L I S T 學習本章後 您將能 描述資源配置的方式1 區別價值與價格的差異 定義消費者剩餘">
+						<img class="card-img" src="https://slideplayer.com/slide/5223559/16/images/24/6.4+%E6%95%88%E7%8E%87%E5%B8%82%E5%A0%B4+%E5%9C%96+6.5+%E6%95%88%E7%8E%87%E5%B8%82%E5%A0%B4+1.+%E5%B8%82%E5%A0%B4%E5%9D%87%E8%A1%A1+2.+%E9%82%8A%E9%9A%9B%E6%88%90%E6%9C%AC%E6%9B%B2%E7%B7%9A+3.+%E9%82%8A%E9%9A%9B%E5%88%A9%E7%9B%8A%E6%9B%B2%E7%B7%9A+4.+%E7%95%B6%E9%82%8A%E9%9A%9B%E6%88%90%E6%9C%AC%E7%AD%89%E6%96%BC%E9%82%8A%E9%9A%9B%E5%88%A9%E7%9B%8A%E6%99%82%EF%BC%8C%E7%82%BA%E6%95%88%E7%8E%87%E6%95%B8%E9%87%8F.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_BQ93E7FSd0dRMJ3_0IcppDA2JNQOZ11M6G_ZE8eBDkyGpXkCezrjanq51SjgIojVXlM';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				6 市場效率與公平chapter 6 市場效率與公平chapter C H A P T E R C H E C K L I S T 學習本章後 您將能 描述資源配置的方式1 區別價值與價格的差異 定義消費者剩餘
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://slidesplayer.com/slide/14306623/89/images/38/%E7%AD%89%E6%88%90%E6%9C%AC%E7%BA%BF%E6%98%AF%E5%9C%A8%E6%97%A2%E5%AE%9A%E7%9A%84%E6%88%90%E6%9C%AC%E5%92%8C%E6%97%A2%E5%AE%9A%E7%94%9F%E4%BA%A7%E8%A6%81%E7%B4%A0%E4%BB%B7%E6%A0%BC%E6%9D%A1%E4%BB%B6%E4%B8%8B%E7%94%9F%E4%BA%A7%E8%80%85%E5%8F%AF%E4%BB%A5%E8%B4%AD%E4%B9%B0%E5%88%B0%E7%9A%84%E4%B8%A4%E7%A7%8D%E7%94%9F%E4%BA%A7%E8%A6%81%E7%B4%A0%E7%9A%84%E5%90%84%E7%A7%8D%E4%B8%8D%E5%90%8C%E6%95%B0%E9%87%8F%E7%BB%84%E5%90%88%E7%9A%84%E8%BD%A8%E8%BF%B9%E3%80%82.jpg" data-lightbox="roadtrip" data-title="本讲主要探讨如下几个问题 第一节生产理论第二节成本理论第三节产业组织 市场理论 Ppt Download">
+						<img class="card-img" src="https://slidesplayer.com/slide/14306623/89/images/38/%E7%AD%89%E6%88%90%E6%9C%AC%E7%BA%BF%E6%98%AF%E5%9C%A8%E6%97%A2%E5%AE%9A%E7%9A%84%E6%88%90%E6%9C%AC%E5%92%8C%E6%97%A2%E5%AE%9A%E7%94%9F%E4%BA%A7%E8%A6%81%E7%B4%A0%E4%BB%B7%E6%A0%BC%E6%9D%A1%E4%BB%B6%E4%B8%8B%E7%94%9F%E4%BA%A7%E8%80%85%E5%8F%AF%E4%BB%A5%E8%B4%AD%E4%B9%B0%E5%88%B0%E7%9A%84%E4%B8%A4%E7%A7%8D%E7%94%9F%E4%BA%A7%E8%A6%81%E7%B4%A0%E7%9A%84%E5%90%84%E7%A7%8D%E4%B8%8D%E5%90%8C%E6%95%B0%E9%87%8F%E7%BB%84%E5%90%88%E7%9A%84%E8%BD%A8%E8%BF%B9%E3%80%82.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfANJLM1hh2Ef5YZnt9ug_dZy4eGYVO9PQmPN1w9x25Kv3ixfKMjHougZEp693DEusMkA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				本讲主要探讨如下几个问题 第一节生产理论第二节成本理论第三节产业组织 市场理论 Ppt Download
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://slideplayer.com/slide/5223559/16/images/22/6.3+%E6%88%90%E6%9C%AC%E3%80%81%E5%83%B9%E6%A0%BC%E8%88%87%E7%94%9F%E7%94%A2%E8%80%85%E5%89%A9%E9%A4%98+%E7%94%9F%E7%94%A2%E8%80%85%E5%89%A9%E9%A4%98+%E5%83%B9%E6%A0%BC%E9%AB%98%E6%96%BC%E9%82%8A%E9%9A%9B%E6%88%90%E6%9C%AC%EF%BC%8C%E5%89%87%E5%BB%A0%E5%95%86%E7%8D%B2%E5%BE%97%E7%94%9F%E7%94%A2%E8%80%85%E5%89%A9%E9%A4%98.jpg" data-lightbox="roadtrip" data-title="6 市場效率與公平chapter 6 市場效率與公平chapter C H A P T E R C H E C K L I S T 學習本章後 您將能 描述資源配置的方式1 區別價值與價格的差異 定義消費者剩餘">
+						<img class="card-img" src="https://slideplayer.com/slide/5223559/16/images/22/6.3+%E6%88%90%E6%9C%AC%E3%80%81%E5%83%B9%E6%A0%BC%E8%88%87%E7%94%9F%E7%94%A2%E8%80%85%E5%89%A9%E9%A4%98+%E7%94%9F%E7%94%A2%E8%80%85%E5%89%A9%E9%A4%98+%E5%83%B9%E6%A0%BC%E9%AB%98%E6%96%BC%E9%82%8A%E9%9A%9B%E6%88%90%E6%9C%AC%EF%BC%8C%E5%89%87%E5%BB%A0%E5%95%86%E7%8D%B2%E5%BE%97%E7%94%9F%E7%94%A2%E8%80%85%E5%89%A9%E9%A4%98.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShhD0kiraO9IgdnXH5EVJ8wMLVv7X7eQKN0DMYijJ3lSa-ayWDi9ysb-s0tNG9T8M3_8E';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				6 市場效率與公平chapter 6 市場效率與公平chapter C H A P T E R C H E C K L I S T 學習本章後 您將能 描述資源配置的方式1 區別價值與價格的差異 定義消費者剩餘
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://slideplayer.com/slide/5223559/16/images/28/%E7%94%9F%E7%94%A2%E4%B8%8D%E8%B6%B3+6.4+%E6%95%88%E7%8E%87%E5%B8%82%E5%A0%B4+%E7%95%B6%E5%BB%A0%E5%95%86%E6%B8%9B%E5%B0%91%E7%94%A2%E9%87%8F%E8%87%B3%E5%B0%91%E6%96%BC%E6%95%88%E7%8E%87%E6%95%B8%E9%87%8F%E6%99%82%EF%BC%8C%E7%94%A2%E7%94%9F%E7%84%A1%E8%AC%82%E6%90%8D%E5%A4%B1+%E7%84%A1%E8%AC%82%E6%90%8D%E5%A4%B1+%E6%B6%88%E8%B2%BB%E8%80%85%E5%89%A9%E9%A4%98%E5%8F%8A%E7%94%9F%E7%94%A2%E8%80%85%E5%89%A9%E9%A4%98%E7%9A%84%E6%B8%9B%E5%B0%91%E6%98%AF%E4%BE%86%E8%87%AA%E6%96%BC%E7%84%A1%E6%95%88%E7%8E%87%E7%9A%84%E7%94%9F%E7%94%A2.jpg" data-lightbox="roadtrip" data-title="6 市場效率與公平chapter 6 市場效率與公平chapter C H A P T E R C H E C K L I S T 學習本章後 您將能 描述資源配置的方式1 區別價值與價格的差異 定義消費者剩餘">
+						<img class="card-img" src="https://slideplayer.com/slide/5223559/16/images/28/%E7%94%9F%E7%94%A2%E4%B8%8D%E8%B6%B3+6.4+%E6%95%88%E7%8E%87%E5%B8%82%E5%A0%B4+%E7%95%B6%E5%BB%A0%E5%95%86%E6%B8%9B%E5%B0%91%E7%94%A2%E9%87%8F%E8%87%B3%E5%B0%91%E6%96%BC%E6%95%88%E7%8E%87%E6%95%B8%E9%87%8F%E6%99%82%EF%BC%8C%E7%94%A2%E7%94%9F%E7%84%A1%E8%AC%82%E6%90%8D%E5%A4%B1+%E7%84%A1%E8%AC%82%E6%90%8D%E5%A4%B1+%E6%B6%88%E8%B2%BB%E8%80%85%E5%89%A9%E9%A4%98%E5%8F%8A%E7%94%9F%E7%94%A2%E8%80%85%E5%89%A9%E9%A4%98%E7%9A%84%E6%B8%9B%E5%B0%91%E6%98%AF%E4%BE%86%E8%87%AA%E6%96%BC%E7%84%A1%E6%95%88%E7%8E%87%E7%9A%84%E7%94%9F%E7%94%A2.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7xuAsPR3jFBsq5RsmjmkVMPjvly5zu1vhdMPvhgdvz_Mco-Cujr7wDknEP54-MNYI2ZE';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				6 市場效率與公平chapter 6 市場效率與公平chapter C H A P T E R C H E C K L I S T 學習本章後 您將能 描述資源配置的方式1 區別價值與價格的差異 定義消費者剩餘
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+				<div class='card'>	
+			<div class="d-block p-4">
+	</div>		  	
+		  	<h3 class="h6 p-2"><b></b></h3>
+					</div>
+		
+						
+	  <div class='card'>
+	  	<a href="https://swf.ishare.down.sina.com.cn/1R8fHrw5vrgP.jpg?ssig=Y3cgAeRSWY&amp;Expires=1617729034&amp;KID=sina,ishare&amp;range=293916-490675" data-lightbox="roadtrip" data-title="完全竞争市场和完全垄断市场中价格和产量的决定下载 Ppt模板 爱问共享资料">
+						<img class="card-img" src="https://swf.ishare.down.sina.com.cn/1R8fHrw5vrgP.jpg?ssig=Y3cgAeRSWY&amp;Expires=1617729034&amp;KID=sina,ishare&amp;range=293916-490675" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRq3cLQ5-Sh3cQZxutMJXUQfeNlDGLeCPdgMBHd5pBxPG4VJYkhldO2gzkEGmPVJpzb_No';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				完全竞争市场和完全垄断市场中价格和产量的决定下载 Ppt模板 爱问共享资料
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://swf.ishare.down.sina.com.cn/1R8fHrw5vrgP.jpg?ssig=Y3cgAeRSWY&amp;Expires=1617729034&amp;KID=sina,ishare&amp;range=810407-1054064" data-lightbox="roadtrip" data-title="完全竞争市场和完全垄断市场中价格和产量的决定下载 Ppt模板 爱问共享资料">
+						<img class="card-img" src="https://swf.ishare.down.sina.com.cn/1R8fHrw5vrgP.jpg?ssig=Y3cgAeRSWY&amp;Expires=1617729034&amp;KID=sina,ishare&amp;range=810407-1054064" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRopRsno3Tyds9jIhRDO3Ve5S7vjnLm2r1hgSLmmkIW5Tuk-hQiwo9oiXKg1uCxjypKRf4';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				完全竞争市场和完全垄断市场中价格和产量的决定下载 Ppt模板 爱问共享资料
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic3.zhimg.com/80/v2-61e37a3de32bd3da1c59bb88a18a85e2_1440w.jpg" data-lightbox="roadtrip" data-title="Nk5lm6nj Kgjdm">
+						<img class="card-img" src="https://pic3.zhimg.com/80/v2-61e37a3de32bd3da1c59bb88a18a85e2_1440w.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxxJBUPPpoN2fbQnQwgI1_zmQ2XRne6cehbi-3wAIS1m36_9o0JCFWOeP3ZZ2QopYgrJI';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Nk5lm6nj Kgjdm
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://slideplayer.com/slide/5223559/16/images/34/6.4+%E6%95%88%E7%8E%87%E5%B8%82%E5%A0%B4+%E8%AA%B2%E7%A8%85%E8%88%87%E8%A3%9C%E8%B2%BC+%E8%AA%B2%E7%A8%85%E4%BD%BF%E6%B6%88%E8%B2%BB%E8%80%85%E6%94%AF%E4%BB%98%E8%BC%83%E9%AB%98%E7%9A%84%E5%83%B9%E6%A0%BC%EF%BC%8C%E8%80%8C%E7%94%9F%E7%94%A2%E8%80%85%E6%8E%A5%E5%8F%97%E8%BC%83%E4%BD%8E%E7%9A%84%E5%83%B9%E6%A0%BC+%E5%9B%A0%E6%AD%A4%E8%AA%B2%E7%A8%85%E6%9C%83%E5%B0%8E%E8%87%B4%E7%94%A2%E9%87%8F%E6%B8%9B%E5%B0%91%E8%80%8C%E7%94%9F%E7%94%A2%E4%B8%8D%E8%B6%B3%E3%80%82.jpg" data-lightbox="roadtrip" data-title="6 市場效率與公平chapter 6 市場效率與公平chapter C H A P T E R C H E C K L I S T 學習本章後 您將能 描述資源配置的方式1 區別價值與價格的差異 定義消費者剩餘">
+						<img class="card-img" src="https://slideplayer.com/slide/5223559/16/images/34/6.4+%E6%95%88%E7%8E%87%E5%B8%82%E5%A0%B4+%E8%AA%B2%E7%A8%85%E8%88%87%E8%A3%9C%E8%B2%BC+%E8%AA%B2%E7%A8%85%E4%BD%BF%E6%B6%88%E8%B2%BB%E8%80%85%E6%94%AF%E4%BB%98%E8%BC%83%E9%AB%98%E7%9A%84%E5%83%B9%E6%A0%BC%EF%BC%8C%E8%80%8C%E7%94%9F%E7%94%A2%E8%80%85%E6%8E%A5%E5%8F%97%E8%BC%83%E4%BD%8E%E7%9A%84%E5%83%B9%E6%A0%BC+%E5%9B%A0%E6%AD%A4%E8%AA%B2%E7%A8%85%E6%9C%83%E5%B0%8E%E8%87%B4%E7%94%A2%E9%87%8F%E6%B8%9B%E5%B0%91%E8%80%8C%E7%94%9F%E7%94%A2%E4%B8%8D%E8%B6%B3%E3%80%82.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdF-_LV2C52yxaPOa96H7r8retjRYC6bEPoOn5xdjg16C_Tu4h2QHOVym44FdCXpCz9Gg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				6 市場效率與公平chapter 6 市場效率與公平chapter C H A P T E R C H E C K L I S T 學習本章後 您將能 描述資源配置的方式1 區別價值與價格的差異 定義消費者剩餘
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://image2.slideserve.com/3675317/slide38-l.jpg" data-lightbox="roadtrip" data-title="Ppt 第六章完全竞争市场和完全垄断市场中价格和产量的决定powerpoint Presentation Id 3675317">
+						<img class="card-img" src="https://image2.slideserve.com/3675317/slide38-l.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSXPOaTaKN1PsPQYva_SLjtQLNSq_NpZZ8GExpBJjnoiEatoDA_I5DR1VQep3-7Sct2Gc';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Ppt 第六章完全竞争市场和完全垄断市场中价格和产量的决定powerpoint Presentation Id 3675317
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://image2.slideserve.com/3675317/slide39-l.jpg" data-lightbox="roadtrip" data-title="Ppt 第六章完全竞争市场和完全垄断市场中价格和产量的决定powerpoint Presentation Id 3675317">
+						<img class="card-img" src="https://image2.slideserve.com/3675317/slide39-l.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZ7s74WFilovPVo8YTek11FuVmap_KEWGJ2mFntkfSdXz3fTWFnrWYgpTcQkGuzMUdH8c';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Ppt 第六章完全竞争市场和完全垄断市场中价格和产量的决定powerpoint Presentation Id 3675317
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://slideplayer.com/slide/5333073/17/images/4/%E6%97%A5%E5%B8%B8%E7%94%9F%E6%B4%BB%E4%B8%AD%E7%9A%84%E5%A4%96%E9%83%A8%E6%80%A7+%E5%A4%96%E9%83%A8%E6%80%A7+%E6%98%AF%E7%94%9F%E7%94%A2%E8%A1%8C%E7%82%BA%E6%88%96%E6%B6%88%E8%B2%BB%E8%A1%8C%E7%82%BA%EF%BC%8C%E5%8A%A0%E8%AB%B8%E6%96%BC%E7%94%9F%E7%94%A2%E8%80%85%E6%88%96%E6%B6%88%E8%B2%BB%E8%80%85%E4%BB%A5%E5%A4%96%E4%B9%8B%E4%BB%96%E4%BA%BA%E8%BA%AB%E4%B8%8A%E7%9A%84%E6%88%90%E6%9C%AC%E6%88%96%E5%88%A9%E7%9B%8A+%E8%B2%A0%E5%A4%96%E9%83%A8%E6%80%A7.jpg" data-lightbox="roadtrip" data-title="8 Chapter 外部性 8 Chapter 外部性c H A P T E R C H E C K L I S T 學習本章後 您將能 解釋負外部性引起無效率的過度生產 以及財產權 汙染排放費與課稅可以達成更有效率的結果">
+						<img class="card-img" src="https://slideplayer.com/slide/5333073/17/images/4/%E6%97%A5%E5%B8%B8%E7%94%9F%E6%B4%BB%E4%B8%AD%E7%9A%84%E5%A4%96%E9%83%A8%E6%80%A7+%E5%A4%96%E9%83%A8%E6%80%A7+%E6%98%AF%E7%94%9F%E7%94%A2%E8%A1%8C%E7%82%BA%E6%88%96%E6%B6%88%E8%B2%BB%E8%A1%8C%E7%82%BA%EF%BC%8C%E5%8A%A0%E8%AB%B8%E6%96%BC%E7%94%9F%E7%94%A2%E8%80%85%E6%88%96%E6%B6%88%E8%B2%BB%E8%80%85%E4%BB%A5%E5%A4%96%E4%B9%8B%E4%BB%96%E4%BA%BA%E8%BA%AB%E4%B8%8A%E7%9A%84%E6%88%90%E6%9C%AC%E6%88%96%E5%88%A9%E7%9B%8A+%E8%B2%A0%E5%A4%96%E9%83%A8%E6%80%A7.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS360Ob77NgtPMMOQeK-8GrDriOwosk0onFFfuFy8bIttAmgnEQN2SMb2Z6tKAZbwTIeV0';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				8 Chapter 外部性 8 Chapter 外部性c H A P T E R C H E C K L I S T 學習本章後 您將能 解釋負外部性引起無效率的過度生產 以及財產權 汙染排放費與課稅可以達成更有效率的結果
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://i0.wp.com/www.hbrtaiwan.com/images/articles_images/DIGATL/AR0000637_1(1).jpg" data-lightbox="roadtrip" data-title="完全競爭市場特性012完全競爭市場 Qhcoh">
+						<img class="card-img" src="https://i0.wp.com/www.hbrtaiwan.com/images/articles_images/DIGATL/AR0000637_1(1).jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7-_VCgijgm8-9u3TO3RoQm35qJrffUSpVe3IbXxgM2mGQYnjLA7q4HuADyjvn1VzMbJU';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				完全競爭市場特性012完全競爭市場 Qhcoh
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://i0.wp.com/i.ytimg.com/vi/fQ6lvKnRIZQ/maxresdefault.jpg" data-lightbox="roadtrip" data-title="生產者剩餘生產者剩餘 Chris Miller">
+						<img class="card-img" src="https://i0.wp.com/i.ytimg.com/vi/fQ6lvKnRIZQ/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpWrvVms851AzG-nSjkGQMa2W3mlWtYas90FPnMPkfWbpgJz6WCS5OGY7LQNUs8ZJYq6g';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				生產者剩餘生產者剩餘 Chris Miller
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://i0.wp.com/image3.slideserve.com/5961060/slide4-n.jpg" data-lightbox="roadtrip" data-title="完全競爭市場特性012完全競爭市場 Qhcoh">
+						<img class="card-img" src="https://i0.wp.com/image3.slideserve.com/5961060/slide4-n.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxgaP0Wx2qLKgnSw6X-QhLA8xwfYdBcunceiCLu8Dq9SApVSFTTI4gXAcY6torapd4qKg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				完全競爭市場特性012完全競爭市場 Qhcoh
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://slidesplayer.com/slide/15044019/91/images/8/%E7%AC%AC%E4%BA%8C%E7%AF%80+%E7%9F%AD%E6%9C%9F%E6%88%90%E6%9C%AC%E5%87%BD%E6%95%B8%E8%88%87%E6%9B%B2%E7%B7%9A+%E4%BB%A5%E4%B8%8B%E5%81%87%E8%A8%AD%EF%BC%9A+%281%29%E5%BB%A0%E5%95%86%E5%8F%AA%E5%83%B1%E7%94%A8%E5%8B%9E%E5%8B%95%28L%29%E8%88%87%E8%B3%87%E6%9C%AC%28K%29%E5%85%A9%E7%A8%AE%E7%94%9F%E7%94%A2%E8%A6%81%E7%B4%A0%E4%BE%86+%E7%94%9F%E7%94%A2%E8%B2%A1%E8%B2%A8%EF%BC%9B.jpg" data-lightbox="roadtrip" data-title="第13章成本函數th Edition Ppt Download">
+						<img class="card-img" src="https://slidesplayer.com/slide/15044019/91/images/8/%E7%AC%AC%E4%BA%8C%E7%AF%80+%E7%9F%AD%E6%9C%9F%E6%88%90%E6%9C%AC%E5%87%BD%E6%95%B8%E8%88%87%E6%9B%B2%E7%B7%9A+%E4%BB%A5%E4%B8%8B%E5%81%87%E8%A8%AD%EF%BC%9A+%281%29%E5%BB%A0%E5%95%86%E5%8F%AA%E5%83%B1%E7%94%A8%E5%8B%9E%E5%8B%95%28L%29%E8%88%87%E8%B3%87%E6%9C%AC%28K%29%E5%85%A9%E7%A8%AE%E7%94%9F%E7%94%A2%E8%A6%81%E7%B4%A0%E4%BE%86+%E7%94%9F%E7%94%A2%E8%B2%A1%E8%B2%A8%EF%BC%9B.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5FFcjDwMxgZFExIQF48cbMKPI5qLMDcWekNPECFoYWovmSkGQQhU9QzAWUlnt_fcv7XQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				第13章成本函數th Edition Ppt Download
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://swf.ishare.down.sina.com.cn/brDvYn1nYOJ.jpg?ssig=SG3fjXHJ7R&amp;Expires=1616194514&amp;KID=sina,ishare&amp;range=661387-875668" data-lightbox="roadtrip" data-title="专业会计硕士管理经济学下载 Ppt模板 爱问共享资料">
+						<img class="card-img" src="https://swf.ishare.down.sina.com.cn/brDvYn1nYOJ.jpg?ssig=SG3fjXHJ7R&amp;Expires=1616194514&amp;KID=sina,ishare&amp;range=661387-875668" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZf_BKjTKo9cIyzoOIsH0HCOQ9cufncEyBHjPfpIYFZb7bFx9ZMRE9_SPabMMblg-Gg4E';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				专业会计硕士管理经济学下载 Ppt模板 爱问共享资料
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="WGPO2VUEBEbG-M" data-lightbox="roadtrip" data-title="Http 118 122 142 36 8081 Web Downfile Aspx Id 23044">
+						<img class="card-img" src="WGPO2VUEBEbG-M" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_uov7vVeGM9bgxtEWndn-JggPiOrdU0nWXr27D20POdfv7kjrRihtInG7zlHRu8DYXFg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Http 118 122 142 36 8081 Web Downfile Aspx Id 23044
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://slideplayer.com/slide/5223559/16/images/3/C+H+A+P+T+E+R+C+H+E+C+K+L+I+S+T+%E5%AD%B8%E7%BF%92%E6%9C%AC%E7%AB%A0%E5%BE%8C%EF%BC%8C%E6%82%A8%E5%B0%87%E8%83%BD%EF%BC%9A+%E6%8F%8F%E8%BF%B0%E8%B3%87%E6%BA%90%E9%85%8D%E7%BD%AE%E7%9A%84%E6%96%B9%E5%BC%8F.jpg" data-lightbox="roadtrip" data-title="6 市場效率與公平chapter 6 市場效率與公平chapter C H A P T E R C H E C K L I S T 學習本章後 您將能 描述資源配置的方式1 區別價值與價格的差異 定義消費者剩餘">
+						<img class="card-img" src="https://slideplayer.com/slide/5223559/16/images/3/C+H+A+P+T+E+R+C+H+E+C+K+L+I+S+T+%E5%AD%B8%E7%BF%92%E6%9C%AC%E7%AB%A0%E5%BE%8C%EF%BC%8C%E6%82%A8%E5%B0%87%E8%83%BD%EF%BC%9A+%E6%8F%8F%E8%BF%B0%E8%B3%87%E6%BA%90%E9%85%8D%E7%BD%AE%E7%9A%84%E6%96%B9%E5%BC%8F.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3FbaymYNilwzK5mxlQje_K8MEQ9fF2t7N76FJQL9D0Na7Auzz29mXkVw_rU9YlIlDKYo';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				6 市場效率與公平chapter 6 市場效率與公平chapter C H A P T E R C H E C K L I S T 學習本章後 您將能 描述資源配置的方式1 區別價值與價格的差異 定義消費者剩餘
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://slidesplayer.com/slide/15438657/93/images/15/%E5%8F%A4%E8%AF%BA%E6%A8%A1%E5%9E%8B%E7%9A%84%E6%8E%A8%E5%B9%BF+%E4%BB%A4%E9%9C%80%E6%B1%82%E5%87%BD%E6%95%B0%E4%B8%BA%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%EF%BC%9AP%3Da-bQ%EF%BC%8CP%E6%98%AF%E4%BB%B7%E6%A0%BC%2CQ%E6%98%AF%E4%B8%A4%E4%B8%AA%E7%94%9F%E4%BA%A7%E8%80%85A%E4%B8%8EB%E7%9A%84%E4%BA%A7%E9%87%8F%E4%B9%8B%E5%92%8C%E3%80%82%E8%BE%B9%E9%99%85%E6%88%90%E6%9C%ACMC%3D0%E3%80%82+%E5%9C%A8%E8%B0%83%E6%95%B4%E4%BA%A7%E9%87%8F%E8%BF%87%E7%A8%8B%E4%B8%AD%EF%BC%8CA%E6%8A%8AB%E7%9A%84%E4%BA%A7%E9%87%8FQ2%E7%9C%8B%E4%BD%9C%E6%98%AF%E5%B8%B8%E6%95%B0%EF%BC%8CB%E6%8A%8AA%E7%9A%84%E4%BA%A7%E9%87%8FQ1%E4%BD%9C%E4%B8%BA%E5%B8%B8%E6%95%B0%E3%80%82+A%E7%9A%84%E6%80%BB%E6%94%B6%E7%9B%8A%EF%BC%9A.jpg" data-lightbox="roadtrip" data-title="一 寡头 Oligopoly 市场概述1 含义 寡头市场又称为寡头垄断市场 它是指少数几家厂商控制绝大部分市场乃至整个市场的产品的生产和销售的这样一种市场组织 2 成因 1 某些产品的生产必须在相当大的生产规模上进行才能达到最好的经济效益 2 行业中几家企业对">
+						<img class="card-img" src="https://slidesplayer.com/slide/15438657/93/images/15/%E5%8F%A4%E8%AF%BA%E6%A8%A1%E5%9E%8B%E7%9A%84%E6%8E%A8%E5%B9%BF+%E4%BB%A4%E9%9C%80%E6%B1%82%E5%87%BD%E6%95%B0%E4%B8%BA%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%EF%BC%9AP%3Da-bQ%EF%BC%8CP%E6%98%AF%E4%BB%B7%E6%A0%BC%2CQ%E6%98%AF%E4%B8%A4%E4%B8%AA%E7%94%9F%E4%BA%A7%E8%80%85A%E4%B8%8EB%E7%9A%84%E4%BA%A7%E9%87%8F%E4%B9%8B%E5%92%8C%E3%80%82%E8%BE%B9%E9%99%85%E6%88%90%E6%9C%ACMC%3D0%E3%80%82+%E5%9C%A8%E8%B0%83%E6%95%B4%E4%BA%A7%E9%87%8F%E8%BF%87%E7%A8%8B%E4%B8%AD%EF%BC%8CA%E6%8A%8AB%E7%9A%84%E4%BA%A7%E9%87%8FQ2%E7%9C%8B%E4%BD%9C%E6%98%AF%E5%B8%B8%E6%95%B0%EF%BC%8CB%E6%8A%8AA%E7%9A%84%E4%BA%A7%E9%87%8FQ1%E4%BD%9C%E4%B8%BA%E5%B8%B8%E6%95%B0%E3%80%82+A%E7%9A%84%E6%80%BB%E6%94%B6%E7%9B%8A%EF%BC%9A.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNFOtH2zLWP3m2TdIo_meH6A3pEHrWOv93zg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				一 寡头 Oligopoly 市场概述1 含义 寡头市场又称为寡头垄断市场 它是指少数几家厂商控制绝大部分市场乃至整个市场的产品的生产和销售的这样一种市场组织 2 成因 1 某些产品的生产必须在相当大的生产规模上进行才能达到最好的经济效益 2 行业中几家企业对
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic1.zhimg.com/80/v2-1f466610c2b7bf0077c83bc98da6462c_1440w.jpg" data-lightbox="roadtrip" data-title="经济学目的与概论 可以量化的经济学 知乎">
+						<img class="card-img" src="https://pic1.zhimg.com/80/v2-1f466610c2b7bf0077c83bc98da6462c_1440w.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_gWoBnM8VxeitXXewpXYg5TTIG2tIzeFDHQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				经济学目的与概论 可以量化的经济学 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://inews.gtimg.com/newsapp_bt/0/11275511320/641" data-lightbox="roadtrip" data-title="微观经济学里的名词解释">
+						<img class="card-img" src="https://inews.gtimg.com/newsapp_bt/0/11275511320/641" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDF-gYqa9gtYJofQprfg-aWFaLL7C-2x-dTQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				微观经济学里的名词解释
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://swf.ishare.down.sina.com.cn/2KZkQegQ5W1.jpg?ssig=0YiiIUGvb4&amp;Expires=1618237150&amp;KID=sina,ishare&amp;range=450310-737846" data-lightbox="roadtrip" data-title="微观经济学内容提要及重点下载 Word模板 爱问共享资料">
+						<img class="card-img" src="https://swf.ishare.down.sina.com.cn/2KZkQegQ5W1.jpg?ssig=0YiiIUGvb4&amp;Expires=1618237150&amp;KID=sina,ishare&amp;range=450310-737846" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQM10Tyo1KEb_TXdLrborSFVsOD9JfmiEjz5A';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				微观经济学内容提要及重点下载 Word模板 爱问共享资料
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="ZR3oWe3KdAMVjM" data-lightbox="roadtrip" data-title="Http Ir Lib Cyut Edu Tw 8080 Bitstream 310901800 12427 1 E5 80 8b E9 Ab 94 E7 B6 93 E6 Bf 9f E5 Ad B8 E6 95 99 E6 9d 90 Pdf">
+						<img class="card-img" src="ZR3oWe3KdAMVjM" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4xogq7LAtN8sp9HOWYefQvNbYJc2go6oJAQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Http Ir Lib Cyut Edu Tw 8080 Bitstream 310901800 12427 1 E5 80 8b E9 Ab 94 E7 B6 93 E6 Bf 9f E5 Ad B8 E6 95 99 E6 9d 90 Pdf
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://i0.wp.com/www.naipo.com/Portals/1/web_tw/images/pic55-1.jpg" data-lightbox="roadtrip" data-title="生產者剩餘生產者剩餘 Chris Miller">
+						<img class="card-img" src="https://i0.wp.com/www.naipo.com/Portals/1/web_tw/images/pic55-1.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSr3wyj2hu9RzU9TxkfLHFPodS7rcigBC6KYg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				生產者剩餘生產者剩餘 Chris Miller
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://image.isu.pub/160607105409-0ad639d53caaab26933a98163085c7f3/jpg/page_1.jpg" data-lightbox="roadtrip" data-title="Ce1205國民營經濟學試閱頁by Greatbooks Lin Issuu">
+						<img class="card-img" src="https://image.isu.pub/160607105409-0ad639d53caaab26933a98163085c7f3/jpg/page_1.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdcdQmbgiKJNSQj2PVkR1ov1j66nrgye9c6g';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Ce1205國民營經濟學試閱頁by Greatbooks Lin Issuu
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.coursehero.com/thumb/d3/90/d390ed9fa5a061b0654db73fdb58fdc6be17a517_180.jpg" data-lightbox="roadtrip" data-title="107 U6210 U7ba1 U6703 1 Pdf Go Fight Win Dcf Npv Pi Irr Course Hero">
+						<img class="card-img" src="https://www.coursehero.com/thumb/d3/90/d390ed9fa5a061b0654db73fdb58fdc6be17a517_180.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_Y8hDnyTTRxu5iSHYgjLdXeX_iLSsB-4gjA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				107 U6210 U7ba1 U6703 1 Pdf Go Fight Win Dcf Npv Pi Irr Course Hero
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic3.zhimg.com/80/v2-6600b5743f3565cffc4e45b50b501f8a_1440w.jpg" data-lightbox="roadtrip" data-title="经济学目的与概论 可以量化的经济学 知乎">
+						<img class="card-img" src="https://pic3.zhimg.com/80/v2-6600b5743f3565cffc4e45b50b501f8a_1440w.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTfR544TlkjTi-PjGK8ug7Z9_dX18d1LMbEA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				经济学目的与概论 可以量化的经济学 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://swf.ishare.down.sina.com.cn/cAH0aD9K1xB.svg?ssig=7Emx9A6Te4&amp;Expires=1621849253&amp;KID=sina,ishare&amp;range=0-63861" data-lightbox="roadtrip" data-title="西方经济学下载 Word模板 爱问共享资料">
+						<img class="card-img" src="https://swf.ishare.down.sina.com.cn/cAH0aD9K1xB.svg?ssig=7Emx9A6Te4&amp;Expires=1621849253&amp;KID=sina,ishare&amp;range=0-63861" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeZA9-QSiViJw15lHgr4YErdbp8DJ9zmXjXA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				西方经济学下载 Word模板 爱问共享资料
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://slidesplayer.com/slide/14306623/89/images/44/%E5%AE%83%E8%A1%A8%E7%A4%BA%EF%BC%9A%E4%B8%BA%E4%BA%86%E6%97%A2%E5%AE%9A%E4%BA%A7%E9%87%8F%E6%9D%A1%E4%BB%B6%E4%B8%8B%E7%9A%84%E6%88%90%E6%9C%AC%E6%9C%80%E5%B0%8F%EF%BC%8C%E5%8E%82%E5%95%86%E5%BA%94%E8%AF%A5%E9%80%89%E6%8B%A9%E6%9C%80%E4%BC%98%E7%9A%84%E7%94%9F%E4%BA%A7%E8%A6%81%E7%B4%A0%E7%BB%84%E5%90%88%EF%BC%8C%E4%BD%BF%E5%BE%97%E4%B8%A4%E8%A6%81%E7%B4%A0%E7%9A%84%E8%BE%B9%E9%99%85%E6%8A%80%E6%9C%AF%E6%9B%BF%E4%BB%A3%E7%8E%87%E7%AD%89%E4%BA%8E%E4%B8%A4%E8%A6%81%E7%B4%A0%E7%9A%84%E4%BB%B7%E6%A0%BC%E6%AF%94%E4%BE%8B%E3%80%82.jpg" data-lightbox="roadtrip" data-title="本讲主要探讨如下几个问题 第一节生产理论第二节成本理论第三节产业组织 市场理论 Ppt Download">
+						<img class="card-img" src="https://slidesplayer.com/slide/14306623/89/images/44/%E5%AE%83%E8%A1%A8%E7%A4%BA%EF%BC%9A%E4%B8%BA%E4%BA%86%E6%97%A2%E5%AE%9A%E4%BA%A7%E9%87%8F%E6%9D%A1%E4%BB%B6%E4%B8%8B%E7%9A%84%E6%88%90%E6%9C%AC%E6%9C%80%E5%B0%8F%EF%BC%8C%E5%8E%82%E5%95%86%E5%BA%94%E8%AF%A5%E9%80%89%E6%8B%A9%E6%9C%80%E4%BC%98%E7%9A%84%E7%94%9F%E4%BA%A7%E8%A6%81%E7%B4%A0%E7%BB%84%E5%90%88%EF%BC%8C%E4%BD%BF%E5%BE%97%E4%B8%A4%E8%A6%81%E7%B4%A0%E7%9A%84%E8%BE%B9%E9%99%85%E6%8A%80%E6%9C%AF%E6%9B%BF%E4%BB%A3%E7%8E%87%E7%AD%89%E4%BA%8E%E4%B8%A4%E8%A6%81%E7%B4%A0%E7%9A%84%E4%BB%B7%E6%A0%BC%E6%AF%94%E4%BE%8B%E3%80%82.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREGbRr2jtXv1Y0I-OHSkDJwgXypAYEW5Cnwg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				本讲主要探讨如下几个问题 第一节生产理论第二节成本理论第三节产业组织 市场理论 Ppt Download
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic1.zhimg.com/v2-a4a9ac007f9fb2a26379dd814c7a5922_1440w.jpg?source=172ae18b" data-lightbox="roadtrip" data-title="2019年中级经济基础考试 11 3下午 真题及答案 知乎">
+						<img class="card-img" src="https://pic1.zhimg.com/v2-a4a9ac007f9fb2a26379dd814c7a5922_1440w.jpg?source=172ae18b" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRi03Wz0GrMrEVcd25qkfQLyeFNAITlvaBQjA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				2019年中级经济基础考试 11 3下午 真题及答案 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="iEwtPaDJCI0MNM" data-lightbox="roadtrip" data-title="Https Core Ac Uk Download Pdf 41696057 Pdf">
+						<img class="card-img" src="iEwtPaDJCI0MNM" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQt0Vp5VA0Jm_zPleqSWKJ-k4qAs0d3RlGJKw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Https Core Ac Uk Download Pdf 41696057 Pdf
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+		
+	</div>
+
+		 
+		
+		
+				</div>
+				<div class="col-sm-12 widget">
+					<div class="d-block p-4">
+	<center>
+		<!-- BOTTOM BANNER ADS -->
+<script async="async" data-cfasync="false" src="//jc32arlvqpv8.com/eb47a424ae325c90cca32780149785c3/invoke.js"></script>
+<div id="container-eb47a424ae325c90cca32780149785c3"></div>
+
+	</center>
+</div>				</div>
+			</div>
+			<div class="row footer">
+				<div class="col-md-12 text-center py-4">
+										<a href="/p/dmca.html">Dmca</a>
+										<a href="/p/contact.html">Contact</a>
+										<a href="/p/privacy-policy.html">Privacy Policy</a>
+										<a href="/p/copyright.html">Copyright</a>
+					
+				</div>
+			</div>
+		</main>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js" integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js" integrity="sha256-CtKylYan+AJuoH8jrMht1+1PMhMqrKnB8K5g012WN5I=" crossorigin="anonymous"></script>
+		
+		<!-- Footer CSS JS -->
+		
+		
+		
+			<script type='text/javascript' src='//jc32arlvqpv8.com/ef/d5/10/efd510237a3143727bed46803ec35b8d.js'></script>
+</body>
+</html>

@@ -1,0 +1,682 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha256-L/W5Wfqfa0sdBNIKN9cG6QA5F2qx4qICmU2VgLruv9Y=" crossorigin="anonymous" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/css/lightbox.min.css" integrity="sha256-tBxlolRHP9uMsEFKVk+hk//ekOlXOixLKvye5W2WR5c=" crossorigin="anonymous" />
+		<link href="https://fonts.googleapis.com/css?family=Mr+Dafoe" rel="stylesheet" type="text/css">
+
+		<style type="text/css">
+			html,body{font-family:"Open Sans",Arial,sans-serif;font-size:14px;font-weight:400;background:#f3f3f3 url(https://miro.medium.com/max/1248/1*jRFqvHP39evPV4woblcqzQ.png
+) no-repeat center center fixed;background-size:cover;height:100%}#title{font-family:"Mr Dafoe",Times,serif;font-size:34px;background:rgba(255,255,255,.8);margin-bottom:34px}.header{padding-bottom:13px;margin-bottom:13px;border-bottom:1px solid #eee}a{color:#26ADE4;text-decoration:none}#title a{color:#333;margin-left:21px}#title a:hover{text-decoration:none;color:#26ADE4}.sidebar ul{margin:0;padding:0}.sidebar ul li{list-style:none}.footer{margin-top:21px;padding-top:13px;border-top:1px solid #eee}.footer a{margin:0 15px}.navi{margin:13px 0 13px 0;padding:13px}.navi a{margin:5px 2px;font-size:95%}.main{margin-top: 6rem;}.form-inline .form-control{min-width: 300px;}.v-cover{height: 380px; object-fit: cover;}.v-image{height: 200px; object-fit: cover;}.dwn-cover{max-height: 460px; object-fit: cover;}.main{margin-top: 6rem;}.form-inline .form-control{min-width: 300px;}			
+		</style>
+
+		<title>正規方程式 導出 偏微分</title>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/", 
+  "@type": "Article", 
+  "author": {
+    "@type": "Person",
+    "name": "James"
+  },
+  "headline": "正規方程式 導出 偏微分",
+  "datePublished": "2021-04-24",
+  "image": [S7xRz_6VafqMHM,https://flat2010.github.io/2018/10/26/%E5%85%B1%E8%BD%AD%E6%A2%AF%E5%BA%A6%E6%B3%95%E9%80%9A%E4%BF%97%E8%AE%B2%E4%B9%89/%E5%85%B1%E8%BD%AD%E6%A2%AF%E5%BA%A6%E6%B3%95%E9%80%9A%E4%BF%97%E8%AE%B2%E4%B9%89%E7%AB%A0%E8%8A%82%E5%85%B3%E7%B3%BB%E5%9B%BE.svg,https://miro.medium.com/max/1838/0*qTDm95T1GA5j2rVg],
+  "publisher": {
+    "@type": "Organization",
+    "name": "Tukang Parkir Gerobak",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://via.placeholder.com/512.png?text=正規方程式 導出 偏微分",
+      "width": 512,
+      "height": 512
+    }
+  }
+}
+</script>
+		<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-957NGNKQ70"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-957NGNKQ70');
+</script>
+
+<script type='text/javascript' src='//jc32arlvqpv8.com/1a/82/2e/1a822ef8a40a0fbab3c4ea12a5d2bb02.js'></script>
+</head>
+	<body>
+		<header class="bg-white fixed-top">			
+			<nav class="navbar navbar-light bg-white mb-0">
+				<div class="container justify-content-center justify-content-sm-between">	
+				  <a href="/" title="Blog" class="navbar-brand mb-1">Blog</a>
+				  				</div>			  
+			</nav>				
+		</header>
+		<main class="main container bg-white">
+			<div class="col-md-12 my-4" align="center">
+				<div class="d-block p-4">
+	<br/><center>
+<!-- TOP BANNER ADS -->
+</center><br/>
+</div>			</div>
+			<div class="row header">
+				<div class="col-sm-12 text-center p-2">
+						<h1>正規方程式 導出 偏微分</h1>
+
+	
+	<div class="navi text-center">
+										<a class="badge badge-info" href="/%E7%84%A6%E9%9B%BB%E5%8A%B9%E6%9E%9C-%E6%A7%8B%E6%88%90%E6%96%B9%E7%A8%8B%E5%BC%8F.html">焦電効果 構成方程式</a>
+											<a class="badge badge-light" href="/%E8%97%A4%E6%9C%AC-%E6%88%BF%E5%AD%90-%E3%81%86%E3%81%A1-%E3%81%AE-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93.html">藤本 房子 うち の お父さん</a>
+											<a class="badge badge-dark" href="/%E9%87%91%E6%8C%81%E3%81%A1%E3%81%8A%E3%81%A8%E3%81%86%E3%81%95%E3%82%93-%E8%B2%A7%E4%B9%8F%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93.html">金持ちおとうさん 貧乏お父さん</a>
+											<a class="badge badge-dark" href="/%E8%BF%91%E8%A6%AA-%E7%84%A1%E8%A8%80-%E7%9B%B8%E5%A7%A6-%E9%9A%A3%E3%81%AB%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%8C%E3%81%84%E3%82%8B%E3%81%AE%E3%82%88-%E5%8D%83%E4%B9%83%E3%81%82%E3%81%9A%E3%81%BF.html">近親 無言 相姦 隣にお父さんがいるのよ 千乃あずみ</a>
+											<a class="badge badge-info" href="/%E9%9F%93%E5%9B%BD%E3%83%89%E3%83%A9%E3%83%9E-%E9%81%A9%E9%BD%A2%E6%9C%9F%E6%83%91%E3%80%85%E3%83%AD%E3%83%9E%E3%83%B3%E3%82%B9-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%8C%E5%A4%89-%E3%83%8F%E3%83%83%E3%83%94%E3%83%BC%E3%82%A8%E3%83%B3%E3%83%89.html">韓国ドラマ 適齢期惑々ロマンス お父さんが変 ハッピーエンド</a>
+											<a class="badge badge-danger" href="/%E6%A7%8B%E9%80%A0%E6%96%B9%E7%A8%8B%E5%BC%8F%E3%83%A2%E3%83%87%E3%83%AA%E3%83%B3%E3%82%B0-%E5%85%B1%E5%88%86%E6%95%A3%E6%A7%8B%E9%80%A0%E5%88%86%E6%9E%90-%E9%81%95%E3%81%84.html">構造方程式モデリング 共分散構造分析 違い</a>
+											<a class="badge badge-dark" href="/%E9%9D%9E%E7%B7%9A%E5%BD%A2%E6%96%B9%E7%A8%8B%E5%BC%8F-%E3%83%8B%E3%83%A5%E3%83%BC%E3%83%88%E3%83%B3%E6%B3%95-%E5%89%8D%E5%87%A6%E7%90%86.html">非線形方程式 ニュートン法 前処理</a>
+											<a class="badge badge-success" href="/%E6%B5%B7%E5%A4%96-%E3%81%A7-%E5%83%8D%E3%81%8F-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93-%E3%82%92-%E8%A8%AA%E5%95%8F-%E3%82%BF%E3%82%A4.html">海外 で 働く お父さん を 訪問 タイ</a>
+											<a class="badge badge-secondary" href="/%E7%BE%A9%E7%90%86%E3%81%AE%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%8C%E4%BA%A1%E3%81%8F%E3%81%AA%E3%81%A3%E3%81%A1%E3%82%83%E3%81%A3%E3%81%9F.html">義理のお父さんが亡くなっちゃった</a>
+											<a class="badge badge-success" href="/%E7%88%B6%E5%A8%98%E6%95%99%E8%82%B2%E7%9A%84%E8%AA%BF%E6%95%99%E6%8C%87%E5%B0%8E-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%AE.html">父娘教育的調教指導 お父さんの</a>
+											<a class="badge badge-primary" href="/%E6%B0%B8%E5%B3%B6-%E3%82%A2%E3%83%8A%E3%82%A6%E3%83%B3%E3%82%B5%E3%83%BC-%E3%81%AE-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93.html">永島 アナウンサー の お父さん</a>
+											<a class="badge badge-warning" href="/%E6%B5%B7%E4%B8%8A%E3%81%BC%E3%81%8F%E3%81%86%E3%82%93%E3%81%8D-%E9%87%91%E7%8F%A0%E6%B5%B7-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93.html">海上ぼくうんき 金珠海 お父さん</a>
+											<a class="badge badge-dark" href="/%E6%9C%8D%E5%BE%93%E3%81%AE%E6%96%B9%E7%A8%8B%E5%BC%8F-%E8%A5%BF%E9%87%8E%E7%BF%94.html">服従の方程式 西野翔</a>
+											<a class="badge badge-dark" href="/%E7%9B%B4%E7%B7%9A%E3%81%AE%E6%96%B9%E7%A8%8B%E5%BC%8F-%E8%A1%8C%E5%88%97.html">直線の方程式 行列</a>
+											<a class="badge badge-primary" href="/%E9%80%A3%E7%AB%8B2%E6%AC%A1%E6%96%B9%E7%A8%8B%E5%BC%8F-%E8%87%AA%E5%8B%95%E8%A8%88%E7%AE%97.html">連立2次方程式 自動計算</a>
+						</div>
+<center>
+	<!-- MIDDLE BANNER ADS -->
+<script type="text/javascript">
+	atOptions = {
+		'key' : '2b77887421e2587a1a1b1d7c8a31a9e0',
+		'format' : 'iframe',
+		'height' : 250,
+		'width' : 300,
+		'params' : {}
+	};
+	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://jc32arlvqpv8.com/2b77887421e2587a1a1b1d7c8a31a9e0/invoke.js"></scr' + 'ipt>');
+</script>
+		
+	</center>
+					
+				</div>
+			</div>
+			<div class="row content mb-4">
+				<div class="col-md-12">					
+					
+	
+	<div class="card-columns">
+						
+	  <div class='card'>
+	  	<a href="https://miro.medium.com/max/595/1*E7lk5W9Wx64p6pcyvUE92w.png" data-lightbox="roadtrip" data-title="Normal Equation 正規方程式 在機器學習的實作中 如果想要求得線性迴歸的參數 我們通常會使用 By Keyo Medium">
+						<img class="card-img" src="https://miro.medium.com/max/595/1*E7lk5W9Wx64p6pcyvUE92w.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKna3uS11pa5ZDR-9ev0Tqm_KwKQTpRU9mmYVyd2NsM5_R939ysZCVuXyrQjnJ2KqsBUc';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Normal Equation 正規方程式 在機器學習的實作中 如果想要求得線性迴歸的參數 我們通常會使用 By Keyo Medium
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://miro.medium.com/max/1082/1*TsYvbJcG0XBx5A0zJ4oecg.png" data-lightbox="roadtrip" data-title="Normal Equation 正規方程式 在機器學習的實作中 如果想要求得線性迴歸的參數 我們通常會使用 By Keyo Medium">
+						<img class="card-img" src="https://miro.medium.com/max/1082/1*TsYvbJcG0XBx5A0zJ4oecg.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfIrjB5HhjFOIuneLC_DmUIN2Exay9w4slIgWOZ1cXlNRSZTOnO7h5-hHdzN4NdHabHqE';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Normal Equation 正規方程式 在機器學習的實作中 如果想要求得線性迴歸的參數 我們通常會使用 By Keyo Medium
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://miro.medium.com/max/1248/1*jRFqvHP39evPV4woblcqzQ.png" data-lightbox="roadtrip" data-title="Normal Equation 正規方程式 在機器學習的實作中 如果想要求得線性迴歸的參數 我們通常會使用 By Keyo Medium">
+						<img class="card-img" src="https://miro.medium.com/max/1248/1*jRFqvHP39evPV4woblcqzQ.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVVP6paS5M-AMGZJMWdVpaUuCsP4zh6gi_9Ye-7x8BG-ftksY4WF8jTZT6L2ZrD6VQtg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Normal Equation 正規方程式 在機器學習的實作中 如果想要求得線性迴歸的參數 我們通常會使用 By Keyo Medium
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://miro.medium.com/max/1114/1*eh2EveEzc5O8PoUX18o0ag.png" data-lightbox="roadtrip" data-title="Normal Equation 正規方程式 在機器學習的實作中 如果想要求得線性迴歸的參數 我們通常會使用 By Keyo Medium">
+						<img class="card-img" src="https://miro.medium.com/max/1114/1*eh2EveEzc5O8PoUX18o0ag.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGActPqZnsWxSa_MuKGtly3gJvXNohNJ2CkFAv139J3T2I3aEOrFdacajuYuihlEnkbQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Normal Equation 正規方程式 在機器學習的實作中 如果想要求得線性迴歸的參數 我們通常會使用 By Keyo Medium
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://s0.wp.com/latex.php?latex=%5Cdisplaystyle++J%3D%5Cbegin%7Bbmatrix%7D++%5Cdisplaystyle%5Cfrac%7B%5Cpartial+f_1%7D%7B%5Cpartial%5Cmathbf%7Bx%7D%7D%26%5Cdisplaystyle%5Cfrac%7B%5Cpartial+f_2%7D%7B%5Cpartial%5Cmathbf%7Bx%7D%7D%26%5Ccdots%26%5Cdisplaystyle%5Cfrac%7B%5Cpartial+f_m%7D%7B%5Cpartial%5Cmathbf%7Bx%7D%7D++%5Cend%7Bbmatrix%7D%5ET%3D%5Cbegin%7Bbmatrix%7D++%5Cdisplaystyle%5Cfrac%7B%5Cpartial+f_1%7D%7B%5Cpartial+x_1%7D%26%5Cdisplaystyle%5Cfrac%7B%5Cpartial+f_1%7D%7B%5Cpartial+x_2%7D%26%5Ccdots%26%5Cdisplaystyle%5Cfrac%7B%5Cpartial+f_1%7D%7B%5Cpartial+x_n%7D%5C%5C%5B0.8em%5D++%5Cdisplaystyle%5Cfrac%7B%5Cpartial+f_2%7D%7B%5Cpartial+x_1%7D%26%5Cdisplaystyle%5Cfrac%7B%5Cpartial+f_2%7D%7B%5Cpartial+x_2%7D%26%5Ccdots%26%5Cdisplaystyle%5Cfrac%7B%5Cpartial+f_2%7D%7B%5Cpartial+x_n%7D%5C%5C%5B0.8em%5D++%5Cvdots%26%5Cvdots%26%5Cddots%26%5Cvdots%5C%5C%5B0.8em%5D++%5Cdisplaystyle%5Cfrac%7B%5Cpartial+f_m%7D%7B%5Cpartial+x_1%7D%26%5Cdisplaystyle%5Cfrac%7B%5Cpartial+f_m%7D%7B%5Cpartial+x_2%7D%26%5Ccdots%26%5Cdisplaystyle%5Cfrac%7B%5Cpartial+f_m%7D%7B%5Cpartial+x_n%7D++%5Cend%7Bbmatrix%7D&amp;bg=ffffff&amp;fg=000000&amp;s=0&amp;c=20201002" data-lightbox="roadtrip" data-title="矩陣導數 線代啟示錄">
+						<img class="card-img" src="https://s0.wp.com/latex.php?latex=%5Cdisplaystyle++J%3D%5Cbegin%7Bbmatrix%7D++%5Cdisplaystyle%5Cfrac%7B%5Cpartial+f_1%7D%7B%5Cpartial%5Cmathbf%7Bx%7D%7D%26%5Cdisplaystyle%5Cfrac%7B%5Cpartial+f_2%7D%7B%5Cpartial%5Cmathbf%7Bx%7D%7D%26%5Ccdots%26%5Cdisplaystyle%5Cfrac%7B%5Cpartial+f_m%7D%7B%5Cpartial%5Cmathbf%7Bx%7D%7D++%5Cend%7Bbmatrix%7D%5ET%3D%5Cbegin%7Bbmatrix%7D++%5Cdisplaystyle%5Cfrac%7B%5Cpartial+f_1%7D%7B%5Cpartial+x_1%7D%26%5Cdisplaystyle%5Cfrac%7B%5Cpartial+f_1%7D%7B%5Cpartial+x_2%7D%26%5Ccdots%26%5Cdisplaystyle%5Cfrac%7B%5Cpartial+f_1%7D%7B%5Cpartial+x_n%7D%5C%5C%5B0.8em%5D++%5Cdisplaystyle%5Cfrac%7B%5Cpartial+f_2%7D%7B%5Cpartial+x_1%7D%26%5Cdisplaystyle%5Cfrac%7B%5Cpartial+f_2%7D%7B%5Cpartial+x_2%7D%26%5Ccdots%26%5Cdisplaystyle%5Cfrac%7B%5Cpartial+f_2%7D%7B%5Cpartial+x_n%7D%5C%5C%5B0.8em%5D++%5Cvdots%26%5Cvdots%26%5Cddots%26%5Cvdots%5C%5C%5B0.8em%5D++%5Cdisplaystyle%5Cfrac%7B%5Cpartial+f_m%7D%7B%5Cpartial+x_1%7D%26%5Cdisplaystyle%5Cfrac%7B%5Cpartial+f_m%7D%7B%5Cpartial+x_2%7D%26%5Ccdots%26%5Cdisplaystyle%5Cfrac%7B%5Cpartial+f_m%7D%7B%5Cpartial+x_n%7D++%5Cend%7Bbmatrix%7D&amp;bg=ffffff&amp;fg=000000&amp;s=0&amp;c=20201002" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTk78biT87NlHkwC14DuImIz6a_Ne4v-jqxu6CBPnWRK0pnDuKgkc1-a4NXYE3wsG7N8J4';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				矩陣導數 線代啟示錄
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="ttcKSBwqOJOZJM" data-lightbox="roadtrip" data-title="Http Ocw Nctu Edu Tw Course Calculusofvariation Lecturenotes Var38 Pdf">
+						<img class="card-img" src="ttcKSBwqOJOZJM" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKRbbNd5isoCaOO2Igxd3C9GM-xjUlqQ4ehiByXLpDJCLijGzjxDGoAuAqvvpQGx-ExMI';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Http Ocw Nctu Edu Tw Course Calculusofvariation Lecturenotes Var38 Pdf
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+				<div class='card'>	
+			<div class="d-block p-4">
+	</div>		  	
+		  	<h3 class="h6 p-2"><b></b></h3>
+					</div>
+		
+						
+	  <div class='card'>
+	  	<a href="https://s0.wp.com/latex.php?latex=%5Cdisplaystyle++H%3D%5Cbegin%7Bbmatrix%7D++%5Cdisplaystyle%5Cfrac%7B%5Cpartial%7D%7B%5Cpartial%5Cmathbf%7Bx%7D%7D%5Cleft%28%5Cfrac%7B%5Cpartial+f%7D%7B%5Cpartial+x_1%7D%5Cright%29%26%5Cdisplaystyle%5Cfrac%7B%5Cpartial%7D%7B%5Cpartial%5Cmathbf%7Bx%7D%7D%5Cleft%28%5Cfrac%7B%5Cpartial+f%7D%7B%5Cpartial+x_2%7D%5Cright%29%26%5Ccdots%26%5Cdisplaystyle%5Cfrac%7B%5Cpartial%7D%7B%5Cpartial%5Cmathbf%7Bx%7D%7D%5Cleft%28%5Cfrac%7B%5Cpartial+f%7D%7B%5Cpartial+x_n%7D%5Cright%29++%5Cend%7Bbmatrix%7D%3D%5Cbegin%7Bbmatrix%7D++%5Cdisplaystyle%5Cfrac%7B%5Cpartial%5E2f%7D%7B%5Cpartial+x_1%5Cpartial+x_1%7D%26%5Cdisplaystyle%5Cfrac%7B%5Cpartial%5E2f%7D%7B%5Cpartial+x_1%5Cpartial+x_2%7D%26%5Ccdots%26%5Cdisplaystyle%5Cfrac%7B%5Cpartial%5E2f%7D%7B%5Cpartial+x_1%5Cpartial+x_n%7D%5C%5C%5B1em%5D++%5Cdisplaystyle%5Cfrac%7B%5Cpartial%5E2+f%7D%7B%5Cpartial+x_2%5Cpartial+x_1%7D%26%5Cdisplaystyle%5Cfrac%7B%5Cpartial%5E2+f%7D%7B%5Cpartial+x_2%5Cpartial+x_2%7D%26%5Ccdots%26%5Cdisplaystyle%5Cfrac%7B%5Cpartial%5E2+f%7D%7B%5Cpartial+x_2%5Cpartial+x_n%7D%5C%5C++%5Cvdots%26%5Cvdots%26%5Cddots%26%5Cvdots%5C%5C++%5Cdisplaystyle%5Cfrac%7B%5Cpartial%5E2+f%7D%7B%5Cpartial+x_n%5Cpartial+x_1%7D%26%5Cdisplaystyle%5Cfrac%7B%5Cpartial%5E2f%7D%7B%5Cpartial+x_n%5Cpartial+x_2%7D%26%5Ccdots%26%5Cdisplaystyle%5Cfrac%7B%5Cpartial%5E2+f%7D%7B%5Cpartial+x_n%5Cpartial+x_n%7D++%5Cend%7Bbmatrix%7D&amp;bg=ffffff&amp;fg=000000&amp;s=0&amp;c=20201002" data-lightbox="roadtrip" data-title="矩陣導數 線代啟示錄">
+						<img class="card-img" src="https://s0.wp.com/latex.php?latex=%5Cdisplaystyle++H%3D%5Cbegin%7Bbmatrix%7D++%5Cdisplaystyle%5Cfrac%7B%5Cpartial%7D%7B%5Cpartial%5Cmathbf%7Bx%7D%7D%5Cleft%28%5Cfrac%7B%5Cpartial+f%7D%7B%5Cpartial+x_1%7D%5Cright%29%26%5Cdisplaystyle%5Cfrac%7B%5Cpartial%7D%7B%5Cpartial%5Cmathbf%7Bx%7D%7D%5Cleft%28%5Cfrac%7B%5Cpartial+f%7D%7B%5Cpartial+x_2%7D%5Cright%29%26%5Ccdots%26%5Cdisplaystyle%5Cfrac%7B%5Cpartial%7D%7B%5Cpartial%5Cmathbf%7Bx%7D%7D%5Cleft%28%5Cfrac%7B%5Cpartial+f%7D%7B%5Cpartial+x_n%7D%5Cright%29++%5Cend%7Bbmatrix%7D%3D%5Cbegin%7Bbmatrix%7D++%5Cdisplaystyle%5Cfrac%7B%5Cpartial%5E2f%7D%7B%5Cpartial+x_1%5Cpartial+x_1%7D%26%5Cdisplaystyle%5Cfrac%7B%5Cpartial%5E2f%7D%7B%5Cpartial+x_1%5Cpartial+x_2%7D%26%5Ccdots%26%5Cdisplaystyle%5Cfrac%7B%5Cpartial%5E2f%7D%7B%5Cpartial+x_1%5Cpartial+x_n%7D%5C%5C%5B1em%5D++%5Cdisplaystyle%5Cfrac%7B%5Cpartial%5E2+f%7D%7B%5Cpartial+x_2%5Cpartial+x_1%7D%26%5Cdisplaystyle%5Cfrac%7B%5Cpartial%5E2+f%7D%7B%5Cpartial+x_2%5Cpartial+x_2%7D%26%5Ccdots%26%5Cdisplaystyle%5Cfrac%7B%5Cpartial%5E2+f%7D%7B%5Cpartial+x_2%5Cpartial+x_n%7D%5C%5C++%5Cvdots%26%5Cvdots%26%5Cddots%26%5Cvdots%5C%5C++%5Cdisplaystyle%5Cfrac%7B%5Cpartial%5E2+f%7D%7B%5Cpartial+x_n%5Cpartial+x_1%7D%26%5Cdisplaystyle%5Cfrac%7B%5Cpartial%5E2f%7D%7B%5Cpartial+x_n%5Cpartial+x_2%7D%26%5Ccdots%26%5Cdisplaystyle%5Cfrac%7B%5Cpartial%5E2+f%7D%7B%5Cpartial+x_n%5Cpartial+x_n%7D++%5Cend%7Bbmatrix%7D&amp;bg=ffffff&amp;fg=000000&amp;s=0&amp;c=20201002" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTorspSpcUnRqy3RInarjXqJdgHmg5u0IrxbIdyWzQVSpZph8fu9OAl-ladK_pXrDy7lA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				矩陣導數 線代啟示錄
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://miro.medium.com/max/1722/1*Bms-yU_Q17aOhhRBg8FzPw.jpeg" data-lightbox="roadtrip" data-title="Python機器學習 106 使用梯度遞減尋找最佳解的相關演算法 By 張育晟eason Chang 展開數據人生 Medium">
+						<img class="card-img" src="https://miro.medium.com/max/1722/1*Bms-yU_Q17aOhhRBg8FzPw.jpeg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaxiBr_PR0RumSYwzxWq_GXCcGRmgFl31dRzAsioI7ja6wqjtas9f7rIL5_AC3Agr9XOo';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Python機器學習 106 使用梯度遞減尋找最佳解的相關演算法 By 張育晟eason Chang 展開數據人生 Medium
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://img-blog.csdnimg.cn/20190430085716499.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5ODMxMTYz,size_16,color_FFFFFF,t_70" data-lightbox="roadtrip" data-title="微分方程模型 冷月无声的博客 Csdn博客 微分方程模型">
+						<img class="card-img" src="https://img-blog.csdnimg.cn/20190430085716499.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5ODMxMTYz,size_16,color_FFFFFF,t_70" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS28qZuJcANKQz5b823zKvr34HlK8o5YdnyqdnHfTbVHEPKkvfSfh9BrYETExlEzzXyVw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				微分方程模型 冷月无声的博客 Csdn博客 微分方程模型
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://img-blog.csdnimg.cn/20201130191819882.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3VwZGF0ZTc=,size_16,color_FFFFFF,t_70" data-lightbox="roadtrip" data-title="含源码 Mole 求解偏微分方程的高阶模拟算子 52learn Csdn博客">
+						<img class="card-img" src="https://img-blog.csdnimg.cn/20201130191819882.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3VwZGF0ZTc=,size_16,color_FFFFFF,t_70" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaM3iWGPN_D_4zc4_GB8uuizJCQzkEEzfv8ryr-gScpIcyPztZXRza7c4SNBvH39SdAWU';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				含源码 Mole 求解偏微分方程的高阶模拟算子 52learn Csdn博客
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://reference.wolfram.com/language/tutorial/Files/NDSolveDAE.zh/I_7.png" data-lightbox="roadtrip" data-title="微分代数方程的数值解 Wolfram 语言参考资料">
+						<img class="card-img" src="https://reference.wolfram.com/language/tutorial/Files/NDSolveDAE.zh/I_7.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGjXwVRxINCwnhPR-j1XuXFOS0N0Mkiz8he0uzISXLBb8XngxZ3p2l8153ZnxdlEMKpA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				微分代数方程的数值解 Wolfram 语言参考资料
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://img-blog.csdnimg.cn/20190430085232248.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5ODMxMTYz,size_16,color_FFFFFF,t_70" data-lightbox="roadtrip" data-title="微分方程模型 冷月无声的博客 Csdn博客 微分方程模型">
+						<img class="card-img" src="https://img-blog.csdnimg.cn/20190430085232248.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5ODMxMTYz,size_16,color_FFFFFF,t_70" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkjiXNVJ-gzTQzmnGfhGYUBGCEyHpeJ0dS9ARnAOzFKRKsfkqULiGL3dCWXLKn_P-BgTY';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				微分方程模型 冷月无声的博客 Csdn博客 微分方程模型
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://reference.wolfram.com/language/tutorial/Files/NDSolveDAE.zh/9.gif" data-lightbox="roadtrip" data-title="微分代数方程的数值解 Wolfram 语言参考资料">
+						<img class="card-img" src="https://reference.wolfram.com/language/tutorial/Files/NDSolveDAE.zh/9.gif" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRokSdDc5XkE_jG8b_KLnaTWXZlQiqHXK4oTsOq8EhKpAbAvTOHrOmIG2L5BEr09JVCms';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				微分代数方程的数值解 Wolfram 语言参考资料
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic2.zhimg.com/50/dec3b6bc81da8f4d4040151a17347f13_hd.jpg?source=1940ef5c" data-lightbox="roadtrip" data-title="在你学习数学时有过怎样 顿悟 的经历 知乎">
+						<img class="card-img" src="https://pic2.zhimg.com/50/dec3b6bc81da8f4d4040151a17347f13_hd.jpg?source=1940ef5c" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHF-4F3OXPGwe7EaS8tXI5LAHTN09fPxmk8w0HTefZJNpWoHSlu-HD7yvqp7jkehl3fC0';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				在你学习数学时有过怎样 顿悟 的经历 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Crank-Nicolson-stencil.svg/440px-Crank-Nicolson-stencil.svg.png" data-lightbox="roadtrip" data-title="有限差分法 Wikiwand">
+						<img class="card-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Crank-Nicolson-stencil.svg/440px-Crank-Nicolson-stencil.svg.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAORohz_Hgo1_pdJVCli3_oJgMg2gEN2cJbf4mnWH2hejek1cgX_1aLQ5l70vmjR2ZDMY';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				有限差分法 Wikiwand
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://img-blog.csdnimg.cn/20190430085643127.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5ODMxMTYz,size_16,color_FFFFFF,t_70" data-lightbox="roadtrip" data-title="微分方程模型 冷月无声的博客 Csdn博客 微分方程模型">
+						<img class="card-img" src="https://img-blog.csdnimg.cn/20190430085643127.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5ODMxMTYz,size_16,color_FFFFFF,t_70" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHBk9bCYmzyuU5SnF7L5h_yZ_9xOrVl248iqnsVOqONBaLD_-7kV5yKoYRkFQv_V1ydmE';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				微分方程模型 冷月无声的博客 Csdn博客 微分方程模型
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://reference.wolfram.com/language/tutorial/Files/NDSolveDAE.zh/O_11.png" data-lightbox="roadtrip" data-title="微分代数方程的数值解 Wolfram 语言参考资料">
+						<img class="card-img" src="https://reference.wolfram.com/language/tutorial/Files/NDSolveDAE.zh/O_11.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTH43kXjbdPN9HhI6kX4mLurlH-KkyCiLK6IAPshENypBn6SQ7gMuz8mUoIm9t3lwEbH90';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				微分代数方程的数值解 Wolfram 语言参考资料
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://img-blog.csdnimg.cn/20190430085113891.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5ODMxMTYz,size_16,color_FFFFFF,t_70" data-lightbox="roadtrip" data-title="微分方程模型 冷月无声的博客 Csdn博客 微分方程模型">
+						<img class="card-img" src="https://img-blog.csdnimg.cn/20190430085113891.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5ODMxMTYz,size_16,color_FFFFFF,t_70" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQg1fvXj0iHtByIRyU5DhSp563geBmy1NAXsHInXxsKbv8ORoy2ZlYhUO5kbv8wxnYThtk';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				微分方程模型 冷月无声的博客 Csdn博客 微分方程模型
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://miro.medium.com/max/2002/1*oEqJe2yiKKeNU7OdckOCUQ.png" data-lightbox="roadtrip" data-title="Normal Equation 正規方程式 在機器學習的實作中 如果想要求得線性迴歸的參數 我們通常會使用 By Keyo Medium">
+						<img class="card-img" src="https://miro.medium.com/max/2002/1*oEqJe2yiKKeNU7OdckOCUQ.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQPho1kBL1_I7SCybUi_ArYWkXAGifjwRhZg-DJ1gNDFyjQ6AXnCBM7eMxNkWR8rN2dQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Normal Equation 正規方程式 在機器學習的實作中 如果想要求得線性迴歸的參數 我們通常會使用 By Keyo Medium
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://s0.wp.com/latex.php?latex=%5Cbegin%7Barray%7D%7Bccccc%7D++%5Chbox%7Btype%7D%26%5Cvline%26%5Chbox%7Bscalar%7D%26%5Chbox%7Bvector%7D%26%5Chbox%7Bmatrix%7D%5C%5C+%5Chline++%5Chbox%7Bscalar%7D%26%5Cvline%26%5Cdisplaystyle%5Cfrac%7B%5Cpartial+y%7D%7B%5Cpartial+x%7D%26%5Cdisplaystyle%5Cfrac%7B%5Cpartial%5Cmathbf%7By%7D%7D%7B%5Cpartial+x%7D%26%5Cdisplaystyle%5Cfrac%7B%5Cpartial+Y%7D%7B%5Cpartial+x%7D%5C%5C%5B0.8em%5D++%5Chbox%7Bvector%7D%26%5Cvline%26%5Cdisplaystyle%5Cfrac%7B%5Cpartial+y%7D%7B%5Cpartial%5Cmathbf%7Bx%7D%7D%26%5Cdisplaystyle%5Cfrac%7B%5Cpartial%5Cmathbf%7By%7D%7D%7B%5Cpartial%5Cmathbf%7Bx%7D%7D%26%5C%5C%5B0.8em%5D++%5Chbox%7Bmatrix%7D%26%5Cvline%26%5Cdisplaystyle%5Cfrac%7B%5Cpartial+y%7D%7B%5Cpartial+X%7D%26+%26+%5C%5C+%5B0.8em%5D%5Chline++%5Cend%7Barray%7D&amp;bg=ffffff&amp;fg=000000&amp;s=0&amp;c=20201002" data-lightbox="roadtrip" data-title="矩陣導數 線代啟示錄">
+						<img class="card-img" src="https://s0.wp.com/latex.php?latex=%5Cbegin%7Barray%7D%7Bccccc%7D++%5Chbox%7Btype%7D%26%5Cvline%26%5Chbox%7Bscalar%7D%26%5Chbox%7Bvector%7D%26%5Chbox%7Bmatrix%7D%5C%5C+%5Chline++%5Chbox%7Bscalar%7D%26%5Cvline%26%5Cdisplaystyle%5Cfrac%7B%5Cpartial+y%7D%7B%5Cpartial+x%7D%26%5Cdisplaystyle%5Cfrac%7B%5Cpartial%5Cmathbf%7By%7D%7D%7B%5Cpartial+x%7D%26%5Cdisplaystyle%5Cfrac%7B%5Cpartial+Y%7D%7B%5Cpartial+x%7D%5C%5C%5B0.8em%5D++%5Chbox%7Bvector%7D%26%5Cvline%26%5Cdisplaystyle%5Cfrac%7B%5Cpartial+y%7D%7B%5Cpartial%5Cmathbf%7Bx%7D%7D%26%5Cdisplaystyle%5Cfrac%7B%5Cpartial%5Cmathbf%7By%7D%7D%7B%5Cpartial%5Cmathbf%7Bx%7D%7D%26%5C%5C%5B0.8em%5D++%5Chbox%7Bmatrix%7D%26%5Cvline%26%5Cdisplaystyle%5Cfrac%7B%5Cpartial+y%7D%7B%5Cpartial+X%7D%26+%26+%5C%5C+%5B0.8em%5D%5Chline++%5Cend%7Barray%7D&amp;bg=ffffff&amp;fg=000000&amp;s=0&amp;c=20201002" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRm18f0OX2-k42zdqijwBKKWWbPV7CQR-VTRAbB2hLnsYb8xhH-gEXPymDL6jo4DoWRa4A';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				矩陣導數 線代啟示錄
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic1.zhimg.com/50/729c94649d2eb2184b06a4cd2c908fa4_hd.jpg?source=1940ef5c" data-lightbox="roadtrip" data-title="在你学习数学时有过怎样 顿悟 的经历 知乎">
+						<img class="card-img" src="https://pic1.zhimg.com/50/729c94649d2eb2184b06a4cd2c908fa4_hd.jpg?source=1940ef5c" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWyhMzvp2v9I_Ftcvc6sWjkCkJzLoDh18Mdg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				在你学习数学时有过怎样 顿悟 的经历 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="S7xRz_6VafqMHM" data-lightbox="roadtrip" data-title="Http Bicmr Pku Edu Cn Wenzw Paper Zaiwen Masterthesis Pdf">
+						<img class="card-img" src="S7xRz_6VafqMHM" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGXBlKPN9atzw5Z53a76zq85bMb-cwRkS9fQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Http Bicmr Pku Edu Cn Wenzw Paper Zaiwen Masterthesis Pdf
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://img-blog.csdnimg.cn/20190430085256600.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5ODMxMTYz,size_16,color_FFFFFF,t_70" data-lightbox="roadtrip" data-title="微分方程模型 冷月无声的博客 Csdn博客 微分方程模型">
+						<img class="card-img" src="https://img-blog.csdnimg.cn/20190430085256600.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5ODMxMTYz,size_16,color_FFFFFF,t_70" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJ1WdxXj-W4ExowLyDTDHVSGjODst6X8Grdg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				微分方程模型 冷月无声的博客 Csdn博客 微分方程模型
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://reference.wolfram.com/language/tutorial/Files/NDSolveDAE.zh/O_3.png" data-lightbox="roadtrip" data-title="微分代数方程的数值解 Wolfram 语言参考资料">
+						<img class="card-img" src="https://reference.wolfram.com/language/tutorial/Files/NDSolveDAE.zh/O_3.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTExSuro-QkQ0SDN8E8QHeP2sNdtT_yTpoD0w';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				微分代数方程的数值解 Wolfram 语言参考资料
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic4.zhimg.com/80/v2-5c1a393d51d9829a19f600d4cb8678eb_1440w.png" data-lightbox="roadtrip" data-title="规律使学习变得更简单 数学因而更美丽 知乎">
+						<img class="card-img" src="https://pic4.zhimg.com/80/v2-5c1a393d51d9829a19f600d4cb8678eb_1440w.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRli-uBPkuRm_semKvf2cXl6S-KnhEiQfHgBw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				规律使学习变得更简单 数学因而更美丽 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://wikimedia.org/api/rest_v1/media/math/render/svg/9413d89a0c87658235ba2039a50a9c93ba7443a7" data-lightbox="roadtrip" data-title="积分符号内取微分 维基百科 自由的百科全书">
+						<img class="card-img" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/9413d89a0c87658235ba2039a50a9c93ba7443a7" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSw-6jhYMgPsDC43p3NLPJoLt_VsLe4kZvCIQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				积分符号内取微分 维基百科 自由的百科全书
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://img-blog.csdnimg.cn/20190430085329440.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5ODMxMTYz,size_16,color_FFFFFF,t_70" data-lightbox="roadtrip" data-title="微分方程模型 冷月无声的博客 Csdn博客 微分方程模型">
+						<img class="card-img" src="https://img-blog.csdnimg.cn/20190430085329440.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5ODMxMTYz,size_16,color_FFFFFF,t_70" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUcMqugkQlkFU1eOE5hJs56HKuV0WyzBo2vg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				微分方程模型 冷月无声的博客 Csdn博客 微分方程模型
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://miro.medium.com/max/1838/0*qTDm95T1GA5j2rVg" data-lightbox="roadtrip" data-title="Normal Equation 正規方程式 在機器學習的實作中 如果想要求得線性迴歸的參數 我們通常會使用 By Keyo Medium">
+						<img class="card-img" src="https://miro.medium.com/max/1838/0*qTDm95T1GA5j2rVg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTe-zQHMzkm_P8EqSgSC_b8ZQ2ZhkghFeOidQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Normal Equation 正規方程式 在機器學習的實作中 如果想要求得線性迴歸的參數 我們通常會使用 By Keyo Medium
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Finite_Differences.svg/440px-Finite_Differences.svg.png" data-lightbox="roadtrip" data-title="有限差分法 Wikiwand">
+						<img class="card-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Finite_Differences.svg/440px-Finite_Differences.svg.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWeJPS8sZ8LTDEfKOkVg2tr-RTNIuVYudY1w';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				有限差分法 Wikiwand
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic4.zhimg.com/v2-8182c6fe2434f33ce66dcca634462f43_b.jpg" data-lightbox="roadtrip" data-title="Pde有限差分方法 6 热传导方程的双层格式与三层格式 知乎">
+						<img class="card-img" src="https://pic4.zhimg.com/v2-8182c6fe2434f33ce66dcca634462f43_b.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDbPFMUo6aBC9x16gIujX2JlrLZvnD_vWcQg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Pde有限差分方法 6 热传导方程的双层格式与三层格式 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.zhihu.com/equation?tex=a%5Cphi_%7Bxx%7D%3Da%5Cfrac%7B%5Cpartial+%5Cphi_x%7D%7B%5Cpartial+%5Cxi+%7D%5Cfrac%7B%5Cpartial+%5Cxi%7D%7B%5Cpartial+x%7D%2Ba%5Cfrac%7B%5Cpartial+%5Cphi_x%7D%7B%5Cpartial+%5Ceta+%7D%5Cfrac%7B%5Cpartial+%5Ceta%7D%7B%5Cpartial+x%7D%5C%5C%3Da%5Cfrac%7B%5Cpartial+%7D%7B%5Cpartial+%5Cxi%7D%28%5Cfrac%7B%5Cpartial+%5Cphi%7D%7B%5Cpartial+%5Cxi+%7D%5Cxi_x%2B%5Cfrac%7B%5Cpartial+%5Cphi%7D%7B%5Cpartial+%5Ceta+%7D%5Ceta_x%29%5Cxi_x%2Ba%5Cfrac%7B%5Cpartial+%7D%7B%5Cpartial+%5Ceta%7D%28%5Cfrac%7B%5Cpartial+%5Cphi%7D%7B%5Cpartial+%5Cxi+%7D%5Cxi_x%2B%5Cfrac%7B%5Cpartial+%5Cphi%7D%7B%5Cpartial+%5Ceta+%7D%5Ceta_x%29%5Ceta_x%5C%5C+%3Da%5Cxi_x%5E2%5Cphi_%7B%5Cxi%5Cxi%7D%2B2a%5Cxi_x%5Ceta_x%5Cphi_%7B%5Cxi%5Ceta%7D%2Ba%5Ceta_x%5E2%5Cphi_%7B%5Ceta%5Ceta%7D%5C%5C%5Ctag%7B1%7D" data-lightbox="roadtrip" data-title="线性二阶偏微分方程的分类 知乎">
+						<img class="card-img" src="https://www.zhihu.com/equation?tex=a%5Cphi_%7Bxx%7D%3Da%5Cfrac%7B%5Cpartial+%5Cphi_x%7D%7B%5Cpartial+%5Cxi+%7D%5Cfrac%7B%5Cpartial+%5Cxi%7D%7B%5Cpartial+x%7D%2Ba%5Cfrac%7B%5Cpartial+%5Cphi_x%7D%7B%5Cpartial+%5Ceta+%7D%5Cfrac%7B%5Cpartial+%5Ceta%7D%7B%5Cpartial+x%7D%5C%5C%3Da%5Cfrac%7B%5Cpartial+%7D%7B%5Cpartial+%5Cxi%7D%28%5Cfrac%7B%5Cpartial+%5Cphi%7D%7B%5Cpartial+%5Cxi+%7D%5Cxi_x%2B%5Cfrac%7B%5Cpartial+%5Cphi%7D%7B%5Cpartial+%5Ceta+%7D%5Ceta_x%29%5Cxi_x%2Ba%5Cfrac%7B%5Cpartial+%7D%7B%5Cpartial+%5Ceta%7D%28%5Cfrac%7B%5Cpartial+%5Cphi%7D%7B%5Cpartial+%5Cxi+%7D%5Cxi_x%2B%5Cfrac%7B%5Cpartial+%5Cphi%7D%7B%5Cpartial+%5Ceta+%7D%5Ceta_x%29%5Ceta_x%5C%5C+%3Da%5Cxi_x%5E2%5Cphi_%7B%5Cxi%5Cxi%7D%2B2a%5Cxi_x%5Ceta_x%5Cphi_%7B%5Cxi%5Ceta%7D%2Ba%5Ceta_x%5E2%5Cphi_%7B%5Ceta%5Ceta%7D%5C%5C%5Ctag%7B1%7D" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfAtqicNoV8WuEW5F-Ty9NYhglRHqgP0zauw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				线性二阶偏微分方程的分类 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://reference.wolfram.com/language/tutorial/Files/NDSolveDAE.zh/O_17.png" data-lightbox="roadtrip" data-title="微分代数方程的数值解 Wolfram 语言参考资料">
+						<img class="card-img" src="https://reference.wolfram.com/language/tutorial/Files/NDSolveDAE.zh/O_17.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIr-ocG379vVjS03RRzBEaJkldAG_EaW7Tgw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				微分代数方程的数值解 Wolfram 语言参考资料
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://flat2010.github.io/2018/10/26/%E5%85%B1%E8%BD%AD%E6%A2%AF%E5%BA%A6%E6%B3%95%E9%80%9A%E4%BF%97%E8%AE%B2%E4%B9%89/%E5%85%B1%E8%BD%AD%E6%A2%AF%E5%BA%A6%E6%B3%95%E9%80%9A%E4%BF%97%E8%AE%B2%E4%B9%89%E7%AB%A0%E8%8A%82%E5%85%B3%E7%B3%BB%E5%9B%BE.svg" data-lightbox="roadtrip" data-title="共轭梯度法通俗讲义 断鸿声里 立尽斜阳">
+						<img class="card-img" src="https://flat2010.github.io/2018/10/26/%E5%85%B1%E8%BD%AD%E6%A2%AF%E5%BA%A6%E6%B3%95%E9%80%9A%E4%BF%97%E8%AE%B2%E4%B9%89/%E5%85%B1%E8%BD%AD%E6%A2%AF%E5%BA%A6%E6%B3%95%E9%80%9A%E4%BF%97%E8%AE%B2%E4%B9%89%E7%AB%A0%E8%8A%82%E5%85%B3%E7%B3%BB%E5%9B%BE.svg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkOr7GO4OJdJg_n6xftUb_a_0y_s9zhPtuGQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				共轭梯度法通俗讲义 断鸿声里 立尽斜阳
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+		
+	</div>
+
+		 
+		
+		
+				</div>
+				<div class="col-sm-12 widget">
+					<div class="d-block p-4">
+	<center>
+		<!-- BOTTOM BANNER ADS -->
+<script async="async" data-cfasync="false" src="//jc32arlvqpv8.com/eb47a424ae325c90cca32780149785c3/invoke.js"></script>
+<div id="container-eb47a424ae325c90cca32780149785c3"></div>
+
+	</center>
+</div>				</div>
+			</div>
+			<div class="row footer">
+				<div class="col-md-12 text-center py-4">
+										<a href="/p/dmca.html">Dmca</a>
+										<a href="/p/contact.html">Contact</a>
+										<a href="/p/privacy-policy.html">Privacy Policy</a>
+										<a href="/p/copyright.html">Copyright</a>
+					
+				</div>
+			</div>
+		</main>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js" integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js" integrity="sha256-CtKylYan+AJuoH8jrMht1+1PMhMqrKnB8K5g012WN5I=" crossorigin="anonymous"></script>
+		
+		<!-- Footer CSS JS -->
+		
+		
+		
+			<script type='text/javascript' src='//jc32arlvqpv8.com/ef/d5/10/efd510237a3143727bed46803ec35b8d.js'></script>
+</body>
+</html>

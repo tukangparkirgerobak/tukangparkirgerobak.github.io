@@ -1,0 +1,682 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha256-L/W5Wfqfa0sdBNIKN9cG6QA5F2qx4qICmU2VgLruv9Y=" crossorigin="anonymous" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/css/lightbox.min.css" integrity="sha256-tBxlolRHP9uMsEFKVk+hk//ekOlXOixLKvye5W2WR5c=" crossorigin="anonymous" />
+		<link href="https://fonts.googleapis.com/css?family=Mr+Dafoe" rel="stylesheet" type="text/css">
+
+		<style type="text/css">
+			html,body{font-family:"Open Sans",Arial,sans-serif;font-size:14px;font-weight:400;background:#f3f3f3 url(https://www.cradle.co.jp/dcms_media/image/column_basic02_s0407.png
+) no-repeat center center fixed;background-size:cover;height:100%}#title{font-family:"Mr Dafoe",Times,serif;font-size:34px;background:rgba(255,255,255,.8);margin-bottom:34px}.header{padding-bottom:13px;margin-bottom:13px;border-bottom:1px solid #eee}a{color:#26ADE4;text-decoration:none}#title a{color:#333;margin-left:21px}#title a:hover{text-decoration:none;color:#26ADE4}.sidebar ul{margin:0;padding:0}.sidebar ul li{list-style:none}.footer{margin-top:21px;padding-top:13px;border-top:1px solid #eee}.footer a{margin:0 15px}.navi{margin:13px 0 13px 0;padding:13px}.navi a{margin:5px 2px;font-size:95%}.main{margin-top: 6rem;}.form-inline .form-control{min-width: 300px;}.v-cover{height: 380px; object-fit: cover;}.v-image{height: 200px; object-fit: cover;}.dwn-cover{max-height: 460px; object-fit: cover;}.main{margin-top: 6rem;}.form-inline .form-control{min-width: 300px;}			
+		</style>
+
+		<title>熱伝導方程式 拡散係数</title>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/", 
+  "@type": "Article", 
+  "author": {
+    "@type": "Person",
+    "name": "James"
+  },
+  "headline": "熱伝導方程式 拡散係数",
+  "datePublished": "2021-04-24",
+  "image": [https://blog-imgs-65-origin.fc2.com/g/o/m/gomisai/001_20140215031531793.png,https://slidesplayer.net/slide/17532698/103/images/6/%E7%86%B1%E4%BC%9D%E5%B0%8E%E6%96%B9%E7%A8%8B%E5%BC%8F%E3%81%AE%E5%B7%AE%E5%88%86%E5%8C%96+%E5%B7%AE%E5%88%86%E5%8C%96%E3%81%99%E3%82%8B+Al%E3%81%AE%CE%B1%EF%BC%9D96.8%5Bmm2%2Fs%5D+%CE%94t%3D+%CE%94x%3D0.1+l%EF%BC%9D1%5Bmm%5D.jpg,https://www.future-engineer.jp/img/simulation_2.jpg],
+  "publisher": {
+    "@type": "Organization",
+    "name": "Tukang Parkir Gerobak",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://via.placeholder.com/512.png?text=熱伝導方程式 拡散係数",
+      "width": 512,
+      "height": 512
+    }
+  }
+}
+</script>
+		<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-957NGNKQ70"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-957NGNKQ70');
+</script>
+
+<script type='text/javascript' src='//jc32arlvqpv8.com/1a/82/2e/1a822ef8a40a0fbab3c4ea12a5d2bb02.js'></script>
+</head>
+	<body>
+		<header class="bg-white fixed-top">			
+			<nav class="navbar navbar-light bg-white mb-0">
+				<div class="container justify-content-center justify-content-sm-between">	
+				  <a href="/" title="Blog" class="navbar-brand mb-1">Blog</a>
+				  				</div>			  
+			</nav>				
+		</header>
+		<main class="main container bg-white">
+			<div class="col-md-12 my-4" align="center">
+				<div class="d-block p-4">
+	<br/><center>
+<!-- TOP BANNER ADS -->
+</center><br/>
+</div>			</div>
+			<div class="row header">
+				<div class="col-sm-12 text-center p-2">
+						<h1>熱伝導方程式 拡散係数</h1>
+
+	
+	<div class="navi text-center">
+										<a class="badge badge-secondary" href="/%E8%AA%98%E5%B0%8E%E6%96%B9%E7%A8%8B%E5%BC%8F-%E5%B0%8E%E5%87%BA-mhd.html">誘導方程式 導出 mhd</a>
+											<a class="badge badge-info" href="/%E6%B5%81%E4%BD%93-%E3%82%A8%E3%83%8D%E3%83%AB%E3%82%AE%E6%96%B9%E7%A8%8B%E5%BC%8F-%E7%A9%8D%E5%88%86.html">流体 エネルギ方程式 積分</a>
+											<a class="badge badge-primary" href="/%E7%99%92%E3%81%97%E3%81%AE%E3%83%8F%E3%82%A4%E3%83%88%E3%83%BC%E3%83%B3%E3%83%9C%E3%83%BC%E3%82%AB%E3%83%AB%E3%81%A8%E6%BF%80%E3%83%98%E3%83%B4%E3%82%A3%E3%83%BC%E3%81%AA%E3%82%B5%E3%82%A6%E3%83%B3%E3%83%89%E3%81%8C%E7%B9%94%E3%82%8A%E6%88%90%E3%81%99%E9%AD%94%E6%B3%95%E3%81%AE%E6%96%B9%E7%A8%8B%E5%BC%8F%E3%82%92%E4%BD%93%E6%84%9F%E3%81%9B%E3%82%88.html">癒しのハイトーンボーカルと激ヘヴィーなサウンドが織り成す魔法の方程式を体感せよ</a>
+											<a class="badge badge-danger" href="/%E7%A7%BB%E6%B5%81%E6%96%B9%E7%A8%8B%E5%BC%8F-c%E8%A8%80%E8%AA%9E.html">移流方程式 c言語</a>
+											<a class="badge badge-light" href="/%E6%B0%B4%E8%B0%B7%E3%81%82%E3%81%8A%E3%81%84-%E7%88%B6%E3%81%A8%E5%A8%98%E3%81%AE%E8%BF%91%E8%A6%AA%E3%82%BB%E3%83%83%E3%82%AF%E3%82%B9-%E9%85%92%E7%99%96%E3%81%8C%E6%82%AA%E3%81%8F-%E8%A6%AA%E9%9B%A2%E3%82%8C%E3%82%82%E5%87%BA%E6%9D%A5%E3%81%AA%E3%81%84%E7%A7%81%E3%81%AF%E3%81%84%E3%81%A4%E3%82%82%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%AB%E8%BF%B7%E6%83%91%E3%82%92%E6%8E%9B%E3%81%91%E3%81%A6%E3%81%84%E3%81%BE%E3%81%99-%E3%81%9D%E3%82%93%E3%81%AA%E3%81%A0%E3%81%8B%E3%82%89%E3%81%82%E3%81%AE%E6%97%A5%E3%82%82.html">水谷あおい 父と娘の近親セックス 酒癖が悪く 親離れも出来ない私はいつもお父さんに迷惑を掛けています そんなだからあの日も</a>
+											<a class="badge badge-secondary" href="/%E7%A7%81%E3%81%AE%E5%90%8D%E5%89%8D%E3%81%AF%E6%9C%A8%E4%B9%8B%E6%9C%AC%E6%A1%9C-%E5%8F%8B%E6%9E%9D%E5%B0%8F%E5%AD%A6%E6%A0%A1%E3%81%AE%E5%9B%9B%E5%B9%B4%E7%94%9F-%E3%81%8A%E5%85%84%E3%81%A1%E3%82%83%E3%82%93%E3%81%A8-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%A8%E4%B8%89%E4%BA%BA%E6%9A%AE%E3%82%89%E3%81%97-%E3%81%82%E3%82%8B%E6%97%A5-%E7%A7%81%E3%81%8C%E3%82%AF%E3%83%AD%E3%82%A6%E3%82%AB%E3%83%BC%E3%83%89%E3%81%AE%E5%B0%81%E5%8D%B0%E3%82%92%E8%A7%A3%E3%81%84%E3%81%A6%E3%81%97%E3%81%BE%E3%81%A3.html">私の名前は木之本桜 友枝小学校の四年生 お兄ちゃんと お父さんと三人暮らし ある日 私がクロウカードの封印を解いてしまっ</a>
+											<a class="badge badge-danger" href="/%E9%9B%A2%E5%A9%9A%E3%81%97%E3%81%A6%E3%82%82%E9%A0%BB%E7%B9%81%E3%81%AB%E5%AE%B6%E3%81%AB%E5%B8%B0%E3%82%8B%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93.html">離婚しても頻繁に家に帰るお父さん</a>
+											<a class="badge badge-warning" href="/%E7%A7%81%E3%81%AE%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93-%E3%83%97%E3%83%83%E3%83%81%E3%83%BC%E3%83%8B-%E3%83%9E%E3%83%AA%E3%82%A2%E3%82%AB%E3%83%A9%E3%82%B9%E4%BB%A5%E5%A4%96.html">私のお父さん プッチーニ マリアカラス以外</a>
+											<a class="badge badge-secondary" href="/%E8%A8%88%E7%AE%97%E6%8A%80%E8%A1%93%E6%A4%9C%E5%AE%9A2%E7%B4%9A-%E6%96%B9%E7%A8%8B%E5%BC%8F-%E8%A7%A3%E3%81%8D%E6%96%B9.html">計算技術検定2級 方程式 解き方</a>
+											<a class="badge badge-secondary" href="/%E7%B5%B6%E5%AF%BE-%E5%A6%8A%E5%A8%A0%E3%81%99%E3%82%8B%E3%82%93%E3%81%A0%E3%81%8B%E3%82%89-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%82%92%E6%8A%BC%E3%81%95%E3%81%88%E3%81%A4%E3%81%91%E3%81%A6%E7%A7%81%E3%81%8C%E5%A6%8A%E5%A8%A0%E3%81%99%E3%82%8B%E3%81%BE%E3%81%A7%E4%BD%95%E5%BA%A6%E3%82%82%E4%B8%AD%E5%87%BA%E3%81%97%E3%81%95%E3%81%9B%E3%81%A1%E3%82%83%E3%81%84%E3%81%BE%E3%81%97%E3%81%9F-2.html">絶対 妊娠するんだから お父さんを押さえつけて私が妊娠するまで何度も中出しさせちゃいました 2</a>
+											<a class="badge badge-dark" href="/%E6%B3%95%E7%B7%9A-%E6%96%B9%E7%A8%8B%E5%BC%8F-3%E6%AC%A1%E5%85%83-x-y-z.html">法線 方程式 3次元 x y z</a>
+											<a class="badge badge-success" href="/%E6%B2%B9%E5%88%86%E3%81%91%E7%AE%97-%E6%96%B9%E7%A8%8B%E5%BC%8F.html">油分け算 方程式</a>
+											<a class="badge badge-warning" href="/%E7%94%9F%E3%83%A0%E3%82%B9%E3%83%A1%E5%BD%BC%E5%A5%B3%E3%81%AE%E6%96%B9%E7%A8%8B%E5%BC%8F.html">生ムスメ彼女の方程式</a>
+											<a class="badge badge-success" href="/%E7%A7%81-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%AE%E5%AD%90%E4%BE%9B%E5%A6%8A%E5%A8%A0%E3%81%99%E3%82%8B-%E5%A5%B3%E5%AD%90%E6%A0%A1%E7%94%9F%E3%81%AE.html">私 お父さんの子供妊娠する 女子校生の</a>
+											<a class="badge badge-primary" href="/%E6%B5%9C%E5%8F%A3%E4%BA%AC%E5%AD%90-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%8A%E6%AF%8D%E3%81%95%E3%82%93-%E3%83%A2%E3%83%8B%E3%82%BF%E3%83%AA%E3%83%B3%E3%82%B0.html">浜口京子 お父さんお母さん モニタリング</a>
+						</div>
+<center>
+	<!-- MIDDLE BANNER ADS -->
+<script type="text/javascript">
+	atOptions = {
+		'key' : '2b77887421e2587a1a1b1d7c8a31a9e0',
+		'format' : 'iframe',
+		'height' : 250,
+		'width' : 300,
+		'params' : {}
+	};
+	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://jc32arlvqpv8.com/2b77887421e2587a1a1b1d7c8a31a9e0/invoke.js"></scr' + 'ipt>');
+</script>
+		
+	</center>
+					
+				</div>
+			</div>
+			<div class="row content mb-4">
+				<div class="col-md-12">					
+					
+	
+	<div class="card-columns">
+						
+	  <div class='card'>
+	  	<a href="https://study-z.net/wp-content/uploads/2020/08/ThermalDiffusion6.png" data-lightbox="roadtrip" data-title="5分でわかる 熱拡散 濃度勾配や温度勾配についても理系ライターが解説 ページ 3 3 Study Z ドラゴン桜と学ぶwebマガジン">
+						<img class="card-img" src="https://study-z.net/wp-content/uploads/2020/08/ThermalDiffusion6.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQv_qO_u3Z1MQEl4c_mLaUrmIhv0AibkjX2O6ktUCmU6PoNO9YVAeju9fORBo5uY766-n8';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				5分でわかる 熱拡散 濃度勾配や温度勾配についても理系ライターが解説 ページ 3 3 Study Z ドラゴン桜と学ぶwebマガジン
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="Q8f0E5Qm5zbFxM" data-lightbox="roadtrip" data-title="2">
+						<img class="card-img" src="Q8f0E5Qm5zbFxM" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLpgvt4iYK7TktmKsGvwHvHKJZKtNNfVMbCOtD7waeJumiV237TFAH_C60Bkze4Or9UxU';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				2
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.cradle.co.jp/dcms_media/image/column_basic02_s0407.png" data-lightbox="roadtrip" data-title="もっと知りたい 熱流体解析の基礎39 第4章 伝熱 4 7 相変化と伝熱 投稿一覧">
+						<img class="card-img" src="https://www.cradle.co.jp/dcms_media/image/column_basic02_s0407.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUs92C4sIBOKJPFi7uh403feH9jdxP3iWlbKKff9Pawd7J7vMj6BYbl2FIKbzuMOkdGA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				もっと知りたい 熱流体解析の基礎39 第4章 伝熱 4 7 相変化と伝熱 投稿一覧
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://www.isc.meiji.ac.jp/~re00079/HT.2020/pict/HT202031.jpg" data-lightbox="roadtrip" data-title="伝熱工学 2020年度 春学期 3年生">
+						<img class="card-img" src="http://www.isc.meiji.ac.jp/~re00079/HT.2020/pict/HT202031.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXN_lQE0pDVfIW6UePWzjmgLLRqiHQGr-MJKY1hGTOJr5cvaVDKS2kRUFVKOeM6xAoU00';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				伝熱工学 2020年度 春学期 3年生
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://slidesplayer.net/slide/16501785/96/images/19/%E3%81%93%E3%81%AE%E5%BC%8F%E3%81%AF%EF%BC%9F+%CF%81Cp%E3%81%A7%E5%89%B2%E3%82%8B+%CE%B1%E3%81%AF%E4%BD%95%EF%BC%9F%E3%80%81%E5%8D%98%E4%BD%8D%E3%81%AF%EF%BC%9F+%2819-14%2C+p.+280%29+%E7%86%B1%E4%BC%9D%E5%B0%8E%E6%96%B9%E7%A8%8B%E5%BC%8F%28%E7%86%B1%E6%8B%A1%E6%95%A3%E6%96%B9%E7%A8%8B%E5%BC%8F%EF%BC%89+%CE%B1%EF%BC%9A%E7%86%B1%E6%8B%A1%E6%95%A3%E7%8E%87%5Bm2%2Fs%5D.jpg" data-lightbox="roadtrip" data-title="Chapter 26 Steady State Molecular Diffusion Ppt Download">
+						<img class="card-img" src="https://slidesplayer.net/slide/16501785/96/images/19/%E3%81%93%E3%81%AE%E5%BC%8F%E3%81%AF%EF%BC%9F+%CF%81Cp%E3%81%A7%E5%89%B2%E3%82%8B+%CE%B1%E3%81%AF%E4%BD%95%EF%BC%9F%E3%80%81%E5%8D%98%E4%BD%8D%E3%81%AF%EF%BC%9F+%2819-14%2C+p.+280%29+%E7%86%B1%E4%BC%9D%E5%B0%8E%E6%96%B9%E7%A8%8B%E5%BC%8F%28%E7%86%B1%E6%8B%A1%E6%95%A3%E6%96%B9%E7%A8%8B%E5%BC%8F%EF%BC%89+%CE%B1%EF%BC%9A%E7%86%B1%E6%8B%A1%E6%95%A3%E7%8E%87%5Bm2%2Fs%5D.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvYi0fXz18B7a9UhCxmCONp9e4AlCQpANN5cZ_Y5Vj-8eC3g2aK6ppI-Jc5gu1DReoD0o';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Chapter 26 Steady State Molecular Diffusion Ppt Download
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://www.geo.titech.ac.jp/lab/ida/numexe/manual/8/eq1.png" data-lightbox="roadtrip" data-title="偏微分方程式を解く 拡散方程式を解いてみる 先週まで常微分方程式の解法を取り扱いました 今回は偏微分方程式を扱います 偏微分方程式 の数値解法は 計算機シミュレーションの王道です 例えば 流体力学のシミュレーションは 偏微分方程式">
+						<img class="card-img" src="http://www.geo.titech.ac.jp/lab/ida/numexe/manual/8/eq1.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7Fxywot3YMpxNs3GD2vqJf9ywGkXVYi44ya8vXbUd8WOyeYYwvlJ8D4foTopWs3HiZbM';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				偏微分方程式を解く 拡散方程式を解いてみる 先週まで常微分方程式の解法を取り扱いました 今回は偏微分方程式を扱います 偏微分方程式 の数値解法は 計算機シミュレーションの王道です 例えば 流体力学のシミュレーションは 偏微分方程式
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+				<div class='card'>	
+			<div class="d-block p-4">
+	</div>		  	
+		  	<h3 class="h6 p-2"><b></b></h3>
+					</div>
+		
+						
+	  <div class='card'>
+	  	<a href="http://mechanics.civil.tohoku.ac.jp/bear/nisikozo/s5img1696.gif" data-lightbox="roadtrip" data-title="I 1 1次元の熱伝導問題">
+						<img class="card-img" src="http://mechanics.civil.tohoku.ac.jp/bear/nisikozo/s5img1696.gif" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTH5rKHWN9f7Hr91KCXX_TxTkKs7HoQSNCB9lrCp_dzG2-tSMmLlB_fYVpcMXEEVzkeCNk';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				I 1 1次元の熱伝導問題
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://www.nda.ac.jp/cc/users/iwase/OLD/EDU/JUGYO/NETSUDENDOU/netsudendou/img27.png" data-lightbox="roadtrip" data-title="一次元熱伝導の例">
+						<img class="card-img" src="http://www.nda.ac.jp/cc/users/iwase/OLD/EDU/JUGYO/NETSUDENDOU/netsudendou/img27.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSedxhA-fX1eWQAZGR5kqL0LUobMO-pOkKJNRHMksr803kwibC5FgmKLPIUBCK3Agsxj-Y';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				一次元熱伝導の例
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.cradle.co.jp/dcms_media/image/column_basic02_s0541.png" data-lightbox="roadtrip" data-title="もっと知りたい 熱流体解析の基礎46 第5章 物質拡散 5 4 濃度の支配方程式 投稿一覧">
+						<img class="card-img" src="https://www.cradle.co.jp/dcms_media/image/column_basic02_s0541.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbMlOj74nqwCOubd3wrwvyYfXgWQFPoedEUPRhEcl6AfgP7Uk-rjrPCdLSxO6Eu0Z5vQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				もっと知りたい 熱流体解析の基礎46 第5章 物質拡散 5 4 濃度の支配方程式 投稿一覧
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://math-fun.net/wp-content/uploads/2018/07/SC000472.jpg" data-lightbox="roadtrip" data-title="なぜ偏微分を学ぶ フーリエの熱伝導方程式を例に 趣味の大学数学">
+						<img class="card-img" src="https://math-fun.net/wp-content/uploads/2018/07/SC000472.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTw_OCCaxVwi0ZnhLsFRbdegegCCo3jMhhSOcaG4RpssooT2YxvcMlWr_IaKTaK6Dbnyac';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				なぜ偏微分を学ぶ フーリエの熱伝導方程式を例に 趣味の大学数学
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://www.gaia.h.kyoto-u.ac.jp/~yfuru/Lectures/visual/Ex/TBL-figs/Tdiff.gif" data-lightbox="roadtrip" data-title="Index">
+						<img class="card-img" src="http://www.gaia.h.kyoto-u.ac.jp/~yfuru/Lectures/visual/Ex/TBL-figs/Tdiff.gif" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdh8yLM5ORWL3_kjyAuXtw_Faj2seJc5JFSAvxtJqFHjXImSAwH00NKM_ltE0v4dofGLc';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Index
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="wY5UO3kDKnHHxM" data-lightbox="roadtrip" data-title="Http Www Ai Phase Co Jp Wp Content Uploads 2019 06 4816770f6d7a3050afc90c6efb9b0ff9 Pdf">
+						<img class="card-img" src="wY5UO3kDKnHHxM" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTN9MG7jx7M7PLscLXl-bc2ubhNT-cLa4hNzjrC91_2TX8PxRXKxKj8VUOEND-fJRaJlZ8';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Http Www Ai Phase Co Jp Wp Content Uploads 2019 06 4816770f6d7a3050afc90c6efb9b0ff9 Pdf
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://slidesplayer.net/slide/17532698/103/images/6/%E7%86%B1%E4%BC%9D%E5%B0%8E%E6%96%B9%E7%A8%8B%E5%BC%8F%E3%81%AE%E5%B7%AE%E5%88%86%E5%8C%96+%E5%B7%AE%E5%88%86%E5%8C%96%E3%81%99%E3%82%8B+Al%E3%81%AE%CE%B1%EF%BC%9D96.8%5Bmm2%2Fs%5D+%CE%94t%3D+%CE%94x%3D0.1+l%EF%BC%9D1%5Bmm%5D.jpg" data-lightbox="roadtrip" data-title="熱伝導方程式の導出 熱伝導 物質の移動を伴わずに高温側から低温側へ熱が伝わる現象 対流 輻射 フーリエの法則fourier S Law Ppt Download">
+						<img class="card-img" src="https://slidesplayer.net/slide/17532698/103/images/6/%E7%86%B1%E4%BC%9D%E5%B0%8E%E6%96%B9%E7%A8%8B%E5%BC%8F%E3%81%AE%E5%B7%AE%E5%88%86%E5%8C%96+%E5%B7%AE%E5%88%86%E5%8C%96%E3%81%99%E3%82%8B+Al%E3%81%AE%CE%B1%EF%BC%9D96.8%5Bmm2%2Fs%5D+%CE%94t%3D+%CE%94x%3D0.1+l%EF%BC%9D1%5Bmm%5D.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQPVlKErW0CCXN-bKUk7lenTVgdsObxlMcg-eKNL4zthRXxf3swcx1YjD3QFy0srkUQHw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				熱伝導方程式の導出 熱伝導 物質の移動を伴わずに高温側から低温側へ熱が伝わる現象 対流 輻射 フーリエの法則fourier S Law Ppt Download
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://www.isc.meiji.ac.jp/~re00079/HT.2020/pict/HT202033.jpg" data-lightbox="roadtrip" data-title="伝熱工学 2020年度 春学期 3年生">
+						<img class="card-img" src="http://www.isc.meiji.ac.jp/~re00079/HT.2020/pict/HT202033.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwuu7WC5rRmmkbcUT8q4whXxWe7pkON7XaG5E2QpqENC1B_LKzZOfdhsUmfCooE4SV07I';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				伝熱工学 2020年度 春学期 3年生
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://unit.aist.go.jp/mcml/rg-tp/research/2/1-1.png" data-lightbox="roadtrip" data-title="産総研 計測標準研究部門 材料物性科 熱物性標準研究室 研究紹介 熱伝導率 熱拡散率とは">
+						<img class="card-img" src="https://unit.aist.go.jp/mcml/rg-tp/research/2/1-1.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdeaQImgkXf_wMLgMvntCDgW3wWRsK60WgSJHjwgak3EqiB4MU79gVRHtsXOUVDN3OnA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				産総研 計測標準研究部門 材料物性科 熱物性標準研究室 研究紹介 熱伝導率 熱拡散率とは
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.comp.tmu.ac.jp/shintani/classes/information_processing_2/figs/heat_diffusion.png" data-lightbox="roadtrip" data-title="熱拡散方程式">
+						<img class="card-img" src="https://www.comp.tmu.ac.jp/shintani/classes/information_processing_2/figs/heat_diffusion.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFEg7XGkPw2BA147OYYKSYBDDZYifjd1hGTZuM2u1UzpFaO4s_EU7n8mD7uw5nsvI-lm0';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				熱拡散方程式
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://userdisk.webry.biglobe.ne.jp/021/465/43/N000/000/001/148365757775156404180.jpg" data-lightbox="roadtrip" data-title="一次元熱伝導方程式 ロードバイク散歩">
+						<img class="card-img" src="https://userdisk.webry.biglobe.ne.jp/021/465/43/N000/000/001/148365757775156404180.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXO3MCSiS9Pp3m7nnuyQRFokeul5Ab-dTXY3tbI6zCFEKgY39VuuYRgVR5wXh35cjl-PM';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				一次元熱伝導方程式 ロードバイク散歩
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://cattech-lab.com/science-tools/wp-content/uploads/2020/05/lecture-3-10-1.png" data-lightbox="roadtrip" data-title="２次元熱伝導方程式のシミュレーション 科学技術計算講座3 10 科学技術計算ツール">
+						<img class="card-img" src="https://cattech-lab.com/science-tools/wp-content/uploads/2020/05/lecture-3-10-1.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0WPyUyv-QJga-DWvGOFsx9Bcq9y7kWLha95WZ5d_QqrirD6lEOEXpE0z1ra5SAMWe8_0';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				２次元熱伝導方程式のシミュレーション 科学技術計算講座3 10 科学技術計算ツール
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://camo.qiitausercontent.com/f5a71ce3354cd42e367d2a4cc07e98df2c937c11/68747470733a2f2f71696974612d696d6167652d73746f72652e73332e616d617a6f6e6177732e636f6d2f302f3134363235392f38343765396363652d626533332d396162622d343436652d3130366237633239323063632e706e67" data-lightbox="roadtrip" data-title="ステーキ内部の熱伝導を数値計算する 物理演算超入門 Qiita">
+						<img class="card-img" src="https://camo.qiitausercontent.com/f5a71ce3354cd42e367d2a4cc07e98df2c937c11/68747470733a2f2f71696974612d696d6167652d73746f72652e73332e616d617a6f6e6177732e636f6d2f302f3134363235392f38343765396363652d626533332d396162622d343436652d3130366237633239323063632e706e67" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTldEWIF9Vn1UOGFrZNZniFNcOlcXOyTx7Lzf-IhbL0YV-_jT5g5BPXtpCNbI7vJRLc0sc';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				ステーキ内部の熱伝導を数値計算する 物理演算超入門 Qiita
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.future-engineer.jp/img/simulation_2.jpg" data-lightbox="roadtrip" data-title="熱伝導計算 有限体積法 数値解析手順2 Futureengineer">
+						<img class="card-img" src="https://www.future-engineer.jp/img/simulation_2.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREBtsUEHYBbj2k09Q6l2LrRkW_Yt4QQP97jg-SIn9ZbyCTDs002LShEyCS6k1QvmBjlPo';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				熱伝導計算 有限体積法 数値解析手順2 Futureengineer
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://chemeng.web.fc2.com/ExcelCe/exhc16.png" data-lightbox="roadtrip" data-title="Excelによる伝熱工学 非定常伝熱">
+						<img class="card-img" src="https://chemeng.web.fc2.com/ExcelCe/exhc16.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0zQKsrNwd9JRK3Zb_oBqd3q_G5gbOilZBEg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Excelによる伝熱工学 非定常伝熱
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="WpfxVUmSyeQqtM" data-lightbox="roadtrip" data-title="Http Www Em Eng Chiba U Jp Takei Note Multi 20flow Class 1 22 Pdf">
+						<img class="card-img" src="WpfxVUmSyeQqtM" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnTB4Cp4-I6Xjx9Hj4Le4eoA-tjNTa42qj1Q';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Http Www Em Eng Chiba U Jp Takei Note Multi 20flow Class 1 22 Pdf
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.agne.co.jp/analysis/images/image81.gif" data-lightbox="roadtrip" data-title="技術紹介 アグネ技術センター">
+						<img class="card-img" src="https://www.agne.co.jp/analysis/images/image81.gif" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnnwK-8Lj-L9NPRMRtGcy14Fw9F2VvYN6jJA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				技術紹介 アグネ技術センター
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="gkFljpKE99CDmM" data-lightbox="roadtrip" data-title="Http Www Caero Mech Tohoku Ac Jp Publicdata Modeling Lecture 20note1 Pdf">
+						<img class="card-img" src="gkFljpKE99CDmM" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSF3Wnn-7MFfGAetbDrY24zB62FcwJt9Ugn1Q';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Http Www Caero Mech Tohoku Ac Jp Publicdata Modeling Lecture 20note1 Pdf
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="/search?q=%E7%86%B1%E4%BC%9D%E5%B0%8E%E6%96%B9%E7%A8%8B%E5%BC%8F+%E8%A7%A3&amp;tbm=isch" data-lightbox="roadtrip" data-title="Https Encrypted Tbn0 Gstatic Com Images Q Tbn And9gcqytbulra4v Kbyji8lbxzsjyxaahpe9e1ewznzzti0wh3fjn5z Usqp Cau">
+						<img class="card-img" src="/search?q=%E7%86%B1%E4%BC%9D%E5%B0%8E%E6%96%B9%E7%A8%8B%E5%BC%8F+%E8%A7%A3&amp;tbm=isch" onerror="this.onerror=null;this.src='/search?q=%E7%86%B1%E4%BC%9D%E5%B0%8E%E6%96%B9%E7%A8%8B%E5%BC%8F+%E8%A7%A3&amp;tbm=isch';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Https Encrypted Tbn0 Gstatic Com Images Q Tbn And9gcqytbulra4v Kbyji8lbxzsjyxaahpe9e1ewznzzti0wh3fjn5z Usqp Cau
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://www.geo.titech.ac.jp/lab/ida/numexe/manual/8/eq9.png" data-lightbox="roadtrip" data-title="偏微分方程式を解く 拡散方程式を解いてみる 先週まで常微分方程式の解法を取り扱いました 今回は偏微分方程式を扱います 偏微分方程式 の数値解法は 計算機シミュレーションの王道です 例えば 流体力学のシミュレーションは 偏微分方程式">
+						<img class="card-img" src="http://www.geo.titech.ac.jp/lab/ida/numexe/manual/8/eq9.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSb1Kcp1RqcqppXNWsziy0tsX_aEK4XknwlMA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				偏微分方程式を解く 拡散方程式を解いてみる 先週まで常微分方程式の解法を取り扱いました 今回は偏微分方程式を扱います 偏微分方程式 の数値解法は 計算機シミュレーションの王道です 例えば 流体力学のシミュレーションは 偏微分方程式
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://www.isc.meiji.ac.jp/~re00079/HT.2020/pict/HT202061.jpg" data-lightbox="roadtrip" data-title="伝熱工学 2020年度 春学期 3年生">
+						<img class="card-img" src="http://www.isc.meiji.ac.jp/~re00079/HT.2020/pict/HT202061.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrqaDeTiydxgPRu-vrrMxdJsW0-CG3_SqPzw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				伝熱工学 2020年度 春学期 3年生
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://blog-imgs-65-origin.fc2.com/g/o/m/gomisai/001_20140215031531793.png" data-lightbox="roadtrip" data-title="ねがてぃぶろぐ Scilab">
+						<img class="card-img" src="https://blog-imgs-65-origin.fc2.com/g/o/m/gomisai/001_20140215031531793.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSnEdypSqUkaM7qHeKSq9DMNsDxPs9bN01Tg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				ねがてぃぶろぐ Scilab
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://www.gaia.h.kyoto-u.ac.jp/~yfuru/Lectures/visual/Ex/TBL-figs/T-erf.gif" data-lightbox="roadtrip" data-title="Tbl Suppl">
+						<img class="card-img" src="http://www.gaia.h.kyoto-u.ac.jp/~yfuru/Lectures/visual/Ex/TBL-figs/T-erf.gif" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYB9Or8k70oi5ZVQbkLVHLR3xtJd2TArn4SA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Tbl Suppl
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://reference.wolfram.com/language/PDEModels/tutorial/HeatTransfer/Files/HeatTransfer.ja/Video_1.jpg" data-lightbox="roadtrip" data-title="熱移動 Wolfram言語ドキュメント">
+						<img class="card-img" src="https://reference.wolfram.com/language/PDEModels/tutorial/HeatTransfer/Files/HeatTransfer.ja/Video_1.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnqvlW0F9-ukcBkqSvNPaqc9Ek6NLhi4VFVw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				熱移動 Wolfram言語ドキュメント
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="r_DZgG0MgDSaSM" data-lightbox="roadtrip" data-title="Http Www Opencae Or Jp Wp Content Uploads 2015 06 9th Ogata Pdf">
+						<img class="card-img" src="r_DZgG0MgDSaSM" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPdCvN0UKeSKFC8XkFoLkHLBfeIs1zL6Fr8w';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Http Www Opencae Or Jp Wp Content Uploads 2015 06 9th Ogata Pdf
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://ds0.cc.yamaguchi-u.ac.jp/~fukuyo/img/heat-02-01.png" data-lightbox="roadtrip" data-title="One Dimensional Heat Conduction Example 2">
+						<img class="card-img" src="http://ds0.cc.yamaguchi-u.ac.jp/~fukuyo/img/heat-02-01.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdPKXrZG75dZw9OFGBZ72sv4v8nQOdMnjqBA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				One Dimensional Heat Conduction Example 2
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://camelllia.net/files/html/others/ThermalDiffusivity20190523Fig03.png" data-lightbox="roadtrip" data-title="熱伝導率と熱拡散率 温度伝導率 の違い">
+						<img class="card-img" src="https://camelllia.net/files/html/others/ThermalDiffusivity20190523Fig03.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQurywkIZdl8anzn05rOtNxSL-GeLtPilPKfw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				熱伝導率と熱拡散率 温度伝導率 の違い
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+		
+	</div>
+
+		 
+		
+		
+				</div>
+				<div class="col-sm-12 widget">
+					<div class="d-block p-4">
+	<center>
+		<!-- BOTTOM BANNER ADS -->
+<script async="async" data-cfasync="false" src="//jc32arlvqpv8.com/eb47a424ae325c90cca32780149785c3/invoke.js"></script>
+<div id="container-eb47a424ae325c90cca32780149785c3"></div>
+
+	</center>
+</div>				</div>
+			</div>
+			<div class="row footer">
+				<div class="col-md-12 text-center py-4">
+										<a href="/p/dmca.html">Dmca</a>
+										<a href="/p/contact.html">Contact</a>
+										<a href="/p/privacy-policy.html">Privacy Policy</a>
+										<a href="/p/copyright.html">Copyright</a>
+					
+				</div>
+			</div>
+		</main>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js" integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js" integrity="sha256-CtKylYan+AJuoH8jrMht1+1PMhMqrKnB8K5g012WN5I=" crossorigin="anonymous"></script>
+		
+		<!-- Footer CSS JS -->
+		
+		
+		
+			<script type='text/javascript' src='//jc32arlvqpv8.com/ef/d5/10/efd510237a3143727bed46803ec35b8d.js'></script>
+</body>
+</html>

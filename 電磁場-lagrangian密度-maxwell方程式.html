@@ -1,0 +1,682 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha256-L/W5Wfqfa0sdBNIKN9cG6QA5F2qx4qICmU2VgLruv9Y=" crossorigin="anonymous" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/css/lightbox.min.css" integrity="sha256-tBxlolRHP9uMsEFKVk+hk//ekOlXOixLKvye5W2WR5c=" crossorigin="anonymous" />
+		<link href="https://fonts.googleapis.com/css?family=Mr+Dafoe" rel="stylesheet" type="text/css">
+
+		<style type="text/css">
+			html,body{font-family:"Open Sans",Arial,sans-serif;font-size:14px;font-weight:400;background:#f3f3f3 url(https://www.zhihu.com/equation?tex=%5Cbegin%7Bcases%7D+%5Cfrac%7B%5Cpartial%5Cleft%28+F_%7B%5Cmu%5Cnu%7DF%5E%7B%5Cmu%5Cnu%7D+%5Cright%29%7D%7B%5Cpartial%5Cleft%28%5Cpartial_%5Cnu+A_%5Cmu+%5Cright%29%7D%3D4F%5E%7B%5Cmu%5Cnu%7D%5C%5C+%5Cpartial_%5Cnu++F%5E%7B%5Cmu%5Cnu%7D+%3D-4%5Cpi+J_%5Cmu%3D0+%5Cend%7Bcases%7D++%5C%5C%5Cpartial%5E%5Cnu%5Cleft%28+-%5Cfrac%7B1%7D%7B4%5Cpi%7DF_%7B%5Cmu%5Cnu%7D+%5Cright%29%3DJ_%5Cmu%3D0++%5C%5C%5Cfrac%7B%5Cpartial%5Cleft%28+-%5Cfrac%7B1%7D%7B16%5Cpi%7DF_%7B%5Cmu%5Cnu%7DF%5E%7B%5Cmu%5Cnu%7D+%5Cright%29%7D%7B%5Cpartial%5Cleft%28%5Cpartial_%5Cnu+A_%5Cmu+%5Cright%29%7D%3D-%5Cfrac%7B1%7D%7B4%5Cpi%7DF%5E%7B%5Cmu%5Cnu%7D
+) no-repeat center center fixed;background-size:cover;height:100%}#title{font-family:"Mr Dafoe",Times,serif;font-size:34px;background:rgba(255,255,255,.8);margin-bottom:34px}.header{padding-bottom:13px;margin-bottom:13px;border-bottom:1px solid #eee}a{color:#26ADE4;text-decoration:none}#title a{color:#333;margin-left:21px}#title a:hover{text-decoration:none;color:#26ADE4}.sidebar ul{margin:0;padding:0}.sidebar ul li{list-style:none}.footer{margin-top:21px;padding-top:13px;border-top:1px solid #eee}.footer a{margin:0 15px}.navi{margin:13px 0 13px 0;padding:13px}.navi a{margin:5px 2px;font-size:95%}.main{margin-top: 6rem;}.form-inline .form-control{min-width: 300px;}.v-cover{height: 380px; object-fit: cover;}.v-image{height: 200px; object-fit: cover;}.dwn-cover{max-height: 460px; object-fit: cover;}.main{margin-top: 6rem;}.form-inline .form-control{min-width: 300px;}			
+		</style>
+
+		<title>電磁場 Lagrangian密度 Maxwell方程式</title>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/", 
+  "@type": "Article", 
+  "author": {
+    "@type": "Person",
+    "name": "James"
+  },
+  "headline": "電磁場 Lagrangian密度 Maxwell方程式",
+  "datePublished": "2021-04-24",
+  "image": [https://www.zhihu.com/equation?tex=%5Cbegin%7Baligned%7D+%26+%5Cbig%5CVert+%5Cvec%7BB%7D+%5Cbig%5CVert%5E2+%5C%5C+%3D%26++%28%5Cnabla+%5Ctimes+%5Cvec%7BA%7D%29%5Ccdot%28%5Cnabla+%5Ctimes+%5Cvec%7BA%7D%29+%5C%5C+%3D%26+%5Cbig%5CVert+%28%5Cpartial_y+A_z+-+%5Cpartial_z+A_y%2C+%5Cpartial_z+A_x-%5Cpartial_xA_z%2C+%5Cpartial_xA_y-%5Cpartial_yA_x%29%5Cbig%5CVert%5E2%5C%5C+%3D%26+%5Csum_%7Bk%3Dx%2Cy%2Cz%7D%5Csum_%7Bl%3Dx%2Cy%2Cz%7D%28+%28%5Cpartial_l+A_k%29%5E2-%5Cpartial_kA_l%5Cpartial_l+A_k+%29+%5C%5C+%5Cend%7Baligned%7D,https://pic1.zhimg.com/50/v2-41be55b4fae165600e504b2902af6b6e_hd.jpg?source=1940ef5c,https://wikimedia.org/api/rest_v1/media/math/render/svg/d01088527fd45dfae09556dfe6df780920e0ade0],
+  "publisher": {
+    "@type": "Organization",
+    "name": "Tukang Parkir Gerobak",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://via.placeholder.com/512.png?text=電磁場 lagrangian密度 maxwell方程式",
+      "width": 512,
+      "height": 512
+    }
+  }
+}
+</script>
+		<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-957NGNKQ70"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-957NGNKQ70');
+</script>
+
+<script type='text/javascript' src='//jc32arlvqpv8.com/1a/82/2e/1a822ef8a40a0fbab3c4ea12a5d2bb02.js'></script>
+</head>
+	<body>
+		<header class="bg-white fixed-top">			
+			<nav class="navbar navbar-light bg-white mb-0">
+				<div class="container justify-content-center justify-content-sm-between">	
+				  <a href="/" title="Blog" class="navbar-brand mb-1">Blog</a>
+				  				</div>			  
+			</nav>				
+		</header>
+		<main class="main container bg-white">
+			<div class="col-md-12 my-4" align="center">
+				<div class="d-block p-4">
+	<br/><center>
+<!-- TOP BANNER ADS -->
+</center><br/>
+</div>			</div>
+			<div class="row header">
+				<div class="col-sm-12 text-center p-2">
+						<h1>電磁場 Lagrangian密度 Maxwell方程式</h1>
+
+	
+	<div class="navi text-center">
+										<a class="badge badge-primary" href="/%E6%A5%B5-%E6%96%B9%E7%A8%8B%E5%BC%8F-r-%E8%B2%A0.html">極 方程式 r 負</a>
+											<a class="badge badge-danger" href="/%E7%A7%81%E3%82%92%E6%9D%B1%E4%BA%AC%E3%81%AE%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%A8%E5%91%BC%E3%81%B3%E3%81%AA%E3%81%95%E3%81%84.html">私を東京のお父さんと呼びなさい</a>
+											<a class="badge badge-secondary" href="/%E8%B2%B4%E5%BF%97%E3%81%8F%E3%82%93%E3%81%AE%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93-%E5%B0%86%E5%A4%AA%E3%81%AE%E5%AF%BF%E5%8F%B8.html">貴志くんのお父さん 将太の寿司</a>
+											<a class="badge badge-danger" href="/%E9%AB%98-%E6%AC%A1-%E6%96%B9%E7%A8%8B%E5%BC%8F-%E3%81%AE-%E8%A7%A3.html">高 次 方程式 の 解</a>
+											<a class="badge badge-light" href="/%E9%9B%A2%E5%A9%9A%E3%81%97%E3%81%9F%E5%89%8D%E3%81%AE%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93.html">離婚した前のお父さん</a>
+											<a class="badge badge-success" href="/%E6%A5%95%E5%86%86-%E6%96%B9%E7%A8%8B%E5%BC%8F-3%E6%AC%A1%E5%85%83.html">楕円 方程式 3次元</a>
+											<a class="badge badge-success" href="/%E6%B5%B7%E5%A4%96%E7%B5%B5%E6%9C%AC-%E3%82%82%E3%81%BF%E3%81%AE%E6%9C%A8-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93.html">海外絵本 もみの木 お父さん</a>
+											<a class="badge badge-secondary" href="/%E6%9D%B1%E5%A4%A7-%E7%94%9F-%E3%81%95%E3%82%93%E3%81%BE-%E3%81%AE-%E6%96%B9%E7%A8%8B%E5%BC%8F.html">東大 生 さんま の 方程式</a>
+											<a class="badge badge-dark" href="/%E7%84%A1%E6%96%99%E4%BD%93%E9%A8%93%E8%AB%87-%E7%94%B7%E3%81%AE%E5%AD%90%E3%81%A8%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93.html">無料体験談 男の子とお父さん</a>
+											<a class="badge badge-secondary" href="/%E9%87%8E%E4%B8%8A-%E5%84%AA%E4%BD%B3%E5%AD%90-%E3%81%AE-%E3%81%8A-%E5%BC%81%E5%BD%93-%E3%81%8A%E3%81%8B%E3%81%9A-%E3%81%AE-%E6%96%B9%E7%A8%8B%E5%BC%8F.html">野上 優佳子 の お 弁当 おかず の 方程式</a>
+											<a class="badge badge-secondary" href="/%E7%B5%B6%E5%AF%BE%E5%80%A4-%E6%96%B9%E7%A8%8B%E5%BC%8F-2%E4%B9%97.html">絶対値 方程式 2乗</a>
+											<a class="badge badge-dark" href="/%E7%80%AC%E6%88%B8%E3%81%AE%E6%B5%B7%E3%81%AF%E3%81%8A%E6%AF%8D%E3%81%95%E3%82%93-%E3%81%9F%E3%81%AC%E3%81%8D%E3%81%AE%E5%B1%B1%E3%81%AF%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93.html">瀬戸の海はお母さん たぬきの山はお父さん</a>
+											<a class="badge badge-dark" href="/%E7%BD%AE%E6%8F%9B-%E7%B7%9A%E5%BD%A2%E4%B8%80%E9%9A%8E%E6%96%B9%E7%A8%8B%E5%BC%8F-%E5%BF%9C%E7%94%A8%E6%95%B0%E5%AD%A6.html">置換 線形一階方程式 応用数学</a>
+											<a class="badge badge-dark" href="/%E9%80%9F%E5%BA%A6%E4%BF%82%E6%95%B0%E6%96%B9%E7%A8%8B%E5%BC%8F-%E3%83%97%E3%83%A9%E3%82%BA%E3%83%9E.html">速度係数方程式 プラズマ</a>
+											<a class="badge badge-warning" href="/%E8%BE%B2%E5%AE%B6%E3%81%AE%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93-%E3%83%AC%E3%82%B3%E3%83%B3%E3%82%AE%E3%82%B9%E3%82%BF.html">農家のお父さん レコンギスタ</a>
+						</div>
+<center>
+	<!-- MIDDLE BANNER ADS -->
+<script type="text/javascript">
+	atOptions = {
+		'key' : '2b77887421e2587a1a1b1d7c8a31a9e0',
+		'format' : 'iframe',
+		'height' : 250,
+		'width' : 300,
+		'params' : {}
+	};
+	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://jc32arlvqpv8.com/2b77887421e2587a1a1b1d7c8a31a9e0/invoke.js"></scr' + 'ipt>');
+</script>
+		
+	</center>
+					
+				</div>
+			</div>
+			<div class="row content mb-4">
+				<div class="col-md-12">					
+					
+	
+	<div class="card-columns">
+						
+	  <div class='card'>
+	  	<a href="https://www.zhihu.com/equation?tex=+%5Cbegin%7Bcases%7D+%5Cdisplaystyle+%5Ciint_%7B%5Cpartial+%5COmega%7D+%5Cvec+D+%5Ccdot+%7B%5Crm+d%7D%5Cvec+S%EF%BC%9Dq_f+%5C%5C+%5C%5C+%5Cdisplaystyle+%5Ciint_%7B%5Cpartial+%5COmega%7D+%5Cvec+B+%5Ccdot+%7B%5Crm+d%7D%5Cvec+S%3D0+%5C%5C+%5C%5C+%5Cdisplaystyle+%5Coint_%7B%5Cpartial+%5CSigma%7D+%5Cvec+E+%5Ccdot+%7B%5Crm+d%7D+%5Cvec+l%3D-%5Cfrac%7B%5Crm+d%7D%7B%7B%5Crm+d%7Dt%7D+%5Ciint_%7B%5CSigma%7D+%5Cvec+B+%5Ccdot+%7B%5Crm+d%7D%5Cvec+S+%5C%5C+%5C%5C+%5Cdisplaystyle+%5Coint_%7B%5Cpartial+%5CSigma%7D+%5Cvec+H+%5Ccdot+%7B%5Crm+d%7D+%5Cvec+l%3DI+%5C%2C+%2B+%5Ciint_%7B%5CSigma%7D+%5Cfrac%7B%5Cpartial+%5Cvec+D%7D%7B%5Cpartial+t%7D+%5Ccdot+%7B%5Crm+d%7D%5Cvec+S+%5Cend%7Bcases%7D" data-lightbox="roadtrip" data-title="关于麦克斯韦方程组的三两事 知乎">
+						<img class="card-img" src="https://www.zhihu.com/equation?tex=+%5Cbegin%7Bcases%7D+%5Cdisplaystyle+%5Ciint_%7B%5Cpartial+%5COmega%7D+%5Cvec+D+%5Ccdot+%7B%5Crm+d%7D%5Cvec+S%EF%BC%9Dq_f+%5C%5C+%5C%5C+%5Cdisplaystyle+%5Ciint_%7B%5Cpartial+%5COmega%7D+%5Cvec+B+%5Ccdot+%7B%5Crm+d%7D%5Cvec+S%3D0+%5C%5C+%5C%5C+%5Cdisplaystyle+%5Coint_%7B%5Cpartial+%5CSigma%7D+%5Cvec+E+%5Ccdot+%7B%5Crm+d%7D+%5Cvec+l%3D-%5Cfrac%7B%5Crm+d%7D%7B%7B%5Crm+d%7Dt%7D+%5Ciint_%7B%5CSigma%7D+%5Cvec+B+%5Ccdot+%7B%5Crm+d%7D%5Cvec+S+%5C%5C+%5C%5C+%5Cdisplaystyle+%5Coint_%7B%5Cpartial+%5CSigma%7D+%5Cvec+H+%5Ccdot+%7B%5Crm+d%7D+%5Cvec+l%3DI+%5C%2C+%2B+%5Ciint_%7B%5CSigma%7D+%5Cfrac%7B%5Cpartial+%5Cvec+D%7D%7B%5Cpartial+t%7D+%5Ccdot+%7B%5Crm+d%7D%5Cvec+S+%5Cend%7Bcases%7D" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzoqMugBlKIuuw8RRW9FZg_gLkdxku9A5N1DErudcYbOeyEy8HP7ox3ZkQ5S9zHHzvJc0';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				关于麦克斯韦方程组的三两事 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://sites.google.com/site/tuanduihezuokecheng/_/rsrc/1468875389124/zhuan-ye-cheng-zhang/3-3jiang-cheng/11.JPG" data-lightbox="roadtrip" data-title="4 3馬克斯威爾方程式 團隊合作課程">
+						<img class="card-img" src="https://sites.google.com/site/tuanduihezuokecheng/_/rsrc/1468875389124/zhuan-ye-cheng-zhang/3-3jiang-cheng/11.JPG" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNMdU5Z3rWexLHOyW-re1wQz1shwhMP_B0sorQLtsBFEd0lD-k4TWc49Q1qyiqUA53sag';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				4 3馬克斯威爾方程式 團隊合作課程
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic4.zhimg.com/50/v2-8880d6794fdd548071afa8fe03dfc6b4_hd.jpg?source=1940ef5c" data-lightbox="roadtrip" data-title="如何深入浅出地讲解麦克斯韦方程组 知乎">
+						<img class="card-img" src="https://pic4.zhimg.com/50/v2-8880d6794fdd548071afa8fe03dfc6b4_hd.jpg?source=1940ef5c" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6GwHoNlyjSU45W4HQ074kuxYYV-7Czms3UIR9M23UBh6ubZ51iKkRkmKMTz0i_qfK2RI';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				如何深入浅出地讲解麦克斯韦方程组 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.zhihu.com/equation?tex=%5Cbegin%7Baligned%7D+%5Cnabla+%5Ccdot+%5Cvec%7BE%7D+%26+%3D+%5Cfrac%7B1%7D%7B%5Cvarepsilon_0%7D%5Crho+%5C%5C+%5Cnabla+%5Ccdot+%5Cvec%7BB%7D+%26+%3D+%5Cvec%7B0%7D%5C%5C+%5Cnabla+%5Ctimes+%5Cvec%7BE%7D+%26+%3D+-%5Cfrac%7B%5Cpartial+%7D%7B%5Cpartial+t%7D+%5Cvec%7BB%7D+%5C%5C+%5Cnabla+%5Ctimes+%5Cvec%7BB%7D+%26+%3D+%5Cfrac%7B1%7D%7Bc%5E2%7D+%5Cfrac%7B%5Cpartial+%7D%7B%5Cpartial+t%7D+%5Cvec%7BE%7D+%2B+%5Cmu_0+%5Cvec%7Bj%7D+%5C%5C+%5Cend%7Baligned%7D" data-lightbox="roadtrip" data-title="Lagrangian Density Of Free Electromagnetic Field 知乎">
+						<img class="card-img" src="https://www.zhihu.com/equation?tex=%5Cbegin%7Baligned%7D+%5Cnabla+%5Ccdot+%5Cvec%7BE%7D+%26+%3D+%5Cfrac%7B1%7D%7B%5Cvarepsilon_0%7D%5Crho+%5C%5C+%5Cnabla+%5Ccdot+%5Cvec%7BB%7D+%26+%3D+%5Cvec%7B0%7D%5C%5C+%5Cnabla+%5Ctimes+%5Cvec%7BE%7D+%26+%3D+-%5Cfrac%7B%5Cpartial+%7D%7B%5Cpartial+t%7D+%5Cvec%7BB%7D+%5C%5C+%5Cnabla+%5Ctimes+%5Cvec%7BB%7D+%26+%3D+%5Cfrac%7B1%7D%7Bc%5E2%7D+%5Cfrac%7B%5Cpartial+%7D%7B%5Cpartial+t%7D+%5Cvec%7BE%7D+%2B+%5Cmu_0+%5Cvec%7Bj%7D+%5C%5C+%5Cend%7Baligned%7D" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScDz0JWjFjpO78pz5A2t8bU9H8gMKngKZY9hH2qQgIMYZzudWmq4WPnP-8qe19CbR_jy0';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Lagrangian Density Of Free Electromagnetic Field 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.zhihu.com/equation?tex=%5Cbegin%7Baligned%7D+%5Cmathscr%7BL%7D+%26+%3D+%5Cmathscr%7BL%7D_%7B%5Calpha%7D+%2B+%5Cmathscr%7BL%7D_%7B%5Cbeta%7D+%5C%5C+%26+%3D+%28%5Cnabla+%5Ccdot+%5Cvec%7BA%7D%29%5Cdot%7B%5Cphi%7D+%2B+%5Cfrac%7B1%7D%7B2%7D%5Cleft%5CVert%7B%5Cnabla+%5Cphi%7D+%5Cright%5CVert%5E2+-+%5Cfrac%7B%5Crho+%5Cphi%7D%7B%5Cvarepsilon_0%7D%5C%5C+%26++%5Cfrac%7B1%7D%7B2%7D%5Cbig%5CVert+%5Cdot%7B%5Cvec%7BA%7D%7D%5Cbig%5CVert%5E2%2B+%5Cnabla+%5Cphi+%5Ccdot++%5Cdot%7B%5Cvec%7BA%7D%7D%2B%5Cfrac%7B1%7D%7B2%7Dc%5E2%5Csum_%7Bk%3Dx%2Cy%2Cz%7D%5Cbig%5B+%28%5Cpartial_k+%5Cvec%7BA%7D%29+%5Ccdot+%5Cnabla+A_k+-+%5Cbig%5CVert+%5Cnabla+A_k+%5Cbig%5CVert%5E2++%5Cbig%5D+%2B%5Cfrac%7B%5Cvec%7Bj%7D%5Ccdot%5Cvec%7BA%7D%7D%7B%5Cvarepsilon_0%7D%5C%5C+%5Cend%7Baligned%7D" data-lightbox="roadtrip" data-title="Lagrangian Density Of Free Electromagnetic Field 知乎">
+						<img class="card-img" src="https://www.zhihu.com/equation?tex=%5Cbegin%7Baligned%7D+%5Cmathscr%7BL%7D+%26+%3D+%5Cmathscr%7BL%7D_%7B%5Calpha%7D+%2B+%5Cmathscr%7BL%7D_%7B%5Cbeta%7D+%5C%5C+%26+%3D+%28%5Cnabla+%5Ccdot+%5Cvec%7BA%7D%29%5Cdot%7B%5Cphi%7D+%2B+%5Cfrac%7B1%7D%7B2%7D%5Cleft%5CVert%7B%5Cnabla+%5Cphi%7D+%5Cright%5CVert%5E2+-+%5Cfrac%7B%5Crho+%5Cphi%7D%7B%5Cvarepsilon_0%7D%5C%5C+%26++%5Cfrac%7B1%7D%7B2%7D%5Cbig%5CVert+%5Cdot%7B%5Cvec%7BA%7D%7D%5Cbig%5CVert%5E2%2B+%5Cnabla+%5Cphi+%5Ccdot++%5Cdot%7B%5Cvec%7BA%7D%7D%2B%5Cfrac%7B1%7D%7B2%7Dc%5E2%5Csum_%7Bk%3Dx%2Cy%2Cz%7D%5Cbig%5B+%28%5Cpartial_k+%5Cvec%7BA%7D%29+%5Ccdot+%5Cnabla+A_k+-+%5Cbig%5CVert+%5Cnabla+A_k+%5Cbig%5CVert%5E2++%5Cbig%5D+%2B%5Cfrac%7B%5Cvec%7Bj%7D%5Ccdot%5Cvec%7BA%7D%7D%7B%5Cvarepsilon_0%7D%5C%5C+%5Cend%7Baligned%7D" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpcXwTF3cAwNbRUw3m9Wd2-8NsnqbI1ve5XFrycTPwkB-mcx5AaWKB6iEz5bsVCu6QOw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Lagrangian Density Of Free Electromagnetic Field 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.zhihu.com/equation?tex=%5Cbegin%7Baligned%7D+%26+%5Cbig%5CVert+%5Cvec%7BB%7D+%5Cbig%5CVert%5E2+%5C%5C+%3D%26++%28%5Cnabla+%5Ctimes+%5Cvec%7BA%7D%29%5Ccdot%28%5Cnabla+%5Ctimes+%5Cvec%7BA%7D%29+%5C%5C+%3D%26+%5Cbig%5CVert+%28%5Cpartial_y+A_z+-+%5Cpartial_z+A_y%2C+%5Cpartial_z+A_x-%5Cpartial_xA_z%2C+%5Cpartial_xA_y-%5Cpartial_yA_x%29%5Cbig%5CVert%5E2%5C%5C+%3D%26+%5Csum_%7Bk%3Dx%2Cy%2Cz%7D%5Csum_%7Bl%3Dx%2Cy%2Cz%7D%28+%28%5Cpartial_l+A_k%29%5E2-%5Cpartial_kA_l%5Cpartial_l+A_k+%29+%5C%5C+%5Cend%7Baligned%7D" data-lightbox="roadtrip" data-title="Lagrangian Density Of Free Electromagnetic Field 知乎">
+						<img class="card-img" src="https://www.zhihu.com/equation?tex=%5Cbegin%7Baligned%7D+%26+%5Cbig%5CVert+%5Cvec%7BB%7D+%5Cbig%5CVert%5E2+%5C%5C+%3D%26++%28%5Cnabla+%5Ctimes+%5Cvec%7BA%7D%29%5Ccdot%28%5Cnabla+%5Ctimes+%5Cvec%7BA%7D%29+%5C%5C+%3D%26+%5Cbig%5CVert+%28%5Cpartial_y+A_z+-+%5Cpartial_z+A_y%2C+%5Cpartial_z+A_x-%5Cpartial_xA_z%2C+%5Cpartial_xA_y-%5Cpartial_yA_x%29%5Cbig%5CVert%5E2%5C%5C+%3D%26+%5Csum_%7Bk%3Dx%2Cy%2Cz%7D%5Csum_%7Bl%3Dx%2Cy%2Cz%7D%28+%28%5Cpartial_l+A_k%29%5E2-%5Cpartial_kA_l%5Cpartial_l+A_k+%29+%5C%5C+%5Cend%7Baligned%7D" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCCea3mwpbWSW4dzQr6k0cbvYvFjwL9t1uzSp7WBr423OMpuVhZH9RcQ2_kC-JkS8cIYk';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Lagrangian Density Of Free Electromagnetic Field 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+				<div class='card'>	
+			<div class="d-block p-4">
+	</div>		  	
+		  	<h3 class="h6 p-2"><b></b></h3>
+					</div>
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.zhihu.com/equation?tex=%5Cbegin%7Baligned%7D+%5Cmathscr%7BL%7D+%26+%3D+%5Cmathscr%7BL%7D_%7B%5Calpha%7D+%2B+%5Cmathscr%7BL%7D_%7B%5Cbeta%7D+%5C%5C+%26+%3D%5Cfrac%7B1%7D%7B2%7D%5Cleft%5CVert%7B%5Cnabla+%5Cphi%7D+%5Cright%5CVert%5E2%2B+%5Cnabla+%5Cphi+%5Ccdot++%5Cdot%7B%5Cvec%7BA%7D%7D+-+%5Cfrac%7B%5Crho+%5Cphi%7D%7B%5Cvarepsilon_0%7D%5C%5C+%26++%2B%5Cfrac%7B1%7D%7B2%7D%5Cbig%5CVert+%5Cdot%7B%5Cvec%7BA%7D%7D%5Cbig%5CVert%5E2%2B%5Cfrac%7B1%7D%7B2%7Dc%5E2%5Csum_%7Bk%3Dx%2Cy%2Cz%7D%5Cbig%5B+%28%5Cpartial_k+%5Cvec%7BA%7D%29+%5Ccdot+%5Cnabla+A_k+-+%5Cbig%5CVert+%5Cnabla+A_k+%5Cbig%5CVert%5E2++%5Cbig%5D+%2B%5Cfrac%7B%5Cvec%7Bj%7D%5Ccdot%5Cvec%7BA%7D%7D%7B%5Cvarepsilon_0%7D%5C%5C++%26+%3D%5Cfrac%7B1%7D%7B2%7D%5Cleft%5CVert%7B%5Cnabla+%5Cphi%7D+%5Cright%5CVert%5E2%2B+%5Cnabla+%5Cphi+%5Ccdot++%5Cdot%7B%5Cvec%7BA%7D%7D+-+%5Cfrac%7B%5Crho+%5Cphi%7D%7B%5Cvarepsilon_0%7D%5C%5C+%26+%2B+%5Cfrac%7B1%7D%7B2%7D%5Cbig%5CVert+%5Cdot%7B%5Cvec%7BA%7D%7D%5Cbig%5CVert%5E2%2B%5Cfrac%7B1%7D%7B2%7Dc%5E2%5Csum_%7Bk%3Dx%2Cy%2Cz%7D%5Csum_%7Bl%3Dx%2Cy%2Cz%7D%5Cbig%5B+%28%5Cpartial_k+A_l%29+%28%5Cpartial_l+A_k%29+-+%28%5Cpartial_l+A_k%29%5E2++%5Cbig%5D+%2B%5Cfrac%7B%5Cvec%7Bj%7D%5Ccdot%5Cvec%7BA%7D%7D%7B%5Cvarepsilon_0%7D%5C%5C+%5Cend%7Baligned%7D+" data-lightbox="roadtrip" data-title="Lagrangian Density Of Free Electromagnetic Field 知乎">
+						<img class="card-img" src="https://www.zhihu.com/equation?tex=%5Cbegin%7Baligned%7D+%5Cmathscr%7BL%7D+%26+%3D+%5Cmathscr%7BL%7D_%7B%5Calpha%7D+%2B+%5Cmathscr%7BL%7D_%7B%5Cbeta%7D+%5C%5C+%26+%3D%5Cfrac%7B1%7D%7B2%7D%5Cleft%5CVert%7B%5Cnabla+%5Cphi%7D+%5Cright%5CVert%5E2%2B+%5Cnabla+%5Cphi+%5Ccdot++%5Cdot%7B%5Cvec%7BA%7D%7D+-+%5Cfrac%7B%5Crho+%5Cphi%7D%7B%5Cvarepsilon_0%7D%5C%5C+%26++%2B%5Cfrac%7B1%7D%7B2%7D%5Cbig%5CVert+%5Cdot%7B%5Cvec%7BA%7D%7D%5Cbig%5CVert%5E2%2B%5Cfrac%7B1%7D%7B2%7Dc%5E2%5Csum_%7Bk%3Dx%2Cy%2Cz%7D%5Cbig%5B+%28%5Cpartial_k+%5Cvec%7BA%7D%29+%5Ccdot+%5Cnabla+A_k+-+%5Cbig%5CVert+%5Cnabla+A_k+%5Cbig%5CVert%5E2++%5Cbig%5D+%2B%5Cfrac%7B%5Cvec%7Bj%7D%5Ccdot%5Cvec%7BA%7D%7D%7B%5Cvarepsilon_0%7D%5C%5C++%26+%3D%5Cfrac%7B1%7D%7B2%7D%5Cleft%5CVert%7B%5Cnabla+%5Cphi%7D+%5Cright%5CVert%5E2%2B+%5Cnabla+%5Cphi+%5Ccdot++%5Cdot%7B%5Cvec%7BA%7D%7D+-+%5Cfrac%7B%5Crho+%5Cphi%7D%7B%5Cvarepsilon_0%7D%5C%5C+%26+%2B+%5Cfrac%7B1%7D%7B2%7D%5Cbig%5CVert+%5Cdot%7B%5Cvec%7BA%7D%7D%5Cbig%5CVert%5E2%2B%5Cfrac%7B1%7D%7B2%7Dc%5E2%5Csum_%7Bk%3Dx%2Cy%2Cz%7D%5Csum_%7Bl%3Dx%2Cy%2Cz%7D%5Cbig%5B+%28%5Cpartial_k+A_l%29+%28%5Cpartial_l+A_k%29+-+%28%5Cpartial_l+A_k%29%5E2++%5Cbig%5D+%2B%5Cfrac%7B%5Cvec%7Bj%7D%5Ccdot%5Cvec%7BA%7D%7D%7B%5Cvarepsilon_0%7D%5C%5C+%5Cend%7Baligned%7D+" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPubVEPNNoPIVvikwM0V1nHbsXp7snKLegMBoFmhA4328Wtjnu_DslacxKpqmSL6Iv5wk';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Lagrangian Density Of Free Electromagnetic Field 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://wikimedia.org/api/rest_v1/media/math/render/svg/4f47ad68a0e716c79eaa3679a4fa94c02f7da334" data-lightbox="roadtrip" data-title="馬克士威方程組 维基百科 自由的百科全书">
+						<img class="card-img" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/4f47ad68a0e716c79eaa3679a4fa94c02f7da334" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpdxxac-2_eDH-38d1GUDKp1dlgRv5BgTPdK67PJPk-Kql9GExo8TwVr74XACeaZwf1A';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				馬克士威方程組 维基百科 自由的百科全书
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.zhihu.com/equation?tex=%5Cbegin%7Bcases%7D+%5Cfrac%7B%5Cpartial%5Cleft%28+F_%7B%5Cmu%5Cnu%7DF%5E%7B%5Cmu%5Cnu%7D+%5Cright%29%7D%7B%5Cpartial%5Cleft%28%5Cpartial_%5Cnu+A_%5Cmu+%5Cright%29%7D%3D4F%5E%7B%5Cmu%5Cnu%7D%5C%5C+%5Cpartial_%5Cnu++F%5E%7B%5Cmu%5Cnu%7D+%3D-4%5Cpi+J_%5Cmu%3D0+%5Cend%7Bcases%7D++%5C%5C%5Cpartial%5E%5Cnu%5Cleft%28+-%5Cfrac%7B1%7D%7B4%5Cpi%7DF_%7B%5Cmu%5Cnu%7D+%5Cright%29%3DJ_%5Cmu%3D0++%5C%5C%5Cfrac%7B%5Cpartial%5Cleft%28+-%5Cfrac%7B1%7D%7B16%5Cpi%7DF_%7B%5Cmu%5Cnu%7DF%5E%7B%5Cmu%5Cnu%7D+%5Cright%29%7D%7B%5Cpartial%5Cleft%28%5Cpartial_%5Cnu+A_%5Cmu+%5Cright%29%7D%3D-%5Cfrac%7B1%7D%7B4%5Cpi%7DF%5E%7B%5Cmu%5Cnu%7D" data-lightbox="roadtrip" data-title="四维电动力学iii 场的拉格朗日表述与能动张量 知乎">
+						<img class="card-img" src="https://www.zhihu.com/equation?tex=%5Cbegin%7Bcases%7D+%5Cfrac%7B%5Cpartial%5Cleft%28+F_%7B%5Cmu%5Cnu%7DF%5E%7B%5Cmu%5Cnu%7D+%5Cright%29%7D%7B%5Cpartial%5Cleft%28%5Cpartial_%5Cnu+A_%5Cmu+%5Cright%29%7D%3D4F%5E%7B%5Cmu%5Cnu%7D%5C%5C+%5Cpartial_%5Cnu++F%5E%7B%5Cmu%5Cnu%7D+%3D-4%5Cpi+J_%5Cmu%3D0+%5Cend%7Bcases%7D++%5C%5C%5Cpartial%5E%5Cnu%5Cleft%28+-%5Cfrac%7B1%7D%7B4%5Cpi%7DF_%7B%5Cmu%5Cnu%7D+%5Cright%29%3DJ_%5Cmu%3D0++%5C%5C%5Cfrac%7B%5Cpartial%5Cleft%28+-%5Cfrac%7B1%7D%7B16%5Cpi%7DF_%7B%5Cmu%5Cnu%7DF%5E%7B%5Cmu%5Cnu%7D+%5Cright%29%7D%7B%5Cpartial%5Cleft%28%5Cpartial_%5Cnu+A_%5Cmu+%5Cright%29%7D%3D-%5Cfrac%7B1%7D%7B4%5Cpi%7DF%5E%7B%5Cmu%5Cnu%7D" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmPVkwunujdLIy17Cqk4zFW-SalNx5ZGocpqFFOtq5B_bKPbFj4ltGM9zaaXulfZwIniA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				四维电动力学iii 场的拉格朗日表述与能动张量 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic1.zhimg.com/50/v2-41be55b4fae165600e504b2902af6b6e_hd.jpg?source=1940ef5c" data-lightbox="roadtrip" data-title="如何深入浅出地讲解麦克斯韦方程组 知乎">
+						<img class="card-img" src="https://pic1.zhimg.com/50/v2-41be55b4fae165600e504b2902af6b6e_hd.jpg?source=1940ef5c" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYtyCyJmcWcSdAnzmzBtVogZPjnMWoOmhg6y2JQqymI85-dpaF1EC-j1tgto0dzkm5LhE';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				如何深入浅出地讲解麦克斯韦方程组 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://wikimedia.org/api/rest_v1/media/math/render/svg/b3f5c4654b7b44e446b4023868b824376b5bb0c9" data-lightbox="roadtrip" data-title="馬克士威方程組 维基百科 自由的百科全书">
+						<img class="card-img" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/b3f5c4654b7b44e446b4023868b824376b5bb0c9" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5Rqh85s4XOR5pT-3AE_JU4WxS1NLx5jdsssb07MhqwJXRNHnZJX1P3Ri6R8k4rnzw2s8';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				馬克士威方程組 维基百科 自由的百科全书
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.zhihu.com/equation?tex=%5Cpartial_%5Cnu%5Cfrac%7B%5Cpartial%5Cleft%28+F_%7B%5Cmu%5Cnu%7DF%5E%7B%5Cmu%5Cnu%7D+%5Cright%29%7D%7B%5Cpartial%5Cleft%28+%5Cpartial_%5Cnu+A_%5Cmu+%5Cright%29%7D%3D0%5C%5C+%5Cfrac%7B%5Cpartial%5Cleft%28+F_%7B%5Cmu%5Cnu%7DF%5E%7B%5Cmu%5Cnu%7D+%5Cright%29%7D%7B%5Cpartial%5Cleft%28+%5Cpartial_%5Cnu+A_%5Cmu+%5Cright%29%7D%3D2F_%7B%5Cmu%5Cnu%7D%5Cfrac%7B%5Cpartial%7D%7B%5Cpartial%28%5Cpartial_%5Cnu+A_%5Cmu%29%7D%5Cleft%28+%5Cvarepsilon%5E%7B%5Cmu%5Cnu+ab%7D%5Cpartial_a+A_b+%5Cright%29%5C%5C+%3D2F_%7B%5Cmu%5Cnu%7D%5Cvarepsilon%5E%7B%5Cmu%5Cnu+%5Cnu%5Cmu%7D%3D2%5Cleft%28+F%5E%7B%5Cmu%5Cnu%7D-F%5E%7B%5Cnu%5Cmu%7D+%5Cright%29%3D4F%5E%7B%5Cmu%5Cnu%7D%5C%5C+" data-lightbox="roadtrip" data-title="四维电动力学iii 场的拉格朗日表述与能动张量 知乎">
+						<img class="card-img" src="https://www.zhihu.com/equation?tex=%5Cpartial_%5Cnu%5Cfrac%7B%5Cpartial%5Cleft%28+F_%7B%5Cmu%5Cnu%7DF%5E%7B%5Cmu%5Cnu%7D+%5Cright%29%7D%7B%5Cpartial%5Cleft%28+%5Cpartial_%5Cnu+A_%5Cmu+%5Cright%29%7D%3D0%5C%5C+%5Cfrac%7B%5Cpartial%5Cleft%28+F_%7B%5Cmu%5Cnu%7DF%5E%7B%5Cmu%5Cnu%7D+%5Cright%29%7D%7B%5Cpartial%5Cleft%28+%5Cpartial_%5Cnu+A_%5Cmu+%5Cright%29%7D%3D2F_%7B%5Cmu%5Cnu%7D%5Cfrac%7B%5Cpartial%7D%7B%5Cpartial%28%5Cpartial_%5Cnu+A_%5Cmu%29%7D%5Cleft%28+%5Cvarepsilon%5E%7B%5Cmu%5Cnu+ab%7D%5Cpartial_a+A_b+%5Cright%29%5C%5C+%3D2F_%7B%5Cmu%5Cnu%7D%5Cvarepsilon%5E%7B%5Cmu%5Cnu+%5Cnu%5Cmu%7D%3D2%5Cleft%28+F%5E%7B%5Cmu%5Cnu%7D-F%5E%7B%5Cnu%5Cmu%7D+%5Cright%29%3D4F%5E%7B%5Cmu%5Cnu%7D%5C%5C+" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMDzPkm-K5vQkyHj4zK1KnpA5TYbawH1SV_cLiiSk7wG8OCaxVnj_JjdoeuNioEQ9Euzc';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				四维电动力学iii 场的拉格朗日表述与能动张量 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic1.zhimg.com/v2-f6626b90280e2152d173253e9ddbd4c6_ipico.jpg?source=172ae18b" data-lightbox="roadtrip" data-title="变分法与分析力学的基本知识 知乎">
+						<img class="card-img" src="https://pic1.zhimg.com/v2-f6626b90280e2152d173253e9ddbd4c6_ipico.jpg?source=172ae18b" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRipX5ILakpAf1Mk0g1Lv2x5vuZD8gSim3vVTZ3JIc9vQLPZVH0yvjc01HSgo-xCXTaA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				变分法与分析力学的基本知识 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://www.mwrf.net/uploadfile/2018/0524/20180524030607986.jpg" data-lightbox="roadtrip" data-title="麦克斯韦 Maxwell 方程组的由来 微波基础知识 微波射频网">
+						<img class="card-img" src="http://www.mwrf.net/uploadfile/2018/0524/20180524030607986.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQb1lmubyvYww5z1AqiaiVbN-Kt1X744giwmElY7XPRKxRUBzNZq2sSFXAg7Jneh2gbBuE';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				麦克斯韦 Maxwell 方程组的由来 微波基础知识 微波射频网
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://wikimedia.org/api/rest_v1/media/math/render/svg/d01088527fd45dfae09556dfe6df780920e0ade0" data-lightbox="roadtrip" data-title="馬克士威方程組 维基百科 自由的百科全书">
+						<img class="card-img" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/d01088527fd45dfae09556dfe6df780920e0ade0" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiY9nVC_rPLMUK0taLmZYHl2-EvVipctZxr8LJomnIGBsSh9apfS0J1_NoRKw7KkqNwA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				馬克士威方程組 维基百科 自由的百科全书
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://163.13.111.54/general_physics/Maxwell&#039;s_equations_int_form.gif" data-lightbox="roadtrip" data-title="馬克斯威爾方程式與電磁波">
+						<img class="card-img" src="http://163.13.111.54/general_physics/Maxwell&#039;s_equations_int_form.gif" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1tXHvjXFQvHHteMjTug3xkwXY86r0DtdFrxWPLB8g9ZB_qJHWM_42WXeyJHbD3xwWgcA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				馬克斯威爾方程式與電磁波
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.zhihu.com/equation?tex=%5Cbegin%7Bequation%7D+%5Cleft%5C%7B+%5Cbegin%7Barray%7D%7Blr%7D+%5Cnabla%5Ccdot+%5Ctextbf+E%3D%5Crho%5C%5C+%5Cnabla%5Ccdot+%5Ctextbf+B%3D0%5C%5C+%5Cnabla%5Ctimes+%5Ctextbf+E%3D-%5Cfrac%7B%5Cpartial%5Ctextbf+B%7D%7B%5Cpartial+t%7D%5C%5C+%5Cnabla%5Ctimes+%5Ctextbf+B%3D%5Ctextbf+J%2B%5Cfrac%7B%5Cpartial+%5Ctextbf+E%7D%7B%5Cpartial+t%7D%5C%5C++++%5Cend%7Barray%7D+%5Cright.+%5Cend%7Bequation%7D%5C%5C" data-lightbox="roadtrip" data-title="2 6 协变maxwell方程与yang Mills方程 知乎">
+						<img class="card-img" src="https://www.zhihu.com/equation?tex=%5Cbegin%7Bequation%7D+%5Cleft%5C%7B+%5Cbegin%7Barray%7D%7Blr%7D+%5Cnabla%5Ccdot+%5Ctextbf+E%3D%5Crho%5C%5C+%5Cnabla%5Ccdot+%5Ctextbf+B%3D0%5C%5C+%5Cnabla%5Ctimes+%5Ctextbf+E%3D-%5Cfrac%7B%5Cpartial%5Ctextbf+B%7D%7B%5Cpartial+t%7D%5C%5C+%5Cnabla%5Ctimes+%5Ctextbf+B%3D%5Ctextbf+J%2B%5Cfrac%7B%5Cpartial+%5Ctextbf+E%7D%7B%5Cpartial+t%7D%5C%5C++++%5Cend%7Barray%7D+%5Cright.+%5Cend%7Bequation%7D%5C%5C" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2GCP-oiIovrlIdYUSQsFzluuBlrggHZeRvrE2DmfWe6C3cvdfbvJlhb1MRTKUIoQRKg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				2 6 协变maxwell方程与yang Mills方程 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://slidesplayer.com/slide/11672695/65/images/22/8.3+%E6%B3%A2%E5%8B%95%E6%96%B9%E7%A8%8B%E5%BC%8F+%28Wave+Equations%29.jpg" data-lightbox="roadtrip" data-title="馬克斯威爾方程式 Maxwell S Equations Ppt Download">
+						<img class="card-img" src="https://slidesplayer.com/slide/11672695/65/images/22/8.3+%E6%B3%A2%E5%8B%95%E6%96%B9%E7%A8%8B%E5%BC%8F+%28Wave+Equations%29.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsSfR_LImO9OyeR4Hx9gcRjD-UKdNAk4PAaOsh5HyeSJk2G-pjsVIGOMYG8GZyYBc62lU';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				馬克斯威爾方程式 Maxwell S Equations Ppt Download
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.zhihu.com/equation?tex=%5Cbegin%7Balign%7D+%5Cint_%7BV%7D%28%5Cboldsymbol%7B%5Cnabla%5Ccdot+D%7D%29%5Cmathrm%7Bd%7DV%26%3D%5Coint_%7BS%7D%5Cboldsymbol%7BD%7D%5Cmathrm%7Bd%7D%5Cboldsymbol%7BS%7D%3Dq%3D%5Cint_%7BV%7D%5Crho%5Cmathrm%7Bd%7DV%5C%5C+%5Cint_%7BV%7D%28%5Cboldsymbol%7B%5Cnabla%5Ccdot+B%7D%29%5Cmathrm%7Bd%7DV%26%3D%5Coint_%7BS%7D%5Cboldsymbol%7BB%7D%5Cmathrm%7Bd%7D%5Cboldsymbol%7BS%7D%3D0%5C%5C+%5Cint_%7BV%7D%28%5Cboldsymbol%7B%5Cnabla%5Ctimes+E%7D%29%5Cmathrm%7Bd%7D%5Cboldsymbol%7BS%7D%26%3D%5Coint_%7BC%7D%5Cboldsymbol%7BE%7D%5Cmathrm%7Bd%7D%5Cboldsymbol%7Bl%7D%3D-%5Cfrac%7B%5Cmathrm%7Bd%7D%7D%7B%5Cmathrm%7Bd%7Dt%7D%5Cint_%7BS%7D%5Cboldsymbol%7BB%7D%5Cmathrm%7Bd%7D%5Cboldsymbol%7BS%7D%5C%5C++%5Cint_%7BV%7D%28%5Cboldsymbol%7B%5Cnabla%5Ctimes+H%7D%29%5Cmathrm%7Bd%7D%5Cboldsymbol%7BS%7D%26%3D%5Coint_%7BC%7D%5Cboldsymbol%7BH%7D%5Cmathrm%7Bd%7D%5Cboldsymbol%7Bl%7D%3D%5Cboldsymbol%7BI%7D%2B%5Cfrac%7B%5Cmathrm%7Bd%7D%7D%7B%5Cmathrm%7Bd%7Dt%7D%5Cint_%7BS%7D%5Cboldsymbol%7BD%7D%5Cmathrm%7Bd%7D%5Cboldsymbol%7BS%7D+%5Cend%7Balign%7D%5Ctag%7B4%7D" data-lightbox="roadtrip" data-title="分析力学 Maxwell方程组和lorents力 知乎">
+						<img class="card-img" src="https://www.zhihu.com/equation?tex=%5Cbegin%7Balign%7D+%5Cint_%7BV%7D%28%5Cboldsymbol%7B%5Cnabla%5Ccdot+D%7D%29%5Cmathrm%7Bd%7DV%26%3D%5Coint_%7BS%7D%5Cboldsymbol%7BD%7D%5Cmathrm%7Bd%7D%5Cboldsymbol%7BS%7D%3Dq%3D%5Cint_%7BV%7D%5Crho%5Cmathrm%7Bd%7DV%5C%5C+%5Cint_%7BV%7D%28%5Cboldsymbol%7B%5Cnabla%5Ccdot+B%7D%29%5Cmathrm%7Bd%7DV%26%3D%5Coint_%7BS%7D%5Cboldsymbol%7BB%7D%5Cmathrm%7Bd%7D%5Cboldsymbol%7BS%7D%3D0%5C%5C+%5Cint_%7BV%7D%28%5Cboldsymbol%7B%5Cnabla%5Ctimes+E%7D%29%5Cmathrm%7Bd%7D%5Cboldsymbol%7BS%7D%26%3D%5Coint_%7BC%7D%5Cboldsymbol%7BE%7D%5Cmathrm%7Bd%7D%5Cboldsymbol%7Bl%7D%3D-%5Cfrac%7B%5Cmathrm%7Bd%7D%7D%7B%5Cmathrm%7Bd%7Dt%7D%5Cint_%7BS%7D%5Cboldsymbol%7BB%7D%5Cmathrm%7Bd%7D%5Cboldsymbol%7BS%7D%5C%5C++%5Cint_%7BV%7D%28%5Cboldsymbol%7B%5Cnabla%5Ctimes+H%7D%29%5Cmathrm%7Bd%7D%5Cboldsymbol%7BS%7D%26%3D%5Coint_%7BC%7D%5Cboldsymbol%7BH%7D%5Cmathrm%7Bd%7D%5Cboldsymbol%7Bl%7D%3D%5Cboldsymbol%7BI%7D%2B%5Cfrac%7B%5Cmathrm%7Bd%7D%7D%7B%5Cmathrm%7Bd%7Dt%7D%5Cint_%7BS%7D%5Cboldsymbol%7BD%7D%5Cmathrm%7Bd%7D%5Cboldsymbol%7BS%7D+%5Cend%7Balign%7D%5Ctag%7B4%7D" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYGwc0Juy667ZRdtjti_595EQDgL3uhATBpJHvrDk5cAuzSSyH-h9ekTy0VkD6xtwFPng';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				分析力学 Maxwell方程组和lorents力 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://163.13.111.54/general_physics/EM_wave_equations_derivation.gif" data-lightbox="roadtrip" data-title="馬克斯威爾方程式與電磁波">
+						<img class="card-img" src="http://163.13.111.54/general_physics/EM_wave_equations_derivation.gif" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMrOskJnT6bitTWQemZwnmNyG-4lVE1lCXAkOtKmDTem2CFILL0QaP_th4L_NgFzRqwHM';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				馬克斯威爾方程式與電磁波
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="vXCNcnAEwsiDzM" data-lightbox="roadtrip" data-title="Http Staff Ustc Edu Cn Bjye Em Student 2014 2014 1 4 Pdf">
+						<img class="card-img" src="vXCNcnAEwsiDzM" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZN6joIO0MeC8Fuz3R6TKIHPc-UGnx7z_cXQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Http Staff Ustc Edu Cn Bjye Em Student 2014 2014 1 4 Pdf
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://slidesplayer.com/slide/11672695/65/images/16/8.2+%E6%99%82%E8%AE%8A%E9%9B%BB%E7%A3%81%E5%A0%B4%E7%9A%84%E9%82%8A%E7%95%8C%E6%A2%9D%E4%BB%B6+6.+%E9%82%8A%E7%95%8C%E6%A2%9D%E4%BB%B6%E5%85%AC%E5%BC%8F%E6%AD%B8%E7%B4%8D%E6%95%B4%E7%90%86+%E7%9B%B8%E6%B8%9B+%E7%A3%81%E5%A0%B4%E5%BC%B7%E5%BA%A6+%E9%80%A3%E7%BA%8C+%E7%A3%81%E9%80%9A%E5%AF%86%E5%BA%A6+%E9%9B%BB%E9%80%9A%E5%AF%86%E5%BA%A6+%E9%9B%BB%E5%A0%B4%E5%BC%B7%E5%BA%A6+%E7%89%A9%E7%90%86%E6%84%8F%E7%BE%A9+%E9%82%8A%E7%95%8C%E5%80%BC%E5%85%AC%E5%BC%8F+%E5%BE%AE%E5%88%86%E5%BC%8F.jpg" data-lightbox="roadtrip" data-title="馬克斯威爾方程式 Maxwell S Equations Ppt Download">
+						<img class="card-img" src="https://slidesplayer.com/slide/11672695/65/images/16/8.2+%E6%99%82%E8%AE%8A%E9%9B%BB%E7%A3%81%E5%A0%B4%E7%9A%84%E9%82%8A%E7%95%8C%E6%A2%9D%E4%BB%B6+6.+%E9%82%8A%E7%95%8C%E6%A2%9D%E4%BB%B6%E5%85%AC%E5%BC%8F%E6%AD%B8%E7%B4%8D%E6%95%B4%E7%90%86+%E7%9B%B8%E6%B8%9B+%E7%A3%81%E5%A0%B4%E5%BC%B7%E5%BA%A6+%E9%80%A3%E7%BA%8C+%E7%A3%81%E9%80%9A%E5%AF%86%E5%BA%A6+%E9%9B%BB%E9%80%9A%E5%AF%86%E5%BA%A6+%E9%9B%BB%E5%A0%B4%E5%BC%B7%E5%BA%A6+%E7%89%A9%E7%90%86%E6%84%8F%E7%BE%A9+%E9%82%8A%E7%95%8C%E5%80%BC%E5%85%AC%E5%BC%8F+%E5%BE%AE%E5%88%86%E5%BC%8F.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStQmhlz5PqFuSr9sr75iZj-dtW1x-9rVogoA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				馬克斯威爾方程式 Maxwell S Equations Ppt Download
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://163.13.111.54/general_physics/Maxwell&#039;s_Eq_diff-form.gif" data-lightbox="roadtrip" data-title="馬克斯威爾方程式與電磁波">
+						<img class="card-img" src="http://163.13.111.54/general_physics/Maxwell&#039;s_Eq_diff-form.gif" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ46en8EuoLkLlCC304ksDSWQ_hliDWdC-JcQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				馬克斯威爾方程式與電磁波
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.zhihu.com/equation?tex=%5Cleft%5C%7B%5Cbegin%7Bmatrix%7D+%5Cvec%7B%5Cbigtriangledown++%7D%5Ccdot+%5Cvec%7BE%7D%3D%5Cfrac%7B1%7D%7B%5Cvarepsilon+_%7B0%7D+%7D%5Crho%5C%5C++%5Cvec%7B%5Cbigtriangledown++%7D%5Ccdot+%5Cvec%7BB%7D%3D0%5C%5C++%5Cvec%7B%5Cbigtriangledown++%7D%5Ctimes+%5Cvec%7BE%7D%3D-%5Cfrac%7B%5Cpartial+%5Cvec%7BB%7D%7D%7B%5Cpartial+t%7D%5C%5C++%5Cvec%7B%5Cbigtriangledown++%7D%5Ctimes++%5Cvec%7BB%7D%3D%5Cmu+_%7B0%7D%5Cvec%7BJ%7D%2B%5Cmu+_%7B0%7D%5Cvarepsilon+_%7B0%7D%5Cfrac%7B%5Cpartial+%5Cvec%7BE%7D%7D%7B%5Cpartial+t%7D+%5Cend%7Bmatrix%7D%5Cright." data-lightbox="roadtrip" data-title="深度科普 电磁波 一 真空中的maxwell方程组 知乎">
+						<img class="card-img" src="https://www.zhihu.com/equation?tex=%5Cleft%5C%7B%5Cbegin%7Bmatrix%7D+%5Cvec%7B%5Cbigtriangledown++%7D%5Ccdot+%5Cvec%7BE%7D%3D%5Cfrac%7B1%7D%7B%5Cvarepsilon+_%7B0%7D+%7D%5Crho%5C%5C++%5Cvec%7B%5Cbigtriangledown++%7D%5Ccdot+%5Cvec%7BB%7D%3D0%5C%5C++%5Cvec%7B%5Cbigtriangledown++%7D%5Ctimes+%5Cvec%7BE%7D%3D-%5Cfrac%7B%5Cpartial+%5Cvec%7BB%7D%7D%7B%5Cpartial+t%7D%5C%5C++%5Cvec%7B%5Cbigtriangledown++%7D%5Ctimes++%5Cvec%7BB%7D%3D%5Cmu+_%7B0%7D%5Cvec%7BJ%7D%2B%5Cmu+_%7B0%7D%5Cvarepsilon+_%7B0%7D%5Cfrac%7B%5Cpartial+%5Cvec%7BE%7D%7D%7B%5Cpartial+t%7D+%5Cend%7Bmatrix%7D%5Cright." onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0b87-dmEpRXaLTKEYA9uKY9f6QW-xgU_WAA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				深度科普 电磁波 一 真空中的maxwell方程组 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="/search?q=%E9%A6%AC%E5%85%8B%E5%A3%AB%E5%A8%81%E6%96%B9%E7%A8%8B%E5%BC%8F&amp;tbm=isch" data-lightbox="roadtrip" data-title="Https Encrypted Tbn0 Gstatic Com Images Q Tbn And9gcqtj8vk51q9d Gfvtuqqyalq1jneuoh I1cogj68u4oxamyk 3s Usqp Cau">
+						<img class="card-img" src="/search?q=%E9%A6%AC%E5%85%8B%E5%A3%AB%E5%A8%81%E6%96%B9%E7%A8%8B%E5%BC%8F&amp;tbm=isch" onerror="this.onerror=null;this.src='/search?q=%E9%A6%AC%E5%85%8B%E5%A3%AB%E5%A8%81%E6%96%B9%E7%A8%8B%E5%BC%8F&amp;tbm=isch';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Https Encrypted Tbn0 Gstatic Com Images Q Tbn And9gcqtj8vk51q9d Gfvtuqqyalq1jneuoh I1cogj68u4oxamyk 3s Usqp Cau
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://slidesplayer.com/slide/14723402/90/images/8/%E9%A6%AC%E5%85%8B%E6%96%AF%E5%A8%81%E7%88%BE%E6%96%B9%E7%A8%8B%E5%BC%8F%28%E7%A9%8D%E5%88%86%E5%BC%8F%E5%92%8C%E5%BE%AE%E5%88%86%E5%BC%8F%EF%BC%89+%E9%9B%BB%E5%A0%B4%E7%9A%84%E9%AB%98%E6%96%AF%E5%AE%9A%E5%BE%8B+%E7%A3%81%E5%A0%B4%E7%9A%84%E9%AB%98%E6%96%AF%E5%AE%9A%E5%BE%8B+%E6%B3%95%E6%8B%89%E7%AC%AC%E5%AE%9A%E5%BE%8B+%E5%AE%89%E5%9F%B9%EF%BC%8D%E9%A6%AC%E5%85%8B%E6%96%AF%E5%A8%81%E7%88%BE%E5%AE%9A%E5%BE%8B.jpg" data-lightbox="roadtrip" data-title="Maxwell Eq S 感應電場 31 6 磁場的高斯定律 32 2 感應磁場 32 9 馬克斯威爾方程式 表32 1 Ppt Download">
+						<img class="card-img" src="https://slidesplayer.com/slide/14723402/90/images/8/%E9%A6%AC%E5%85%8B%E6%96%AF%E5%A8%81%E7%88%BE%E6%96%B9%E7%A8%8B%E5%BC%8F%28%E7%A9%8D%E5%88%86%E5%BC%8F%E5%92%8C%E5%BE%AE%E5%88%86%E5%BC%8F%EF%BC%89+%E9%9B%BB%E5%A0%B4%E7%9A%84%E9%AB%98%E6%96%AF%E5%AE%9A%E5%BE%8B+%E7%A3%81%E5%A0%B4%E7%9A%84%E9%AB%98%E6%96%AF%E5%AE%9A%E5%BE%8B+%E6%B3%95%E6%8B%89%E7%AC%AC%E5%AE%9A%E5%BE%8B+%E5%AE%89%E5%9F%B9%EF%BC%8D%E9%A6%AC%E5%85%8B%E6%96%AF%E5%A8%81%E7%88%BE%E5%AE%9A%E5%BE%8B.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoURvTp3nk983-2tvHe322MfO0qkNUNKgKNw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Maxwell Eq S 感應電場 31 6 磁場的高斯定律 32 2 感應磁場 32 9 馬克斯威爾方程式 表32 1 Ppt Download
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://wikimedia.org/api/rest_v1/media/math/render/svg/01632926e4679235fb1fd2d9aab45c41e51ce4cf" data-lightbox="roadtrip" data-title="经典电磁理论的协变形式 维基百科 自由的百科全书">
+						<img class="card-img" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/01632926e4679235fb1fd2d9aab45c41e51ce4cf" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwd11P7ice1UPMCZslacIwiDl3YEcBm0V2rA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				经典电磁理论的协变形式 维基百科 自由的百科全书
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://wikimedia.org/api/rest_v1/media/math/render/svg/8486d18d7b88a83ace421039f55211c5c2d03a6c" data-lightbox="roadtrip" data-title="拉格朗日量 维基百科 自由的百科全书">
+						<img class="card-img" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/8486d18d7b88a83ace421039f55211c5c2d03a6c" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR40grKBqO9q851MXBgJEeOelCg_e2dwnjP1g';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				拉格朗日量 维基百科 自由的百科全书
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://www.1cae.com/i/g/78/78176caea8a72935ffd0772fa5e4dd19r.jpg" data-lightbox="roadtrip" data-title="深入浅出讲解麦克斯韦方程组 三维动画视频逼真描述 Maxwell电磁仿真培训 Maxwell电磁应用培训课程 Maxwell分析 Maxwell 在线视频 Maxwell技术学习教程 Maxwell软件教程 Maxwell资料下载 电流电场电容磁场无线电仿真">
+						<img class="card-img" src="http://www.1cae.com/i/g/78/78176caea8a72935ffd0772fa5e4dd19r.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLfoSHcFL2bi0Kcs2LC2126J2FHANJRpvAVw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				深入浅出讲解麦克斯韦方程组 三维动画视频逼真描述 Maxwell电磁仿真培训 Maxwell电磁应用培训课程 Maxwell分析 Maxwell 在线视频 Maxwell技术学习教程 Maxwell软件教程 Maxwell资料下载 电流电场电容磁场无线电仿真
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://wikimedia.org/api/rest_v1/media/math/render/svg/812299a8104ad6bd550a8d03f8688156da472f31" data-lightbox="roadtrip" data-title="电荷守恒定律 维基百科 自由的百科全书">
+						<img class="card-img" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/812299a8104ad6bd550a8d03f8688156da472f31" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqh_8NJr_eEq9dk5NyKp4PmEHjDAXcxeQG9Q';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				电荷守恒定律 维基百科 自由的百科全书
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="zSiBt_bwdqbNyM" data-lightbox="roadtrip" data-title="2">
+						<img class="card-img" src="zSiBt_bwdqbNyM" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMXW8uWD4syXQjaMy8IECiw3sqw9d2rp2GSg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				2
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="vXCNcnAEwsiDzM" data-lightbox="roadtrip" data-title="Http Staff Ustc Edu Cn Bjye Em Student 2014 2014 1 4 Pdf">
+						<img class="card-img" src="vXCNcnAEwsiDzM" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQymdUlx-ynC1CpkyPA0PDwDELWXqDjTsHwQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Http Staff Ustc Edu Cn Bjye Em Student 2014 2014 1 4 Pdf
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://swf.ishare.down.sina.com.cn/1SMqozWrJ2.jpg?ssig=Og4JRcnPhj&amp;Expires=1619645580&amp;KID=sina,ishare&amp;range=1223370-1471097" data-lightbox="roadtrip" data-title="光子的静止引力质量问题下载 Word模板 爱问共享资料">
+						<img class="card-img" src="https://swf.ishare.down.sina.com.cn/1SMqozWrJ2.jpg?ssig=Og4JRcnPhj&amp;Expires=1619645580&amp;KID=sina,ishare&amp;range=1223370-1471097" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwIMYUe1Cq6_eJs3aoQ6ey-mpgOfKGBg7s_g';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				光子的静止引力质量问题下载 Word模板 爱问共享资料
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+		
+	</div>
+
+		 
+		
+		
+				</div>
+				<div class="col-sm-12 widget">
+					<div class="d-block p-4">
+	<center>
+		<!-- BOTTOM BANNER ADS -->
+<script async="async" data-cfasync="false" src="//jc32arlvqpv8.com/eb47a424ae325c90cca32780149785c3/invoke.js"></script>
+<div id="container-eb47a424ae325c90cca32780149785c3"></div>
+
+	</center>
+</div>				</div>
+			</div>
+			<div class="row footer">
+				<div class="col-md-12 text-center py-4">
+										<a href="/p/dmca.html">Dmca</a>
+										<a href="/p/contact.html">Contact</a>
+										<a href="/p/privacy-policy.html">Privacy Policy</a>
+										<a href="/p/copyright.html">Copyright</a>
+					
+				</div>
+			</div>
+		</main>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js" integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js" integrity="sha256-CtKylYan+AJuoH8jrMht1+1PMhMqrKnB8K5g012WN5I=" crossorigin="anonymous"></script>
+		
+		<!-- Footer CSS JS -->
+		
+		
+		
+			<script type='text/javascript' src='//jc32arlvqpv8.com/ef/d5/10/efd510237a3143727bed46803ec35b8d.js'></script>
+</body>
+</html>

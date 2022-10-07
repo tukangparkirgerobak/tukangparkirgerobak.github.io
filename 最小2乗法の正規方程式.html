@@ -1,0 +1,682 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha256-L/W5Wfqfa0sdBNIKN9cG6QA5F2qx4qICmU2VgLruv9Y=" crossorigin="anonymous" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/css/lightbox.min.css" integrity="sha256-tBxlolRHP9uMsEFKVk+hk//ekOlXOixLKvye5W2WR5c=" crossorigin="anonymous" />
+		<link href="https://fonts.googleapis.com/css?family=Mr+Dafoe" rel="stylesheet" type="text/css">
+
+		<style type="text/css">
+			html,body{font-family:"Open Sans",Arial,sans-serif;font-size:14px;font-weight:400;background:#f3f3f3 url(https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Linear_least_squares2.png/440px-Linear_least_squares2.png
+) no-repeat center center fixed;background-size:cover;height:100%}#title{font-family:"Mr Dafoe",Times,serif;font-size:34px;background:rgba(255,255,255,.8);margin-bottom:34px}.header{padding-bottom:13px;margin-bottom:13px;border-bottom:1px solid #eee}a{color:#26ADE4;text-decoration:none}#title a{color:#333;margin-left:21px}#title a:hover{text-decoration:none;color:#26ADE4}.sidebar ul{margin:0;padding:0}.sidebar ul li{list-style:none}.footer{margin-top:21px;padding-top:13px;border-top:1px solid #eee}.footer a{margin:0 15px}.navi{margin:13px 0 13px 0;padding:13px}.navi a{margin:5px 2px;font-size:95%}.main{margin-top: 6rem;}.form-inline .form-control{min-width: 300px;}.v-cover{height: 380px; object-fit: cover;}.v-image{height: 200px; object-fit: cover;}.dwn-cover{max-height: 460px; object-fit: cover;}.main{margin-top: 6rem;}.form-inline .form-control{min-width: 300px;}			
+		</style>
+
+		<title>最小2乗法の正規方程式</title>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/", 
+  "@type": "Article", 
+  "author": {
+    "@type": "Person",
+    "name": "James"
+  },
+  "headline": "最小2乗法の正規方程式",
+  "datePublished": "2021-04-24",
+  "image": [https://ist.ksc.kwansei.ac.jp/~nishitani/MapleHiki/?c=plugin;plugin=attach_download;p=LeastSquareFit;file_name=C8_LeastSquareFitplot2d2.png,https://www.ikpi.co.jp/img/math_205.jpg,https://atarimae.biz/wp-content/uploads/2016/12/LSM-sikihenkei.png],
+  "publisher": {
+    "@type": "Organization",
+    "name": "Tukang Parkir Gerobak",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://via.placeholder.com/512.png?text=最小2乗法の正規方程式",
+      "width": 512,
+      "height": 512
+    }
+  }
+}
+</script>
+		<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-957NGNKQ70"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-957NGNKQ70');
+</script>
+
+<script type='text/javascript' src='//jc32arlvqpv8.com/1a/82/2e/1a822ef8a40a0fbab3c4ea12a5d2bb02.js'></script>
+</head>
+	<body>
+		<header class="bg-white fixed-top">			
+			<nav class="navbar navbar-light bg-white mb-0">
+				<div class="container justify-content-center justify-content-sm-between">	
+				  <a href="/" title="Blog" class="navbar-brand mb-1">Blog</a>
+				  				</div>			  
+			</nav>				
+		</header>
+		<main class="main container bg-white">
+			<div class="col-md-12 my-4" align="center">
+				<div class="d-block p-4">
+	<br/><center>
+<!-- TOP BANNER ADS -->
+</center><br/>
+</div>			</div>
+			<div class="row header">
+				<div class="col-sm-12 text-center p-2">
+						<h1>最小2乗法の正規方程式</h1>
+
+	
+	<div class="navi text-center">
+										<a class="badge badge-light" href="/%E6%A3%92%E6%9D%90%E3%81%AE%E6%94%AF%E9%85%8D%E6%96%B9%E7%A8%8B%E5%BC%8F.html">棒材の支配方程式</a>
+											<a class="badge badge-info" href="/%E7%96%91%E4%BC%BC%E3%83%AD%E3%83%AA-%E3%83%9E%E3%83%9E%E3%81%AB%E3%81%AF%E8%A8%80%E3%81%88%E3%81%BE%E3%81%9B%E3%82%93-%E6%96%B0%E3%81%97%E3%81%84%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%8C%E6%80%A7%E5%99%A8%E3%82%92%E7%84%A1%E7%90%86%E7%9F%A2%E7%90%86%E3%81%93%E3%81%98%E5%85%A5%E3%82%8C%E3%81%A6%E3%81%8D%E3%81%BE%E3%81%99-148cm.html">疑似ロリ ママには言えません 新しいお父さんが性器を無理矢理こじ入れてきます 148cm</a>
+											<a class="badge badge-success" href="/%E7%A7%81%E3%81%AE%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%AF%E9%87%A3%E3%82%8A%E3%81%8C%E5%A5%BD%E3%81%8D%E3%81%A7%E3%81%99-%E8%8B%B1%E8%AA%9E.html">私のお父さんは釣りが好きです 英語</a>
+											<a class="badge badge-secondary" href="/%E7%9B%B4%E7%B7%9A%E3%81%AB%E5%9E%82%E7%9B%B4%E3%81%AA%E7%9B%B4%E7%B7%9A%E3%81%AE%E6%96%B9%E7%A8%8B%E5%BC%8F.html">直線に垂直な直線の方程式</a>
+											<a class="badge badge-danger" href="/%E9%AB%98%E6%AC%A1%E6%96%B9%E7%A8%8B%E5%BC%8F-%E4%BB%A3%E9%87%91%E3%81%AE%E5%95%8F%E9%A1%8C.html">高次方程式 代金の問題</a>
+											<a class="badge badge-danger" href="/%E7%9B%B4%E7%B7%9A%E3%81%AE%E6%96%B9%E7%A8%8B%E5%BC%8F-2%E7%82%B9.html">直線の方程式 2点</a>
+											<a class="badge badge-warning" href="/%E8%8A%B1%E5%AB%81-%E3%81%AE-%E6%89%8B%E7%B4%99-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93-%E3%83%90%E3%83%BC%E3%82%B8%E3%83%B3-%E3%83%AD%E3%83%BC%E3%83%89.html">花嫁 の 手紙 お父さん バージン ロード</a>
+											<a class="badge badge-light" href="/%E8%B2%B4%E6%96%B9%E3%81%AE%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%AF%E4%BD%95%E5%87%A6%E3%81%AB%E4%BD%8F%E3%82%93%E3%81%A7%E3%81%84%E3%82%8B%E3%81%AE%E8%8B%B1%E8%AA%9E.html">貴方のお父さんは何処に住んでいるの英語</a>
+											<a class="badge badge-info" href="/%E8%B2%A0%E3%81%AE%E6%96%B9%E7%A8%8B%E5%BC%8F-%E7%9F%AD%E7%B7%A8.html">負の方程式 短編</a>
+											<a class="badge badge-dark" href="/%E9%A4%8A%E5%AD%90-%E5%83%95%E3%81%A8%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%AE%E9%96%A2%E4%BF%82.html">養子 僕とお父さんの関係</a>
+											<a class="badge badge-success" href="/%E8%8A%B1%E8%BC%AA-%E3%81%8F%E3%82%93-%E3%81%AE-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93.html">花輪 くん の お父さん</a>
+											<a class="badge badge-light" href="/%E7%99%BD%E5%9C%9F%E5%AE%B6-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93-%E8%A2%AB%E3%82%8A%E7%89%A9.html">白土家 お父さん 被り物</a>
+											<a class="badge badge-danger" href="/%E6%A7%8B%E9%80%A0%E6%96%B9%E7%A8%8B%E5%BC%8F%E3%83%A2%E3%83%87%E3%83%AA%E3%83%B3%E3%82%B0-%E6%A8%99%E6%BA%96%E5%8C%96.html">構造方程式モデリング 標準化</a>
+											<a class="badge badge-warning" href="/%E9%80%A3%E7%AB%8B%E4%B8%80%E6%AC%A1%E4%B8%89%E5%85%83%E6%96%B9%E7%A8%8B%E5%BC%8F-%E4%BD%BF%E3%81%84%E6%96%B9.html">連立一次三元方程式 使い方</a>
+											<a class="badge badge-danger" href="/%E8%B5%A4%E3%81%A1%E3%82%83%E3%82%93-%E3%83%90%E3%83%BC%E3%82%B5%E3%82%B9-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93-%E3%81%AE-%E3%82%B2%E3%83%BC%E3%83%A0.html">赤ちゃん バーサス お父さん の ゲーム</a>
+						</div>
+<center>
+	<!-- MIDDLE BANNER ADS -->
+<script type="text/javascript">
+	atOptions = {
+		'key' : '2b77887421e2587a1a1b1d7c8a31a9e0',
+		'format' : 'iframe',
+		'height' : 250,
+		'width' : 300,
+		'params' : {}
+	};
+	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://jc32arlvqpv8.com/2b77887421e2587a1a1b1d7c8a31a9e0/invoke.js"></scr' + 'ipt>');
+</script>
+		
+	</center>
+					
+				</div>
+			</div>
+			<div class="row content mb-4">
+				<div class="col-md-12">					
+					
+	
+	<div class="card-columns">
+						
+	  <div class='card'>
+	  	<a href="https://analytics-notty.tech/wp-content/uploads/2018/03/%E3%82%A2%E3%82%A4%E3%82%AD%E3%83%A3%E3%83%83%E3%83%81-17.jpg" data-lightbox="roadtrip" data-title="最小二乗法の式の導出と例題 最小二乗法と回帰直線を思い通りに使えるようになろう 数学の面白いこと 役に立つことをまとめたサイト">
+						<img class="card-img" src="https://analytics-notty.tech/wp-content/uploads/2018/03/%E3%82%A2%E3%82%A4%E3%82%AD%E3%83%A3%E3%83%83%E3%83%81-17.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjrn2Ql9eHtyRStm4uedPCHkupzF5p0tYmHdHvlOGy9N4_jBoLTsZSqY37EDsVfL3M6kg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				最小二乗法の式の導出と例題 最小二乗法と回帰直線を思い通りに使えるようになろう 数学の面白いこと 役に立つことをまとめたサイト
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://atarimae.biz/wp-content/uploads/2016/12/LSM-sikihenkei.png" data-lightbox="roadtrip" data-title="単回帰分析 最小二乗法の公式はどうすれば求められるのか 統計上の誤差と残差の違い アタリマエ">
+						<img class="card-img" src="https://atarimae.biz/wp-content/uploads/2016/12/LSM-sikihenkei.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbhSdMTGD5XbfLkV5zxpDk4Y--4tKwd2d3zK54VW-3zsmWW6MJsgABUfUrJ2KyQemVd1M';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				単回帰分析 最小二乗法の公式はどうすれば求められるのか 統計上の誤差と残差の違い アタリマエ
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://image.slidesharecdn.com/2-160521161359/95/22-slideshare-4-638.jpg?cb=1463847294" data-lightbox="roadtrip" data-title="自然科学の統計学2 2 Slideshare">
+						<img class="card-img" src="https://image.slidesharecdn.com/2-160521161359/95/22-slideshare-4-638.jpg?cb=1463847294" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8nr6RssvhpFl2GUXMgpe9yAkTOGsoHAmyNbzvphUZ0sw8QIloou1GlC3izMxB_3jp_uM';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				自然科学の統計学2 2 Slideshare
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://arduinopid.web.fc2.com/new42.png" data-lightbox="roadtrip" data-title="最小二乗法の公式の導出方法">
+						<img class="card-img" src="http://arduinopid.web.fc2.com/new42.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrFRQM9wyNIljDtlhO0hmF6-IwE3MG-btC_7MozL7nRyeELJRFYjcvp3gJjdr6tqFIrl0';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				最小二乗法の公式の導出方法
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://www.sanko-shoko.net/note.php?img=vl5c" data-lightbox="roadtrip" data-title="最小二乗法 Least Squares Method">
+						<img class="card-img" src="http://www.sanko-shoko.net/note.php?img=vl5c" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREwv1HI2WzoR7wGatWFoz78rjk_uHVuSi3Qshnw3vzFh_vZeFqLXBeO9O472pNCqkwXSg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				最小二乗法 Least Squares Method
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://arduinopid.web.fc2.com/new38.png" data-lightbox="roadtrip" data-title="最小二乗法の公式の導出方法">
+						<img class="card-img" src="http://arduinopid.web.fc2.com/new38.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_-P2d86dqiP1CKKxEW_WweJsa63L6iEfgCS52lM98Ap3A1w7VfyFgTEKvG8pFAUzA-xU';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				最小二乗法の公式の導出方法
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+				<div class='card'>	
+			<div class="d-block p-4">
+	</div>		  	
+		  	<h3 class="h6 p-2"><b></b></h3>
+					</div>
+		
+						
+	  <div class='card'>
+	  	<a href="https://cdn-ak.f.st-hatena.com/images/fotolife/s/seetheworld1992/20190315/20190315122007.jpg" data-lightbox="roadtrip" data-title="最小二乗法の基礎をまとめる エンジニアを目指す浪人のブログ">
+						<img class="card-img" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/seetheworld1992/20190315/20190315122007.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoaM976buj4MXBtdRq_Gm2bnJU5-Z1jsJjkNoS5gB5YoqjWCRMww8LjjXSEvF-tq8Ezq8';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				最小二乗法の基礎をまとめる エンジニアを目指す浪人のブログ
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://arduinopid.web.fc2.com/new20.png" data-lightbox="roadtrip" data-title="最小二乗法の公式の導出方法">
+						<img class="card-img" src="http://arduinopid.web.fc2.com/new20.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4jTzXTDCmWTi5__YfRtDDHkRAvg7RgjqpjZkDIl2PO2-vWHsKcwvMgRM6nketG_sPpA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				最小二乗法の公式の導出方法
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://www.motorwarp.com/koizumi/regression02.png" data-lightbox="roadtrip" data-title="回帰分析">
+						<img class="card-img" src="http://www.motorwarp.com/koizumi/regression02.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQd1nD3X8JxUdqWcQhxoTy0Tq2JCetrfrF_hUBbU28VoZzySyEaMgpgRZMcasWjz7UgaXw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				回帰分析
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://atsugi5761455.fc2web.com/calking4/c4_016.gif" data-lightbox="roadtrip" data-title="最小二乗法近似">
+						<img class="card-img" src="http://atsugi5761455.fc2web.com/calking4/c4_016.gif" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5E_zcNw5qkMJ-BA38wJd7nz-J7klnln9kNhJmikWqQ3xAjz4AXVHOLiOd5iEYJX8Sc0E';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				最小二乗法近似
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://analytics-notty.tech/wp-content/uploads/2018/03/%E3%83%87%E3%83%BC%E3%82%BF%E3%81%A8%E5%9B%9E%E5%B8%B0%E7%9B%B4%E7%B7%9A%E3%81%AE%E3%82%BA%E3%83%AC.jpg" data-lightbox="roadtrip" data-title="最小二乗法の式の導出と例題 最小二乗法と回帰直線を思い通りに使えるようになろう 数学の面白いこと 役に立つことをまとめたサイト">
+						<img class="card-img" src="https://analytics-notty.tech/wp-content/uploads/2018/03/%E3%83%87%E3%83%BC%E3%82%BF%E3%81%A8%E5%9B%9E%E5%B8%B0%E7%9B%B4%E7%B7%9A%E3%81%AE%E3%82%BA%E3%83%AC.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcI49NoK2oMsm5aFCA1DQmJPjAK_ipxt9K4bAT_IdKdBg2zETq2yfOi9loz-9pcka5hc0';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				最小二乗法の式の導出と例題 最小二乗法と回帰直線を思い通りに使えるようになろう 数学の面白いこと 役に立つことをまとめたサイト
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.ikpi.co.jp/img/math_205.jpg" data-lightbox="roadtrip" data-title="補論 バリュエーション確率統計論シリーズ 推定方法における最小二乗法 ナレッジ情報 インターナレッジ パートナーズ 公認会計士 税理士">
+						<img class="card-img" src="https://www.ikpi.co.jp/img/math_205.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-HZzTYylAQcoTsJ9kTLg5mF92LQYictIYG8k_vyeV9lMal1mwhiOcSCHzHRAiF0RAcm8';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				補論 バリュエーション確率統計論シリーズ 推定方法における最小二乗法 ナレッジ情報 インターナレッジ パートナーズ 公認会計士 税理士
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://atarimae.biz/wp-content/uploads/2016/12/LSM-formula.png" data-lightbox="roadtrip" data-title="単回帰分析 最小二乗法の公式はどうすれば求められるのか 統計上の誤差と残差の違い アタリマエ">
+						<img class="card-img" src="https://atarimae.biz/wp-content/uploads/2016/12/LSM-formula.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUEHCLHrmjTl9PsPV4jHoaKxTEFs6uCY0VHB6BDzOlxL2r-STwW8tDUQytfDn7Fj9CmX4';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				単回帰分析 最小二乗法の公式はどうすれば求められるのか 統計上の誤差と残差の違い アタリマエ
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://image.slidesharecdn.com/ltgaussmarkovtheorem-140511062322-phpapp01/95/-12-638.jpg?cb=1399792712" data-lightbox="roadtrip" data-title="がうす まるこふ の定理とかそのへん">
+						<img class="card-img" src="https://image.slidesharecdn.com/ltgaussmarkovtheorem-140511062322-phpapp01/95/-12-638.jpg?cb=1399792712" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2bPzDYdTnqy12bcpGvkBQnaTkL2CDzwRmKE48N4YC9CCsbfseze4p88LNrXdHwFtXf3E';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				がうす まるこふ の定理とかそのへん
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://www.motorwarp.com/koizumi/regression04.png" data-lightbox="roadtrip" data-title="回帰分析">
+						<img class="card-img" src="http://www.motorwarp.com/koizumi/regression04.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-pS_nrHq8QYv55i_VXTLdDx3zdnox8dJvjR3q1IjRzTvi5GKo4Mm0FNNk2LU47aNRNF8';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				回帰分析
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://staff.aist.go.jp/t.ihara/weight_and_regression.files/image045.gif" data-lightbox="roadtrip" data-title="１次式回帰分析と重みについて">
+						<img class="card-img" src="https://staff.aist.go.jp/t.ihara/weight_and_regression.files/image045.gif" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxeerkvFsMs5Zz7p7CO7-qLqxKKl-7tE8ucWxqE3mbCImdP6lm84s1lnc92axcgtoYEg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				１次式回帰分析と重みについて
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://image.slidesharecdn.com/doe20153-150818144252-lva1-app6891/95/part-3-17-638.jpg?cb=1475372356" data-lightbox="roadtrip" data-title="実験計画法入門 Part 3">
+						<img class="card-img" src="https://image.slidesharecdn.com/doe20153-150818144252-lva1-app6891/95/part-3-17-638.jpg?cb=1475372356" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3ZMMCa_lEO5j0Yam-piNvaGZjqAynlH2aGjWC9eYkSVnDLYLR6s8jBzWpLENXiwnqNZU';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				実験計画法入門 Part 3
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://image3.slideserve.com/5693438/slide8-l.jpg" data-lightbox="roadtrip" data-title="Ppt 最小二乗法 Powerpoint Presentation Free Download Id 5693438">
+						<img class="card-img" src="https://image3.slideserve.com/5693438/slide8-l.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGVqRJJE866BK0fxAL4jUkOwZ__2JapWbpkQG7D7o79fPWi-3jHVfBbFjoWVzhXHPrG-0';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Ppt 最小二乗法 Powerpoint Presentation Free Download Id 5693438
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://staff.aist.go.jp/t.ihara/regression_and_model.files/image050.gif" data-lightbox="roadtrip" data-title="最小二乗法">
+						<img class="card-img" src="https://staff.aist.go.jp/t.ihara/regression_and_model.files/image050.gif" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvtpL-oBMfLuWszfRIiMMvuyeEePFKFOFhHPNFZTbYhx6Mk9d2IjL5nXf_jDHXcksJZIM';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				最小二乗法
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://analytics-notty.tech/wp-content/uploads/2018/03/%E8%BA%AB%E9%95%B7%E4%BD%93%E9%87%8D%E3%81%AE%E9%96%A2%E4%BF%82_%E7%9B%B4%E7%B7%9A.jpg" data-lightbox="roadtrip" data-title="最小二乗法の式の導出と例題 最小二乗法と回帰直線を思い通りに使えるようになろう 数学の面白いこと 役に立つことをまとめたサイト">
+						<img class="card-img" src="https://analytics-notty.tech/wp-content/uploads/2018/03/%E8%BA%AB%E9%95%B7%E4%BD%93%E9%87%8D%E3%81%AE%E9%96%A2%E4%BF%82_%E7%9B%B4%E7%B7%9A.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmLoL_xWOHghniUf_FYSiM1nms-rawltn9uZ--JKcxuP3TSxUwgMN7-EoH8YCNLvUccdc';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				最小二乗法の式の導出と例題 最小二乗法と回帰直線を思い通りに使えるようになろう 数学の面白いこと 役に立つことをまとめたサイト
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://slidesplayer.net/slide/11644093/65/images/6/%E6%AD%A3%E8%A6%8F%E6%96%B9%E7%A8%8B%E5%BC%8F%E3%82%92%E8%A7%A3%E3%81%8F%E7%B0%A1%E5%8D%98%E3%81%AA%E4%BE%8B.jpg" data-lightbox="roadtrip" data-title="3 線形回帰および識別 クラシックな機械学習の入門 By 中川裕志 東京大学 線形回帰のモデル 正則化項の導入 L2正則化 L1正則化 Ppt Download">
+						<img class="card-img" src="https://slidesplayer.net/slide/11644093/65/images/6/%E6%AD%A3%E8%A6%8F%E6%96%B9%E7%A8%8B%E5%BC%8F%E3%82%92%E8%A7%A3%E3%81%8F%E7%B0%A1%E5%8D%98%E3%81%AA%E4%BE%8B.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8bjoVHGRpgHOIZntuIXA8ZBAOWKFMY-jtXg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				3 線形回帰および識別 クラシックな機械学習の入門 By 中川裕志 東京大学 線形回帰のモデル 正則化項の導入 L2正則化 L1正則化 Ppt Download
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://imagingsolution.net/wordpress/wp-content/uploads/2011/06/LeastSquareMethod-1.png" data-lightbox="roadtrip" data-title="最小二乗法で近似曲線を求める方法 イメージングソリューション">
+						<img class="card-img" src="https://imagingsolution.net/wordpress/wp-content/uploads/2011/06/LeastSquareMethod-1.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpjhLZd7CJ9dsZNbq3AhI3JzJnmfoiV9TXHw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				最小二乗法で近似曲線を求める方法 イメージングソリューション
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://cdn-ak.f.st-hatena.com/images/fotolife/i/ill-identified/20150503/20150503000035.png" data-lightbox="roadtrip" data-title="科学史から最小二乗法 回帰分析 を説明してみる Ill Identified Diary">
+						<img class="card-img" src="https://cdn-ak.f.st-hatena.com/images/fotolife/i/ill-identified/20150503/20150503000035.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTj6mTLU9GlUMn2RHAeteC10Q4oQNqC-i8FOg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				科学史から最小二乗法 回帰分析 を説明してみる Ill Identified Diary
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://cdn-ssl-devio-img.classmethod.jp/wp-content/uploads/2020/07/1-11-640x391.png" data-lightbox="roadtrip" data-title="行列の最小二乗法について調べてみた Developersio">
+						<img class="card-img" src="https://cdn-ssl-devio-img.classmethod.jp/wp-content/uploads/2020/07/1-11-640x391.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyHXt5cOzIxv9utg7TrJIk9x5ddR2ievLV7Q';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				行列の最小二乗法について調べてみた Developersio
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="/search?q=%E6%9C%80%E5%B0%8F%E4%BA%8C%E4%B9%97%E6%B3%95+%E3%82%A8%E3%82%AF%E3%82%BB%E3%83%AB&amp;tbm=isch" data-lightbox="roadtrip" data-title="3">
+						<img class="card-img" src="/search?q=%E6%9C%80%E5%B0%8F%E4%BA%8C%E4%B9%97%E6%B3%95+%E3%82%A8%E3%82%AF%E3%82%BB%E3%83%AB&amp;tbm=isch" onerror="this.onerror=null;this.src='/search?q=%E6%9C%80%E5%B0%8F%E4%BA%8C%E4%B9%97%E6%B3%95+%E3%82%A8%E3%82%AF%E3%82%BB%E3%83%AB&amp;tbm=isch';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				3
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://tokyox.sakura.ne.jp/wiki/index.php?plugin=ref&amp;page=%E6%9C%80%E5%B0%8F%E4%BA%8C%E4%B9%97%E6%B3%95&amp;src=projection.JPG" data-lightbox="roadtrip" data-title="最小二乗法 歴史に探る数学 物理法則">
+						<img class="card-img" src="https://tokyox.sakura.ne.jp/wiki/index.php?plugin=ref&amp;page=%E6%9C%80%E5%B0%8F%E4%BA%8C%E4%B9%97%E6%B3%95&amp;src=projection.JPG" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTw7U2lmawQeo42vXmyHDEf4onjR17g4fJ85g';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				最小二乗法 歴史に探る数学 物理法則
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://ist.ksc.kwansei.ac.jp/~nishitani/MapleHiki/?c=plugin;plugin=attach_download;p=LeastSquareFit;file_name=C8_LeastSquareFitplot2d2.png" data-lightbox="roadtrip" data-title="Hoge Hoge 線形最小2乗法 Leastsquarefit">
+						<img class="card-img" src="https://ist.ksc.kwansei.ac.jp/~nishitani/MapleHiki/?c=plugin;plugin=attach_download;p=LeastSquareFit;file_name=C8_LeastSquareFitplot2d2.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhXIOHHxuUFYhnluwgbM8rXW51A9Gh138KHQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Hoge Hoge 線形最小2乗法 Leastsquarefit
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Linear_least_squares2.png/440px-Linear_least_squares2.png" data-lightbox="roadtrip" data-title="最小二乗法 Wikiwand">
+						<img class="card-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Linear_least_squares2.png/440px-Linear_least_squares2.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFWXsrqTE5uvx6awM5OiEVHZMsH3BayzFdkw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				最小二乗法 Wikiwand
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://www.math.keio.ac.jp/~ishikawa/QLEJ/PicQL/leastsquare.png" data-lightbox="roadtrip" data-title="最小二乗法 簡単すぎて かえって難しい">
+						<img class="card-img" src="http://www.math.keio.ac.jp/~ishikawa/QLEJ/PicQL/leastsquare.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTeH9N5CXx2Rxke6Mpl9MrzykzlknaKJRmvQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				最小二乗法 簡単すぎて かえって難しい
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://cdn-ak.f.st-hatena.com/images/fotolife/i/ill-identified/20150502/20150502235953.png" data-lightbox="roadtrip" data-title="科学史から最小二乗法 回帰分析 を説明してみる Ill Identified Diary">
+						<img class="card-img" src="https://cdn-ak.f.st-hatena.com/images/fotolife/i/ill-identified/20150502/20150502235953.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSM9aHI1A8RjD30ZXkwNITs5zO4oXW7Db6zrQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				科学史から最小二乗法 回帰分析 を説明してみる Ill Identified Diary
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://cdn-ssl-devio-img.classmethod.jp/wp-content/uploads/2020/07/3.jpg" data-lightbox="roadtrip" data-title="行列の最小二乗法について調べてみた Developersio">
+						<img class="card-img" src="https://cdn-ssl-devio-img.classmethod.jp/wp-content/uploads/2020/07/3.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ65RpI_a2c0X7WkTF1jdjakOBqT3zE4_syOA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				行列の最小二乗法について調べてみた Developersio
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://kaji-lab.jp/kajimoto/leastsquare_main.files/image092.jpg" data-lightbox="roadtrip" data-title="最小二乗法とフィッティングとモデルパラメータ推定について 2002 10 26 梶本裕之 Kaji Star T U Tokyo Ac Jp この文章は 最小二乗法 フィッティング パラメータ推定の正しい解説テキストではありませんし 私もそれらの専門家ではありません 文中に">
+						<img class="card-img" src="https://kaji-lab.jp/kajimoto/leastsquare_main.files/image092.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiXC0PhaiEs5xwfd81HS5cv-FLmN4lwwaY9Q';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				最小二乗法とフィッティングとモデルパラメータ推定について 2002 10 26 梶本裕之 Kaji Star T U Tokyo Ac Jp この文章は 最小二乗法 フィッティング パラメータ推定の正しい解説テキストではありませんし 私もそれらの専門家ではありません 文中に
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://imagingsolution.net/wordpress/wp-content/uploads/2011/06/LeastSquareMethod-7.png" data-lightbox="roadtrip" data-title="最小二乗法で近似曲線を求める方法 イメージングソリューション">
+						<img class="card-img" src="https://imagingsolution.net/wordpress/wp-content/uploads/2011/06/LeastSquareMethod-7.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAur7SpcCIHH-XxRfTrWGjQsYIBf-g6NzcNg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				最小二乗法で近似曲線を求める方法 イメージングソリューション
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+		
+	</div>
+
+		 
+		
+		
+				</div>
+				<div class="col-sm-12 widget">
+					<div class="d-block p-4">
+	<center>
+		<!-- BOTTOM BANNER ADS -->
+<script async="async" data-cfasync="false" src="//jc32arlvqpv8.com/eb47a424ae325c90cca32780149785c3/invoke.js"></script>
+<div id="container-eb47a424ae325c90cca32780149785c3"></div>
+
+	</center>
+</div>				</div>
+			</div>
+			<div class="row footer">
+				<div class="col-md-12 text-center py-4">
+										<a href="/p/dmca.html">Dmca</a>
+										<a href="/p/contact.html">Contact</a>
+										<a href="/p/privacy-policy.html">Privacy Policy</a>
+										<a href="/p/copyright.html">Copyright</a>
+					
+				</div>
+			</div>
+		</main>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js" integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js" integrity="sha256-CtKylYan+AJuoH8jrMht1+1PMhMqrKnB8K5g012WN5I=" crossorigin="anonymous"></script>
+		
+		<!-- Footer CSS JS -->
+		
+		
+		
+			<script type='text/javascript' src='//jc32arlvqpv8.com/ef/d5/10/efd510237a3143727bed46803ec35b8d.js'></script>
+</body>
+</html>

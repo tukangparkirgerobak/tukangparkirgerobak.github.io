@@ -1,0 +1,682 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha256-L/W5Wfqfa0sdBNIKN9cG6QA5F2qx4qICmU2VgLruv9Y=" crossorigin="anonymous" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/css/lightbox.min.css" integrity="sha256-tBxlolRHP9uMsEFKVk+hk//ekOlXOixLKvye5W2WR5c=" crossorigin="anonymous" />
+		<link href="https://fonts.googleapis.com/css?family=Mr+Dafoe" rel="stylesheet" type="text/css">
+
+		<style type="text/css">
+			html,body{font-family:"Open Sans",Arial,sans-serif;font-size:14px;font-weight:400;background:#f3f3f3 url(https://ichi.pro/assets/images/max/724/1*MJ3iVJpCZ2eB9jhP5WoQvQ.png
+) no-repeat center center fixed;background-size:cover;height:100%}#title{font-family:"Mr Dafoe",Times,serif;font-size:34px;background:rgba(255,255,255,.8);margin-bottom:34px}.header{padding-bottom:13px;margin-bottom:13px;border-bottom:1px solid #eee}a{color:#26ADE4;text-decoration:none}#title a{color:#333;margin-left:21px}#title a:hover{text-decoration:none;color:#26ADE4}.sidebar ul{margin:0;padding:0}.sidebar ul li{list-style:none}.footer{margin-top:21px;padding-top:13px;border-top:1px solid #eee}.footer a{margin:0 15px}.navi{margin:13px 0 13px 0;padding:13px}.navi a{margin:5px 2px;font-size:95%}.main{margin-top: 6rem;}.form-inline .form-control{min-width: 300px;}.v-cover{height: 380px; object-fit: cover;}.v-image{height: 200px; object-fit: cover;}.dwn-cover{max-height: 460px; object-fit: cover;}.main{margin-top: 6rem;}.form-inline .form-control{min-width: 300px;}			
+		</style>
+
+		<title>線形回帰 最急降下法 正規方程式</title>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/", 
+  "@type": "Article", 
+  "author": {
+    "@type": "Person",
+    "name": "James"
+  },
+  "headline": "線形回帰 最急降下法 正規方程式",
+  "datePublished": "2021-04-24",
+  "image": [https://cdn-ak.f.st-hatena.com/images/fotolife/h/h-wadsworth02/20190614/20190614220043.png,https://cdn-ak.f.st-hatena.com/images/fotolife/h/h-wadsworth02/20190614/20190614215831.png,https://ichi.pro/assets/images/max/724/1*lQAmeOrbr8Z-l1XauxQ4Ug.png],
+  "publisher": {
+    "@type": "Organization",
+    "name": "Tukang Parkir Gerobak",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://via.placeholder.com/512.png?text=線形回帰 最急降下法 正規方程式",
+      "width": 512,
+      "height": 512
+    }
+  }
+}
+</script>
+		<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-957NGNKQ70"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-957NGNKQ70');
+</script>
+
+<script type='text/javascript' src='//jc32arlvqpv8.com/1a/82/2e/1a822ef8a40a0fbab3c4ea12a5d2bb02.js'></script>
+</head>
+	<body>
+		<header class="bg-white fixed-top">			
+			<nav class="navbar navbar-light bg-white mb-0">
+				<div class="container justify-content-center justify-content-sm-between">	
+				  <a href="/" title="Blog" class="navbar-brand mb-1">Blog</a>
+				  				</div>			  
+			</nav>				
+		</header>
+		<main class="main container bg-white">
+			<div class="col-md-12 my-4" align="center">
+				<div class="d-block p-4">
+	<br/><center>
+<!-- TOP BANNER ADS -->
+</center><br/>
+</div>			</div>
+			<div class="row header">
+				<div class="col-sm-12 text-center p-2">
+						<h1>線形回帰 最急降下法 正規方程式</h1>
+
+	
+	<div class="navi text-center">
+										<a class="badge badge-danger" href="/%E7%82%B9%E3%82%92%E9%80%9A%E3%82%8A%E5%86%86%E3%81%AB%E6%8E%A5%E3%81%99%E3%82%8B%E7%9B%B4%E7%B7%9A%E3%81%AE%E6%96%B9%E7%A8%8B%E5%BC%8F.html">点を通り円に接する直線の方程式</a>
+											<a class="badge badge-success" href="/%E6%A0%B9%E5%8F%B7%E3%82%92%E5%90%AB%E3%82%80%E6%96%B9%E7%A8%8B%E5%BC%8F.html">根号を含む方程式</a>
+											<a class="badge badge-dark" href="/%E9%9B%A2%E5%A9%9A-%E5%A8%98-%E3%81%9F%E3%81%9A%E3%81%AD%E3%81%A6%E3%81%8F%E3%82%8B-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93-%E5%86%99%E7%9C%9F.html">離婚 娘 たずねてくる お父さん 写真</a>
+											<a class="badge badge-warning" href="/%E7%9B%B4%E7%B7%9A%E3%81%AE%E6%96%B9%E7%A8%8B%E5%BC%8F-%E5%BA%A7%E6%A8%99-%E8%B7%9D%E9%9B%A2.html">直線の方程式 座標 距離</a>
+											<a class="badge badge-warning" href="/%E6%B2%B3%E9%9F%B3%E3%81%8F%E3%82%8B%E3%81%BF-%E5%B0%8F%E5%B7%9D%E3%81%B2%E3%81%BE%E3%82%8A-fneo-012-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%AB-%E3%81%93%E3%81%93%E3%81%AB%E8%A1%8C%E3%81%8D%E3%81%AA%E3%81%95%E3%81%84-%E3%81%A8%E8%A8%80%E3%82%8F%E3%82%8C%E3%81%BE%E3%81%97%E3%81%9F-%E5%85%B6%E3%81%AE%E4%BA%8C.html">河音くるみ 小川ひまり fneo 012 お父さんに ここに行きなさい と言われました 其の二</a>
+											<a class="badge badge-info" href="/%E7%90%83%E3%81%AE%E6%96%B9%E7%A8%8B%E5%BC%8F-%E5%81%8F%E5%BE%AE%E5%88%86.html">球の方程式 偏微分</a>
+											<a class="badge badge-success" href="/%E9%80%A3%E7%AB%8B1%E6%AC%A1%E6%96%B9%E7%A8%8B%E5%BC%8F-%E8%A7%A3%E3%81%AE%E5%80%8B%E6%95%B0.html">連立1次方程式 解の個数</a>
+											<a class="badge badge-danger" href="/%E7%B5%90%E5%A9%9A%E5%BC%8F-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93-%E3%81%8A%E6%AF%8D%E3%81%95%E3%82%93-%E6%AD%8C.html">結婚式 お父さん お母さん 歌</a>
+											<a class="badge badge-danger" href="/%E8%B5%A4%E3%81%A1%E3%82%83%E3%82%93-vs-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93-%E5%8B%95%E7%94%BB.html">赤ちゃん vs お父さん 動画</a>
+											<a class="badge badge-success" href="/%E7%86%B1%E4%BC%9D%E5%B0%8E%E6%96%B9%E7%A8%8B%E5%BC%8F-%E7%86%B1%E4%BC%9D%E5%B0%8E%E7%8E%87-%E5%A4%89%E5%8C%96.html">熱伝導方程式 熱伝導率 変化</a>
+											<a class="badge badge-light" href="/%E8%B2%B4%E5%A5%B3%E3%81%AE%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%AF%E5%85%83%E6%B0%97%E3%81%A7%E3%81%99-%E8%8B%B1%E4%BC%9A%E8%A9%B1.html">貴女のお父さんは元気です 英会話</a>
+											<a class="badge badge-info" href="/%E8%A4%87%E7%B4%A0%E6%95%B0%E3%81%A8%E6%96%B9%E7%A8%8B%E5%BC%8F-%E6%AC%A1%E6%95%B0%E4%B8%8B%E3%81%92-%E8%A8%98%E8%BF%B0.html">複素数と方程式 次数下げ 記述</a>
+											<a class="badge badge-light" href="/%E9%96%93%E5%8F%96%E3%82%8A-%E3%81%AE-%E6%96%B9%E7%A8%8B%E5%BC%8F-%E4%BD%8F%E3%81%BE%E3%81%84-%E3%81%AE-%E8%A7%A3%E5%89%96-%E5%9B%B3%E9%91%91.html">間取り の 方程式 住まい の 解剖 図鑑</a>
+											<a class="badge badge-danger" href="/%E7%82%B9-a-b-%E3%82%92%E9%80%9A%E3%82%8A-%E5%82%BE%E3%81%8D-m-%E3%81%AE%E7%9B%B4%E7%B7%9A%E3%81%AE%E6%96%B9%E7%A8%8B%E5%BC%8F.html">点 a b を通り 傾き m の直線の方程式</a>
+											<a class="badge badge-danger" href="/%E9%96%93%E5%8F%96%E3%82%8A-%E3%81%AE-%E6%96%B9%E7%A8%8B%E5%BC%8F-%E5%BF%83%E5%9C%B0%E3%82%88%E3%81%84-%E4%BD%8F%E3%81%BE%E3%81%84-%E3%82%92-%E7%B5%84%E3%81%BF%E7%AB%8B%E3%81%A6%E3%82%8B-%E6%8A%80%E8%A1%93.html">間取り の 方程式 心地よい 住まい を 組み立てる 技術</a>
+						</div>
+<center>
+	<!-- MIDDLE BANNER ADS -->
+<script type="text/javascript">
+	atOptions = {
+		'key' : '2b77887421e2587a1a1b1d7c8a31a9e0',
+		'format' : 'iframe',
+		'height' : 250,
+		'width' : 300,
+		'params' : {}
+	};
+	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://jc32arlvqpv8.com/2b77887421e2587a1a1b1d7c8a31a9e0/invoke.js"></scr' + 'ipt>');
+</script>
+		
+	</center>
+					
+				</div>
+			</div>
+			<div class="row content mb-4">
+				<div class="col-md-12">					
+					
+	
+	<div class="card-columns">
+						
+	  <div class='card'>
+	  	<a href="https://ichi.pro/assets/images/max/724/1*0QaZeLBiypeoiibZkVRfgQ.png" data-lightbox="roadtrip" data-title="線形回帰の正規方程式">
+						<img class="card-img" src="https://ichi.pro/assets/images/max/724/1*0QaZeLBiypeoiibZkVRfgQ.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTI4MAhMJ8myFTYuc5HhwR6SOdJ9P0l6EzOyugihTwD_ETo9l_C0uK9-VBh35YI7O_F16s';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				線形回帰の正規方程式
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://ichi.pro/assets/images/max/724/1*MJ3iVJpCZ2eB9jhP5WoQvQ.png" data-lightbox="roadtrip" data-title="線形回帰の正規方程式">
+						<img class="card-img" src="https://ichi.pro/assets/images/max/724/1*MJ3iVJpCZ2eB9jhP5WoQvQ.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvOrqM5whgsv1MI37IhLF6ghHcGV_EeivQOoz8Wsfb6B6MiaF-7fk4Eno6y042OkHAb2A';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				線形回帰の正規方程式
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://cdn-ak.f.st-hatena.com/images/fotolife/h/h-wadsworth02/20181229/20181229120721.png" data-lightbox="roadtrip" data-title="初歩からの機械学習 最急降下法による重回帰モデル Pythonとrでスクラッチから 医療職からデータサイエンティストへ">
+						<img class="card-img" src="https://cdn-ak.f.st-hatena.com/images/fotolife/h/h-wadsworth02/20181229/20181229120721.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSijcmVhLD-gws7KT-G_nBvPAEDDI9T8rAHhLK5btPz-QtxlOKnFI4b03jC2p-od0siNww';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				初歩からの機械学習 最急降下法による重回帰モデル Pythonとrでスクラッチから 医療職からデータサイエンティストへ
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F30575%2F47bc2f1e-3b32-e81c-9fd8-e6e2ac735b05.png?ixlib=rb-1.2.2&amp;auto=format&amp;gif-q=60&amp;q=75&amp;s=3f5dcc861172227c94bd016efd4fe5ce" data-lightbox="roadtrip" data-title="重線形回帰 スケーリング 多項式回帰 正規方程式 Qiita">
+						<img class="card-img" src="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F30575%2F47bc2f1e-3b32-e81c-9fd8-e6e2ac735b05.png?ixlib=rb-1.2.2&amp;auto=format&amp;gif-q=60&amp;q=75&amp;s=3f5dcc861172227c94bd016efd4fe5ce" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQN0txOxbYWj9kJJRv_94YifMWuu6gXkN8pkMGhj4XySb74Dir8Z8Q22JJom1P8OHXfowk';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				重線形回帰 スケーリング 多項式回帰 正規方程式 Qiita
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://cdn-ak.f.st-hatena.com/images/fotolife/h/h-wadsworth02/20190614/20190614212807.png" data-lightbox="roadtrip" data-title="初歩からの機械学習 最急降下法による重回帰モデル Pythonとrでスクラッチから 医療職からデータサイエンティストへ">
+						<img class="card-img" src="https://cdn-ak.f.st-hatena.com/images/fotolife/h/h-wadsworth02/20190614/20190614212807.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcM-eCSp_nvq3RZKlDIxiSzOsuLGIr38PYmFiM2RFOTBrUMTCnC1D9SipMvecFoOxAm1w';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				初歩からの機械学習 最急降下法による重回帰モデル Pythonとrでスクラッチから 医療職からデータサイエンティストへ
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://cdn-ak.f.st-hatena.com/images/fotolife/h/h-wadsworth02/20190614/20190614212457.png" data-lightbox="roadtrip" data-title="初歩からの機械学習 最急降下法による重回帰モデル Pythonとrでスクラッチから 医療職からデータサイエンティストへ">
+						<img class="card-img" src="https://cdn-ak.f.st-hatena.com/images/fotolife/h/h-wadsworth02/20190614/20190614212457.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWfIL_equJ2QjPlwesOjmniUhHFW7qxoADfdDuHvh_xcK6owkVTpoj0UAUHGI-PmphZP0';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				初歩からの機械学習 最急降下法による重回帰モデル Pythonとrでスクラッチから 医療職からデータサイエンティストへ
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+				<div class='card'>	
+			<div class="d-block p-4">
+	</div>		  	
+		  	<h3 class="h6 p-2"><b></b></h3>
+					</div>
+		
+						
+	  <div class='card'>
+	  	<a href="https://cdn.image.st-hatena.com/image/square/f75a2284aeed7d2c515b2e18fa93e65d787c2be0/backend=imagemagick;height=200;version=1;width=200/https%3A%2F%2Fcdn-ak.f.st-hatena.com%2Fimages%2Ffotolife%2Fh%2Fh-wadsworth02%2F20190614%2F20190614212807.png" data-lightbox="roadtrip" data-title="初歩からの機械学習 最急降下法による重回帰モデル Pythonとrでスクラッチから 医療職からデータサイエンティストへ">
+						<img class="card-img" src="https://cdn.image.st-hatena.com/image/square/f75a2284aeed7d2c515b2e18fa93e65d787c2be0/backend=imagemagick;height=200;version=1;width=200/https%3A%2F%2Fcdn-ak.f.st-hatena.com%2Fimages%2Ffotolife%2Fh%2Fh-wadsworth02%2F20190614%2F20190614212807.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT85gJZDrP0-yH8-BsQULf6Oy4sj6TZC8Y6mPB6GrePUcLk0HwT9cdZOnFbiK7oSTeeH2A';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				初歩からの機械学習 最急降下法による重回帰モデル Pythonとrでスクラッチから 医療職からデータサイエンティストへ
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://cdn-ak.f.st-hatena.com/images/fotolife/h/h-wadsworth02/20190614/20190614220043.png" data-lightbox="roadtrip" data-title="初歩からの機械学習 最急降下法による重回帰モデル Pythonとrでスクラッチから 医療職からデータサイエンティストへ">
+						<img class="card-img" src="https://cdn-ak.f.st-hatena.com/images/fotolife/h/h-wadsworth02/20190614/20190614220043.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgvCGF0DrffucVfwCF1rEZ3pnmuRJ94agSwYPVrXsYhhCuSfDyuihJbiF8CRwyIdP5N4w';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				初歩からの機械学習 最急降下法による重回帰モデル Pythonとrでスクラッチから 医療職からデータサイエンティストへ
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://cdn-ak.f.st-hatena.com/images/fotolife/h/h-wadsworth02/20190614/20190614215939.png" data-lightbox="roadtrip" data-title="初歩からの機械学習 最急降下法による重回帰モデル Pythonとrでスクラッチから 医療職からデータサイエンティストへ">
+						<img class="card-img" src="https://cdn-ak.f.st-hatena.com/images/fotolife/h/h-wadsworth02/20190614/20190614215939.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxmm7gDRL8pE1olTLOjWD5VSX-9uLn9YMA6_lTRLX716zTFP5SCaKk_fqsGEUTKpAGECE';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				初歩からの機械学習 最急降下法による重回帰モデル Pythonとrでスクラッチから 医療職からデータサイエンティストへ
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://cdn-ak.f.st-hatena.com/images/fotolife/h/h-wadsworth02/20190614/20190614215744.png" data-lightbox="roadtrip" data-title="初歩からの機械学習 最急降下法による重回帰モデル Pythonとrでスクラッチから 医療職からデータサイエンティストへ">
+						<img class="card-img" src="https://cdn-ak.f.st-hatena.com/images/fotolife/h/h-wadsworth02/20190614/20190614215744.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzBeirv0rGGFQtO0YMrY21mQNOxN3MlzRhyyZG3am_39CSf8vaNTUpKRMlOvbtOh5Gm1M';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				初歩からの機械学習 最急降下法による重回帰モデル Pythonとrでスクラッチから 医療職からデータサイエンティストへ
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://image.slidesharecdn.com/courseramlweek2mac-160107015913/95/coursera-machine-learning-week2-10-638.jpg?cb=1452132246" data-lightbox="roadtrip" data-title="Coursera Machine Learning Week2まとめ">
+						<img class="card-img" src="https://image.slidesharecdn.com/courseramlweek2mac-160107015913/95/coursera-machine-learning-week2-10-638.jpg?cb=1452132246" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZswFqhNEx_hVTfX4m1l0pcmEz0o86CUdgvfx3bwodiG6EowZG8OfLE7mVApKbhJPTlLI';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Coursera Machine Learning Week2まとめ
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://cdn-ak.f.st-hatena.com/images/fotolife/h/h-wadsworth02/20190615/20190615210138.png" data-lightbox="roadtrip" data-title="初歩からの機械学習 最急降下法による重回帰モデル Pythonとrでスクラッチから 医療職からデータサイエンティストへ">
+						<img class="card-img" src="https://cdn-ak.f.st-hatena.com/images/fotolife/h/h-wadsworth02/20190615/20190615210138.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4wtgAk73PJjnoBB7t2vJy9uSbqXhoL1nEzsOiDm-8c9GVN41MTxMUv6kds2sYFA_v1n4';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				初歩からの機械学習 最急降下法による重回帰モデル Pythonとrでスクラッチから 医療職からデータサイエンティストへ
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://cdn-ak.f.st-hatena.com/images/fotolife/h/h-wadsworth02/20190614/20190614215831.png" data-lightbox="roadtrip" data-title="初歩からの機械学習 最急降下法による重回帰モデル Pythonとrでスクラッチから 医療職からデータサイエンティストへ">
+						<img class="card-img" src="https://cdn-ak.f.st-hatena.com/images/fotolife/h/h-wadsworth02/20190614/20190614215831.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxFT4CbWIyFVgaeK1MFB4z3Gm9JsNTyHM65JWfCbk3WIDKslq7iHWOP2zlJ975VQ79WnU';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				初歩からの機械学習 最急降下法による重回帰モデル Pythonとrでスクラッチから 医療職からデータサイエンティストへ
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://camo.qiitausercontent.com/62ca827bf8f79291b6af0c7607eda30efdf76889/68747470733a2f2f71696974612d696d6167652d73746f72652e73332e61702d6e6f727468656173742d312e616d617a6f6e6177732e636f6d2f302f33303537352f65343034643263302d396635652d626336372d653137362d6637626134613432636335622e706e67" data-lightbox="roadtrip" data-title="機械学習とは何か 単線形回帰 仮説関数 コスト関数 最急降下法 Qiita">
+						<img class="card-img" src="https://camo.qiitausercontent.com/62ca827bf8f79291b6af0c7607eda30efdf76889/68747470733a2f2f71696974612d696d6167652d73746f72652e73332e61702d6e6f727468656173742d312e616d617a6f6e6177732e636f6d2f302f33303537352f65343034643263302d396635652d626336372d653137362d6637626134613432636335622e706e67" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTY6vd4_qeQhjrz9fs7PrEr2yJVB8VCJzWehS_iU67E1C_lwZf8oTA6gfz5-_LKoXCsHE8';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				機械学習とは何か 単線形回帰 仮説関数 コスト関数 最急降下法 Qiita
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/30575/39913ef4-a16f-1ea7-1631-a61c276825f9.jpeg" data-lightbox="roadtrip" data-title="機械学習とは何か 単線形回帰 仮説関数 コスト関数 最急降下法 Qiita">
+						<img class="card-img" src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/30575/39913ef4-a16f-1ea7-1631-a61c276825f9.jpeg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAzEVSNMZZABPje434djWHr1bgvuORNtzGQNMmVOoVdjBU_XeDd6dUW2AtAaUyCorLQ2E';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				機械学習とは何か 単線形回帰 仮説関数 コスト関数 最急降下法 Qiita
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://ichi.pro/assets/images/max/724/1*1Gq1m3GhmirvtutzOOXryQ.jpeg" data-lightbox="roadtrip" data-title="Pythonの実装による線形回帰の理論を学ぶ">
+						<img class="card-img" src="https://ichi.pro/assets/images/max/724/1*1Gq1m3GhmirvtutzOOXryQ.jpeg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKtHVZHA32-BbTq0RNV3w9MfVLi3S4wRLWZNUVhp0RGm9UHqCWyvi-JRxKeVsty_qcwCw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Pythonの実装による線形回帰の理論を学ぶ
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://assets.st-note.com/production/uploads/images/7358242/picture_pc_b947e60703c4b1a01e912ae939d9b54c.jpg" data-lightbox="roadtrip" data-title="線形回帰でタイタニックを試す 1 Junkawa Chromebookで始める開発日記 Note">
+						<img class="card-img" src="https://assets.st-note.com/production/uploads/images/7358242/picture_pc_b947e60703c4b1a01e912ae939d9b54c.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT44oTFmNsf_ZI6GkpAHK5Oe9smysyJzlfyW9nxgoLAEL1YPAStwttsuJpXMqBVUxP7byI';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				線形回帰でタイタニックを試す 1 Junkawa Chromebookで始める開発日記 Note
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://ichi.pro/assets/images/max/724/1*7TfNMNemWOTHVwVBtlICCQ.png" data-lightbox="roadtrip" data-title="機械学習 線形回帰">
+						<img class="card-img" src="https://ichi.pro/assets/images/max/724/1*7TfNMNemWOTHVwVBtlICCQ.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-7vGoAmqG6O4K58YuGxZVjo61Y36mj1EFnu7SVfW2npBxjufIlaSczsxLwNkDUZ7Y2QQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				機械学習 線形回帰
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/30575/29db8f5a-03b7-7208-d9a7-39f09bba7b33.png" data-lightbox="roadtrip" data-title="機械学習とは何か 単線形回帰 仮説関数 コスト関数 最急降下法 Qiita">
+						<img class="card-img" src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/30575/29db8f5a-03b7-7208-d9a7-39f09bba7b33.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfL9BB5Z_JUfjAHCj_08JuAujL1Hh_3yG9_0Kp4rDGVwvgrQDAPIcXZi0JY6oUbtsJgU8';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				機械学習とは何か 単線形回帰 仮説関数 コスト関数 最急降下法 Qiita
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://ichi.pro/assets/images/max/724/1*CjTBNFUEI_IokEOXJ00zKw.gif" data-lightbox="roadtrip" data-title="最急降下法を使用した線形回帰">
+						<img class="card-img" src="https://ichi.pro/assets/images/max/724/1*CjTBNFUEI_IokEOXJ00zKw.gif" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWMws-5NQlSd5pio74q672yZ-eGuRudfGG-a_Cu0FoDEcOQ5A1kpmmsHl9eZbxLD99pBI';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				最急降下法を使用した線形回帰
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://i0.wp.com/batapara.com/wp-content/ql-cache/quicklatex.com-b87426d5a91c7d880a613512fa1cc357_l3.png" data-lightbox="roadtrip" data-title="正規方程式 バンドル法の正規方程式を求める Qkaxtw">
+						<img class="card-img" src="https://i0.wp.com/batapara.com/wp-content/ql-cache/quicklatex.com-b87426d5a91c7d880a613512fa1cc357_l3.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRG2xAi8YbiYFT7z9MGnHvcg9Py_E_27P4yig';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				正規方程式 バンドル法の正規方程式を求める Qkaxtw
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://ichi.pro/assets/images/max/724/1*9SkVQCoNkylrJEaUcOAFog.png" data-lightbox="roadtrip" data-title="線形回帰の正規方程式">
+						<img class="card-img" src="https://ichi.pro/assets/images/max/724/1*9SkVQCoNkylrJEaUcOAFog.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPqRYt3msJbZwSjlDUg044zNHP0yilGDi0fQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				線形回帰の正規方程式
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://cdn.image.st-hatena.com/image/square/b5aeac53bd7d825aa36a68f5ea645582cc5c054c/backend=imagemagick;height=200;version=1;width=200/https%3A%2F%2Fcdn-ak.f.st-hatena.com%2Fimages%2Ffotolife%2Fh%2Fh-wadsworth02%2F20190703%2F20190703185610.jpg" data-lightbox="roadtrip" data-title="初歩からの機械学習 最急降下法による重回帰モデル Pythonとrでスクラッチから 医療職からデータサイエンティストへ">
+						<img class="card-img" src="https://cdn.image.st-hatena.com/image/square/b5aeac53bd7d825aa36a68f5ea645582cc5c054c/backend=imagemagick;height=200;version=1;width=200/https%3A%2F%2Fcdn-ak.f.st-hatena.com%2Fimages%2Ffotolife%2Fh%2Fh-wadsworth02%2F20190703%2F20190703185610.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToJV4lj7qsAKEba4jifY70XjpvL85h970vvQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				初歩からの機械学習 最急降下法による重回帰モデル Pythonとrでスクラッチから 医療職からデータサイエンティストへ
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://ichi.pro/assets/images/max/724/1*lQAmeOrbr8Z-l1XauxQ4Ug.png" data-lightbox="roadtrip" data-title="線形回帰の正規方程式">
+						<img class="card-img" src="https://ichi.pro/assets/images/max/724/1*lQAmeOrbr8Z-l1XauxQ4Ug.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSux7B8t64ykMeoF0df8ycQYUNefEaO1pvCPg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				線形回帰の正規方程式
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="/search?q=%E5%8B%BE%E9%85%8D%E9%99%8D%E4%B8%8B%E6%B3%95&amp;tbm=isch" data-lightbox="roadtrip" data-title="Https Encrypted Tbn0 Gstatic Com Images Q Tbn And9gcszrm4lprfszpdpabgex3t3mwk Okvopdp5vl5nghjjgggqcpac Usqp Cau">
+						<img class="card-img" src="/search?q=%E5%8B%BE%E9%85%8D%E9%99%8D%E4%B8%8B%E6%B3%95&amp;tbm=isch" onerror="this.onerror=null;this.src='/search?q=%E5%8B%BE%E9%85%8D%E9%99%8D%E4%B8%8B%E6%B3%95&amp;tbm=isch';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Https Encrypted Tbn0 Gstatic Com Images Q Tbn And9gcszrm4lprfszpdpabgex3t3mwk Okvopdp5vl5nghjjgggqcpac Usqp Cau
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://ichi.pro/assets/images/max/724/0*AC0Lz5n-cNbNDVfc" data-lightbox="roadtrip" data-title="正規方程式を使用した線形回帰の実行">
+						<img class="card-img" src="https://ichi.pro/assets/images/max/724/0*AC0Lz5n-cNbNDVfc" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ25Zi9heXLXuynXPqSHkdAvxNogwQPZ7LoQA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				正規方程式を使用した線形回帰の実行
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://assets.st-note.com/production/uploads/images/7228614/square_middle_ab73dea0f20f7cc2e6dc42c858091c2a.jpg?width=200&amp;crop=1:1,smart" data-lightbox="roadtrip" data-title="線形回帰でタイタニックを試す 1 Junkawa Chromebookで始める開発日記 Note">
+						<img class="card-img" src="https://assets.st-note.com/production/uploads/images/7228614/square_middle_ab73dea0f20f7cc2e6dc42c858091c2a.jpg?width=200&amp;crop=1:1,smart" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6hoaiTUCl2TUTqQOH1hr36wDkRwjfuYLBmg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				線形回帰でタイタニックを試す 1 Junkawa Chromebookで始める開発日記 Note
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://linky-juku.com/wp-content/uploads/2019/02/linear-regression-image2-1024x768.png" data-lightbox="roadtrip" data-title="最急降下法の仕組みをイラストでわかりやすく解説">
+						<img class="card-img" src="https://linky-juku.com/wp-content/uploads/2019/02/linear-regression-image2-1024x768.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPjqRdyZplziDIbpwW-dSw06BXv3j7L7awEw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				最急降下法の仕組みをイラストでわかりやすく解説
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://cdn-ak.f.st-hatena.com/images/fotolife/o/opabinia2/20180816/20180816130935.png" data-lightbox="roadtrip" data-title="ロジスティック回帰を最急降下法とニュートン法で解く 機械学習に詳しくなりたいブログ">
+						<img class="card-img" src="https://cdn-ak.f.st-hatena.com/images/fotolife/o/opabinia2/20180816/20180816130935.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXGH7jdoHoU54kKtN8JwyJd5HJ1HBUyJiCnw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				ロジスティック回帰を最急降下法とニュートン法で解く 機械学習に詳しくなりたいブログ
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://cdn.image.st-hatena.com/image/square/5b7caac125d218520814d8c92073f32fa4f1c30b/backend=imagemagick;height=200;version=1;width=200/https%3A%2F%2Fcdn-ak.f.st-hatena.com%2Fimages%2Ffotolife%2Fh%2Fh-wadsworth02%2F20181229%2F20181229185543.jpg" data-lightbox="roadtrip" data-title="初歩からの機械学習 最急降下法による重回帰モデル Pythonとrでスクラッチから 医療職からデータサイエンティストへ">
+						<img class="card-img" src="https://cdn.image.st-hatena.com/image/square/5b7caac125d218520814d8c92073f32fa4f1c30b/backend=imagemagick;height=200;version=1;width=200/https%3A%2F%2Fcdn-ak.f.st-hatena.com%2Fimages%2Ffotolife%2Fh%2Fh-wadsworth02%2F20181229%2F20181229185543.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPSUH4o9h1jxhnUQxJQBSQOr7EESKTMBI7hg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				初歩からの機械学習 最急降下法による重回帰モデル Pythonとrでスクラッチから 医療職からデータサイエンティストへ
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://linky-juku.com/wp-content/uploads/2019/02/saikyu-koukahou-image-1024x768.png" data-lightbox="roadtrip" data-title="最急降下法の仕組みをイラストでわかりやすく解説">
+						<img class="card-img" src="https://linky-juku.com/wp-content/uploads/2019/02/saikyu-koukahou-image-1024x768.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQUhyUCCXS7f7JelG7bdVA324AO1ksXEI_cg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				最急降下法の仕組みをイラストでわかりやすく解説
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://ichi.pro/assets/images/max/724/1*GH-Te5URdJcT-q3KOFfh6A.png" data-lightbox="roadtrip" data-title="線形回帰の正規方程式">
+						<img class="card-img" src="https://ichi.pro/assets/images/max/724/1*GH-Te5URdJcT-q3KOFfh6A.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRn4xq05VYlOT-o2DhbAQn7yDdruxmIlpDZWQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				線形回帰の正規方程式
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="iZgevm9q4EUZCM" data-lightbox="roadtrip" data-title="Https Elf C He U Tokyo Ac Jp Courses 364 Files 8802 Download Download Frd 1">
+						<img class="card-img" src="iZgevm9q4EUZCM" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYBa6qdAfstFPjLCj-wLLeRB9fLEDxe8BWQQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Https Elf C He U Tokyo Ac Jp Courses 364 Files 8802 Download Download Frd 1
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+		
+	</div>
+
+		 
+		
+		
+				</div>
+				<div class="col-sm-12 widget">
+					<div class="d-block p-4">
+	<center>
+		<!-- BOTTOM BANNER ADS -->
+<script async="async" data-cfasync="false" src="//jc32arlvqpv8.com/eb47a424ae325c90cca32780149785c3/invoke.js"></script>
+<div id="container-eb47a424ae325c90cca32780149785c3"></div>
+
+	</center>
+</div>				</div>
+			</div>
+			<div class="row footer">
+				<div class="col-md-12 text-center py-4">
+										<a href="/p/dmca.html">Dmca</a>
+										<a href="/p/contact.html">Contact</a>
+										<a href="/p/privacy-policy.html">Privacy Policy</a>
+										<a href="/p/copyright.html">Copyright</a>
+					
+				</div>
+			</div>
+		</main>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js" integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js" integrity="sha256-CtKylYan+AJuoH8jrMht1+1PMhMqrKnB8K5g012WN5I=" crossorigin="anonymous"></script>
+		
+		<!-- Footer CSS JS -->
+		
+		
+		
+			<script type='text/javascript' src='//jc32arlvqpv8.com/ef/d5/10/efd510237a3143727bed46803ec35b8d.js'></script>
+</body>
+</html>

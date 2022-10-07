@@ -1,0 +1,682 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha256-L/W5Wfqfa0sdBNIKN9cG6QA5F2qx4qICmU2VgLruv9Y=" crossorigin="anonymous" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/css/lightbox.min.css" integrity="sha256-tBxlolRHP9uMsEFKVk+hk//ekOlXOixLKvye5W2WR5c=" crossorigin="anonymous" />
+		<link href="https://fonts.googleapis.com/css?family=Mr+Dafoe" rel="stylesheet" type="text/css">
+
+		<style type="text/css">
+			html,body{font-family:"Open Sans",Arial,sans-serif;font-size:14px;font-weight:400;background:#f3f3f3 url(a49XO75DIRqi7M
+) no-repeat center center fixed;background-size:cover;height:100%}#title{font-family:"Mr Dafoe",Times,serif;font-size:34px;background:rgba(255,255,255,.8);margin-bottom:34px}.header{padding-bottom:13px;margin-bottom:13px;border-bottom:1px solid #eee}a{color:#26ADE4;text-decoration:none}#title a{color:#333;margin-left:21px}#title a:hover{text-decoration:none;color:#26ADE4}.sidebar ul{margin:0;padding:0}.sidebar ul li{list-style:none}.footer{margin-top:21px;padding-top:13px;border-top:1px solid #eee}.footer a{margin:0 15px}.navi{margin:13px 0 13px 0;padding:13px}.navi a{margin:5px 2px;font-size:95%}.main{margin-top: 6rem;}.form-inline .form-control{min-width: 300px;}.v-cover{height: 380px; object-fit: cover;}.v-image{height: 200px; object-fit: cover;}.dwn-cover{max-height: 460px; object-fit: cover;}.main{margin-top: 6rem;}.form-inline .form-control{min-width: 300px;}			
+		</style>
+
+		<title>非線形 方程式 多重 解</title>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/", 
+  "@type": "Article", 
+  "author": {
+    "@type": "Person",
+    "name": "James"
+  },
+  "headline": "非線形 方程式 多重 解",
+  "datePublished": "2021-04-24",
+  "image": [https://lh3.googleusercontent.com/-sp-5vi3U8vAIq13c9mflArXgpsNrpMYXrm5XMZOjnpkzGOAq3gVKbzMb_gjCgCAQeHE2vletivGEgbBfV3y3bTYmBmHC9VueKNVKRDpM9Rgq8QQQ5kNwN9txDjCfBNXHpVVIbwqBqLn2ZzQxsyD7vOxBFT1brAX4qqI-cKZHOBGpAKA4P6cf6qEiM9d6w0ZsZkBCudO2AEPGU1KtKFZnYOP9nRJy14-wFTeukXT18n8vvMBNMrHvzTaprFFYIwOp879-aZZ0zgLJLkANTazNszYa_GGusELL4mmcDnO7eyYlfCbH3qcJC6_il5RFSH9GVsi_YWYxS4I2ziuZWVQLB2whA6XcrQvOSmlz-M-qwn0O7mcDPC69WVjdoj-PnqyIy4HyBN0vXCiCmPDgBCQjw_WmCt5sCYhV1yjK1I2raUQmCyHQKo_aDqSefigkzPKKKtX1R3iKtELrCILcRtVkMb2DeSXrtTz8uoc6_6dKVMVrHWZJlGSJal30xVA5VzMTkW0Gw5o2RaZg3wn82HHfaiHpYoAqLY_sX-0hFTSXotNuwQR2nLj7I6nYRuPpCeLQ5GqCgUyb-dCwh3hvoxLZhJQ--GrAcxC5nEE0dEKhUe5XkzswQDrIbli2bFRJWyopZ6Lbvj6mbtpcx_4_oMA_nCcfqDvqFS0osUbp_3eVlTWZHMwY_M_0DPPOl2TD86hnO-niAYngv4pYZZAL61lHzKFG2eEaNjjbDtG4PyF25tUu2w=w1425-h812-no,https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=2191146494488892&amp;get_thumbnail=1,https://b.ecimg.tw/items/DJAA2VA900B4RI0/000001_1612181450.jpg],
+  "publisher": {
+    "@type": "Organization",
+    "name": "Tukang Parkir Gerobak",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://via.placeholder.com/512.png?text=非線形 方程式 多重 解",
+      "width": 512,
+      "height": 512
+    }
+  }
+}
+</script>
+		<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-957NGNKQ70"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-957NGNKQ70');
+</script>
+
+<script type='text/javascript' src='//jc32arlvqpv8.com/1a/82/2e/1a822ef8a40a0fbab3c4ea12a5d2bb02.js'></script>
+</head>
+	<body>
+		<header class="bg-white fixed-top">			
+			<nav class="navbar navbar-light bg-white mb-0">
+				<div class="container justify-content-center justify-content-sm-between">	
+				  <a href="/" title="Blog" class="navbar-brand mb-1">Blog</a>
+				  				</div>			  
+			</nav>				
+		</header>
+		<main class="main container bg-white">
+			<div class="col-md-12 my-4" align="center">
+				<div class="d-block p-4">
+	<br/><center>
+<!-- TOP BANNER ADS -->
+</center><br/>
+</div>			</div>
+			<div class="row header">
+				<div class="col-sm-12 text-center p-2">
+						<h1>非線形 方程式 多重 解</h1>
+
+	
+	<div class="navi text-center">
+										<a class="badge badge-info" href="/%E8%99%B9%E6%96%B9%E7%A8%8B%E5%BC%8F-%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3-%E5%85%AC%E5%BC%8F.html">虹方程式 因数分解 公式</a>
+											<a class="badge badge-primary" href="/%E8%A1%8C%E5%88%97-%E6%96%B9%E7%A8%8B%E5%BC%8F-%E5%88%97-%E8%A1%8C-%E6%95%B0-%E5%90%8C%E3%81%98.html">行列 方程式 列 行 数 同じ</a>
+											<a class="badge badge-danger" href="/%E6%A7%8B%E9%80%A0-%E6%96%B9%E7%A8%8B%E5%BC%8F-%E3%83%A2%E3%83%87%E3%83%AA%E3%83%B3%E3%82%B0-%E6%89%8B%E6%B3%95.html">構造 方程式 モデリング 手法</a>
+											<a class="badge badge-danger" href="/%E8%BF%91%E8%A6%AA-%E7%84%A1%E8%A8%80-%E7%9B%B8%E5%A7%A6-%E9%9A%A3%E3%81%AB%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%8C%E3%81%84%E3%82%8B%E3%81%AE%E3%82%88-%E6%8A%98%E5%8E%9F%E3%82%86%E3%81%8B%E3%82%8A-watch.html">近親 無言 相姦 隣にお父さんがいるのよ 折原ゆかり watch</a>
+											<a class="badge badge-primary" href="/%E7%B2%98%E5%BC%BE%E6%80%A7%E4%BD%93%E3%83%A2%E3%83%87%E3%83%AB-%E6%96%B9%E7%A8%8B%E5%BC%8F.html">粘弾性体モデル 方程式</a>
+											<a class="badge badge-dark" href="/%E8%99%9A%E6%95%B0%E4%BF%82%E6%95%B0%E6%96%B9%E7%A8%8B%E5%BC%8F-%E8%A7%A3%E3%81%A8%E4%BF%82%E6%95%B0%E3%81%AE%E9%96%A2%E4%BF%82.html">虚数係数方程式 解と係数の関係</a>
+											<a class="badge badge-primary" href="/%E8%A6%AA%E5%AD%90%E3%81%B5%E3%82%8C%E3%81%82%E3%81%84-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E9%81%8A%E5%9C%92%E5%9C%B0.html">親子ふれあい お父さん遊園地</a>
+											<a class="badge badge-dark" href="/%E7%86%B1-%E5%8C%96%E5%AD%A6-%E6%96%B9%E7%A8%8B%E5%BC%8F-%E4%BB%A3%E5%85%A5-%E6%B3%95.html">熱 化学 方程式 代入 法</a>
+											<a class="badge badge-danger" href="/%E7%B4%A0%E4%BA%BA%E7%B7%8F%E5%90%88wiki-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%AB.html">素人総合wiki お父さんに</a>
+											<a class="badge badge-warning" href="/%E9%80%80%E5%8C%96%E7%A2%BA%E7%8E%87%E6%94%BE%E7%89%A9%E5%9E%8B%E6%96%B9%E7%A8%8B%E5%BC%8F.html">退化確率放物型方程式</a>
+											<a class="badge badge-warning" href="/%E7%88%B6%E3%81%A8%E5%A8%98%E3%81%AE%E8%BF%91%E8%A6%AA%E3%82%BB%E3%83%83%E3%82%AF%E3%82%B9-%E9%85%92%E7%99%96%E3%81%8C%E6%82%AA%E3%81%8F-%E8%A6%AA%E9%9B%A2%E3%82%8C%E3%82%82%E5%87%BA%E6%9D%A5%E3%81%AA%E3%81%84%E7%A7%81%E3%81%AF%E3%81%84%E3%81%A4%E3%82%82%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%AB%E8%BF%B7.html">父と娘の近親セックス 酒癖が悪く 親離れも出来ない私はいつもお父さんに迷</a>
+											<a class="badge badge-info" href="/%E6%A7%8B%E9%80%A0%E6%96%B9%E7%A8%8B%E5%BC%8F%E3%83%A2%E3%83%87%E3%83%AA%E3%83%B3%E3%82%B0-%E5%85%B1%E5%88%86%E6%95%A3%E6%A7%8B%E9%80%A0%E5%88%86%E6%9E%90-%E9%81%95%E3%81%84.html">構造方程式モデリング 共分散構造分析 違い</a>
+											<a class="badge badge-light" href="/%E6%9C%80%E8%BF%91%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%A8%E3%81%8A%E6%AF%8D%E3%81%95%E3%82%93-%E4%BF%BA%E3%81%AB%E5%86%B7%E3%81%9F%E3%81%8F%E3%81%AA%E3%81%84.html">最近お父さんとお母さん 俺に冷たくない</a>
+											<a class="badge badge-dark" href="/%E6%AF%8D%E4%B9%B3%E3%81%8C%E6%9F%93%E3%81%BF%E5%87%BA%E3%82%8B%E6%84%9B%E5%A8%98-%E6%84%9B%E7%BE%8E-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93-%E7%A7%81%E3%81%AE%E3%83%9F%E3%83%AB%E3%82%AF%E3%81%9F%E3%81%8F%E3%81%95%E3%82%93%E6%90%BE%E3%81%A3.html">母乳が染み出る愛娘 愛美 お父さん 私のミルクたくさん搾っ</a>
+											<a class="badge badge-dark" href="/%E6%B2%B9%E5%88%86%E3%81%91%E7%AE%97-%E4%B8%80%E6%AC%A1%E4%B8%8D%E5%AE%9A%E6%96%B9%E7%A8%8B%E5%BC%8F.html">油分け算 一次不定方程式</a>
+						</div>
+<center>
+	<!-- MIDDLE BANNER ADS -->
+<script type="text/javascript">
+	atOptions = {
+		'key' : '2b77887421e2587a1a1b1d7c8a31a9e0',
+		'format' : 'iframe',
+		'height' : 250,
+		'width' : 300,
+		'params' : {}
+	};
+	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://jc32arlvqpv8.com/2b77887421e2587a1a1b1d7c8a31a9e0/invoke.js"></scr' + 'ipt>');
+</script>
+		
+	</center>
+					
+				</div>
+			</div>
+			<div class="row content mb-4">
+				<div class="col-md-12">					
+					
+	
+	<div class="card-columns">
+						
+	  <div class='card'>
+	  	<a href="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Airflow-Obstructed-Duct.png/1200px-Airflow-Obstructed-Duct.png" data-lightbox="roadtrip" data-title="微分方程 维基百科 自由的百科全书">
+						<img class="card-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Airflow-Obstructed-Duct.png/1200px-Airflow-Obstructed-Duct.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrTxXWUsLkZQpRMwSMxhx5Pkd0_xE01cq3x2x3Ex5vJmbtuEeI1yFlh1pFgtlRdJmAsak';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				微分方程 维基百科 自由的百科全书
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://www.yymingxing.com/__local/2/A8/09/D9119AFBB00F71125EDB9578764_DB8CBB60_110CD.jpg?e=.jpg" data-lightbox="roadtrip" data-title="擬線性橢圓型方程的現代變分方法 欢乐斗牛">
+						<img class="card-img" src="http://www.yymingxing.com/__local/2/A8/09/D9119AFBB00F71125EDB9578764_DB8CBB60_110CD.jpg?e=.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDXC63_Tey-EwPE-LCoXyRPax7IiJJ7GjCo18M0Ed2WO945NtUex2GPBowGAyMVKsPwmY';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				擬線性橢圓型方程的現代變分方法 欢乐斗牛
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://img-blog.csdnimg.cn/20181102125502603.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FuZ3lpbnlhbjAyMDg=,size_16,color_FFFFFF,t_70" data-lightbox="roadtrip" data-title="8 線性迴歸之非線性迴歸 It閱讀">
+						<img class="card-img" src="https://img-blog.csdnimg.cn/20181102125502603.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FuZ3lpbnlhbjAyMDg=,size_16,color_FFFFFF,t_70" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVt_cdll7wR635KZT4ybncpTDdyC09KjRdBK2e4c-dtMCN0AKO82rYjZN_QI7FRyl9GHc';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				8 線性迴歸之非線性迴歸 It閱讀
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="uuA8wm3JRaCvSM" data-lightbox="roadtrip" data-title="Https Www Most Gov Tw Most Attachments 9b4da308 902a 45cd A5be D506bfadf5f4">
+						<img class="card-img" src="uuA8wm3JRaCvSM" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReBhm6jc1KmEBnCAgs7yg5eirg6P_WlmpeHHfoL67zeJ3KeGyPyErADm7JpWQ2V-INOxA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Https Www Most Gov Tw Most Attachments 9b4da308 902a 45cd A5be D506bfadf5f4
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://img-blog.csdnimg.cn/20200224181217867.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl8zNjQ3NDgwOQ==,size_16,color_FFFFFF,t_70" data-lightbox="roadtrip" data-title="Python求解多元多次方程组或非线性方程组 祥瑞的技术博客 Csdn博客 Python解方程组">
+						<img class="card-img" src="https://img-blog.csdnimg.cn/20200224181217867.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl8zNjQ3NDgwOQ==,size_16,color_FFFFFF,t_70" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4xkD_LILepNf8FTEGcBZDxbmKNsPsH_0fYjuQGTebYEppZ_VF-4_mJbtTeQTGXoQr4ww';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Python求解多元多次方程组或非线性方程组 祥瑞的技术博客 Csdn博客 Python解方程组
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Elmer-pump-heatequation.png/350px-Elmer-pump-heatequation.png" data-lightbox="roadtrip" data-title="微分方程 维基百科 自由的百科全书">
+						<img class="card-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Elmer-pump-heatequation.png/350px-Elmer-pump-heatequation.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRFy6JGLeZlewrQ1E8MfhaEFTPVuSREmyrqlwa41kprfP8PyzYPw_yUR8KWiyV9sLtr-s';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				微分方程 维基百科 自由的百科全书
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+				<div class='card'>	
+			<div class="d-block p-4">
+	</div>		  	
+		  	<h3 class="h6 p-2"><b></b></h3>
+					</div>
+		
+						
+	  <div class='card'>
+	  	<a href="https://images.slideplayer.com/18/6198693/slides/slide_35.jpg" data-lightbox="roadtrip" data-title="Chapter 3 Introduction To Linear Programming Ppt Download">
+						<img class="card-img" src="https://images.slideplayer.com/18/6198693/slides/slide_35.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyP-QqZUrEHFJC3kv5bRSGsVibfBXZe3aDklTzukAGewZJTNr6zOnGynDWoYoEjM2zQYc';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Chapter 3 Introduction To Linear Programming Ppt Download
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://photos1.blogger.com/x/blogger2/6523/636884169254512/400/451458/10-2-7.jpg" data-lightbox="roadtrip" data-title="Matlab方程式求解 It閱讀">
+						<img class="card-img" src="https://photos1.blogger.com/x/blogger2/6523/636884169254512/400/451458/10-2-7.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRw4F7pFbErKcno8gfdNvaogzVgNvUgC604ZgQASJpb3_pbyVxp4kaJ7EzIwCvFuDRP7j4';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Matlab方程式求解 It閱讀
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://upload.wikimedia.org/wikipedia/commons/0/0b/Ybc7289-bw.jpg" data-lightbox="roadtrip" data-title="数值分析 维基百科 自由的百科全书">
+						<img class="card-img" src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Ybc7289-bw.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrypdivW2MuJ-Xds2kWO5awkAXGZKucFGfKinaXXVRFzF1-nxuL4G6QCE2c1gLdjGvj0M';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				数值分析 维基百科 自由的百科全书
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="P6kSL7sks7UkFM" data-lightbox="roadtrip" data-title="2">
+						<img class="card-img" src="P6kSL7sks7UkFM" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQY_jy70cJRl8rqy2iLlBFkKS107GW0fphOHJEbPCWWlmr_gqOYr7hqi95GZd8zaxKxHFo';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				2
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://img.yumpu.com/24234350/1/500x640/-.jpg" data-lightbox="roadtrip" data-title="複素周回積分による非線形方程式の解法 南山大学">
+						<img class="card-img" src="https://img.yumpu.com/24234350/1/500x640/-.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwr9VJbNuVzh8I69aqygtb5FSfTu2JOip6SSOdrnkiOdkUyXTKe6m_mf7cQaWNkU2ViF4';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				複素周回積分による非線形方程式の解法 南山大学
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://i1.rgstatic.net/publication/327243500_Interval_Algorithm_of_Nonlinear_Equation_with_Multiple_Root/links/5b83f4d64585151fd135dbc5/largepreview.png" data-lightbox="roadtrip" data-title="Pdf Interval Algorithm Of Nonlinear Equation With Multiple Root">
+						<img class="card-img" src="https://i1.rgstatic.net/publication/327243500_Interval_Algorithm_of_Nonlinear_Equation_with_Multiple_Root/links/5b83f4d64585151fd135dbc5/largepreview.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzq-g3XIB-9iLSiV2oiP2Ho4mTnbKE5pHbmOu503ab_URTllQUpzYqX_RarmbU2Hpu8IU';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Pdf Interval Algorithm Of Nonlinear Equation With Multiple Root
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://slideplayer.com/slide/6198693/18/images/46/p+Special+Cases.+The+Giapetto+and+Dorian+LPs+each+had+a+unique+optimal+solution.+Some+types+of+LPs+do+not+have+unique+solutions..jpg" data-lightbox="roadtrip" data-title="Chapter 3 Introduction To Linear Programming Ppt Download">
+						<img class="card-img" src="https://slideplayer.com/slide/6198693/18/images/46/p+Special+Cases.+The+Giapetto+and+Dorian+LPs+each+had+a+unique+optimal+solution.+Some+types+of+LPs+do+not+have+unique+solutions..jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1yEV0uH3GO55lpxf-Ls1LOaKFBQ9WH4QHrWjVrxRl1byoOXZe1RALXnbdqIWzp5vlrUc';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Chapter 3 Introduction To Linear Programming Ppt Download
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://imgv2-2-f.scribdassets.com/img/document/289906626/149x198/7f344be143/1544303791?v=1" data-lightbox="roadtrip" data-title="數值分析">
+						<img class="card-img" src="https://imgv2-2-f.scribdassets.com/img/document/289906626/149x198/7f344be143/1544303791?v=1" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_qG7NhXeLdAhUziRE_gxSmavbB2SQaMQk7u4-pXsHkfn1ZWDY1upSSHl_SNZI7leIJsI';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				數值分析
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Klein_Gordon_equation_traveling_wave_plot5.gif/200px-Klein_Gordon_equation_traveling_wave_plot5.gif" data-lightbox="roadtrip" data-title="克萊因 戈爾登方程 維基百科 自由的百科全書">
+						<img class="card-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Klein_Gordon_equation_traveling_wave_plot5.gif/200px-Klein_Gordon_equation_traveling_wave_plot5.gif" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqCMPtWkVVcQq4wejYYDFOkBIv4gDgBKgP9cDj7y8eU08MerTxaVNdGLFNSP7JQhIxqlo';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				克萊因 戈爾登方程 維基百科 自由的百科全書
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="mJ7mh_tX4_ZnuM" data-lightbox="roadtrip" data-title="2">
+						<img class="card-img" src="mJ7mh_tX4_ZnuM" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTnCDpywlOXL-oAvCweCRLIR2pRtSlA30pmr7WVdQ5Kb0hUD9K3L75Bizfw8tpzuJFH7c';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				2
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="hSeAilgfzUeR9M" data-lightbox="roadtrip" data-title="2">
+						<img class="card-img" src="hSeAilgfzUeR9M" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmfdZmhxApX8Ahreu0L35yDcdW1ysaFGvqsSrFnck1Qm9fT2JshvcBOMN5U7xAy4DfP7g';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				2
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.itsfun.com.tw/cacheimg/1a/42/54b0b380c4f2ff1e839d9c70f1e3.jpg" data-lightbox="roadtrip" data-title="Solve 代數方程 多項式方程 的符號解析解 華人百科">
+						<img class="card-img" src="https://www.itsfun.com.tw/cacheimg/1a/42/54b0b380c4f2ff1e839d9c70f1e3.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdn2ewmRfbFgkE82zGx_NA_P6HCDnlzv27la9YxP61opfjx643w_rXSQv-ebs_gqfaIqU';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Solve 代數方程 多項式方程 的符號解析解 華人百科
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Boundary_value_problem-en.svg/1200px-Boundary_value_problem-en.svg.png" data-lightbox="roadtrip" data-title="边值问题 维基百科 自由的百科全书">
+						<img class="card-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Boundary_value_problem-en.svg/1200px-Boundary_value_problem-en.svg.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQd4f0lMJs3F_ZMUyfuW0bQS_iCoDFdS1YAfQyZS1UjYr91oAuB5TxNhSm_bsXpZ9T_n2Y';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				边值问题 维基百科 自由的百科全书
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://slidesplayer.com/slide/16171420/95/images/33/%E9%BB%83%E9%87%91%E5%88%86%E5%89%B2%E6%B3%95+%E4%BD%9C%E6%A5%AD%E7%A0%94%E7%A9%B6+%E4%BA%8C%E7%89%88+Ch.12+%E9%9D%9E%E7%B7%9A%E6%80%A7%E8%A6%8F%E5%8A%83.jpg" data-lightbox="roadtrip" data-title="非線性規劃nonlinear Programming Ppt Download">
+						<img class="card-img" src="https://slidesplayer.com/slide/16171420/95/images/33/%E9%BB%83%E9%87%91%E5%88%86%E5%89%B2%E6%B3%95+%E4%BD%9C%E6%A5%AD%E7%A0%94%E7%A9%B6+%E4%BA%8C%E7%89%88+Ch.12+%E9%9D%9E%E7%B7%9A%E6%80%A7%E8%A6%8F%E5%8A%83.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpdx45zcNBx2oyKK8nW78r-ipH7VGIS9sKvep8PJao8SaE8allYsbLVlaSFWSo3xccAZU';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				非線性規劃nonlinear Programming Ppt Download
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="a49XO75DIRqi7M" data-lightbox="roadtrip" data-title="2">
+						<img class="card-img" src="a49XO75DIRqi7M" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJiNad0p6o90Lpd7uoGz7nAaYKE7WzFY9AJA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				2
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://lh3.googleusercontent.com/hYVI3izPWInqIQeNa23S8MsIr6_LIxnu7KpAWloFgFKKBR8bGEE_YB0iheyzRF_i5p-HQYl6iN0PtxcisIvUswzrmUHoTw3KLsX5pBhZ-qO8pfhGzzf3QiVuA98pDm-zpNFg4E9wJctyoxmNoA25U1Zfc5uA_-NdZijFHoYqQUaKqnL8DM73IE7QqDpkW8Pyfyfz4zlobO2VaQiqLxPSBgvUQZWyb-cBc4-8GlLK2zFNiWMd00JpA3rcq-xGqlclC_P88Y5ZG7Ks4drjVOSNBBffPvMLoRRVMR1f6D-NhgN8bL5_mfvrVhpxKZ69fedb75MaeN7jRDfjjZn7nL4ot0kazsV5jzFRJ5ejLJj2qYBEAB5N3m6O1icigDjNIUPxmHwD80__2297YoqZEqh6mX65syHJb9ep2aUHqWShKDIHRGJ7HeqwfLBwXa5fuzaYLpbBmh0kW3GKC7VTR5-RRfzqtckpucuRxgUGlNMr_ghClYQVBwSW9fhieFO_qFOA060g7E9RtopLSOW1f-zGqEIgq3vJEpARlE59GHYQdatFQmqltdvOdl1h9aZ2Lsq5ZPAhzGhboZIBVQSW6FlaU-u3Cvdw9ipa8_jlgW2Im_ADFdEUW6WUPjgTqSoL-KwDCQ72kxAtgPGe-y-y5rJR7jlVhT4Al7kPKU-pu2OEzHtupdaNU4N1pDr8v5BErpLWBNeRlJHox9MGBxRBXx6Z-MJDyIXwBDJ8iBFEvptujFZHJx0=w1425-h820-no" data-lightbox="roadtrip" data-title="Excel 規劃求解 找最佳解的好幫手 April Yang">
+						<img class="card-img" src="https://lh3.googleusercontent.com/hYVI3izPWInqIQeNa23S8MsIr6_LIxnu7KpAWloFgFKKBR8bGEE_YB0iheyzRF_i5p-HQYl6iN0PtxcisIvUswzrmUHoTw3KLsX5pBhZ-qO8pfhGzzf3QiVuA98pDm-zpNFg4E9wJctyoxmNoA25U1Zfc5uA_-NdZijFHoYqQUaKqnL8DM73IE7QqDpkW8Pyfyfz4zlobO2VaQiqLxPSBgvUQZWyb-cBc4-8GlLK2zFNiWMd00JpA3rcq-xGqlclC_P88Y5ZG7Ks4drjVOSNBBffPvMLoRRVMR1f6D-NhgN8bL5_mfvrVhpxKZ69fedb75MaeN7jRDfjjZn7nL4ot0kazsV5jzFRJ5ejLJj2qYBEAB5N3m6O1icigDjNIUPxmHwD80__2297YoqZEqh6mX65syHJb9ep2aUHqWShKDIHRGJ7HeqwfLBwXa5fuzaYLpbBmh0kW3GKC7VTR5-RRfzqtckpucuRxgUGlNMr_ghClYQVBwSW9fhieFO_qFOA060g7E9RtopLSOW1f-zGqEIgq3vJEpARlE59GHYQdatFQmqltdvOdl1h9aZ2Lsq5ZPAhzGhboZIBVQSW6FlaU-u3Cvdw9ipa8_jlgW2Im_ADFdEUW6WUPjgTqSoL-KwDCQ72kxAtgPGe-y-y5rJR7jlVhT4Al7kPKU-pu2OEzHtupdaNU4N1pDr8v5BErpLWBNeRlJHox9MGBxRBXx6Z-MJDyIXwBDJ8iBFEvptujFZHJx0=w1425-h820-no" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuxl4XvKJukzSzxo8y3Qqi5hq1eu5LfbV8Uw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Excel 規劃求解 找最佳解的好幫手 April Yang
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Quadratic_formula.svg/440px-Quadratic_formula.svg.png" data-lightbox="roadtrip" data-title="代數 Wikiwand">
+						<img class="card-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Quadratic_formula.svg/440px-Quadratic_formula.svg.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzR3g3Ly41MtC-xl7rhrYMdJl3isJxaiEDeQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				代數 Wikiwand
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://img-blog.csdnimg.cn/20200224143534871.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl8zNjQ3NDgwOQ==,size_16,color_FFFFFF,t_70" data-lightbox="roadtrip" data-title="Python求解多重或非线性方程 Python 多元 多次 方程组 线性方程组">
+						<img class="card-img" src="https://img-blog.csdnimg.cn/20200224143534871.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl8zNjQ3NDgwOQ==,size_16,color_FFFFFF,t_70" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkw1353Ar4e3_i4_KD-KvuEfk0nP666-j47w';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Python求解多重或非线性方程 Python 多元 多次 方程组 线性方程组
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://img2018.cnblogs.com/blog/1476464/201809/1476464-20180914113348600-1100851117.png" data-lightbox="roadtrip" data-title="非线性方程 组 一维非线性方程 一 二分法 不动点迭代 牛顿法 Matlab Gentlemin 博客园">
+						<img class="card-img" src="https://img2018.cnblogs.com/blog/1476464/201809/1476464-20180914113348600-1100851117.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSDY1ezsdJtMkGhZexVWR7V2AA74hXiVdTyw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				非线性方程 组 一维非线性方程 一 二分法 不动点迭代 牛顿法 Matlab Gentlemin 博客园
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://i.ppfocus.com/2020/8/1d3b90f.jpg" data-lightbox="roadtrip" data-title="多重線性回歸及其r實現 人人焦點">
+						<img class="card-img" src="https://i.ppfocus.com/2020/8/1d3b90f.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAU3BkAsimTtbZGJBQEoEaLdBdXCmD7JvqZA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				多重線性回歸及其r實現 人人焦點
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://img-blog.csdnimg.cn/20200224174006527.png" data-lightbox="roadtrip" data-title="Python求解多元多次方程组或非线性方程组 祥瑞的技术博客 Csdn博客 Python解方程组">
+						<img class="card-img" src="https://img-blog.csdnimg.cn/20200224174006527.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzkIQfFICYs1vuElvUUKVfV-gw6a9vNr2NAA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Python求解多元多次方程组或非线性方程组 祥瑞的技术博客 Csdn博客 Python解方程组
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://i.ppfocus.com/2020/8/6f956fe.jpg" data-lightbox="roadtrip" data-title="多重線性回歸及其r實現 人人焦點">
+						<img class="card-img" src="https://i.ppfocus.com/2020/8/6f956fe.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLoRvdKYXxXjIZhExhLX06Onl2MZz2R-iyWQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				多重線性回歸及其r實現 人人焦點
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://vlight.me/images/5ad6a8f4a3f6d.png" data-lightbox="roadtrip" data-title="数值python 求解方程 Greatx S Blog">
+						<img class="card-img" src="https://vlight.me/images/5ad6a8f4a3f6d.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQg-lUInU1zntXXFhCTD5LRUBScl_uRatGjiA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				数值python 求解方程 Greatx S Blog
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://b.ecimg.tw/items/DJAA2VA900B4RI0/000001_1612181450.jpg" data-lightbox="roadtrip" data-title="機器學習 彩色圖解 基礎微積分 Python實作 王者歸來 全彩 Pchome 24h書店">
+						<img class="card-img" src="https://b.ecimg.tw/items/DJAA2VA900B4RI0/000001_1612181450.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlH0HG8T_vpG44yNFREIUjaXOMYvCT_HZDnQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				機器學習 彩色圖解 基礎微積分 Python實作 王者歸來 全彩 Pchome 24h書店
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://img.yumpu.com/37854024/1/500x640/a-ae-c-3-4-caraa.jpg" data-lightbox="roadtrip" data-title="A Ae C C A ˆa A">
+						<img class="card-img" src="https://img.yumpu.com/37854024/1/500x640/a-ae-c-3-4-caraa.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsf9xcKuHXWIUmI2_HTiXv8WRq2VTfr5RGvA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				A Ae C C A ˆa A
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=2191146494488892&amp;get_thumbnail=1" data-lightbox="roadtrip" data-title="臺大電機系大學部精專獎 今天要介紹的是 由簡仲明所做的 最小梯度下降法求解非線性聯立方程式的探討及實際應用">
+						<img class="card-img" src="https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=2191146494488892&amp;get_thumbnail=1" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSD1wtKrOLmS4zYDe5wp3AGxMwDxeSM2lqk-g';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				臺大電機系大學部精專獎 今天要介紹的是 由簡仲明所做的 最小梯度下降法求解非線性聯立方程式的探討及實際應用
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://lh3.googleusercontent.com/-sp-5vi3U8vAIq13c9mflArXgpsNrpMYXrm5XMZOjnpkzGOAq3gVKbzMb_gjCgCAQeHE2vletivGEgbBfV3y3bTYmBmHC9VueKNVKRDpM9Rgq8QQQ5kNwN9txDjCfBNXHpVVIbwqBqLn2ZzQxsyD7vOxBFT1brAX4qqI-cKZHOBGpAKA4P6cf6qEiM9d6w0ZsZkBCudO2AEPGU1KtKFZnYOP9nRJy14-wFTeukXT18n8vvMBNMrHvzTaprFFYIwOp879-aZZ0zgLJLkANTazNszYa_GGusELL4mmcDnO7eyYlfCbH3qcJC6_il5RFSH9GVsi_YWYxS4I2ziuZWVQLB2whA6XcrQvOSmlz-M-qwn0O7mcDPC69WVjdoj-PnqyIy4HyBN0vXCiCmPDgBCQjw_WmCt5sCYhV1yjK1I2raUQmCyHQKo_aDqSefigkzPKKKtX1R3iKtELrCILcRtVkMb2DeSXrtTz8uoc6_6dKVMVrHWZJlGSJal30xVA5VzMTkW0Gw5o2RaZg3wn82HHfaiHpYoAqLY_sX-0hFTSXotNuwQR2nLj7I6nYRuPpCeLQ5GqCgUyb-dCwh3hvoxLZhJQ--GrAcxC5nEE0dEKhUe5XkzswQDrIbli2bFRJWyopZ6Lbvj6mbtpcx_4_oMA_nCcfqDvqFS0osUbp_3eVlTWZHMwY_M_0DPPOl2TD86hnO-niAYngv4pYZZAL61lHzKFG2eEaNjjbDtG4PyF25tUu2w=w1425-h812-no" data-lightbox="roadtrip" data-title="Excel 規劃求解 找最佳解的好幫手 April Yang">
+						<img class="card-img" src="https://lh3.googleusercontent.com/-sp-5vi3U8vAIq13c9mflArXgpsNrpMYXrm5XMZOjnpkzGOAq3gVKbzMb_gjCgCAQeHE2vletivGEgbBfV3y3bTYmBmHC9VueKNVKRDpM9Rgq8QQQ5kNwN9txDjCfBNXHpVVIbwqBqLn2ZzQxsyD7vOxBFT1brAX4qqI-cKZHOBGpAKA4P6cf6qEiM9d6w0ZsZkBCudO2AEPGU1KtKFZnYOP9nRJy14-wFTeukXT18n8vvMBNMrHvzTaprFFYIwOp879-aZZ0zgLJLkANTazNszYa_GGusELL4mmcDnO7eyYlfCbH3qcJC6_il5RFSH9GVsi_YWYxS4I2ziuZWVQLB2whA6XcrQvOSmlz-M-qwn0O7mcDPC69WVjdoj-PnqyIy4HyBN0vXCiCmPDgBCQjw_WmCt5sCYhV1yjK1I2raUQmCyHQKo_aDqSefigkzPKKKtX1R3iKtELrCILcRtVkMb2DeSXrtTz8uoc6_6dKVMVrHWZJlGSJal30xVA5VzMTkW0Gw5o2RaZg3wn82HHfaiHpYoAqLY_sX-0hFTSXotNuwQR2nLj7I6nYRuPpCeLQ5GqCgUyb-dCwh3hvoxLZhJQ--GrAcxC5nEE0dEKhUe5XkzswQDrIbli2bFRJWyopZ6Lbvj6mbtpcx_4_oMA_nCcfqDvqFS0osUbp_3eVlTWZHMwY_M_0DPPOl2TD86hnO-niAYngv4pYZZAL61lHzKFG2eEaNjjbDtG4PyF25tUu2w=w1425-h812-no" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRurAeKXRjN2ihwAf7FMud9rLEI0luoknVZFQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Excel 規劃求解 找最佳解的好幫手 April Yang
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+		
+	</div>
+
+		 
+		
+		
+				</div>
+				<div class="col-sm-12 widget">
+					<div class="d-block p-4">
+	<center>
+		<!-- BOTTOM BANNER ADS -->
+<script async="async" data-cfasync="false" src="//jc32arlvqpv8.com/eb47a424ae325c90cca32780149785c3/invoke.js"></script>
+<div id="container-eb47a424ae325c90cca32780149785c3"></div>
+
+	</center>
+</div>				</div>
+			</div>
+			<div class="row footer">
+				<div class="col-md-12 text-center py-4">
+										<a href="/p/dmca.html">Dmca</a>
+										<a href="/p/contact.html">Contact</a>
+										<a href="/p/privacy-policy.html">Privacy Policy</a>
+										<a href="/p/copyright.html">Copyright</a>
+					
+				</div>
+			</div>
+		</main>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js" integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js" integrity="sha256-CtKylYan+AJuoH8jrMht1+1PMhMqrKnB8K5g012WN5I=" crossorigin="anonymous"></script>
+		
+		<!-- Footer CSS JS -->
+		
+		
+		
+			<script type='text/javascript' src='//jc32arlvqpv8.com/ef/d5/10/efd510237a3143727bed46803ec35b8d.js'></script>
+</body>
+</html>

@@ -1,0 +1,682 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha256-L/W5Wfqfa0sdBNIKN9cG6QA5F2qx4qICmU2VgLruv9Y=" crossorigin="anonymous" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/css/lightbox.min.css" integrity="sha256-tBxlolRHP9uMsEFKVk+hk//ekOlXOixLKvye5W2WR5c=" crossorigin="anonymous" />
+		<link href="https://fonts.googleapis.com/css?family=Mr+Dafoe" rel="stylesheet" type="text/css">
+
+		<style type="text/css">
+			html,body{font-family:"Open Sans",Arial,sans-serif;font-size:14px;font-weight:400;background:#f3f3f3 url(https://www.zhihu.com/equation?tex=%5Cboldsymbol%7BG%7D%3D%5Cleft%5C%7B%5Cbegin%7Barray%7D%7Bl%7D+%5Crho+v+%5C%5C+%5Crho+u+v-%5Ctau_%7By+x%7D+%5C%5C+%5Crho+v%5E%7B2%7D%2Bp-%5Ctau_%7By+y%7D+%5C%5C+%5Crho+w+v-%5Ctau_%7By+z%7D+%5C%5C+%5Crho%5Cleft%28e%2B%5Cfrac%7BV%5E%7B2%7D%7D%7B2%7D%5Cright%29+v%2Bp+v-k+%5Cfrac%7B%5Cpartial+T%7D%7B%5Cpartial+y%7D-u+%5Ctau_%7By+x%7D-v+%5Ctau_%7By+y%7D-w+%5Ctau_%7By+z%7D+%5Cend%7Barray%7D%5Cright%5C%7D
+) no-repeat center center fixed;background-size:cover;height:100%}#title{font-family:"Mr Dafoe",Times,serif;font-size:34px;background:rgba(255,255,255,.8);margin-bottom:34px}.header{padding-bottom:13px;margin-bottom:13px;border-bottom:1px solid #eee}a{color:#26ADE4;text-decoration:none}#title a{color:#333;margin-left:21px}#title a:hover{text-decoration:none;color:#26ADE4}.sidebar ul{margin:0;padding:0}.sidebar ul li{list-style:none}.footer{margin-top:21px;padding-top:13px;border-top:1px solid #eee}.footer a{margin:0 15px}.navi{margin:13px 0 13px 0;padding:13px}.navi a{margin:5px 2px;font-size:95%}.main{margin-top: 6rem;}.form-inline .form-control{min-width: 300px;}.v-cover{height: 380px; object-fit: cover;}.v-image{height: 200px; object-fit: cover;}.dwn-cover{max-height: 460px; object-fit: cover;}.main{margin-top: 6rem;}.form-inline .form-control{min-width: 300px;}			
+		</style>
+
+		<title>流体方程式 三松 児玉</title>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/", 
+  "@type": "Article", 
+  "author": {
+    "@type": "Person",
+    "name": "James"
+  },
+  "headline": "流体方程式 三松 児玉",
+  "datePublished": "2021-04-24",
+  "image": [https://pic2.zhimg.com/v2-a2d635e73c5a69ed2d139375fd69e2f5_b.jpg,https://www.zhihu.com/equation?tex=%5Cboldsymbol%7BG%7D%3D%5Cleft%5C%7B%5Cbegin%7Barray%7D%7Bl%7D+%5Crho+v+%5C%5C+%5Crho+u+v-%5Ctau_%7By+x%7D+%5C%5C+%5Crho+v%5E%7B2%7D%2Bp-%5Ctau_%7By+y%7D+%5C%5C+%5Crho+w+v-%5Ctau_%7By+z%7D+%5C%5C+%5Crho%5Cleft%28e%2B%5Cfrac%7BV%5E%7B2%7D%7D%7B2%7D%5Cright%29+v%2Bp+v-k+%5Cfrac%7B%5Cpartial+T%7D%7B%5Cpartial+y%7D-u+%5Ctau_%7By+x%7D-v+%5Ctau_%7By+y%7D-w+%5Ctau_%7By+z%7D+%5Cend%7Barray%7D%5Cright%5C%7D,https://www.zhihu.com/equation?tex=G_%7B2%7D%28U%29%3D%5Cleft%5B%5Cbegin%7Barray%7D%7Bc%7D+0+%5C%5C+%5Ctau_%7B21%7D+%5C%5C+%5Ctau_%7B22%7D+%5C%5C+%5Ctau_%7B23%7D+%5C%5C+%5Cfrac%7BC_%7Bp%7D+%5Cmu%7D%7B%5Coperatorname%7BPrRe%7D%7D+%5Cfrac%7B%5Cpartial+T%7D%7B%5Cpartial+y%7D%2Bu+%5Ctau_%7B21%7D%2Bv+%5Ctau_%7B22%7D%2Bw+%5Ctau_%7B23%7D+%5Cend%7Barray%7D%5Cright%5D],
+  "publisher": {
+    "@type": "Organization",
+    "name": "Tukang Parkir Gerobak",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://via.placeholder.com/512.png?text=流体方程式 三松 児玉",
+      "width": 512,
+      "height": 512
+    }
+  }
+}
+</script>
+		<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-957NGNKQ70"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-957NGNKQ70');
+</script>
+
+<script type='text/javascript' src='//jc32arlvqpv8.com/1a/82/2e/1a822ef8a40a0fbab3c4ea12a5d2bb02.js'></script>
+</head>
+	<body>
+		<header class="bg-white fixed-top">			
+			<nav class="navbar navbar-light bg-white mb-0">
+				<div class="container justify-content-center justify-content-sm-between">	
+				  <a href="/" title="Blog" class="navbar-brand mb-1">Blog</a>
+				  				</div>			  
+			</nav>				
+		</header>
+		<main class="main container bg-white">
+			<div class="col-md-12 my-4" align="center">
+				<div class="d-block p-4">
+	<br/><center>
+<!-- TOP BANNER ADS -->
+</center><br/>
+</div>			</div>
+			<div class="row header">
+				<div class="col-sm-12 text-center p-2">
+						<h1>流体方程式 三松 児玉</h1>
+
+	
+	<div class="navi text-center">
+										<a class="badge badge-light" href="/%E6%9C%AB%E3%81%A3%E5%AD%90%E3%81%AE%E4%B8%80%E4%BA%BA%E5%A8%98%E3%81%A8%E3%81%8A%E5%85%84%E3%81%A1%E3%82%83%E3%82%93%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%AE%E6%9C%9D%E6%80%A7%E6%B4%BB-%E9%9C%A7%E5%B3%B6%E3%81%95%E3%81%8F%E3%82%89-avg.html">末っ子の一人娘とお兄ちゃんお父さんの朝性活 霧島さくら avg</a>
+											<a class="badge badge-warning" href="/%E7%90%83%E3%81%AE%E6%96%B9%E7%A8%8B%E5%BC%8F-4%E7%82%B9.html">球の方程式 4点</a>
+											<a class="badge badge-primary" href="/%E7%B5%90%E5%A9%9A%E3%81%97%E3%81%9F%E3%81%AE%E3%81%AF%E5%A8%98%E7%8B%99%E3%81%84-%E6%96%B0%E3%81%97%E3%81%84%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%8C%E4%BD%95%E3%82%82%E7%9F%A5%E3%82%89%E3%81%AA%E3%81%84%E7%99%BA%E9%81%94%E9%80%94%E4%B8%AD%E3%81%AE%E5%A8%98%E3%81%AB%E6%80%A7%E6%95%99%E8%82%B2-av.html">結婚したのは娘狙い 新しいお父さんが何も知らない発達途中の娘に性教育 av</a>
+											<a class="badge badge-info" href="/%E7%84%A1%E6%96%99%E6%BC%AB%E7%94%BB%E3%82%A8-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E7%84%A1%E7%90%86%E7%9F%A2%E7%90%86.html">無料漫画エ お父さん無理矢理</a>
+											<a class="badge badge-dark" href="/%E7%9B%B4%E8%A6%B3%E3%81%A7%E3%82%8F%E3%81%8B%E3%82%8B%E3%82%B7%E3%83%A5%E3%83%AC%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%AC%E3%83%BC%E6%96%B9%E7%A8%8B%E5%BC%8F.html">直観でわかるシュレーディンガー方程式</a>
+											<a class="badge badge-success" href="/%E6%A5%B5%E6%96%B9%E7%A8%8B%E5%BC%8F-%E5%AA%92%E4%BB%8B%E5%A4%89%E6%95%B0%E8%A1%A8%E7%A4%BA.html">極方程式 媒介変数表示</a>
+											<a class="badge badge-dark" href="/%E6%B0%B4%E7%B4%A0-%E7%86%B1%E5%8C%96%E5%AD%A6%E6%96%B9%E7%A8%8B%E5%BC%8F.html">水素 熱化学方程式</a>
+											<a class="badge badge-warning" href="/%E9%BE%8D%E3%81%8C%E5%A6%82%E3%81%8F6-%E6%A1%90%E7%94%9F-%E3%81%8A%E3%81%98%E3%81%95%E3%82%93%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93-%E9%81%A5.html">龍が如く6 桐生 おじさんお父さん 遥</a>
+											<a class="badge badge-info" href="/%EF%BC%92%E6%AC%A1%E6%96%B9%E7%A8%8B%E5%BC%8F%E3%81%AE%E9%A0%82%E7%82%B9.html">２次方程式の頂点</a>
+											<a class="badge badge-secondary" href="/%E8%85%90%E3%81%A3%E3%81%9F%E3%83%9F%E3%82%AB%E3%83%B3%E3%81%AE%E6%96%B9%E7%A8%8B%E5%BC%8F-%E3%83%A4%E3%83%B3%E3%82%AD%E3%83%BC.html">腐ったミカンの方程式 ヤンキー</a>
+											<a class="badge badge-info" href="/%E9%9D%9E-%E5%AE%9A%E5%B8%B8-%E7%86%B1-%E4%BC%9D%E5%B0%8E-%E6%96%B9%E7%A8%8B%E5%BC%8F-%E5%B7%AE%E5%88%86.html">非 定常 熱 伝導 方程式 差分</a>
+											<a class="badge badge-success" href="/%E7%A7%81%E3%81%8C%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%AE%E6%80%A7%E5%87%A6%E7%90%86%E3%81%99%E3%82%8B%E3%81%8B%E3%82%89.html">私がお父さんの性処理するから</a>
+											<a class="badge badge-dark" href="/%E7%AD%89%E5%8F%B7%E5%A4%89%E5%8C%96-%E6%96%B9%E7%A8%8B%E5%BC%8F-%E4%B8%8D%E7%AD%89%E5%BC%8F.html">等号変化 方程式 不等式</a>
+											<a class="badge badge-danger" href="/%E8%AE%83%E5%B2%90%E3%81%AE%E5%B1%B1%E3%81%AF%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93.html">讃岐の山はお父さん</a>
+											<a class="badge badge-secondary" href="/%E7%89%B9%E5%88%A5%E3%81%AA%E7%B5%86%E5%89%B5%E8%86%8F-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%8C%E9%96%8B%E7%99%BA%E3%81%97%E3%81%9F-%E6%BC%AB%E7%94%BB.html">特別な絆創膏 お父さんが開発した 漫画</a>
+						</div>
+<center>
+	<!-- MIDDLE BANNER ADS -->
+<script type="text/javascript">
+	atOptions = {
+		'key' : '2b77887421e2587a1a1b1d7c8a31a9e0',
+		'format' : 'iframe',
+		'height' : 250,
+		'width' : 300,
+		'params' : {}
+	};
+	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://jc32arlvqpv8.com/2b77887421e2587a1a1b1d7c8a31a9e0/invoke.js"></scr' + 'ipt>');
+</script>
+		
+	</center>
+					
+				</div>
+			</div>
+			<div class="row content mb-4">
+				<div class="col-md-12">					
+					
+	
+	<div class="card-columns">
+						
+	  <div class='card'>
+	  	<a href="https://img-blog.csdn.net/20180706144420297?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMDIwNTYz/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" data-lightbox="roadtrip" data-title="流体动力学控制方程 详细推导 Diyhoo的编程小屋 Csdn博客 控制方程">
+						<img class="card-img" src="https://img-blog.csdn.net/20180706144420297?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMDIwNTYz/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQn7_wgKgJLhfHLVS40NHNIz3KxnBrboIwi5IUGuGgzBayapkoz6CfL6EVN7QLiJceLYbc';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				流体动力学控制方程 详细推导 Diyhoo的编程小屋 Csdn博客 控制方程
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic3.zhimg.com/80/v2-5a7a9f87a19b1fed06cedf991cd7ef8a_1440w.jpg" data-lightbox="roadtrip" data-title="计算流体力学 控制方程 知乎">
+						<img class="card-img" src="https://pic3.zhimg.com/80/v2-5a7a9f87a19b1fed06cedf991cd7ef8a_1440w.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpjF_bfGNh58WEjqNtkPevLpFrwq9x4DvUsMnKBQA-JfcceDxIjBPYbouaGj7a7TW4psI';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				计算流体力学 控制方程 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic1.zhimg.com/80/v2-bdf7b1bc0a48398e859a2bc1951408fc_1440w.jpg" data-lightbox="roadtrip" data-title="计算流体力学 控制方程 知乎">
+						<img class="card-img" src="https://pic1.zhimg.com/80/v2-bdf7b1bc0a48398e859a2bc1951408fc_1440w.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRu7_QZzmDPBIqA_aEPEA-y9RjSk1rFQvTlywICNGWTLPrOWO8XAmpB2Bc4xVdLl0t0hsU';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				计算流体力学 控制方程 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.zhihu.com/equation?tex=G_%7B2%7D%28U%29%3D%5Cleft%5B%5Cbegin%7Barray%7D%7Bc%7D+0+%5C%5C+%5Ctau_%7B21%7D+%5C%5C+%5Ctau_%7B22%7D+%5C%5C+%5Ctau_%7B23%7D+%5C%5C+%5Cfrac%7BC_%7Bp%7D+%5Cmu%7D%7B%5Coperatorname%7BPrRe%7D%7D+%5Cfrac%7B%5Cpartial+T%7D%7B%5Cpartial+y%7D%2Bu+%5Ctau_%7B21%7D%2Bv+%5Ctau_%7B22%7D%2Bw+%5Ctau_%7B23%7D+%5Cend%7Barray%7D%5Cright%5D" data-lightbox="roadtrip" data-title="计算流体力学 控制方程 知乎">
+						<img class="card-img" src="https://www.zhihu.com/equation?tex=G_%7B2%7D%28U%29%3D%5Cleft%5B%5Cbegin%7Barray%7D%7Bc%7D+0+%5C%5C+%5Ctau_%7B21%7D+%5C%5C+%5Ctau_%7B22%7D+%5C%5C+%5Ctau_%7B23%7D+%5C%5C+%5Cfrac%7BC_%7Bp%7D+%5Cmu%7D%7B%5Coperatorname%7BPrRe%7D%7D+%5Cfrac%7B%5Cpartial+T%7D%7B%5Cpartial+y%7D%2Bu+%5Ctau_%7B21%7D%2Bv+%5Ctau_%7B22%7D%2Bw+%5Ctau_%7B23%7D+%5Cend%7Barray%7D%5Cright%5D" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnO5yDLBLY-qlJs5Eyjz8wAcgBTRq3zOW1l_kJ48SeUqmhdPZoe2LwbtNIh_qMxlPHf-s';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				计算流体力学 控制方程 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic1.zhimg.com/80/v2-449fff9c6bcf0d23a75f6aa918834ae8_1440w.jpg" data-lightbox="roadtrip" data-title="Cfd系列 三 动量方程的有限体积离散 压力修正方程 Simple算法 知乎">
+						<img class="card-img" src="https://pic1.zhimg.com/80/v2-449fff9c6bcf0d23a75f6aa918834ae8_1440w.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSq8p3ywSkM5fBAyOHEwRh5pqAPVeZf_TP2ujFN4iQJJ9mUZomP44I2Jkvxc2NLHmlK_nA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Cfd系列 三 动量方程的有限体积离散 压力修正方程 Simple算法 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic2.zhimg.com/v2-5964790b7e8918b993d5f7573fb1fd1c_720w.jpg?source=172ae18b" data-lightbox="roadtrip" data-title="计算流体力学 控制方程 知乎">
+						<img class="card-img" src="https://pic2.zhimg.com/v2-5964790b7e8918b993d5f7573fb1fd1c_720w.jpg?source=172ae18b" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfDRaGhCU39Mya4ZhyC1OZ7b1Bdk-jdnJWqfbu8rsfIafmz7Pj4bkt63VpaKGmtEZqJyM';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				计算流体力学 控制方程 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+				<div class='card'>	
+			<div class="d-block p-4">
+	</div>		  	
+		  	<h3 class="h6 p-2"><b></b></h3>
+					</div>
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic1.zhimg.com/80/v2-c8f073e10b2125adbf51c7064cd81034_1440w.jpg" data-lightbox="roadtrip" data-title="计算流体力学 控制方程 知乎">
+						<img class="card-img" src="https://pic1.zhimg.com/80/v2-c8f073e10b2125adbf51c7064cd81034_1440w.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6yqrS-pP-emIWYQKuYcX-FXjfLr2yzlLgLoGu6NWtJIE8OvehpIfbJFq9d6JQC0bp7_Y';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				计算流体力学 控制方程 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic3.zhimg.com/80/v2-061db5cc5ae6d72eb85ec86c06745c2a_1440w.jpg" data-lightbox="roadtrip" data-title="计算流体力学 控制方程 知乎">
+						<img class="card-img" src="https://pic3.zhimg.com/80/v2-061db5cc5ae6d72eb85ec86c06745c2a_1440w.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8hfS042lRxcHdTHgI0gQKgd7pL3NoZc4aSrW-mH_axoH4q-Mi_AYVS8Cgar_piBdvNJU';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				计算流体力学 控制方程 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic4.zhimg.com/v2-0659487243dad2b17b3123ce5e22c19f_b.jpg" data-lightbox="roadtrip" data-title="计算流体力学 控制方程 知乎">
+						<img class="card-img" src="https://pic4.zhimg.com/v2-0659487243dad2b17b3123ce5e22c19f_b.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFKcMCokvyTjuhxxaY0HENruzYgwbmH2wPeSMklSQcZQGHw3lduXYBVU4Gk28UgOGOmis';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				计算流体力学 控制方程 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic3.zhimg.com/v2-061db5cc5ae6d72eb85ec86c06745c2a_b.jpg" data-lightbox="roadtrip" data-title="计算流体力学 控制方程 知乎">
+						<img class="card-img" src="https://pic3.zhimg.com/v2-061db5cc5ae6d72eb85ec86c06745c2a_b.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsDQAB7mPj30Sx8nQ5O-0l7vJSPLAsEkZ63rWnBbYkAwhrTbxqaUZ9TFMHLN0tN5PVdOA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				计算流体力学 控制方程 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic4.zhimg.com/80/v2-0659487243dad2b17b3123ce5e22c19f_1440w.jpg" data-lightbox="roadtrip" data-title="计算流体力学 控制方程 知乎">
+						<img class="card-img" src="https://pic4.zhimg.com/80/v2-0659487243dad2b17b3123ce5e22c19f_1440w.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTN9XlcaSC3_qMlo4GNl0Bu3hnioQSJMSJcyDm638WumONAGtThN_p_Ft6gPk_w3uhRHr0';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				计算流体力学 控制方程 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic2.zhimg.com/v2-6df442345fd30e04f3b3e513c642cc59_b.jpg" data-lightbox="roadtrip" data-title="计算流体力学 控制方程 知乎">
+						<img class="card-img" src="https://pic2.zhimg.com/v2-6df442345fd30e04f3b3e513c642cc59_b.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjjz5ItBYDWXuuY0HKGrzz-X2OH32xX5iFigIHxwigvTjvJZ8dKNn8hdHWFlwLj7bdnbw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				计算流体力学 控制方程 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://i0.hdslb.com/bfs/archive/f5483a32f37e0ace9b89631f45ee45b0375e4083.jpg" data-lightbox="roadtrip" data-title="自制课程 计算流体力学 Cfd 第三十四讲稳定性方程的求解 一 天津大学刘建新 哔哩哔哩 つロ干杯 Bilibili">
+						<img class="card-img" src="http://i0.hdslb.com/bfs/archive/f5483a32f37e0ace9b89631f45ee45b0375e4083.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJRge7xeDdhWFIxHeEDgLoKBw89cQf6jQ3pdkntdR1g0dkeUXw0AW_EUQNK3ZKvRQ-cr8';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				自制课程 计算流体力学 Cfd 第三十四讲稳定性方程的求解 一 天津大学刘建新 哔哩哔哩 つロ干杯 Bilibili
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic1.zhimg.com/v2-bdf7b1bc0a48398e859a2bc1951408fc_b.jpg" data-lightbox="roadtrip" data-title="计算流体力学 控制方程 知乎">
+						<img class="card-img" src="https://pic1.zhimg.com/v2-bdf7b1bc0a48398e859a2bc1951408fc_b.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEOJUwmXPJopkycRO1xFaWK1Wro0runSYFtHI5hY_AZUayWOwjXRWraQz7InjmVQHUD48';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				计算流体力学 控制方程 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic4.zhimg.com/80/v2-fd4683c0bc8070629d2fc3bc64b5228f_1440w.jpg" data-lightbox="roadtrip" data-title="计算流体力学 控制方程 知乎">
+						<img class="card-img" src="https://pic4.zhimg.com/80/v2-fd4683c0bc8070629d2fc3bc64b5228f_1440w.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUhfiz6cMdz86SWOZbo0V8scHUYgRWJidzeuxc42ZBoqlpxENZa3w2ofuirYrnD9U--kY';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				计算流体力学 控制方程 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic3.zhimg.com/80/eb5bc9ef65e3042a2505fd8b4b1d3c16_1440w.png" data-lightbox="roadtrip" data-title="如何正确选择湍流cfd 模型 知乎">
+						<img class="card-img" src="https://pic3.zhimg.com/80/eb5bc9ef65e3042a2505fd8b4b1d3c16_1440w.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8DO2XW3vLrlZUImbNOfv0SB8bEdwpSlfLrgs-KPQ73vCOtg7e0OHaCOjwWuIy9EU2Jkk';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				如何正确选择湍流cfd 模型 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic3.zhimg.com/80/v2-368285d676849e58eb45967e0f6c53b2_1440w.jpg" data-lightbox="roadtrip" data-title="计算流体力学 控制方程 知乎">
+						<img class="card-img" src="https://pic3.zhimg.com/80/v2-368285d676849e58eb45967e0f6c53b2_1440w.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQ8J4uGVdsmGHKWu88qDpqfqNSeEdwhXapAf2TTOGR6vEcX-X7SIbySt-F7qNDgfgRNuQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				计算流体力学 控制方程 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://img.xinshentex.com/img/p2.ssl.qhimgs1.com/t0149d4ab4d4ae1d858.jpg" data-lightbox="roadtrip" data-title="流体力学流体力学三大方程是什么 适用条件是什么 新绅网">
+						<img class="card-img" src="http://img.xinshentex.com/img/p2.ssl.qhimgs1.com/t0149d4ab4d4ae1d858.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQISXSdZxVGpBbLfQNNYDklv69MNzZDjgkunFiddpinXf5OpsxNwDkfMLJNNdLTGPQcW4o';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				流体力学流体力学三大方程是什么 适用条件是什么 新绅网
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic2.zhimg.com/v2-a2d635e73c5a69ed2d139375fd69e2f5_b.jpg" data-lightbox="roadtrip" data-title="Cfd系列 三 动量方程的有限体积离散 压力修正方程 Simple算法 知乎">
+						<img class="card-img" src="https://pic2.zhimg.com/v2-a2d635e73c5a69ed2d139375fd69e2f5_b.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWDMByUo4JR2RLb3PQ1ArgM-sAiyY90FMgoEi2G_PCHrrHHgMv6KapXmMELl6eMkVIpxQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Cfd系列 三 动量方程的有限体积离散 压力修正方程 Simple算法 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://img-blog.csdn.net/20180706152321579?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMDIwNTYz/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" data-lightbox="roadtrip" data-title="流体动力学控制方程 详细推导 Diyhoo的编程小屋 Csdn博客 控制方程">
+						<img class="card-img" src="https://img-blog.csdn.net/20180706152321579?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMDIwNTYz/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1V7u-m5G8hnpLhza6eP6oB0YImFKAaxG9a0occroyXWQEVy3oOci5IzZGbS1BLFWEZRs';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				流体动力学控制方程 详细推导 Diyhoo的编程小屋 Csdn博客 控制方程
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic2.zhimg.com/80/bad2781ef42148bd3c020d44b3c5a321_1440w.png" data-lightbox="roadtrip" data-title="如何正确选择湍流cfd 模型 知乎">
+						<img class="card-img" src="https://pic2.zhimg.com/80/bad2781ef42148bd3c020d44b3c5a321_1440w.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQA6E180KZwa8lhp5NZAePlq2nK9L4rdjupRQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				如何正确选择湍流cfd 模型 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://img-blog.csdn.net/20180706170319574?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMDIwNTYz/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" data-lightbox="roadtrip" data-title="流体动力学控制方程 详细推导 Diyhoo的编程小屋 Csdn博客 控制方程">
+						<img class="card-img" src="https://img-blog.csdn.net/20180706170319574?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMDIwNTYz/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAImWmypR5j1UxXV2t3zYXDhxkldH4abFgBg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				流体动力学控制方程 详细推导 Diyhoo的编程小屋 Csdn博客 控制方程
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic4.zhimg.com/v2-2bf9ca36529806f0f72efa56bf84af9f_b.jpg" data-lightbox="roadtrip" data-title="Cfd系列 三 动量方程的有限体积离散 压力修正方程 Simple算法 知乎">
+						<img class="card-img" src="https://pic4.zhimg.com/v2-2bf9ca36529806f0f72efa56bf84af9f_b.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAtaic_OeWpN_M_TkQqY4wYQ1yEe2M146oww';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Cfd系列 三 动量方程的有限体积离散 压力修正方程 Simple算法 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic4.zhimg.com/v2-1095efccfd083d1a21e136d8c02ae1d7_b.jpg" data-lightbox="roadtrip" data-title="Cfd系列 三 动量方程的有限体积离散 压力修正方程 Simple算法 知乎">
+						<img class="card-img" src="https://pic4.zhimg.com/v2-1095efccfd083d1a21e136d8c02ae1d7_b.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyRUHjXbfcPr6NQmC2Zlod8ZGpy0Y_L0j2Kw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Cfd系列 三 动量方程的有限体积离散 压力修正方程 Simple算法 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.zhihu.com/equation?tex=J%3D%5Cleft%5C%7B%5Cbegin%7Barray%7D%7Bl%7D+0+%5C%5C+%5Crho+f_%7Bx%7D+%5C%5C+%5Crho+f_%7By%7D+%5C%5C+%5Crho+f_%7Bz%7D+%5C%5C+%5Crho%5Cleft%28u+f_%7Bx%7D%2Bv+f_%7By%7D%2Bw+f_%7Bz%7D%5Cright%29%2B%5Crho+%5Cdot%7Bq%7D+%5Cend%7Barray%7D%5Cright%5C%7D" data-lightbox="roadtrip" data-title="计算流体力学 控制方程 知乎">
+						<img class="card-img" src="https://www.zhihu.com/equation?tex=J%3D%5Cleft%5C%7B%5Cbegin%7Barray%7D%7Bl%7D+0+%5C%5C+%5Crho+f_%7Bx%7D+%5C%5C+%5Crho+f_%7By%7D+%5C%5C+%5Crho+f_%7Bz%7D+%5C%5C+%5Crho%5Cleft%28u+f_%7Bx%7D%2Bv+f_%7By%7D%2Bw+f_%7Bz%7D%5Cright%29%2B%5Crho+%5Cdot%7Bq%7D+%5Cend%7Barray%7D%5Cright%5C%7D" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsQqou3IPZLHuxtmzwVOWy6PdTN3DEpzn6GA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				计算流体力学 控制方程 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://img.xinshentex.com/img/p1.so.qhmsg.com/t013b4a0e12e7a40c36.jpg" data-lightbox="roadtrip" data-title="流体力学流体力学三大方程是什么 适用条件是什么 新绅网">
+						<img class="card-img" src="http://img.xinshentex.com/img/p1.so.qhmsg.com/t013b4a0e12e7a40c36.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQii3_wJpXyIh4mRubULAttlsi05uYsBP3iHg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				流体力学流体力学三大方程是什么 适用条件是什么 新绅网
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://img.xinshentex.com/img/p2.ssl.qhimgs1.com/t01b433a918e0491bec.jpg" data-lightbox="roadtrip" data-title="流体力学流体力学三大方程是什么 适用条件是什么 新绅网">
+						<img class="card-img" src="http://img.xinshentex.com/img/p2.ssl.qhimgs1.com/t01b433a918e0491bec.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-eU9y5rcP9TdQ0s1QmpY7NJojU2y1muQuSQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				流体力学流体力学三大方程是什么 适用条件是什么 新绅网
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://img-blog.csdn.net/20180706145019883?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMDIwNTYz/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" data-lightbox="roadtrip" data-title="Ovj3fnz Fbvmzm">
+						<img class="card-img" src="https://img-blog.csdn.net/20180706145019883?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMDIwNTYz/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQx6v9kXJ5mG1hdDePoOtwYP4rnu2mPzgPebg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Ovj3fnz Fbvmzm
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic2.zhimg.com/v2-985774d1880794c651fe345ccdf91afd_b.jpg" data-lightbox="roadtrip" data-title="Cfd系列 三 动量方程的有限体积离散 压力修正方程 Simple算法 知乎">
+						<img class="card-img" src="https://pic2.zhimg.com/v2-985774d1880794c651fe345ccdf91afd_b.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTv-vvCjSui5MOLq9hAGDevlQdZtuJ74XGP1w';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Cfd系列 三 动量方程的有限体积离散 压力修正方程 Simple算法 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic4.zhimg.com/e3fb239aacdce38eb3c94d5c00d50bab_b.png" data-lightbox="roadtrip" data-title="如何正确选择湍流cfd 模型 知乎">
+						<img class="card-img" src="https://pic4.zhimg.com/e3fb239aacdce38eb3c94d5c00d50bab_b.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRvFZdA2VKF4p6UwaodWNlks4umIPy4cDsAw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				如何正确选择湍流cfd 模型 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.zhihu.com/equation?tex=%5Cbegin%7Barray%7D%7Bl%7D+%5Cfrac%7B%5Cpartial+u%7D%7B%5Cpartial+x%7D%2B%5Cfrac%7B%5Cpartial+v%7D%7B%5Cpartial+y%7D%3D0+%5C%5C+%5Cfrac%7B%5Cpartial+u%7D%7B%5Cpartial+t%7D%2B%5Cfrac%7B%5Cpartial%5Cleft%28u%5E%7B2%7D%5Cright%29%7D%7B%5Cpartial+x%7D%2B%5Cfrac%7B%5Cpartial%28u+v%29%7D%7B%5Cpartial+y%7D%2B%5Cfrac%7B1%7D%7B%5Crho%7D+%5Cfrac%7B%5Cpartial+p%7D%7B%5Cpartial+x%7D%3D%5Cnu%5Cleft%28%5Cfrac%7B%5Cpartial%5E%7B2%7D+u%7D%7B%5Cpartial+x%5E%7B2%7D%7D%2B%5Cfrac%7B%5Cpartial%5E%7B2%7D+u%7D%7B%5Cpartial+y%5E%7B2%7D%7D%5Cright%29+%5C%5C+%5Cfrac%7B%5Cpartial+v%7D%7B%5Cpartial+t%7D%2B%5Cfrac%7B%5Cpartial%28u+v%29%7D%7B%5Cpartial+x%7D%2B%5Cfrac%7B%5Cpartial%5Cleft%28v%5E%7B2%7D%5Cright%29%7D%7B%5Cpartial+y%7D%2B%5Cfrac%7B1%7D%7B%5Crho%7D+%5Cfrac%7B%5Cpartial+p%7D%7B%5Cpartial+y%7D%3D%5Cnu%5Cleft%28%5Cfrac%7B%5Cpartial%5E%7B2%7D+v%7D%7B%5Cpartial+x%5E%7B2%7D%7D%2B%5Cfrac%7B%5Cpartial%5E%7B2%7D+v%7D%7B%5Cpartial+y%5E%7B2%7D%7D%5Cright%29+%5Cend%7Barray%7D" data-lightbox="roadtrip" data-title="计算流体力学 控制方程 知乎">
+						<img class="card-img" src="https://www.zhihu.com/equation?tex=%5Cbegin%7Barray%7D%7Bl%7D+%5Cfrac%7B%5Cpartial+u%7D%7B%5Cpartial+x%7D%2B%5Cfrac%7B%5Cpartial+v%7D%7B%5Cpartial+y%7D%3D0+%5C%5C+%5Cfrac%7B%5Cpartial+u%7D%7B%5Cpartial+t%7D%2B%5Cfrac%7B%5Cpartial%5Cleft%28u%5E%7B2%7D%5Cright%29%7D%7B%5Cpartial+x%7D%2B%5Cfrac%7B%5Cpartial%28u+v%29%7D%7B%5Cpartial+y%7D%2B%5Cfrac%7B1%7D%7B%5Crho%7D+%5Cfrac%7B%5Cpartial+p%7D%7B%5Cpartial+x%7D%3D%5Cnu%5Cleft%28%5Cfrac%7B%5Cpartial%5E%7B2%7D+u%7D%7B%5Cpartial+x%5E%7B2%7D%7D%2B%5Cfrac%7B%5Cpartial%5E%7B2%7D+u%7D%7B%5Cpartial+y%5E%7B2%7D%7D%5Cright%29+%5C%5C+%5Cfrac%7B%5Cpartial+v%7D%7B%5Cpartial+t%7D%2B%5Cfrac%7B%5Cpartial%28u+v%29%7D%7B%5Cpartial+x%7D%2B%5Cfrac%7B%5Cpartial%5Cleft%28v%5E%7B2%7D%5Cright%29%7D%7B%5Cpartial+y%7D%2B%5Cfrac%7B1%7D%7B%5Crho%7D+%5Cfrac%7B%5Cpartial+p%7D%7B%5Cpartial+y%7D%3D%5Cnu%5Cleft%28%5Cfrac%7B%5Cpartial%5E%7B2%7D+v%7D%7B%5Cpartial+x%5E%7B2%7D%7D%2B%5Cfrac%7B%5Cpartial%5E%7B2%7D+v%7D%7B%5Cpartial+y%5E%7B2%7D%7D%5Cright%29+%5Cend%7Barray%7D" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLzllDUS_VRAv-H3RPn4QktMCONcIsaKV_4g';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				计算流体力学 控制方程 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic3.zhimg.com/09b8c5b9e645779f4fbb33855e1ccd2e_b.png" data-lightbox="roadtrip" data-title="如何正确选择湍流cfd 模型 知乎">
+						<img class="card-img" src="https://pic3.zhimg.com/09b8c5b9e645779f4fbb33855e1ccd2e_b.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQS8w-bkiUevSEEF9vPWYVAH0t671HHPfkKQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				如何正确选择湍流cfd 模型 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.zhihu.com/equation?tex=%5Cboldsymbol%7BG%7D%3D%5Cleft%5C%7B%5Cbegin%7Barray%7D%7Bl%7D+%5Crho+v+%5C%5C+%5Crho+u+v-%5Ctau_%7By+x%7D+%5C%5C+%5Crho+v%5E%7B2%7D%2Bp-%5Ctau_%7By+y%7D+%5C%5C+%5Crho+w+v-%5Ctau_%7By+z%7D+%5C%5C+%5Crho%5Cleft%28e%2B%5Cfrac%7BV%5E%7B2%7D%7D%7B2%7D%5Cright%29+v%2Bp+v-k+%5Cfrac%7B%5Cpartial+T%7D%7B%5Cpartial+y%7D-u+%5Ctau_%7By+x%7D-v+%5Ctau_%7By+y%7D-w+%5Ctau_%7By+z%7D+%5Cend%7Barray%7D%5Cright%5C%7D" data-lightbox="roadtrip" data-title="计算流体力学 控制方程 知乎">
+						<img class="card-img" src="https://www.zhihu.com/equation?tex=%5Cboldsymbol%7BG%7D%3D%5Cleft%5C%7B%5Cbegin%7Barray%7D%7Bl%7D+%5Crho+v+%5C%5C+%5Crho+u+v-%5Ctau_%7By+x%7D+%5C%5C+%5Crho+v%5E%7B2%7D%2Bp-%5Ctau_%7By+y%7D+%5C%5C+%5Crho+w+v-%5Ctau_%7By+z%7D+%5C%5C+%5Crho%5Cleft%28e%2B%5Cfrac%7BV%5E%7B2%7D%7D%7B2%7D%5Cright%29+v%2Bp+v-k+%5Cfrac%7B%5Cpartial+T%7D%7B%5Cpartial+y%7D-u+%5Ctau_%7By+x%7D-v+%5Ctau_%7By+y%7D-w+%5Ctau_%7By+z%7D+%5Cend%7Barray%7D%5Cright%5C%7D" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQI0gOhzq6WjXgMkmzNwRkuTBYXocZyKnnXFg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				计算流体力学 控制方程 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+		
+	</div>
+
+		 
+		
+		
+				</div>
+				<div class="col-sm-12 widget">
+					<div class="d-block p-4">
+	<center>
+		<!-- BOTTOM BANNER ADS -->
+<script async="async" data-cfasync="false" src="//jc32arlvqpv8.com/eb47a424ae325c90cca32780149785c3/invoke.js"></script>
+<div id="container-eb47a424ae325c90cca32780149785c3"></div>
+
+	</center>
+</div>				</div>
+			</div>
+			<div class="row footer">
+				<div class="col-md-12 text-center py-4">
+										<a href="/p/dmca.html">Dmca</a>
+										<a href="/p/contact.html">Contact</a>
+										<a href="/p/privacy-policy.html">Privacy Policy</a>
+										<a href="/p/copyright.html">Copyright</a>
+					
+				</div>
+			</div>
+		</main>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js" integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js" integrity="sha256-CtKylYan+AJuoH8jrMht1+1PMhMqrKnB8K5g012WN5I=" crossorigin="anonymous"></script>
+		
+		<!-- Footer CSS JS -->
+		
+		
+		
+			<script type='text/javascript' src='//jc32arlvqpv8.com/ef/d5/10/efd510237a3143727bed46803ec35b8d.js'></script>
+</body>
+</html>

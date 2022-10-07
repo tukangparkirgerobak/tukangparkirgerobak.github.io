@@ -1,0 +1,682 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha256-L/W5Wfqfa0sdBNIKN9cG6QA5F2qx4qICmU2VgLruv9Y=" crossorigin="anonymous" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/css/lightbox.min.css" integrity="sha256-tBxlolRHP9uMsEFKVk+hk//ekOlXOixLKvye5W2WR5c=" crossorigin="anonymous" />
+		<link href="https://fonts.googleapis.com/css?family=Mr+Dafoe" rel="stylesheet" type="text/css">
+
+		<style type="text/css">
+			html,body{font-family:"Open Sans",Arial,sans-serif;font-size:14px;font-weight:400;background:#f3f3f3 url(https://storage.googleapis.com/ttrinity/_img/product/17/17686/1470120/design_img_f_1470120_s.png
+) no-repeat center center fixed;background-size:cover;height:100%}#title{font-family:"Mr Dafoe",Times,serif;font-size:34px;background:rgba(255,255,255,.8);margin-bottom:34px}.header{padding-bottom:13px;margin-bottom:13px;border-bottom:1px solid #eee}a{color:#26ADE4;text-decoration:none}#title a{color:#333;margin-left:21px}#title a:hover{text-decoration:none;color:#26ADE4}.sidebar ul{margin:0;padding:0}.sidebar ul li{list-style:none}.footer{margin-top:21px;padding-top:13px;border-top:1px solid #eee}.footer a{margin:0 15px}.navi{margin:13px 0 13px 0;padding:13px}.navi a{margin:5px 2px;font-size:95%}.main{margin-top: 6rem;}.form-inline .form-control{min-width: 300px;}.v-cover{height: 380px; object-fit: cover;}.v-image{height: 200px; object-fit: cover;}.dwn-cover{max-height: 460px; object-fit: cover;}.main{margin-top: 6rem;}.form-inline .form-control{min-width: 300px;}			
+		</style>
+
+		<title>流体力学 オイラーの方程式</title>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/", 
+  "@type": "Article", 
+  "author": {
+    "@type": "Person",
+    "name": "James"
+  },
+  "headline": "流体力学 オイラーの方程式",
+  "datePublished": "2021-04-24",
+  "image": [https://slidesplayer.net/slide/11230324/60/images/16/%E6%B5%81%E4%BD%93%E3%81%AE%E9%81%8B%E5%8B%95%E6%96%B9%E7%A8%8B%E5%BC%8F+%E6%B5%81%E4%BD%93%E3%81%AF%E3%80%813%E6%AC%A1%E5%85%83%E7%A9%BA%E9%96%93%E3%81%AB%E5%AD%98%E5%9C%A8%E3%81%99%E3%82%8B%E3%81%AE%E3%81%A7%E3%80%81%E7%A7%BB%E6%B5%81%E9%A0%85%E3%81%AFy%E6%96%B9%E5%90%91%E3%80%81z%E6%96%B9%E5%90%91%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E3%82%82x%E6%96%B9%E5%90%91%E3%81%A8%E5%90%8C%E6%A7%98%E3%81%AE%E5%BD%A2%E5%BC%8F%E3%81%A7%E3%81%82%E3%82%89%E3%82%8F%E3%81%95%E3%82%8C%E3%82%8B%E3%80%82.jpg,/search?q=%E3%82%AA%E3%82%A4%E3%83%A9%E3%83%BC%E3%81%AE%E9%81%8B%E5%8B%95%E6%96%B9%E7%A8%8B%E5%BC%8F+%E6%B5%81%E4%BD%93&amp;tbm=isch,https://i.pinimg.com/originals/8e/30/4e/8e304e664e3d5c49ce2e684207c8d203.png],
+  "publisher": {
+    "@type": "Organization",
+    "name": "Tukang Parkir Gerobak",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://via.placeholder.com/512.png?text=流体力学 オイラーの方程式",
+      "width": 512,
+      "height": 512
+    }
+  }
+}
+</script>
+		<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-957NGNKQ70"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-957NGNKQ70');
+</script>
+
+<script type='text/javascript' src='//jc32arlvqpv8.com/1a/82/2e/1a822ef8a40a0fbab3c4ea12a5d2bb02.js'></script>
+</head>
+	<body>
+		<header class="bg-white fixed-top">			
+			<nav class="navbar navbar-light bg-white mb-0">
+				<div class="container justify-content-center justify-content-sm-between">	
+				  <a href="/" title="Blog" class="navbar-brand mb-1">Blog</a>
+				  				</div>			  
+			</nav>				
+		</header>
+		<main class="main container bg-white">
+			<div class="col-md-12 my-4" align="center">
+				<div class="d-block p-4">
+	<br/><center>
+<!-- TOP BANNER ADS -->
+</center><br/>
+</div>			</div>
+			<div class="row header">
+				<div class="col-sm-12 text-center p-2">
+						<h1>流体力学 オイラーの方程式</h1>
+
+	
+	<div class="navi text-center">
+										<a class="badge badge-danger" href="/%E8%BF%91%E8%A6%AA-%E7%84%A1%E8%A8%80-%E7%9B%B8%E5%A7%A6-%E9%9A%A3%E3%81%AB%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%8C%E3%81%84%E3%82%8B%E3%81%AE%E3%82%88-%E9%A6%99%E4%B9%83%E3%81%BE%E3%81%A9%E3%81%8B-dod.html">近親 無言 相姦 隣にお父さんがいるのよ 香乃まどか dod</a>
+											<a class="badge badge-warning" href="/%E7%B5%B6%E5%AF%BE-%E5%80%A4-%E6%96%B9%E7%A8%8B%E5%BC%8F-%E5%A0%B4%E5%90%88-%E5%88%86%E3%81%91-%E3%81%AA%E3%81%9C.html">絶対 値 方程式 場合 分け なぜ</a>
+											<a class="badge badge-light" href="/%E8%8A%B1%E5%AB%81-%E3%81%AE-%E6%89%8B%E7%B4%99-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93-%E7%97%85%E6%B0%97.html">花嫁 の 手紙 お父さん 病気</a>
+											<a class="badge badge-danger" href="/%E7%A8%B2%E7%9B%9B-%E6%88%90%E5%8A%9F-%E3%81%AE-%E6%96%B9%E7%A8%8B%E5%BC%8F.html">稲盛 成功 の 方程式</a>
+											<a class="badge badge-light" href="/%E7%B4%97%E7%B6%BE-%E6%81%8B%E6%84%9B-%E3%83%AD%E3%83%BC%E3%83%86%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3-%E6%84%9B%E3%81%95-%E3%82%8C%E3%82%8B-%E7%82%BA-%E3%81%AE-%E6%96%B9%E7%A8%8B%E5%BC%8F.html">紗綾 恋愛 ローテーション 愛さ れる 為 の 方程式</a>
+											<a class="badge badge-danger" href="/%E9%AB%98%E6%AC%A1%E6%96%B9%E7%A8%8B%E5%BC%8F-%E7%B5%84%E3%81%BF%E7%AB%8B%E3%81%A6%E9%99%A4%E6%B3%95.html">高次方程式 組み立て除法</a>
+											<a class="badge badge-warning" href="/%E6%AF%8E%E6%97%A5%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%A8sex%E3%81%99%E3%82%8Bjk.html">毎日お父さんとsexするjk</a>
+											<a class="badge badge-primary" href="/%E6%A0%AA-%E3%81%A7-%E5%84%B2%E3%81%91%E3%82%8B-%E6%96%B9%E7%A8%8B%E5%BC%8F.html">株 で 儲ける 方程式</a>
+											<a class="badge badge-light" href="/%E7%99%BB%E5%B1%B1%E4%B8%AD%E3%81%AB%E4%B8%8D%E6%98%8E%E3%81%AB%E3%81%AA%E3%81%A3%E3%81%9F%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%A8%E5%B0%8F1%E3%81%AF.html">登山中に不明になったお父さんと小1は</a>
+											<a class="badge badge-danger" href="/%E6%9C%8D%E5%BE%93-%E3%81%AE-%E6%96%B9%E7%A8%8B%E5%BC%8F-%E5%A5%B3-%E6%95%99%E5%B8%AB-%E6%81%A5%E8%BE%B1-%E3%81%AE-%E6%97%A5%E3%80%85-%E8%A5%BF%E9%87%8E-%E7%BF%94.html">服従 の 方程式 女 教師 恥辱 の 日々 西野 翔</a>
+											<a class="badge badge-danger" href="/%E8%A4%87%E7%B4%A0%E6%95%B0-%E3%81%A8-%E6%96%B9%E7%A8%8B%E5%BC%8F-%E5%BF%9C%E7%94%A8.html">複素数 と 方程式 応用</a>
+											<a class="badge badge-success" href="/%E7%9B%B4%E7%B7%9A-%E3%81%AE-%E6%96%B9%E7%A8%8B%E5%BC%8F-%E5%BF%9C%E7%94%A8.html">直線 の 方程式 応用</a>
+											<a class="badge badge-danger" href="/%E7%8A%AC-%E3%81%AE-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93-%E5%A3%B0.html">犬 の お父さん 声</a>
+											<a class="badge badge-light" href="/%E8%96%AC%E5%89%A4%E5%B8%AB%E5%9B%BD%E5%AE%B6%E8%A9%A6%E9%A8%93-%E3%82%B0%E3%83%AB%E3%82%B3%E3%83%BC%E3%82%B9%E7%94%9F%E6%88%90%E3%81%AE%E7%86%B1%E5%8C%96%E5%AD%A6%E6%96%B9%E7%A8%8B%E5%BC%8F.html">薬剤師国家試験 グルコース生成の熱化学方程式</a>
+											<a class="badge badge-secondary" href="/%EF%BD%94%E3%82%92%E6%B6%88%E5%8E%BB%E3%81%97%E3%81%A6%EF%BD%98-%EF%BD%99%E3%81%AE%E6%96%B9%E7%A8%8B%E5%BC%8F.html">ｔを消去してｘ ｙの方程式</a>
+						</div>
+<center>
+	<!-- MIDDLE BANNER ADS -->
+<script type="text/javascript">
+	atOptions = {
+		'key' : '2b77887421e2587a1a1b1d7c8a31a9e0',
+		'format' : 'iframe',
+		'height' : 250,
+		'width' : 300,
+		'params' : {}
+	};
+	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://jc32arlvqpv8.com/2b77887421e2587a1a1b1d7c8a31a9e0/invoke.js"></scr' + 'ipt>');
+</script>
+		
+	</center>
+					
+				</div>
+			</div>
+			<div class="row content mb-4">
+				<div class="col-md-12">					
+					
+	
+	<div class="card-columns">
+						
+	  <div class='card'>
+	  	<a href="https://kotobank.jp/image/dictionary/housoku/f00000092.jpg" data-lightbox="roadtrip" data-title="オイラーの流体運動方程式とは コトバンク">
+						<img class="card-img" src="https://kotobank.jp/image/dictionary/housoku/f00000092.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRByLFDYEf9Pk8q-N9c2Z-Rbro8N_aTsjMsx-YBJGscDUrcdfJZktHgxoUqBfEjdlLu7M';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				オイラーの流体運動方程式とは コトバンク
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://shadowacademy.web.fc2.com/fluid/fluid001.png" data-lightbox="roadtrip" data-title="流体力学の運動方程式">
+						<img class="card-img" src="https://shadowacademy.web.fc2.com/fluid/fluid001.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTIS-JaNfrYDhUl38OAjtj5kGMy4KoiSgfyYuzeyXy0sv5dc_UmglPndWq4XC5LuRZ9pk';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				流体力学の運動方程式
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://omm.ishikawa-nct.ac.jp/media/2015/02/03/142289475276285800.png" data-lightbox="roadtrip" data-title="例題 流体の動力学 6 オイラーの運動方程式とベルヌーイの定理 数学活用大事典">
+						<img class="card-img" src="http://omm.ishikawa-nct.ac.jp/media/2015/02/03/142289475276285800.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTn9zW5TkMkIpWQeDkknBm7HOwknbRUo3OljsJPbOiapZP4DSZbxpTzZDfq-QZt8i5ALI8';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				例題 流体の動力学 6 オイラーの運動方程式とベルヌーイの定理 数学活用大事典
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://userdisk.webry.biglobe.ne.jp/004/955/83/N000/000/003/140775723265277707228.jpg" data-lightbox="roadtrip" data-title="流体の運動方程式 オイラーの方程式 T Nakaの阿房ブログ">
+						<img class="card-img" src="https://userdisk.webry.biglobe.ne.jp/004/955/83/N000/000/003/140775723265277707228.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPL6F6B1sytLnGLIbiVkHqZTBrAuUHNOcm8w_UZzgaGl-453b-8CpzqDqcy78Ur9y1fhI';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				流体の運動方程式 オイラーの方程式 T Nakaの阿房ブログ
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="fyl6WPuLBQn68M" data-lightbox="roadtrip" data-title="Http Www Irs Japan Com P 1153">
+						<img class="card-img" src="fyl6WPuLBQn68M" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ49JK7HNo2Y5s3SODpVK3RYYkQO_JjZiMdrPgh9Tj8Zl9Bd04X7I4GrOi11cI7_0eTG6E';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Http Www Irs Japan Com P 1153
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://fnorio.com/0107fluid_dynamics_in_two_dimensions1/fig1-2-1-02.GIF" data-lightbox="roadtrip" data-title="二次元 非圧縮性 完全流体の力学 ラグランジュの渦定理とは何か">
+						<img class="card-img" src="http://fnorio.com/0107fluid_dynamics_in_two_dimensions1/fig1-2-1-02.GIF" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRa8UNSBEnll9MTvYwVkdT09ZpLtHiEbBA3Flr0-2kNVLmlNEdScTosWaxSrcZ0RjDIGw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				二次元 非圧縮性 完全流体の力学 ラグランジュの渦定理とは何か
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+				<div class='card'>	
+			<div class="d-block p-4">
+	</div>		  	
+		  	<h3 class="h6 p-2"><b></b></h3>
+					</div>
+		
+						
+	  <div class='card'>
+	  	<a href="http://fnorio.com/0107fluid_dynamics_in_two_dimensions1/fig1-1-2-02.GIF" data-lightbox="roadtrip" data-title="二次元 非圧縮性 完全流体の力学 ラグランジュの渦定理とは何か">
+						<img class="card-img" src="http://fnorio.com/0107fluid_dynamics_in_two_dimensions1/fig1-1-2-02.GIF" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTRf6bNChQ2C-eXHzarPCNhhY4rwxVIXLRP2PRmSvM1UDDDodY4RFAAhxL0zjGoxG7Eow';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				二次元 非圧縮性 完全流体の力学 ラグランジュの渦定理とは何か
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://takun-physics.net/wp-content/uploads/2019/03/5-1.png" data-lightbox="roadtrip" data-title="量子流体の オイラー方程式 を導出する 宇宙に入ったカマキリ">
+						<img class="card-img" src="https://takun-physics.net/wp-content/uploads/2019/03/5-1.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZTx_gsFuFu4UGmNoX9_R8EJeeHwHU_NB1XaxuLWDv6UmOrXKEqrQz7AfHr3b-VZo7fTg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				量子流体の オイラー方程式 を導出する 宇宙に入ったカマキリ
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://vis-tech.site/wp-content/uploads/2020/04/%E3%82%AA%E3%82%A4%E3%83%A9%E3%83%BC%E5%9F%BA%E7%A4%8E%E5%BC%8F-1-800x245.png" data-lightbox="roadtrip" data-title="流体 ゼロから分かる運動量保存の法則 オイラーの運動方程式 Vis Tech">
+						<img class="card-img" src="https://vis-tech.site/wp-content/uploads/2020/04/%E3%82%AA%E3%82%A4%E3%83%A9%E3%83%BC%E5%9F%BA%E7%A4%8E%E5%BC%8F-1-800x245.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsnCsX7FMQUbAmBAn1kWoaD7WXF7ohtUeqMZzLwfog2r-0snN2p3xqP3OmyHmPmkWarg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				流体 ゼロから分かる運動量保存の法則 オイラーの運動方程式 Vis Tech
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://takun-physics.net/wp-content/uploads/2019/03/4-1.png" data-lightbox="roadtrip" data-title="量子流体の オイラー方程式 を導出する 宇宙に入ったカマキリ">
+						<img class="card-img" src="https://takun-physics.net/wp-content/uploads/2019/03/4-1.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgaeYsR-5NBavzKhOly4jdHEZ4OHxK2z0xOHlKLJNnPNfFTSfKHRCpZk9t_Jmz6FOWee8';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				量子流体の オイラー方程式 を導出する 宇宙に入ったカマキリ
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://shadowacademy.web.fc2.com/fluid/fluid002.png" data-lightbox="roadtrip" data-title="流体力学の運動方程式">
+						<img class="card-img" src="https://shadowacademy.web.fc2.com/fluid/fluid002.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNSl68QT5U_jmkuAAN4uB3f4vg8PkBvkuiy6deS7bEE3ZotN7cWKV1R4koa9XaxfcTuA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				流体力学の運動方程式
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://ramenhuhu.com/wp-content/uploads/2020/01/%E3%82%AA%E3%82%A4%E3%83%A9%E3%83%BC%E3%81%AE%E9%81%8B%E5%8B%95%E6%96%B9%E7%A8%8B%E5%BC%8F1.png" data-lightbox="roadtrip" data-title="オイラーの運動方程式 直交座標 極座標 の導出">
+						<img class="card-img" src="https://ramenhuhu.com/wp-content/uploads/2020/01/%E3%82%AA%E3%82%A4%E3%83%A9%E3%83%BC%E3%81%AE%E9%81%8B%E5%8B%95%E6%96%B9%E7%A8%8B%E5%BC%8F1.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrzB64eM9KS-WD5v5jCD7G2FkFCUjuvcqsrlcaIkFQAC6HZvsQjbp-sDtPP9jPagxoDV4';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				オイラーの運動方程式 直交座標 極座標 の導出
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://takun-physics.net/wp-content/uploads/2018/08/9-2.png" data-lightbox="roadtrip" data-title="1次元のオイラーの運動方程式 宇宙に入ったカマキリ">
+						<img class="card-img" src="https://takun-physics.net/wp-content/uploads/2018/08/9-2.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJkttB7WCvwpu-kE1JB6B_SCru21a7hoozdjc_O6XUGjK9up9RhL1HB37v01Dg52C7AyQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				1次元のオイラーの運動方程式 宇宙に入ったカマキリ
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://fnorio.com/0107fluid_dynamics_in_two_dimensions1/fig3-3-2-02.GIF" data-lightbox="roadtrip" data-title="二次元 非圧縮性 完全流体の力学 ラグランジュの渦定理とは何か">
+						<img class="card-img" src="http://fnorio.com/0107fluid_dynamics_in_two_dimensions1/fig3-3-2-02.GIF" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQN9wA9CMr5OlZYmFmQoKLs-cYiwCbP9kIJ_wfOZ6KbosBbk3TCSNfK-PKQappqCuhXK4o';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				二次元 非圧縮性 完全流体の力学 ラグランジュの渦定理とは何か
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://jsciencer.com/wp-content/uploads/2014/07/bisyou.png" data-lightbox="roadtrip" data-title="オイラーの運動方程式 Jsciencer">
+						<img class="card-img" src="https://jsciencer.com/wp-content/uploads/2014/07/bisyou.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2FZYtyipbn0H637X7QR76qiE3WNWjLoEQ-fXjanzheOu0x3c8dF5xaI_PduoIAiAZIpo';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				オイラーの運動方程式 Jsciencer
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://ramenhuhu.com/wp-content/uploads/2020/04/fluid-viscousfluid-375x211.png" data-lightbox="roadtrip" data-title="オイラーの運動方程式 直交座標 極座標 の導出">
+						<img class="card-img" src="https://ramenhuhu.com/wp-content/uploads/2020/04/fluid-viscousfluid-375x211.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTch2b4RmvYzTR4qdMNd7UCWgRRFYlADK8UJlP7tOqIOJtgqD_l6S0C01EmId0AUc9srnQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				オイラーの運動方程式 直交座標 極座標 の導出
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://assets.st-note.com/production/uploads/images/12477650/picture_pc_40d621d7e1b85a1bba612b9b0984a270.jpg" data-lightbox="roadtrip" data-title="流体力学5 運動方程式 Navier Stokes方程式 ナビエストークス方程式 Euler方程式 オイラー方程式 角運動量方程式 エネルギー方程式 Bernoulli定理 ベルヌーイの定理 Pitot 竜川仁 Note">
+						<img class="card-img" src="https://assets.st-note.com/production/uploads/images/12477650/picture_pc_40d621d7e1b85a1bba612b9b0984a270.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToXTC9xhzPpYUZpuJExfIGK7iN_fo16kQ1h7Gv78D0hS26dCk0ygGcoiw9GZIaCzJi6P8';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				流体力学5 運動方程式 Navier Stokes方程式 ナビエストークス方程式 Euler方程式 オイラー方程式 角運動量方程式 エネルギー方程式 Bernoulli定理 ベルヌーイの定理 Pitot 竜川仁 Note
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://i.ytimg.com/vi/zRYq9J_hTTo/maxresdefault.jpg" data-lightbox="roadtrip" data-title="流体力学第16回 オイラーの運動方程式 機械工学科 Youtube">
+						<img class="card-img" src="https://i.ytimg.com/vi/zRYq9J_hTTo/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhVwgeWxRKVlN5RuFVjG25-9IBm6SpDuk_LwfJbyLUxp-tX0w58Ll_fA6_V0vw9sFiUz0';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				流体力学第16回 オイラーの運動方程式 機械工学科 Youtube
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pbs.twimg.com/media/EQe_4IdU8AA9rwd.jpg" data-lightbox="roadtrip" data-title="ナビエストークス方程式 Hashtag On Twitter">
+						<img class="card-img" src="https://pbs.twimg.com/media/EQe_4IdU8AA9rwd.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEK0MrBF0LhkrlgzFUllQrklGebpeXboi9k_EJ-GHev7Egg-6GZ1S181RU41FiSwsUnck';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				ナビエストークス方程式 Hashtag On Twitter
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://takun-physics.net/wp-content/uploads/2018/04/5-1.png" data-lightbox="roadtrip" data-title="非圧縮性流体の基礎方程式 宇宙に入ったカマキリ">
+						<img class="card-img" src="https://takun-physics.net/wp-content/uploads/2018/04/5-1.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0LJVXxOpN22fInLWz5NygCJoBJN4Cz_GXi2klK7neZsftTD-rc69RmCUz6zxGMYgGG9Q';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				非圧縮性流体の基礎方程式 宇宙に入ったカマキリ
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://ramenhuhu.com/wp-content/uploads/2020/01/%E3%82%AA%E3%82%A4%E3%83%A9%E3%83%BC%E3%81%AE%E9%81%8B%E5%8B%95%E6%96%B9%E7%A8%8B%E5%BC%8F2.png" data-lightbox="roadtrip" data-title="オイラーの運動方程式 直交座標 極座標 の導出">
+						<img class="card-img" src="https://ramenhuhu.com/wp-content/uploads/2020/01/%E3%82%AA%E3%82%A4%E3%83%A9%E3%83%BC%E3%81%AE%E9%81%8B%E5%8B%95%E6%96%B9%E7%A8%8B%E5%BC%8F2.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTied4T1K5lcOj3IrRILpoOCMoxP_uAIBTmKQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				オイラーの運動方程式 直交座標 極座標 の導出
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://vis-tech.site/wp-content/uploads/2020/04/%E3%82%A2%E3%82%A4%E3%82%AD%E3%83%A3%E3%83%83%E3%83%81_%E9%81%8B%E5%8B%95%E9%87%8F%E4%BF%9D%E5%AD%98.png" data-lightbox="roadtrip" data-title="流体 ゼロから分かる運動量保存の法則 オイラーの運動方程式 Vis Tech">
+						<img class="card-img" src="https://vis-tech.site/wp-content/uploads/2020/04/%E3%82%A2%E3%82%A4%E3%82%AD%E3%83%A3%E3%83%83%E3%83%81_%E9%81%8B%E5%8B%95%E9%87%8F%E4%BF%9D%E5%AD%98.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPR3gwoIzIiamRybrsRSdeEdDShEx3OvszHQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				流体 ゼロから分かる運動量保存の法則 オイラーの運動方程式 Vis Tech
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://gijyutsu-keisan.com/science/physics/fluid/img/config_2_1_1.png" data-lightbox="roadtrip" data-title="技術計算製作所 機械設計に必要な情報とwebアプリ ソフトウエアを公開しています Science Physics Fluid">
+						<img class="card-img" src="https://gijyutsu-keisan.com/science/physics/fluid/img/config_2_1_1.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrsraRjVhuX1mggHqCVCjGrETL0ZTdNFcjxw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				技術計算製作所 機械設計に必要な情報とwebアプリ ソフトウエアを公開しています Science Physics Fluid
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://storage.googleapis.com/ttrinity/_img/product/17/17686/1470120/design_img_f_1470120_s.png" data-lightbox="roadtrip" data-title="数式tシャツ オイラーの方程式 流体力学 デザインtシャツ通販 Tシャツトリニティ">
+						<img class="card-img" src="https://storage.googleapis.com/ttrinity/_img/product/17/17686/1470120/design_img_f_1470120_s.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeUniabIG7yp7O2qpPwuUe_8sRxcpHrw7GHg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				数式tシャツ オイラーの方程式 流体力学 デザインtシャツ通販 Tシャツトリニティ
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="/search?q=%E3%82%AA%E3%82%A4%E3%83%A9%E3%83%BC%E3%81%AE%E9%81%8B%E5%8B%95%E6%96%B9%E7%A8%8B%E5%BC%8F+%E6%B5%81%E4%BD%93&amp;tbm=isch" data-lightbox="roadtrip" data-title="Https Encrypted Tbn0 Gstatic Com Images Q Tbn And9gcse2xtvpouils4uiuu1tl9nhmnhnfo5sf3q8pkzgkax2p1lebeu Usqp Cau">
+						<img class="card-img" src="/search?q=%E3%82%AA%E3%82%A4%E3%83%A9%E3%83%BC%E3%81%AE%E9%81%8B%E5%8B%95%E6%96%B9%E7%A8%8B%E5%BC%8F+%E6%B5%81%E4%BD%93&amp;tbm=isch" onerror="this.onerror=null;this.src='/search?q=%E3%82%AA%E3%82%A4%E3%83%A9%E3%83%BC%E3%81%AE%E9%81%8B%E5%8B%95%E6%96%B9%E7%A8%8B%E5%BC%8F+%E6%B5%81%E4%BD%93&amp;tbm=isch';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Https Encrypted Tbn0 Gstatic Com Images Q Tbn And9gcse2xtvpouils4uiuu1tl9nhmnhnfo5sf3q8pkzgkax2p1lebeu Usqp Cau
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://fnorio.com/0107fluid_dynamics_in_two_dimensions1/fig1-2-1-01.GIF" data-lightbox="roadtrip" data-title="二次元 非圧縮性 完全流体の力学 ラグランジュの渦定理とは何か">
+						<img class="card-img" src="http://fnorio.com/0107fluid_dynamics_in_two_dimensions1/fig1-2-1-01.GIF" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQHxTFwByMJSs6NEdnU6Q4VWS5aVeId9Keuw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				二次元 非圧縮性 完全流体の力学 ラグランジュの渦定理とは何か
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://ramenhuhu.com/wp-content/uploads/2020/01/%E3%82%AA%E3%82%A4%E3%83%A9%E3%83%BC%E3%81%AE%E9%81%8B%E5%8B%95%E6%96%B9%E7%A8%8B%E5%BC%8F3.png" data-lightbox="roadtrip" data-title="オイラーの運動方程式 直交座標 極座標 の導出">
+						<img class="card-img" src="https://ramenhuhu.com/wp-content/uploads/2020/01/%E3%82%AA%E3%82%A4%E3%83%A9%E3%83%BC%E3%81%AE%E9%81%8B%E5%8B%95%E6%96%B9%E7%A8%8B%E5%BC%8F3.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjHGbzfujV8z3IMSHRNmbT0BSONGdE8hvNVg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				オイラーの運動方程式 直交座標 極座標 の導出
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://slidesplayer.net/slide/11230324/60/images/16/%E6%B5%81%E4%BD%93%E3%81%AE%E9%81%8B%E5%8B%95%E6%96%B9%E7%A8%8B%E5%BC%8F+%E6%B5%81%E4%BD%93%E3%81%AF%E3%80%813%E6%AC%A1%E5%85%83%E7%A9%BA%E9%96%93%E3%81%AB%E5%AD%98%E5%9C%A8%E3%81%99%E3%82%8B%E3%81%AE%E3%81%A7%E3%80%81%E7%A7%BB%E6%B5%81%E9%A0%85%E3%81%AFy%E6%96%B9%E5%90%91%E3%80%81z%E6%96%B9%E5%90%91%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E3%82%82x%E6%96%B9%E5%90%91%E3%81%A8%E5%90%8C%E6%A7%98%E3%81%AE%E5%BD%A2%E5%BC%8F%E3%81%A7%E3%81%82%E3%82%89%E3%82%8F%E3%81%95%E3%82%8C%E3%82%8B%E3%80%82.jpg" data-lightbox="roadtrip" data-title="海洋流体力学 地球流体力学 担当 島田 予習復習用教材置き場 Ppt Download">
+						<img class="card-img" src="https://slidesplayer.net/slide/11230324/60/images/16/%E6%B5%81%E4%BD%93%E3%81%AE%E9%81%8B%E5%8B%95%E6%96%B9%E7%A8%8B%E5%BC%8F+%E6%B5%81%E4%BD%93%E3%81%AF%E3%80%813%E6%AC%A1%E5%85%83%E7%A9%BA%E9%96%93%E3%81%AB%E5%AD%98%E5%9C%A8%E3%81%99%E3%82%8B%E3%81%AE%E3%81%A7%E3%80%81%E7%A7%BB%E6%B5%81%E9%A0%85%E3%81%AFy%E6%96%B9%E5%90%91%E3%80%81z%E6%96%B9%E5%90%91%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E3%82%82x%E6%96%B9%E5%90%91%E3%81%A8%E5%90%8C%E6%A7%98%E3%81%AE%E5%BD%A2%E5%BC%8F%E3%81%A7%E3%81%82%E3%82%89%E3%82%8F%E3%81%95%E3%82%8C%E3%82%8B%E3%80%82.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnWFXIO9ZFGvWcpvFZdGtnQ7YzghI5cGeMCQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				海洋流体力学 地球流体力学 担当 島田 予習復習用教材置き場 Ppt Download
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://assets.st-note.com/production/uploads/images/29618448/picture_pc_2de93c0cdf1a1384b22f7d2fd98e8ee8.png" data-lightbox="roadtrip" data-title="流体力学ミニマル 前編 流体力学の考え方 ラグランジュの方法 オイラーの方法 Kt 物理 化学 Note">
+						<img class="card-img" src="https://assets.st-note.com/production/uploads/images/29618448/picture_pc_2de93c0cdf1a1384b22f7d2fd98e8ee8.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbKzKonUxJsM_XexXgKZsJ5Iq_c6DYmSpBDw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				流体力学ミニマル 前編 流体力学の考え方 ラグランジュの方法 オイラーの方法 Kt 物理 化学 Note
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://storage.googleapis.com/ttrinity/_img/product/17/17686/1470120/1631101/3932114/product_img_f_3932114.jpg" data-lightbox="roadtrip" data-title="数式tシャツ オイラーの方程式 流体力学 デザインtシャツ通販 Tシャツトリニティ">
+						<img class="card-img" src="https://storage.googleapis.com/ttrinity/_img/product/17/17686/1470120/1631101/3932114/product_img_f_3932114.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQ7RkD380T9YNA3DHPCpMdH2vX7SRoG2hemg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				数式tシャツ オイラーの方程式 流体力学 デザインtシャツ通販 Tシャツトリニティ
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://fnorio.com/0107fluid_dynamics_in_two_dimensions1/fig3-3-2-04.GIF" data-lightbox="roadtrip" data-title="二次元 非圧縮性 完全流体の力学 ラグランジュの渦定理とは何か">
+						<img class="card-img" src="http://fnorio.com/0107fluid_dynamics_in_two_dimensions1/fig3-3-2-04.GIF" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyvNnemzUNVm3UCWbQBMi-Z7qQE8Fw19Zkow';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				二次元 非圧縮性 完全流体の力学 ラグランジュの渦定理とは何か
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://i.pinimg.com/originals/8e/30/4e/8e304e664e3d5c49ce2e684207c8d203.png" data-lightbox="roadtrip" data-title="流体 ゼロから分かる運動量保存の法則 オイラーの運動方程式 流体力学 オイラー 流体">
+						<img class="card-img" src="https://i.pinimg.com/originals/8e/30/4e/8e304e664e3d5c49ce2e684207c8d203.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlSN8buqlddGK689EiMkSLGkpuAWXANj2xmA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				流体 ゼロから分かる運動量保存の法則 オイラーの運動方程式 流体力学 オイラー 流体
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://i.ytimg.com/vi/MZg0ikSqcvA/hqdefault.jpg" data-lightbox="roadtrip" data-title="大学物理 ナビエストークス方程式 数学的 物理的意味 全4回 流体力学 Youtube">
+						<img class="card-img" src="https://i.ytimg.com/vi/MZg0ikSqcvA/hqdefault.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLRkZRfqdZ6LV7Zb52bWXuTP9TsUl9or09Iw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				大学物理 ナビエストークス方程式 数学的 物理的意味 全4回 流体力学 Youtube
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+		
+	</div>
+
+		 
+		
+		
+				</div>
+				<div class="col-sm-12 widget">
+					<div class="d-block p-4">
+	<center>
+		<!-- BOTTOM BANNER ADS -->
+<script async="async" data-cfasync="false" src="//jc32arlvqpv8.com/eb47a424ae325c90cca32780149785c3/invoke.js"></script>
+<div id="container-eb47a424ae325c90cca32780149785c3"></div>
+
+	</center>
+</div>				</div>
+			</div>
+			<div class="row footer">
+				<div class="col-md-12 text-center py-4">
+										<a href="/p/dmca.html">Dmca</a>
+										<a href="/p/contact.html">Contact</a>
+										<a href="/p/privacy-policy.html">Privacy Policy</a>
+										<a href="/p/copyright.html">Copyright</a>
+					
+				</div>
+			</div>
+		</main>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js" integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js" integrity="sha256-CtKylYan+AJuoH8jrMht1+1PMhMqrKnB8K5g012WN5I=" crossorigin="anonymous"></script>
+		
+		<!-- Footer CSS JS -->
+		
+		
+		
+			<script type='text/javascript' src='//jc32arlvqpv8.com/ef/d5/10/efd510237a3143727bed46803ec35b8d.js'></script>
+</body>
+</html>

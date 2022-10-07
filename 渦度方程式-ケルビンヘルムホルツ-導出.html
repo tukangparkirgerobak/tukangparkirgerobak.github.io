@@ -1,0 +1,682 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha256-L/W5Wfqfa0sdBNIKN9cG6QA5F2qx4qICmU2VgLruv9Y=" crossorigin="anonymous" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/css/lightbox.min.css" integrity="sha256-tBxlolRHP9uMsEFKVk+hk//ekOlXOixLKvye5W2WR5c=" crossorigin="anonymous" />
+		<link href="https://fonts.googleapis.com/css?family=Mr+Dafoe" rel="stylesheet" type="text/css">
+
+		<style type="text/css">
+			html,body{font-family:"Open Sans",Arial,sans-serif;font-size:14px;font-weight:400;background:#f3f3f3 url(https://takun-physics.net/wp-content/uploads/2019/02/3-9.png
+) no-repeat center center fixed;background-size:cover;height:100%}#title{font-family:"Mr Dafoe",Times,serif;font-size:34px;background:rgba(255,255,255,.8);margin-bottom:34px}.header{padding-bottom:13px;margin-bottom:13px;border-bottom:1px solid #eee}a{color:#26ADE4;text-decoration:none}#title a{color:#333;margin-left:21px}#title a:hover{text-decoration:none;color:#26ADE4}.sidebar ul{margin:0;padding:0}.sidebar ul li{list-style:none}.footer{margin-top:21px;padding-top:13px;border-top:1px solid #eee}.footer a{margin:0 15px}.navi{margin:13px 0 13px 0;padding:13px}.navi a{margin:5px 2px;font-size:95%}.main{margin-top: 6rem;}.form-inline .form-control{min-width: 300px;}.v-cover{height: 380px; object-fit: cover;}.v-image{height: 200px; object-fit: cover;}.dwn-cover{max-height: 460px; object-fit: cover;}.main{margin-top: 6rem;}.form-inline .form-control{min-width: 300px;}			
+		</style>
+
+		<title>渦度方程式 ケルビンヘルムホルツ 導出</title>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/", 
+  "@type": "Article", 
+  "author": {
+    "@type": "Person",
+    "name": "James"
+  },
+  "headline": "渦度方程式 ケルビンヘルムホルツ 導出",
+  "datePublished": "2021-04-24",
+  "image": [https://takun-physics.net/wp-content/uploads/2018/12/10.png,http://fnorio.com/0107fluid_dynamics_in_two_dimensions1/fig3-3-1-01.GIF,http://fnorio.com/0107fluid_dynamics_in_two_dimensions1/fig3-3-2-04.GIF],
+  "publisher": {
+    "@type": "Organization",
+    "name": "Tukang Parkir Gerobak",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://via.placeholder.com/512.png?text=渦度方程式 ケルビンヘルムホルツ 導出",
+      "width": 512,
+      "height": 512
+    }
+  }
+}
+</script>
+		<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-957NGNKQ70"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-957NGNKQ70');
+</script>
+
+<script type='text/javascript' src='//jc32arlvqpv8.com/1a/82/2e/1a822ef8a40a0fbab3c4ea12a5d2bb02.js'></script>
+</head>
+	<body>
+		<header class="bg-white fixed-top">			
+			<nav class="navbar navbar-light bg-white mb-0">
+				<div class="container justify-content-center justify-content-sm-between">	
+				  <a href="/" title="Blog" class="navbar-brand mb-1">Blog</a>
+				  				</div>			  
+			</nav>				
+		</header>
+		<main class="main container bg-white">
+			<div class="col-md-12 my-4" align="center">
+				<div class="d-block p-4">
+	<br/><center>
+<!-- TOP BANNER ADS -->
+</center><br/>
+</div>			</div>
+			<div class="row header">
+				<div class="col-sm-12 text-center p-2">
+						<h1>渦度方程式 ケルビンヘルムホルツ 導出</h1>
+
+	
+	<div class="navi text-center">
+										<a class="badge badge-secondary" href="/%E8%B6%85-%E8%B6%85%E3%83%96%E3%83%AD%E3%83%AA%E3%83%BC-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93-%E7%94%9F%E3%81%8D%E8%BF%94%E3%82%89%E3%81%9B%E3%81%9F%E3%81%84.html">超 超ブロリー お父さん 生き返らせたい</a>
+											<a class="badge badge-danger" href="/%E7%BE%A9%E7%90%86%E3%81%AE%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93-%E3%81%8A%E7%BE%A9%E6%AF%8D%E3%81%95%E3%82%93%E3%81%B8%E3%81%AE%E3%83%A1%E3%83%83%E3%82%BB%E3%83%BC%E3%82%B8-%E7%B5%90%E5%A9%9A%E5%BC%8F.html">義理のお父さん お義母さんへのメッセージ 結婚式</a>
+											<a class="badge badge-dark" href="/%E6%B3%95%E7%B7%9A%E3%81%AE%E6%96%B9%E7%A8%8B%E5%BC%8F-2%E5%A4%89%E6%95%B0.html">法線の方程式 2変数</a>
+											<a class="badge badge-dark" href="/%E8%A7%A3%E3%81%AE%E7%A9%8D-%E6%96%B9%E7%A8%8B%E5%BC%8F.html">解の積 方程式</a>
+											<a class="badge badge-info" href="/%E9%81%95%E3%81%86-%E8%87%AA%E5%88%86-%E3%81%AB-%E3%81%AA%E3%82%8C-%E3%82%A6%E3%83%AB%E3%83%88%E3%83%A9-%E3%83%9E%E3%83%A9%E3%82%BD%E3%83%B3-%E3%81%AE-%E6%96%B9%E7%A8%8B%E5%BC%8F.html">違う 自分 に なれ ウルトラ マラソン の 方程式</a>
+											<a class="badge badge-danger" href="/%E7%86%9F%E5%A5%B3%E8%A3%85%E5%A8%98%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93.html">熟女装娘お父さん</a>
+											<a class="badge badge-danger" href="/%E8%A6%AA-%E7%84%A1%E8%A8%80-%E7%9B%B8%E5%A7%A6-%E9%9A%A3%E3%81%AB%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%8C%E3%81%84%E3%82%8B%E3%81%AE%E3%82%88-%E7%9C%9F%E6%9C%A8%E4%BB%8A%E6%97%A5%E5%AD%90.html">親 無言 相姦 隣にお父さんがいるのよ 真木今日子</a>
+											<a class="badge badge-primary" href="/%E8%BE%B2%E5%AE%B6%E3%81%AE%E5%A8%98-%E5%86%AC%E3%81%AF%E5%A4%A7%E6%A0%B9%E3%81%A8%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%A8%E5%AD%90%E4%BD%9C%E3%82%8A%E3%81%AE%E5%AD%A3%E7%AF%80av.html">農家の娘 冬は大根とお父さんと子作りの季節av</a>
+											<a class="badge badge-dark" href="/%E8%A4%87%E9%9B%91%E3%81%AA%E5%BA%A7%E6%A8%99%E3%81%AE%E6%96%B9%E7%A8%8B%E5%BC%8F.html">複雑な座標の方程式</a>
+											<a class="badge badge-danger" href="/%E6%A3%92%E6%9D%90%E3%81%AE%E6%94%AF%E9%85%8D%E6%96%B9%E7%A8%8B%E5%BC%8F.html">棒材の支配方程式</a>
+											<a class="badge badge-light" href="/%E9%9B%BB%E9%A8%933%E7%A8%AE-2%E6%AC%A1%E6%96%B9%E7%A8%8B%E5%BC%8F%E8%A7%A3%E3%81%AE%E5%85%AC%E5%BC%8F%E4%BD%BF%E7%94%A8%E3%81%97%E3%81%AA%E3%81%84.html">電験3種 2次方程式解の公式使用しない</a>
+											<a class="badge badge-success" href="/%E7%99%BA%E5%B1%95-%E6%96%B9%E7%A8%8B%E5%BC%8F-%E8%8B%A5%E6%89%8B-%E3%82%BB%E3%83%9F%E3%83%8A%E3%83%BC-%E5%A0%B1%E5%91%8A-%E9%9B%86.html">発展 方程式 若手 セミナー 報告 集</a>
+											<a class="badge badge-danger" href="/%E7%86%B1%E8%BC%B8%E9%80%81%E6%96%B9%E7%A8%8B%E5%BC%8F-%E9%9D%99%E6%AD%A2%E6%B5%81%E4%BD%93.html">熱輸送方程式 静止流体</a>
+											<a class="badge badge-dark" href="/%E9%9D%9E-%E6%96%89-%E6%AC%A1-%E6%96%B9%E7%A8%8B%E5%BC%8F-%E5%88%9D%E6%9C%9F-%E5%80%A4-%E5%95%8F%E9%A1%8C.html">非 斉 次 方程式 初期 値 問題</a>
+											<a class="badge badge-primary" href="/%E7%B5%B6%E5%AF%BE%E5%80%A4-%E3%82%92%E5%90%AB%E3%82%80%E6%96%B9%E7%A8%8B%E5%BC%8F.html">絶対値 を含む方程式</a>
+						</div>
+<center>
+	<!-- MIDDLE BANNER ADS -->
+<script type="text/javascript">
+	atOptions = {
+		'key' : '2b77887421e2587a1a1b1d7c8a31a9e0',
+		'format' : 'iframe',
+		'height' : 250,
+		'width' : 300,
+		'params' : {}
+	};
+	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://jc32arlvqpv8.com/2b77887421e2587a1a1b1d7c8a31a9e0/invoke.js"></scr' + 'ipt>');
+</script>
+		
+	</center>
+					
+				</div>
+			</div>
+			<div class="row content mb-4">
+				<div class="col-md-12">					
+					
+	
+	<div class="card-columns">
+						
+	  <div class='card'>
+	  	<a href="https://takun-physics.net/wp-content/uploads/2019/02/10-2.png" data-lightbox="roadtrip" data-title="流体力学 ケルビンの循環定理 渦ができる要因を理解する 宇宙に入ったカマキリ">
+						<img class="card-img" src="https://takun-physics.net/wp-content/uploads/2019/02/10-2.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTiRdGMnR5zenquk0XkJO5GmA4wIhzGBfIRVhSR80gEPUJfBnC6uFGMwIrOqDBZRP7ut4';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				流体力学 ケルビンの循環定理 渦ができる要因を理解する 宇宙に入ったカマキリ
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://takun-physics.net/wp-content/uploads/2019/02/4-7.png" data-lightbox="roadtrip" data-title="流体力学 ヘルムホルツの渦定理 渦ができる要因を理解する 宇宙に入ったカマキリ">
+						<img class="card-img" src="https://takun-physics.net/wp-content/uploads/2019/02/4-7.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9RWqTKg4PqJYoWVnBWfyL6tGPuXZS7Mi2_CHJu6A1RoCmKwF1CqK3C57RHjez7dGs5FE';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				流体力学 ヘルムホルツの渦定理 渦ができる要因を理解する 宇宙に入ったカマキリ
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://takun-physics.net/wp-content/uploads/2019/02/10-3.png" data-lightbox="roadtrip" data-title="流体力学 ヘルムホルツの渦定理 渦ができる要因を理解する 宇宙に入ったカマキリ">
+						<img class="card-img" src="https://takun-physics.net/wp-content/uploads/2019/02/10-3.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeNfuIY3yWWf059-x_s7VBSxY-_Tih0aVWcmgBT-Ln7xQY6_4McwLaaCALFAqG19XHWnI';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				流体力学 ヘルムホルツの渦定理 渦ができる要因を理解する 宇宙に入ったカマキリ
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://takun-physics.net/wp-content/uploads/2019/02/4-5.png" data-lightbox="roadtrip" data-title="流体力学 ケルビンの循環定理 渦ができる要因を理解する 宇宙に入ったカマキリ">
+						<img class="card-img" src="https://takun-physics.net/wp-content/uploads/2019/02/4-5.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSttREZnDwwZY92uwhQ5d1wN4BYS4vJAogquK9O5fQbGNpjGlIk6aHcQr7iSTJskp9DH58';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				流体力学 ケルビンの循環定理 渦ができる要因を理解する 宇宙に入ったカマキリ
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://takun-physics.net/wp-content/uploads/2019/02/4-4.png" data-lightbox="roadtrip" data-title="流体力学 ケルビンの循環定理 渦ができる要因を理解する 宇宙に入ったカマキリ">
+						<img class="card-img" src="https://takun-physics.net/wp-content/uploads/2019/02/4-4.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTisdR9mGWtSbcALSKx7XozwBqzE4UfFf0iQSC3H2nFjnPr3_2aIsDKhwXlII77oSlG18';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				流体力学 ケルビンの循環定理 渦ができる要因を理解する 宇宙に入ったカマキリ
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://takun-physics.net/wp-content/uploads/2019/02/1-5.png" data-lightbox="roadtrip" data-title="流体力学 ケルビンの循環定理 渦ができる要因を理解する 宇宙に入ったカマキリ">
+						<img class="card-img" src="https://takun-physics.net/wp-content/uploads/2019/02/1-5.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSG1U54V8pQkrrEYlYUAPoxppdceBozlBq_N_X-dY0-TpQycfs7eHFyrzHiom4i0aob2UA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				流体力学 ケルビンの循環定理 渦ができる要因を理解する 宇宙に入ったカマキリ
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+				<div class='card'>	
+			<div class="d-block p-4">
+	</div>		  	
+		  	<h3 class="h6 p-2"><b></b></h3>
+					</div>
+		
+						
+	  <div class='card'>
+	  	<a href="https://takun-physics.net/wp-content/uploads/2019/02/3-9.png" data-lightbox="roadtrip" data-title="流体力学 ヘルムホルツの渦定理 渦ができる要因を理解する 宇宙に入ったカマキリ">
+						<img class="card-img" src="https://takun-physics.net/wp-content/uploads/2019/02/3-9.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhTdx8S6J1kCXFz3XB_QcKqPwZgIZsDPd23BMzA_rIpx9Wb2sPISyhxU1yQPXrgx-iRJ8';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				流体力学 ヘルムホルツの渦定理 渦ができる要因を理解する 宇宙に入ったカマキリ
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://takun-physics.net/wp-content/uploads/2019/02/7-1.png" data-lightbox="roadtrip" data-title="流体力学 ケルビンの循環定理 渦ができる要因を理解する 宇宙に入ったカマキリ">
+						<img class="card-img" src="https://takun-physics.net/wp-content/uploads/2019/02/7-1.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIa4sMdPgRZHYQIKCckQ9v5784zqpte2vowPLvUj2XNdMpNeOA_PKs2-I2tpcsUoGKk2M';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				流体力学 ケルビンの循環定理 渦ができる要因を理解する 宇宙に入ったカマキリ
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://takun-physics.net/wp-content/uploads/2019/02/5-4.png" data-lightbox="roadtrip" data-title="流体力学 ケルビンの循環定理 渦ができる要因を理解する 宇宙に入ったカマキリ">
+						<img class="card-img" src="https://takun-physics.net/wp-content/uploads/2019/02/5-4.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuZUz__skE-qRX6rROV2ECu-Kk72Lc31oRfxjxOGnu84D-NLokbd_aIrN69NEGK8-8jGM';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				流体力学 ケルビンの循環定理 渦ができる要因を理解する 宇宙に入ったカマキリ
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://fnorio.com/0143Rossby_wave/fig1-2-2-02.GIF" data-lightbox="roadtrip" data-title="慣性重力波 1926年 とロスビー波 1939年 そして赤道波 1966年">
+						<img class="card-img" src="http://fnorio.com/0143Rossby_wave/fig1-2-2-02.GIF" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNpGyI_fApqSoT_Ddi0-68q86s1SYNff7Xz02DTvPjlaY-DsvhPh_0i3DTKnk50fTI_0w';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				慣性重力波 1926年 とロスビー波 1939年 そして赤道波 1966年
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://takun-physics.net/wp-content/uploads/2019/02/3-7.png" data-lightbox="roadtrip" data-title="流体力学 ケルビンの循環定理 渦ができる要因を理解する 宇宙に入ったカマキリ">
+						<img class="card-img" src="https://takun-physics.net/wp-content/uploads/2019/02/3-7.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBXu3Ozwnp3m1l3BIeZxoJKObReBkgsNmvDdH2y0-xAg1QaByu11xS_rGU41fVIsRa-b8';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				流体力学 ケルビンの循環定理 渦ができる要因を理解する 宇宙に入ったカマキリ
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://cdn-ak.f.st-hatena.com/images/fotolife/m/meteorolo/20181124/20181124210020.png" data-lightbox="roadtrip" data-title="大規模な大気の運動 大気の大循環 気象ゼミごっこ">
+						<img class="card-img" src="https://cdn-ak.f.st-hatena.com/images/fotolife/m/meteorolo/20181124/20181124210020.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR70S7bxD1e2i0prklfYQKlb5Eb_3UIRB8HOxhYYm8TpdrTEhTnphG1vY8f3M4mGWwLwqc';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				大規模な大気の運動 大気の大循環 気象ゼミごっこ
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://takun-physics.net/wp-content/uploads/2019/02/0-1.png" data-lightbox="roadtrip" data-title="流体力学 ヘルムホルツの渦定理 渦ができる要因を理解する 宇宙に入ったカマキリ">
+						<img class="card-img" src="https://takun-physics.net/wp-content/uploads/2019/02/0-1.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2LQqRrMWqGQ0f9gviQGvtXa5Tu3XqVPjw3t74n7YIa3fSNsArut2Rx18eHebWySxfvfg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				流体力学 ヘルムホルツの渦定理 渦ができる要因を理解する 宇宙に入ったカマキリ
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://fnorio.com/0107fluid_dynamics_in_two_dimensions1/fig3-3-1-01.GIF" data-lightbox="roadtrip" data-title="二次元 非圧縮性 完全流体の力学 ラグランジュの渦定理とは何か">
+						<img class="card-img" src="http://fnorio.com/0107fluid_dynamics_in_two_dimensions1/fig3-3-1-01.GIF" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwyHibTJx8V__Mrv0--K-mz_N2V4HvCp3VmFqUe0F1jGrvdQkKHxM0Ycb16K_pA6UDGO4';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				二次元 非圧縮性 完全流体の力学 ラグランジュの渦定理とは何か
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://fnorio.com/0107fluid_dynamics_in_two_dimensions1/fig3-3-2-04.GIF" data-lightbox="roadtrip" data-title="二次元 非圧縮性 完全流体の力学 ラグランジュの渦定理とは何か">
+						<img class="card-img" src="http://fnorio.com/0107fluid_dynamics_in_two_dimensions1/fig3-3-2-04.GIF" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-svLsp83XgMwGYMHW8C-aXG54cjrMW6O3GYcYZEBZhI3MxI2pcxjb8jXSrPuqN1-rLlA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				二次元 非圧縮性 完全流体の力学 ラグランジュの渦定理とは何か
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://fnorio.com/0143Rossby_wave/fig1-1-1-01.GIF" data-lightbox="roadtrip" data-title="慣性重力波 1926年 とロスビー波 1939年 そして赤道波 1966年">
+						<img class="card-img" src="http://fnorio.com/0143Rossby_wave/fig1-1-1-01.GIF" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMtU33zX_hDYMaduwC5feKDXVY-9dLBY_SwdnxscBYlvD93WCo0mza6rrw-6nCNVYzxFw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				慣性重力波 1926年 とロスビー波 1939年 そして赤道波 1966年
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://fnorio.com/0107fluid_dynamics_in_two_dimensions1/fig1-2-1-02.GIF" data-lightbox="roadtrip" data-title="二次元 非圧縮性 完全流体の力学 ラグランジュの渦定理とは何か">
+						<img class="card-img" src="http://fnorio.com/0107fluid_dynamics_in_two_dimensions1/fig1-2-1-02.GIF" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRa8UNSBEnll9MTvYwVkdT09ZpLtHiEbBA3Flr0-2kNVLmlNEdScTosWaxSrcZ0RjDIGw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				二次元 非圧縮性 完全流体の力学 ラグランジュの渦定理とは何か
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://takun-physics.net/wp-content/uploads/2018/06/1-12.png" data-lightbox="roadtrip" data-title="流体解析 Openfoamを使ったケルビンヘルムホルツ不安定性の解析計算 宇宙に入ったカマキリ">
+						<img class="card-img" src="https://takun-physics.net/wp-content/uploads/2018/06/1-12.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQC2Jt80_k8DcrHKw84qC3HDYl1uSJkfQh0F0IwpKpURqcIG9kOdCJxcuM2-ewLowHseg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				流体解析 Openfoamを使ったケルビンヘルムホルツ不安定性の解析計算 宇宙に入ったカマキリ
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://gijyutsu-keisan.com/science/physics/fluid/img/config_4_1_1_1.png" data-lightbox="roadtrip" data-title="技術計算製作所 機械設計に必要な情報とwebアプリ ソフトウエアを公開しています Science Physics Fluid">
+						<img class="card-img" src="https://gijyutsu-keisan.com/science/physics/fluid/img/config_4_1_1_1.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3PvAViv2Z7XVqOVQ0D_Mbp8Ma1WD8bwj94UN_tlSYE0PgDTSVxdQ5blGDDEeYBkmbRSM';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				技術計算製作所 機械設計に必要な情報とwebアプリ ソフトウエアを公開しています Science Physics Fluid
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://takun-physics.net/wp-content/uploads/2018/04/5-1.png" data-lightbox="roadtrip" data-title="流体力学 ヘルムホルツの渦定理 渦ができる要因を理解する 宇宙に入ったカマキリ">
+						<img class="card-img" src="https://takun-physics.net/wp-content/uploads/2018/04/5-1.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0LJVXxOpN22fInLWz5NygCJoBJN4Cz_GXi2klK7neZsftTD-rc69RmCUz6zxGMYgGG9Q';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				流体力学 ヘルムホルツの渦定理 渦ができる要因を理解する 宇宙に入ったカマキリ
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://takun-physics.net/wp-content/uploads/2018/12/6-4.png" data-lightbox="roadtrip" data-title="流体解析 Openfoamを使ったケルビンヘルムホルツ不安定性の解析計算 宇宙に入ったカマキリ">
+						<img class="card-img" src="https://takun-physics.net/wp-content/uploads/2018/12/6-4.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTobYbnuVRLq0zeTTUIDO1cKHh9cSKqG2zz8A';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				流体解析 Openfoamを使ったケルビンヘルムホルツ不安定性の解析計算 宇宙に入ったカマキリ
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://fnorio.com/0143Rossby_wave/fig1-2-1-02.GIF" data-lightbox="roadtrip" data-title="慣性重力波 1926年 とロスビー波 1939年 そして赤道波 1966年">
+						<img class="card-img" src="http://fnorio.com/0143Rossby_wave/fig1-2-1-02.GIF" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlfE03EOIkcVXKtjusGL7nu59igztHeF5oSw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				慣性重力波 1926年 とロスビー波 1939年 そして赤道波 1966年
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://fnorio.com/0107fluid_dynamics_in_two_dimensions1/fig3-3-2-02.GIF" data-lightbox="roadtrip" data-title="二次元 非圧縮性 完全流体の力学 ラグランジュの渦定理とは何か">
+						<img class="card-img" src="http://fnorio.com/0107fluid_dynamics_in_two_dimensions1/fig3-3-2-02.GIF" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzL6j89KU7Puv6Ilbw8QGTBu63Ie4NiNC_eQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				二次元 非圧縮性 完全流体の力学 ラグランジュの渦定理とは何か
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pbs.twimg.com/profile_images/1134425656496861184/4JLzLvD0_400x400.jpg" data-lightbox="roadtrip" data-title="Toya42 On Twitter ケルビン ヘルムホルツ不安定性 いつものようにスペクトル法で1024 2自由度の計算 渦度をparaviewで可視化">
+						<img class="card-img" src="https://pbs.twimg.com/profile_images/1134425656496861184/4JLzLvD0_400x400.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQwZeTzCpKAffQ-Jt6MJRSDrTjmcbFh5tYpg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Toya42 On Twitter ケルビン ヘルムホルツ不安定性 いつものようにスペクトル法で1024 2自由度の計算 渦度をparaviewで可視化
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="/search?q=%E6%B5%81%E4%BD%93%E5%8A%9B%E5%AD%A6+%E5%85%AC%E5%BC%8F&amp;tbm=isch" data-lightbox="roadtrip" data-title="Https Encrypted Tbn0 Gstatic Com Images Q Tbn And9gcsbam2awx2go3ogflm4nca3 T Gzhxheivtempvl2r5bf5pmm Usqp Cau">
+						<img class="card-img" src="/search?q=%E6%B5%81%E4%BD%93%E5%8A%9B%E5%AD%A6+%E5%85%AC%E5%BC%8F&amp;tbm=isch" onerror="this.onerror=null;this.src='/search?q=%E6%B5%81%E4%BD%93%E5%8A%9B%E5%AD%A6+%E5%85%AC%E5%BC%8F&amp;tbm=isch';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Https Encrypted Tbn0 Gstatic Com Images Q Tbn And9gcsbam2awx2go3ogflm4nca3 T Gzhxheivtempvl2r5bf5pmm Usqp Cau
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://fnorio.com/0107fluid_dynamics_in_two_dimensions1/fig3-2-1-02.GIF" data-lightbox="roadtrip" data-title="二次元 非圧縮性 完全流体の力学 ラグランジュの渦定理とは何か">
+						<img class="card-img" src="http://fnorio.com/0107fluid_dynamics_in_two_dimensions1/fig3-2-1-02.GIF" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkzqEWljMJVBck6O3pPj3TkBbzaGi5me3dqw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				二次元 非圧縮性 完全流体の力学 ラグランジュの渦定理とは何か
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://fnorio.com/0107fluid_dynamics_in_two_dimensions1/fig3-3-1-04.GIF" data-lightbox="roadtrip" data-title="二次元 非圧縮性 完全流体の力学 ラグランジュの渦定理とは何か">
+						<img class="card-img" src="http://fnorio.com/0107fluid_dynamics_in_two_dimensions1/fig3-3-1-04.GIF" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgzdRMwEDuzEpAOt_kvYFSKJM0nITuCJFYww';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				二次元 非圧縮性 完全流体の力学 ラグランジュの渦定理とは何か
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://assets.st-note.com/production/uploads/images/12921874/picture_pc_bbcca963bdb01373f891f7f8a7f42164.jpg" data-lightbox="roadtrip" data-title="流体力学6 跳水 Froude数 フルード数 ケルビンの循環定理 Kelvinの循環定理 ヘルムホルツの渦定理 Helmholtzの渦 定理 ラグランジュの渦定理 Lagrangeの渦定理 渦度方程式 渦 竜川仁 Note">
+						<img class="card-img" src="https://assets.st-note.com/production/uploads/images/12921874/picture_pc_bbcca963bdb01373f891f7f8a7f42164.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKQ0AVL5yVZza1hJjldRB6tUdung5Y8tyPZQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				流体力学6 跳水 Froude数 フルード数 ケルビンの循環定理 Kelvinの循環定理 ヘルムホルツの渦定理 Helmholtzの渦 定理 ラグランジュの渦定理 Lagrangeの渦定理 渦度方程式 渦 竜川仁 Note
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://takun-physics.net/wp-content/uploads/2019/01/8-4.png" data-lightbox="roadtrip" data-title="流体力学 ケルビンの循環定理 渦ができる要因を理解する 宇宙に入ったカマキリ">
+						<img class="card-img" src="https://takun-physics.net/wp-content/uploads/2019/01/8-4.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTj99HBwGK0h9uYa2Kenl1fJ9eg4fbtYEcRjw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				流体力学 ケルビンの循環定理 渦ができる要因を理解する 宇宙に入ったカマキリ
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://takun-physics.net/wp-content/uploads/2019/02/6-3.png" data-lightbox="roadtrip" data-title="流体力学 ケルビンの循環定理 渦ができる要因を理解する 宇宙に入ったカマキリ">
+						<img class="card-img" src="https://takun-physics.net/wp-content/uploads/2019/02/6-3.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQon7mGvMCWwUJLCSIux1vFKjgbRok-OYbiBg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				流体力学 ケルビンの循環定理 渦ができる要因を理解する 宇宙に入ったカマキリ
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://slidesplayer.net/slide/14892837/91/images/6/%E7%B5%B6%E5%AF%BE%E6%B8%A6%E5%BA%A6%E3%81%AE%E4%BF%9D%E5%AD%98%E5%89%87%EF%BC%88%E3%81%A4%E3%81%A5%E3%81%8D%EF%BC%89+%E7%B5%B6%E5%AF%BE%E6%B8%A6%E5%BA%A6%E3%81%AE%E4%BF%9D%E5%AD%98+%E5%B0%8E%E5%87%BA%E3%81%AF%E6%BC%94%E7%BF%92%E5%95%8F%E9%A1%8C.jpg" data-lightbox="roadtrip" data-title="ロスビー波 Rossby Wave 渦度 Vorticity 順圧非発散流 絶対渦度の保存 ポテンシャル渦度 渦位 Ppt Download">
+						<img class="card-img" src="https://slidesplayer.net/slide/14892837/91/images/6/%E7%B5%B6%E5%AF%BE%E6%B8%A6%E5%BA%A6%E3%81%AE%E4%BF%9D%E5%AD%98%E5%89%87%EF%BC%88%E3%81%A4%E3%81%A5%E3%81%8D%EF%BC%89+%E7%B5%B6%E5%AF%BE%E6%B8%A6%E5%BA%A6%E3%81%AE%E4%BF%9D%E5%AD%98+%E5%B0%8E%E5%87%BA%E3%81%AF%E6%BC%94%E7%BF%92%E5%95%8F%E9%A1%8C.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzjZtEB_6mHU3O8o_n1AvtcOG6tMim3PzOOw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				ロスビー波 Rossby Wave 渦度 Vorticity 順圧非発散流 絶対渦度の保存 ポテンシャル渦度 渦位 Ppt Download
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://takun-physics.net/wp-content/uploads/2018/12/10.png" data-lightbox="roadtrip" data-title="流体解析 Openfoamを使ったケルビンヘルムホルツ不安定性の解析計算 宇宙に入ったカマキリ">
+						<img class="card-img" src="https://takun-physics.net/wp-content/uploads/2018/12/10.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSh3o4NKDxo2988J7e7IpbZu7KpqyC6WVnbtg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				流体解析 Openfoamを使ったケルビンヘルムホルツ不安定性の解析計算 宇宙に入ったカマキリ
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://takun-physics.net/wp-content/uploads/2019/02/8-1.png" data-lightbox="roadtrip" data-title="流体力学 ヘルムホルツの渦定理 渦ができる要因を理解する 宇宙に入ったカマキリ">
+						<img class="card-img" src="https://takun-physics.net/wp-content/uploads/2019/02/8-1.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSouJiUK_mnUx8uiXyc3p0dIdnCA8of2mWeZQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				流体力学 ヘルムホルツの渦定理 渦ができる要因を理解する 宇宙に入ったカマキリ
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+		
+	</div>
+
+		 
+		
+		
+				</div>
+				<div class="col-sm-12 widget">
+					<div class="d-block p-4">
+	<center>
+		<!-- BOTTOM BANNER ADS -->
+<script async="async" data-cfasync="false" src="//jc32arlvqpv8.com/eb47a424ae325c90cca32780149785c3/invoke.js"></script>
+<div id="container-eb47a424ae325c90cca32780149785c3"></div>
+
+	</center>
+</div>				</div>
+			</div>
+			<div class="row footer">
+				<div class="col-md-12 text-center py-4">
+										<a href="/p/dmca.html">Dmca</a>
+										<a href="/p/contact.html">Contact</a>
+										<a href="/p/privacy-policy.html">Privacy Policy</a>
+										<a href="/p/copyright.html">Copyright</a>
+					
+				</div>
+			</div>
+		</main>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js" integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js" integrity="sha256-CtKylYan+AJuoH8jrMht1+1PMhMqrKnB8K5g012WN5I=" crossorigin="anonymous"></script>
+		
+		<!-- Footer CSS JS -->
+		
+		
+		
+			<script type='text/javascript' src='//jc32arlvqpv8.com/ef/d5/10/efd510237a3143727bed46803ec35b8d.js'></script>
+</body>
+</html>

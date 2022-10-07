@@ -1,0 +1,682 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha256-L/W5Wfqfa0sdBNIKN9cG6QA5F2qx4qICmU2VgLruv9Y=" crossorigin="anonymous" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/css/lightbox.min.css" integrity="sha256-tBxlolRHP9uMsEFKVk+hk//ekOlXOixLKvye5W2WR5c=" crossorigin="anonymous" />
+		<link href="https://fonts.googleapis.com/css?family=Mr+Dafoe" rel="stylesheet" type="text/css">
+
+		<style type="text/css">
+			html,body{font-family:"Open Sans",Arial,sans-serif;font-size:14px;font-weight:400;background:#f3f3f3 url(https://upload.wikimedia.org/wikipedia/commons/9/94/Linear_least_squares2.png
+) no-repeat center center fixed;background-size:cover;height:100%}#title{font-family:"Mr Dafoe",Times,serif;font-size:34px;background:rgba(255,255,255,.8);margin-bottom:34px}.header{padding-bottom:13px;margin-bottom:13px;border-bottom:1px solid #eee}a{color:#26ADE4;text-decoration:none}#title a{color:#333;margin-left:21px}#title a:hover{text-decoration:none;color:#26ADE4}.sidebar ul{margin:0;padding:0}.sidebar ul li{list-style:none}.footer{margin-top:21px;padding-top:13px;border-top:1px solid #eee}.footer a{margin:0 15px}.navi{margin:13px 0 13px 0;padding:13px}.navi a{margin:5px 2px;font-size:95%}.main{margin-top: 6rem;}.form-inline .form-control{min-width: 300px;}.v-cover{height: 380px; object-fit: cover;}.v-image{height: 200px; object-fit: cover;}.dwn-cover{max-height: 460px; object-fit: cover;}.main{margin-top: 6rem;}.form-inline .form-control{min-width: 300px;}			
+		</style>
+
+		<title>正規方程式を解く</title>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/", 
+  "@type": "Article", 
+  "author": {
+    "@type": "Person",
+    "name": "James"
+  },
+  "headline": "正規方程式を解く",
+  "datePublished": "2021-04-24",
+  "image": [https://image.slidesharecdn.com/linear1-140313045248-phpapp01/95/3-5-638.jpg?cb=1411455793,https://staging-qiita-user-contents.imgix.net/https%3A%2F%2Fcdn.qiita.com%2Fassets%2Fpublic%2Farticle-ogp-background-1150d8b18a7c15795b701a55ae908f94.png?ixlib=rb-4.0.0&amp;w=1200&amp;mark=https%3A%2F%2Fstaging-qiita-user-contents.imgix.net%2F~text%3Fixlib%3Drb-4.0.0%26w%3D840%26h%3D380%26txt%3D%25E7%25B7%259A%25E5%25BD%25A2%25E5%259B%259E%25E5%25B8%25B0%25E3%2581%25AE%2520Normal%2520Equation%25EF%25BC%2588%25E6%25AD%25A3%25E8%25A6%258F%25E6%2596%25B9%25E7%25A8%258B%25E5%25BC%258F%25EF%25BC%2589%25E3%2581%25AB%25E3%2581%25A4%25E3%2581%2584%25E3%2581%25A6%26txt-color%3D%2523333%26txt-font%3DHiragino%2520Sans%2520W6%26txt-size%3D54%26txt-clip%3Dellipsis%26txt-align%3Dcenter%252Cmiddle%26s%3D16c201cfe88e0c67b844e2724cd4151f&amp;mark-align=center%2Cmiddle&amp;blend=https%3A%2F%2Fstaging-qiita-user-contents.imgix.net%2F~text%3Fixlib%3Drb-4.0.0%26w%3D840%26h%3D500%26txt%3D%2540antimon2%26txt-color%3D%2523333%26txt-font%3DHiragino%2520Sans%2520W6%26txt-size%3D45%26txt-align%3Dright%252Cbottom%26s%3Daf6377efbd28302488174962389d65ab&amp;blend-align=center%2Cmiddle&amp;blend-mode=normal&amp;s=108be42be01f9245059bda59c2f7fe91,https://i0.wp.com/excelshogikan.com/image/mvamulti5-02.jpg],
+  "publisher": {
+    "@type": "Organization",
+    "name": "Tukang Parkir Gerobak",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://via.placeholder.com/512.png?text=正規方程式を解く",
+      "width": 512,
+      "height": 512
+    }
+  }
+}
+</script>
+		<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-957NGNKQ70"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-957NGNKQ70');
+</script>
+
+<script type='text/javascript' src='//jc32arlvqpv8.com/1a/82/2e/1a822ef8a40a0fbab3c4ea12a5d2bb02.js'></script>
+</head>
+	<body>
+		<header class="bg-white fixed-top">			
+			<nav class="navbar navbar-light bg-white mb-0">
+				<div class="container justify-content-center justify-content-sm-between">	
+				  <a href="/" title="Blog" class="navbar-brand mb-1">Blog</a>
+				  				</div>			  
+			</nav>				
+		</header>
+		<main class="main container bg-white">
+			<div class="col-md-12 my-4" align="center">
+				<div class="d-block p-4">
+	<br/><center>
+<!-- TOP BANNER ADS -->
+</center><br/>
+</div>			</div>
+			<div class="row header">
+				<div class="col-sm-12 text-center p-2">
+						<h1>正規方程式を解く</h1>
+
+	
+	<div class="navi text-center">
+										<a class="badge badge-success" href="/%E9%B6%B4%E4%BA%80%E7%AE%97-%E6%96%B9%E7%A8%8B%E5%BC%8F-%E4%BD%BF%E3%82%8F%E3%81%AA%E3%81%84.html">鶴亀算 方程式 使わない</a>
+											<a class="badge badge-secondary" href="/%E9%8A%80%E9%AD%82-%E6%B5%B7%E5%9D%8A%E4%B8%BB-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%AF%E8%A8%B1%E3%81%97%E3%81%BE%E3%81%9B%E3%82%93.html">銀魂 海坊主 お父さんは許しません</a>
+											<a class="badge badge-warning" href="/%EF%BC%91%E6%AC%A1%E6%96%B9%E7%A8%8B%E5%BC%8F-%EF%BC%92%E7%82%B9-%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0.html">１次方程式 ２点 プログラム</a>
+											<a class="badge badge-secondary" href="/%E8%B5%A4%E3%81%A1%E3%82%83%E3%82%93%E3%81%AE%E9%A0%AD-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%AE%E3%81%8A%E3%81%97%E3%82%8A.html">赤ちゃんの頭 お父さんのおしり</a>
+											<a class="badge badge-danger" href="/%E9%9D%A2%E7%A9%8D-%E6%A5%B5%E6%96%B9%E7%A8%8B%E5%BC%8F-%E8%A8%BC%E6%98%8E.html">面積 極方程式 証明</a>
+											<a class="badge badge-light" href="/%E8%87%AA%E5%B7%B1%E7%84%A1%E9%A0%93%E7%9D%80%E6%96%B9%E7%A8%8B%E5%BC%8F-%E8%A7%A3%E3%81%8D%E6%96%B9.html">自己無頓着方程式 解き方</a>
+											<a class="badge badge-info" href="/%E6%A7%8B%E9%80%A0%E6%96%B9%E7%A8%8B%E5%BC%8F%E3%83%A2%E3%83%87%E3%83%AA%E3%83%B3%E3%82%B0-%E8%A6%8B%E6%96%B9.html">構造方程式モデリング 見方</a>
+											<a class="badge badge-dark" href="/%E8%AC%9D%E7%A4%BC%E3%81%AB%E9%87%A3%E3%82%89%E3%82%8C%E3%81%A6%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%A8%E3%83%A9%E3%83%83%E3%83%97%E8%B6%8A%E3%81%97%E3%81%A7%E7%B4%A0%E8%82%A1.html">謝礼に釣られてお父さんとラップ越しで素股</a>
+											<a class="badge badge-dark" href="/%E9%81%8B%E5%8B%95%E4%B8%AD%E3%81%AF%E6%B0%B4%E9%A3%B2%E3%82%80%E3%81%AA%E3%81%AF%E6%98%94%E8%A9%B1-%E7%8F%BE%E5%BD%B9%E6%99%82%E4%BB%A3%E3%81%A8%E3%81%93%E3%82%93%E3%81%AA%E3%81%AB%E9%81%95%E3%81%86-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%82%B3%E3%83%BC%E3%83%81%E3%81%AB.html">運動中は水飲むなは昔話 現役時代とこんなに違う お父さんコーチに</a>
+											<a class="badge badge-light" href="/%E9%8C%A6%E7%B9%94%E3%81%AE%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%AE%E9%A1%94.html">錦織のお父さんの顔</a>
+											<a class="badge badge-secondary" href="/%E7%AC%91%E3%81%84%E3%81%AE%E7%A8%AE%E9%A1%9E-%E6%96%B9%E7%A8%8B%E5%BC%8F.html">笑いの種類 方程式</a>
+											<a class="badge badge-dark" href="/%E9%9F%93%E5%9B%BD%E3%83%89%E3%83%A9%E3%83%9E-%E9%81%A9%E9%BD%A2%E6%9C%9F%E6%83%91%E3%80%85-%E3%82%8F%E3%81%8F%E3%82%8F%E3%81%8F-%E3%83%AD%E3%83%9E%E3%83%B3%E3%82%B9-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%8C%E5%A4%89-%E9%9D%A2%E7%99%BD%E3%81%84.html">韓国ドラマ 適齢期惑々 わくわく ロマンス お父さんが変 面白い</a>
+											<a class="badge badge-primary" href="/%E6%B3%95%E7%B7%9A%E3%81%AE%E6%96%B9%E7%A8%8B%E5%BC%8F-%E5%81%8F%E5%BE%AE%E5%88%86.html">法線の方程式 偏微分</a>
+											<a class="badge badge-secondary" href="/%E8%A4%87%E7%B4%A0%E6%95%B0%E5%B9%B3%E9%9D%A2-%E6%96%B9%E7%A8%8B%E5%BC%8F%E3%81%AE%E8%A7%A3.html">複素数平面 方程式の解</a>
+											<a class="badge badge-dark" href="/%E7%86%B1%E4%BC%9D%E5%B0%8E%E6%96%B9%E7%A8%8B%E5%BC%8F%E6%95%B0%E5%80%A4%E8%A8%88%E7%AE%97%E5%A2%83%E7%95%8C%E6%9D%A1%E4%BB%B6.html">熱伝導方程式数値計算境界条件</a>
+						</div>
+<center>
+	<!-- MIDDLE BANNER ADS -->
+<script type="text/javascript">
+	atOptions = {
+		'key' : '2b77887421e2587a1a1b1d7c8a31a9e0',
+		'format' : 'iframe',
+		'height' : 250,
+		'width' : 300,
+		'params' : {}
+	};
+	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://jc32arlvqpv8.com/2b77887421e2587a1a1b1d7c8a31a9e0/invoke.js"></scr' + 'ipt>');
+</script>
+		
+	</center>
+					
+				</div>
+			</div>
+			<div class="row content mb-4">
+				<div class="col-md-12">					
+					
+	
+	<div class="card-columns">
+						
+	  <div class='card'>
+	  	<a href="https://image.slidesharecdn.com/linear1-140313045248-phpapp01/95/3-6-638.jpg?cb=1411455793" data-lightbox="roadtrip" data-title="クラシックな機械学習の入門 3 線形回帰および識別">
+						<img class="card-img" src="https://image.slidesharecdn.com/linear1-140313045248-phpapp01/95/3-6-638.jpg?cb=1411455793" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3ZE3NiEUkhOB-xDOfFnQ3qu9MtXUgPXmxw8R7czPnHH61noG5JbHayVi-xOScFsE41wg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				クラシックな機械学習の入門 3 線形回帰および識別
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://image.slidesharecdn.com/linear1-140313045248-phpapp01/95/3-5-638.jpg?cb=1411455793" data-lightbox="roadtrip" data-title="クラシックな機械学習の入門 3 線形回帰および識別">
+						<img class="card-img" src="https://image.slidesharecdn.com/linear1-140313045248-phpapp01/95/3-5-638.jpg?cb=1411455793" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQFkyjR7oFXQW859Hxv5FOibfI_qXMwCvoQ67H8CpMTDvQDmY25oO24FN3bPXbOHzqaV4';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				クラシックな機械学習の入門 3 線形回帰および識別
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://www.slis.tsukuba.ac.jp/~fujisawa.makoto.fu/cgi-bin/wiki/index.php?plugin=ref&amp;page=%CF%A2%CE%A91%BC%A1%CA%FD%C4%F8%BC%B0%A1%A7%C0%B5%B5%AC%CA%FD%C4%F8%BC%B0%A4%CB%C2%D0%A4%B9%A4%EB%B6%A6%CC%F2%B8%FB%C7%DB%CB%A1&amp;src=ls_cgnr.eq5.gif" data-lightbox="roadtrip" data-title="連立1次方程式 正規方程式に対する共役勾配法 Pukiwiki For Pbcg Lab">
+						<img class="card-img" src="http://www.slis.tsukuba.ac.jp/~fujisawa.makoto.fu/cgi-bin/wiki/index.php?plugin=ref&amp;page=%CF%A2%CE%A91%BC%A1%CA%FD%C4%F8%BC%B0%A1%A7%C0%B5%B5%AC%CA%FD%C4%F8%BC%B0%A4%CB%C2%D0%A4%B9%A4%EB%B6%A6%CC%F2%B8%FB%C7%DB%CB%A1&amp;src=ls_cgnr.eq5.gif" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJHDqepnR3XOmFRR8O7u5DNnxlPk4EQl5SYBzB-wKfH5fuZqyHQPuT_vEP2rqf1nayRA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				連立1次方程式 正規方程式に対する共役勾配法 Pukiwiki For Pbcg Lab
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://staff.aist.go.jp/t.ihara/weight_and_regression.files/image045.gif" data-lightbox="roadtrip" data-title="１次式回帰分析と重みについて">
+						<img class="card-img" src="https://staff.aist.go.jp/t.ihara/weight_and_regression.files/image045.gif" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxeerkvFsMs5Zz7p7CO7-qLqxKKl-7tE8ucWxqE3mbCImdP6lm84s1lnc92axcgtoYEg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				１次式回帰分析と重みについて
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://image.slidesharecdn.com/linear1-140313045248-phpapp01/95/3-4-638.jpg?cb=1411455793" data-lightbox="roadtrip" data-title="クラシックな機械学習の入門 3 線形回帰および識別">
+						<img class="card-img" src="https://image.slidesharecdn.com/linear1-140313045248-phpapp01/95/3-4-638.jpg?cb=1411455793" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGvSpU9X1j0zHt8QLed-ueHpTtNQBhp0OU69D40h2xQkSqcQH123JgrjXSWnle2307F50';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				クラシックな機械学習の入門 3 線形回帰および識別
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://ichi.pro/assets/images/max/724/0*AC0Lz5n-cNbNDVfc" data-lightbox="roadtrip" data-title="正規方程式を使用した線形回帰の実行">
+						<img class="card-img" src="https://ichi.pro/assets/images/max/724/0*AC0Lz5n-cNbNDVfc" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQu8IE9GxSCPFciVzTYBkjB_A3xw9sjqYccm8cDndz8zoLMyQbIj-Hz4QaMspBjHXsdH8';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				正規方程式を使用した線形回帰の実行
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+				<div class='card'>	
+			<div class="d-block p-4">
+	</div>		  	
+		  	<h3 class="h6 p-2"><b></b></h3>
+					</div>
+		
+						
+	  <div class='card'>
+	  	<a href="https://staging-qiita-user-contents.imgix.net/https%3A%2F%2Fcdn.qiita.com%2Fassets%2Fpublic%2Farticle-ogp-background-1150d8b18a7c15795b701a55ae908f94.png?ixlib=rb-4.0.0&amp;w=1200&amp;mark=https%3A%2F%2Fstaging-qiita-user-contents.imgix.net%2F~text%3Fixlib%3Drb-4.0.0%26w%3D840%26h%3D380%26txt%3D%25E7%25B7%259A%25E5%25BD%25A2%25E5%259B%259E%25E5%25B8%25B0%25E3%2581%25AE%2520Normal%2520Equation%25EF%25BC%2588%25E6%25AD%25A3%25E8%25A6%258F%25E6%2596%25B9%25E7%25A8%258B%25E5%25BC%258F%25EF%25BC%2589%25E3%2581%25AB%25E3%2581%25A4%25E3%2581%2584%25E3%2581%25A6%26txt-color%3D%2523333%26txt-font%3DHiragino%2520Sans%2520W6%26txt-size%3D54%26txt-clip%3Dellipsis%26txt-align%3Dcenter%252Cmiddle%26s%3D16c201cfe88e0c67b844e2724cd4151f&amp;mark-align=center%2Cmiddle&amp;blend=https%3A%2F%2Fstaging-qiita-user-contents.imgix.net%2F~text%3Fixlib%3Drb-4.0.0%26w%3D840%26h%3D500%26txt%3D%2540antimon2%26txt-color%3D%2523333%26txt-font%3DHiragino%2520Sans%2520W6%26txt-size%3D45%26txt-align%3Dright%252Cbottom%26s%3Daf6377efbd28302488174962389d65ab&amp;blend-align=center%2Cmiddle&amp;blend-mode=normal&amp;s=108be42be01f9245059bda59c2f7fe91" data-lightbox="roadtrip" data-title="線形回帰の Normal Equation 正規方程式 について Qiita">
+						<img class="card-img" src="https://staging-qiita-user-contents.imgix.net/https%3A%2F%2Fcdn.qiita.com%2Fassets%2Fpublic%2Farticle-ogp-background-1150d8b18a7c15795b701a55ae908f94.png?ixlib=rb-4.0.0&amp;w=1200&amp;mark=https%3A%2F%2Fstaging-qiita-user-contents.imgix.net%2F~text%3Fixlib%3Drb-4.0.0%26w%3D840%26h%3D380%26txt%3D%25E7%25B7%259A%25E5%25BD%25A2%25E5%259B%259E%25E5%25B8%25B0%25E3%2581%25AE%2520Normal%2520Equation%25EF%25BC%2588%25E6%25AD%25A3%25E8%25A6%258F%25E6%2596%25B9%25E7%25A8%258B%25E5%25BC%258F%25EF%25BC%2589%25E3%2581%25AB%25E3%2581%25A4%25E3%2581%2584%25E3%2581%25A6%26txt-color%3D%2523333%26txt-font%3DHiragino%2520Sans%2520W6%26txt-size%3D54%26txt-clip%3Dellipsis%26txt-align%3Dcenter%252Cmiddle%26s%3D16c201cfe88e0c67b844e2724cd4151f&amp;mark-align=center%2Cmiddle&amp;blend=https%3A%2F%2Fstaging-qiita-user-contents.imgix.net%2F~text%3Fixlib%3Drb-4.0.0%26w%3D840%26h%3D500%26txt%3D%2540antimon2%26txt-color%3D%2523333%26txt-font%3DHiragino%2520Sans%2520W6%26txt-size%3D45%26txt-align%3Dright%252Cbottom%26s%3Daf6377efbd28302488174962389d65ab&amp;blend-align=center%2Cmiddle&amp;blend-mode=normal&amp;s=108be42be01f9245059bda59c2f7fe91" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwVWE9sEyb5jzvfIQ7fbJNULxUXzSGjNAzlqgJrBrukgG0IdlIKlGpVH4lci-foGiuFbc';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				線形回帰の Normal Equation 正規方程式 について Qiita
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://i0.wp.com/batapara.com/wp-content/ql-cache/quicklatex.com-b87426d5a91c7d880a613512fa1cc357_l3.png" data-lightbox="roadtrip" data-title="正規方程式 バンドル法の正規方程式を求める Qkaxtw">
+						<img class="card-img" src="https://i0.wp.com/batapara.com/wp-content/ql-cache/quicklatex.com-b87426d5a91c7d880a613512fa1cc357_l3.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSppCDSGDdvlHotE1vhA91ozoVoJHmNmZBd5UU_4Mel1req6aknPHMI89f_ATvWtosagCA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				正規方程式 バンドル法の正規方程式を求める Qkaxtw
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://i0.wp.com/excelshogikan.com/image/mvamulti5-02.jpg" data-lightbox="roadtrip" data-title="正規方程式 バンドル法の正規方程式を求める Qkaxtw">
+						<img class="card-img" src="https://i0.wp.com/excelshogikan.com/image/mvamulti5-02.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAex8Wqd8LTgur_MFZxoBzGOlPqCFEz7Ir_jwSM0T1pN2lGJVucw0bYcvwniumdmIXW-8';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				正規方程式 バンドル法の正規方程式を求める Qkaxtw
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://staff.aist.go.jp/t.ihara/weight_and_regression.files/image047.gif" data-lightbox="roadtrip" data-title="１次式回帰分析と重みについて">
+						<img class="card-img" src="https://staff.aist.go.jp/t.ihara/weight_and_regression.files/image047.gif" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTc0SpP_OX4mK_-tK_h8_S_a3T_ytduRQ2AjJhjFPCDHtiO4ThZbECzQkphwAVgFRitiQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				１次式回帰分析と重みについて
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.wolfram.com/language/12/asymptotics/assets.ja/solve-a-regular-perturbation-oe-problem-asymptoticrsolvevalue/O_74.png" data-lightbox="roadtrip" data-title="正規摂動の常差分方程式問題を解く Asymptoticrsolvevalue Wolfram言語 12の新機能">
+						<img class="card-img" src="https://www.wolfram.com/language/12/asymptotics/assets.ja/solve-a-regular-perturbation-oe-problem-asymptoticrsolvevalue/O_74.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKjPzNkLh8K3X81Vp0g34aJpPsUr1_8nftN6oDqflBOfI25IgG9xsSS_zHBfX3pBh_Hw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				正規摂動の常差分方程式問題を解く Asymptoticrsolvevalue Wolfram言語 12の新機能
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://ichi.pro/assets/images/max/724/1*pE87db380l3XR2p4gvQhMw.png" data-lightbox="roadtrip" data-title="正規方程式を使用した線形回帰の実行">
+						<img class="card-img" src="https://ichi.pro/assets/images/max/724/1*pE87db380l3XR2p4gvQhMw.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVCJMNRU-I7vrat-ohovUyuQNID1t3lXuROUD_1xNkFW02T_l3EniE2oauJYx7xxRTQnQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				正規方程式を使用した線形回帰の実行
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://slidesplayer.net/slide/11644093/65/images/6/%E6%AD%A3%E8%A6%8F%E6%96%B9%E7%A8%8B%E5%BC%8F%E3%82%92%E8%A7%A3%E3%81%8F%E7%B0%A1%E5%8D%98%E3%81%AA%E4%BE%8B.jpg" data-lightbox="roadtrip" data-title="3 線形回帰および識別 クラシックな機械学習の入門 By 中川裕志 東京大学 線形回帰のモデル 正則化項の導入 L2正則化 L1正則化 Ppt Download">
+						<img class="card-img" src="https://slidesplayer.net/slide/11644093/65/images/6/%E6%AD%A3%E8%A6%8F%E6%96%B9%E7%A8%8B%E5%BC%8F%E3%82%92%E8%A7%A3%E3%81%8F%E7%B0%A1%E5%8D%98%E3%81%AA%E4%BE%8B.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_CWG05AEbkHcK0jQGlFR3HCNZyrjwu7vCRB0SjQmwMPwQEHrRB9iNxmUJ6zhjsK0F3pI';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				3 線形回帰および識別 クラシックな機械学習の入門 By 中川裕志 東京大学 線形回帰のモデル 正則化項の導入 L2正則化 L1正則化 Ppt Download
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://image.slidesharecdn.com/linear1-140313045248-phpapp01/95/3-9-638.jpg?cb=1411455793" data-lightbox="roadtrip" data-title="クラシックな機械学習の入門 3 線形回帰および識別">
+						<img class="card-img" src="https://image.slidesharecdn.com/linear1-140313045248-phpapp01/95/3-9-638.jpg?cb=1411455793" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRj3BGaRtzvBhCrtx_nlUdZW-vWBe1crvG1MP7wdgXBl-NoTKnZr8lJtM-shpPonwbkNEU';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				クラシックな機械学習の入門 3 線形回帰および識別
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://res.cloudinary.com/bend/image/upload/f_auto/v1615202438/manabitimes/original/thumbnail/note/1128_lakces.png" data-lightbox="roadtrip" data-title="正規方程式の導出と計算例 高校数学の美しい物語">
+						<img class="card-img" src="https://res.cloudinary.com/bend/image/upload/f_auto/v1615202438/manabitimes/original/thumbnail/note/1128_lakces.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTf-UyGYswM29PDbfMR-sYjg0QJTLqrnKnTeYicNe_OV78X4GJfXIkJMY76ZKj8dthaH4';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				正規方程式の導出と計算例 高校数学の美しい物語
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://4.bp.blogspot.com/-0A6IkcE_-us/TWum9OW-vJI/AAAAAAAAAFQ/zR5ksJ7NIsI/s1600/h21no12_4.png" data-lightbox="roadtrip" data-title="貧者の一灯 測量士への道 2月 2011">
+						<img class="card-img" src="http://4.bp.blogspot.com/-0A6IkcE_-us/TWum9OW-vJI/AAAAAAAAAFQ/zR5ksJ7NIsI/s1600/h21no12_4.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-akCsSepgNWoAk2x5B4RCU7Q4h4dJ4xZaUVqTVSXfxou_E9_hBZPjnzGdFwBOIbO2e04';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				貧者の一灯 測量士への道 2月 2011
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://atsugi5761455.fc2web.com/calking4/c4_020.gif" data-lightbox="roadtrip" data-title="最小二乗法近似">
+						<img class="card-img" src="http://atsugi5761455.fc2web.com/calking4/c4_020.gif" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSX5jH9OA6bD1TtZrS8W4M7ych8K405N47uO5bFfOO_DofuEC1G8DAmyL7s463AkmMOVjE';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				最小二乗法近似
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://slidetodoc.com/presentation_image_h/3125bde0fd4faef264b82542b9643de1/image-6.jpg" data-lightbox="roadtrip" data-title="Multiple Regression Model R3 Summarywage 1 Lm Summarywage">
+						<img class="card-img" src="https://slidetodoc.com/presentation_image_h/3125bde0fd4faef264b82542b9643de1/image-6.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwpdbijKH72JComi9nZGYHDvvLL7X51IM5dptqRJRFinJf_Tp_oda6TVhVtKyLqmftccs';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Multiple Regression Model R3 Summarywage 1 Lm Summarywage
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://staff.aist.go.jp/t.ihara/weight_and_regression.files/image102.gif" data-lightbox="roadtrip" data-title="１次式回帰分析と重みについて">
+						<img class="card-img" src="https://staff.aist.go.jp/t.ihara/weight_and_regression.files/image102.gif" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdOOrxEIdeY5_cPhP_ofKlI2P0pSXqnNZpwCyc1wOpFELkKPuMyblXNAriY1mHB3M8W58';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				１次式回帰分析と重みについて
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://slidesplayer.net/slide/11277988/61/images/3/%E6%AD%A3%E8%A6%8F%E6%96%B9%E7%A8%8B%E5%BC%8F+%E6%AD%A3%E8%A6%8F%E6%96%B9%E7%A8%8B%E5%BC%8F+%E3%82%92%E6%9C%80%E5%B0%8F%E3%81%AB%E3%81%99%E3%82%8B%E3%81%9F%E3%82%81%E3%81%AE%E4%BF%82%E6%95%B0+%E3%82%92+%E3%81%A7%E7%B7%A8%E5%BE%AE%E5%88%86%E3%81%97%E3%81%A60%E3%81%A8%E3%81%8A%E3%81%8D%E3%80%81%28p%2B1%29%E5%85%83%E3%81%AE%E9%80%A3%E7%AB%8B%E6%96%B9%E7%A8%8B%E5%BC%8F%E3%82%92%E4%BD%9C%E3%82%8A%E3%80%81%E8%A7%A3%E3%81%8F+%E2%97%8F%E5%9F%BA%E6%9C%AC%E7%B5%B1%E8%A8%88%E9%87%8F.jpg" data-lightbox="roadtrip" data-title="多変量解析 重回帰分析 発表者 時田 陽一 発表日 11月20日 Ppt Download">
+						<img class="card-img" src="https://slidesplayer.net/slide/11277988/61/images/3/%E6%AD%A3%E8%A6%8F%E6%96%B9%E7%A8%8B%E5%BC%8F+%E6%AD%A3%E8%A6%8F%E6%96%B9%E7%A8%8B%E5%BC%8F+%E3%82%92%E6%9C%80%E5%B0%8F%E3%81%AB%E3%81%99%E3%82%8B%E3%81%9F%E3%82%81%E3%81%AE%E4%BF%82%E6%95%B0+%E3%82%92+%E3%81%A7%E7%B7%A8%E5%BE%AE%E5%88%86%E3%81%97%E3%81%A60%E3%81%A8%E3%81%8A%E3%81%8D%E3%80%81%28p%2B1%29%E5%85%83%E3%81%AE%E9%80%A3%E7%AB%8B%E6%96%B9%E7%A8%8B%E5%BC%8F%E3%82%92%E4%BD%9C%E3%82%8A%E3%80%81%E8%A7%A3%E3%81%8F+%E2%97%8F%E5%9F%BA%E6%9C%AC%E7%B5%B1%E8%A8%88%E9%87%8F.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIXYaBMmOeaJvwlNBOuZlLnAXY9sLGTMOIBAg-3eKgzqVSgdwCjLVnLjiX7bvAXvmCi6A';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				多変量解析 重回帰分析 発表者 時田 陽一 発表日 11月20日 Ppt Download
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://www.eisaijuku.join-us.jp/renritu-houteishiki-no-gyoretu-shiki-2x2.GIF" data-lightbox="roadtrip" data-title="連立方程式の行列解">
+						<img class="card-img" src="http://www.eisaijuku.join-us.jp/renritu-houteishiki-no-gyoretu-shiki-2x2.GIF" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMDSUcHZd6V9UZMUk2b10VQSd76qrGXc9rHw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				連立方程式の行列解
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.ikpi.co.jp/img/math_205.jpg" data-lightbox="roadtrip" data-title="補論 バリュエーション確率統計論シリーズ 推定方法における最小二乗法 ナレッジ情報 インターナレッジ パートナーズ 公認会計士 税理士">
+						<img class="card-img" src="https://www.ikpi.co.jp/img/math_205.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgrKA4cNhBJdwMEa1GnMqAaif8qKju9Ig8Cg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				補論 バリュエーション確率統計論シリーズ 推定方法における最小二乗法 ナレッジ情報 インターナレッジ パートナーズ 公認会計士 税理士
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://ichi.pro/assets/images/max/724/1*77kT4qg4VKa9fizU5XZ1lg.png" data-lightbox="roadtrip" data-title="正規方程式を使用した線形回帰の実行">
+						<img class="card-img" src="https://ichi.pro/assets/images/max/724/1*77kT4qg4VKa9fizU5XZ1lg.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0Knbc-SQSJauUjjdsdbN5Rpa9rFGx6iI3uQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				正規方程式を使用した線形回帰の実行
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://reference.wolfram.com/language/tutorial/Files/LinearAlgebraMatrixComputations.ja/36.gif" data-lightbox="roadtrip" data-title="行列の計算 Wolfram言語ドキュメント">
+						<img class="card-img" src="https://reference.wolfram.com/language/tutorial/Files/LinearAlgebraMatrixComputations.ja/36.gif" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8X6a7-B2Q4nFnGzlpiD31cg9Oygvlk2Y97A';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				行列の計算 Wolfram言語ドキュメント
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.hogehoge-note.com/wp-content/uploads/2019/07/image-23.png" data-lightbox="roadtrip" data-title="機械学習 正規方程式 Coursera その6 ほげふがな日常">
+						<img class="card-img" src="https://www.hogehoge-note.com/wp-content/uploads/2019/07/image-23.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxsQun0N9X8O1rsNONq1EOc-8joGkcsim_Ow';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				機械学習 正規方程式 Coursera その6 ほげふがな日常
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://atsugi5761455.fc2web.com/calking4/c4_027.gif" data-lightbox="roadtrip" data-title="最小二乗法近似">
+						<img class="card-img" src="http://atsugi5761455.fc2web.com/calking4/c4_027.gif" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6ZDhiP4c1jl_cFisHpneOaw9NLaxUy23wuQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				最小二乗法近似
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="XNXDRVcNhHZN6M" data-lightbox="roadtrip" data-title="Http Www Kurims Kyoto U Ac Jp Kyodo Kokyuroku Contents Pdf 1441 12 Pdf">
+						<img class="card-img" src="XNXDRVcNhHZN6M" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqAxXayLOKGP6vM85LQZ7qMm0z4_4rgBOBOg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Http Www Kurims Kyoto U Ac Jp Kyodo Kokyuroku Contents Pdf 1441 12 Pdf
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://staff.aist.go.jp/t.ihara/deming_cov.files/image054.gif" data-lightbox="roadtrip" data-title="座標間に相関のある重み付き回帰曲線の正規方程式で使用する重み関数 の行列表現 M Bremser M Hassenbarth Shall We Consider Covariances Accred Qual Assur 3 106 1998 よれば 座標共に不確かさのある重み付き回帰分析 Deming法 において">
+						<img class="card-img" src="https://staff.aist.go.jp/t.ihara/deming_cov.files/image054.gif" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-Aefdoz8eukdp317O0sMZRBciGcpiirFBQA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				座標間に相関のある重み付き回帰曲線の正規方程式で使用する重み関数 の行列表現 M Bremser M Hassenbarth Shall We Consider Covariances Accred Qual Assur 3 106 1998 よれば 座標共に不確かさのある重み付き回帰分析 Deming法 において
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Linear_least_squares2.png/440px-Linear_least_squares2.png" data-lightbox="roadtrip" data-title="最小二乗法 Wikiwand">
+						<img class="card-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Linear_least_squares2.png/440px-Linear_least_squares2.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFWXsrqTE5uvx6awM5OiEVHZMsH3BayzFdkw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				最小二乗法 Wikiwand
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://upload.wikimedia.org/wikipedia/commons/9/94/Linear_least_squares2.png" data-lightbox="roadtrip" data-title="最小二乗法 Wikipedia">
+						<img class="card-img" src="https://upload.wikimedia.org/wikipedia/commons/9/94/Linear_least_squares2.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_GpXhLaFNms0dRD1U5mc33x3Htn3_d-XEPw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				最小二乗法 Wikipedia
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://www.motorwarp.com/koizumi/regression02.png" data-lightbox="roadtrip" data-title="回帰分析">
+						<img class="card-img" src="http://www.motorwarp.com/koizumi/regression02.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaMDpkD5j1X-hejqbgBDAbcXqWKd9zQZ41lQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				回帰分析
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://i.stack.imgur.com/AuEzY.png" data-lightbox="roadtrip" data-title="Python 微分方程式 初期条件問題 Javaer101">
+						<img class="card-img" src="https://i.stack.imgur.com/AuEzY.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnFqwDB9Nl2b2ykjrLLzbzhT9LF6pKUC-ovA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Python 微分方程式 初期条件問題 Javaer101
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://astamuse.com/ja/drawing/JP/2012/088/236/A/000032.png" data-lightbox="roadtrip" data-title="2012 088236号 電子走査型レーダ装置 受信波方向推定方法及び受信波方向推定プログラム Astamuse">
+						<img class="card-img" src="https://astamuse.com/ja/drawing/JP/2012/088/236/A/000032.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRU-lfoHynI0HhB1ytl9g_NzkzHEikOm9s-BA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				2012 088236号 電子走査型レーダ装置 受信波方向推定方法及び受信波方向推定プログラム Astamuse
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+		
+	</div>
+
+		 
+		
+		
+				</div>
+				<div class="col-sm-12 widget">
+					<div class="d-block p-4">
+	<center>
+		<!-- BOTTOM BANNER ADS -->
+<script async="async" data-cfasync="false" src="//jc32arlvqpv8.com/eb47a424ae325c90cca32780149785c3/invoke.js"></script>
+<div id="container-eb47a424ae325c90cca32780149785c3"></div>
+
+	</center>
+</div>				</div>
+			</div>
+			<div class="row footer">
+				<div class="col-md-12 text-center py-4">
+										<a href="/p/dmca.html">Dmca</a>
+										<a href="/p/contact.html">Contact</a>
+										<a href="/p/privacy-policy.html">Privacy Policy</a>
+										<a href="/p/copyright.html">Copyright</a>
+					
+				</div>
+			</div>
+		</main>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js" integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js" integrity="sha256-CtKylYan+AJuoH8jrMht1+1PMhMqrKnB8K5g012WN5I=" crossorigin="anonymous"></script>
+		
+		<!-- Footer CSS JS -->
+		
+		
+		
+			<script type='text/javascript' src='//jc32arlvqpv8.com/ef/d5/10/efd510237a3143727bed46803ec35b8d.js'></script>
+</body>
+</html>

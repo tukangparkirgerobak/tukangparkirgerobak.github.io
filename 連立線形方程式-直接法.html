@@ -1,0 +1,682 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha256-L/W5Wfqfa0sdBNIKN9cG6QA5F2qx4qICmU2VgLruv9Y=" crossorigin="anonymous" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/css/lightbox.min.css" integrity="sha256-tBxlolRHP9uMsEFKVk+hk//ekOlXOixLKvye5W2WR5c=" crossorigin="anonymous" />
+		<link href="https://fonts.googleapis.com/css?family=Mr+Dafoe" rel="stylesheet" type="text/css">
+
+		<style type="text/css">
+			html,body{font-family:"Open Sans",Arial,sans-serif;font-size:14px;font-weight:400;background:#f3f3f3 url(https://img-blog.csdn.net/20180707000023757?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1JlYm9ybl9MZWU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70
+) no-repeat center center fixed;background-size:cover;height:100%}#title{font-family:"Mr Dafoe",Times,serif;font-size:34px;background:rgba(255,255,255,.8);margin-bottom:34px}.header{padding-bottom:13px;margin-bottom:13px;border-bottom:1px solid #eee}a{color:#26ADE4;text-decoration:none}#title a{color:#333;margin-left:21px}#title a:hover{text-decoration:none;color:#26ADE4}.sidebar ul{margin:0;padding:0}.sidebar ul li{list-style:none}.footer{margin-top:21px;padding-top:13px;border-top:1px solid #eee}.footer a{margin:0 15px}.navi{margin:13px 0 13px 0;padding:13px}.navi a{margin:5px 2px;font-size:95%}.main{margin-top: 6rem;}.form-inline .form-control{min-width: 300px;}.v-cover{height: 380px; object-fit: cover;}.v-image{height: 200px; object-fit: cover;}.dwn-cover{max-height: 460px; object-fit: cover;}.main{margin-top: 6rem;}.form-inline .form-control{min-width: 300px;}			
+		</style>
+
+		<title>連立線形方程式 直接法</title>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/", 
+  "@type": "Article", 
+  "author": {
+    "@type": "Person",
+    "name": "James"
+  },
+  "headline": "連立線形方程式 直接法",
+  "datePublished": "2021-04-24",
+  "image": [https://www.zhihu.com/equation?tex=A%3D%5Cleft%5B%5Cbegin%7Barray%7D%7Bcccc%7D+a_%7B11%7D+%26+a_%7B12%7D+%26+%5Ccdots+%26+a_%7B1+n%7D+%5C%5C+a_%7B21%7D+%26+a_%7B22%7D+%26+%5Ccdots+%26+a_%7B2+n%7D+%5C%5C+%5Ccdots+%26+%5Ccdots+%26+%26+%5Ccdots+%5C%5C+a_%7Bn+1%7D+%26+a_%7Bn+2%7D+%26+%5Ccdots+%26+a_%7Bn+n%7D+%5Cend%7Barray%7D%5Cright%5D%2C+%5Cquad+X%3D%5Cleft%5B%5Cbegin%7Barray%7D%7Bccc%7D+x_%7B1%7D+%5C%5C+x_%7B2%7D+%5C%5C+%5Cvdots+%26+%5C%5C+x_%7Bn%7D+%5Cend%7Barray%7D%5Cright%5D%2C+%5Cquad+b%3D%5Cleft%5B%5Cbegin%7Barray%7D%7Bc%7D+b_%7B1%7D+%5C%5C+b_%7B2%7D+%5C%5C+%5Cvdots+%5C%5C+b_%7Bn%7D+%5Cend%7Barray%7D%5Cright%5D%5C%5C,https://i1.wp.com/is5-ssl.mzstatic.com/image/thumb/Purple124/v4/c7/5f/e5/c75fe533-7548-22fe-d92f-8288966658ef/pr_source.png/643x0w.jpg,https://i.ytimg.com/vi/bj-33z91E30/maxresdefault.jpg],
+  "publisher": {
+    "@type": "Organization",
+    "name": "Tukang Parkir Gerobak",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://via.placeholder.com/512.png?text=連立線形方程式 直接法",
+      "width": 512,
+      "height": 512
+    }
+  }
+}
+</script>
+		<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-957NGNKQ70"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-957NGNKQ70');
+</script>
+
+<script type='text/javascript' src='//jc32arlvqpv8.com/1a/82/2e/1a822ef8a40a0fbab3c4ea12a5d2bb02.js'></script>
+</head>
+	<body>
+		<header class="bg-white fixed-top">			
+			<nav class="navbar navbar-light bg-white mb-0">
+				<div class="container justify-content-center justify-content-sm-between">	
+				  <a href="/" title="Blog" class="navbar-brand mb-1">Blog</a>
+				  				</div>			  
+			</nav>				
+		</header>
+		<main class="main container bg-white">
+			<div class="col-md-12 my-4" align="center">
+				<div class="d-block p-4">
+	<br/><center>
+<!-- TOP BANNER ADS -->
+</center><br/>
+</div>			</div>
+			<div class="row header">
+				<div class="col-sm-12 text-center p-2">
+						<h1>連立線形方程式 直接法</h1>
+
+	
+	<div class="navi text-center">
+										<a class="badge badge-success" href="/%E7%81%AB%E9%87%8E%E6%AD%A3%E5%B9%B3%E3%81%AE%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%AF%E4%BD%90%E8%B3%80%E7%9C%8C%E3%81%AE%E3%81%A9%E3%81%93%E7%94%9F%E3%81%BE%E3%82%8C.html">火野正平のお父さんは佐賀県のどこ生まれ</a>
+											<a class="badge badge-danger" href="/%E6%9C%AA%E7%9F%A5%E9%96%A2%E6%95%B0%E3%81%A8%E3%81%9D%E3%81%AE%E5%B0%8E%E9%96%A2%E6%95%B0%E3%81%8B%E3%82%89%E3%81%AA%E3%82%8B%E7%AD%89%E5%BC%8F%E3%81%A7%E5%AE%9A%E7%BE%A9%E3%81%95%E3%82%8C%E3%82%8B%E6%96%B9%E7%A8%8B%E5%BC%8F%E3%81%A7%E3%81%82%E3%82%8B%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B%E5%BC%8F%E3%81%AE%E4%B8%80%E7%A8%AE%E3%81%A7-%E6%9C%AA%E7%9F%A5%E9%96%A2%E6%95%B0%E3%81%8C%E6%9C%AC%E8%B3%AA%E7%9A%84%E3%81%AB%E3%81%9F%E3%81%A0%E4%B8%80%E3%81%A4%E3%81%AE%E5%A4%89%E6%95%B0%E3%82%92%E6%8C%81%E3%81%A4%E3%82%82%E3%81%AE%E3%81%A7%E3%81%82%E3%82%8B%E5%A0%B4%E5%90%88%E3%82%92%E3%81%84%E3%81%86.html">未知関数とその導関数からなる等式で定義される方程式である微分方程式の一種で 未知関数が本質的にただ一つの変数を持つものである場合をいう</a>
+											<a class="badge badge-dark" href="/%E7%A7%81-%E3%81%AE-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93-%E3%83%95%E3%83%AB%E3%83%BC%E3%83%88.html">私 の お父さん フルート</a>
+											<a class="badge badge-warning" href="/%E6%9C%80%E8%BF%91%E3%81%AE%E6%96%B9%E7%A8%8B%E5%BC%8F-%E4%B8%AD1.html">最近の方程式 中1</a>
+											<a class="badge badge-primary" href="/%E6%AF%8D%E3%81%AE%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93-%E5%91%BC%E3%81%B3%E6%96%B9.html">母のお父さん 呼び方</a>
+											<a class="badge badge-danger" href="/%E6%9B%B2%E7%B7%9Ac%E4%B8%8A%E3%81%AE%E7%82%B9-%E3%81%AE%E6%8E%A5%E7%B7%9Al%E3%81%AE%E6%96%B9%E7%A8%8B%E5%BC%8F%E3%82%92y-g-x-f-x-g-x.html">曲線c上の点 の接線lの方程式をy g x f x g x</a>
+											<a class="badge badge-primary" href="/%E6%A0%BC%E5%A5%BD%E3%81%84%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%AB%E4%BF%BA%E3%81%AF%E3%81%AA%E3%82%8B.html">格好いお父さんに俺はなる</a>
+											<a class="badge badge-success" href="/%E9%80%A3%E7%AB%8B%E5%B7%AE%E5%88%86%E6%96%B9%E7%A8%8B%E5%BC%8F-%E8%A7%A3%E6%B3%95.html">連立差分方程式 解法</a>
+											<a class="badge badge-success" href="/%E7%9C%BA%E3%82%81%E3%81%AE%E3%81%84%E3%81%84%E9%83%A8%E5%B1%8B-%E7%A7%81%E3%81%AE%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93.html">眺めのいい部屋 私のお父さん</a>
+											<a class="badge badge-primary" href="/%E6%B5%85%E6%B0%B4%E6%96%B9%E7%A8%8B%E5%BC%8F-%E9%9B%A2%E6%95%A3%E5%8C%96.html">浅水方程式 離散化</a>
+											<a class="badge badge-dark" href="/%E7%90%86%E8%AB%96%E6%9B%B8%E3%81%AF-%E7%A2%81%E3%81%AE%E6%96%B9%E7%A8%8B%E5%BC%8F.html">理論書は 碁の方程式</a>
+											<a class="badge badge-success" href="/%E9%9D%9E%E6%96%8E%E6%AC%A1%E6%96%B9%E7%A8%8B%E5%BC%8F.html">非斎次方程式</a>
+											<a class="badge badge-info" href="/%E7%86%9F%E5%A5%B3%E8%A3%85%E5%AD%90%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93-%E5%A8%98%E3%81%AE%E5%BD%BC%E6%B0%8F%E3%81%AB%E7%8A%AF%E3%81%95%E3%82%8C%E3%81%A6-zip.html">熟女装子お父さん 娘の彼氏に犯されて zip</a>
+											<a class="badge badge-info" href="/%E9%AB%98-%E6%AC%A1-%E6%96%B9%E7%A8%8B%E5%BC%8F-%E3%81%AE-%E8%A7%A3.html">高 次 方程式 の 解</a>
+											<a class="badge badge-success" href="/%E6%A4%8E%E5%90%8D%E3%82%86%E3%81%AA-%E8%BF%91%E8%A6%AA-%E7%84%A1%E8%A8%80-%E7%9B%B8%E5%A7%A6-%E9%9A%A3%E3%81%AB%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%8C%E3%81%84%E3%82%8B%E3%81%AE%E3%82%88.html">椎名ゆな 近親 無言 相姦 隣にお父さんがいるのよ</a>
+						</div>
+<center>
+	<!-- MIDDLE BANNER ADS -->
+<script type="text/javascript">
+	atOptions = {
+		'key' : '2b77887421e2587a1a1b1d7c8a31a9e0',
+		'format' : 'iframe',
+		'height' : 250,
+		'width' : 300,
+		'params' : {}
+	};
+	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://jc32arlvqpv8.com/2b77887421e2587a1a1b1d7c8a31a9e0/invoke.js"></scr' + 'ipt>');
+</script>
+		
+	</center>
+					
+				</div>
+			</div>
+			<div class="row content mb-4">
+				<div class="col-md-12">					
+					
+	
+	<div class="card-columns">
+						
+	  <div class='card'>
+	  	<a href="https://img-blog.csdn.net/20180706235516363?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1JlYm9ybl9MZWU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" data-lightbox="roadtrip" data-title="线性方程组的直接法总结 Reborn Lee Csdn博客">
+						<img class="card-img" src="https://img-blog.csdn.net/20180706235516363?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1JlYm9ybl9MZWU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0mFkiauUgH9YNABvT4qTuAp94ohem5Xf-8n_jBSgRb0pJKXeNwtHeCZnIDp3SgT0_E_Q';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				线性方程组的直接法总结 Reborn Lee Csdn博客
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://i.ytimg.com/vi/ZKiXNpNCAxY/maxresdefault.jpg" data-lightbox="roadtrip" data-title="例題 加減消去法2 解二元一次聯立方程式 均一教育平台">
+						<img class="card-img" src="https://i.ytimg.com/vi/ZKiXNpNCAxY/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGigJNl-NjEw5RlkgmFCKvz2tgfJQ3hmyvAIXrogAPlHbT3LyHQB-iqQhO7nWKRHTFd3A';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				例題 加減消去法2 解二元一次聯立方程式 均一教育平台
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.maixj.net/pics/uploads/2016/11/xd-4.jpg" data-lightbox="roadtrip" data-title="用行列式直接写出联立方程的解 云上小悟">
+						<img class="card-img" src="https://www.maixj.net/pics/uploads/2016/11/xd-4.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLy0rlork7pfDtwfe8UWWeBzdhC4lUyqSJMavbf_G-RFBesYay9UQ8p1eWQfaCdnrhfkI';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				用行列式直接写出联立方程的解 云上小悟
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://img-blog.csdn.net/20180707000023757?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1JlYm9ybl9MZWU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" data-lightbox="roadtrip" data-title="线性方程组的直接法总结 Reborn Lee Csdn博客">
+						<img class="card-img" src="https://img-blog.csdn.net/20180707000023757?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1JlYm9ybl9MZWU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdH4xJx5Mwoo_7YIfL6fLWnvGT68hHV-YS-1R_WP6ZeGd0836wfuxErJxb48e7bengCjA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				线性方程组的直接法总结 Reborn Lee Csdn博客
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://i0.wp.com/4.bp.blogspot.com/-shCnl6Ki-YM/XZO2JXTSHTI/AAAAAAAAADw/qQabz7FuBR0opo0lpV1CB851D_3qJNW9ACLcBGAsYHQ/s1600/Fig.4.1.png" data-lightbox="roadtrip" data-title="Matlab 方程式近似解連立1次方程式 Liudong">
+						<img class="card-img" src="https://i0.wp.com/4.bp.blogspot.com/-shCnl6Ki-YM/XZO2JXTSHTI/AAAAAAAAADw/qQabz7FuBR0opo0lpV1CB851D_3qJNW9ACLcBGAsYHQ/s1600/Fig.4.1.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTB3iTyXlzv7N6qLn0uWpiZC99wNAxAkotVuusFjRDOe9EgvkSbanfFJNLiC72Wncfz9qc';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Matlab 方程式近似解連立1次方程式 Liudong
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://img-blog.csdn.net/20180707000219631?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1JlYm9ybl9MZWU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" data-lightbox="roadtrip" data-title="线性方程组的直接法总结 Reborn Lee Csdn博客">
+						<img class="card-img" src="https://img-blog.csdn.net/20180707000219631?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1JlYm9ybl9MZWU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRevWuqB28rYbRephX8w63Qd7zdMd62HjaUulY2Zi3VIdAHRJBvTq6RYF3tNqWkw1zMmKA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				线性方程组的直接法总结 Reborn Lee Csdn博客
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+				<div class='card'>	
+			<div class="d-block p-4">
+	</div>		  	
+		  	<h3 class="h6 p-2"><b></b></h3>
+					</div>
+		
+						
+	  <div class='card'>
+	  	<a href="https://img-blog.csdn.net/20180707000059535?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1JlYm9ybl9MZWU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" data-lightbox="roadtrip" data-title="线性方程组的直接法总结 Reborn Lee Csdn博客">
+						<img class="card-img" src="https://img-blog.csdn.net/20180707000059535?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1JlYm9ybl9MZWU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9xpDbfEiXYS2YgYf3cw8fNB54ha7O2FlzRqFjbn-S8A0HaEk5Qrca1ETA1r2wfS-f1Sk';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				线性方程组的直接法总结 Reborn Lee Csdn博客
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.zhihu.com/equation?tex=A%3D%5Cleft%5B%5Cbegin%7Barray%7D%7Bcccc%7D+a_%7B11%7D+%26+a_%7B12%7D+%26+%5Ccdots+%26+a_%7B1+n%7D+%5C%5C+a_%7B21%7D+%26+a_%7B22%7D+%26+%5Ccdots+%26+a_%7B2+n%7D+%5C%5C+%5Ccdots+%26+%5Ccdots+%26+%26+%5Ccdots+%5C%5C+a_%7Bn+1%7D+%26+a_%7Bn+2%7D+%26+%5Ccdots+%26+a_%7Bn+n%7D+%5Cend%7Barray%7D%5Cright%5D%2C+%5Cquad+X%3D%5Cleft%5B%5Cbegin%7Barray%7D%7Bccc%7D+x_%7B1%7D+%5C%5C+x_%7B2%7D+%5C%5C+%5Cvdots+%26+%5C%5C+x_%7Bn%7D+%5Cend%7Barray%7D%5Cright%5D%2C+%5Cquad+b%3D%5Cleft%5B%5Cbegin%7Barray%7D%7Bc%7D+b_%7B1%7D+%5C%5C+b_%7B2%7D+%5C%5C+%5Cvdots+%5C%5C+b_%7Bn%7D+%5Cend%7Barray%7D%5Cright%5D%5C%5C" data-lightbox="roadtrip" data-title="科学计算第八讲 线性方程组直接解法 知乎">
+						<img class="card-img" src="https://www.zhihu.com/equation?tex=A%3D%5Cleft%5B%5Cbegin%7Barray%7D%7Bcccc%7D+a_%7B11%7D+%26+a_%7B12%7D+%26+%5Ccdots+%26+a_%7B1+n%7D+%5C%5C+a_%7B21%7D+%26+a_%7B22%7D+%26+%5Ccdots+%26+a_%7B2+n%7D+%5C%5C+%5Ccdots+%26+%5Ccdots+%26+%26+%5Ccdots+%5C%5C+a_%7Bn+1%7D+%26+a_%7Bn+2%7D+%26+%5Ccdots+%26+a_%7Bn+n%7D+%5Cend%7Barray%7D%5Cright%5D%2C+%5Cquad+X%3D%5Cleft%5B%5Cbegin%7Barray%7D%7Bccc%7D+x_%7B1%7D+%5C%5C+x_%7B2%7D+%5C%5C+%5Cvdots+%26+%5C%5C+x_%7Bn%7D+%5Cend%7Barray%7D%5Cright%5D%2C+%5Cquad+b%3D%5Cleft%5B%5Cbegin%7Barray%7D%7Bc%7D+b_%7B1%7D+%5C%5C+b_%7B2%7D+%5C%5C+%5Cvdots+%5C%5C+b_%7Bn%7D+%5Cend%7Barray%7D%5Cright%5D%5C%5C" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2a3uffTcNaaZxqMh-B3OmGqJDrpZEwe68Er-zEIGzmcQLFFdhLqjl7F8edl2F9UlgDA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				科学计算第八讲 线性方程组直接解法 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://i2.kknews.cc/SIG=3nnuuol/3nso00032545rp6s56o7.jpg" data-lightbox="roadtrip" data-title="高中數學解析幾何 求軌跡方程方法最全總結 每日頭條">
+						<img class="card-img" src="https://i2.kknews.cc/SIG=3nnuuol/3nso00032545rp6s56o7.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKfLFRq_3chlXzq32orDfFr4DYX-YHYEm08uoFXVcbYJhdm9-uAODJhOZJZ1Cz5_C7p68';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				高中數學解析幾何 求軌跡方程方法最全總結 每日頭條
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://slidesplayer.com/slide/16731928/97/images/4/%E5%88%A9%E7%94%A8%E9%AB%98%E6%96%AF%E6%B6%88%E5%8E%BB%E6%B3%95%E6%B1%82%E7%9F%A9%E9%99%A3+%E6%A0%B9%E6%93%9A%E7%9F%A9%E9%99%A3%E4%B9%98%E6%B3%95%E7%9A%84%E5%AE%9A%E7%BE%A9%EF%BC%8C%E6%88%91%E5%80%91%E5%8F%AF%E4%BB%A5%E5%B0%87%E9%80%99%E5%80%8B%E7%9F%A9%E9%99%A3%E6%96%B9%E7%A8%8B%E5%BC%8F%E6%8B%86%E6%88%90+n+%E5%80%8B+n+%E8%AE%8A%E6%95%B8%E8%81%AF%E7%AB%8B%E6%96%B9%E7%A8%8B%E5%BC%8F.jpg" data-lightbox="roadtrip" data-title="反矩陣與行列式東海大學物理系 數值分析 Ppt Download">
+						<img class="card-img" src="https://slidesplayer.com/slide/16731928/97/images/4/%E5%88%A9%E7%94%A8%E9%AB%98%E6%96%AF%E6%B6%88%E5%8E%BB%E6%B3%95%E6%B1%82%E7%9F%A9%E9%99%A3+%E6%A0%B9%E6%93%9A%E7%9F%A9%E9%99%A3%E4%B9%98%E6%B3%95%E7%9A%84%E5%AE%9A%E7%BE%A9%EF%BC%8C%E6%88%91%E5%80%91%E5%8F%AF%E4%BB%A5%E5%B0%87%E9%80%99%E5%80%8B%E7%9F%A9%E9%99%A3%E6%96%B9%E7%A8%8B%E5%BC%8F%E6%8B%86%E6%88%90+n+%E5%80%8B+n+%E8%AE%8A%E6%95%B8%E8%81%AF%E7%AB%8B%E6%96%B9%E7%A8%8B%E5%BC%8F.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjON-pramr1O40-45Qrkv8-eeSieaL_VSERFvUwNAAEoEKvrV4G7QLFHjeziPYv0y7DhE';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				反矩陣與行列式東海大學物理系 數值分析 Ppt Download
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.newton.com.tw/img/4/62d/cGcq5iMhljZmdjNyYDZ3gjY4EWYzgjM0YmZyYGNkJGOzcTZyQWZhRDNiJGZv0WZ0l2LjlGcvU2apFmYv02bj5SdklWYi5yYyN3Ztl2LvoDc0RHa.jpg" data-lightbox="roadtrip" data-title="線性微分方程組 定義 一階線性微分方程組 高階常係數線性微分方程組 中文百科全書">
+						<img class="card-img" src="https://www.newton.com.tw/img/4/62d/cGcq5iMhljZmdjNyYDZ3gjY4EWYzgjM0YmZyYGNkJGOzcTZyQWZhRDNiJGZv0WZ0l2LjlGcvU2apFmYv02bj5SdklWYi5yYyN3Ztl2LvoDc0RHa.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQN6quC018xdnzGoBlOmVxRkXat0L7n-Quu93Sum_5yqe1FKi8RcvOByVmLxwsy14_Yd3I';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				線性微分方程組 定義 一階線性微分方程組 高階常係數線性微分方程組 中文百科全書
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic3.zhimg.com/v2-b99aee02f233c44f5b983caa3b4418ae_b.jpg" data-lightbox="roadtrip" data-title="科学计算第八讲 线性方程组直接解法 知乎">
+						<img class="card-img" src="https://pic3.zhimg.com/v2-b99aee02f233c44f5b983caa3b4418ae_b.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUCpurEaaNBhZGFkXpDVgWcDOqCbkupWOPaM9qUWrADBi_UGwIp1HixNqMKSPlAVUbeuo';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				科学计算第八讲 线性方程组直接解法 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://i0.wp.com/morxio.com/usr/uploads/2020/05/2472656409.png" data-lightbox="roadtrip" data-title="Lu 分解法lu分解 Rjhi">
+						<img class="card-img" src="https://i0.wp.com/morxio.com/usr/uploads/2020/05/2472656409.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyJQSvV14iJJtyNpPgd_QQ1bJYxaNqJFvs6vnsUG-8F5MB2fr23TOw4OAK1MHxpqDC290';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Lu 分解法lu分解 Rjhi
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://patentimages.storage.googleapis.com/0f/d1/fd/561a1d191f8e9f/CN104035915BD00092.png" data-lightbox="roadtrip" data-title="Cn104035915b 基于逆的多波前块ilu预处理方法 Google Patents">
+						<img class="card-img" src="https://patentimages.storage.googleapis.com/0f/d1/fd/561a1d191f8e9f/CN104035915BD00092.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIMhGJq4iAgDP2YaKixN8IsTOmbAEYRQ7Epydr1gy-Z-qQatdzEv_2Z1r7eXcyBTRk3Q';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Cn104035915b 基于逆的多波前块ilu预处理方法 Google Patents
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://i0.wp.com/jp.mathworks.com/help/symbolic/ugztransforms_f1-123225_002.png" data-lightbox="roadtrip" data-title="Matlab 方程式近似解連立1次方程式 Liudong">
+						<img class="card-img" src="https://i0.wp.com/jp.mathworks.com/help/symbolic/ugztransforms_f1-123225_002.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDwwfFtEqWxaxoEKo0Yv3--0YK0kaSxuwA5FbE-KwuEmHC7YCDdgWsfofUZxeza5ZaUYc';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Matlab 方程式近似解連立1次方程式 Liudong
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://img-blog.csdn.net/20180707000116646?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1JlYm9ybl9MZWU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" data-lightbox="roadtrip" data-title="线性方程组的直接法总结 Reborn Lee Csdn博客">
+						<img class="card-img" src="https://img-blog.csdn.net/20180707000116646?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1JlYm9ybl9MZWU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTe3Bp5m8KTxbWuPe_Bxy4AoAFHBkbtAROTj0OxTsxG9857e_i0VVVjObPs1RIIHh1exMY';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				线性方程组的直接法总结 Reborn Lee Csdn博客
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://i0.wp.com/cdn-ak.f.st-hatena.com/images/fotolife/k/karia68/20181103/20181103211046.jpg" data-lightbox="roadtrip" data-title="二階微分方程解二階微分方程 百度百科 Wjklv">
+						<img class="card-img" src="https://i0.wp.com/cdn-ak.f.st-hatena.com/images/fotolife/k/karia68/20181103/20181103211046.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0gqjmshDa4Tl5O12aTumS15YlonxtCBgkWizUsfpFd6TOKvkxLUlYZGjVwAEsBWJg3vk';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				二階微分方程解二階微分方程 百度百科 Wjklv
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://content.wolfram.com/uploads/sites/39/2020/04/km0416img37.png" data-lightbox="roadtrip" data-title="非線形偏微分方程式への有限要素法の適用 Wolfram Blog">
+						<img class="card-img" src="https://content.wolfram.com/uploads/sites/39/2020/04/km0416img37.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMcqS_gPk2WEkrEC-6VBw2wqADX36yl6rQtHwwmKPA6t15RyvQk1y-NE-RFQPo6ZN_bEM';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				非線形偏微分方程式への有限要素法の適用 Wolfram Blog
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://content.wolfram.com/uploads/sites/39/2020/04/km0416img2.png" data-lightbox="roadtrip" data-title="非線形偏微分方程式への有限要素法の適用 Wolfram Blog">
+						<img class="card-img" src="https://content.wolfram.com/uploads/sites/39/2020/04/km0416img2.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4f6Bqc4W0WgUDNFWCeJ52ydvKQAV0iZ7ZyjXzlzvdmrtcF98rby1MQS8e08eNBxlBE4s';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				非線形偏微分方程式への有限要素法の適用 Wolfram Blog
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://img-blog.csdn.net/20180707000203864?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1JlYm9ybl9MZWU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" data-lightbox="roadtrip" data-title="线性方程组的直接法总结 Reborn Lee Csdn博客">
+						<img class="card-img" src="https://img-blog.csdn.net/20180707000203864?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1JlYm9ybl9MZWU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSA9KKWqUb0u9p0vjO1OnqIA34qi2lNMufEybCxsfsjJIyYLS6Oqvrusk_8eMCRtt1PQMI';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				线性方程组的直接法总结 Reborn Lee Csdn博客
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://patentimages.storage.googleapis.com/d2/0c/04/dadec7d6754aff/CN104035915BC00031.png" data-lightbox="roadtrip" data-title="Cn104035915b 基于逆的多波前块ilu预处理方法 Google Patents">
+						<img class="card-img" src="https://patentimages.storage.googleapis.com/d2/0c/04/dadec7d6754aff/CN104035915BC00031.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkPNemypCIJ2CeMNXyZoWDwMS1z_bKm8cxAQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Cn104035915b 基于逆的多波前块ilu预处理方法 Google Patents
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://i0.wp.com/1.bp.blogspot.com/-0ljkWcM11NE/XbXgihdrO2I/AAAAAAAAHjs/j3MPi53Y3yAnMl4fflJpDDiLHRSFNEsqgCNcBGAsYHQ/s1600/xx_002.jpg" data-lightbox="roadtrip" data-title="二階微分方程解二階微分方程 百度百科 Wjklv">
+						<img class="card-img" src="https://i0.wp.com/1.bp.blogspot.com/-0ljkWcM11NE/XbXgihdrO2I/AAAAAAAAHjs/j3MPi53Y3yAnMl4fflJpDDiLHRSFNEsqgCNcBGAsYHQ/s1600/xx_002.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0-C29E1kLdNszrAvfOsXfXwNfVdqdp3VMgQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				二階微分方程解二階微分方程 百度百科 Wjklv
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://ccjou.files.wordpress.com/2012/09/picture-by-rows-fig-1.jpg?w=640" data-lightbox="roadtrip" data-title="線性方程組的幾何意義 線代啟示錄">
+						<img class="card-img" src="https://ccjou.files.wordpress.com/2012/09/picture-by-rows-fig-1.jpg?w=640" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkX81HnYBS6w4TyRU_SNvCe70RLjV7fjD8vQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				線性方程組的幾何意義 線代啟示錄
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://img-blog.csdn.net/20180707000146804?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1JlYm9ybl9MZWU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" data-lightbox="roadtrip" data-title="Tdgeujumjcqbym">
+						<img class="card-img" src="https://img-blog.csdn.net/20180707000146804?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1JlYm9ybl9MZWU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStmSYJuvLsejEH6wupnE4ngYMcU0Bvu4JjGg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Tdgeujumjcqbym
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://img-blog.csdn.net/20180707000134907?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1JlYm9ybl9MZWU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" data-lightbox="roadtrip" data-title="线性方程组的直接法总结 Reborn Lee Csdn博客">
+						<img class="card-img" src="https://img-blog.csdn.net/20180707000134907?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1JlYm9ybl9MZWU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHJqqfGlkT-CxwEziBW8U3Y8WW7le5yRDGlw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				线性方程组的直接法总结 Reborn Lee Csdn博客
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://wikimedia.org/api/rest_v1/media/math/render/svg/225bfdbd757b1d472caf497a455c4f5085a5fb97" data-lightbox="roadtrip" data-title="線性方程組 維基百科 自由的百科全書">
+						<img class="card-img" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/225bfdbd757b1d472caf497a455c4f5085a5fb97" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqjYKZgc48UhleHD7wWaJiT6Gcyf9u71AEEQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				線性方程組 維基百科 自由的百科全書
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://slidetodoc.com/presentation_image/5bd48743625a24749ab3dc9147a17f87/image-20.jpg" data-lightbox="roadtrip" data-title="Tridiagonal Matrix 12 The Explicit Time Integrations The">
+						<img class="card-img" src="https://slidetodoc.com/presentation_image/5bd48743625a24749ab3dc9147a17f87/image-20.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtkhyWwqfoS6vvYLaSicPiCpcBZO_lnYUpYQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Tridiagonal Matrix 12 The Explicit Time Integrations The
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://i.ytimg.com/vi/bj-33z91E30/maxresdefault.jpg" data-lightbox="roadtrip" data-title="國一下1之2 解二元一次聯立演練2 加減消去法108課綱未來教育x凱爺數學 Youtube">
+						<img class="card-img" src="https://i.ytimg.com/vi/bj-33z91E30/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5kmq0cHeaw3xVJgrlqfswvUOshJOxTt1sHA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				國一下1之2 解二元一次聯立演練2 加減消去法108課綱未來教育x凱爺數學 Youtube
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://i0.wp.com/2.bp.blogspot.com/-M7EXVGvN8-Y/XZO2ThEGBhI/AAAAAAAAAD0/xJhXyYwLkYUw1qG7CQqKxwtuo8__jw8GwCLcBGAsYHQ/w1200-h630-p-k-no-nu/C4_ex01.png" data-lightbox="roadtrip" data-title="Matlab 方程式近似解連立1次方程式 Liudong">
+						<img class="card-img" src="https://i0.wp.com/2.bp.blogspot.com/-M7EXVGvN8-Y/XZO2ThEGBhI/AAAAAAAAAD0/xJhXyYwLkYUw1qG7CQqKxwtuo8__jw8GwCLcBGAsYHQ/w1200-h630-p-k-no-nu/C4_ex01.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToFxdQwUn2R_gQASc0_aGqe-SbYdBMK9DCsA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Matlab 方程式近似解連立1次方程式 Liudong
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://img.youtube.com/vi/BtoPjD-GfFs/0.jpg" data-lightbox="roadtrip" data-title="例題 解二元一次聯立方程式 綜合應用3 解二元一次聯立方程式 均一教育平台">
+						<img class="card-img" src="https://img.youtube.com/vi/BtoPjD-GfFs/0.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQS8b12q5fQwvO1EjKQJtT1aVjtxeEZxROEMg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				例題 解二元一次聯立方程式 綜合應用3 解二元一次聯立方程式 均一教育平台
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://i0.wp.com/img-blog.csdn.net/20170912175001975?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQveWFuZzEwNTYw/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" data-lightbox="roadtrip" data-title="Lu 分解法lu分解 Rjhi">
+						<img class="card-img" src="https://i0.wp.com/img-blog.csdn.net/20170912175001975?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQveWFuZzEwNTYw/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6zZaFT7ECpU64o-iybiOPvti38Kk6ygzFew';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Lu 分解法lu分解 Rjhi
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://i1.wp.com/is5-ssl.mzstatic.com/image/thumb/Purple124/v4/c7/5f/e5/c75fe533-7548-22fe-d92f-8288966658ef/pr_source.png/643x0w.jpg" data-lightbox="roadtrip" data-title="二元二次方程式計算機download Pgzavo">
+						<img class="card-img" src="https://i1.wp.com/is5-ssl.mzstatic.com/image/thumb/Purple124/v4/c7/5f/e5/c75fe533-7548-22fe-d92f-8288966658ef/pr_source.png/643x0w.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRB5vzqYOMl8ddSIoaY_afg_peMvDsaTMCS5Q';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				二元二次方程式計算機download Pgzavo
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://patentimages.storage.googleapis.com/1b/b0/b2/1e8a0b37c7f5f7/CN104035915BC00041.png" data-lightbox="roadtrip" data-title="Cn104035915b 基于逆的多波前块ilu预处理方法 Google Patents">
+						<img class="card-img" src="https://patentimages.storage.googleapis.com/1b/b0/b2/1e8a0b37c7f5f7/CN104035915BC00041.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUxvenqJzpvhF--VIqEtpVAeDyTpvEKI0dxw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Cn104035915b 基于逆的多波前块ilu预处理方法 Google Patents
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+		
+	</div>
+
+		 
+		
+		
+				</div>
+				<div class="col-sm-12 widget">
+					<div class="d-block p-4">
+	<center>
+		<!-- BOTTOM BANNER ADS -->
+<script async="async" data-cfasync="false" src="//jc32arlvqpv8.com/eb47a424ae325c90cca32780149785c3/invoke.js"></script>
+<div id="container-eb47a424ae325c90cca32780149785c3"></div>
+
+	</center>
+</div>				</div>
+			</div>
+			<div class="row footer">
+				<div class="col-md-12 text-center py-4">
+										<a href="/p/dmca.html">Dmca</a>
+										<a href="/p/contact.html">Contact</a>
+										<a href="/p/privacy-policy.html">Privacy Policy</a>
+										<a href="/p/copyright.html">Copyright</a>
+					
+				</div>
+			</div>
+		</main>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js" integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js" integrity="sha256-CtKylYan+AJuoH8jrMht1+1PMhMqrKnB8K5g012WN5I=" crossorigin="anonymous"></script>
+		
+		<!-- Footer CSS JS -->
+		
+		
+		
+			<script type='text/javascript' src='//jc32arlvqpv8.com/ef/d5/10/efd510237a3143727bed46803ec35b8d.js'></script>
+</body>
+</html>

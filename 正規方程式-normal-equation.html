@@ -1,0 +1,682 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha256-L/W5Wfqfa0sdBNIKN9cG6QA5F2qx4qICmU2VgLruv9Y=" crossorigin="anonymous" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/css/lightbox.min.css" integrity="sha256-tBxlolRHP9uMsEFKVk+hk//ekOlXOixLKvye5W2WR5c=" crossorigin="anonymous" />
+		<link href="https://fonts.googleapis.com/css?family=Mr+Dafoe" rel="stylesheet" type="text/css">
+
+		<style type="text/css">
+			html,body{font-family:"Open Sans",Arial,sans-serif;font-size:14px;font-weight:400;background:#f3f3f3 url(https://img-blog.csdn.net/20160401140555820
+) no-repeat center center fixed;background-size:cover;height:100%}#title{font-family:"Mr Dafoe",Times,serif;font-size:34px;background:rgba(255,255,255,.8);margin-bottom:34px}.header{padding-bottom:13px;margin-bottom:13px;border-bottom:1px solid #eee}a{color:#26ADE4;text-decoration:none}#title a{color:#333;margin-left:21px}#title a:hover{text-decoration:none;color:#26ADE4}.sidebar ul{margin:0;padding:0}.sidebar ul li{list-style:none}.footer{margin-top:21px;padding-top:13px;border-top:1px solid #eee}.footer a{margin:0 15px}.navi{margin:13px 0 13px 0;padding:13px}.navi a{margin:5px 2px;font-size:95%}.main{margin-top: 6rem;}.form-inline .form-control{min-width: 300px;}.v-cover{height: 380px; object-fit: cover;}.v-image{height: 200px; object-fit: cover;}.dwn-cover{max-height: 460px; object-fit: cover;}.main{margin-top: 6rem;}.form-inline .form-control{min-width: 300px;}			
+		</style>
+
+		<title>正規方程式 Normal Equation</title>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/", 
+  "@type": "Article", 
+  "author": {
+    "@type": "Person",
+    "name": "James"
+  },
+  "headline": "正規方程式 Normal Equation",
+  "datePublished": "2021-04-24",
+  "image": [https://markdown-1251440652.cos.ap-guangzhou.myqcloud.com/2018-08-09-135641.png,https://www.jvruo.com/usr/uploads/2020/01/346930254.png,https://img-blog.csdn.net/20171119211232428?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvTkZNU1I=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center],
+  "publisher": {
+    "@type": "Organization",
+    "name": "Tukang Parkir Gerobak",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://via.placeholder.com/512.png?text=正規方程式 normal equation",
+      "width": 512,
+      "height": 512
+    }
+  }
+}
+</script>
+		<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-957NGNKQ70"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-957NGNKQ70');
+</script>
+
+<script type='text/javascript' src='//jc32arlvqpv8.com/1a/82/2e/1a822ef8a40a0fbab3c4ea12a5d2bb02.js'></script>
+</head>
+	<body>
+		<header class="bg-white fixed-top">			
+			<nav class="navbar navbar-light bg-white mb-0">
+				<div class="container justify-content-center justify-content-sm-between">	
+				  <a href="/" title="Blog" class="navbar-brand mb-1">Blog</a>
+				  				</div>			  
+			</nav>				
+		</header>
+		<main class="main container bg-white">
+			<div class="col-md-12 my-4" align="center">
+				<div class="d-block p-4">
+	<br/><center>
+<!-- TOP BANNER ADS -->
+</center><br/>
+</div>			</div>
+			<div class="row header">
+				<div class="col-sm-12 text-center p-2">
+						<h1>正規方程式 Normal Equation</h1>
+
+	
+	<div class="navi text-center">
+										<a class="badge badge-light" href="/%E9%A0%82-%E3%83%93%E3%83%BC%E3%83%AB-cm-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93.html">頂 ビール cm お父さん</a>
+											<a class="badge badge-danger" href="/%E9%9D%9E%E6%96%8E%E6%AC%A1%E6%96%B9%E7%A8%8B%E5%BC%8F.html">非斎次方程式</a>
+											<a class="badge badge-success" href="/%E9%9A%9C%E5%AE%B3%E3%82%92%E3%82%82%E3%81%A4%E5%AD%90%E3%81%A9%E3%82%82%E3%81%9F%E3%81%A1%E3%81%A8-%E3%81%9D%E3%81%AE%E3%81%94%E5%85%84%E5%BC%9F%E3%82%84-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%8A%E6%AF%8D%E3%81%95%E3%82%93%E3%81%8C%E7%A3%AF%E3%81%AE%E6%B5%A6%E3%81%AE%E6%B5%B7%E3%81%A7%E9%81%8A%E3%81%B6%E6%97%A5.html">障害をもつ子どもたちと そのご兄弟や お父さんお母さんが磯の浦の海で遊ぶ日</a>
+											<a class="badge badge-light" href="/%E7%88%B6%E3%81%A8%E5%A8%98%E3%81%AE%E8%BF%91%E8%A6%AA%E3%82%BB%E3%83%83%E3%82%AF%E3%82%B9-%E9%85%92%E7%99%96%E3%81%8C%E6%82%AA%E3%81%8F-%E8%A6%AA%E9%9B%A2%E3%82%8C%E3%82%82%E5%87%BA%E6%9D%A5%E3%81%AA%E3%81%84%E7%A7%81%E3%81%AF%E3%81%84%E3%81%A4%E3%82%82%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%AB%E8%BF%B7%E6%83%91%E3%82%92%E6%8E%9B%E3%81%91%E3%81%A6%E3%81%84%E3%81%BE%E3%81%99-%E3%81%9D%E3%82%93%E3%81%AA%E3%81%A0%E3%81%8B%E3%82%89%E3%81%82%E3%81%AE%E6%97%A5%E3%82%82-%E7%A5%9E.html">父と娘の近親セックス 酒癖が悪く 親離れも出来ない私はいつもお父さんに迷惑を掛けています そんなだからあの日も 神</a>
+											<a class="badge badge-dark" href="/%E7%9B%B8%E5%8F%8D%E6%96%B9%E7%A8%8B%E5%BC%8F-6%E6%AC%A1.html">相反方程式 6次</a>
+											<a class="badge badge-dark" href="/%E7%A5%9E%E6%88%B8%E5%A4%A7-%E5%B9%B3%E9%9D%A2%E3%81%AE%E6%96%B9%E7%A8%8B%E5%BC%8F.html">神戸大 平面の方程式</a>
+											<a class="badge badge-secondary" href="/%EF%BC%91%EF%BC%90%E3%81%8B%E6%9C%88-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93-%E5%A5%BD%E3%81%8D.html">１０か月 お父さん 好き</a>
+											<a class="badge badge-warning" href="/%E9%AB%98%E9%A1%8D%E9%85%8D%E5%BD%93%E3%81%AE%E6%96%B9%E7%A8%8B%E5%BC%8F.html">高額配当の方程式</a>
+											<a class="badge badge-info" href="/%E6%B0%B4%E7%B4%A0%E5%88%86%E5%AD%90%E3%82%A4%E3%82%AA%E3%83%B3-%E6%B0%B8%E5%B9%B4%E6%96%B9%E7%A8%8B%E5%BC%8F-%E6%B3%A2%E5%8B%95%E9%96%A2%E6%95%B0.html">水素分子イオン 永年方程式 波動関数</a>
+											<a class="badge badge-dark" href="/%E7%94%9F%E5%91%BD%E4%BF%9D%E9%99%BA-cm-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%AE%E3%81%8A%E9%99%B0%E3%81%A7%E3%81%99.html">生命保険 cm お父さんのお陰です</a>
+											<a class="badge badge-light" href="/%E9%80%A3%E7%AB%8B%E7%B7%9A%E5%BD%A2%E6%96%B9%E7%A8%8B%E5%BC%8F-%E7%9B%B4%E6%8E%A5%E6%B3%95.html">連立線形方程式 直接法</a>
+											<a class="badge badge-success" href="/%E6%9C%89%E5%8A%B9%E6%9C%9F%E9%96%93%E6%97%A9%E3%82%8F%E3%81%8B%E3%82%8A%E6%96%B9%E7%A8%8B%E5%BC%8F.html">有効期間早わかり方程式</a>
+											<a class="badge badge-dark" href="/%E9%9D%9E%E7%B7%9A%E5%BD%A2%E5%81%8F%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B%E5%BC%8F%E5%85%A5%E9%96%80-1%E6%AC%A1%E5%85%83%E7%A7%BB%E6%B5%81%E6%96%B9%E7%A8%8B%E5%BC%8F%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%A6.html">非線形偏微分方程式入門 1次元移流方程式を使って</a>
+											<a class="badge badge-warning" href="/%E8%82%B2%E5%85%90-%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88-%E5%92%8C%E6%AD%8C%E5%B1%B1%E5%B8%82-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93.html">育児 イベント 和歌山市 お父さん</a>
+											<a class="badge badge-success" href="/%E7%8C%AB-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93-%E6%85%8C%E3%81%A6%E3%81%A6.html">猫 お父さん 慌てて</a>
+						</div>
+<center>
+	<!-- MIDDLE BANNER ADS -->
+<script type="text/javascript">
+	atOptions = {
+		'key' : '2b77887421e2587a1a1b1d7c8a31a9e0',
+		'format' : 'iframe',
+		'height' : 250,
+		'width' : 300,
+		'params' : {}
+	};
+	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://jc32arlvqpv8.com/2b77887421e2587a1a1b1d7c8a31a9e0/invoke.js"></scr' + 'ipt>');
+</script>
+		
+	</center>
+					
+				</div>
+			</div>
+			<div class="row content mb-4">
+				<div class="col-md-12">					
+					
+	
+	<div class="card-columns">
+						
+	  <div class='card'>
+	  	<a href="https://miro.medium.com/max/595/1*E7lk5W9Wx64p6pcyvUE92w.png" data-lightbox="roadtrip" data-title="Normal Equation 正規方程式 在機器學習的實作中 如果想要求得線性迴歸的參數 我們通常會使用 By Keyo Medium">
+						<img class="card-img" src="https://miro.medium.com/max/595/1*E7lk5W9Wx64p6pcyvUE92w.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKna3uS11pa5ZDR-9ev0Tqm_KwKQTpRU9mmYVyd2NsM5_R939ysZCVuXyrQjnJ2KqsBUc';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Normal Equation 正規方程式 在機器學習的實作中 如果想要求得線性迴歸的參數 我們通常會使用 By Keyo Medium
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://miro.medium.com/max/1248/1*jRFqvHP39evPV4woblcqzQ.png" data-lightbox="roadtrip" data-title="Normal Equation 正規方程式 在機器學習的實作中 如果想要求得線性迴歸的參數 我們通常會使用 By Keyo Medium">
+						<img class="card-img" src="https://miro.medium.com/max/1248/1*jRFqvHP39evPV4woblcqzQ.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVVP6paS5M-AMGZJMWdVpaUuCsP4zh6gi_9Ye-7x8BG-ftksY4WF8jTZT6L2ZrD6VQtg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Normal Equation 正規方程式 在機器學習的實作中 如果想要求得線性迴歸的參數 我們通常會使用 By Keyo Medium
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://miro.medium.com/max/1114/1*eh2EveEzc5O8PoUX18o0ag.png" data-lightbox="roadtrip" data-title="Normal Equation 正規方程式 在機器學習的實作中 如果想要求得線性迴歸的參數 我們通常會使用 By Keyo Medium">
+						<img class="card-img" src="https://miro.medium.com/max/1114/1*eh2EveEzc5O8PoUX18o0ag.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGActPqZnsWxSa_MuKGtly3gJvXNohNJ2CkFAv139J3T2I3aEOrFdacajuYuihlEnkbQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Normal Equation 正規方程式 在機器學習的實作中 如果想要求得線性迴歸的參數 我們通常會使用 By Keyo Medium
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://images2015.cnblogs.com/blog/1183769/201707/1183769-20170714213408134-1304360243.png" data-lightbox="roadtrip" data-title="正规方程 Normal Equation 对于线性回归问题的一种快速解法 J K Guo 博客园">
+						<img class="card-img" src="https://images2015.cnblogs.com/blog/1183769/201707/1183769-20170714213408134-1304360243.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRK0KQmxE7HVfNJ22biwaEb37rkL83Kfj-URMp2FiSvQPN9hCX6KNzYkh-yUle2Kb5tVgY';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				正规方程 Normal Equation 对于线性回归问题的一种快速解法 J K Guo 博客园
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://upload-images.jianshu.io/upload_images/5361608-dd6f3c9d54054fe6.PNG?imageMogr2/auto-orient/strip|imageView2/2/w/974/format/webp" data-lightbox="roadtrip" data-title="Normal Equation 正规方程 简书">
+						<img class="card-img" src="https://upload-images.jianshu.io/upload_images/5361608-dd6f3c9d54054fe6.PNG?imageMogr2/auto-orient/strip|imageView2/2/w/974/format/webp" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQM2nMyXEiQE5eT4eDMjUtl-GTbZqNKlNKQQyg7jFrqR_y6aMpOP5aOucgFMuBPtwKNbJI';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Normal Equation 正规方程 简书
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic1.zhimg.com/v2-e1f0bf4f34d69dfa813b6aa6c1962597_720w.jpg?source=172ae18b" data-lightbox="roadtrip" data-title="线性回归的正交方程 Normal Equation 推导 知乎">
+						<img class="card-img" src="https://pic1.zhimg.com/v2-e1f0bf4f34d69dfa813b6aa6c1962597_720w.jpg?source=172ae18b" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPAKrSyywDOp3aeSwWuiRFZskwQUNE3SYs2qEaDmPCCv7O0WDmoWCR8dYbnDK0EkBSf5w';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				线性回归的正交方程 Normal Equation 推导 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+				<div class='card'>	
+			<div class="d-block p-4">
+	</div>		  	
+		  	<h3 class="h6 p-2"><b></b></h3>
+					</div>
+		
+						
+	  <div class='card'>
+	  	<a href="https://upload-images.jianshu.io/upload_images/5361608-dbce0c2d4051c74a.png?imageMogr2/auto-orient/strip|imageView2/2/w/935/format/webp" data-lightbox="roadtrip" data-title="Ycgvzeb7v6bkxm">
+						<img class="card-img" src="https://upload-images.jianshu.io/upload_images/5361608-dbce0c2d4051c74a.png?imageMogr2/auto-orient/strip|imageView2/2/w/935/format/webp" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmLZhzmd6lKTrGhXNKFb2-COZ-uTz-nffrrKsceu9Kb-8LZaL4tXI2MellUsLWyn0T19U';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Ycgvzeb7v6bkxm
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://miro.medium.com/max/1082/1*TsYvbJcG0XBx5A0zJ4oecg.png" data-lightbox="roadtrip" data-title="Normal Equation 正規方程式 在機器學習的實作中 如果想要求得線性迴歸的參數 我們通常會使用 By Keyo Medium">
+						<img class="card-img" src="https://miro.medium.com/max/1082/1*TsYvbJcG0XBx5A0zJ4oecg.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfIrjB5HhjFOIuneLC_DmUIN2Exay9w4slIgWOZ1cXlNRSZTOnO7h5-hHdzN4NdHabHqE';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Normal Equation 正規方程式 在機器學習的實作中 如果想要求得線性迴歸的參數 我們通常會使用 By Keyo Medium
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.zhihu.com/equation?tex=%5CLarge+X%3D%5Cbegin%7Bbmatrix%7D+x_0%5E%7B%281%29%7D%26%5Ccdots%26x_n%5E%7B%281%29%7D%5C%5C%5Cvdots%26%5Cddots%26%5Cvdots%5C%5Cx_0%5E%7B%28m%29%7D%26...%26x_n%5E%7B%28m%29%7D%5Cend%7Bbmatrix%7D%5Cquad" data-lightbox="roadtrip" data-title="详解正规方程 Normal Equation 知乎">
+						<img class="card-img" src="https://www.zhihu.com/equation?tex=%5CLarge+X%3D%5Cbegin%7Bbmatrix%7D+x_0%5E%7B%281%29%7D%26%5Ccdots%26x_n%5E%7B%281%29%7D%5C%5C%5Cvdots%26%5Cddots%26%5Cvdots%5C%5Cx_0%5E%7B%28m%29%7D%26...%26x_n%5E%7B%28m%29%7D%5Cend%7Bbmatrix%7D%5Cquad" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTN5bOMESLYL87dw2w5FfCHraoD7dFaDlpyuS90ThhhYPmVg4_5cdJbbzQE_DOrW-5bzbc';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				详解正规方程 Normal Equation 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://2.bp.blogspot.com/-VIV8SToGu9s/VKFk6Z9OhiI/AAAAAAAAANM/05MS6-6jJgA/s1600/%E8%9E%A2%E5%B9%95%E5%BF%AB%E7%85%A7%2B2014-12-29%2B%E4%B8%8B%E5%8D%8810.23.27.png" data-lightbox="roadtrip" data-title="Hard Work Beats Talent When Talent Doesn T Work Hard 機器學習 七 正規方程法 Normal Equation">
+						<img class="card-img" src="http://2.bp.blogspot.com/-VIV8SToGu9s/VKFk6Z9OhiI/AAAAAAAAANM/05MS6-6jJgA/s1600/%E8%9E%A2%E5%B9%95%E5%BF%AB%E7%85%A7%2B2014-12-29%2B%E4%B8%8B%E5%8D%8810.23.27.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIyGMbKc1Lr_xpY4X1HuJjrwdxvzoJqowGjhuoe8Y83pYEFmDGwwV1NxPZfQ9eSq_V9Tw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Hard Work Beats Talent When Talent Doesn T Work Hard 機器學習 七 正規方程法 Normal Equation
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://img-blog.csdn.net/20160401140555820" data-lightbox="roadtrip" data-title="正规方程normal Equation 天泽28的专栏 Csdn博客">
+						<img class="card-img" src="https://img-blog.csdn.net/20160401140555820" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTh08LhnQvAk-AG-wzU1NzTcqLnc6rZisAcQtkUHVqIRN1U0uSIDvY6mHzyCn5kJBod3HU';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				正规方程normal Equation 天泽28的专栏 Csdn博客
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic2.zhimg.com/v2-3a78713bc147c733805b778184ddad08_1440w.jpg?source=172ae18b" data-lightbox="roadtrip" data-title="详解正规方程 Normal Equation 知乎">
+						<img class="card-img" src="https://pic2.zhimg.com/v2-3a78713bc147c733805b778184ddad08_1440w.jpg?source=172ae18b" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0QBcw56QzdALxyylXSdhIJQsFHqPzLRTRnvbKuNM95N2_Ay3aDDcC0IeTpQOIrf-pZg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				详解正规方程 Normal Equation 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://4.bp.blogspot.com/-IsIZXqA7Uc8/VKFow-G1ggI/AAAAAAAAANg/vEQHszfxAyI/s1600/%E8%9E%A2%E5%B9%95%E5%BF%AB%E7%85%A7%2B2014-12-29%2B%E4%B8%8B%E5%8D%8810.43.48.png" data-lightbox="roadtrip" data-title="Hard Work Beats Talent When Talent Doesn T Work Hard 機器學習 七 正規方程法 Normal Equation">
+						<img class="card-img" src="http://4.bp.blogspot.com/-IsIZXqA7Uc8/VKFow-G1ggI/AAAAAAAAANg/vEQHszfxAyI/s1600/%E8%9E%A2%E5%B9%95%E5%BF%AB%E7%85%A7%2B2014-12-29%2B%E4%B8%8B%E5%8D%8810.43.48.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGq_CrMS5jb2idDN1NN5uxtJ10qCyhpuxB8eg3Qz9kUtFH6GsiyS5-yQ6nv6CT2juPspE';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Hard Work Beats Talent When Talent Doesn T Work Hard 機器學習 七 正規方程法 Normal Equation
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://img-blog.csdn.net/20171119211232428?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvTkZNU1I=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" data-lightbox="roadtrip" data-title="机器学习 线性回归之normal Equation 矩阵求导与线性代数视角 Zhaosarsa的博客 Csdn博客">
+						<img class="card-img" src="https://img-blog.csdn.net/20171119211232428?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvTkZNU1I=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiPpiRzQyMBApi_UVbpUac13gYERFX82z3EIVeS0XvzgW65v4kX7CoBSZiME-v8LEK_BQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				机器学习 线性回归之normal Equation 矩阵求导与线性代数视角 Zhaosarsa的博客 Csdn博客
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://forest-pic.oss-cn-beijing.aliyuncs.com/20200430094316.png" data-lightbox="roadtrip" data-title="吴恩达机器学习课程 4 Linear Regression With Multiple Variables Forestneo S Space">
+						<img class="card-img" src="https://forest-pic.oss-cn-beijing.aliyuncs.com/20200430094316.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2df8skOhLNYPp6ldI9hHYImqhzOUC7ttvCs7k5rjDWyDqeKS22ENDAgUVx-2Z0MThOsQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				吴恩达机器学习课程 4 Linear Regression With Multiple Variables Forestneo S Space
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic1.xuehuaimg.com/proxy/csdn/https://img-blog.csdn.net/20141017101058415" data-lightbox="roadtrip" data-title="正規方程組 The Normal Equations 台部落">
+						<img class="card-img" src="https://pic1.xuehuaimg.com/proxy/csdn/https://img-blog.csdn.net/20141017101058415" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMbIvmRurIOfyZ0VI0WNOen85Hja5Sbtc10Wf3AMgAFpzA2hKQrRAN1v49Nvh8DhSxCHc';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				正規方程組 The Normal Equations 台部落
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://img-blog.csdn.net/20160401151513113" data-lightbox="roadtrip" data-title="正规方程normal Equation 天泽28的专栏 Csdn博客">
+						<img class="card-img" src="https://img-blog.csdn.net/20160401151513113" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRanhDCtEX8cwO8yt_DEE_kmkfCQxvR_kRWkbufIbsVTto5-W3wBR8DlruAVxLuEFAz5AE';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				正规方程normal Equation 天泽28的专栏 Csdn博客
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://img2018.cnblogs.com/blog/1577817/201902/1577817-20190213191950014-1943472415.png" data-lightbox="roadtrip" data-title="吴恩达机器学习笔记13 正规方程 Normal Equation Neoml 博客园">
+						<img class="card-img" src="https://img2018.cnblogs.com/blog/1577817/201902/1577817-20190213191950014-1943472415.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAEAFk86QkRlWV1hFKryRl8Ok8Ai5m-s-Nr2wBiTdfoUfG3OCoujko4mhZlxOxcC6Cfg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				吴恩达机器学习笔记13 正规方程 Normal Equation Neoml 博客园
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://i2.wp.com/img-blog.csdnimg.cn/20200412002514322.png?" data-lightbox="roadtrip" data-title="机器学习作业2 多变量线性回归以及normal Equation 正规方程 吴恩达 码农家园">
+						<img class="card-img" src="https://i2.wp.com/img-blog.csdnimg.cn/20200412002514322.png?" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBfFyn_FhI5wFSl6I2JpqNRJSgNlrkeokVprtIZs-oKpjqgtNmZh2juZ8saFinMGQmYQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				机器学习作业2 多变量线性回归以及normal Equation 正规方程 吴恩达 码农家园
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.programmersought.com/images/588/35d9e032e4cc2f478f01c15237928ccc.png" data-lightbox="roadtrip" data-title="The Normal Equation Method Of Linear Regression And The Feature Scaling Of Data Programmer Sought">
+						<img class="card-img" src="https://www.programmersought.com/images/588/35d9e032e4cc2f478f01c15237928ccc.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgGsImjRlUaYAyc5t-pvi1PnSE2DHe2KxhYCMf5dqj1z7NDtE-30BGDALAAIGH6EOrxw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				The Normal Equation Method Of Linear Regression And The Feature Scaling Of Data Programmer Sought
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://jupter-oss.oss-cn-hangzhou.aliyuncs.com/public/files/image/1095279408848/1558879586931_R8Vg1qzlNL.jpg" data-lightbox="roadtrip" data-title="Notebook">
+						<img class="card-img" src="http://jupter-oss.oss-cn-hangzhou.aliyuncs.com/public/files/image/1095279408848/1558879586931_R8Vg1qzlNL.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTv660oBrzGZvU6LvG4h4-aOXFmtJyh-GNzAQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Notebook
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://markdown-1251440652.cos.ap-guangzhou.myqcloud.com/2018-08-09-135641.png" data-lightbox="roadtrip" data-title="吴恩达机器学习笔记 二 多元梯度下降 正规方程 Ryan Li God">
+						<img class="card-img" src="https://markdown-1251440652.cos.ap-guangzhou.myqcloud.com/2018-08-09-135641.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyvZftpR9MqXFOXckiToFc88q1Y58UWC1zzQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				吴恩达机器学习笔记 二 多元梯度下降 正规方程 Ryan Li God
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.pianshen.com/images/52/d2e19ec254dff715edb89677c32d40c4.png" data-lightbox="roadtrip" data-title="机器学习 Normal Equation公式推导 程序员大本营">
+						<img class="card-img" src="https://www.pianshen.com/images/52/d2e19ec254dff715edb89677c32d40c4.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCC3nEW4cqV2mF2-Klx7Zl_ZJGFiZP1_M4Vg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				机器学习 Normal Equation公式推导 程序员大本营
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic1.xuehuaimg.com/proxy/csdn/https://img-blog.csdn.net/20141017101258531" data-lightbox="roadtrip" data-title="正規方程組 The Normal Equations 台部落">
+						<img class="card-img" src="https://pic1.xuehuaimg.com/proxy/csdn/https://img-blog.csdn.net/20141017101258531" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRo-Oy_QmFOb4yEEVmlDmYlwlp_EMxouATNdQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				正規方程組 The Normal Equations 台部落
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://image3.slideserve.com/6868103/slide11-l.jpg" data-lightbox="roadtrip" data-title="Ppt 第十一章 簡單直線迴歸與簡單相關simple Linear Regression And Simple Correlation Powerpoint Presentation Id 6868103">
+						<img class="card-img" src="https://image3.slideserve.com/6868103/slide11-l.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyTnQy-7-By2oNBOaX-rX5TKQUuCNWfOGN1g';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Ppt 第十一章 簡單直線迴歸與簡單相關simple Linear Regression And Simple Correlation Powerpoint Presentation Id 6868103
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://raw.githubusercontent.com/shengtao96/picture/master/5.png" data-lightbox="roadtrip" data-title="机器学习笔记 第二周 鲭兜的博客">
+						<img class="card-img" src="https://raw.githubusercontent.com/shengtao96/picture/master/5.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTQASsB122MUb-1JhlOtApS7qLS1SYm3Opdw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				机器学习笔记 第二周 鲭兜的博客
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.jvruo.com/usr/uploads/2020/01/346930254.png" data-lightbox="roadtrip" data-title="蒟蒻机器学习基础 正规方程法 蒟蒻のblog">
+						<img class="card-img" src="https://www.jvruo.com/usr/uploads/2020/01/346930254.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNPGt-WXYmpzh0JVCaIhtB4MFpnjx8UHO9wA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				蒟蒻机器学习基础 正规方程法 蒟蒻のblog
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://i2.wp.com/img-blog.csdnimg.cn/20200412002117674.png" data-lightbox="roadtrip" data-title="机器学习作业2 多变量线性回归以及normal Equation 正规方程 吴恩达 码农家园">
+						<img class="card-img" src="https://i2.wp.com/img-blog.csdnimg.cn/20200412002117674.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUdbQ8TS_VPoXCjCCU5cwJGyDhb5BVatHCYA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				机器学习作业2 多变量线性回归以及normal Equation 正规方程 吴恩达 码农家园
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://static.leiphone.com/uploads/new/sns/article/202010/1603263764101499.png?imageMogr2/format/jpg/quality/90" data-lightbox="roadtrip" data-title="深度学习和机器学习的线性代数入门 雷锋网">
+						<img class="card-img" src="https://static.leiphone.com/uploads/new/sns/article/202010/1603263764101499.png?imageMogr2/format/jpg/quality/90" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7r1ORax9rnJqPfTRvBVCfvyEHnTLpI0nO3g';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				深度学习和机器学习的线性代数入门 雷锋网
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.programmersought.com/images/216/29906128e32679a894e1cc4a1c55ed40.png" data-lightbox="roadtrip" data-title="Normal Equation Programmer Sought">
+						<img class="card-img" src="https://www.programmersought.com/images/216/29906128e32679a894e1cc4a1c55ed40.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzggYjh5sGJtkR0NvkPOOPhQrVl44aCb1ROg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Normal Equation Programmer Sought
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.pianshen.com/images/586/749be253ffeb4e206ad484a16556fbca.png" data-lightbox="roadtrip" data-title="正规方程 程序员大本营">
+						<img class="card-img" src="https://www.pianshen.com/images/586/749be253ffeb4e206ad484a16556fbca.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTu79j3FZnWYFBNJXrguX4OmuWDLKC95lE4gg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				正规方程 程序员大本营
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic4.zhimg.com/80/v2-758896b68fc54384bfbcecccd9649c5b_1440w.jpg" data-lightbox="roadtrip" data-title="正规方程 知乎">
+						<img class="card-img" src="https://pic4.zhimg.com/80/v2-758896b68fc54384bfbcecccd9649c5b_1440w.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSA0KlzwLb_q2YhU5AOwqxh-NHOsH060VFBtg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				正规方程 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic4.zhimg.com/v2-3c6aeeab5902358e39478faa4db5a907_b.jpg" data-lightbox="roadtrip" data-title="吴恩达 Machine Learning 精炼笔记2 梯度下降与正规方程 知乎 Osc Yevhupr2 Mdeditor">
+						<img class="card-img" src="https://pic4.zhimg.com/v2-3c6aeeab5902358e39478faa4db5a907_b.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZI3Wc2Cz-yftetj-F7npg62VPi3_d9Z2SpA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				吴恩达 Machine Learning 精炼笔记2 梯度下降与正规方程 知乎 Osc Yevhupr2 Mdeditor
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+		
+	</div>
+
+		 
+		
+		
+				</div>
+				<div class="col-sm-12 widget">
+					<div class="d-block p-4">
+	<center>
+		<!-- BOTTOM BANNER ADS -->
+<script async="async" data-cfasync="false" src="//jc32arlvqpv8.com/eb47a424ae325c90cca32780149785c3/invoke.js"></script>
+<div id="container-eb47a424ae325c90cca32780149785c3"></div>
+
+	</center>
+</div>				</div>
+			</div>
+			<div class="row footer">
+				<div class="col-md-12 text-center py-4">
+										<a href="/p/dmca.html">Dmca</a>
+										<a href="/p/contact.html">Contact</a>
+										<a href="/p/privacy-policy.html">Privacy Policy</a>
+										<a href="/p/copyright.html">Copyright</a>
+					
+				</div>
+			</div>
+		</main>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js" integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js" integrity="sha256-CtKylYan+AJuoH8jrMht1+1PMhMqrKnB8K5g012WN5I=" crossorigin="anonymous"></script>
+		
+		<!-- Footer CSS JS -->
+		
+		
+		
+			<script type='text/javascript' src='//jc32arlvqpv8.com/ef/d5/10/efd510237a3143727bed46803ec35b8d.js'></script>
+</body>
+</html>

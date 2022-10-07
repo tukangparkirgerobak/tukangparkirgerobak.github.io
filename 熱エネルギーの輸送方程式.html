@@ -1,0 +1,682 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha256-L/W5Wfqfa0sdBNIKN9cG6QA5F2qx4qICmU2VgLruv9Y=" crossorigin="anonymous" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/css/lightbox.min.css" integrity="sha256-tBxlolRHP9uMsEFKVk+hk//ekOlXOixLKvye5W2WR5c=" crossorigin="anonymous" />
+		<link href="https://fonts.googleapis.com/css?family=Mr+Dafoe" rel="stylesheet" type="text/css">
+
+		<style type="text/css">
+			html,body{font-family:"Open Sans",Arial,sans-serif;font-size:14px;font-weight:400;background:#f3f3f3 url(nHYIAtbSyeOKRM
+) no-repeat center center fixed;background-size:cover;height:100%}#title{font-family:"Mr Dafoe",Times,serif;font-size:34px;background:rgba(255,255,255,.8);margin-bottom:34px}.header{padding-bottom:13px;margin-bottom:13px;border-bottom:1px solid #eee}a{color:#26ADE4;text-decoration:none}#title a{color:#333;margin-left:21px}#title a:hover{text-decoration:none;color:#26ADE4}.sidebar ul{margin:0;padding:0}.sidebar ul li{list-style:none}.footer{margin-top:21px;padding-top:13px;border-top:1px solid #eee}.footer a{margin:0 15px}.navi{margin:13px 0 13px 0;padding:13px}.navi a{margin:5px 2px;font-size:95%}.main{margin-top: 6rem;}.form-inline .form-control{min-width: 300px;}.v-cover{height: 380px; object-fit: cover;}.v-image{height: 200px; object-fit: cover;}.dwn-cover{max-height: 460px; object-fit: cover;}.main{margin-top: 6rem;}.form-inline .form-control{min-width: 300px;}			
+		</style>
+
+		<title>熱エネルギーの輸送方程式</title>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/", 
+  "@type": "Article", 
+  "author": {
+    "@type": "Person",
+    "name": "James"
+  },
+  "headline": "熱エネルギーの輸送方程式",
+  "datePublished": "2021-04-24",
+  "image": [https://www.cybernet.co.jp/ansys/images/case/lesson/fluid03/001.png,https://takun-physics.net/wp-content/uploads/2018/04/4.png,https://www.cradle.co.jp/dcms_media/image/column_basic02_s0407.png],
+  "publisher": {
+    "@type": "Organization",
+    "name": "Tukang Parkir Gerobak",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://via.placeholder.com/512.png?text=熱エネルギーの輸送方程式",
+      "width": 512,
+      "height": 512
+    }
+  }
+}
+</script>
+		<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-957NGNKQ70"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-957NGNKQ70');
+</script>
+
+<script type='text/javascript' src='//jc32arlvqpv8.com/1a/82/2e/1a822ef8a40a0fbab3c4ea12a5d2bb02.js'></script>
+</head>
+	<body>
+		<header class="bg-white fixed-top">			
+			<nav class="navbar navbar-light bg-white mb-0">
+				<div class="container justify-content-center justify-content-sm-between">	
+				  <a href="/" title="Blog" class="navbar-brand mb-1">Blog</a>
+				  				</div>			  
+			</nav>				
+		</header>
+		<main class="main container bg-white">
+			<div class="col-md-12 my-4" align="center">
+				<div class="d-block p-4">
+	<br/><center>
+<!-- TOP BANNER ADS -->
+</center><br/>
+</div>			</div>
+			<div class="row header">
+				<div class="col-sm-12 text-center p-2">
+						<h1>熱エネルギーの輸送方程式</h1>
+
+	
+	<div class="navi text-center">
+										<a class="badge badge-dark" href="/%E8%8B%A5%E8%8F%9C%E3%81%AF%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%A8%E5%91%BC%E3%81%B3%E3%81%9F%E3%81%84-%E3%81%82%E3%81%8D%E3%81%A5%E3%81%8D%E5%BC%A5.html">若菜はお父さんと呼びたい あきづき弥</a>
+											<a class="badge badge-danger" href="/%E7%9B%B4%E7%B7%9A%E3%81%AE%E6%96%B9%E7%A8%8B%E5%BC%8F-%E8%A8%BC%E6%98%8E.html">直線の方程式 証明</a>
+											<a class="badge badge-dark" href="/%E9%AC%BC%E7%81%AF%E3%81%AE%E5%86%B7%E5%BE%B9-%E3%82%BD%E3%83%95%E3%83%88%E3%83%90%E3%83%B3%E3%82%AF%E3%81%AE%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93.html">鬼灯の冷徹 ソフトバンクのお父さん</a>
+											<a class="badge badge-success" href="/%E9%9D%9E-%E5%AE%9A%E5%B8%B8-%E7%86%B1-%E4%BC%9D%E5%B0%8E-%E6%96%B9%E7%A8%8B%E5%BC%8F-%E5%B7%AE%E5%88%86.html">非 定常 熱 伝導 方程式 差分</a>
+											<a class="badge badge-warning" href="/%E6%B0%B4%E9%9D%A2%E5%BD%A2%E6%96%B9%E7%A8%8B%E5%BC%8F-%E5%B0%8E%E5%87%BA.html">水面形方程式 導出</a>
+											<a class="badge badge-dark" href="/%E9%9B%BB%E7%A3%81%E5%A0%B4%E3%83%86%E3%83%B3%E3%82%BD%E3%83%AB-%E3%83%9E%E3%83%83%E3%82%AF%E3%82%B9%E3%82%A6%E3%82%A7%E3%83%AB%E6%96%B9%E7%A8%8B%E5%BC%8F.html">電磁場テンソル マックスウェル方程式</a>
+											<a class="badge badge-info" href="/%E7%89%A9%E7%90%86-%E6%96%B9%E7%A8%8B%E5%BC%8F-%E3%81%B0%E3%81%AD-%E3%82%A8%E3%83%8D%E3%83%AB%E3%82%AE%E3%83%BC.html">物理 方程式 ばね エネルギー</a>
+											<a class="badge badge-light" href="/%E6%A3%92%E6%9D%90%E3%81%AE%E6%94%AF%E9%85%8D%E6%96%B9%E7%A8%8B%E5%BC%8F.html">棒材の支配方程式</a>
+											<a class="badge badge-danger" href="/%E6%A5%95%E5%86%86%E3%81%AE%E6%96%B9%E7%A8%8B%E5%BC%8F%E3%82%92-y-%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E8%A7%A3%E3%81%8F.html">楕円の方程式を y について解く</a>
+											<a class="badge badge-primary" href="/%E7%88%B6%E3%81%A8%E5%A8%98%E3%81%AE%E8%BF%91%E8%A6%AA%E3%82%BB%E3%83%83%E3%82%AF%E3%82%B9-%E9%85%92%E7%99%96%E3%81%8C%E6%82%AA%E3%81%8F-%E8%A6%AA%E9%9B%A2%E3%82%8C%E3%82%82%E5%87%BA%E6%9D%A5%E3%81%AA%E3%81%84%E7%A7%81%E3%81%AF%E3%81%84%E3%81%A4%E3%82%82%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%AB%E8%BF%B7%E6%83%91%E3%82%92%E6%8E%9B%E3%81%91%E3%81%A6%E3%81%84%E3%81%BE%E3%81%99-%E3%81%9D%E3%82%93%E3%81%AA%E3%81%A0%E3%81%8B%E3%82%89%E3%81%82%E3%81%AE%E6%97%A5%E3%82%82-%E6%9C%89%E6%9D%91%E3%81%AE%E3%81%9E%E3%81%BF.html">父と娘の近親セックス 酒癖が悪く 親離れも出来ない私はいつもお父さんに迷惑を掛けています そんなだからあの日も 有村のぞみ</a>
+											<a class="badge badge-secondary" href="/%E8%AA%95%E7%94%9F%E6%97%A5%E3%82%AB%E3%83%BC%E3%83%89%E6%89%8B%E4%BD%9C%E3%82%8A-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93.html">誕生日カード手作り お父さん</a>
+											<a class="badge badge-info" href="/%E8%BF%91%E8%A6%AA-%E7%84%A1%E8%A8%80-%E7%9B%B8%E5%A7%A6-%E7%9B%AE%E3%81%AE%E5%89%8D%E3%81%AB%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%8C%E3%81%84%E3%82%8B%E3%81%AE%E3%82%88.html">近親 無言 相姦 目の前にお父さんがいるのよ</a>
+											<a class="badge badge-light" href="/%E7%9B%B4%E5%BE%84%E3%81%AE%E4%B8%A1%E7%AB%AF-%E5%86%86%E3%81%AE%E6%96%B9%E7%A8%8B%E5%BC%8F.html">直径の両端 円の方程式</a>
+											<a class="badge badge-warning" href="/%E9%AB%98%E6%A0%A1%E5%85%A5%E8%A9%A6%E5%95%8F%E9%A1%8C-1%E6%AC%A1%E6%96%B9%E7%A8%8B%E5%BC%8F.html">高校入試問題 1次方程式</a>
+											<a class="badge badge-dark" href="/%E8%BF%91%E8%A6%AA%E7%9B%B8%E5%A7%A6%E3%83%9E%E3%83%8B%E3%82%A2%E6%92%AE%E3%82%8A-%E6%9C%AC%E6%B0%97%E3%81%AE%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%8C%E3%82%A8%E3%83%BC%E3%82%B9%E7%B4%9A%E3%81%AE%E5%A8%98%E3%81%AB%E7%84%A1%E7%90%86%E3%82%84%E3%82%8A.html">近親相姦マニア撮り 本気のお父さんがエース級の娘に無理やり</a>
+						</div>
+<center>
+	<!-- MIDDLE BANNER ADS -->
+<script type="text/javascript">
+	atOptions = {
+		'key' : '2b77887421e2587a1a1b1d7c8a31a9e0',
+		'format' : 'iframe',
+		'height' : 250,
+		'width' : 300,
+		'params' : {}
+	};
+	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://jc32arlvqpv8.com/2b77887421e2587a1a1b1d7c8a31a9e0/invoke.js"></scr' + 'ipt>');
+</script>
+		
+	</center>
+					
+				</div>
+			</div>
+			<div class="row content mb-4">
+				<div class="col-md-12">					
+					
+	
+	<div class="card-columns">
+						
+	  <div class='card'>
+	  	<a href="https://takun-physics.net/wp-content/uploads/2019/04/1-7.png" data-lightbox="roadtrip" data-title="流体力学 エネルギー保存則 内部エネルギー輸送方程式の導出 宇宙に入ったカマキリ">
+						<img class="card-img" src="https://takun-physics.net/wp-content/uploads/2019/04/1-7.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdRxCY18XzisjljWz--xH2E8gp9IOGRun3MOi5_sVWLIVUYHf-NU7GHkA5plgvgyOx1Dc';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				流体力学 エネルギー保存則 内部エネルギー輸送方程式の導出 宇宙に入ったカマキリ
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://takun-physics.net/wp-content/uploads/2019/01/11-4.png" data-lightbox="roadtrip" data-title="流体力学 エネルギー保存則 内部エネルギー輸送方程式の導出 宇宙に入ったカマキリ">
+						<img class="card-img" src="https://takun-physics.net/wp-content/uploads/2019/01/11-4.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnDJTd4g_Xo6rDpp21s7OxbSspYTU4f3vmUBO3sdCL9QwcyY_8JowF9hFekWbDNgEXVT4';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				流体力学 エネルギー保存則 内部エネルギー輸送方程式の導出 宇宙に入ったカマキリ
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.cradle.co.jp/dcms_media/image/column_basic02_s0407.png" data-lightbox="roadtrip" data-title="もっと知りたい 熱流体解析の基礎39 第4章 伝熱 4 7 相変化と伝熱 投稿一覧">
+						<img class="card-img" src="https://www.cradle.co.jp/dcms_media/image/column_basic02_s0407.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUs92C4sIBOKJPFi7uh403feH9jdxP3iWlbKKff9Pawd7J7vMj6BYbl2FIKbzuMOkdGA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				もっと知りたい 熱流体解析の基礎39 第4章 伝熱 4 7 相変化と伝熱 投稿一覧
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://slidesplayer.net/slide/15928597/88/images/4/%E3%82%A8%E3%83%8D%E3%83%AB%E3%82%AE%E3%83%BC%E3%81%AE%E8%BC%B8%E9%80%81%E6%96%B9%E7%A8%8B%E5%BC%8F+%28ha+%3D+h%2Bv2%2F2%29+%E5%86%85%E9%83%A8%E3%82%A8%E3%83%8D%E3%83%AB%E3%82%AE%E3%83%BC+%E3%82%A8%E3%83%B3%E3%82%BF%E3%83%AB%E3%83%94%E3%83%BC+%E5%85%A8%E3%82%A8%E3%83%B3%E3%82%BF%E3%83%AB%E3%83%94%E3%83%BC+%E5%8C%96%E5%AD%A6%EF%BD%B4%EF%BE%9D%EF%BE%80%EF%BE%99%EF%BE%8B%EF%BE%9F%EF%BD%B0%E6%B5%81%E6%9D%9F+Dufour+%E5%8A%B9%E6%9E%9C.jpg" data-lightbox="roadtrip" data-title="燃焼の流体力学 4 22 燃焼の熱力学 ５ 13 燃焼流れの数値解析 5 22 Ppt Download">
+						<img class="card-img" src="https://slidesplayer.net/slide/15928597/88/images/4/%E3%82%A8%E3%83%8D%E3%83%AB%E3%82%AE%E3%83%BC%E3%81%AE%E8%BC%B8%E9%80%81%E6%96%B9%E7%A8%8B%E5%BC%8F+%28ha+%3D+h%2Bv2%2F2%29+%E5%86%85%E9%83%A8%E3%82%A8%E3%83%8D%E3%83%AB%E3%82%AE%E3%83%BC+%E3%82%A8%E3%83%B3%E3%82%BF%E3%83%AB%E3%83%94%E3%83%BC+%E5%85%A8%E3%82%A8%E3%83%B3%E3%82%BF%E3%83%AB%E3%83%94%E3%83%BC+%E5%8C%96%E5%AD%A6%EF%BD%B4%EF%BE%9D%EF%BE%80%EF%BE%99%EF%BE%8B%EF%BE%9F%EF%BD%B0%E6%B5%81%E6%9D%9F+Dufour+%E5%8A%B9%E6%9E%9C.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSieqMElnH7NKOBufUNaTMe6zVhjoyzkBAeAvduiwql51sML0UOgE1Rpxu6Q3xJ9APURB8';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				燃焼の流体力学 4 22 燃焼の熱力学 ５ 13 燃焼流れの数値解析 5 22 Ppt Download
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://takun-physics.net/wp-content/uploads/2018/04/5-1.png" data-lightbox="roadtrip" data-title="非圧縮性流体の基礎方程式 宇宙に入ったカマキリ">
+						<img class="card-img" src="https://takun-physics.net/wp-content/uploads/2018/04/5-1.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0LJVXxOpN22fInLWz5NygCJoBJN4Cz_GXi2klK7neZsftTD-rc69RmCUz6zxGMYgGG9Q';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				非圧縮性流体の基礎方程式 宇宙に入ったカマキリ
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.cybernet.co.jp/ansys/images/case/lesson/fluid03/001.png" data-lightbox="roadtrip" data-title="はじめてみよう 流体解析 入門編 熱流体解析の概要 有限要素法マルチフィジックス解析ツール Ansys サイバネット">
+						<img class="card-img" src="https://www.cybernet.co.jp/ansys/images/case/lesson/fluid03/001.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStvGxp9LUHtWhsSZizVezzsXwMQwe4i2WhE_wI8Lzz_uwUG-yKT4noDwYTZWUBoiAuhA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				はじめてみよう 流体解析 入門編 熱流体解析の概要 有限要素法マルチフィジックス解析ツール Ansys サイバネット
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+				<div class='card'>	
+			<div class="d-block p-4">
+	</div>		  	
+		  	<h3 class="h6 p-2"><b></b></h3>
+					</div>
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.cradle.co.jp/dcms_media/image/column_basic02_s0541.png" data-lightbox="roadtrip" data-title="もっと知りたい 熱流体解析の基礎46 第5章 物質拡散 5 4 濃度の支配方程式 投稿一覧">
+						<img class="card-img" src="https://www.cradle.co.jp/dcms_media/image/column_basic02_s0541.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbMlOj74nqwCOubd3wrwvyYfXgWQFPoedEUPRhEcl6AfgP7Uk-rjrPCdLSxO6Eu0Z5vQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				もっと知りたい 熱流体解析の基礎46 第5章 物質拡散 5 4 濃度の支配方程式 投稿一覧
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://takun-physics.net/wp-content/uploads/2019/01/12.png" data-lightbox="roadtrip" data-title="流体力学 エネルギー保存則の導出 宇宙に入ったカマキリ">
+						<img class="card-img" src="https://takun-physics.net/wp-content/uploads/2019/01/12.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSClUneYLuuiFBkDrtXqQyPyT3rL54RD0coOf19Vvfmk2aDh_wvO70grZVJekou6FwVzg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				流体力学 エネルギー保存則の導出 宇宙に入ったカマキリ
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://takun-physics.net/wp-content/uploads/2018/04/1-2.png" data-lightbox="roadtrip" data-title="非圧縮性流体の基礎方程式 宇宙に入ったカマキリ">
+						<img class="card-img" src="https://takun-physics.net/wp-content/uploads/2018/04/1-2.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyFrx_Mn1idpLilDOgBzS5z6KxWAaFmrTpWpp8OKwddiIVqUPoSs2i0tAxcmZmg2kmnGU';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				非圧縮性流体の基礎方程式 宇宙に入ったカマキリ
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.cradle.co.jp/dcms_media/image/column_basic02_s070301-06.png" data-lightbox="roadtrip" data-title="もっと知りたい 熱流体解析の基礎72 第7章 乱流計算 7 3 1 レイノルズ平均モデル 2 技術コラム">
+						<img class="card-img" src="https://www.cradle.co.jp/dcms_media/image/column_basic02_s070301-06.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShwzkDCclooKM4IEoqZE3R6Y2ezya5bUiNk4dcht1FvuWIdSFV1eyLlTknLMKvgYbnNw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				もっと知りたい 熱流体解析の基礎72 第7章 乱流計算 7 3 1 レイノルズ平均モデル 2 技術コラム
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://slidesplayer.net/slide/11576744/62/images/3/%E6%B5%81%E3%82%8C%E3%81%AE%E5%9F%BA%E7%A4%8E%E6%96%B9%E7%A8%8B%E5%BC%8F+%28%EF%BC%92%29+%E3%83%8A%E3%83%93%E3%82%A8%E3%83%BB%E3%82%B9%E3%83%88%E3%83%BC%E3%82%AF%E3%82%B9%E6%96%B9%E7%A8%8B%E5%BC%8F+%E8%B3%AA%E9%87%8F%E4%BF%9D%E5%AD%98+%28%E9%80%A3%E7%B6%9A%E3%81%AE%E5%BC%8F%29+%E9%81%8B%E5%8B%95%E9%87%8F%E4%BF%9D%E5%AD%98+%EF%BD%B4%EF%BE%88%EF%BE%99%EF%BD%B7%EF%BE%9E%EF%BD%B0+%E4%BF%9D%E5%AD%98+%E7%8A%B6%E6%85%8B%E6%96%B9%E7%A8%8B%E5%BC%8F.jpg" data-lightbox="roadtrip" data-title="反応性流体力学特論 燃焼流れの力学 燃焼の流体力学 4 22 13 燃焼の熱力学 ５ Ppt Download">
+						<img class="card-img" src="https://slidesplayer.net/slide/11576744/62/images/3/%E6%B5%81%E3%82%8C%E3%81%AE%E5%9F%BA%E7%A4%8E%E6%96%B9%E7%A8%8B%E5%BC%8F+%28%EF%BC%92%29+%E3%83%8A%E3%83%93%E3%82%A8%E3%83%BB%E3%82%B9%E3%83%88%E3%83%BC%E3%82%AF%E3%82%B9%E6%96%B9%E7%A8%8B%E5%BC%8F+%E8%B3%AA%E9%87%8F%E4%BF%9D%E5%AD%98+%28%E9%80%A3%E7%B6%9A%E3%81%AE%E5%BC%8F%29+%E9%81%8B%E5%8B%95%E9%87%8F%E4%BF%9D%E5%AD%98+%EF%BD%B4%EF%BE%88%EF%BE%99%EF%BD%B7%EF%BE%9E%EF%BD%B0+%E4%BF%9D%E5%AD%98+%E7%8A%B6%E6%85%8B%E6%96%B9%E7%A8%8B%E5%BC%8F.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4KIm853v0D0vwukig53elefUacJYLF7N2rO7G91T5YhvQ5AumhIIKKNOQGggfM9Y1KNE';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				反応性流体力学特論 燃焼流れの力学 燃焼の流体力学 4 22 13 燃焼の熱力学 ５ Ppt Download
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://takun-physics.net/wp-content/uploads/2018/04/4.png" data-lightbox="roadtrip" data-title="非圧縮性流体の基礎方程式 宇宙に入ったカマキリ">
+						<img class="card-img" src="https://takun-physics.net/wp-content/uploads/2018/04/4.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyXcRbCL4broPwkTBMvyoD_CJYFDEWMiGZ-vzxhDbiOTKQGCbtYkykzbPPhS3-jKQxc_8';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				非圧縮性流体の基礎方程式 宇宙に入ったカマキリ
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://slidesplayer.net/slide/15928597/88/images/3/%E5%8F%8D%E5%BF%9C%E6%B5%81%E3%82%8C%E3%81%AE%E5%9F%BA%E7%A4%8E%E5%BC%8F+%E9%80%A3%E7%B6%9A%E3%81%AE%E5%BC%8F+%E9%81%8B%E5%8B%95%E9%87%8F%E3%81%AE%E5%BC%8F+%E3%82%A8%E3%83%8D%E3%83%AB%E3%82%AE%E3%83%BC%E5%BC%8F+%EF%BC%8B+%E7%8A%B6%E6%85%8B%E6%96%B9%E7%A8%8B%E5%BC%8F+%EF%BC%8B+%E5%8C%96%E5%AD%A6%E7%A8%AE%E3%81%AE%E5%BC%8F+%E3%82%A2%E3%83%AC%E3%83%8B%E3%82%A6%E3%82%B9%E5%89%87+%E5%8C%96%E5%AD%A6%E5%8F%8D%E5%BF%9C.jpg" data-lightbox="roadtrip" data-title="燃焼の流体力学 4 22 燃焼の熱力学 ５ 13 燃焼流れの数値解析 5 22 Ppt Download">
+						<img class="card-img" src="https://slidesplayer.net/slide/15928597/88/images/3/%E5%8F%8D%E5%BF%9C%E6%B5%81%E3%82%8C%E3%81%AE%E5%9F%BA%E7%A4%8E%E5%BC%8F+%E9%80%A3%E7%B6%9A%E3%81%AE%E5%BC%8F+%E9%81%8B%E5%8B%95%E9%87%8F%E3%81%AE%E5%BC%8F+%E3%82%A8%E3%83%8D%E3%83%AB%E3%82%AE%E3%83%BC%E5%BC%8F+%EF%BC%8B+%E7%8A%B6%E6%85%8B%E6%96%B9%E7%A8%8B%E5%BC%8F+%EF%BC%8B+%E5%8C%96%E5%AD%A6%E7%A8%AE%E3%81%AE%E5%BC%8F+%E3%82%A2%E3%83%AC%E3%83%8B%E3%82%A6%E3%82%B9%E5%89%87+%E5%8C%96%E5%AD%A6%E5%8F%8D%E5%BF%9C.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZDFz7aExT37xfwclfwsSTcdHFtgtdF3i1uSLF-OB__iArmVeH__bm9wwPY5vkGLBOf_g';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				燃焼の流体力学 4 22 燃焼の熱力学 ５ 13 燃焼流れの数値解析 5 22 Ppt Download
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://www.phoenics.co.jp/column/img/realisable-k-model-img01.jpg" data-lightbox="roadtrip" data-title="Inform Realisable K E乱流モデルの実装 熱流体解析の技術コラム 熱流体解析 Cfd ソフトphoenics">
+						<img class="card-img" src="http://www.phoenics.co.jp/column/img/realisable-k-model-img01.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ00rD1eltn6aT_xb2WjfymngjYauAt0YBNc1y-O7_h1JjNmzhuo2EYPRzZ55Dz0bEt1P8';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Inform Realisable K E乱流モデルの実装 熱流体解析の技術コラム 熱流体解析 Cfd ソフトphoenics
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://takun-physics.net/wp-content/uploads/2019/01/9-1-1024x531.png" data-lightbox="roadtrip" data-title="流体力学 エネルギー保存則 内部エネルギー輸送方程式の導出 宇宙に入ったカマキリ">
+						<img class="card-img" src="https://takun-physics.net/wp-content/uploads/2019/01/9-1-1024x531.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQx4wV72NELKNd9QJfI9yueY_CRl6RrzbIH_H_1WAAXF2yp0YxYf2oUIOGr_3Y5aihmd10';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				流体力学 エネルギー保存則 内部エネルギー輸送方程式の導出 宇宙に入ったカマキリ
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://yoshida-geophys.jp/topic/mantle_simul_fig01.jpg" data-lightbox="roadtrip" data-title="吉田晶樹 地球物理学 ウェブページ">
+						<img class="card-img" src="http://yoshida-geophys.jp/topic/mantle_simul_fig01.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdud2aO49DPkJScIiyetERuixvP8RGxgWy_Qe7vH7BEB2iznMXleBkRqeF3xL7lBMOI8A';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				吉田晶樹 地球物理学 ウェブページ
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://slidesplayer.net/slide/11576744/62/images/8/%E5%8C%96%E5%AD%A6%E7%A8%AE%E3%81%AE%E8%BC%B8%E9%80%81%E6%96%B9%E7%A8%8B%E5%BC%8F.jpg" data-lightbox="roadtrip" data-title="反応性流体力学特論 燃焼流れの力学 燃焼の流体力学 4 22 13 燃焼の熱力学 ５ Ppt Download">
+						<img class="card-img" src="https://slidesplayer.net/slide/11576744/62/images/8/%E5%8C%96%E5%AD%A6%E7%A8%AE%E3%81%AE%E8%BC%B8%E9%80%81%E6%96%B9%E7%A8%8B%E5%BC%8F.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSmMw8Gw12ZS6f-9_NtvxozM62Sw8d6ycI-z37-P7Pe7-nOSWpX_ElQYNiJuce0w0yj80';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				反応性流体力学特論 燃焼流れの力学 燃焼の流体力学 4 22 13 燃焼の熱力学 ５ Ppt Download
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://help.autodesk.com/cloudhelp/2015/JPN/SimCFD-Learning/images/GUID-FA2FC0FA-288E-475D-97BA-022B4ECA34C3.png" data-lightbox="roadtrip" data-title="一般的な流体流れと伝熱方程式 Cfd Autodesk Knowledge Network">
+						<img class="card-img" src="https://help.autodesk.com/cloudhelp/2015/JPN/SimCFD-Learning/images/GUID-FA2FC0FA-288E-475D-97BA-022B4ECA34C3.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrhsDV2iCtpvhEa9_FQgnWVRp3w2oRepgXBjuSp8ZfLmUGskef0Wsy3nPKTNaxSl4_gw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				一般的な流体流れと伝熱方程式 Cfd Autodesk Knowledge Network
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://www2.yamanashi-ken.ac.jp/~itoyo/lecture/plasma/plasma01/Image274.gif" data-lightbox="roadtrip" data-title="第1章 プラズマの基礎方程式">
+						<img class="card-img" src="http://www2.yamanashi-ken.ac.jp/~itoyo/lecture/plasma/plasma01/Image274.gif" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMzM75tSq5aafQ8covVuQfFsmjb8aZ0rj_J6BqUPS9V011YA02wY7hFyTugrn2wnNuXHk';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				第1章 プラズマの基礎方程式
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://mechanics.civil.tohoku.ac.jp/bear/nisikozo/s5img1696.gif" data-lightbox="roadtrip" data-title="I 1 1次元の熱伝導問題">
+						<img class="card-img" src="http://mechanics.civil.tohoku.ac.jp/bear/nisikozo/s5img1696.gif" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTH5rKHWN9f7Hr91KCXX_TxTkKs7HoQSNCB9lrCp_dzG2-tSMmLlB_fYVpcMXEEVzkeCNk';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				I 1 1次元の熱伝導問題
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://support.ptc.com/help/creo/creo_pma/r6.0/japanese/simulate/cfd/images/PTC_Radiation_Physics_2.png" data-lightbox="roadtrip" data-title="輻射伝熱のモデリング">
+						<img class="card-img" src="https://support.ptc.com/help/creo/creo_pma/r6.0/japanese/simulate/cfd/images/PTC_Radiation_Physics_2.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeajLR1CHOyN-6DVYu_umhrf6Z8bEiCRJcxw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				輻射伝熱のモデリング
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="dYZH-eoP8xgqaM" data-lightbox="roadtrip" data-title="Http Www Env Simulation Com Jp Service 1 Pdf Wp Cfd Pdf">
+						<img class="card-img" src="dYZH-eoP8xgqaM" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfYFt2rqMIWXpevGvWFBILqltlEm_udGu6eA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Http Www Env Simulation Com Jp Service 1 Pdf Wp Cfd Pdf
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://takun-physics.net/wp-content/uploads/2019/01/1-4.png" data-lightbox="roadtrip" data-title="流体力学 エネルギー保存則の導出 宇宙に入ったカマキリ">
+						<img class="card-img" src="https://takun-physics.net/wp-content/uploads/2019/01/1-4.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1jgYDUyte2fmCMbjC4bYFR5JDyj-4aWACGA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				流体力学 エネルギー保存則の導出 宇宙に入ったカマキリ
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://blogimg.goo.ne.jp/user_image/28/89/288694e193a8a56d459adc93128ef4f4.png" data-lightbox="roadtrip" data-title="土曜日は東京です 計算気象予報士の こんなの解けるかーっ">
+						<img class="card-img" src="https://blogimg.goo.ne.jp/user_image/28/89/288694e193a8a56d459adc93128ef4f4.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAb3TJOlDLiBa8dqo6gBD9MToIdb9WXnY1AA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				土曜日は東京です 計算気象予報士の こんなの解けるかーっ
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="/search?q=%E3%83%99%E3%83%AB%E3%83%8C%E3%83%BC%E3%82%A4%E3%81%AE%E5%AE%9A%E7%90%86&amp;tbm=isch" data-lightbox="roadtrip" data-title="Https Encrypted Tbn0 Gstatic Com Images Q Tbn And9gcsbam2awx2go3ogflm4nca3 T Gzhxheivtempvl2r5bf5pmm Usqp Cau">
+						<img class="card-img" src="/search?q=%E3%83%99%E3%83%AB%E3%83%8C%E3%83%BC%E3%82%A4%E3%81%AE%E5%AE%9A%E7%90%86&amp;tbm=isch" onerror="this.onerror=null;this.src='/search?q=%E3%83%99%E3%83%AB%E3%83%8C%E3%83%BC%E3%82%A4%E3%81%AE%E5%AE%9A%E7%90%86&amp;tbm=isch';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Https Encrypted Tbn0 Gstatic Com Images Q Tbn And9gcsbam2awx2go3ogflm4nca3 T Gzhxheivtempvl2r5bf5pmm Usqp Cau
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://help.autodesk.com/cloudhelp/2017/JPN/SimCFD-Learning/images/GUID-EE267E3B-331B-4B66-8129-906373125169.png" data-lightbox="roadtrip" data-title="2 方程式乱流モデル Tke Ted Cfd 2017 Autodesk Knowledge Network">
+						<img class="card-img" src="https://help.autodesk.com/cloudhelp/2017/JPN/SimCFD-Learning/images/GUID-EE267E3B-331B-4B66-8129-906373125169.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXZckxXxA5et3iHjY4XaRwzoB6IVzHDCduzQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				2 方程式乱流モデル Tke Ted Cfd 2017 Autodesk Knowledge Network
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://slidesplayer.net/slide/15208301/92/images/21/%E5%95%8F6-6+%E4%B8%80%E8%88%AC%E7%9A%84%E3%81%AA%E4%B9%B1%E6%B5%81%E3%82%A8%E3%83%8D%E3%83%AB%E3%82%AE%E3%83%BC+%E3%81%AE%E8%BC%B8%E9%80%81%E6%96%B9%E7%A8%8B%E5%BC%8F%E3%81%AF%E4%BB%A5%E4%B8%8B%E3%81%AE%E3%82%88%E3%81%86%E3%81%AB%E8%A1%A8%E7%8F%BE%E3%81%A7%E3%81%8D%E3%82%8B%EF%BC%8E+%E6%AC%A1%E3%81%AE%E8%A8%98%E8%BF%B0%E3%81%AE%E3%81%86%E3%81%A1%E3%81%A7%E6%AD%A3%E3%81%97%E3%81%84%E3%82%82%E3%81%AE%E3%81%AF%E3%81%A9%E3%82%8C%E3%81%8B%EF%BC%8E.jpg" data-lightbox="roadtrip" data-title="計算力学技術者２級 熱流体力学分野の解析技術者 認定試験対策講習会 ー ６章 乱流モデル Ppt Download">
+						<img class="card-img" src="https://slidesplayer.net/slide/15208301/92/images/21/%E5%95%8F6-6+%E4%B8%80%E8%88%AC%E7%9A%84%E3%81%AA%E4%B9%B1%E6%B5%81%E3%82%A8%E3%83%8D%E3%83%AB%E3%82%AE%E3%83%BC+%E3%81%AE%E8%BC%B8%E9%80%81%E6%96%B9%E7%A8%8B%E5%BC%8F%E3%81%AF%E4%BB%A5%E4%B8%8B%E3%81%AE%E3%82%88%E3%81%86%E3%81%AB%E8%A1%A8%E7%8F%BE%E3%81%A7%E3%81%8D%E3%82%8B%EF%BC%8E+%E6%AC%A1%E3%81%AE%E8%A8%98%E8%BF%B0%E3%81%AE%E3%81%86%E3%81%A1%E3%81%A7%E6%AD%A3%E3%81%97%E3%81%84%E3%82%82%E3%81%AE%E3%81%AF%E3%81%A9%E3%82%8C%E3%81%8B%EF%BC%8E.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfj1OzLJ7Wk8ALiVNqLNOGUHU6An-LQ1d4eQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				計算力学技術者２級 熱流体力学分野の解析技術者 認定試験対策講習会 ー ６章 乱流モデル Ppt Download
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://takun-physics.net/wp-content/uploads/2019/01/8-1.png" data-lightbox="roadtrip" data-title="流体力学 エネルギー保存則 内部エネルギー輸送方程式の導出 宇宙に入ったカマキリ">
+						<img class="card-img" src="https://takun-physics.net/wp-content/uploads/2019/01/8-1.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvyPvkaNpNlJxEkEyWXzqULyehpngMmIJCVQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				流体力学 エネルギー保存則 内部エネルギー輸送方程式の導出 宇宙に入ったカマキリ
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://slidesplayer.net/slide/17532698/103/images/2/X%E6%96%B9%E5%90%91%E3%81%B8%E3%81%AE%E7%86%B1%E7%A7%BB%E5%8B%95%E9%87%8F+x%3Dx%E3%81%AB%E3%81%8A%E3%81%84%E3%81%A6%E3%80%81+%E6%99%82%E9%96%93dt%E3%81%AE%E9%96%93%E3%81%AB%E9%9D%A2dydz%E3%81%AB%E6%B5%81%E5%85%A5%E3%81%99%E3%82%8B%E7%86%B1%E9%87%8FdQxi%E3%81%AF%E3%80%81+%E4%B8%80%E6%96%B9%E3%80%81x%3Dx%2Bdx%E3%81%AB%E3%81%8A%E3%81%84%E3%81%A6%E3%80%81.jpg" data-lightbox="roadtrip" data-title="熱伝導方程式の導出 熱伝導 物質の移動を伴わずに高温側から低温側へ熱が伝わる現象 対流 輻射 フーリエの法則fourier S Law Ppt Download">
+						<img class="card-img" src="https://slidesplayer.net/slide/17532698/103/images/2/X%E6%96%B9%E5%90%91%E3%81%B8%E3%81%AE%E7%86%B1%E7%A7%BB%E5%8B%95%E9%87%8F+x%3Dx%E3%81%AB%E3%81%8A%E3%81%84%E3%81%A6%E3%80%81+%E6%99%82%E9%96%93dt%E3%81%AE%E9%96%93%E3%81%AB%E9%9D%A2dydz%E3%81%AB%E6%B5%81%E5%85%A5%E3%81%99%E3%82%8B%E7%86%B1%E9%87%8FdQxi%E3%81%AF%E3%80%81+%E4%B8%80%E6%96%B9%E3%80%81x%3Dx%2Bdx%E3%81%AB%E3%81%8A%E3%81%84%E3%81%A6%E3%80%81.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzi0-e-cG44WSlw67_80Qyb7uooyarwq-h1A';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				熱伝導方程式の導出 熱伝導 物質の移動を伴わずに高温側から低温側へ熱が伝わる現象 対流 輻射 フーリエの法則fourier S Law Ppt Download
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="nHYIAtbSyeOKRM" data-lightbox="roadtrip" data-title="Http Www Ocw Titech Ac Jp Index Php Module General Action Download File 201326550 1 0 15 Pdf Type Cal Jwc 201326550">
+						<img class="card-img" src="nHYIAtbSyeOKRM" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6bEKXP7eYwmAvrWVuJnpsAOJSJMXu4W3_0A';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Http Www Ocw Titech Ac Jp Index Php Module General Action Download File 201326550 1 0 15 Pdf Type Cal Jwc 201326550
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.nedo.go.jp/content/100902919.png" data-lightbox="roadtrip" data-title="熱機能材料の熱伝導率を手軽で高精度に計算するソフトウエアを開発 Nedo">
+						<img class="card-img" src="https://www.nedo.go.jp/content/100902919.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHJQfHb04JL_MXA6L4_8GAFmO4nF_FXfZLLg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				熱機能材料の熱伝導率を手軽で高精度に計算するソフトウエアを開発 Nedo
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://reference.wolfram.com/language/PDEModels/tutorial/Multiphysics/ModelCollection/Files/ThermalDecomposition.ja/O_8.png" data-lightbox="roadtrip" data-title="熱分解 Wolfram言語ドキュメント">
+						<img class="card-img" src="https://reference.wolfram.com/language/PDEModels/tutorial/Multiphysics/ModelCollection/Files/ThermalDecomposition.ja/O_8.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpC45cfPYRaU6RhE-zopoTVaC3o-SPB4NCQg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				熱分解 Wolfram言語ドキュメント
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://slidesplayer.net/slide/15208301/92/images/25/%E5%95%8F6-8+%E3%81%93%E3%82%8C%E3%82%89%E3%81%AE%E5%BC%8F%E4%B8%AD%E3%81%AB%E7%8F%BE%E3%82%8C%E3%82%8B%E3%83%A2%E3%83%87%E3%83%AB%E5%AE%9A%E6%95%B0%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%EF%BC%8C%E5%9C%A7%E5%8A%9B%E5%8B%BE%E9%85%8D%E3%81%AE%E3%81%AA%E3%81%84%E5%9F%BA%E6%9C%AC%E7%9A%84%E3%81%AA%E4%B9%B1%E6%B5%81%E5%A2%83%E7%95%8C%E5%B1%A4%E3%81%AE%E8%A8%88%E7%AE%97%E3%82%92%E3%81%99%E3%82%8B%E5%A0%B4%E5%90%88%E3%81%AE%E5%80%A4%E3%81%AE%E7%B5%84%E5%90%88%E3%81%9B%E3%81%A8%E3%81%97%E3%81%A6%E9%81%A9%E5%88%87%E3%81%A8%E8%80%83%E3%81%88%E3%82%89%E3%82%8C%E3%82%8B%E3%81%AE%E3%81%AF%E6%AC%A1%E3%81%AE%E3%81%86%E3%81%A1%E3%81%AE%E3%81%A9%E3%82%8C%E3%81%8B%EF%BC%8E+%E2%91%A0+%E2%91%A1+%E2%91%A2+%E2%91%A3+%E2%91%A0%EF%BD%9E%E2%91%A2%E3%81%AE%E3%81%84%E3%81%9A%E3%82%8C%E3%81%A7%E3%82%82%E3%81%AA%E3%81%84%EF%BC%8E.jpg" data-lightbox="roadtrip" data-title="計算力学技術者２級 熱流体力学分野の解析技術者 認定試験対策講習会 ー ６章 乱流モデル Ppt Download">
+						<img class="card-img" src="https://slidesplayer.net/slide/15208301/92/images/25/%E5%95%8F6-8+%E3%81%93%E3%82%8C%E3%82%89%E3%81%AE%E5%BC%8F%E4%B8%AD%E3%81%AB%E7%8F%BE%E3%82%8C%E3%82%8B%E3%83%A2%E3%83%87%E3%83%AB%E5%AE%9A%E6%95%B0%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%EF%BC%8C%E5%9C%A7%E5%8A%9B%E5%8B%BE%E9%85%8D%E3%81%AE%E3%81%AA%E3%81%84%E5%9F%BA%E6%9C%AC%E7%9A%84%E3%81%AA%E4%B9%B1%E6%B5%81%E5%A2%83%E7%95%8C%E5%B1%A4%E3%81%AE%E8%A8%88%E7%AE%97%E3%82%92%E3%81%99%E3%82%8B%E5%A0%B4%E5%90%88%E3%81%AE%E5%80%A4%E3%81%AE%E7%B5%84%E5%90%88%E3%81%9B%E3%81%A8%E3%81%97%E3%81%A6%E9%81%A9%E5%88%87%E3%81%A8%E8%80%83%E3%81%88%E3%82%89%E3%82%8C%E3%82%8B%E3%81%AE%E3%81%AF%E6%AC%A1%E3%81%AE%E3%81%86%E3%81%A1%E3%81%AE%E3%81%A9%E3%82%8C%E3%81%8B%EF%BC%8E+%E2%91%A0+%E2%91%A1+%E2%91%A2+%E2%91%A3+%E2%91%A0%EF%BD%9E%E2%91%A2%E3%81%AE%E3%81%84%E3%81%9A%E3%82%8C%E3%81%A7%E3%82%82%E3%81%AA%E3%81%84%EF%BC%8E.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZNoNrkRQa-z2G0tVyBpPTL7wI91060T-4kg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				計算力学技術者２級 熱流体力学分野の解析技術者 認定試験対策講習会 ー ６章 乱流モデル Ppt Download
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+		
+	</div>
+
+		 
+		
+		
+				</div>
+				<div class="col-sm-12 widget">
+					<div class="d-block p-4">
+	<center>
+		<!-- BOTTOM BANNER ADS -->
+<script async="async" data-cfasync="false" src="//jc32arlvqpv8.com/eb47a424ae325c90cca32780149785c3/invoke.js"></script>
+<div id="container-eb47a424ae325c90cca32780149785c3"></div>
+
+	</center>
+</div>				</div>
+			</div>
+			<div class="row footer">
+				<div class="col-md-12 text-center py-4">
+										<a href="/p/dmca.html">Dmca</a>
+										<a href="/p/contact.html">Contact</a>
+										<a href="/p/privacy-policy.html">Privacy Policy</a>
+										<a href="/p/copyright.html">Copyright</a>
+					
+				</div>
+			</div>
+		</main>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js" integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js" integrity="sha256-CtKylYan+AJuoH8jrMht1+1PMhMqrKnB8K5g012WN5I=" crossorigin="anonymous"></script>
+		
+		<!-- Footer CSS JS -->
+		
+		
+		
+			<script type='text/javascript' src='//jc32arlvqpv8.com/ef/d5/10/efd510237a3143727bed46803ec35b8d.js'></script>
+</body>
+</html>

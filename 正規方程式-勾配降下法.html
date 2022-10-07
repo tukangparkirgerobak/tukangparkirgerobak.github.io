@@ -1,0 +1,682 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha256-L/W5Wfqfa0sdBNIKN9cG6QA5F2qx4qICmU2VgLruv9Y=" crossorigin="anonymous" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/css/lightbox.min.css" integrity="sha256-tBxlolRHP9uMsEFKVk+hk//ekOlXOixLKvye5W2WR5c=" crossorigin="anonymous" />
+		<link href="https://fonts.googleapis.com/css?family=Mr+Dafoe" rel="stylesheet" type="text/css">
+
+		<style type="text/css">
+			html,body{font-family:"Open Sans",Arial,sans-serif;font-size:14px;font-weight:400;background:#f3f3f3 url(https://files.speakerdeck.com/presentations/0cf5dd8d548b48b2a9c689cf7572a82f/slide_17.jpg
+) no-repeat center center fixed;background-size:cover;height:100%}#title{font-family:"Mr Dafoe",Times,serif;font-size:34px;background:rgba(255,255,255,.8);margin-bottom:34px}.header{padding-bottom:13px;margin-bottom:13px;border-bottom:1px solid #eee}a{color:#26ADE4;text-decoration:none}#title a{color:#333;margin-left:21px}#title a:hover{text-decoration:none;color:#26ADE4}.sidebar ul{margin:0;padding:0}.sidebar ul li{list-style:none}.footer{margin-top:21px;padding-top:13px;border-top:1px solid #eee}.footer a{margin:0 15px}.navi{margin:13px 0 13px 0;padding:13px}.navi a{margin:5px 2px;font-size:95%}.main{margin-top: 6rem;}.form-inline .form-control{min-width: 300px;}.v-cover{height: 380px; object-fit: cover;}.v-image{height: 200px; object-fit: cover;}.dwn-cover{max-height: 460px; object-fit: cover;}.main{margin-top: 6rem;}.form-inline .form-control{min-width: 300px;}			
+		</style>
+
+		<title>正規方程式 勾配降下法</title>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/", 
+  "@type": "Article", 
+  "author": {
+    "@type": "Person",
+    "name": "James"
+  },
+  "headline": "正規方程式 勾配降下法",
+  "datePublished": "2021-04-24",
+  "image": [https://images2015.cnblogs.com/blog/1102791/201702/1102791-20170208201046791-631096578.png,https://linky-juku.com/wp-content/uploads/2019/02/koushinshiki-1024x768.png,https://www.hogehoge-note.com/wp-content/uploads/2019/07/image-25.png],
+  "publisher": {
+    "@type": "Organization",
+    "name": "Tukang Parkir Gerobak",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://via.placeholder.com/512.png?text=正規方程式 勾配降下法",
+      "width": 512,
+      "height": 512
+    }
+  }
+}
+</script>
+		<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-957NGNKQ70"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-957NGNKQ70');
+</script>
+
+<script type='text/javascript' src='//jc32arlvqpv8.com/1a/82/2e/1a822ef8a40a0fbab3c4ea12a5d2bb02.js'></script>
+</head>
+	<body>
+		<header class="bg-white fixed-top">			
+			<nav class="navbar navbar-light bg-white mb-0">
+				<div class="container justify-content-center justify-content-sm-between">	
+				  <a href="/" title="Blog" class="navbar-brand mb-1">Blog</a>
+				  				</div>			  
+			</nav>				
+		</header>
+		<main class="main container bg-white">
+			<div class="col-md-12 my-4" align="center">
+				<div class="d-block p-4">
+	<br/><center>
+<!-- TOP BANNER ADS -->
+</center><br/>
+</div>			</div>
+			<div class="row header">
+				<div class="col-sm-12 text-center p-2">
+						<h1>正規方程式 勾配降下法</h1>
+
+	
+	<div class="navi text-center">
+										<a class="badge badge-secondary" href="/%E9%80%A3%E7%AB%8B%E9%9D%9E%E7%B7%9A%E5%BD%A2%E6%96%B9%E7%A8%8B%E5%BC%8F-%E6%95%B0%E5%80%A4%E8%A7%A3%E6%B3%95.html">連立非線形方程式 数値解法</a>
+											<a class="badge badge-warning" href="/%E7%BE%8E%E7%86%9F%E5%A5%B3%E8%A3%85%E5%AD%90-%E5%92%B2%E5%A7%AB-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%AFav%E5%A5%B3%E5%84%AA.html">美熟女装子 咲姫 お父さんはav女優</a>
+											<a class="badge badge-primary" href="/%E6%AC%A1%E3%81%AE%E6%96%B9%E7%A8%8B%E5%BC%8F%E3%81%AE%E8%A7%A3%E3%82%92%E3%83%8B%E3%83%A5%E3%83%BC%E3%83%88%E3%83%B3-%E3%83%A9%E3%83%95%E3%82%BD%E3%83%B3%E6%B3%95%E3%81%AB%E3%82%88%E3%82%8A%E6%B1%82%E3%82%81%E3%82%88.html">次の方程式の解をニュートン ラフソン法により求めよ</a>
+											<a class="badge badge-light" href="/%E7%A6%8F%E5%B3%B6%E7%9C%8C%E7%AB%8B%E9%AB%98%E6%A0%A1%E5%85%A5%E8%A9%A6-2%E6%AC%A1%E6%96%B9%E7%A8%8B%E5%BC%8F.html">福島県立高校入試 2次方程式</a>
+											<a class="badge badge-primary" href="/%E9%96%A2%E6%95%B0%E9%9B%BB%E5%8D%93-2%E6%AC%A1%E6%96%B9%E7%A8%8B%E5%BC%8F-%E3%81%A8%E3%81%8F.html">関数電卓 2次方程式 とく</a>
+											<a class="badge badge-info" href="/%E8%BF%91%E8%A6%AA%E7%9B%B8%E5%A7%A6-%E4%B8%8D%E8%A8%80-%E9%9A%A3%E3%81%AB%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%8C%E3%81%84%E3%82%8B%E3%81%AE%E3%82%88-%E7%AF%A0%E7%94%B0%E3%82%86%E3%81%86.html">近親相姦 不言 隣にお父さんがいるのよ 篠田ゆう</a>
+											<a class="badge badge-dark" href="/%E9%97%87%E3%81%AE%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93-%E3%83%89%E3%83%A9%E3%82%AF%E3%82%A8.html">闇のお父さん ドラクエ</a>
+											<a class="badge badge-light" href="/%E7%8E%8B%E5%AD%90-%E3%81%A8-%E5%BE%93%E8%80%85-%E3%81%AE-%E6%96%B9%E7%A8%8B%E5%BC%8F.html">王子 と 従者 の 方程式</a>
+											<a class="badge badge-danger" href="/%E8%B2%B4%E5%BF%97%E3%81%8F%E3%82%93%E3%81%AE%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93.html">貴志くんのお父さん</a>
+											<a class="badge badge-secondary" href="/%E9%9D%9E%E7%B7%9A%E5%BD%A2-%E6%96%B9%E7%A8%8B%E5%BC%8F-%E6%95%B0%E5%80%A4-%E8%A8%88%E7%AE%97-%E6%B3%95.html">非線形 方程式 数値 計算 法</a>
+											<a class="badge badge-info" href="/%E6%9D%B1%E5%A4%A7%E6%96%B9%E7%A8%8B%E5%BC%8F%E3%81%A7%E5%A4%A7%E6%B4%A5%E5%90%9B%E3%81%8C%E3%83%8F%E3%83%9E%E3%81%A3%E3%81%A6%E3%81%A6%E5%8F%A3%E3%81%9A%E3%81%95%E3%82%80%E3%82%B2%E3%83%BC%E3%83%A0%E3%81%AE%E6%9B%B2.html">東大方程式で大津君がハマってて口ずさむゲームの曲</a>
+											<a class="badge badge-primary" href="/%E7%88%B6%E3%81%A8%E5%A8%98%E3%81%AE%E8%BF%91%E8%A6%AA%E3%82%BB%E3%83%83%E3%82%AF%E3%82%B9-%E9%85%92%E7%99%96%E3%81%8C%E6%82%AA%E3%81%8F-%E8%A6%AA%E9%9B%A2%E3%82%8C%E3%82%82%E5%87%BA%E6%9D%A5%E3%81%AA%E3%81%84%E7%A7%81%E3%81%AF%E3%81%84%E3%81%A4%E3%82%82%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%AB%E8%BF%B7%E6%83%91%E3%82%92%E6%8E%9B%E3%81%91%E3%81%A6%E3%81%84%E3%81%BE%E3%81%99-%E3%81%9D%E3%82%93%E3%81%AA%E3%81%A0%E3%81%8B%E3%82%89%E3%81%82%E3%81%AE%E6%97%A5%E3%82%82-%E7%AC%B9%E5%80%89%E6%9D%8F.html">父と娘の近親セックス 酒癖が悪く 親離れも出来ない私はいつもお父さんに迷惑を掛けています そんなだからあの日も 笹倉杏</a>
+											<a class="badge badge-dark" href="/%E6%B1%9F%E6%88%B8%E5%B7%9D%E5%B7%A5%E6%88%BF-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%AB%E8%A8%80%E3%82%8F%E3%81%AA%E3%81%84%E3%81%A7-download.html">江戸川工房 お父さんに言わないで download</a>
+											<a class="badge badge-primary" href="/%E6%B0%B4%E6%A8%B9%E5%BF%83%E6%98%A5-%E7%94%B7%E3%81%A0%E3%82%89%E3%81%91%E3%81%AE9%E4%BA%BA%E5%85%84%E5%BC%9F-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%A8%E8%BF%91%E8%A6%AA%E7%94%9F%E6%B4%BB.html">水樹心春 男だらけの9人兄弟 お父さんと近親生活</a>
+											<a class="badge badge-danger" href="/%E9%BB%92%E5%AD%90-%E3%81%AE-%E3%83%90%E3%82%B9%E3%82%B1-%E3%83%AA%E3%82%B3-%E3%81%AE-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93-%E5%A3%B0%E5%84%AA.html">黒子 の バスケ リコ の お父さん 声優</a>
+						</div>
+<center>
+	<!-- MIDDLE BANNER ADS -->
+<script type="text/javascript">
+	atOptions = {
+		'key' : '2b77887421e2587a1a1b1d7c8a31a9e0',
+		'format' : 'iframe',
+		'height' : 250,
+		'width' : 300,
+		'params' : {}
+	};
+	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://jc32arlvqpv8.com/2b77887421e2587a1a1b1d7c8a31a9e0/invoke.js"></scr' + 'ipt>');
+</script>
+		
+	</center>
+					
+				</div>
+			</div>
+			<div class="row content mb-4">
+				<div class="col-md-12">					
+					
+	
+	<div class="card-columns">
+						
+	  <div class='card'>
+	  	<a href="https://harukusa.com/wp-content/uploads/2020/08/svg6-3.png" data-lightbox="roadtrip" data-title="確率的勾配降下法についての解説と実装 春草ブログ">
+						<img class="card-img" src="https://harukusa.com/wp-content/uploads/2020/08/svg6-3.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnZZndLsaOuYNsqDE-k_mrL5wTYdZWwHuNKsPfLEXuUug3DMRhV63wHFTkXWO5kmNPsqE';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				確率的勾配降下法についての解説と実装 春草ブログ
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://i.niupic.com/images/2019/09/23/_240.png" data-lightbox="roadtrip" data-title="機械学習ノート 日まで コードワールド">
+						<img class="card-img" src="https://i.niupic.com/images/2019/09/23/_240.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCVCt6_MeMEEy56F_LAKKlqWuXZv5fv-J-Oh-RSyhvSF3d_o8nUYuP68GPc36RLlRzKgY';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				機械学習ノート 日まで コードワールド
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://i.niupic.com/images/2019/09/23/_264.png" data-lightbox="roadtrip" data-title="機械学習ノート 日まで コードワールド">
+						<img class="card-img" src="https://i.niupic.com/images/2019/09/23/_264.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsttw6vge9BHoXJC5bajBHTLdOhCrbfm7PM7iIdaZmfbSEtDaFOhFIwPdlGoPWVxP8aLo';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				機械学習ノート 日まで コードワールド
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://image.slidesharecdn.com/opt-algorithm1-140313094503-phpapp02/95/6-5-638.jpg?cb=1398228678" data-lightbox="roadtrip" data-title="クラシックな機械学習の入門 6 最適化と学習アルゴリズム">
+						<img class="card-img" src="https://image.slidesharecdn.com/opt-algorithm1-140313094503-phpapp02/95/6-5-638.jpg?cb=1398228678" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNQa9dUKTcaX5byvuT3YfoWjPA-gQiFbgMGjHVqryQaNDSAYyYR_8FlGatKju9_gpd7Uk';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				クラシックな機械学習の入門 6 最適化と学習アルゴリズム
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://harukusa.com/wp-content/uploads/2020/08/svg1-2.png" data-lightbox="roadtrip" data-title="確率的勾配降下法についての解説と実装 春草ブログ">
+						<img class="card-img" src="https://harukusa.com/wp-content/uploads/2020/08/svg1-2.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRumNAF7Sv5_GDSu6C-UpyKxVxFyF8XuPdCWehkI9l49ZhZ3UjC8oa4ZCGWdN_puUHuOCY';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				確率的勾配降下法についての解説と実装 春草ブログ
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://cdn-ak.f.st-hatena.com/images/fotolife/Y/Yaju3D/20170917/20170917211137.png" data-lightbox="roadtrip" data-title="ディープラーニング 深層学習 を理解してみる 勾配降下法 最急降下法と確率的勾配降下法 デジタル デザイン ラボラトリーな日々">
+						<img class="card-img" src="https://cdn-ak.f.st-hatena.com/images/fotolife/Y/Yaju3D/20170917/20170917211137.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWIVT4DpZ9hNlTKP9hiG_bjBum3Fxficob7hm7t_M_d1Pqi8m4VidpBf-KxqACBysOYwk';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				ディープラーニング 深層学習 を理解してみる 勾配降下法 最急降下法と確率的勾配降下法 デジタル デザイン ラボラトリーな日々
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+				<div class='card'>	
+			<div class="d-block p-4">
+	</div>		  	
+		  	<h3 class="h6 p-2"><b></b></h3>
+					</div>
+		
+						
+	  <div class='card'>
+	  	<a href="https://i.niupic.com/images/2019/09/23/_267.png" data-lightbox="roadtrip" data-title="機械学習ノート 日まで コードワールド">
+						<img class="card-img" src="https://i.niupic.com/images/2019/09/23/_267.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3mT042EYJwVTt7m6ON47HgGsoQbYl45NzBA49NW9TJmauY9Jr3ryGeflP90eHQYeCHMc';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				機械学習ノート 日まで コードワールド
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://harukusa.com/wp-content/uploads/2020/08/svg2.png" data-lightbox="roadtrip" data-title="確率的勾配降下法についての解説と実装 春草ブログ">
+						<img class="card-img" src="https://harukusa.com/wp-content/uploads/2020/08/svg2.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2ukifjLrfEucSnk6zvl28YqqhhF73BcrSR4PUAYhfufJ3rV1bfYd6HNa0dgWnaLaL8sc';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				確率的勾配降下法についての解説と実装 春草ブログ
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://assets.st-note.com/production/uploads/images/38083452/picture_pc_1b0a548057cbd167e54131d5de9897ce.png?width=800" data-lightbox="roadtrip" data-title="Coursera Machine Learning Week2 まとめ Juki Note">
+						<img class="card-img" src="https://assets.st-note.com/production/uploads/images/38083452/picture_pc_1b0a548057cbd167e54131d5de9897ce.png?width=800" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS00XhuDQtBM5XRyW6vs1yCI7qMDmbDNbBf61J_Hqblr6b6JC9voNlEPeDWGhtTgrgOGeg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Coursera Machine Learning Week2 まとめ Juki Note
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic2.zhimg.com/v2-d3d92ad8bdb70fd5ccffd5edafc81cf1_180x120.jpg" data-lightbox="roadtrip" data-title="机器学习 用正规方程法求解线性回归 知乎">
+						<img class="card-img" src="https://pic2.zhimg.com/v2-d3d92ad8bdb70fd5ccffd5edafc81cf1_180x120.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRXDb8tLxf98Z5heHG4YzYHktqFPWI5NwObPfgGM-EufdBEqGHbaHgPJ2ZJuVrXnaoPVc';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				机器学习 用正规方程法求解线性回归 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://images2015.cnblogs.com/blog/1102791/201702/1102791-20170208201046791-631096578.png" data-lightbox="roadtrip" data-title="Coursera在线学习 第一节 梯度下降法与正规方程法求解模型参数比较 光彩照人 博客园">
+						<img class="card-img" src="https://images2015.cnblogs.com/blog/1102791/201702/1102791-20170208201046791-631096578.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtYOj4Dqh-ALXH_l6AI_YaYB2-S86Lm3fGcRIe6RUqFJ9__2rwUHtm8sJywvN2cAgmEHI';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Coursera在线学习 第一节 梯度下降法与正规方程法求解模型参数比较 光彩照人 博客园
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://ichi.pro/assets/images/max/724/0*AC0Lz5n-cNbNDVfc" data-lightbox="roadtrip" data-title="正規方程式を使用した線形回帰の実行">
+						<img class="card-img" src="https://ichi.pro/assets/images/max/724/0*AC0Lz5n-cNbNDVfc" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQu8IE9GxSCPFciVzTYBkjB_A3xw9sjqYccm8cDndz8zoLMyQbIj-Hz4QaMspBjHXsdH8';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				正規方程式を使用した線形回帰の実行
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://files.speakerdeck.com/presentations/7eddebb5e7a14c6186cc2a5d3d2c7624/slide_3.jpg" data-lightbox="roadtrip" data-title="Scikit Learnとtfによる実践機械学習4 1 4 2 Hands On Machine Learning With Scikit Learn And Tensorflow 4 1 4 2 Speaker Deck">
+						<img class="card-img" src="https://files.speakerdeck.com/presentations/7eddebb5e7a14c6186cc2a5d3d2c7624/slide_3.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgxXvHu8xOsjoOk3QynbIQDYxkFMHHvU08o1qLlBEPuc9oInJfxS39QGmiNgVNAGyEPcQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Scikit Learnとtfによる実践機械学習4 1 4 2 Hands On Machine Learning With Scikit Learn And Tensorflow 4 1 4 2 Speaker Deck
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://linky-juku.com/wp-content/uploads/2019/02/kyokusyokai-image-1024x768.png" data-lightbox="roadtrip" data-title="最急降下法の仕組みをイラストでわかりやすく解説">
+						<img class="card-img" src="https://linky-juku.com/wp-content/uploads/2019/02/kyokusyokai-image-1024x768.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDTHZI-NG1xnkoL4-e_jwC45C9eM21-CMUDspTmlxASAy3oSg4qmdFHPm7VrYp5o0TOfk';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				最急降下法の仕組みをイラストでわかりやすく解説
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://image.slidesharecdn.com/opt-algorithm1-140313094503-phpapp02/95/6-24-638.jpg?cb=1398228678" data-lightbox="roadtrip" data-title="クラシックな機械学習の入門 6 最適化と学習アルゴリズム">
+						<img class="card-img" src="https://image.slidesharecdn.com/opt-algorithm1-140313094503-phpapp02/95/6-24-638.jpg?cb=1398228678" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4cTKX5oyL16_1s41ry02M9BSI5EtBbMXM-gAdmLL5pxifMcJQOuacewCjzqG2v0fjYkk';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				クラシックな機械学習の入門 6 最適化と学習アルゴリズム
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://cdn-ak.f.st-hatena.com/images/fotolife/s/sadayoshi_tada/20190201/20190201200839.png" data-lightbox="roadtrip" data-title="Cousera で Machine Learning Course の 第2週を受講した 継続は力なり">
+						<img class="card-img" src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/sadayoshi_tada/20190201/20190201200839.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2sGBxSAqyHtZCdf8W63LGP74oKN1Js2ndrShjg7545clp6g7tW9sobKE_vK2xZ1KQOg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Cousera で Machine Learning Course の 第2週を受講した 継続は力なり
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://image.slidesharecdn.com/opt-algorithm1-140313094503-phpapp02/95/6-1-638.jpg?cb=1398228678" data-lightbox="roadtrip" data-title="クラシックな機械学習の入門 6 最適化と学習アルゴリズム">
+						<img class="card-img" src="https://image.slidesharecdn.com/opt-algorithm1-140313094503-phpapp02/95/6-1-638.jpg?cb=1398228678" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCD5Zk2k71i6D59wRGHTzWhmwnpPr37Nf6i0rvdz4KedmqN5jhMjAnwVJutIVY24RNu-w';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				クラシックな機械学習の入門 6 最適化と学習アルゴリズム
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://ichi.pro/assets/images/max/724/1*wAGpGV0eIsFK2stKLuSnyg.png" data-lightbox="roadtrip" data-title="Svmの解決 確率的勾配降下法とヒンジ損失">
+						<img class="card-img" src="https://ichi.pro/assets/images/max/724/1*wAGpGV0eIsFK2stKLuSnyg.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkkvxfa41TxDm0hjjub8ZXkLPKD40EZwH3nohVA6z-NagAMscx6hyLbWAcjTXdaQyJqoU';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Svmの解決 確率的勾配降下法とヒンジ損失
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://sig.tsg.ne.jp/ml2015/images/08/perceptron.003.jpg" data-lightbox="roadtrip" data-title="08 確率的勾配降下法">
+						<img class="card-img" src="http://sig.tsg.ne.jp/ml2015/images/08/perceptron.003.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnYutXoRFAGaXnTxLVzBAnP7Y9a7QEneTDHAfDUYpJRQmRt7KzNK8pyAwf-1CcDcT9kTg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				08 確率的勾配降下法
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://ichi.pro/assets/images/max/724/1*pE87db380l3XR2p4gvQhMw.png" data-lightbox="roadtrip" data-title="正規方程式を使用した線形回帰の実行">
+						<img class="card-img" src="https://ichi.pro/assets/images/max/724/1*pE87db380l3XR2p4gvQhMw.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVCJMNRU-I7vrat-ohovUyuQNID1t3lXuROUD_1xNkFW02T_l3EniE2oauJYx7xxRTQnQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				正規方程式を使用した線形回帰の実行
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.hogehoge-note.com/wp-content/uploads/2019/07/image-25.png" data-lightbox="roadtrip" data-title="機械学習 正規方程式 Coursera その6 ほげふがな日常">
+						<img class="card-img" src="https://www.hogehoge-note.com/wp-content/uploads/2019/07/image-25.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5kQhdeZKGl89WMXc1SNcwqG6fIweDnrgCfQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				機械学習 正規方程式 Coursera その6 ほげふがな日常
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic2.zhimg.com/80/v2-c973cdee849a4d0a7b92e55c8b520425_1440w.jpg" data-lightbox="roadtrip" data-title="机器学习 用正规方程法求解线性回归 知乎">
+						<img class="card-img" src="https://pic2.zhimg.com/80/v2-c973cdee849a4d0a7b92e55c8b520425_1440w.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUUULlCBgAZyx2y3aawhysWAI4wz4g5Nm_AA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				机器学习 用正规方程法求解线性回归 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://image.slidesharecdn.com/opt-algorithm1-140313094503-phpapp02/95/6-6-638.jpg?cb=1398228678" data-lightbox="roadtrip" data-title="クラシックな機械学習の入門 6 最適化と学習アルゴリズム">
+						<img class="card-img" src="https://image.slidesharecdn.com/opt-algorithm1-140313094503-phpapp02/95/6-6-638.jpg?cb=1398228678" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjD21RoIm02QGq_kXt9RQI43_D1cj70_wNKA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				クラシックな機械学習の入門 6 最適化と学習アルゴリズム
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://ichi.pro/assets/images/max/724/1*0QaZeLBiypeoiibZkVRfgQ.png" data-lightbox="roadtrip" data-title="線形回帰の正規方程式">
+						<img class="card-img" src="https://ichi.pro/assets/images/max/724/1*0QaZeLBiypeoiibZkVRfgQ.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYgH7ff2dNOZhWhlYD-a0l6J7HBYpxaoVVkg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				線形回帰の正規方程式
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://linky-juku.com/wp-content/uploads/2019/02/koushinshiki-1024x768.png" data-lightbox="roadtrip" data-title="最急降下法の仕組みをイラストでわかりやすく解説">
+						<img class="card-img" src="https://linky-juku.com/wp-content/uploads/2019/02/koushinshiki-1024x768.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3hFqNlK_vYiAm5ORcRy0AUyA4sJtTJc2fDw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				最急降下法の仕組みをイラストでわかりやすく解説
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.hogehoge-note.com/wp-content/uploads/2019/07/image-23.png" data-lightbox="roadtrip" data-title="機械学習 正規方程式 Coursera その6 ほげふがな日常">
+						<img class="card-img" src="https://www.hogehoge-note.com/wp-content/uploads/2019/07/image-23.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxsQun0N9X8O1rsNONq1EOc-8joGkcsim_Ow';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				機械学習 正規方程式 Coursera その6 ほげふがな日常
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://files.speakerdeck.com/presentations/0cf5dd8d548b48b2a9c689cf7572a82f/slide_17.jpg" data-lightbox="roadtrip" data-title="Mamlとその派生サーベイ Speaker Deck">
+						<img class="card-img" src="https://files.speakerdeck.com/presentations/0cf5dd8d548b48b2a9c689cf7572a82f/slide_17.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSM5OWcfTVLcqz4YnUOeP2KYRmrZGYO21nM6A';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Mamlとその派生サーベイ Speaker Deck
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.renom.jp/ja/notebooks/tutorial/basic_algorithm/sgd-settings/LearningRateSetting_ja.png" data-lightbox="roadtrip" data-title="確率的勾配降下法 Sgd の設定">
+						<img class="card-img" src="https://www.renom.jp/ja/notebooks/tutorial/basic_algorithm/sgd-settings/LearningRateSetting_ja.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWD3DWwJrGj-_lgKapqe_Rf4xFIDZL45Eq5Q';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				確率的勾配降下法 Sgd の設定
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://zephyrnet.com/wp-content/uploads/2020/09/which-methods-should-be-used-for-solving-linear-regression.png" data-lightbox="roadtrip" data-title="線形回帰を解決するためにどの方法を使用する必要がありますか">
+						<img class="card-img" src="https://zephyrnet.com/wp-content/uploads/2020/09/which-methods-should-be-used-for-solving-linear-regression.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwE5o6sIMjxiq4bdGl6snqHa9sLjLG0OqghA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				線形回帰を解決するためにどの方法を使用する必要がありますか
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.amazonaws.com%2F0%2F232088%2Fb7ea3dde-9ed3-f4a0-208d-828f195e6ce9.png?ixlib=rb-1.2.2&amp;auto=format&amp;gif-q=60&amp;q=75&amp;s=9c2796cbeb179d28e81113a144487c20" data-lightbox="roadtrip" data-title="確率的勾配降下法のメリットについて考えてみた Qiita">
+						<img class="card-img" src="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.amazonaws.com%2F0%2F232088%2Fb7ea3dde-9ed3-f4a0-208d-828f195e6ce9.png?ixlib=rb-1.2.2&amp;auto=format&amp;gif-q=60&amp;q=75&amp;s=9c2796cbeb179d28e81113a144487c20" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZ8NPPQWZrNcvZbWcNJ8STEYkvgmdxd1kgLw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				確率的勾配降下法のメリットについて考えてみた Qiita
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic2.zhimg.com/v2-c973cdee849a4d0a7b92e55c8b520425_b.jpg" data-lightbox="roadtrip" data-title="机器学习 用正规方程法求解线性回归 知乎">
+						<img class="card-img" src="https://pic2.zhimg.com/v2-c973cdee849a4d0a7b92e55c8b520425_b.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRO3kG4bgmlTKOOcEJZ3GpU8Cky6F4Dz1jT2w';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				机器学习 用正规方程法求解线性回归 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://img2018.cnblogs.com/blog/1235684/201903/1235684-20190303162917520-421463368.png" data-lightbox="roadtrip" data-title="正规方程 做梦当财神 博客园">
+						<img class="card-img" src="https://img2018.cnblogs.com/blog/1235684/201903/1235684-20190303162917520-421463368.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPouqc2ShSO1YP2f1bsktgBbVuFtWsfbC1AQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				正规方程 做梦当财神 博客园
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://cdn-ak.f.st-hatena.com/images/fotolife/a/araitbs007/20190218/20190218191031.jpg" data-lightbox="roadtrip" data-title="勾配降下法 理論編 波動と機械学習">
+						<img class="card-img" src="https://cdn-ak.f.st-hatena.com/images/fotolife/a/araitbs007/20190218/20190218191031.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNnpWT9rc9aAqjPkLZu-cMJZCla-CF-2YoYA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				勾配降下法 理論編 波動と機械学習
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+		
+	</div>
+
+		 
+		
+		
+				</div>
+				<div class="col-sm-12 widget">
+					<div class="d-block p-4">
+	<center>
+		<!-- BOTTOM BANNER ADS -->
+<script async="async" data-cfasync="false" src="//jc32arlvqpv8.com/eb47a424ae325c90cca32780149785c3/invoke.js"></script>
+<div id="container-eb47a424ae325c90cca32780149785c3"></div>
+
+	</center>
+</div>				</div>
+			</div>
+			<div class="row footer">
+				<div class="col-md-12 text-center py-4">
+										<a href="/p/dmca.html">Dmca</a>
+										<a href="/p/contact.html">Contact</a>
+										<a href="/p/privacy-policy.html">Privacy Policy</a>
+										<a href="/p/copyright.html">Copyright</a>
+					
+				</div>
+			</div>
+		</main>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js" integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js" integrity="sha256-CtKylYan+AJuoH8jrMht1+1PMhMqrKnB8K5g012WN5I=" crossorigin="anonymous"></script>
+		
+		<!-- Footer CSS JS -->
+		
+		
+		
+			<script type='text/javascript' src='//jc32arlvqpv8.com/ef/d5/10/efd510237a3143727bed46803ec35b8d.js'></script>
+</body>
+</html>

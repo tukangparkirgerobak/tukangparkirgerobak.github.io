@@ -1,0 +1,682 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha256-L/W5Wfqfa0sdBNIKN9cG6QA5F2qx4qICmU2VgLruv9Y=" crossorigin="anonymous" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/css/lightbox.min.css" integrity="sha256-tBxlolRHP9uMsEFKVk+hk//ekOlXOixLKvye5W2WR5c=" crossorigin="anonymous" />
+		<link href="https://fonts.googleapis.com/css?family=Mr+Dafoe" rel="stylesheet" type="text/css">
+
+		<style type="text/css">
+			html,body{font-family:"Open Sans",Arial,sans-serif;font-size:14px;font-weight:400;background:#f3f3f3 url(https://reference.wolfram.com/language/PDEModels/tutorial/HeatTransfer/Files/HeatTransfer.ja/O_12.png
+) no-repeat center center fixed;background-size:cover;height:100%}#title{font-family:"Mr Dafoe",Times,serif;font-size:34px;background:rgba(255,255,255,.8);margin-bottom:34px}.header{padding-bottom:13px;margin-bottom:13px;border-bottom:1px solid #eee}a{color:#26ADE4;text-decoration:none}#title a{color:#333;margin-left:21px}#title a:hover{text-decoration:none;color:#26ADE4}.sidebar ul{margin:0;padding:0}.sidebar ul li{list-style:none}.footer{margin-top:21px;padding-top:13px;border-top:1px solid #eee}.footer a{margin:0 15px}.navi{margin:13px 0 13px 0;padding:13px}.navi a{margin:5px 2px;font-size:95%}.main{margin-top: 6rem;}.form-inline .form-control{min-width: 300px;}.v-cover{height: 380px; object-fit: cover;}.v-image{height: 200px; object-fit: cover;}.dwn-cover{max-height: 460px; object-fit: cover;}.main{margin-top: 6rem;}.form-inline .form-control{min-width: 300px;}			
+		</style>
+
+		<title>熱伝導方程式 1次元 一般解 フーリエの法則</title>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/", 
+  "@type": "Article", 
+  "author": {
+    "@type": "Person",
+    "name": "James"
+  },
+  "headline": "熱伝導方程式 1次元 一般解 フーリエの法則",
+  "datePublished": "2021-04-24",
+  "image": [https://docsplayer.net/docs-images/95/122521238/images/28-0.jpg,https://slidesplayer.net/slide/17532698/103/images/2/X%E6%96%B9%E5%90%91%E3%81%B8%E3%81%AE%E7%86%B1%E7%A7%BB%E5%8B%95%E9%87%8F+x%3Dx%E3%81%AB%E3%81%8A%E3%81%84%E3%81%A6%E3%80%81+%E6%99%82%E9%96%93dt%E3%81%AE%E9%96%93%E3%81%AB%E9%9D%A2dydz%E3%81%AB%E6%B5%81%E5%85%A5%E3%81%99%E3%82%8B%E7%86%B1%E9%87%8FdQxi%E3%81%AF%E3%80%81+%E4%B8%80%E6%96%B9%E3%80%81x%3Dx%2Bdx%E3%81%AB%E3%81%8A%E3%81%84%E3%81%A6%E3%80%81.jpg,https://cdn.shortpixel.ai/client/q_glossy,ret_img,w_497,h_260/http://math-fun.net/wp-content/uploads/2018/07/SC000477.jpg],
+  "publisher": {
+    "@type": "Organization",
+    "name": "Tukang Parkir Gerobak",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://via.placeholder.com/512.png?text=熱伝導方程式 1次元 一般解 フーリエの法則",
+      "width": 512,
+      "height": 512
+    }
+  }
+}
+</script>
+		<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-957NGNKQ70"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-957NGNKQ70');
+</script>
+
+<script type='text/javascript' src='//jc32arlvqpv8.com/1a/82/2e/1a822ef8a40a0fbab3c4ea12a5d2bb02.js'></script>
+</head>
+	<body>
+		<header class="bg-white fixed-top">			
+			<nav class="navbar navbar-light bg-white mb-0">
+				<div class="container justify-content-center justify-content-sm-between">	
+				  <a href="/" title="Blog" class="navbar-brand mb-1">Blog</a>
+				  				</div>			  
+			</nav>				
+		</header>
+		<main class="main container bg-white">
+			<div class="col-md-12 my-4" align="center">
+				<div class="d-block p-4">
+	<br/><center>
+<!-- TOP BANNER ADS -->
+</center><br/>
+</div>			</div>
+			<div class="row header">
+				<div class="col-sm-12 text-center p-2">
+						<h1>熱伝導方程式 1次元 一般解 フーリエの法則</h1>
+
+	
+	<div class="navi text-center">
+										<a class="badge badge-light" href="/%E7%9B%B4%E7%B7%9A-%E3%81%AE-%E6%96%B9%E7%A8%8B%E5%BC%8F-%E7%B0%A1%E5%8D%98.html">直線 の 方程式 簡単</a>
+											<a class="badge badge-success" href="/%E9%AB%98%E6%AC%A1%E6%96%B9%E7%A8%8B%E5%BC%8F-%E8%A7%A3%E3%81%8D%E6%96%B9-4%E6%AC%A1.html">高次方程式 解き方 4次</a>
+											<a class="badge badge-dark" href="/%E8%A1%8C%E5%88%97-1%E6%AC%A1%E6%96%B9%E7%A8%8B%E5%BC%8F.html">行列 1次方程式</a>
+											<a class="badge badge-info" href="/%E7%BE%8E%E5%A4%A7%E7%94%9F%E3%81%AE%E5%B7%A8%E4%B9%B3%E5%A8%98-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%AB%E3%83%8C%E3%83%BC%E3%83%89%E3%83%A2%E3%83%87%E3%83%AB%E3%82%92%E3%81%8A%E9%A1%98%E3%81%84%E3%81%97%E3%81%9F%E3%82%89%E8%88%88%E5%A5%AE%E3%81%97%E3%81%A6%E4%B8%AD%E5%87%BA%E3%81%97%E3%81%95%E3%82%8C%E3%81%BE%E3%81%97%E3%81%9F.html">美大生の巨乳娘 お父さんにヌードモデルをお願いしたら興奮して中出しされました</a>
+											<a class="badge badge-success" href="/%E7%8A%AC-%E8%B5%A4%E3%81%A1%E3%82%83%E3%82%93-%E5%8B%95%E7%94%BB-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93.html">犬 赤ちゃん 動画 お父さん</a>
+											<a class="badge badge-danger" href="/%E6%A7%8B%E9%80%A0-%E6%96%B9%E7%A8%8B%E5%BC%8F-%E3%83%A2%E3%83%87%E3%83%AA%E3%83%B3%E3%82%B0-%E6%89%8B%E6%B3%95.html">構造 方程式 モデリング 手法</a>
+											<a class="badge badge-dark" href="/%E7%94%B7%E3%81%A0%E3%82%89%E3%81%91%E3%81%AE%E5%AE%B6%E6%97%8F%E3%81%AB%E5%A5%B3%E6%80%A7%E3%81%AF%E7%A7%811%E4%BA%BA-%E6%AF%8E%E6%97%A5%E5%BF%99%E3%81%97%E3%81%8F%E5%AE%B6%E4%BA%8B%E3%82%92%E3%81%97%E3%81%AA%E3%81%8C%E3%82%899%E4%BA%BA%E5%85%84%E5%BC%9F-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%A8%E9%80%A3%E7%B6%9A%E3%82%BB%E3%83%83%E3%82%AF%E3%82%B9%E6%9C%9D%E7%94%9F%E6%B4%BB-dmm.html">男だらけの家族に女性は私1人 毎日忙しく家事をしながら9人兄弟 お父さんと連続セックス朝生活 dmm</a>
+											<a class="badge badge-light" href="/%E9%BB%84%E9%87%91%E3%81%AE%E6%96%B9%E7%A8%8B%E5%BC%8F%E3%82%AE%E3%83%AA%E3%82%B7%E3%83%A3.html">黄金の方程式ギリシャ</a>
+											<a class="badge badge-light" href="/%E7%89%A9%E8%B3%AA%E8%BC%B8%E9%80%81-%E6%94%AF%E9%85%8D%E6%96%B9%E7%A8%8B%E5%BC%8F.html">物質輸送 支配方程式</a>
+											<a class="badge badge-warning" href="/%E9%BE%8D%E9%A6%AC%E4%BC%9D-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%AE%E3%83%8F%E3%83%B3%E3%83%87%E3%82%A3.html">龍馬伝 お父さんのハンディ</a>
+											<a class="badge badge-info" href="/%E6%AE%BA%E4%BA%BA-%E6%9C%AC%E5%BD%93%E3%81%AE%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%98%E3%82%83%E3%81%AA%E3%81%84.html">殺人 本当のお父さんじゃない</a>
+											<a class="badge badge-danger" href="/%E6%B5%85%E6%B0%B4%E6%B3%A2%E6%96%B9%E7%A8%8B%E5%BC%8F-%E7%99%BA%E6%95%A3.html">浅水波方程式 発散</a>
+											<a class="badge badge-warning" href="/%E7%AE%97%E6%95%B0-n%E3%81%AE%E6%96%B9%E7%A8%8B%E5%BC%8F.html">算数 nの方程式</a>
+											<a class="badge badge-warning" href="/%E7%81%AB%E5%B1%B1%E5%99%B4%E7%81%AB-%E7%A2%BA%E7%8E%87-%E6%96%B9%E7%A8%8B%E5%BC%8F.html">火山噴火 確率 方程式</a>
+											<a class="badge badge-info" href="/%E8%87%AA%E5%88%86%E3%81%AE%E3%81%8A%E6%AF%8D%E3%81%95%E3%82%93%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%82%88%E3%82%8A%E5%BE%8C%E3%81%AB%E6%AD%BB%E3%81%AC%E3%81%A8%E6%80%9D%E3%81%86%E3%81%A8%E3%81%84%E3%82%84.html">自分のお母さんお父さんより後に死ぬと思うといや</a>
+						</div>
+<center>
+	<!-- MIDDLE BANNER ADS -->
+<script type="text/javascript">
+	atOptions = {
+		'key' : '2b77887421e2587a1a1b1d7c8a31a9e0',
+		'format' : 'iframe',
+		'height' : 250,
+		'width' : 300,
+		'params' : {}
+	};
+	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://jc32arlvqpv8.com/2b77887421e2587a1a1b1d7c8a31a9e0/invoke.js"></scr' + 'ipt>');
+</script>
+		
+	</center>
+					
+				</div>
+			</div>
+			<div class="row content mb-4">
+				<div class="col-md-12">					
+					
+	
+	<div class="card-columns">
+						
+	  <div class='card'>
+	  	<a href="https://cdn.shortpixel.ai/client/q_glossy,ret_img,w_800,h_600/https://math-fun.net/wp-content/uploads/2019/07/heatkernel_1dim.gif" data-lightbox="roadtrip" data-title="熱方程式の解き方 フーリエ変換 全空間 N次元 趣味の大学数学">
+						<img class="card-img" src="https://cdn.shortpixel.ai/client/q_glossy,ret_img,w_800,h_600/https://math-fun.net/wp-content/uploads/2019/07/heatkernel_1dim.gif" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTWep5rRmzE45fMMudAlIXR1YpfflovLy-8gliTltOGjv0FKPBe6R6_8TLJfeFFRIogcE';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				熱方程式の解き方 フーリエ変換 全空間 N次元 趣味の大学数学
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="wUw9vF0iD36vrM" data-lightbox="roadtrip" data-title="Http Www Kz Tsukuba Ac Jp Abe Ohp Heat Chapter2 Pdf">
+						<img class="card-img" src="wUw9vF0iD36vrM" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpCFwO0_W3qflDYHcBu4hp8jbWW-Ml88G2RTrnXjg9NwyRd3g7iMtcFqTVS1wQMlM9Dd4';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Http Www Kz Tsukuba Ac Jp Abe Ohp Heat Chapter2 Pdf
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="wUw9vF0iD36vrM" data-lightbox="roadtrip" data-title="Http Www Kz Tsukuba Ac Jp Abe Ohp Heat Chapter2 Pdf">
+						<img class="card-img" src="wUw9vF0iD36vrM" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSryQjivz9j-IE4kpM1Mtwh6vHvWF9wHuUJ8RAxhVoJWNKrMCidwbQHR2XuQLJGW_TUf28';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Http Www Kz Tsukuba Ac Jp Abe Ohp Heat Chapter2 Pdf
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://math-fun.net/wp-content/uploads/2018/07/SC000475.jpg" data-lightbox="roadtrip" data-title="なぜ重積分を学ぶ 熱伝導方程式の導出を例に 趣味の大学数学">
+						<img class="card-img" src="https://math-fun.net/wp-content/uploads/2018/07/SC000475.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVkt0UxY8u_F6X6c1KWjJ_JJCvieWBHE8-WTBDXVGKXOSDkd5ocijeHrufLAKzV1x1JW4';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				なぜ重積分を学ぶ 熱伝導方程式の導出を例に 趣味の大学数学
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="wUw9vF0iD36vrM" data-lightbox="roadtrip" data-title="Http Www Kz Tsukuba Ac Jp Abe Ohp Heat Chapter2 Pdf">
+						<img class="card-img" src="wUw9vF0iD36vrM" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKCmKAY0WN0fe-t0mfZ2nnxkmjt8zdjn6XOJO8fpzDg1PPF5LAPIW96KPaduOQSq95iZM';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Http Www Kz Tsukuba Ac Jp Abe Ohp Heat Chapter2 Pdf
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://cdn.shortpixel.ai/client/q_glossy,ret_img,w_497,h_260/http://math-fun.net/wp-content/uploads/2018/07/SC000477.jpg" data-lightbox="roadtrip" data-title="なぜ重積分を学ぶ 熱伝導方程式の導出を例に 趣味の大学数学">
+						<img class="card-img" src="https://cdn.shortpixel.ai/client/q_glossy,ret_img,w_497,h_260/http://math-fun.net/wp-content/uploads/2018/07/SC000477.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4vFiGtzIGkz2agZ2jC8LDJvtS_EAqEygk98RdOomjMyATu-wpaJkPOtALe5QGHtolEdQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				なぜ重積分を学ぶ 熱伝導方程式の導出を例に 趣味の大学数学
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+				<div class='card'>	
+			<div class="d-block p-4">
+	</div>		  	
+		  	<h3 class="h6 p-2"><b></b></h3>
+					</div>
+		
+						
+	  <div class='card'>
+	  	<a href="wUw9vF0iD36vrM" data-lightbox="roadtrip" data-title="Http Www Kz Tsukuba Ac Jp Abe Ohp Heat Chapter2 Pdf">
+						<img class="card-img" src="wUw9vF0iD36vrM" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLJi3DROGm0x45ealY_eUjupbrIK8KtqdiY7NxGoJ5QKAFVgmxT5HF2rg_Np7w6VjGNyQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Http Www Kz Tsukuba Ac Jp Abe Ohp Heat Chapter2 Pdf
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://slidesplayer.net/slide/17532698/103/images/2/X%E6%96%B9%E5%90%91%E3%81%B8%E3%81%AE%E7%86%B1%E7%A7%BB%E5%8B%95%E9%87%8F+x%3Dx%E3%81%AB%E3%81%8A%E3%81%84%E3%81%A6%E3%80%81+%E6%99%82%E9%96%93dt%E3%81%AE%E9%96%93%E3%81%AB%E9%9D%A2dydz%E3%81%AB%E6%B5%81%E5%85%A5%E3%81%99%E3%82%8B%E7%86%B1%E9%87%8FdQxi%E3%81%AF%E3%80%81+%E4%B8%80%E6%96%B9%E3%80%81x%3Dx%2Bdx%E3%81%AB%E3%81%8A%E3%81%84%E3%81%A6%E3%80%81.jpg" data-lightbox="roadtrip" data-title="熱伝導方程式の導出 熱伝導 物質の移動を伴わずに高温側から低温側へ熱が伝わる現象 対流 輻射 フーリエの法則fourier S Law Ppt Download">
+						<img class="card-img" src="https://slidesplayer.net/slide/17532698/103/images/2/X%E6%96%B9%E5%90%91%E3%81%B8%E3%81%AE%E7%86%B1%E7%A7%BB%E5%8B%95%E9%87%8F+x%3Dx%E3%81%AB%E3%81%8A%E3%81%84%E3%81%A6%E3%80%81+%E6%99%82%E9%96%93dt%E3%81%AE%E9%96%93%E3%81%AB%E9%9D%A2dydz%E3%81%AB%E6%B5%81%E5%85%A5%E3%81%99%E3%82%8B%E7%86%B1%E9%87%8FdQxi%E3%81%AF%E3%80%81+%E4%B8%80%E6%96%B9%E3%80%81x%3Dx%2Bdx%E3%81%AB%E3%81%8A%E3%81%84%E3%81%A6%E3%80%81.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIb8UvC_DCUKBcKCsEEaOugfW8uj-nfASD0IyXyKnZfWSueRtepUvYrfEIeFjvm6Wj4KI';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				熱伝導方程式の導出 熱伝導 物質の移動を伴わずに高温側から低温側へ熱が伝わる現象 対流 輻射 フーリエの法則fourier S Law Ppt Download
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://chemeng.web.fc2.com/ExcelCe/exhc01.png" data-lightbox="roadtrip" data-title="Excelによる伝熱工学 定常伝熱">
+						<img class="card-img" src="https://chemeng.web.fc2.com/ExcelCe/exhc01.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQK3EhM8CnhUcAlq2pkxpfmILOUPzixRnxJPh2_QZcfTXzISgEAfD8VMPM_Bo0bJA7FPzc';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Excelによる伝熱工学 定常伝熱
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="wUw9vF0iD36vrM" data-lightbox="roadtrip" data-title="Http Www Kz Tsukuba Ac Jp Abe Ohp Heat Chapter2 Pdf">
+						<img class="card-img" src="wUw9vF0iD36vrM" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6Eh7DjGLrKAhAgOwPa92usSZkY91F_F2zrfZ-A11e6q2MfA7uoLUGMIrs7d4DfPZhkmU';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Http Www Kz Tsukuba Ac Jp Abe Ohp Heat Chapter2 Pdf
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://slidesplayer.net/slide/17532698/103/images/7/2%E6%AC%A1%E5%85%83%E5%AE%9A%E5%B8%B8%E7%86%B1%E4%BC%9D%E5%B0%8E+%E7%86%B1%E6%BA%90%E3%81%AE%E3%81%82%E3%82%8B%E9%9D%9E%E5%AE%9A%E5%B8%B83%E6%AC%A1%E5%85%83%E7%86%B1%E4%BC%9D%E5%B0%8E%E6%96%B9%E7%A8%8B%E5%BC%8F+%E7%86%B1%E6%BA%90%E3%81%AE%E3%81%AA%E3%81%84%E5%AE%9A%E5%B8%B82%E6%AC%A1%E5%85%83%E7%86%B1%E4%BC%9D%E5%B0%8E%E6%96%B9%E7%A8%8B%E5%BC%8F+%E3%83%A9%E3%83%97%E3%83%A9%E3%82%B9%E6%96%B9%E7%A8%8B%E5%BC%8F+y+T%3DT2.jpg" data-lightbox="roadtrip" data-title="熱伝導方程式の導出 熱伝導 物質の移動を伴わずに高温側から低温側へ熱が伝わる現象 対流 輻射 フーリエの法則fourier S Law Ppt Download">
+						<img class="card-img" src="https://slidesplayer.net/slide/17532698/103/images/7/2%E6%AC%A1%E5%85%83%E5%AE%9A%E5%B8%B8%E7%86%B1%E4%BC%9D%E5%B0%8E+%E7%86%B1%E6%BA%90%E3%81%AE%E3%81%82%E3%82%8B%E9%9D%9E%E5%AE%9A%E5%B8%B83%E6%AC%A1%E5%85%83%E7%86%B1%E4%BC%9D%E5%B0%8E%E6%96%B9%E7%A8%8B%E5%BC%8F+%E7%86%B1%E6%BA%90%E3%81%AE%E3%81%AA%E3%81%84%E5%AE%9A%E5%B8%B82%E6%AC%A1%E5%85%83%E7%86%B1%E4%BC%9D%E5%B0%8E%E6%96%B9%E7%A8%8B%E5%BC%8F+%E3%83%A9%E3%83%97%E3%83%A9%E3%82%B9%E6%96%B9%E7%A8%8B%E5%BC%8F+y+T%3DT2.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3JtIQ_TlxSNyRiU1npspiQcrwFr-FVKA__fwoD1Oz8kl8tMFpgEL1HjMkEAPDxb3k2Ck';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				熱伝導方程式の導出 熱伝導 物質の移動を伴わずに高温側から低温側へ熱が伝わる現象 対流 輻射 フーリエの法則fourier S Law Ppt Download
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="wUw9vF0iD36vrM" data-lightbox="roadtrip" data-title="Http Www Kz Tsukuba Ac Jp Abe Ohp Heat Chapter2 Pdf">
+						<img class="card-img" src="wUw9vF0iD36vrM" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0NcXwCSkgChtwzQPsbnIYiTR96_MMZpiDLMDnZiDLeHP3fFclrSPfJrd7de9JN21CWyY';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Http Www Kz Tsukuba Ac Jp Abe Ohp Heat Chapter2 Pdf
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.envuniv.net/image/fig_conduction1.gif" data-lightbox="roadtrip" data-title="定常熱伝導 環境の大学">
+						<img class="card-img" src="https://www.envuniv.net/image/fig_conduction1.gif" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnVSl_5ycDo5Fodm_scR_gc4aph3CknSSRsNOwOXJuc68WFkCrWvuk2e6sB9LLFCMG0oE';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				定常熱伝導 環境の大学
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://userdisk.webry.biglobe.ne.jp/021/465/43/N000/000/001/148365757775156404180.jpg" data-lightbox="roadtrip" data-title="一次元熱伝導方程式 ロードバイク散歩">
+						<img class="card-img" src="https://userdisk.webry.biglobe.ne.jp/021/465/43/N000/000/001/148365757775156404180.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXO3MCSiS9Pp3m7nnuyQRFokeul5Ab-dTXY3tbI6zCFEKgY39VuuYRgVR5wXh35cjl-PM';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				一次元熱伝導方程式 ロードバイク散歩
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://reference.wolfram.com/language/PDEModels/tutorial/HeatTransfer/Files/HeatTransfer.ja/Video_1.jpg" data-lightbox="roadtrip" data-title="熱移動 Wolfram言語ドキュメント">
+						<img class="card-img" src="https://reference.wolfram.com/language/PDEModels/tutorial/HeatTransfer/Files/HeatTransfer.ja/Video_1.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyHwSUYusQHgNgP2heOe1iArOpDI2o0YPL_98D3OA9tUD8w_W-YNVmHM4LPmF0aLvZ3ho';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				熱移動 Wolfram言語ドキュメント
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="wY5UO3kDKnHHxM" data-lightbox="roadtrip" data-title="Http Www Ai Phase Co Jp Wp Content Uploads 2019 06 4816770f6d7a3050afc90c6efb9b0ff9 Pdf">
+						<img class="card-img" src="wY5UO3kDKnHHxM" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTN9MG7jx7M7PLscLXl-bc2ubhNT-cLa4hNzjrC91_2TX8PxRXKxKj8VUOEND-fJRaJlZ8';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Http Www Ai Phase Co Jp Wp Content Uploads 2019 06 4816770f6d7a3050afc90c6efb9b0ff9 Pdf
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="NhElFGM8D0F-eM" data-lightbox="roadtrip" data-title="Http Www Kz Tsukuba Ac Jp Abe Ohp Heat Chapter1 Pdf">
+						<img class="card-img" src="NhElFGM8D0F-eM" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTM540apW8A9PpV48uZ2uMCMJElOkEIgytywbsJOjae00hWbOT8XOQSJ9FZlndE_kCfzDU';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Http Www Kz Tsukuba Ac Jp Abe Ohp Heat Chapter1 Pdf
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://takun-physics.net/wp-content/uploads/2019/05/3-1.png" data-lightbox="roadtrip" data-title="1次元熱伝導方程式の陽解法で解いた時の数値的安定性 宇宙に入ったカマキリ">
+						<img class="card-img" src="https://takun-physics.net/wp-content/uploads/2019/05/3-1.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScfz_vXBEcaX3_4efWYCUOnfcgPHmxjdkwCLWivsPuUbDMv5uJJ0_xwQGvTJn4i59kiDc';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				1次元熱伝導方程式の陽解法で解いた時の数値的安定性 宇宙に入ったカマキリ
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="wJmf7uTNI1WZ7M" data-lightbox="roadtrip" data-title="Https Www Kz Tsukuba Ac Jp Abe Ohp Heat Chapter3 Pdf">
+						<img class="card-img" src="wJmf7uTNI1WZ7M" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4sBKYGynLQgVgDTUHUrjFNLnkohx0DvCg_ScWAKy4um-Tb_n85ktmIlqoiddPN2taxps';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Https Www Kz Tsukuba Ac Jp Abe Ohp Heat Chapter3 Pdf
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://docsplayer.net/docs-images/95/122521238/images/28-0.jpg" data-lightbox="roadtrip" data-title="4d F736f F F696e74202d2091e6328fcd E9f8cb392e88fed944d936093b1298d758b F E291e892c789c1292e B8cdd8 Pdf Free Download">
+						<img class="card-img" src="https://docsplayer.net/docs-images/95/122521238/images/28-0.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdbVTwicDdDwhCuE9p3QfF6duFALjIlKHCI5yv5nsoP_TDUXATOYNr5EYXZP_wvPpyaDU';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				4d F736f F F696e74202d2091e6328fcd E9f8cb392e88fed944d936093b1298d758b F E291e892c789c1292e B8cdd8 Pdf Free Download
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://userdisk.webry.biglobe.ne.jp/021/465/43/N000/000/001/148365761005106524180.jpg" data-lightbox="roadtrip" data-title="一次元熱伝導方程式 ロードバイク散歩">
+						<img class="card-img" src="https://userdisk.webry.biglobe.ne.jp/021/465/43/N000/000/001/148365761005106524180.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8rLHzGKoLK13wqV4P1uHyIljfIBSgjIPf0A';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				一次元熱伝導方程式 ロードバイク散歩
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://livedoor.blogimg.jp/for_toal_memo/imgs/f/b/fbe8532f-s.png" data-lightbox="roadtrip" data-title="15 偏微分方程式 1次元熱伝導方程式の解のグラフ化 とあるエンジニアのおぼえ書き">
+						<img class="card-img" src="https://livedoor.blogimg.jp/for_toal_memo/imgs/f/b/fbe8532f-s.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrEYztD8vt-Vtti6q7_S0MJVqyLllqO57woQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				15 偏微分方程式 1次元熱伝導方程式の解のグラフ化 とあるエンジニアのおぼえ書き
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://kenkou888.com/img/%E3%83%95%E3%83%BC%E3%83%AA%E3%82%A8%E3%81%AE%E6%B3%95%E5%89%872.jpg" data-lightbox="roadtrip" data-title="フーリエの法則と熱伝導 伝導伝熱 平板 円筒 球での熱伝導度 熱伝導率 の計算方法">
+						<img class="card-img" src="https://kenkou888.com/img/%E3%83%95%E3%83%BC%E3%83%AA%E3%82%A8%E3%81%AE%E6%B3%95%E5%89%872.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBRznm8MxqnMtJpIiBSvHNVcbtzZfu5t9wbA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				フーリエの法則と熱伝導 伝導伝熱 平板 円筒 球での熱伝導度 熱伝導率 の計算方法
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://reference.wolfram.com/language/PDEModels/tutorial/HeatTransfer/Files/HeatTransfer.ja/17.gif" data-lightbox="roadtrip" data-title="熱移動 Wolfram言語ドキュメント">
+						<img class="card-img" src="https://reference.wolfram.com/language/PDEModels/tutorial/HeatTransfer/Files/HeatTransfer.ja/17.gif" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScqmO-Q7v6RAxmmuEvRw-m5chuWvz7N5OKiA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				熱移動 Wolfram言語ドキュメント
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="tTspb2Xv4VwZ5M" data-lightbox="roadtrip" data-title="Https Www Kz Tsukuba Ac Jp Abe Ohp Heat Chapter4 Pdf">
+						<img class="card-img" src="tTspb2Xv4VwZ5M" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjI1f4peon1J1wvNWJPQSAoea_vkWujgBMmQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Https Www Kz Tsukuba Ac Jp Abe Ohp Heat Chapter4 Pdf
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://reference.wolfram.com/language/PDEModels/tutorial/HeatTransfer/Files/HeatTransfer.ja/O_12.png" data-lightbox="roadtrip" data-title="熱移動 Wolfram言語ドキュメント">
+						<img class="card-img" src="https://reference.wolfram.com/language/PDEModels/tutorial/HeatTransfer/Files/HeatTransfer.ja/O_12.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQay4T0OcqsBqCFkuRKrMddLpxpnpsD4hE67Q';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				熱移動 Wolfram言語ドキュメント
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://skomo.o.oo7.jp/f20/13-1.png" data-lightbox="roadtrip" data-title="１３章 1次元熱伝導方程式">
+						<img class="card-img" src="http://skomo.o.oo7.jp/f20/13-1.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnnNkgY8Y50ZRH6LXcYjQf_3g46RyI91Kqxw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				１３章 1次元熱伝導方程式
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="ZTReMXihu4_5KM" data-lightbox="roadtrip" data-title="Http Towr Engineering Mem Blog Jp 13 E5 81 8f E5 Be Ae E5 88 86 E6 96 B9 E7 A8 8b E5 Bc 8f T Conductive 1d Pdf">
+						<img class="card-img" src="ZTReMXihu4_5KM" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtAW8Dx1u9guYTPURAijs2BPg1NwBm0xzFpg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Http Towr Engineering Mem Blog Jp 13 E5 81 8f E5 Be Ae E5 88 86 E6 96 B9 E7 A8 8b E5 Bc 8f T Conductive 1d Pdf
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://slidesplayer.net/slide/15192095/92/images/17/%E7%86%B1%E4%BC%9D%E5%B0%8E+%E7%86%B1%E4%BC%9D%E5%B0%8E%E6%96%B9%E7%A8%8B%E5%BC%8F+%E5%8D%98%E4%BD%8D%E6%99%82%E9%96%93%E5%BD%93%E3%81%9F%E3%82%8A%E5%8D%98%E4%BD%8D%E6%96%AD%E9%9D%A2%E7%A9%8D%E5%BD%93%E3%81%9F%E3%82%8A%E6%B8%A9%E5%BA%A6%E5%8B%BE%E9%85%8D%EF%BC%88dT%2Fdx%EF%BC%89%E6%96%B9%E5%90%91%E3%81%AB%E4%BC%9D%E5%B0%8E%E3%81%99%E3%82%8B%E7%86%B1%E9%87%8F+%E3%83%95%E3%83%BC%E3%83%AA%E3%82%A8%E3%81%AE%E6%B3%95%E5%89%87+%E6%9D%90%E6%96%99%E5%86%85%E3%81%AE%E6%B8%A9%E5%BA%A6%E5%88%86%E5%B8%83.jpg" data-lightbox="roadtrip" data-title="８ 伝熱 ２ Ppt Download">
+						<img class="card-img" src="https://slidesplayer.net/slide/15192095/92/images/17/%E7%86%B1%E4%BC%9D%E5%B0%8E+%E7%86%B1%E4%BC%9D%E5%B0%8E%E6%96%B9%E7%A8%8B%E5%BC%8F+%E5%8D%98%E4%BD%8D%E6%99%82%E9%96%93%E5%BD%93%E3%81%9F%E3%82%8A%E5%8D%98%E4%BD%8D%E6%96%AD%E9%9D%A2%E7%A9%8D%E5%BD%93%E3%81%9F%E3%82%8A%E6%B8%A9%E5%BA%A6%E5%8B%BE%E9%85%8D%EF%BC%88dT%2Fdx%EF%BC%89%E6%96%B9%E5%90%91%E3%81%AB%E4%BC%9D%E5%B0%8E%E3%81%99%E3%82%8B%E7%86%B1%E9%87%8F+%E3%83%95%E3%83%BC%E3%83%AA%E3%82%A8%E3%81%AE%E6%B3%95%E5%89%87+%E6%9D%90%E6%96%99%E5%86%85%E3%81%AE%E6%B8%A9%E5%BA%A6%E5%88%86%E5%B8%83.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXdgzh9Q4s5wgdYGBnPrqNnZ05ZCz8uzGm1g';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				８ 伝熱 ２ Ppt Download
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://userdisk.webry.biglobe.ne.jp/021/465/43/N000/000/001/148365759480335659180.jpg" data-lightbox="roadtrip" data-title="一次元熱伝導方程式 ロードバイク散歩">
+						<img class="card-img" src="https://userdisk.webry.biglobe.ne.jp/021/465/43/N000/000/001/148365759480335659180.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTNoEe8pMdyQGJH1MogPQhVCP7csjwweUftA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				一次元熱伝導方程式 ロードバイク散歩
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://kenkou888.com/img/%E5%B9%B3%E6%9D%BF%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8B%E4%BC%9D%E5%B0%8E%E4%BC%9D%E7%86%B1.jpg" data-lightbox="roadtrip" data-title="フーリエの法則と熱伝導 伝導伝熱 平板 円筒 球での熱伝導度 熱伝導率 の計算方法">
+						<img class="card-img" src="https://kenkou888.com/img/%E5%B9%B3%E6%9D%BF%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8B%E4%BC%9D%E5%B0%8E%E4%BC%9D%E7%86%B1.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlnL_7dTASU97gSgyUf0_qV0W6nltIbn598g';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				フーリエの法則と熱伝導 伝導伝熱 平板 円筒 球での熱伝導度 熱伝導率 の計算方法
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="nHYIAtbSyeOKRM" data-lightbox="roadtrip" data-title="Http Www Ocw Titech Ac Jp Index Php Module General Action Download File 201326550 1 0 15 Pdf Type Cal Jwc 201326550">
+						<img class="card-img" src="nHYIAtbSyeOKRM" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6bEKXP7eYwmAvrWVuJnpsAOJSJMXu4W3_0A';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Http Www Ocw Titech Ac Jp Index Php Module General Action Download File 201326550 1 0 15 Pdf Type Cal Jwc 201326550
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://i0.wp.com/www.hulinks.co.jp/wp-content/uploads/software/flexpde/v6_13.png" data-lightbox="roadtrip" data-title="三次方程 Program 3次スプライン補間法 Liudong">
+						<img class="card-img" src="https://i0.wp.com/www.hulinks.co.jp/wp-content/uploads/software/flexpde/v6_13.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMLdBkBHPu0QDLEVKXVXUrKjNbkfDwK54new';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				三次方程 Program 3次スプライン補間法 Liudong
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+		
+	</div>
+
+		 
+		
+		
+				</div>
+				<div class="col-sm-12 widget">
+					<div class="d-block p-4">
+	<center>
+		<!-- BOTTOM BANNER ADS -->
+<script async="async" data-cfasync="false" src="//jc32arlvqpv8.com/eb47a424ae325c90cca32780149785c3/invoke.js"></script>
+<div id="container-eb47a424ae325c90cca32780149785c3"></div>
+
+	</center>
+</div>				</div>
+			</div>
+			<div class="row footer">
+				<div class="col-md-12 text-center py-4">
+										<a href="/p/dmca.html">Dmca</a>
+										<a href="/p/contact.html">Contact</a>
+										<a href="/p/privacy-policy.html">Privacy Policy</a>
+										<a href="/p/copyright.html">Copyright</a>
+					
+				</div>
+			</div>
+		</main>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js" integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js" integrity="sha256-CtKylYan+AJuoH8jrMht1+1PMhMqrKnB8K5g012WN5I=" crossorigin="anonymous"></script>
+		
+		<!-- Footer CSS JS -->
+		
+		
+		
+			<script type='text/javascript' src='//jc32arlvqpv8.com/ef/d5/10/efd510237a3143727bed46803ec35b8d.js'></script>
+</body>
+</html>

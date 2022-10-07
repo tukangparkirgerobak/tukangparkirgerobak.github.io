@@ -1,0 +1,682 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha256-L/W5Wfqfa0sdBNIKN9cG6QA5F2qx4qICmU2VgLruv9Y=" crossorigin="anonymous" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/css/lightbox.min.css" integrity="sha256-tBxlolRHP9uMsEFKVk+hk//ekOlXOixLKvye5W2WR5c=" crossorigin="anonymous" />
+		<link href="https://fonts.googleapis.com/css?family=Mr+Dafoe" rel="stylesheet" type="text/css">
+
+		<style type="text/css">
+			html,body{font-family:"Open Sans",Arial,sans-serif;font-size:14px;font-weight:400;background:#f3f3f3 url(https://pic2.zhimg.com/v2-d3d92ad8bdb70fd5ccffd5edafc81cf1_180x120.jpg
+) no-repeat center center fixed;background-size:cover;height:100%}#title{font-family:"Mr Dafoe",Times,serif;font-size:34px;background:rgba(255,255,255,.8);margin-bottom:34px}.header{padding-bottom:13px;margin-bottom:13px;border-bottom:1px solid #eee}a{color:#26ADE4;text-decoration:none}#title a{color:#333;margin-left:21px}#title a:hover{text-decoration:none;color:#26ADE4}.sidebar ul{margin:0;padding:0}.sidebar ul li{list-style:none}.footer{margin-top:21px;padding-top:13px;border-top:1px solid #eee}.footer a{margin:0 15px}.navi{margin:13px 0 13px 0;padding:13px}.navi a{margin:5px 2px;font-size:95%}.main{margin-top: 6rem;}.form-inline .form-control{min-width: 300px;}.v-cover{height: 380px; object-fit: cover;}.v-image{height: 200px; object-fit: cover;}.dwn-cover{max-height: 460px; object-fit: cover;}.main{margin-top: 6rem;}.form-inline .form-control{min-width: 300px;}			
+		</style>
+
+		<title>最小二乗法 正規方程式 勾配法</title>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/", 
+  "@type": "Article", 
+  "author": {
+    "@type": "Person",
+    "name": "James"
+  },
+  "headline": "最小二乗法 正規方程式 勾配法",
+  "datePublished": "2021-04-24",
+  "image": [https://pic2.zhimg.com/v2-9c9d81f9c85eedf8821ef5de5fcf6dc9_b.png,https://pic4.zhimg.com/v2-29b9fc7eb4279a1cfb39f39d51c70f7c_720w.jpg?source=172ae18b,https://automatic-browsing.com/wp-content/uploads/2020/02/%E3%83%9D%E3%82%A4%E3%83%B3%E3%83%88%E3%81%A8%E5%86%86%E3%81%AE%E6%8E%A8%E5%AE%9A.png],
+  "publisher": {
+    "@type": "Organization",
+    "name": "Tukang Parkir Gerobak",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://via.placeholder.com/512.png?text=最小二乗法 正規方程式 勾配法",
+      "width": 512,
+      "height": 512
+    }
+  }
+}
+</script>
+		<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-957NGNKQ70"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-957NGNKQ70');
+</script>
+
+<script type='text/javascript' src='//jc32arlvqpv8.com/1a/82/2e/1a822ef8a40a0fbab3c4ea12a5d2bb02.js'></script>
+</head>
+	<body>
+		<header class="bg-white fixed-top">			
+			<nav class="navbar navbar-light bg-white mb-0">
+				<div class="container justify-content-center justify-content-sm-between">	
+				  <a href="/" title="Blog" class="navbar-brand mb-1">Blog</a>
+				  				</div>			  
+			</nav>				
+		</header>
+		<main class="main container bg-white">
+			<div class="col-md-12 my-4" align="center">
+				<div class="d-block p-4">
+	<br/><center>
+<!-- TOP BANNER ADS -->
+</center><br/>
+</div>			</div>
+			<div class="row header">
+				<div class="col-sm-12 text-center p-2">
+						<h1>最小二乗法 正規方程式 勾配法</h1>
+
+	
+	<div class="navi text-center">
+										<a class="badge badge-success" href="/%E9%AB%98%E6%AC%A1%E6%96%B9%E7%A8%8B%E5%BC%8F-%E8%99%9A%E6%95%B0%E8%A7%A3.html">高次方程式 虚数解</a>
+											<a class="badge badge-success" href="/%E7%9F%B3%E7%94%B0-%E3%81%95%E3%82%93-%E3%83%81-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93.html">石田 さん チ お父さん</a>
+											<a class="badge badge-success" href="/%E7%AE%97%E6%9C%A8-2%E6%AC%A1%E6%96%B9%E7%A8%8B%E5%BC%8F.html">算木 2次方程式</a>
+											<a class="badge badge-success" href="/%E6%B5%81-%E8%B7%A1-%E7%B7%9A-%E6%96%B9%E7%A8%8B%E5%BC%8F.html">流 跡 線 方程式</a>
+											<a class="badge badge-success" href="/%E7%88%B6%E3%81%AE%E6%97%A5%E3%82%AE%E3%83%95%E3%83%88%E3%81%A7%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%AB%E3%83%97%E3%83%AC%E3%82%BC%E3%83%B3%E3%83%88%E3%81%97%E3%81%9F%E3%81%84%E5%81%A5%E5%BA%B7%E3%82%B0%E3%83%83%E3%82%BA7%E9%81%B8.html">父の日ギフトでお父さんにプレゼントしたい健康グッズ7選</a>
+											<a class="badge badge-primary" href="/%E7%B4%A0%E6%95%B5%E3%81%AA%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93-%E8%8B%B1%E8%AA%9E.html">素敵なお父さん 英語</a>
+											<a class="badge badge-secondary" href="/%E7%BE%BD%E6%9D%91%E9%A7%85%E4%B8%8B%E8%BB%8A%E6%99%82%E3%81%AB-%E3%83%81%E3%83%A3%E3%83%BC%E3%82%B8%E9%87%91%E9%A1%8D%E3%82%92%E4%BD%BF%E3%81%84%E3%81%8D%E3%81%A3%E3%81%A6%E3%81%84%E3%82%8B%E3%81%AA%E3%82%89%E3%81%B0%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E9%81%94%E3%81%8C.html">羽村駅下車時に チャージ金額を使いきっているならばお父さん達が</a>
+											<a class="badge badge-secondary" href="/%E9%87%91%E6%8C%81%E3%81%A1%E3%81%8A%E3%81%A8%E3%81%86%E3%81%95%E3%82%93-%E8%B2%A7%E4%B9%8F%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93.html">金持ちおとうさん 貧乏お父さん</a>
+											<a class="badge badge-info" href="/%E9%9D%92%E5%A4%8F%E5%90%9F%E8%94%B5%E3%81%AE%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93.html">青夏吟蔵のお父さん</a>
+											<a class="badge badge-primary" href="/%EF%BD%85%EF%BD%92-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%82%92%E9%A0%BC%E3%82%80%E3%81%9E.html">ｅｒ お父さんを頼むぞ</a>
+											<a class="badge badge-secondary" href="/%E8%BF%91%E8%A6%AA-%E7%84%A1%E8%A8%80-%E7%9B%B8%E5%A7%A6-%E9%9A%A3%E3%81%AB%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%8C%E3%81%84%E3%82%8B%E3%81%AE%E3%82%88-%E6%BE%81%E8%B0%B7%E6%9E%9C%E6%AD%A9.html">近親 無言 相姦 隣にお父さんがいるのよ 澁谷果歩</a>
+											<a class="badge badge-secondary" href="/%E7%A7%81%E3%82%82%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%AE%E3%82%88%E3%81%86%E3%81%AB%E3%81%AA%E3%82%8A%E3%81%9F%E3%81%84.html">私もお父さんのようになりたい</a>
+											<a class="badge badge-primary" href="/%E6%B8%A6%E5%BA%A6%E8%BC%B8%E9%80%81%E6%96%B9%E7%A8%8B%E5%BC%8F-%E6%A5%B5%E5%BA%A7%E6%A8%99.html">渦度輸送方程式 極座標</a>
+											<a class="badge badge-light" href="/%E7%A7%81%E3%81%8C%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%AE%E6%80%A7%E6%AC%B2%E5%87%A6%E7%90%86%E3%81%99%E3%82%8B%E3%81%8B%E3%82%89-hitomi-la.html">私がお父さんの性欲処理するから hitomi la</a>
+											<a class="badge badge-danger" href="/%E9%81%A9%E9%BD%A2%E6%9C%9F%E6%83%91%E3%80%85%E3%83%AD%E3%83%9E%E3%83%B3%E3%82%B9-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%8C%E5%A4%89-%E3%81%8A%E3%82%82%E3%81%97%E3%82%8D%E3%81%84.html">適齢期惑々ロマンス お父さんが変 おもしろい</a>
+						</div>
+<center>
+	<!-- MIDDLE BANNER ADS -->
+<script type="text/javascript">
+	atOptions = {
+		'key' : '2b77887421e2587a1a1b1d7c8a31a9e0',
+		'format' : 'iframe',
+		'height' : 250,
+		'width' : 300,
+		'params' : {}
+	};
+	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://jc32arlvqpv8.com/2b77887421e2587a1a1b1d7c8a31a9e0/invoke.js"></scr' + 'ipt>');
+</script>
+		
+	</center>
+					
+				</div>
+			</div>
+			<div class="row content mb-4">
+				<div class="col-md-12">					
+					
+	
+	<div class="card-columns">
+						
+	  <div class='card'>
+	  	<a href="https://img-blog.csdn.net/20171029104145122?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUGVyZmVjdF9BY2NlcHRlZA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" data-lightbox="roadtrip" data-title="线性回归中正规方程 最小二乘法 推导 Lemon的博客 Csdn博客">
+						<img class="card-img" src="https://img-blog.csdn.net/20171029104145122?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUGVyZmVjdF9BY2NlcHRlZA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJ1uWQ-nNY6vucCfTAa10YIBIVm3fTXag4bJ1nsyLXwQccNxu2nbR31PvEtKX2LD5xwG0';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				线性回归中正规方程 最小二乘法 推导 Lemon的博客 Csdn博客
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic2.zhimg.com/80/v2-9c9d81f9c85eedf8821ef5de5fcf6dc9_1440w.png" data-lightbox="roadtrip" data-title="最小二乘法正规方程组的详细推导normalequations 知乎">
+						<img class="card-img" src="https://pic2.zhimg.com/80/v2-9c9d81f9c85eedf8821ef5de5fcf6dc9_1440w.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2SABc5Q7PyYpTW7z2Zjy9c-O1w6fNIV3RHnLxIvRgzX21qf-7XexornuCEYxP2xLd7FY';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				最小二乘法正规方程组的详细推导normalequations 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic4.zhimg.com/80/v2-13b922f0516a989c1108258b1e016dbf_1440w.png" data-lightbox="roadtrip" data-title="Kwdwisje Pw 6m">
+						<img class="card-img" src="https://pic4.zhimg.com/80/v2-13b922f0516a989c1108258b1e016dbf_1440w.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqqtbUy-NqYBboqxCqPloaWZC309Uz3QAjwxWkKm3SbXaQy5XLvxxlVUtovMSahbAUv9g';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Kwdwisje Pw 6m
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://img-blog.csdn.net/20171029104354953?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUGVyZmVjdF9BY2NlcHRlZA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" data-lightbox="roadtrip" data-title="机器学习 正规方程 最小二乘法 的推导 Perfect Accepted Csdn博客">
+						<img class="card-img" src="https://img-blog.csdn.net/20171029104354953?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUGVyZmVjdF9BY2NlcHRlZA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1UVOf33Xt7gEABw-QoLSriK7kV3mFK8rNvg0UN9-yIG4eSObCU9lRsDd3Q3cyEb6gZ-w';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				机器学习 正规方程 最小二乘法 的推导 Perfect Accepted Csdn博客
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic1.zhimg.com/v2-ee37aaf5d2fc8dd88b89a9c00a697d1c_b.png" data-lightbox="roadtrip" data-title="最小二乘法正规方程组的详细推导normalequations 知乎">
+						<img class="card-img" src="https://pic1.zhimg.com/v2-ee37aaf5d2fc8dd88b89a9c00a697d1c_b.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKKc_S948T2nR1hYOXTnZPRj-5QKJQoBJdEX7QYVcVpIXxnw1ibJianHIIL7dt1x-KMcY';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				最小二乘法正规方程组的详细推导normalequations 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://analytics-notty.tech/wp-content/uploads/2018/03/%E3%82%A2%E3%82%A4%E3%82%AD%E3%83%A3%E3%83%83%E3%83%81-17.jpg" data-lightbox="roadtrip" data-title="最小二乗法の式の導出と例題 最小二乗法と回帰直線を思い通りに使えるようになろう 数学の面白いこと 役に立つことをまとめたサイト">
+						<img class="card-img" src="https://analytics-notty.tech/wp-content/uploads/2018/03/%E3%82%A2%E3%82%A4%E3%82%AD%E3%83%A3%E3%83%83%E3%83%81-17.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjrn2Ql9eHtyRStm4uedPCHkupzF5p0tYmHdHvlOGy9N4_jBoLTsZSqY37EDsVfL3M6kg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				最小二乗法の式の導出と例題 最小二乗法と回帰直線を思い通りに使えるようになろう 数学の面白いこと 役に立つことをまとめたサイト
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+				<div class='card'>	
+			<div class="d-block p-4">
+	</div>		  	
+		  	<h3 class="h6 p-2"><b></b></h3>
+					</div>
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic2.zhimg.com/v2-9c9d81f9c85eedf8821ef5de5fcf6dc9_b.png" data-lightbox="roadtrip" data-title="最小二乘法正规方程组的详细推导normalequations 知乎">
+						<img class="card-img" src="https://pic2.zhimg.com/v2-9c9d81f9c85eedf8821ef5de5fcf6dc9_b.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTItTsjmic-tuEDIX77El36t7oEf1gof5Lb2pBIyx1fvkov2u3trI2C6f4svkbYVrsyCjA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				最小二乘法正规方程组的详细推导normalequations 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://teratail-v2.storage.googleapis.com/uploads/contributed_images/4c95b74fbfa5d5b7028ca50c91e3fadf.png" data-lightbox="roadtrip" data-title="機械学習 勾配法で局所解が発生するときの次数は4以上か Teratail">
+						<img class="card-img" src="https://teratail-v2.storage.googleapis.com/uploads/contributed_images/4c95b74fbfa5d5b7028ca50c91e3fadf.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToraEtD7XGrNMolZruzPjtaT_Ek31dbr_GXzk7jqNV-kBaytqhlHnXTpjq_0MMK5DoDM4';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				機械学習 勾配法で局所解が発生するときの次数は4以上か Teratail
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://imgconvert.csdnimg.cn/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy83MDM2NDExLWU4OGY0NGUxZTFlMTA0YzgucG5n?x-oss-process=image/format,png" data-lightbox="roadtrip" data-title="线性回归中正规方程 最小二乘法 推导 Lemon的博客 Csdn博客">
+						<img class="card-img" src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy83MDM2NDExLWU4OGY0NGUxZTFlMTA0YzgucG5n?x-oss-process=image/format,png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQ_OT8lU_ydOR2exg7r7qtjCmprWgJUHXk5rK0p2rW4oZIzinbZQzCPIYVmsRCkbleMAA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				线性回归中正规方程 最小二乘法 推导 Lemon的博客 Csdn博客
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic1.zhimg.com/v2-20aa1f4d79cbb9f37c4086c2f0999810_b.png" data-lightbox="roadtrip" data-title="最小二乘法正规方程组的详细推导normalequations 知乎">
+						<img class="card-img" src="https://pic1.zhimg.com/v2-20aa1f4d79cbb9f37c4086c2f0999810_b.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFeAfnM3H1_ypPu9ottDXb_-ATFnh92ahM-t2shCuTHDqbXDl2u2X_QFPda9vO7OPVEb0';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				最小二乘法正规方程组的详细推导normalequations 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic2.zhimg.com/80/v2-c973cdee849a4d0a7b92e55c8b520425_1440w.jpg" data-lightbox="roadtrip" data-title="机器学习 用正规方程法求解线性回归 知乎">
+						<img class="card-img" src="https://pic2.zhimg.com/80/v2-c973cdee849a4d0a7b92e55c8b520425_1440w.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMcw6CQpq3BWVZb1XEPd6YdVUOutq-W_L_zBXPfdVlfWKLbYtf1I2xSgrrgO-kxmDW-vc';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				机器学习 用正规方程法求解线性回归 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://i0.wp.com/pic3.zhimg.com/v2-20464979479819aff6d496357ef576b5_r.jpg" data-lightbox="roadtrip" data-title="Vrgmsm Kz5objm">
+						<img class="card-img" src="https://i0.wp.com/pic3.zhimg.com/v2-20464979479819aff6d496357ef576b5_r.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUCI_1iXtyV97wYP4JxxvW_kxc-lcw_5l-vhzqeB2smDP6KgDjetgXon4qGOcyaB3t-cc';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Vrgmsm Kz5objm
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.easyatm.com.tw/img/5/643/nBnauM3XzgDN4QDNwgTM3QTN1UTM1QDN5MjM5ADMwAjMwUzL4EzL1EzLt92YucmbvRWdo5Cd0FmLzE2LvoDc0RHa.jpg" data-lightbox="roadtrip" data-title="正規方程 最小二乘法可以將誤差方程轉化為有確定解的代數方程組 其方程式數 百科知識中文網">
+						<img class="card-img" src="https://www.easyatm.com.tw/img/5/643/nBnauM3XzgDN4QDNwgTM3QTN1UTM1QDN5MjM5ADMwAjMwUzL4EzL1EzLt92YucmbvRWdo5Cd0FmLzE2LvoDc0RHa.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3dzhM0mxeqeLsyMApbNXUR2IpNqFeboZkuY-i7wFXi1zSC-8Ba4tNzupt3EsvTmo560w';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				正規方程 最小二乘法可以將誤差方程轉化為有確定解的代數方程組 其方程式數 百科知識中文網
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic2.zhimg.com/v2-c973cdee849a4d0a7b92e55c8b520425_b.jpg" data-lightbox="roadtrip" data-title="机器学习 用正规方程法求解线性回归 知乎">
+						<img class="card-img" src="https://pic2.zhimg.com/v2-c973cdee849a4d0a7b92e55c8b520425_b.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiTZHUzfZDu_c3T9OqHlKxahTVBOKdH6HF1asF95NZSWacpC4BxFwNFaqornzn0Yo2NCA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				机器学习 用正规方程法求解线性回归 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://i0.wp.com/img-blog.csdn.net/20140504122410234?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvem91eHkwOQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" data-lightbox="roadtrip" data-title="Vrgmsm Kz5objm">
+						<img class="card-img" src="https://i0.wp.com/img-blog.csdn.net/20140504122410234?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvem91eHkwOQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcKPA4gqQ_71QXKNbT1hAfCoRRP2-n1PnoecQH-RVYH3JArQN9H2Zd9gTE9A34rjHxFR0';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Vrgmsm Kz5objm
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.zhihu.com/equation?tex=X%3D%5Cleft%5B+%5Cbegin%7Bmatrix%7D+%28x%5E%7B%281%29%7D%29%5E%7BT%7D%5C%5C+%5Ccdot%5C%5C%5Ccdot%5C%5C%5Ccdot%5C%5C+%28x%5E%7B%28m%29%7D%29%5E%7BT%7D+%5Cend%7Bmatrix%7D%5Cright%5D" data-lightbox="roadtrip" data-title="机器学习 用正规方程法求解线性回归 知乎">
+						<img class="card-img" src="https://www.zhihu.com/equation?tex=X%3D%5Cleft%5B+%5Cbegin%7Bmatrix%7D+%28x%5E%7B%281%29%7D%29%5E%7BT%7D%5C%5C+%5Ccdot%5C%5C%5Ccdot%5C%5C%5Ccdot%5C%5C+%28x%5E%7B%28m%29%7D%29%5E%7BT%7D+%5Cend%7Bmatrix%7D%5Cright%5D" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjJRf4QEV3jCoMIEX3oit3PuEu_h8nMtvOXP0tzmr0_Rus5Lj5kvZeoQtqqFxehTVI1XA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				机器学习 用正规方程法求解线性回归 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic2.zhimg.com/v2-d3d92ad8bdb70fd5ccffd5edafc81cf1_180x120.jpg" data-lightbox="roadtrip" data-title="机器学习 用正规方程法求解线性回归 知乎">
+						<img class="card-img" src="https://pic2.zhimg.com/v2-d3d92ad8bdb70fd5ccffd5edafc81cf1_180x120.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRXDb8tLxf98Z5heHG4YzYHktqFPWI5NwObPfgGM-EufdBEqGHbaHgPJ2ZJuVrXnaoPVc';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				机器学习 用正规方程法求解线性回归 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://i0.wp.com/image.bubuko.com/info/201805/20180509124308140859.png" data-lightbox="roadtrip" data-title="正則化正規化深入理解l1 L2正則化原理與作用 Rjhi">
+						<img class="card-img" src="https://i0.wp.com/image.bubuko.com/info/201805/20180509124308140859.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQddUrDyT-GKHT42MSsRA5gNybvd6hPJhOkyo_9fMy571XCYoTK0tBPCupmvSKIErQmg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				正則化正規化深入理解l1 L2正則化原理與作用 Rjhi
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic1.zhimg.com/v2-fdcf86596d1e37ff459eceba76402416_ipico.jpg?source=172ae18b" data-lightbox="roadtrip" data-title="机器学习 用正规方程法求解线性回归 知乎">
+						<img class="card-img" src="https://pic1.zhimg.com/v2-fdcf86596d1e37ff459eceba76402416_ipico.jpg?source=172ae18b" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEcsdzm6HUHSm4sWWCjnE2v51XF0TqznnbmSW86tyLj3kdtixo1MfOsrK2h0o-cB023tY';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				机器学习 用正规方程法求解线性回归 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://automatic-browsing.com/wp-content/uploads/2020/02/%E3%83%9D%E3%82%A4%E3%83%B3%E3%83%88%E3%81%A8%E5%86%86%E3%81%AE%E6%8E%A8%E5%AE%9A.png" data-lightbox="roadtrip" data-title="最小二乗法で円のフィッティング 仕事と投資とあと何か">
+						<img class="card-img" src="https://automatic-browsing.com/wp-content/uploads/2020/02/%E3%83%9D%E3%82%A4%E3%83%B3%E3%83%88%E3%81%A8%E5%86%86%E3%81%AE%E6%8E%A8%E5%AE%9A.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlGsIa7F-1vWmcumnqTrTrTmtUIOdbtRp1f9zJvC4r6T87sZiYNTiUaJSr8Z8UgaH-y6k';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				最小二乗法で円のフィッティング 仕事と投資とあと何か
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.zhihu.com/equation?tex=y%3D%5Cleft%5B+%5Cbegin%7Bmatrix%7D+y%5E%7B%281%29%7D%29%5C%5C+%5Ccdot%5C%5C%5Ccdot%5C%5C%5Ccdot%5C%5C+y%5E%7B%28m%29%7D%29+%5Cend%7Bmatrix%7D%5Cright%5D" data-lightbox="roadtrip" data-title="机器学习 用正规方程法求解线性回归 知乎">
+						<img class="card-img" src="https://www.zhihu.com/equation?tex=y%3D%5Cleft%5B+%5Cbegin%7Bmatrix%7D+y%5E%7B%281%29%7D%29%5C%5C+%5Ccdot%5C%5C%5Ccdot%5C%5C%5Ccdot%5C%5C+y%5E%7B%28m%29%7D%29+%5Cend%7Bmatrix%7D%5Cright%5D" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqfe_so_DdKr5VzjvHiJR1frw0uAbgMtqSXQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				机器学习 用正规方程法求解线性回归 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://i0.wp.com/img-blog.csdn.net/20140504122353812?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvem91eHkwOQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" data-lightbox="roadtrip" data-title="Vrgmsm Kz5objm">
+						<img class="card-img" src="https://i0.wp.com/img-blog.csdn.net/20140504122353812?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvem91eHkwOQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTs7g8BWFjCRstl93h86hKhg2aVjUNj3AFpGQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Vrgmsm Kz5objm
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://img-blog.csdnimg.cn/20190203224657348.png" data-lightbox="roadtrip" data-title="最小二乘法和正则化 Einstellung的博客 Csdn博客">
+						<img class="card-img" src="https://img-blog.csdnimg.cn/20190203224657348.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQ2x-czcErG--YBS7uz5Zy-ErqH9eHPUU2PQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				最小二乘法和正则化 Einstellung的博客 Csdn博客
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://automatic-browsing.com/wp-content/uploads/2020/02/nonlinearFittingEyeCatch.png" data-lightbox="roadtrip" data-title="非線形最小二乗法で円の方程式をフィッティング 仕事と投資とあと何か">
+						<img class="card-img" src="https://automatic-browsing.com/wp-content/uploads/2020/02/nonlinearFittingEyeCatch.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfNoNkeNESGw7xysN8_TsyitN8dFZO_6w2cQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				非線形最小二乗法で円の方程式をフィッティング 仕事と投資とあと何か
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://image.slidesharecdn.com/cvim11suharafinal-110416094904-phpapp01/95/cvim11-3-6-728.jpg?cb=1302950474" data-lightbox="roadtrip" data-title="Cvim 11 3 最小化のための数値計算">
+						<img class="card-img" src="https://image.slidesharecdn.com/cvim11suharafinal-110416094904-phpapp01/95/cvim11-3-6-728.jpg?cb=1302950474" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmUB0_P-tE9iPUU5kEmgcj56qkp9H4AUb8HQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Cvim 11 3 最小化のための数値計算
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic2.zhimg.com/v2-45445499a9d956b8faca2817b27dd341_b.jpg" data-lightbox="roadtrip" data-title="机器学习 用正规方程法求解线性回归 知乎">
+						<img class="card-img" src="https://pic2.zhimg.com/v2-45445499a9d956b8faca2817b27dd341_b.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4KM6NtPkZarPcIcK8YCdk4XKmRwRmqNJCNg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				机器学习 用正规方程法求解线性回归 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://i0.wp.com/batapara.com/wp-content/ql-cache/quicklatex.com-b87426d5a91c7d880a613512fa1cc357_l3.png" data-lightbox="roadtrip" data-title="正規方程式 バンドル法の正規方程式を求める Qkaxtw">
+						<img class="card-img" src="https://i0.wp.com/batapara.com/wp-content/ql-cache/quicklatex.com-b87426d5a91c7d880a613512fa1cc357_l3.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRG2xAi8YbiYFT7z9MGnHvcg9Py_E_27P4yig';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				正規方程式 バンドル法の正規方程式を求める Qkaxtw
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://patentimages.storage.googleapis.com/d1/f8/c9/36630d6f2d0412/CN101422035BD00281.png" data-lightbox="roadtrip" data-title="Cn101422035b 光源推定装置 光源推定系统与光源推定方法以及图像高分辨率化装置与图像高分辨率化方法 Google Patents">
+						<img class="card-img" src="https://patentimages.storage.googleapis.com/d1/f8/c9/36630d6f2d0412/CN101422035BD00281.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTos95l7nrDSMuSXFyd3emIwXPtaK6sV_EXpg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Cn101422035b 光源推定装置 光源推定系统与光源推定方法以及图像高分辨率化装置与图像高分辨率化方法 Google Patents
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic4.zhimg.com/v2-29b9fc7eb4279a1cfb39f39d51c70f7c_720w.jpg?source=172ae18b" data-lightbox="roadtrip" data-title="机器学习 用正规方程法求解线性回归 知乎">
+						<img class="card-img" src="https://pic4.zhimg.com/v2-29b9fc7eb4279a1cfb39f39d51c70f7c_720w.jpg?source=172ae18b" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRG-lwQbyOUUwZIMFMw5SbQu8kNjoQf5TN1SQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				机器学习 用正规方程法求解线性回归 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://img-blog.csdnimg.cn/20190128193003758.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMwMDkzNDE3,size_16,color_FFFFFF,t_70" data-lightbox="roadtrip" data-title="最小二乘法节点定位 1 小知识 非线性方程线性化 何麻麻的孩纸们的博客 Csdn博客 非线性方程线性化">
+						<img class="card-img" src="https://img-blog.csdnimg.cn/20190128193003758.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMwMDkzNDE3,size_16,color_FFFFFF,t_70" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIHIoOgsqZJ15_amtdgY2dbY2geIdy5tUnig';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				最小二乘法节点定位 1 小知识 非线性方程线性化 何麻麻的孩纸们的博客 Csdn博客 非线性方程线性化
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://upload.wikimedia.org/wikipedia/commons/9/94/Linear_least_squares2.png" data-lightbox="roadtrip" data-title="最小二乗法 Wikipedia">
+						<img class="card-img" src="https://upload.wikimedia.org/wikipedia/commons/9/94/Linear_least_squares2.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_GpXhLaFNms0dRD1U5mc33x3Htn3_d-XEPw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				最小二乗法 Wikipedia
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://wikimedia.org/api/rest_v1/media/math/render/svg/a185387ff905198dba8bb66a3ad1b19d797803a1" data-lightbox="roadtrip" data-title="非線形最小二乗法 Wikipedia">
+						<img class="card-img" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/a185387ff905198dba8bb66a3ad1b19d797803a1" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmItROynuot3xDZPKkdiR_mb4LIpPHPfq6og';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				非線形最小二乗法 Wikipedia
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Conjugate_gradient_illustration.svg/1200px-Conjugate_gradient_illustration.svg.png" data-lightbox="roadtrip" data-title="共役勾配法 Wikipedia">
+						<img class="card-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Conjugate_gradient_illustration.svg/1200px-Conjugate_gradient_illustration.svg.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNc5V6W0oA2M_jsVw5moR69lqRNhdFrKxi9Q';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				共役勾配法 Wikipedia
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+		
+	</div>
+
+		 
+		
+		
+				</div>
+				<div class="col-sm-12 widget">
+					<div class="d-block p-4">
+	<center>
+		<!-- BOTTOM BANNER ADS -->
+<script async="async" data-cfasync="false" src="//jc32arlvqpv8.com/eb47a424ae325c90cca32780149785c3/invoke.js"></script>
+<div id="container-eb47a424ae325c90cca32780149785c3"></div>
+
+	</center>
+</div>				</div>
+			</div>
+			<div class="row footer">
+				<div class="col-md-12 text-center py-4">
+										<a href="/p/dmca.html">Dmca</a>
+										<a href="/p/contact.html">Contact</a>
+										<a href="/p/privacy-policy.html">Privacy Policy</a>
+										<a href="/p/copyright.html">Copyright</a>
+					
+				</div>
+			</div>
+		</main>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js" integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js" integrity="sha256-CtKylYan+AJuoH8jrMht1+1PMhMqrKnB8K5g012WN5I=" crossorigin="anonymous"></script>
+		
+		<!-- Footer CSS JS -->
+		
+		
+		
+			<script type='text/javascript' src='//jc32arlvqpv8.com/ef/d5/10/efd510237a3143727bed46803ec35b8d.js'></script>
+</body>
+</html>

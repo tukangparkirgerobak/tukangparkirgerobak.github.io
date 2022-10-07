@@ -1,0 +1,682 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha256-L/W5Wfqfa0sdBNIKN9cG6QA5F2qx4qICmU2VgLruv9Y=" crossorigin="anonymous" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/css/lightbox.min.css" integrity="sha256-tBxlolRHP9uMsEFKVk+hk//ekOlXOixLKvye5W2WR5c=" crossorigin="anonymous" />
+		<link href="https://fonts.googleapis.com/css?family=Mr+Dafoe" rel="stylesheet" type="text/css">
+
+		<style type="text/css">
+			html,body{font-family:"Open Sans",Arial,sans-serif;font-size:14px;font-weight:400;background:#f3f3f3 url(https://slidetodoc.com/presentation_image_h/910d9707c3fe3408afbe2f4edc44e870/image-7.jpg
+) no-repeat center center fixed;background-size:cover;height:100%}#title{font-family:"Mr Dafoe",Times,serif;font-size:34px;background:rgba(255,255,255,.8);margin-bottom:34px}.header{padding-bottom:13px;margin-bottom:13px;border-bottom:1px solid #eee}a{color:#26ADE4;text-decoration:none}#title a{color:#333;margin-left:21px}#title a:hover{text-decoration:none;color:#26ADE4}.sidebar ul{margin:0;padding:0}.sidebar ul li{list-style:none}.footer{margin-top:21px;padding-top:13px;border-top:1px solid #eee}.footer a{margin:0 15px}.navi{margin:13px 0 13px 0;padding:13px}.navi a{margin:5px 2px;font-size:95%}.main{margin-top: 6rem;}.form-inline .form-control{min-width: 300px;}.v-cover{height: 380px; object-fit: cover;}.v-image{height: 200px; object-fit: cover;}.dwn-cover{max-height: 460px; object-fit: cover;}.main{margin-top: 6rem;}.form-inline .form-control{min-width: 300px;}			
+		</style>
+
+		<title>行列 2次方程式 正則</title>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/", 
+  "@type": "Article", 
+  "author": {
+    "@type": "Person",
+    "name": "James"
+  },
+  "headline": "行列 2次方程式 正則",
+  "datePublished": "2021-04-24",
+  "image": [https://machine-learning-from-scratch.readthedocs.io/zh_CN/latest/_images/%E7%BA%BF%E6%80%A7%E7%BB%84%E5%90%882.png,http://i0.wp.com/conglang.github.io/img/lai_18.jpg,https://slideplayer.com/slide/4842929/15/images/10/%E6%AD%A3%E5%89%87%E3%81%AA%E4%BF%82%E6%95%B0%E8%A1%8C%E5%88%97%E3%82%92%E6%8C%81%E3%81%A4%E9%80%A3%E7%AB%8B%E6%96%B9%E7%A8%8B%E5%BC%8F+%EF%BC%88%E6%AD%A3%E5%89%87%E8%A1%8C%E5%88%97%E3%81%A8%E9%80%A3%E7%AB%8B%E4%B8%80%E6%AC%A1%E6%96%B9%E7%A8%8B%E5%BC%8F%EF%BC%89+%E9%80%A3%E7%AB%8B1%E6%AC%A1%E6%96%B9%E7%A8%8B%E5%BC%8F+%E3%81%8C%E4%B8%80%E6%84%8F%E3%81%AE%E8%A7%A3%E3%82%92%E6%8C%81%E3%81%A4%E3%81%9F%E3%82%81%E3%81%AE.jpg],
+  "publisher": {
+    "@type": "Organization",
+    "name": "Tukang Parkir Gerobak",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://via.placeholder.com/512.png?text=行列 2次方程式 正則",
+      "width": 512,
+      "height": 512
+    }
+  }
+}
+</script>
+		<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-957NGNKQ70"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-957NGNKQ70');
+</script>
+
+<script type='text/javascript' src='//jc32arlvqpv8.com/1a/82/2e/1a822ef8a40a0fbab3c4ea12a5d2bb02.js'></script>
+</head>
+	<body>
+		<header class="bg-white fixed-top">			
+			<nav class="navbar navbar-light bg-white mb-0">
+				<div class="container justify-content-center justify-content-sm-between">	
+				  <a href="/" title="Blog" class="navbar-brand mb-1">Blog</a>
+				  				</div>			  
+			</nav>				
+		</header>
+		<main class="main container bg-white">
+			<div class="col-md-12 my-4" align="center">
+				<div class="d-block p-4">
+	<br/><center>
+<!-- TOP BANNER ADS -->
+</center><br/>
+</div>			</div>
+			<div class="row header">
+				<div class="col-sm-12 text-center p-2">
+						<h1>行列 2次方程式 正則</h1>
+
+	
+	<div class="navi text-center">
+										<a class="badge badge-danger" href="/%EF%BC%95%E6%AC%A1%E6%96%B9%E7%A8%8B%E5%BC%8F-%E8%A7%A3%E3%81%AE%E5%85%AC%E5%BC%8F-%E3%81%AA%E3%81%84.html">５次方程式 解の公式 ない</a>
+											<a class="badge badge-warning" href="/%E6%AF%8E%E6%97%A5%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%A8sex%E3%81%99%E3%82%8Bjk.html">毎日お父さんとsexするjk</a>
+											<a class="badge badge-dark" href="/%E9%AB%98%E6%AC%A1%E6%96%B9%E7%A8%8B%E5%BC%8F-%E5%AE%9A%E6%95%B0%E3%82%92%E6%BA%80%E3%81%9F%E3%81%99.html">高次方程式 定数を満たす</a>
+											<a class="badge badge-dark" href="/%E9%A2%A8%E5%91%82-%E8%BF%91%E8%A6%AA%E7%9B%B8%E5%A7%A6-%E3%81%93%E3%82%93%E3%81%AA%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93-%E3%81%82%E3%82%93%E3%81%BE%E3%82%8A%E6%9C%AC%E4%BA%BA.html">風呂 近親相姦 こんなお父さん あんまり本人</a>
+											<a class="badge badge-warning" href="/%E7%9B%B8%E5%A7%A6-%E9%9A%A3%E3%81%AB%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%8C%E3%81%84%E3%82%8B%E3%81%AE%E3%82%88.html">相姦 隣にお父さんがいるのよ</a>
+											<a class="badge badge-dark" href="/%E6%9F%91-%E4%B9%83-%E7%BE%8E%E5%84%AA-%E6%81%8B-%E3%81%AE-%E6%96%B9%E7%A8%8B%E5%BC%8F.html">柑 乃 美優 恋 の 方程式</a>
+											<a class="badge badge-dark" href="/%E7%86%B1%E4%BC%9D%E5%B0%8E%E6%96%B9%E7%A8%8B%E5%BC%8F-%EF%BD%83-r.html">熱伝導方程式 ｃ r</a>
+											<a class="badge badge-dark" href="/%E8%B2%B4%E5%BF%97%E5%90%9B%E3%81%AE%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93.html">貴志君のお父さん</a>
+											<a class="badge badge-light" href="/%E8%82%B2%E4%BC%91%E7%B5%A6%E4%BB%98%E9%87%91-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93-%E3%81%84%E3%81%A4%E3%81%8B%E3%82%89.html">育休給付金 お父さん いつから</a>
+											<a class="badge badge-primary" href="/%E6%AC%A1%E3%81%AE%E5%BC%8F%E3%81%AF-%E3%82%A8%E3%82%BF%E3%83%B3-c2h6-%E3%81%8C%E7%87%83%E7%84%BC%E3%81%97%E3%81%9F%E3%81%A8%E3%81%8D%E3%81%AE%E7%86%B1%E5%8C%96%E5%AD%A6%E6%96%B9%E7%A8%8B%E5%BC%8F%E3%81%A7%E3%81%82%E3%82%8B-%E7%87%83%E7%84%BC%E7%86%B1q%E3%81%AE%E5%80%A4%E3%81%AF-%E6%AC%A1%E3%81%AE%E3%81%86%E3%81%A1%E3%81%A9%E3%82%8C%E3%81%8B.html">次の式は エタン c2h6 が燃焼したときの熱化学方程式である 燃焼熱qの値は 次のうちどれか</a>
+											<a class="badge badge-success" href="/%E6%9C%AC%E5%BD%93%E3%81%AE%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%A8%E3%81%8A%E6%AF%8D%E3%81%95%E3%82%93%E3%81%8C%E3%82%80%E3%81%8B%E3%81%88%E3%81%AB%E3%81%8F%E3%82%8B-%E5%85%90%E7%AB%A5%E5%B0%8F%E8%AA%AC.html">本当のお父さんとお母さんがむかえにくる 児童小説</a>
+											<a class="badge badge-light" href="/%E7%90%83%E3%81%AE%E6%96%B9%E7%A8%8B%E5%BC%8F-%E4%B8%89%E6%AC%A1%E5%85%83.html">球の方程式 三次元</a>
+											<a class="badge badge-secondary" href="/%EF%BC%92%E5%85%83%EF%BC%91%E6%AC%A1%E6%96%B9%E7%A8%8B%E5%BC%8F%E3%81%AE%E8%87%AA%E7%84%B6%E6%95%B0%E3%81%AE%E8%A7%A3.html">２元１次方程式の自然数の解</a>
+											<a class="badge badge-primary" href="/%E7%A7%81-%E3%81%AE-%E5%84%AA%E3%81%97%E3%81%84-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93.html">私 の 優しい お父さん</a>
+											<a class="badge badge-primary" href="/%E7%86%B1-%E6%96%B9%E7%A8%8B%E5%BC%8F-%E5%9F%BA%E6%9C%AC-%E8%A7%A3-%E6%80%A7%E8%B3%AA.html">熱 方程式 基本 解 性質</a>
+						</div>
+<center>
+	<!-- MIDDLE BANNER ADS -->
+<script type="text/javascript">
+	atOptions = {
+		'key' : '2b77887421e2587a1a1b1d7c8a31a9e0',
+		'format' : 'iframe',
+		'height' : 250,
+		'width' : 300,
+		'params' : {}
+	};
+	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://jc32arlvqpv8.com/2b77887421e2587a1a1b1d7c8a31a9e0/invoke.js"></scr' + 'ipt>');
+</script>
+		
+	</center>
+					
+				</div>
+			</div>
+			<div class="row content mb-4">
+				<div class="col-md-12">					
+					
+	
+	<div class="card-columns">
+						
+	  <div class='card'>
+	  	<a href="https://upload.wikimedia.org/wikipedia/commons/d/db/Parallelogramme.JPG" data-lightbox="roadtrip" data-title="行列式 維基百科 自由的百科全書">
+						<img class="card-img" src="https://upload.wikimedia.org/wikipedia/commons/d/db/Parallelogramme.JPG" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTS6sZpbJOH3vs8I-g0jgLHjDnEP5U2pY5KaEeKXiLqigzAqaYl6_OEOA9Q1Lrev1-6Q7I';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				行列式 維基百科 自由的百科全書
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://upload.wikimedia.org/wikipedia/commons/d/d3/Matrix_zh-hans.png" data-lightbox="roadtrip" data-title="矩阵 维基百科 自由的百科全书">
+						<img class="card-img" src="https://upload.wikimedia.org/wikipedia/commons/d/d3/Matrix_zh-hans.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2ASeJzoAlSJLNssXJFrs36bYaGlskaR75HG0c8sGeueGvN5GNmI_DdwR6Z-piMn2UxDw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				矩阵 维基百科 自由的百科全书
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Determinant_and_orientation.svg/600px-Determinant_and_orientation.svg.png" data-lightbox="roadtrip" data-title="行列式 維基百科 自由的百科全書">
+						<img class="card-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Determinant_and_orientation.svg/600px-Determinant_and_orientation.svg.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6PRC8exH9gWsxzRTeNux2UHGKU05fevyy5eROvYC6YwyAMWAai6ZS3J0f7a9Ik0p2T2c';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				行列式 維基百科 自由的百科全書
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://machine-learning-from-scratch.readthedocs.io/zh_CN/latest/_images/%E6%96%B9%E7%A8%8B%E7%BB%842.png" data-lightbox="roadtrip" data-title="线性代数 Machine Learning From Scratch 0 1 文档">
+						<img class="card-img" src="https://machine-learning-from-scratch.readthedocs.io/zh_CN/latest/_images/%E6%96%B9%E7%A8%8B%E7%BB%842.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRILr-g-fR_SgH9M8pnlWYCleB7dA-HUOt3l3W-eq1o-eUHMCqCGq2FF_bAWxYyh0Yl9yU';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				线性代数 Machine Learning From Scratch 0 1 文档
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://img-blog.csdnimg.cn/20201204102210550.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl8zODA2MDg1MA==,size_16,color_FFFFFF,t_70" data-lightbox="roadtrip" data-title="特殊函数的常微分方程 曾经的大胖的博客 Csdn博客">
+						<img class="card-img" src="https://img-blog.csdnimg.cn/20201204102210550.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl8zODA2MDg1MA==,size_16,color_FFFFFF,t_70" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzePbdiE_o5efZKpZbUrLV3d16bzo5gqbNgUKGn1HSehpp7WNJffHJ4Ome-m8isTF59Jc';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				特殊函数的常微分方程 曾经的大胖的博客 Csdn博客
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://cdn.clearnotebooks.com/uploads/page/file/4027198/file.jpg" data-lightbox="roadtrip" data-title="Undergraduate数学的行列と行列式part2 筆記 Clear">
+						<img class="card-img" src="https://cdn.clearnotebooks.com/uploads/page/file/4027198/file.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQs0u_dK6DuEvWYMURAaRa3Qg1wi4FO9w3KBOWT0qwWtoYnhGdOtxIcJAe8JVpzpvzYhPY';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Undergraduate数学的行列と行列式part2 筆記 Clear
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+				<div class='card'>	
+			<div class="d-block p-4">
+	</div>		  	
+		  	<h3 class="h6 p-2"><b></b></h3>
+					</div>
+		
+						
+	  <div class='card'>
+	  	<a href="https://slidesplayer.com/slide/15463797/93/images/29/%E6%B3%8A%E6%9D%BE%E6%8B%AC%E5%8F%B7+%E6%B3%8A%E6%9D%BE%E6%8B%AC%E5%8F%B7%E5%AE%9A%E4%B9%89%E4%B8%BA+%E5%AF%B9%E4%BA%8E%E5%8F%AA%E5%90%AB%E5%8D%95%E4%B8%AAp%2Cq%E7%9A%84%E6%83%85%E5%86%B5%E6%98%AF%E9%9B%85%E5%85%8B%E6%AF%94%E8%A1%8C%E5%88%97%E5%BC%8F%E3%80%82+%E5%88%A9%E7%94%A8%E6%AD%A3%E5%88%99%E6%96%B9%E7%A8%8B%EF%BC%8C%E4%BB%BB%E6%84%8F%E5%87%BD%E6%95%B0%E7%9A%84%E5%85%A8%E5%BE%AE%E5%88%86%E5%8F%AF%E8%A1%A8%E7%A4%BA%E4%B8%BA%EF%BC%9A+%E7%94%A8%E4%BB%A5%E5%88%A4%E6%96%AD%E8%AF%A5%E7%89%A9%E7%90%86%E9%87%8F%E6%98%AF%E5%90%A6%E5%AE%88%E6%81%92%E3%80%82.jpg" data-lightbox="roadtrip" data-title="理论力学 二 哈密顿力学ppt Download">
+						<img class="card-img" src="https://slidesplayer.com/slide/15463797/93/images/29/%E6%B3%8A%E6%9D%BE%E6%8B%AC%E5%8F%B7+%E6%B3%8A%E6%9D%BE%E6%8B%AC%E5%8F%B7%E5%AE%9A%E4%B9%89%E4%B8%BA+%E5%AF%B9%E4%BA%8E%E5%8F%AA%E5%90%AB%E5%8D%95%E4%B8%AAp%2Cq%E7%9A%84%E6%83%85%E5%86%B5%E6%98%AF%E9%9B%85%E5%85%8B%E6%AF%94%E8%A1%8C%E5%88%97%E5%BC%8F%E3%80%82+%E5%88%A9%E7%94%A8%E6%AD%A3%E5%88%99%E6%96%B9%E7%A8%8B%EF%BC%8C%E4%BB%BB%E6%84%8F%E5%87%BD%E6%95%B0%E7%9A%84%E5%85%A8%E5%BE%AE%E5%88%86%E5%8F%AF%E8%A1%A8%E7%A4%BA%E4%B8%BA%EF%BC%9A+%E7%94%A8%E4%BB%A5%E5%88%A4%E6%96%AD%E8%AF%A5%E7%89%A9%E7%90%86%E9%87%8F%E6%98%AF%E5%90%A6%E5%AE%88%E6%81%92%E3%80%82.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKGWXSm28LGHLzdqRGrJj6twR0TMjvPuGQg-0tvG3G4I7AjJLD9aHR2DUZ_trfAMB9ihs';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				理论力学 二 哈密顿力学ppt Download
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://slidesplayer.com/slide/15463797/93/images/24/%E6%AD%A3%E5%88%99%E5%8F%98%E6%8D%A2%E5%AE%9E%E4%BE%8B+%E8%AF%81%E6%98%8E%E7%BB%99%E5%AE%9AP%3DP%28p%2Cq%29%EF%BC%8CQ%3DQ%28p%2Cq%29%E6%98%AF%E6%AD%A3%E5%88%99%E5%8F%98%E6%8D%A2%E7%9A%84%E5%85%85%E5%88%86%E5%BF%85%E8%A6%81%E6%9D%A1%E4%BB%B6%E4%B8%BA%E9%9B%85%E5%85%8B%E6%AF%94%E8%A1%8C%E5%88%97%E5%BC%8F+%E8%AF%81%EF%BC%9A.jpg" data-lightbox="roadtrip" data-title="理论力学 二 哈密顿力学ppt Download">
+						<img class="card-img" src="https://slidesplayer.com/slide/15463797/93/images/24/%E6%AD%A3%E5%88%99%E5%8F%98%E6%8D%A2%E5%AE%9E%E4%BE%8B+%E8%AF%81%E6%98%8E%E7%BB%99%E5%AE%9AP%3DP%28p%2Cq%29%EF%BC%8CQ%3DQ%28p%2Cq%29%E6%98%AF%E6%AD%A3%E5%88%99%E5%8F%98%E6%8D%A2%E7%9A%84%E5%85%85%E5%88%86%E5%BF%85%E8%A6%81%E6%9D%A1%E4%BB%B6%E4%B8%BA%E9%9B%85%E5%85%8B%E6%AF%94%E8%A1%8C%E5%88%97%E5%BC%8F+%E8%AF%81%EF%BC%9A.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7vvoGe12gWljOTDlA0M3Ob4AVpBPU-VnLABW6TtgPTmO9JcRq6WdW3Iocf2ytL275FHI';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				理论力学 二 哈密顿力学ppt Download
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://i0.wp.com/sun.ac.jp/prof/hnagano/image/h28math-10-2.jpg" data-lightbox="roadtrip" data-title="Lu 分解行列式lu Gimfm">
+						<img class="card-img" src="http://i0.wp.com/sun.ac.jp/prof/hnagano/image/h28math-10-2.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsQOlt0kFNk17x_nCNgGhfiEvaAMUdNrmNcwe0vwkZIsHlifOud-4An3O9noqGXmjfcUQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Lu 分解行列式lu Gimfm
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://slideplayer.com/slide/4842929/15/images/10/%E6%AD%A3%E5%89%87%E3%81%AA%E4%BF%82%E6%95%B0%E8%A1%8C%E5%88%97%E3%82%92%E6%8C%81%E3%81%A4%E9%80%A3%E7%AB%8B%E6%96%B9%E7%A8%8B%E5%BC%8F+%EF%BC%88%E6%AD%A3%E5%89%87%E8%A1%8C%E5%88%97%E3%81%A8%E9%80%A3%E7%AB%8B%E4%B8%80%E6%AC%A1%E6%96%B9%E7%A8%8B%E5%BC%8F%EF%BC%89+%E9%80%A3%E7%AB%8B1%E6%AC%A1%E6%96%B9%E7%A8%8B%E5%BC%8F+%E3%81%8C%E4%B8%80%E6%84%8F%E3%81%AE%E8%A7%A3%E3%82%92%E6%8C%81%E3%81%A4%E3%81%9F%E3%82%81%E3%81%AE.jpg" data-lightbox="roadtrip" data-title="５ 連立一次方程式 Ppt Video Online Download">
+						<img class="card-img" src="https://slideplayer.com/slide/4842929/15/images/10/%E6%AD%A3%E5%89%87%E3%81%AA%E4%BF%82%E6%95%B0%E8%A1%8C%E5%88%97%E3%82%92%E6%8C%81%E3%81%A4%E9%80%A3%E7%AB%8B%E6%96%B9%E7%A8%8B%E5%BC%8F+%EF%BC%88%E6%AD%A3%E5%89%87%E8%A1%8C%E5%88%97%E3%81%A8%E9%80%A3%E7%AB%8B%E4%B8%80%E6%AC%A1%E6%96%B9%E7%A8%8B%E5%BC%8F%EF%BC%89+%E9%80%A3%E7%AB%8B1%E6%AC%A1%E6%96%B9%E7%A8%8B%E5%BC%8F+%E3%81%8C%E4%B8%80%E6%84%8F%E3%81%AE%E8%A7%A3%E3%82%92%E6%8C%81%E3%81%A4%E3%81%9F%E3%82%81%E3%81%AE.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFFUeHREpR1TCfn-lmcLDDyXMecfS4j786L2rFof8jvSKZwwDKXW2035vvoCQpMq5Vob4';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				５ 連立一次方程式 Ppt Video Online Download
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://slidesplayer.com/slide/15463797/93/images/14/%E5%93%88%E5%AF%86%E9%A1%BF%E6%AD%A3%E5%88%99%E6%96%B9%E7%A8%8B%E8%A7%A3%E9%A2%98%E6%AD%A5%E9%AA%A4+%E7%94%A8%E5%93%88%E5%AF%86%E9%A1%BF%E6%AD%A3%E5%88%99%E6%96%B9%E7%A8%8B%E8%A7%A3%E9%A2%98%E7%9A%84%E6%AD%A5%E9%AA%A4%E5%A4%A7%E8%87%B4%E6%9C%89+%E7%A1%AE%E5%AE%9A%E7%B3%BB%E7%BB%9F%E7%9A%84%E8%87%AA%E7%94%B1%E5%BA%A6%EF%BC%8C%E9%80%89%E5%8F%96%E5%B9%BF%E4%B9%89%E5%9D%90%E6%A0%87%E3%80%82+%E5%86%99%E5%87%BA%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%8B%89%E6%A0%BC%E6%9C%97%E6%97%A5%E5%87%BD%E6%95%B0%E3%80%82.jpg" data-lightbox="roadtrip" data-title="理论力学 二 哈密顿力学ppt Download">
+						<img class="card-img" src="https://slidesplayer.com/slide/15463797/93/images/14/%E5%93%88%E5%AF%86%E9%A1%BF%E6%AD%A3%E5%88%99%E6%96%B9%E7%A8%8B%E8%A7%A3%E9%A2%98%E6%AD%A5%E9%AA%A4+%E7%94%A8%E5%93%88%E5%AF%86%E9%A1%BF%E6%AD%A3%E5%88%99%E6%96%B9%E7%A8%8B%E8%A7%A3%E9%A2%98%E7%9A%84%E6%AD%A5%E9%AA%A4%E5%A4%A7%E8%87%B4%E6%9C%89+%E7%A1%AE%E5%AE%9A%E7%B3%BB%E7%BB%9F%E7%9A%84%E8%87%AA%E7%94%B1%E5%BA%A6%EF%BC%8C%E9%80%89%E5%8F%96%E5%B9%BF%E4%B9%89%E5%9D%90%E6%A0%87%E3%80%82+%E5%86%99%E5%87%BA%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%8B%89%E6%A0%BC%E6%9C%97%E6%97%A5%E5%87%BD%E6%95%B0%E3%80%82.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPHce6Vb90NMT53m2KmZtmLu3ITVxQwvSDOk0vnhPPrNiwpFxMRMy3gCjNVRx4tJe2Mjo';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				理论力学 二 哈密顿力学ppt Download
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://i0.wp.com/img-blog.csdn.net/20150519235457495?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdTAxMDk0NTY4Mw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" data-lightbox="roadtrip" data-title="Lu 分解行列式lu Gimfm">
+						<img class="card-img" src="https://i0.wp.com/img-blog.csdn.net/20150519235457495?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdTAxMDk0NTY4Mw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcCwKELnCleiSwFi-j_f-KaNXo271GmEHgjI3IOk5I3Ynp192J8oHpp4YN2Q1NtueQygA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Lu 分解行列式lu Gimfm
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://machine-learning-from-scratch.readthedocs.io/zh_CN/latest/_images/%E5%A5%87%E5%BC%82%E5%80%BC2.png" data-lightbox="roadtrip" data-title="线性代数 Machine Learning From Scratch 0 1 文档">
+						<img class="card-img" src="https://machine-learning-from-scratch.readthedocs.io/zh_CN/latest/_images/%E5%A5%87%E5%BC%82%E5%80%BC2.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRULlbw7sHakGDlhJF4DqshEUrG5cImfmuEM9VW2qh0NTidGtSxZNODzBUbI-OXaBIGHuM';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				线性代数 Machine Learning From Scratch 0 1 文档
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://i0.wp.com/conglang.github.io/img/lai_18.jpg" data-lightbox="roadtrip" data-title="Lu 分解行列式lu Gimfm">
+						<img class="card-img" src="http://i0.wp.com/conglang.github.io/img/lai_18.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpGHjvZjnR9N0PKif7JI4RFm3N_MTBTE4NNQGg9Wl5tKyHojDrL44FxhKrYVlZ8Q3P3-s';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Lu 分解行列式lu Gimfm
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://i.ytimg.com/vi/xhMzeSFPhTg/maxresdefault.jpg" data-lightbox="roadtrip" data-title="例題複數一元二次方程式1 Youtube">
+						<img class="card-img" src="https://i.ytimg.com/vi/xhMzeSFPhTg/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRC6RISP5NdfSvlF2jEKslzsvKIlMZDP33ZrcFwKa8ea21b2k6rjhHZqkoxIAkSAPxc844';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				例題複數一元二次方程式1 Youtube
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://img-blog.csdnimg.cn/20200301201543427.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3l0eV83,size_16,color_FFFFFF,t_70" data-lightbox="roadtrip" data-title="杨涛python高级讲座11数组 4 用数组或矩阵解线性方程 帮助你记住线性代数 杨桃 的 Python 进阶 Array 四 利用 求解 回忆">
+						<img class="card-img" src="https://img-blog.csdnimg.cn/20200301201543427.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3l0eV83,size_16,color_FFFFFF,t_70" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRACccqr1q4gGIwb4rSGGlRt2312WFIaTQ7YXtvk-qANComNvmLPBMZnI3mQ10dMxTBQkQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				杨涛python高级讲座11数组 4 用数组或矩阵解线性方程 帮助你记住线性代数 杨桃 的 Python 进阶 Array 四 利用 求解 回忆
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="TVWa2Mrsn0CDIM" data-lightbox="roadtrip" data-title="Http Chiataimakro Vicp Cc 8880 Mathematics Mathematical 20physics E6 9f Af E6 9c 97 20 20 E6 95 B0 E5 Ad A6 E7 89 A9 E7 90 86 E6 96 B9 E6 B3 95 Ef Bc 8e E5 8d B71 Pdf">
+						<img class="card-img" src="TVWa2Mrsn0CDIM" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzwqWHl3t7bi98XqmcRO5LQ1rFclIg8wZIO1E2mTlltjVkakLbvNGMLlwjFMs4RMjpXEs';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Http Chiataimakro Vicp Cc 8880 Mathematics Mathematical 20physics E6 9f Af E6 9c 97 20 20 E6 95 B0 E5 Ad A6 E7 89 A9 E7 90 86 E6 96 B9 E6 B3 95 Ef Bc 8e E5 8d B71 Pdf
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://p.pstatp.com/large/13e500049ba090ae3342" data-lightbox="roadtrip" data-title="视频教程 一步一步教你利用公式在excel中求解一元二次方程 Excel实例教学网微信公众号excel880">
+						<img class="card-img" src="https://p.pstatp.com/large/13e500049ba090ae3342" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfgY23mGCmTho5SR6v8GIrH37YREYUULKDHA9KhSthAsAjTS353QDRlgwsKTZdL5qyfmU';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				视频教程 一步一步教你利用公式在excel中求解一元二次方程 Excel实例教学网微信公众号excel880
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic1.zhimg.com/50/v2-467122fcd5221c0b8ff6f8d50b9b73c4_hd.jpg?source=1940ef5c" data-lightbox="roadtrip" data-title="机器学习应该准备哪些数学预备知识 知乎">
+						<img class="card-img" src="https://pic1.zhimg.com/50/v2-467122fcd5221c0b8ff6f8d50b9b73c4_hd.jpg?source=1940ef5c" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTI4Lqhtd84UY0FeSP5fw77bj9g6jc9PBKAA-eeviiRAz4UZ-3D5RTf67BfA2Gyufp_0I';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				机器学习应该准备哪些数学预备知识 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://img-blog.csdnimg.cn/20201204102210181.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl8zODA2MDg1MA==,size_16,color_FFFFFF,t_70" data-lightbox="roadtrip" data-title="特殊函数的常微分方程 曾经的大胖的博客 Csdn博客">
+						<img class="card-img" src="https://img-blog.csdnimg.cn/20201204102210181.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl8zODA2MDg1MA==,size_16,color_FFFFFF,t_70" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-3JgAyQR5fT7v5KP-9i_N_wR_RxyUDMg5f19SlUltUuTjOfZ_KqBbrpq9g-M1N53JZkc';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				特殊函数的常微分方程 曾经的大胖的博客 Csdn博客
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://slidesplayer.com/slide/15463797/93/images/7/%E5%93%88%E5%AF%86%E9%A1%BF%E6%AD%A3%E5%88%99%E6%96%B9%E7%A8%8B+%E5%BE%97%E5%88%B0%E5%93%88%E5%AF%86%E9%A1%BF%E6%AD%A3%E5%88%99%E6%96%B9%E7%A8%8B%EF%BC%88%E5%85%B12s%E4%B8%AA%EF%BC%89%EF%BC%9A.jpg" data-lightbox="roadtrip" data-title="理论力学 二 哈密顿力学ppt Download">
+						<img class="card-img" src="https://slidesplayer.com/slide/15463797/93/images/7/%E5%93%88%E5%AF%86%E9%A1%BF%E6%AD%A3%E5%88%99%E6%96%B9%E7%A8%8B+%E5%BE%97%E5%88%B0%E5%93%88%E5%AF%86%E9%A1%BF%E6%AD%A3%E5%88%99%E6%96%B9%E7%A8%8B%EF%BC%88%E5%85%B12s%E4%B8%AA%EF%BC%89%EF%BC%9A.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjgwqGwEAjsuD-nxO-mY3XMRMpbU0NLEXB8Q';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				理论力学 二 哈密顿力学ppt Download
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://slidesplayer.net/slide/17919080/108/images/10/%E6%AD%A3%E5%89%87%E3%81%AA%E4%BF%82%E6%95%B0%E8%A1%8C%E5%88%97%E3%82%92%E6%8C%81%E3%81%A4%E9%80%A3%E7%AB%8B%E6%96%B9%E7%A8%8B%E5%BC%8F+%EF%BC%88%E6%AD%A3%E5%89%87%E8%A1%8C%E5%88%97%E3%81%A8%E9%80%A3%E7%AB%8B%E4%B8%80%E6%AC%A1%E6%96%B9%E7%A8%8B%E5%BC%8F%EF%BC%89+%E9%80%A3%E7%AB%8B1%E6%AC%A1%E6%96%B9%E7%A8%8B%E5%BC%8F+%E3%81%8C%E4%B8%80%E6%84%8F%E3%81%AE%E8%A7%A3%E3%82%92%E6%8C%81%E3%81%A4%E3%81%9F%E3%82%81%E3%81%AE.jpg" data-lightbox="roadtrip" data-title="５ 連立一次方程式 Ppt Download">
+						<img class="card-img" src="https://slidesplayer.net/slide/17919080/108/images/10/%E6%AD%A3%E5%89%87%E3%81%AA%E4%BF%82%E6%95%B0%E8%A1%8C%E5%88%97%E3%82%92%E6%8C%81%E3%81%A4%E9%80%A3%E7%AB%8B%E6%96%B9%E7%A8%8B%E5%BC%8F+%EF%BC%88%E6%AD%A3%E5%89%87%E8%A1%8C%E5%88%97%E3%81%A8%E9%80%A3%E7%AB%8B%E4%B8%80%E6%AC%A1%E6%96%B9%E7%A8%8B%E5%BC%8F%EF%BC%89+%E9%80%A3%E7%AB%8B1%E6%AC%A1%E6%96%B9%E7%A8%8B%E5%BC%8F+%E3%81%8C%E4%B8%80%E6%84%8F%E3%81%AE%E8%A7%A3%E3%82%92%E6%8C%81%E3%81%A4%E3%81%9F%E3%82%81%E3%81%AE.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReVFZPIwlqacZEXM2jC2Qo0ocGTp85n2uEBw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				５ 連立一次方程式 Ppt Download
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://slideplayer.com/slide/4842929/15/images/39/%E8%87%AA%E6%98%8E%E3%81%AA%E8%A7%A3%E3%81%A8%E6%AD%A3%E5%89%87%E8%A1%8C%E5%88%97+%E6%80%A7%E8%B3%AA%EF%BC%9A%EF%BC%88%E5%90%8C%E6%AC%A1%E9%80%A3%E7%AB%8B%E6%96%B9%E7%A8%8B%E5%BC%8F%E3%81%A8%E6%AD%A3%E5%89%87%E8%A1%8C%E5%88%97%EF%BC%89+%E3%82%92+%E6%AC%A1%E3%81%AE%E6%AD%A3%E6%96%B9%E8%A1%8C%E5%88%97%E3%81%A8%E3%81%97%E3%80%81+%E3%82%92+%E6%AC%A1%E5%85%83%E3%83%99%E3%82%AF%E3%83%88%E3%83%AB%E3%81%A8%E3%81%99%E3%82%8B%E3%80%82+%E3%81%93%E3%81%AE%E3%81%A8%E3%81%8D%E3%80%81%E5%90%8C%E6%AC%A1%E9%80%A3%E7%AB%8B%E4%B8%80%E6%AC%A1%E6%96%B9%E7%A8%8B%E5%BC%8F.jpg" data-lightbox="roadtrip" data-title="５ 連立一次方程式 Ppt Video Online Download">
+						<img class="card-img" src="https://slideplayer.com/slide/4842929/15/images/39/%E8%87%AA%E6%98%8E%E3%81%AA%E8%A7%A3%E3%81%A8%E6%AD%A3%E5%89%87%E8%A1%8C%E5%88%97+%E6%80%A7%E8%B3%AA%EF%BC%9A%EF%BC%88%E5%90%8C%E6%AC%A1%E9%80%A3%E7%AB%8B%E6%96%B9%E7%A8%8B%E5%BC%8F%E3%81%A8%E6%AD%A3%E5%89%87%E8%A1%8C%E5%88%97%EF%BC%89+%E3%82%92+%E6%AC%A1%E3%81%AE%E6%AD%A3%E6%96%B9%E8%A1%8C%E5%88%97%E3%81%A8%E3%81%97%E3%80%81+%E3%82%92+%E6%AC%A1%E5%85%83%E3%83%99%E3%82%AF%E3%83%88%E3%83%AB%E3%81%A8%E3%81%99%E3%82%8B%E3%80%82+%E3%81%93%E3%81%AE%E3%81%A8%E3%81%8D%E3%80%81%E5%90%8C%E6%AC%A1%E9%80%A3%E7%AB%8B%E4%B8%80%E6%AC%A1%E6%96%B9%E7%A8%8B%E5%BC%8F.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRD1BDgw5EA16D4d5yC7-ipMF-ye1SGTQ_hrA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				５ 連立一次方程式 Ppt Video Online Download
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://mmbiz.qpic.cn/mmbiz_jpg/MkR5heHLdIwcMC5EMyWg4KibkHce7cxWkblHGQKg28woicFgiaAnpqpFSibkSgbEFdLQH1L0feUL0Yvlbnc9X5oM3A/640?wx_fmt=jpeg" data-lightbox="roadtrip" data-title="二元方程式怎么解 二元方程式怎么解 正信网">
+						<img class="card-img" src="https://mmbiz.qpic.cn/mmbiz_jpg/MkR5heHLdIwcMC5EMyWg4KibkHce7cxWkblHGQKg28woicFgiaAnpqpFSibkSgbEFdLQH1L0feUL0Yvlbnc9X5oM3A/640?wx_fmt=jpeg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOrODoeKd6N4Pa8ZRLabFknP0efWbqZDPglA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				二元方程式怎么解 二元方程式怎么解 正信网
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="/search?q=%E8%A1%8C%E5%88%97%E5%BC%8F&amp;tbm=isch" data-lightbox="roadtrip" data-title="Https Encrypted Tbn0 Gstatic Com Images Q Tbn And9gctasnnltmx 2paqznc O Yaw3y57uh55z5qpxrbaof3tcz1g0hv Usqp Cau">
+						<img class="card-img" src="/search?q=%E8%A1%8C%E5%88%97%E5%BC%8F&amp;tbm=isch" onerror="this.onerror=null;this.src='/search?q=%E8%A1%8C%E5%88%97%E5%BC%8F&amp;tbm=isch';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Https Encrypted Tbn0 Gstatic Com Images Q Tbn And9gctasnnltmx 2paqznc O Yaw3y57uh55z5qpxrbaof3tcz1g0hv Usqp Cau
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic2.zhimg.com/v2-d17e8f52ef4ffbf55f48762394cfdfbd_b.jpg" data-lightbox="roadtrip" data-title="难以理解的数学知识 知乎">
+						<img class="card-img" src="https://pic2.zhimg.com/v2-d17e8f52ef4ffbf55f48762394cfdfbd_b.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRHReyE7YyoLVgJ7O-W-bDag1lEQiCuqd90A';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				难以理解的数学知识 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic1.zhimg.com/80/v2-3badf2ddb3fbb90f79d659799f39e99c_1440w.jpg" data-lightbox="roadtrip" data-title="偏微分方程课程精华总结 知乎">
+						<img class="card-img" src="https://pic1.zhimg.com/80/v2-3badf2ddb3fbb90f79d659799f39e99c_1440w.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ68X2N4BPm9f6zCxQik_E8yHTDR1QNUzXzeg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				偏微分方程课程精华总结 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://slidesplayer.com/slide/15463797/93/images/13/%E5%93%88%E5%AF%86%E9%A1%BF%E6%AD%A3%E5%88%99%E6%96%B9%E7%A8%8B%E4%B8%BE%E4%BE%8B+%E5%B9%B3%E6%96%B9%E5%8F%8D%E6%AF%94%E6%9C%89%E5%BF%83%E5%8A%9B%E5%9C%BA%E4%B8%AD%E7%9A%84%E8%BF%90%E5%8A%A8+%E4%B8%8D%E8%83%BD%E5%9B%A0%E4%B8%BApq%E6%98%AF%E6%81%92%E9%87%8F%E8%80%8C%E7%9B%B4%E6%8E%A5%E6%9B%BF%E5%8E%BBL%E4%B8%AD%E7%9A%84+%EF%BC%8C%E8%80%8C%E6%98%AF%E5%BA%94%E8%AF%A5%E7%94%A8%E5%8A%B3%E6%96%AF%E5%87%BD%E6%95%B0%EF%BC%8C%E5%85%B6%E4%B8%ADpq%E6%89%8D%E8%83%BD%E5%BD%93%E5%B8%B8%E6%95%B0%E5%A4%84%E7%90%86%E3%80%82.jpg" data-lightbox="roadtrip" data-title="理论力学 二 哈密顿力学ppt Download">
+						<img class="card-img" src="https://slidesplayer.com/slide/15463797/93/images/13/%E5%93%88%E5%AF%86%E9%A1%BF%E6%AD%A3%E5%88%99%E6%96%B9%E7%A8%8B%E4%B8%BE%E4%BE%8B+%E5%B9%B3%E6%96%B9%E5%8F%8D%E6%AF%94%E6%9C%89%E5%BF%83%E5%8A%9B%E5%9C%BA%E4%B8%AD%E7%9A%84%E8%BF%90%E5%8A%A8+%E4%B8%8D%E8%83%BD%E5%9B%A0%E4%B8%BApq%E6%98%AF%E6%81%92%E9%87%8F%E8%80%8C%E7%9B%B4%E6%8E%A5%E6%9B%BF%E5%8E%BBL%E4%B8%AD%E7%9A%84+%EF%BC%8C%E8%80%8C%E6%98%AF%E5%BA%94%E8%AF%A5%E7%94%A8%E5%8A%B3%E6%96%AF%E5%87%BD%E6%95%B0%EF%BC%8C%E5%85%B6%E4%B8%ADpq%E6%89%8D%E8%83%BD%E5%BD%93%E5%B8%B8%E6%95%B0%E5%A4%84%E7%90%86%E3%80%82.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQo5qcc_CgL2dZABRZThfK4BIdlrHko-Z3uQw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				理论力学 二 哈密顿力学ppt Download
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://machine-learning-from-scratch.readthedocs.io/zh_CN/latest/_images/%E8%A1%8C%E5%88%97%E5%BC%8F1.png" data-lightbox="roadtrip" data-title="线性代数 Machine Learning From Scratch 0 1 文档">
+						<img class="card-img" src="https://machine-learning-from-scratch.readthedocs.io/zh_CN/latest/_images/%E8%A1%8C%E5%88%97%E5%BC%8F1.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR66Qjl4ivO4A5ZwJbFe4ZbCpIgx6Bs7xjacA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				线性代数 Machine Learning From Scratch 0 1 文档
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://i2.wp.com/math-note.xyz/wp-content/uploads/2019/12/f860d587113345b2ba4c9b470f3b42d5.png?fit=2000%2C1383&amp;ssl=1" data-lightbox="roadtrip" data-title="行列式のイメージ 行列の正則性を判定する行列式の考え方">
+						<img class="card-img" src="https://i2.wp.com/math-note.xyz/wp-content/uploads/2019/12/f860d587113345b2ba4c9b470f3b42d5.png?fit=2000%2C1383&amp;ssl=1" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzzQO3ec9yY6CM30fTle-lkFOwvxq94yuJOg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				行列式のイメージ 行列の正則性を判定する行列式の考え方
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://upload.wikimedia.org/wikipedia/commons/c/c4/Secciones_Conicas.svg" data-lightbox="roadtrip" data-title="圆锥曲线 维基百科 自由的百科全书">
+						<img class="card-img" src="https://upload.wikimedia.org/wikipedia/commons/c/c4/Secciones_Conicas.svg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVaKTyY-WTf8zy6uM26w8s6tw4W3f3eqf07w';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				圆锥曲线 维基百科 自由的百科全书
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://slidetodoc.com/presentation_image_h/910d9707c3fe3408afbe2f4edc44e870/image-7.jpg" data-lightbox="roadtrip" data-title="Tokyo Research Laboratory Ibm 20081030 Ibis 2008 Copyright">
+						<img class="card-img" src="https://slidetodoc.com/presentation_image_h/910d9707c3fe3408afbe2f4edc44e870/image-7.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTa7VYFlt_rUgZZU4ijwjyEVI_yY5gK4J_94A';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Tokyo Research Laboratory Ibm 20081030 Ibis 2008 Copyright
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://machine-learning-from-scratch.readthedocs.io/zh_CN/latest/_images/%E7%BA%BF%E6%80%A7%E7%BB%84%E5%90%882.png" data-lightbox="roadtrip" data-title="线性代数 Machine Learning From Scratch 0 1 文档">
+						<img class="card-img" src="https://machine-learning-from-scratch.readthedocs.io/zh_CN/latest/_images/%E7%BA%BF%E6%80%A7%E7%BB%84%E5%90%882.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGveStFY9PWCLHVPvodx0z0xab7u8azQTQYw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				线性代数 Machine Learning From Scratch 0 1 文档
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+		
+	</div>
+
+		 
+		
+		
+				</div>
+				<div class="col-sm-12 widget">
+					<div class="d-block p-4">
+	<center>
+		<!-- BOTTOM BANNER ADS -->
+<script async="async" data-cfasync="false" src="//jc32arlvqpv8.com/eb47a424ae325c90cca32780149785c3/invoke.js"></script>
+<div id="container-eb47a424ae325c90cca32780149785c3"></div>
+
+	</center>
+</div>				</div>
+			</div>
+			<div class="row footer">
+				<div class="col-md-12 text-center py-4">
+										<a href="/p/dmca.html">Dmca</a>
+										<a href="/p/contact.html">Contact</a>
+										<a href="/p/privacy-policy.html">Privacy Policy</a>
+										<a href="/p/copyright.html">Copyright</a>
+					
+				</div>
+			</div>
+		</main>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js" integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js" integrity="sha256-CtKylYan+AJuoH8jrMht1+1PMhMqrKnB8K5g012WN5I=" crossorigin="anonymous"></script>
+		
+		<!-- Footer CSS JS -->
+		
+		
+		
+			<script type='text/javascript' src='//jc32arlvqpv8.com/ef/d5/10/efd510237a3143727bed46803ec35b8d.js'></script>
+</body>
+</html>

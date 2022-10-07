@@ -1,0 +1,682 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha256-L/W5Wfqfa0sdBNIKN9cG6QA5F2qx4qICmU2VgLruv9Y=" crossorigin="anonymous" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/css/lightbox.min.css" integrity="sha256-tBxlolRHP9uMsEFKVk+hk//ekOlXOixLKvye5W2WR5c=" crossorigin="anonymous" />
+		<link href="https://fonts.googleapis.com/css?family=Mr+Dafoe" rel="stylesheet" type="text/css">
+
+		<style type="text/css">
+			html,body{font-family:"Open Sans",Arial,sans-serif;font-size:14px;font-weight:400;background:#f3f3f3 url(http://qxqk.nmc.cn/html/2012/1/PIC/qx-38-1-28-4.jpg
+) no-repeat center center fixed;background-size:cover;height:100%}#title{font-family:"Mr Dafoe",Times,serif;font-size:34px;background:rgba(255,255,255,.8);margin-bottom:34px}.header{padding-bottom:13px;margin-bottom:13px;border-bottom:1px solid #eee}a{color:#26ADE4;text-decoration:none}#title a{color:#333;margin-left:21px}#title a:hover{text-decoration:none;color:#26ADE4}.sidebar ul{margin:0;padding:0}.sidebar ul li{list-style:none}.footer{margin-top:21px;padding-top:13px;border-top:1px solid #eee}.footer a{margin:0 15px}.navi{margin:13px 0 13px 0;padding:13px}.navi a{margin:5px 2px;font-size:95%}.main{margin-top: 6rem;}.form-inline .form-control{min-width: 300px;}.v-cover{height: 380px; object-fit: cover;}.v-image{height: 200px; object-fit: cover;}.dwn-cover{max-height: 460px; object-fit: cover;}.main{margin-top: 6rem;}.form-inline .form-control{min-width: 300px;}			
+		</style>
+
+		<title>渦度輸送方程式 導出</title>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/", 
+  "@type": "Article", 
+  "author": {
+    "@type": "Person",
+    "name": "James"
+  },
+  "headline": "渦度輸送方程式 導出",
+  "datePublished": "2021-04-24",
+  "image": [http://fnorio.com/0107fluid_dynamics_in_two_dimensions1/fig3-3-2-04.GIF,https://slidesplayer.net/11513025/62/images/slide_4.jpg,https://chie-pctr.c.yimg.jp/dk/iwiz-chie/ans-381775439?w=200&amp;h=200&amp;up=0],
+  "publisher": {
+    "@type": "Organization",
+    "name": "Tukang Parkir Gerobak",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://via.placeholder.com/512.png?text=渦度輸送方程式 導出",
+      "width": 512,
+      "height": 512
+    }
+  }
+}
+</script>
+		<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-957NGNKQ70"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-957NGNKQ70');
+</script>
+
+<script type='text/javascript' src='//jc32arlvqpv8.com/1a/82/2e/1a822ef8a40a0fbab3c4ea12a5d2bb02.js'></script>
+</head>
+	<body>
+		<header class="bg-white fixed-top">			
+			<nav class="navbar navbar-light bg-white mb-0">
+				<div class="container justify-content-center justify-content-sm-between">	
+				  <a href="/" title="Blog" class="navbar-brand mb-1">Blog</a>
+				  				</div>			  
+			</nav>				
+		</header>
+		<main class="main container bg-white">
+			<div class="col-md-12 my-4" align="center">
+				<div class="d-block p-4">
+	<br/><center>
+<!-- TOP BANNER ADS -->
+</center><br/>
+</div>			</div>
+			<div class="row header">
+				<div class="col-sm-12 text-center p-2">
+						<h1>渦度輸送方程式 導出</h1>
+
+	
+	<div class="navi text-center">
+										<a class="badge badge-primary" href="/%E7%A4%BE%E5%93%A1%E7%A0%94%E4%BF%AE-%E8%82%B2%E6%88%90%E3%81%AE%E6%96%B9%E7%A8%8B%E5%BC%8F-%E5%AD%A6%E3%81%B0net.html">社員研修 育成の方程式 学ばnet</a>
+											<a class="badge badge-light" href="/%E9%A7%BF%E6%B2%B3%E5%B1%8B-%E5%83%95%E3%81%AF%E7%84%A1%E6%84%8F%E8%AD%98%E3%81%AB%E3%83%9D%E3%82%B8%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%92%E6%95%B4%E3%81%88%E3%82%8B%E7%99%96%E3%82%92%E7%BE%A9%E6%AF%8D%E3%81%95%E3%82%93%E3%81%AB%E6%B0%97%E3%81%A5%E3%81%8B%E3%82%8C%E3%81%A6%E3%81%97%E3%81%BE%E3%81%84%E6%80%92%E3%82%89%E3%82%8C%E3%82%8B%E3%81%8B%E3%81%A8%E7%84%A6%E3%81%A3%E3%81%9F%E3%81%8C-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%82%88%E3%82%8A%E7%AB%8B%E6%B4%BE%E3%81%AD-%E3%81%A8%E3%83%A8%E3%83%80%E3%83%AC%E3%82%92%E3%81%9F%E3%82%89%E3%81%97%E3%81%A6%E6%AC%B2%E6%83%85%E3%81%97%E3%81%AF%E3%81%98%E3%82%81%E3%81%9F-%E5%AE%89%E9%87%8E%E7%94%B1%E7%BE%8E.html">駿河屋 僕は無意識にポジションを整える癖を義母さんに気づかれてしまい怒られるかと焦ったが お父さんより立派ね とヨダレをたらして欲情しはじめた 安野由美</a>
+											<a class="badge badge-light" href="/%E7%86%B1%E5%8C%96%E5%AD%A6%E6%96%B9%E7%A8%8B%E5%BC%8F%E3%81%8B%E3%82%89%E7%94%9F%E6%88%90%E7%86%B1.html">熱化学方程式から生成熱</a>
+											<a class="badge badge-primary" href="/%E9%81%8B%E5%91%BD%E3%81%AE%E6%96%B9%E7%A8%8B%E5%BC%8F-%E6%AD%8C%E8%A9%9E.html">運命の方程式 歌詞</a>
+											<a class="badge badge-info" href="/%E7%86%B1%E5%8C%96%E5%AD%A6%E6%96%B9%E7%A8%8B%E5%BC%8F-%E5%8F%8D%E5%BF%9C%E7%86%B1-%E8%A6%8B%E5%88%86%E3%81%91%E6%96%B9.html">熱化学方程式 反応熱 見分け方</a>
+											<a class="badge badge-dark" href="/%E6%9D%B1%E6%B5%B7-%E4%BD%8F%E5%AE%85-cm-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93.html">東海 住宅 cm お父さん</a>
+											<a class="badge badge-dark" href="/%E7%82%AD%E7%B4%A0-%E7%87%83%E7%84%BC%E7%86%B1-%E7%86%B1%E5%8C%96%E5%AD%A6%E6%96%B9%E7%A8%8B%E5%BC%8F.html">炭素 燃焼熱 熱化学方程式</a>
+											<a class="badge badge-danger" href="/%E7%86%B1-%E4%BC%9D%E5%B0%8E-%E6%96%B9%E7%A8%8B%E5%BC%8F-%E5%B7%AE%E5%88%86-%E6%B3%95-%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0.html">熱 伝導 方程式 差分 法 プログラム</a>
+											<a class="badge badge-success" href="/%E9%9D%92%E4%BA%95%E3%81%84%E3%81%A1%E3%81%94%E3%81%8C%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%A8%E9%8A%AD%E6%B9%AF.html">青井いちごがお父さんと銭湯</a>
+											<a class="badge badge-danger" href="/%E9%9D%92%E3%83%81%E3%83%A3%E3%83%BC%E3%83%88-%E5%B9%B3%E9%9D%A2%E3%81%AE%E6%96%B9%E7%A8%8B%E5%BC%8F.html">青チャート 平面の方程式</a>
+											<a class="badge badge-success" href="/%E7%A7%81%E3%81%A8%E6%AF%8D%E3%81%8C%E7%AA%81%E7%84%B6%E3%81%AE%E4%BA%8B%E3%81%AB%E3%83%9D%E3%82%AB%E3%83%BC%E3%83%B3%E3%81%A8%E3%81%97%E3%81%A6%E3%81%84%E3%82%8B%E3%81%A8-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%A8%E7%B5%90%E5%A9%9A%E3%81%99%E3%82%8B-%E3%81%A3%E3%81%A6%E8%A8%80%E3%81%A3%E3%81%A6%E3%81%9F%E3%81%98%E3%82%83%E3%81%AA%E3%81%84%E3%81%8B-%E3%81%84%E3%81%A4%E3%81%AE%E3%81%BE%E3%81%AB%E5%A4%A7%E5%98%98%E4%BB%98%E3%81%8D%E3%81%AB%E3%81%AA%E3%81%A3%E3%81%9F%E3%82%93%E3%81%A0-%E3%81%A8%E6%80%92%E9%B3%B4%E3%81%A3%E3%81%A6%E5%87%BA%E3%81%A6%E8%A1%8C%E3%81%A3%E3%81%9F.html">私と母が突然の事にポカーンとしていると お父さんと結婚する って言ってたじゃないか いつのまに大嘘付きになったんだ と怒鳴って出て行った</a>
+											<a class="badge badge-success" href="/%E9%9D%9E%E7%B7%9A%E5%BD%A2%E7%99%BA%E5%B1%95%E6%96%B9%E7%A8%8B%E5%BC%8F%E3%81%AE.html">非線形発展方程式の</a>
+											<a class="badge badge-success" href="/%E8%B5%A4%E3%81%A1%E3%82%83%E3%82%93-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93-%E3%82%88%E3%82%8A-%E3%81%8A%E6%AF%8D%E3%81%95%E3%82%93.html">赤ちゃん お父さん より お母さん</a>
+											<a class="badge badge-secondary" href="/%E7%9B%B4%E7%B7%9A%E3%81%AE%E6%96%B9%E7%A8%8B%E5%BC%8F-%E6%9B%B8%E3%81%8D%E6%96%B9.html">直線の方程式 書き方</a>
+											<a class="badge badge-info" href="/%E7%BE%A4%E9%81%85%E5%BB%B6%E6%99%82%E9%96%93-%E5%B7%AE%E5%88%86%E6%96%B9%E7%A8%8B%E5%BC%8F.html">群遅延時間 差分方程式</a>
+						</div>
+<center>
+	<!-- MIDDLE BANNER ADS -->
+<script type="text/javascript">
+	atOptions = {
+		'key' : '2b77887421e2587a1a1b1d7c8a31a9e0',
+		'format' : 'iframe',
+		'height' : 250,
+		'width' : 300,
+		'params' : {}
+	};
+	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://jc32arlvqpv8.com/2b77887421e2587a1a1b1d7c8a31a9e0/invoke.js"></scr' + 'ipt>');
+</script>
+		
+	</center>
+					
+				</div>
+			</div>
+			<div class="row content mb-4">
+				<div class="col-md-12">					
+					
+	
+	<div class="card-columns">
+						
+	  <div class='card'>
+	  	<a href="https://blog-imgs-31-origin.fc2.com/j/i/k/jikosoftcom/image005_20111209201620.png" data-lightbox="roadtrip" data-title="渦度輸送方程式の導出 Cae技術情報局">
+						<img class="card-img" src="https://blog-imgs-31-origin.fc2.com/j/i/k/jikosoftcom/image005_20111209201620.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThR0dkpUmDISMAxBdx9BRUcc8Ne50JkmPlvX6YawG0NEKK-_GEvfixpIaGoMqdx4JAxw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				渦度輸送方程式の導出 Cae技術情報局
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://blog-imgs-31-origin.fc2.com/j/i/k/jikosoftcom/image010.png" data-lightbox="roadtrip" data-title="渦度輸送方程式の導出 Cae技術情報局">
+						<img class="card-img" src="https://blog-imgs-31-origin.fc2.com/j/i/k/jikosoftcom/image010.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGENdCAdwNsbGifCBoJpshMT8vJHCFh6IOTHBXBWUT9W49QNIdpbCizuXKTLx19XOAeg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				渦度輸送方程式の導出 Cae技術情報局
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://blog-imgs-31-origin.fc2.com/j/i/k/jikosoftcom/image006_20111209201625.png" data-lightbox="roadtrip" data-title="渦度輸送方程式の導出 Cae技術情報局">
+						<img class="card-img" src="https://blog-imgs-31-origin.fc2.com/j/i/k/jikosoftcom/image006_20111209201625.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXQipA8KjVXHUVQXDASVFDgiOaOMS8xArwieS_RSzxeqYK1BECCMEQFiJQtZEgczk-tg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				渦度輸送方程式の導出 Cae技術情報局
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://cdn.slidesharecdn.com/ss_thumbnails/derivationofvorticityequation-151118105917-lva1-app6891-thumbnail-4.jpg?cb=1455207992" data-lightbox="roadtrip" data-title="渦度方程式推導">
+						<img class="card-img" src="https://cdn.slidesharecdn.com/ss_thumbnails/derivationofvorticityequation-151118105917-lva1-app6891-thumbnail-4.jpg?cb=1455207992" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWyGKTHjOtMvHWj8TJvKXY-PHPKec_eUXbzPaAFJpR0ECzdWyKba0Ezyr578dqBPNZhcQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				渦度方程式推導
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://image.slidesharecdn.com/derivationofvorticityequation-151118105917-lva1-app6891/95/-2-638.jpg?cb=1455207992" data-lightbox="roadtrip" data-title="渦度方程式推導">
+						<img class="card-img" src="https://image.slidesharecdn.com/derivationofvorticityequation-151118105917-lva1-app6891/95/-2-638.jpg?cb=1455207992" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_VOJqR2om3YkmG7gDmy37ULXtAiHZpdRII6cb0zQfBBuMxC7k02A4kiQUQDMEMOmWpHY';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				渦度方程式推導
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://fnorio.com/0143Rossby_wave/fig1-2-2-02.GIF" data-lightbox="roadtrip" data-title="慣性重力波 1926年 とロスビー波 1939年 そして赤道波 1966年">
+						<img class="card-img" src="http://fnorio.com/0143Rossby_wave/fig1-2-2-02.GIF" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNpGyI_fApqSoT_Ddi0-68q86s1SYNff7Xz02DTvPjlaY-DsvhPh_0i3DTKnk50fTI_0w';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				慣性重力波 1926年 とロスビー波 1939年 そして赤道波 1966年
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+				<div class='card'>	
+			<div class="d-block p-4">
+	</div>		  	
+		  	<h3 class="h6 p-2"><b></b></h3>
+					</div>
+		
+						
+	  <div class='card'>
+	  	<a href="https://cdn.slidesharecdn.com/ss_thumbnails/derivationofvorticityequation-151118105917-lva1-app6891-thumbnail.jpg?cb=1455207992" data-lightbox="roadtrip" data-title="渦度方程式推導">
+						<img class="card-img" src="https://cdn.slidesharecdn.com/ss_thumbnails/derivationofvorticityequation-151118105917-lva1-app6891-thumbnail.jpg?cb=1455207992" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrPbO9f6c8NrXGugXQuuq-PctYmY3vWGEupq21-LCtEYURgsBPtvcEqi6I9sLJ4kusYBg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				渦度方程式推導
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.3du.tw/res/2020/11-04/23/bc95850bc60d217074d0744e9a190e14.jpg" data-lightbox="roadtrip" data-title="大氣動力方程 自然百科 三度漢語網 三度漢語網">
+						<img class="card-img" src="https://www.3du.tw/res/2020/11-04/23/bc95850bc60d217074d0744e9a190e14.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmoQMsjAtA_caKZCMDN8dvPjXxdme4fL1OYr6YdllUWAr4QTqF_6j8ekssX3LVdVByQNs';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				大氣動力方程 自然百科 三度漢語網 三度漢語網
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://html.rhhz.net/qxxb_cn/html/PIC/qxxb-76-6-870-FE1.jpg" data-lightbox="roadtrip" data-title="青藏高原地表位涡密度强迫对2008年1月中国南方降水过程的影响 资料分析">
+						<img class="card-img" src="http://html.rhhz.net/qxxb_cn/html/PIC/qxxb-76-6-870-FE1.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQr6a7XlGxMUiqTUqSm5QiFtPzuRR139ci8JBO031e7QdgKWn8QLQMk5BPEsAuPsPT5SSI';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				青藏高原地表位涡密度强迫对2008年1月中国南方降水过程的影响 资料分析
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://html.rhhz.net/qxxb_cn/html/PIC/qxxb-76-6-870-E12.jpg" data-lightbox="roadtrip" data-title="青藏高原地表位涡密度强迫对2008年1月中国南方降水过程的影响 资料分析">
+						<img class="card-img" src="http://html.rhhz.net/qxxb_cn/html/PIC/qxxb-76-6-870-E12.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQt26ThC3Xpge7OkAFgLi86I1GDQuihEAbtINRj7u6uo9BKuIg90FeoKfRc3MBEuLt2rRs';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				青藏高原地表位涡密度强迫对2008年1月中国南方降水过程的影响 资料分析
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://slidesplayer.net/11513025/62/images/slide_4.jpg" data-lightbox="roadtrip" data-title="渦位 Potential Vorticity と角運動量の保存 Ppt Download">
+						<img class="card-img" src="https://slidesplayer.net/11513025/62/images/slide_4.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGyoT-QSdC2NmsIoa-qs0JJpea6Cd43RPVcZF6jBhR35okZ7Qrcx5Ue9-fVJGIZOrX7nk';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				渦位 Potential Vorticity と角運動量の保存 Ppt Download
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://fnorio.com/0107fluid_dynamics_in_two_dimensions1/fig3-3-2-04.GIF" data-lightbox="roadtrip" data-title="二次元 非圧縮性 完全流体の力学 ラグランジュの渦定理とは何か">
+						<img class="card-img" src="http://fnorio.com/0107fluid_dynamics_in_two_dimensions1/fig3-3-2-04.GIF" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-svLsp83XgMwGYMHW8C-aXG54cjrMW6O3GYcYZEBZhI3MxI2pcxjb8jXSrPuqN1-rLlA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				二次元 非圧縮性 完全流体の力学 ラグランジュの渦定理とは何か
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://qxqk.nmc.cn/html/2012/1/PIC/qx-38-1-28-3.jpg" data-lightbox="roadtrip" data-title="从涡度 位涡 到平流层干侵入 位涡问题的缘起 应用及其歧途">
+						<img class="card-img" src="http://qxqk.nmc.cn/html/2012/1/PIC/qx-38-1-28-3.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhV1-0OeFbzwVibW65FBObbkg7WNpx0yHAKOnhEdG9_3ajWb48MH1IaI-QF180m_15lTs';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				从涡度 位涡 到平流层干侵入 位涡问题的缘起 应用及其歧途
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://www.iapjournals.ac.cn/fileDQKX/journal/article/dqkx/2020/6/PIC/19206CTanghuan-3_mini.jpg" data-lightbox="roadtrip" data-title="一次高原东移mcs与下游西南低涡作用并产生强降水事件的研究">
+						<img class="card-img" src="http://www.iapjournals.ac.cn/fileDQKX/journal/article/dqkx/2020/6/PIC/19206CTanghuan-3_mini.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpV2wKYKl5Bb8i9BznXEL7te5eqxRf0MqQwlR-k5LY9NoghK4Gr_hyrJJ6MGj4-lf7LA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				一次高原东移mcs与下游西南低涡作用并产生强降水事件的研究
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://html.rhhz.net/qxxb_cn/html/PIC/qxxb-76-6-870-8.jpg" data-lightbox="roadtrip" data-title="青藏高原地表位涡密度强迫对2008年1月中国南方降水过程的影响 资料分析">
+						<img class="card-img" src="http://html.rhhz.net/qxxb_cn/html/PIC/qxxb-76-6-870-8.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUwM9bUR2L15U5ZFtJ3R503VJHxG1DcMWDMgK_tIdxxVguVHn3MJduUNMuHTaKOx0E9rw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				青藏高原地表位涡密度强迫对2008年1月中国南方降水过程的影响 资料分析
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://qxqk.nmc.cn/html/2012/1/PIC/qx-38-1-28-14.jpg" data-lightbox="roadtrip" data-title="从涡度 位涡 到平流层干侵入 位涡问题的缘起 应用及其歧途">
+						<img class="card-img" src="http://qxqk.nmc.cn/html/2012/1/PIC/qx-38-1-28-14.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfYptyGBpiIw6vRAGFDxs6FoTOeelRI6XLYOAR7SCBty8imf7NIVyO_7v3p2GvGKICigQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				从涡度 位涡 到平流层干侵入 位涡问题的缘起 应用及其歧途
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://www.iapjournals.ac.cn/fileDQKX/journal/article/dqkx/2020/6/PIC/19127CXuweiping-2.jpg" data-lightbox="roadtrip" data-title="20世纪90年代以后华北初春低温增强和北大西洋海温关系">
+						<img class="card-img" src="http://www.iapjournals.ac.cn/fileDQKX/journal/article/dqkx/2020/6/PIC/19127CXuweiping-2.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRi88AtnTjB4CKHCgGtd43Z7N__TXHThZgqKNo9ET6UHC5QdSJKeTIXwS0X7bOge4hJy84';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				20世纪90年代以后华北初春低温增强和北大西洋海温关系
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://qxqk.nmc.cn/html/2012/1/PIC/qx-38-1-28-5.jpg" data-lightbox="roadtrip" data-title="从涡度 位涡 到平流层干侵入 位涡问题的缘起 应用及其歧途">
+						<img class="card-img" src="http://qxqk.nmc.cn/html/2012/1/PIC/qx-38-1-28-5.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFHjn3OiFKjNs1WGBBMWxfbBz2REsmD4LykDck_FkYX0LPlfZf63y5RowFW7o2njpAImE';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				从涡度 位涡 到平流层干侵入 位涡问题的缘起 应用及其歧途
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://qxqk.nmc.cn/html/2012/1/PIC/qx-38-1-28-4.jpg" data-lightbox="roadtrip" data-title="从涡度 位涡 到平流层干侵入 位涡问题的缘起 应用及其歧途">
+						<img class="card-img" src="http://qxqk.nmc.cn/html/2012/1/PIC/qx-38-1-28-4.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTevmcZjofh7MVPbTsGtvVN4k3aJAxBpHQdapTEhqwmXR9L0G2uHNeGFfM7a6OnNKs6Zvs';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				从涡度 位涡 到平流层干侵入 位涡问题的缘起 应用及其歧途
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://www.iapjournals.ac.cn/fileDQKX/journal/article/dqkx/2020/6/PIC/19206CTanghuan-5_mini.jpg" data-lightbox="roadtrip" data-title="一次高原东移mcs与下游西南低涡作用并产生强降水事件的研究">
+						<img class="card-img" src="http://www.iapjournals.ac.cn/fileDQKX/journal/article/dqkx/2020/6/PIC/19206CTanghuan-5_mini.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjD6MC1-NX8_L6oFwirKJ8kJ4Nzt-oJ2_yAYXuvCBS5bv4mLISRl47GYlt7cThAaHpH9Q';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				一次高原东移mcs与下游西南低涡作用并产生强降水事件的研究
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://qxqk.nmc.cn/html/2012/1/PIC/qx-38-1-28-7.jpg" data-lightbox="roadtrip" data-title="从涡度 位涡 到平流层干侵入 位涡问题的缘起 应用及其歧途">
+						<img class="card-img" src="http://qxqk.nmc.cn/html/2012/1/PIC/qx-38-1-28-7.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVlHbswlwh8T8luPyVmiiLI6dTF-27RyASqQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				从涡度 位涡 到平流层干侵入 位涡问题的缘起 应用及其歧途
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://html.rhhz.net/qxxb_cn/html/PIC/qxxb-76-6-870-3.jpg" data-lightbox="roadtrip" data-title="青藏高原地表位涡密度强迫对2008年1月中国南方降水过程的影响 资料分析">
+						<img class="card-img" src="http://html.rhhz.net/qxxb_cn/html/PIC/qxxb-76-6-870-3.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQP3U_S4KXhO7msKP3pEydh6IclOsWWTpHaTg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				青藏高原地表位涡密度强迫对2008年1月中国南方降水过程的影响 资料分析
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="vwtBLIkLO1FNfM" data-lightbox="roadtrip" data-title="Http Www Byzh Org Cn Cn Article Downloadarticlefile Do Attachtype Pdf Id 2599">
+						<img class="card-img" src="vwtBLIkLO1FNfM" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0FQXAWDmLxfflrNKmglv3P6hwb8yYAlpgqw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Http Www Byzh Org Cn Cn Article Downloadarticlefile Do Attachtype Pdf Id 2599
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://www.iapjournals.ac.cn/fileDQKX/journal/article/dqkx/2020/6/PIC/19206CTanghuan-1.jpg" data-lightbox="roadtrip" data-title="一次高原东移mcs与下游西南低涡作用并产生强降水事件的研究">
+						<img class="card-img" src="http://www.iapjournals.ac.cn/fileDQKX/journal/article/dqkx/2020/6/PIC/19206CTanghuan-1.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaGvg9p_PmzM-L-o_LHbv2rAgIw7uJ1oqdOg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				一次高原东移mcs与下游西南低涡作用并产生强降水事件的研究
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://qxqk.nmc.cn/html/2012/1/PIC/qx-38-1-28-8.jpg" data-lightbox="roadtrip" data-title="从涡度 位涡 到平流层干侵入 位涡问题的缘起 应用及其歧途">
+						<img class="card-img" src="http://qxqk.nmc.cn/html/2012/1/PIC/qx-38-1-28-8.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR30uQFayJTIMr6TKkpLuKiQQ4VSRfqtiYkJQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				从涡度 位涡 到平流层干侵入 位涡问题的缘起 应用及其歧途
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://j.bjfu.edu.cn/fileBJLYDXXB/journal/article/bjlydxxb/2020/10/PIC/2020-0003-1.jpg" data-lightbox="roadtrip" data-title="基于涡度相关法的黄河小浪底人工混交林ch4通量平均周期的确定">
+						<img class="card-img" src="http://j.bjfu.edu.cn/fileBJLYDXXB/journal/article/bjlydxxb/2020/10/PIC/2020-0003-1.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQJeYoU2pUO5xcHhcac-moynssR5xJNnIbqQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				基于涡度相关法的黄河小浪底人工混交林ch4通量平均周期的确定
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://j.bjfu.edu.cn/fileBJLYDXXB/journal/article/bjlydxxb/2020/10/PIC/2020-0003-2.jpg" data-lightbox="roadtrip" data-title="基于涡度相关法的黄河小浪底人工混交林ch4通量平均周期的确定">
+						<img class="card-img" src="http://j.bjfu.edu.cn/fileBJLYDXXB/journal/article/bjlydxxb/2020/10/PIC/2020-0003-2.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQU66IXu3FLr8-Wl9fkz029lbodKnfyepJZMQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				基于涡度相关法的黄河小浪底人工混交林ch4通量平均周期的确定
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="vwtBLIkLO1FNfM" data-lightbox="roadtrip" data-title="Http Www Byzh Org Cn Cn Article Downloadarticlefile Do Attachtype Pdf Id 2599">
+						<img class="card-img" src="vwtBLIkLO1FNfM" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAJS54VME_c5uzPH6em1YV73MxUhViJhFBUA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Http Www Byzh Org Cn Cn Article Downloadarticlefile Do Attachtype Pdf Id 2599
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://chie-pctr.c.yimg.jp/dk/iwiz-chie/ans-381775439?w=200&amp;h=200&amp;up=0" data-lightbox="roadtrip" data-title="N S方程式のrotをとって渦度輸送方程式を 求めるので Yahoo 知恵袋">
+						<img class="card-img" src="https://chie-pctr.c.yimg.jp/dk/iwiz-chie/ans-381775439?w=200&amp;h=200&amp;up=0" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlJ8iOgaLZuwkjSBzIFMKIwu1WmKQmC3Igxw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				N S方程式のrotをとって渦度輸送方程式を 求めるので Yahoo 知恵袋
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://xbgjxt.swu.edu.cn//xndx-data/jsuns/2018/5/PIC/xndxxbzrkxb-40-5-160-4.jpg" data-lightbox="roadtrip" data-title="一次引发重庆大暴雨的西南低涡动力诊断分析">
+						<img class="card-img" src="http://xbgjxt.swu.edu.cn//xndx-data/jsuns/2018/5/PIC/xndxxbzrkxb-40-5-160-4.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaZJ07nC5StyRY0pfeCaLMuU_UXgZzMXl5LQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				一次引发重庆大暴雨的西南低涡动力诊断分析
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.yumpu.com/xx/image/facebook/39709516.jpg" data-lightbox="roadtrip" data-title="Epa 88 U1e1 03 001 E œae E C A ƒa E C">
+						<img class="card-img" src="https://www.yumpu.com/xx/image/facebook/39709516.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRY1kSKuT1qPaYD4GnUJyna-tdXNxcxdqibUg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Epa 88 U1e1 03 001 E œae E C A ƒa E C
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://www.iapjournals.ac.cn/fileDQKX/journal/article/dqkx/2020/6/PIC/19127CXuweiping-1.jpg" data-lightbox="roadtrip" data-title="20世纪90年代以后华北初春低温增强和北大西洋海温关系">
+						<img class="card-img" src="http://www.iapjournals.ac.cn/fileDQKX/journal/article/dqkx/2020/6/PIC/19127CXuweiping-1.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2GsMvh-gcS34m-0AcGEQpWMkMcJBklzudOQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				20世纪90年代以后华北初春低温增强和北大西洋海温关系
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://html.rhhz.net/qxxb_cn/html/PIC/qxxb-76-6-870-6.jpg" data-lightbox="roadtrip" data-title="青藏高原地表位涡密度强迫对2008年1月中国南方降水过程的影响 资料分析">
+						<img class="card-img" src="http://html.rhhz.net/qxxb_cn/html/PIC/qxxb-76-6-870-6.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsYxWsXZDP9siGoDXBje9kdXbuXk-ow57zKw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				青藏高原地表位涡密度强迫对2008年1月中国南方降水过程的影响 资料分析
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+		
+	</div>
+
+		 
+		
+		
+				</div>
+				<div class="col-sm-12 widget">
+					<div class="d-block p-4">
+	<center>
+		<!-- BOTTOM BANNER ADS -->
+<script async="async" data-cfasync="false" src="//jc32arlvqpv8.com/eb47a424ae325c90cca32780149785c3/invoke.js"></script>
+<div id="container-eb47a424ae325c90cca32780149785c3"></div>
+
+	</center>
+</div>				</div>
+			</div>
+			<div class="row footer">
+				<div class="col-md-12 text-center py-4">
+										<a href="/p/dmca.html">Dmca</a>
+										<a href="/p/contact.html">Contact</a>
+										<a href="/p/privacy-policy.html">Privacy Policy</a>
+										<a href="/p/copyright.html">Copyright</a>
+					
+				</div>
+			</div>
+		</main>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js" integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js" integrity="sha256-CtKylYan+AJuoH8jrMht1+1PMhMqrKnB8K5g012WN5I=" crossorigin="anonymous"></script>
+		
+		<!-- Footer CSS JS -->
+		
+		
+		
+			<script type='text/javascript' src='//jc32arlvqpv8.com/ef/d5/10/efd510237a3143727bed46803ec35b8d.js'></script>
+</body>
+</html>

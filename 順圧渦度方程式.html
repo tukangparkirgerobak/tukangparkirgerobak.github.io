@@ -1,0 +1,682 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha256-L/W5Wfqfa0sdBNIKN9cG6QA5F2qx4qICmU2VgLruv9Y=" crossorigin="anonymous" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/css/lightbox.min.css" integrity="sha256-tBxlolRHP9uMsEFKVk+hk//ekOlXOixLKvye5W2WR5c=" crossorigin="anonymous" />
+		<link href="https://fonts.googleapis.com/css?family=Mr+Dafoe" rel="stylesheet" type="text/css">
+
+		<style type="text/css">
+			html,body{font-family:"Open Sans",Arial,sans-serif;font-size:14px;font-weight:400;background:#f3f3f3 url(mZQhDQE6rooWKM
+) no-repeat center center fixed;background-size:cover;height:100%}#title{font-family:"Mr Dafoe",Times,serif;font-size:34px;background:rgba(255,255,255,.8);margin-bottom:34px}.header{padding-bottom:13px;margin-bottom:13px;border-bottom:1px solid #eee}a{color:#26ADE4;text-decoration:none}#title a{color:#333;margin-left:21px}#title a:hover{text-decoration:none;color:#26ADE4}.sidebar ul{margin:0;padding:0}.sidebar ul li{list-style:none}.footer{margin-top:21px;padding-top:13px;border-top:1px solid #eee}.footer a{margin:0 15px}.navi{margin:13px 0 13px 0;padding:13px}.navi a{margin:5px 2px;font-size:95%}.main{margin-top: 6rem;}.form-inline .form-control{min-width: 300px;}.v-cover{height: 380px; object-fit: cover;}.v-image{height: 200px; object-fit: cover;}.dwn-cover{max-height: 460px; object-fit: cover;}.main{margin-top: 6rem;}.form-inline .form-control{min-width: 300px;}			
+		</style>
+
+		<title>順圧渦度方程式</title>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/", 
+  "@type": "Article", 
+  "author": {
+    "@type": "Person",
+    "name": "James"
+  },
+  "headline": "順圧渦度方程式",
+  "datePublished": "2021-04-24",
+  "image": [http://kishou.u-gakugei.ac.jp/models/Baro/fig.gif,https://image.slideserve.com/506755/slide13-l.jpg,https://slidesplayer.net/slide/14892837/91/images/6/%E7%B5%B6%E5%AF%BE%E6%B8%A6%E5%BA%A6%E3%81%AE%E4%BF%9D%E5%AD%98%E5%89%87%EF%BC%88%E3%81%A4%E3%81%A5%E3%81%8D%EF%BC%89+%E7%B5%B6%E5%AF%BE%E6%B8%A6%E5%BA%A6%E3%81%AE%E4%BF%9D%E5%AD%98+%E5%B0%8E%E5%87%BA%E3%81%AF%E6%BC%94%E7%BF%92%E5%95%8F%E9%A1%8C.jpg],
+  "publisher": {
+    "@type": "Organization",
+    "name": "Tukang Parkir Gerobak",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://via.placeholder.com/512.png?text=順圧渦度方程式",
+      "width": 512,
+      "height": 512
+    }
+  }
+}
+</script>
+		<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-957NGNKQ70"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-957NGNKQ70');
+</script>
+
+<script type='text/javascript' src='//jc32arlvqpv8.com/1a/82/2e/1a822ef8a40a0fbab3c4ea12a5d2bb02.js'></script>
+</head>
+	<body>
+		<header class="bg-white fixed-top">			
+			<nav class="navbar navbar-light bg-white mb-0">
+				<div class="container justify-content-center justify-content-sm-between">	
+				  <a href="/" title="Blog" class="navbar-brand mb-1">Blog</a>
+				  				</div>			  
+			</nav>				
+		</header>
+		<main class="main container bg-white">
+			<div class="col-md-12 my-4" align="center">
+				<div class="d-block p-4">
+	<br/><center>
+<!-- TOP BANNER ADS -->
+</center><br/>
+</div>			</div>
+			<div class="row header">
+				<div class="col-sm-12 text-center p-2">
+						<h1>順圧渦度方程式</h1>
+
+	
+	<div class="navi text-center">
+										<a class="badge badge-dark" href="/%E9%9A%A3%E4%BA%BA-%E6%9C%AC%E5%BD%93%E3%81%AE%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%98%E3%82%83%E3%81%AA%E3%81%84.html">隣人 本当のお父さんじゃない</a>
+											<a class="badge badge-primary" href="/%E7%BE%A9%E7%90%86-%E3%81%AE-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93-%E3%81%8A%E6%AF%8D%E3%81%95%E3%82%93.html">義理 の お父さん お母さん</a>
+											<a class="badge badge-light" href="/%E7%88%B6%E5%A8%98%E6%95%99%E8%82%B2%E7%9A%84%E8%AA%BF%E6%95%99%E6%8C%87%E5%B0%8E-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%AE%E8%82%89%E9%9E%AD%E3%81%A8%E7%99%BD%E3%81%84%E9%A3%9B%E6%B2%AB-%E5%85%83%E5%B1%B1%E3%81%AF%E3%82%8B%E3%81%8B18%E6%AD%B3.html">父娘教育的調教指導 お父さんの肉鞭と白い飛沫 元山はるか18歳</a>
+											<a class="badge badge-success" href="/%E9%9B%BB%E7%A3%81%E5%A0%B4%E4%B8%AD%E3%81%AE%E8%8D%B7%E9%9B%BB%E7%B2%92%E5%AD%90-%E3%82%B7%E3%83%A5%E3%83%AC%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%AC%E3%83%BC%E6%96%B9%E7%A8%8B%E5%BC%8F.html">電磁場中の荷電粒子 シュレーディンガー方程式</a>
+											<a class="badge badge-primary" href="/%E7%B5%B1%E8%A8%88%E7%89%A9%E7%90%86-%E8%BC%B8%E9%80%81%E6%96%B9%E7%A8%8B%E5%BC%8F.html">統計物理 輸送方程式</a>
+											<a class="badge badge-primary" href="/%E7%9B%B4%E6%8E%A5ab-%E4%BA%8C%E7%AD%89%E5%88%86%E7%B7%9A-%E6%96%B9%E7%A8%8B%E5%BC%8F.html">直接ab 二等分線 方程式</a>
+											<a class="badge badge-primary" href="/%E7%99%BA%E5%B1%95%E6%96%B9%E7%A8%8B%E5%BC%8F%E8%8B%A5%E6%89%8B%E3%82%BB%E3%83%9F%E3%83%8A%E3%83%BC-40.html">発展方程式若手セミナー 40</a>
+											<a class="badge badge-success" href="/%E7%82%B9%E3%81%A8%E6%96%B9%E7%A8%8B%E5%BC%8F%E3%81%AE%E8%B7%9D%E9%9B%A2.html">点と方程式の距離</a>
+											<a class="badge badge-info" href="/%E7%88%86%E8%A3%82-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93-%E6%AC%A1%E7%94%B7-%E3%81%AE-%E9%9A%86%E5%8F%B2.html">爆裂 お父さん 次男 の 隆史</a>
+											<a class="badge badge-danger" href="/%EF%BD%98%E4%BA%8C%E4%B9%97-%E6%96%B9%E7%A8%8B%E5%BC%8F.html">ｘ二乗 方程式</a>
+											<a class="badge badge-success" href="/%E8%AE%83%E5%B2%90%E3%81%AE%E5%B1%B1%E3%81%AF%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93.html">讃岐の山はお父さん</a>
+											<a class="badge badge-info" href="/%E7%B5%90%E5%A9%9A-%E7%9B%B8%E6%89%8B%E3%81%AE%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93-%E6%89%8B%E5%9C%9F%E7%94%A3.html">結婚 相手のお父さん 手土産</a>
+											<a class="badge badge-danger" href="/%E9%80%A3%E7%AB%8B1%E6%AC%A1%E6%96%B9%E7%A8%8B%E5%BC%8F%E3%81%AE%E8%A7%A3%E3%83%99%E3%82%AF%E3%83%88%E3%83%AB-%E8%A8%88%E7%AE%97.html">連立1次方程式の解ベクトル 計算</a>
+											<a class="badge badge-info" href="/%E6%B8%AC%E5%9C%B0%E7%B7%9A%E6%96%B9%E7%A8%8B%E5%BC%8F-%E4%BF%9D%E5%AD%98%E9%87%8F.html">測地線方程式 保存量</a>
+											<a class="badge badge-light" href="/%E6%A5%B5%E6%96%B9%E7%A8%8B%E5%BC%8F-r-1-costh.html">極方程式 r 1 costh</a>
+						</div>
+<center>
+	<!-- MIDDLE BANNER ADS -->
+<script type="text/javascript">
+	atOptions = {
+		'key' : '2b77887421e2587a1a1b1d7c8a31a9e0',
+		'format' : 'iframe',
+		'height' : 250,
+		'width' : 300,
+		'params' : {}
+	};
+	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://jc32arlvqpv8.com/2b77887421e2587a1a1b1d7c8a31a9e0/invoke.js"></scr' + 'ipt>');
+</script>
+		
+	</center>
+					
+				</div>
+			</div>
+			<div class="row content mb-4">
+				<div class="col-md-12">					
+					
+	
+	<div class="card-columns">
+						
+	  <div class='card'>
+	  	<a href="https://slidesplayer.net/slide/14892837/91/images/9/%E9%A0%86%E5%9C%A7%E9%9D%9E%E7%99%BA%E6%95%A3%E6%B8%A6%E5%BA%A6%E6%96%B9%E7%A8%8B%E5%BC%8F+%EF%BC%88%E6%B5%81%E7%B7%9A%E9%96%A2%E6%95%B0%E3%81%A7%E8%A1%A8%E7%A4%BA%EF%BC%89+%E9%9D%9E%E7%99%BA%E6%95%A3%E3%81%A0%E3%81%8B%E3%82%89%E9%A2%A8%E3%81%AF%E6%B5%81%E7%B7%9A%E9%96%A2%E6%95%B0%E3%81%A7%E8%A1%A8%E3%81%95%E3%82%8C%E3%82%8B%E3%80%82+%CF%88%E3%81%AB%E5%AF%BE%E3%81%99%E3%82%8B%E9%9D%9E%E7%B7%9A%E5%BD%A2%E6%96%B9%E7%A8%8B%E5%BC%8F%E3%80%82.jpg" data-lightbox="roadtrip" data-title="ロスビー波 Rossby Wave 渦度 Vorticity 順圧非発散流 絶対渦度の保存 ポテンシャル渦度 渦位 Ppt Download">
+						<img class="card-img" src="https://slidesplayer.net/slide/14892837/91/images/9/%E9%A0%86%E5%9C%A7%E9%9D%9E%E7%99%BA%E6%95%A3%E6%B8%A6%E5%BA%A6%E6%96%B9%E7%A8%8B%E5%BC%8F+%EF%BC%88%E6%B5%81%E7%B7%9A%E9%96%A2%E6%95%B0%E3%81%A7%E8%A1%A8%E7%A4%BA%EF%BC%89+%E9%9D%9E%E7%99%BA%E6%95%A3%E3%81%A0%E3%81%8B%E3%82%89%E9%A2%A8%E3%81%AF%E6%B5%81%E7%B7%9A%E9%96%A2%E6%95%B0%E3%81%A7%E8%A1%A8%E3%81%95%E3%82%8C%E3%82%8B%E3%80%82+%CF%88%E3%81%AB%E5%AF%BE%E3%81%99%E3%82%8B%E9%9D%9E%E7%B7%9A%E5%BD%A2%E6%96%B9%E7%A8%8B%E5%BC%8F%E3%80%82.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSu-N5f-Pe3ADuC2G_dYu8d0zyKM2zLVR6cC4U__Xn8P7Rpu2xCsTe6988s04IEjq3qTyc';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				ロスビー波 Rossby Wave 渦度 Vorticity 順圧非発散流 絶対渦度の保存 ポテンシャル渦度 渦位 Ppt Download
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://slidesplayer.net/slide/14892837/91/images/5/%E9%A0%86%E5%9C%A7%E9%9D%9E%E7%99%BA%E6%95%A3%E6%B5%81+%E7%B5%B6%E5%AF%BE%E6%B8%A6%E5%BA%A6%E3%81%AE%E4%BF%9D%E5%AD%98+%E9%9D%9E%E7%99%BA%E6%95%A3%EF%BC%88%E4%B8%8A%E6%98%87%E6%B5%81%E3%81%AA%E3%81%97%EF%BC%89%E3%83%BB%E9%A0%86%E5%9C%A7%EF%BC%88%E9%A2%A8%E3%81%AF%E9%AB%98%E5%BA%A6%E3%81%AB%E3%82%88%E3%82%89%E3%81%AA%E3%81%84%EF%BC%89%E3%81%AF2%E6%AC%A1%E5%85%83%E6%B5%81%E3%80%82+%EF%BC%95%EF%BC%90%EF%BC%90%EF%BD%88Pa%E3%81%8F%E3%82%89%E3%81%84%E3%81%A7%E3%82%88%E3%81%84%E8%BF%91%E4%BC%BC%E3%80%82.jpg" data-lightbox="roadtrip" data-title="ロスビー波 Rossby Wave 渦度 Vorticity 順圧非発散流 絶対渦度の保存 ポテンシャル渦度 渦位 Ppt Download">
+						<img class="card-img" src="https://slidesplayer.net/slide/14892837/91/images/5/%E9%A0%86%E5%9C%A7%E9%9D%9E%E7%99%BA%E6%95%A3%E6%B5%81+%E7%B5%B6%E5%AF%BE%E6%B8%A6%E5%BA%A6%E3%81%AE%E4%BF%9D%E5%AD%98+%E9%9D%9E%E7%99%BA%E6%95%A3%EF%BC%88%E4%B8%8A%E6%98%87%E6%B5%81%E3%81%AA%E3%81%97%EF%BC%89%E3%83%BB%E9%A0%86%E5%9C%A7%EF%BC%88%E9%A2%A8%E3%81%AF%E9%AB%98%E5%BA%A6%E3%81%AB%E3%82%88%E3%82%89%E3%81%AA%E3%81%84%EF%BC%89%E3%81%AF2%E6%AC%A1%E5%85%83%E6%B5%81%E3%80%82+%EF%BC%95%EF%BC%90%EF%BC%90%EF%BD%88Pa%E3%81%8F%E3%82%89%E3%81%84%E3%81%A7%E3%82%88%E3%81%84%E8%BF%91%E4%BC%BC%E3%80%82.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0D8OB4v1Z-XeuAfRPsUCcN8f6G00qkHRlmH5-w3MxqxRXJotMpDsbfFp2Y23SoJmxppw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				ロスビー波 Rossby Wave 渦度 Vorticity 順圧非発散流 絶対渦度の保存 ポテンシャル渦度 渦位 Ppt Download
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://slidesplayer.net/slide/14892837/91/images/6/%E7%B5%B6%E5%AF%BE%E6%B8%A6%E5%BA%A6%E3%81%AE%E4%BF%9D%E5%AD%98%E5%89%87%EF%BC%88%E3%81%A4%E3%81%A5%E3%81%8D%EF%BC%89+%E7%B5%B6%E5%AF%BE%E6%B8%A6%E5%BA%A6%E3%81%AE%E4%BF%9D%E5%AD%98+%E5%B0%8E%E5%87%BA%E3%81%AF%E6%BC%94%E7%BF%92%E5%95%8F%E9%A1%8C.jpg" data-lightbox="roadtrip" data-title="ロスビー波 Rossby Wave 渦度 Vorticity 順圧非発散流 絶対渦度の保存 ポテンシャル渦度 渦位 Ppt Download">
+						<img class="card-img" src="https://slidesplayer.net/slide/14892837/91/images/6/%E7%B5%B6%E5%AF%BE%E6%B8%A6%E5%BA%A6%E3%81%AE%E4%BF%9D%E5%AD%98%E5%89%87%EF%BC%88%E3%81%A4%E3%81%A5%E3%81%8D%EF%BC%89+%E7%B5%B6%E5%AF%BE%E6%B8%A6%E5%BA%A6%E3%81%AE%E4%BF%9D%E5%AD%98+%E5%B0%8E%E5%87%BA%E3%81%AF%E6%BC%94%E7%BF%92%E5%95%8F%E9%A1%8C.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9_Uk_Wx1ygMpbKRGmQpjh2jopTYZ3GErjLXP4F4WBfHLI7104u2KL3MRhNidOvZpHS3I';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				ロスビー波 Rossby Wave 渦度 Vorticity 順圧非発散流 絶対渦度の保存 ポテンシャル渦度 渦位 Ppt Download
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://slidesplayer.net/slide/14892837/91/images/2/%E6%B8%A6%E5%BA%A6+vorticity+%EF%BC%9F+%E6%B8%A6%E5%BA%A6%E3%81%AF%E6%9C%AC%E6%9D%A53%E6%AC%A1%E5%85%83%E3%83%99%E3%82%AF%E3%83%88%E3%83%AB%E3%81%A7%E3%81%82%E3%82%8B%E3%81%8C%E3%80%81%E6%B0%97%E8%B1%A1%E5%AD%A6%E3%83%BB%E6%B5%B7%E6%B4%8B%E5%AD%A6%E3%81%A7%E3%81%AF%E3%81%9D%E3%81%AE%E9%89%9B%E7%9B%B4%E6%88%90%E5%88%86%E3%82%92%E5%8D%98%E3%81%AB%E6%B8%A6%E5%BA%A6%E3%81%A8%E3%81%84%E3%81%86%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%9A%E3%81%84%E3%80%82.jpg" data-lightbox="roadtrip" data-title="ロスビー波 Rossby Wave 渦度 Vorticity 順圧非発散流 絶対渦度の保存 ポテンシャル渦度 渦位 Ppt Download">
+						<img class="card-img" src="https://slidesplayer.net/slide/14892837/91/images/2/%E6%B8%A6%E5%BA%A6+vorticity+%EF%BC%9F+%E6%B8%A6%E5%BA%A6%E3%81%AF%E6%9C%AC%E6%9D%A53%E6%AC%A1%E5%85%83%E3%83%99%E3%82%AF%E3%83%88%E3%83%AB%E3%81%A7%E3%81%82%E3%82%8B%E3%81%8C%E3%80%81%E6%B0%97%E8%B1%A1%E5%AD%A6%E3%83%BB%E6%B5%B7%E6%B4%8B%E5%AD%A6%E3%81%A7%E3%81%AF%E3%81%9D%E3%81%AE%E9%89%9B%E7%9B%B4%E6%88%90%E5%88%86%E3%82%92%E5%8D%98%E3%81%AB%E6%B8%A6%E5%BA%A6%E3%81%A8%E3%81%84%E3%81%86%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%9A%E3%81%84%E3%80%82.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStWYuKpHkDOVoVXtXXRnLjjn5bsnT-b8aWuPYoDU4Fsw-yrgfD1aNhWfmPvUtRptbF_eo';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				ロスビー波 Rossby Wave 渦度 Vorticity 順圧非発散流 絶対渦度の保存 ポテンシャル渦度 渦位 Ppt Download
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://kishou.u-gakugei.ac.jp/models/Baro42/fig.gif" data-lightbox="roadtrip" data-title="Models">
+						<img class="card-img" src="http://kishou.u-gakugei.ac.jp/models/Baro42/fig.gif" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSf_b2-FPVkDShYZPKVZWItPG7aZIEfgUEmd57mqGfxiiEQVcUXZnhIQlqxIepo2Ymv7oc';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Models
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="zb0cn5C_d8o3VM" data-lightbox="roadtrip" data-title="Http Kishou U Gakugei Ac Jp Lectures Fluid Doc07 Pdf">
+						<img class="card-img" src="zb0cn5C_d8o3VM" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPdBfl-cXl4LZMlX1mZkQMre8Ssr5-DnKjehL0q9m0MZZi_iTCC802MjAlqqigbZnMYc0';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Http Kishou U Gakugei Ac Jp Lectures Fluid Doc07 Pdf
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+				<div class='card'>	
+			<div class="d-block p-4">
+	</div>		  	
+		  	<h3 class="h6 p-2"><b></b></h3>
+					</div>
+		
+						
+	  <div class='card'>
+	  	<a href="zb0cn5C_d8o3VM" data-lightbox="roadtrip" data-title="Http Kishou U Gakugei Ac Jp Lectures Fluid Doc07 Pdf">
+						<img class="card-img" src="zb0cn5C_d8o3VM" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMYP2sFLMI1kqxg_FzoedMRF0NlqSaL5yVDNnNtUqKwAs7m1aElFamN1PanZmNl4s0XMg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Http Kishou U Gakugei Ac Jp Lectures Fluid Doc07 Pdf
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://kishou.u-gakugei.ac.jp/models/Baro/fig.gif" data-lightbox="roadtrip" data-title="Models">
+						<img class="card-img" src="http://kishou.u-gakugei.ac.jp/models/Baro/fig.gif" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRZ451KLN8GYfPMr2l58ooUX_W-_DshjSLhuXvP-EBou3nHCFQYxJvZT8Ueeqpg3NUFfI';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Models
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://slidesplayer.net/slide/14892837/91/images/8/%E7%B5%B6%E5%AF%BE%E6%B8%A6%E5%BA%A6%E3%81%AE%E4%BF%9D%E5%AD%98+%EF%BC%88%EF%BD%86+%EF%BC%8B+%CE%B6%EF%BC%89%EF%BC%9A%E5%8C%97%E5%8D%8A%E7%90%83%E3%81%AE%E4%BE%8B+%CE%B6%EF%BC%9C%EF%BC%90+%CE%B6%EF%BC%9E%EF%BC%90+%E8%A5%BF%E9%A2%A8%E4%B8%AD%E3%81%A7%E5%88%9D%E6%9C%9F%E3%81%AE%CE%B6%E3%81%AF%E3%82%BC%E3%83%AD%E3%81%AE%E7%A9%BA%E6%B0%97%E3%81%8C%E5%8C%97%E4%B8%8A%E3%81%99%E3%82%8B%E3%80%82.jpg" data-lightbox="roadtrip" data-title="ロスビー波 Rossby Wave 渦度 Vorticity 順圧非発散流 絶対渦度の保存 ポテンシャル渦度 渦位 Ppt Download">
+						<img class="card-img" src="https://slidesplayer.net/slide/14892837/91/images/8/%E7%B5%B6%E5%AF%BE%E6%B8%A6%E5%BA%A6%E3%81%AE%E4%BF%9D%E5%AD%98+%EF%BC%88%EF%BD%86+%EF%BC%8B+%CE%B6%EF%BC%89%EF%BC%9A%E5%8C%97%E5%8D%8A%E7%90%83%E3%81%AE%E4%BE%8B+%CE%B6%EF%BC%9C%EF%BC%90+%CE%B6%EF%BC%9E%EF%BC%90+%E8%A5%BF%E9%A2%A8%E4%B8%AD%E3%81%A7%E5%88%9D%E6%9C%9F%E3%81%AE%CE%B6%E3%81%AF%E3%82%BC%E3%83%AD%E3%81%AE%E7%A9%BA%E6%B0%97%E3%81%8C%E5%8C%97%E4%B8%8A%E3%81%99%E3%82%8B%E3%80%82.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBseXTGBUUmgcHEp8gbMaRypTcIdZDIMtknFOc5ySNS8eu4Imk6IyQhKkMIzK_pyJ2UvA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				ロスビー波 Rossby Wave 渦度 Vorticity 順圧非発散流 絶対渦度の保存 ポテンシャル渦度 渦位 Ppt Download
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://image.slideserve.com/506755/slide13-l.jpg" data-lightbox="roadtrip" data-title="Ppt 第９章 中層大気の不安定擾乱について Powerpoint Presentation Id 506755">
+						<img class="card-img" src="https://image.slideserve.com/506755/slide13-l.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTd2oM_RZmE2BEuP1gc5hmxgiGLoEg-Gf1F0oOMXC3ldaUnPBwqGNNDGwybIraeps9CRy0';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Ppt 第９章 中層大気の不安定擾乱について Powerpoint Presentation Id 506755
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="zb0cn5C_d8o3VM" data-lightbox="roadtrip" data-title="Http Kishou U Gakugei Ac Jp Lectures Fluid Doc07 Pdf">
+						<img class="card-img" src="zb0cn5C_d8o3VM" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSQYSjJGSs1LhTGj-Nv45m1kRfX5ZS-4W-_Zaph89SS4QKVcoVI3GwFo17olq8cmiiWx0';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Http Kishou U Gakugei Ac Jp Lectures Fluid Doc07 Pdf
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://dennou-q.geo.kyushu-u.ac.jp/arch/prepri/2019/kobe-u/190208_shiraham-Bthesis/presen_camp/pub/slide/005.jpg" data-lightbox="roadtrip" data-title="平行シアー流における順圧不安定の考察 Page 005">
+						<img class="card-img" src="http://dennou-q.geo.kyushu-u.ac.jp/arch/prepri/2019/kobe-u/190208_shiraham-Bthesis/presen_camp/pub/slide/005.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuY73ffNWzjMCPCUZ7BgXX7cDUwCdEpvI9kfwYgCADcjsSO7UCVBZs55IPp2q0TxO75P8';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				平行シアー流における順圧不安定の考察 Page 005
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.gfd-dennou.org/arch/morikawa/undergrad/sotsuron_poster/pub/slide/011.gif" data-lightbox="roadtrip" data-title="数値予報モデルのための気象力学 準地衡流方程式系 1">
+						<img class="card-img" src="https://www.gfd-dennou.org/arch/morikawa/undergrad/sotsuron_poster/pub/slide/011.gif" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQevO5188BueMb5VtPy13sJ_aDbIJlTh0BcxUWoI00pj2HuDT-iMxSFSM4QMdnjkRXPa9U';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				数値予報モデルのための気象力学 準地衡流方程式系 1
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://www.gfd-dennou.org/seminars/gfdsemi/2003-03-17/watanabe/lecture1/pub-web/img-web/051.png" data-lightbox="roadtrip" data-title="中緯度大気変動の力学 中立モードを中心に">
+						<img class="card-img" src="http://www.gfd-dennou.org/seminars/gfdsemi/2003-03-17/watanabe/lecture1/pub-web/img-web/051.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoz2vc3qLZ11J7cu4suPGOiQuQArPIg-1qWqU1YqqVl_jkbcuy4-iHEA1fzdpt1_tnwiE';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				中緯度大気変動の力学 中立モードを中心に
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="QpQAyxQQAAtXRM" data-lightbox="roadtrip" data-title="Http Www Se Fukuoka U Ac Jp Iwayama Teach Gfd 2011 Chap9 Pdf">
+						<img class="card-img" src="QpQAyxQQAAtXRM" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJWDmeh5t-SgvvJpCW2AgNXkW9EoCzxpbRnpf2Kn_500E0LclOiMwSKxhrCCrJrPgCBfg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Http Www Se Fukuoka U Ac Jp Iwayama Teach Gfd 2011 Chap9 Pdf
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="zb0cn5C_d8o3VM" data-lightbox="roadtrip" data-title="Http Kishou U Gakugei Ac Jp Lectures Fluid Doc07 Pdf">
+						<img class="card-img" src="zb0cn5C_d8o3VM" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCcYWwyS5B1utjVol79QcX6zq39STkh01CnzMBdmxoPftnVyp0XWxl2GId99CxfuxSYhQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Http Kishou U Gakugei Ac Jp Lectures Fluid Doc07 Pdf
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://slidesplayer.net/slide/14892837/91/images/4/%E6%B8%A6%E5%BA%A6%E3%81%AE%E4%BE%8B%E9%A1%8C+%281%29+%E5%8C%97%E7%B7%AF45%E5%BA%A6%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8B%E6%83%91%E6%98%9F%E6%B8%A6%E5%BA%A6%E3%81%AF%E3%81%84%E3%81%8F%E3%82%89%E3%81%8B%EF%BC%9F.jpg" data-lightbox="roadtrip" data-title="ロスビー波 Rossby Wave 渦度 Vorticity 順圧非発散流 絶対渦度の保存 ポテンシャル渦度 渦位 Ppt Download">
+						<img class="card-img" src="https://slidesplayer.net/slide/14892837/91/images/4/%E6%B8%A6%E5%BA%A6%E3%81%AE%E4%BE%8B%E9%A1%8C+%281%29+%E5%8C%97%E7%B7%AF45%E5%BA%A6%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8B%E6%83%91%E6%98%9F%E6%B8%A6%E5%BA%A6%E3%81%AF%E3%81%84%E3%81%8F%E3%82%89%E3%81%8B%EF%BC%9F.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTV3vsHNH31m_E9efqgPhzMOiBM3cFRO4bAltTkoOpNGtVbwQiGR52YEUS-tFzCwoVC1Io';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				ロスビー波 Rossby Wave 渦度 Vorticity 順圧非発散流 絶対渦度の保存 ポテンシャル渦度 渦位 Ppt Download
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://www.gfd-dennou.org/arch/prepri/2011/kobe-u/murashin/shinsa/pub/slide/056.png" data-lightbox="roadtrip" data-title="2次元非圧縮順圧流体中の非一様楕円渦の軸対称化過程に関する数値実験的研究 Page 056">
+						<img class="card-img" src="http://www.gfd-dennou.org/arch/prepri/2011/kobe-u/murashin/shinsa/pub/slide/056.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUXT64UlLFYKPtqw_6bU-5g8CskwlP0xS2ob028gdgwUxSWyZwleRHWae5kceqr7yTN4I';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				2次元非圧縮順圧流体中の非一様楕円渦の軸対称化過程に関する数値実験的研究 Page 056
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://fnorio.com/0107fluid_dynamics_in_two_dimensions1/fig3-3-1-01.GIF" data-lightbox="roadtrip" data-title="二次元 非圧縮性 完全流体の力学 ラグランジュの渦定理とは何か">
+						<img class="card-img" src="http://fnorio.com/0107fluid_dynamics_in_two_dimensions1/fig3-3-1-01.GIF" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwyHibTJx8V__Mrv0--K-mz_N2V4HvCp3VmFqUe0F1jGrvdQkKHxM0Ycb16K_pA6UDGO4';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				二次元 非圧縮性 完全流体の力学 ラグランジュの渦定理とは何か
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="fugdKh4zhXP5gM" data-lightbox="roadtrip" data-title="Https Www Riam Kyushu U Ac Jp Oed Wakata Seminar Seminar Data Library H9 Kitamura Pdf">
+						<img class="card-img" src="fugdKh4zhXP5gM" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAR4iVorBqlOyO0fc_76J1YlidQ3w1WuDaipVP7nJ2Mk_6AMTEf8zQ75FHcoukoCsTJp8';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Https Www Riam Kyushu U Ac Jp Oed Wakata Seminar Seminar Data Library H9 Kitamura Pdf
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://slidesplayer.net/14892837/91/images/slide_1.jpg" data-lightbox="roadtrip" data-title="ロスビー波 Rossby Wave 渦度 Vorticity 順圧非発散流 絶対渦度の保存 ポテンシャル渦度 渦位 Ppt Download">
+						<img class="card-img" src="https://slidesplayer.net/14892837/91/images/slide_1.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSPGz9HJOkdN5pEv5In1VZYklsyIezS0r1OQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				ロスビー波 Rossby Wave 渦度 Vorticity 順圧非発散流 絶対渦度の保存 ポテンシャル渦度 渦位 Ppt Download
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://i1.rgstatic.net/publication/311400208_The_background_and_outlook_of_three_major_theories_for_wave-mean-flow_interaction_in_the_ocean_Chapter_1/links/584445cc08ae61f75dd67e26/largepreview.png" data-lightbox="roadtrip" data-title="Pdf The Background And Outlook Of Three Major Theories For Wave Mean Flow Interaction In The Ocean Chapter 1">
+						<img class="card-img" src="https://i1.rgstatic.net/publication/311400208_The_background_and_outlook_of_three_major_theories_for_wave-mean-flow_interaction_in_the_ocean_Chapter_1/links/584445cc08ae61f75dd67e26/largepreview.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzr5-S6_VLzhGlQO7ycRFb6pPKvgU6QLJOdw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Pdf The Background And Outlook Of Three Major Theories For Wave Mean Flow Interaction In The Ocean Chapter 1
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="4e0HOla2ahvbeM" data-lightbox="roadtrip" data-title="Http Wtk Gfd Dennou Org 2012 09 18 Takayabu Pub 20120918 Takayabu 04 Pdf">
+						<img class="card-img" src="4e0HOla2ahvbeM" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLqdZohz1kJSgH3WyrwXboSxtfOKY9YhMQLw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Http Wtk Gfd Dennou Org 2012 09 18 Takayabu Pub 20120918 Takayabu 04 Pdf
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://ogimage.blog.st-hatena.com/10257846132616842363/10257846132621738339/1536190252" data-lightbox="roadtrip" data-title="傾圧不安定 Macroscope">
+						<img class="card-img" src="https://ogimage.blog.st-hatena.com/10257846132616842363/10257846132621738339/1536190252" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFXi4sMGkOP19ZOlgfN_j4LPNilxL6t9iDqA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				傾圧不安定 Macroscope
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="uOtHM_rB7I7olM" data-lightbox="roadtrip" data-title="Https Repository Kulib Kyoto U Ac Jp Dspace Bitstream 2433 162047 2 D Tateyama Naotake Pdf">
+						<img class="card-img" src="uOtHM_rB7I7olM" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlCHcDEK867teUAH3PwPjTOEBXFTKu5AY0Gw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Https Repository Kulib Kyoto U Ac Jp Dspace Bitstream 2433 162047 2 D Tateyama Naotake Pdf
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://fnorio.com/0107fluid_dynamics_in_two_dimensions1/fig1-2-1-02.GIF" data-lightbox="roadtrip" data-title="二次元 非圧縮性 完全流体の力学 ラグランジュの渦定理とは何か">
+						<img class="card-img" src="http://fnorio.com/0107fluid_dynamics_in_two_dimensions1/fig1-2-1-02.GIF" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7xr9cZlPwGWsBNmjzbZ0McWG9CFldgewUTg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				二次元 非圧縮性 完全流体の力学 ラグランジュの渦定理とは何か
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="mZQhDQE6rooWKM" data-lightbox="roadtrip" data-title="Https Www Ep Sci Hokudai Ac Jp Pplab Doc2008 Tutaka M Main 080313 Primo Pdf">
+						<img class="card-img" src="mZQhDQE6rooWKM" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROuW7RWHtgNvCamPZyQJgF5dVXkzoEsiDlYA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Https Www Ep Sci Hokudai Ac Jp Pplab Doc2008 Tutaka M Main 080313 Primo Pdf
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="rzanlqsJ2z15lM" data-lightbox="roadtrip" data-title="Https Www Dpac Dpri Kyoto U Ac Jp Enomoto Lectures Midlat Applied Meteorology Ia 2017 Pdf">
+						<img class="card-img" src="rzanlqsJ2z15lM" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRR23pQMOu8sHYwnyjcfQAaeMyWS0x5YUcm_A';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Https Www Dpac Dpri Kyoto U Ac Jp Enomoto Lectures Midlat Applied Meteorology Ia 2017 Pdf
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="mZQhDQE6rooWKM" data-lightbox="roadtrip" data-title="Https Www Ep Sci Hokudai Ac Jp Pplab Doc2008 Tutaka M Main 080313 Primo Pdf">
+						<img class="card-img" src="mZQhDQE6rooWKM" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQre8sZmh39B0WsyBqPhfxN75wA9a-VX9fZ2A';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Https Www Ep Sci Hokudai Ac Jp Pplab Doc2008 Tutaka M Main 080313 Primo Pdf
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="Wr76CLxcXFBBuM" data-lightbox="roadtrip" data-title="Http Epa Scitec Kobe U Ac Jp Ykawai Project Wave Motion 2 0 1 Pdf">
+						<img class="card-img" src="Wr76CLxcXFBBuM" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpEF-9Ci5b8vW2g1W3vu4GdlBjC59UksWhZQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Http Epa Scitec Kobe U Ac Jp Ykawai Project Wave Motion 2 0 1 Pdf
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://slidesplayer.net/slide/14892837/91/images/11/%E3%83%9D%E3%83%86%E3%83%B3%E3%82%B7%E3%83%A3%E3%83%AB%E6%B8%A6%E5%BA%A6%EF%BC%88%E6%B8%A6%E4%BD%8D%EF%BC%89+Ertel%E2%80%99s+potential+vorticity+%28PV%29.jpg" data-lightbox="roadtrip" data-title="ロスビー波 Rossby Wave 渦度 Vorticity 順圧非発散流 絶対渦度の保存 ポテンシャル渦度 渦位 Ppt Download">
+						<img class="card-img" src="https://slidesplayer.net/slide/14892837/91/images/11/%E3%83%9D%E3%83%86%E3%83%B3%E3%82%B7%E3%83%A3%E3%83%AB%E6%B8%A6%E5%BA%A6%EF%BC%88%E6%B8%A6%E4%BD%8D%EF%BC%89+Ertel%E2%80%99s+potential+vorticity+%28PV%29.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwmgJXyWPg_fVP8zooGu4IX4Gzgq2P4hSZAA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				ロスビー波 Rossby Wave 渦度 Vorticity 順圧非発散流 絶対渦度の保存 ポテンシャル渦度 渦位 Ppt Download
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://blogimg.goo.ne.jp/user_image/6c/ca/52defea41067b5c820d52b46dd67f95e.png" data-lightbox="roadtrip" data-title="傾圧不安定波のイメージ 計算気象予報士の こんなの解けるかーっ">
+						<img class="card-img" src="https://blogimg.goo.ne.jp/user_image/6c/ca/52defea41067b5c820d52b46dd67f95e.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQN-sm7579SPaE_j31lTtKVIC7dsRgQ-5ptBA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				傾圧不安定波のイメージ 計算気象予報士の こんなの解けるかーっ
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="zb0cn5C_d8o3VM" data-lightbox="roadtrip" data-title="Http Kishou U Gakugei Ac Jp Lectures Fluid Doc07 Pdf">
+						<img class="card-img" src="zb0cn5C_d8o3VM" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdV5j7QKyAZXnaq-a9ICuh4HKSQ5_ntwburQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Http Kishou U Gakugei Ac Jp Lectures Fluid Doc07 Pdf
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+		
+	</div>
+
+		 
+		
+		
+				</div>
+				<div class="col-sm-12 widget">
+					<div class="d-block p-4">
+	<center>
+		<!-- BOTTOM BANNER ADS -->
+<script async="async" data-cfasync="false" src="//jc32arlvqpv8.com/eb47a424ae325c90cca32780149785c3/invoke.js"></script>
+<div id="container-eb47a424ae325c90cca32780149785c3"></div>
+
+	</center>
+</div>				</div>
+			</div>
+			<div class="row footer">
+				<div class="col-md-12 text-center py-4">
+										<a href="/p/dmca.html">Dmca</a>
+										<a href="/p/contact.html">Contact</a>
+										<a href="/p/privacy-policy.html">Privacy Policy</a>
+										<a href="/p/copyright.html">Copyright</a>
+					
+				</div>
+			</div>
+		</main>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js" integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js" integrity="sha256-CtKylYan+AJuoH8jrMht1+1PMhMqrKnB8K5g012WN5I=" crossorigin="anonymous"></script>
+		
+		<!-- Footer CSS JS -->
+		
+		
+		
+			<script type='text/javascript' src='//jc32arlvqpv8.com/ef/d5/10/efd510237a3143727bed46803ec35b8d.js'></script>
+</body>
+</html>

@@ -1,0 +1,682 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha256-L/W5Wfqfa0sdBNIKN9cG6QA5F2qx4qICmU2VgLruv9Y=" crossorigin="anonymous" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/css/lightbox.min.css" integrity="sha256-tBxlolRHP9uMsEFKVk+hk//ekOlXOixLKvye5W2WR5c=" crossorigin="anonymous" />
+		<link href="https://fonts.googleapis.com/css?family=Mr+Dafoe" rel="stylesheet" type="text/css">
+
+		<style type="text/css">
+			html,body{font-family:"Open Sans",Arial,sans-serif;font-size:14px;font-weight:400;background:#f3f3f3 url(https://img-blog.csdn.net/20170815194102040?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvRWluc3RlbGx1bmc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast
+) no-repeat center center fixed;background-size:cover;height:100%}#title{font-family:"Mr Dafoe",Times,serif;font-size:34px;background:rgba(255,255,255,.8);margin-bottom:34px}.header{padding-bottom:13px;margin-bottom:13px;border-bottom:1px solid #eee}a{color:#26ADE4;text-decoration:none}#title a{color:#333;margin-left:21px}#title a:hover{text-decoration:none;color:#26ADE4}.sidebar ul{margin:0;padding:0}.sidebar ul li{list-style:none}.footer{margin-top:21px;padding-top:13px;border-top:1px solid #eee}.footer a{margin:0 15px}.navi{margin:13px 0 13px 0;padding:13px}.navi a{margin:5px 2px;font-size:95%}.main{margin-top: 6rem;}.form-inline .form-control{min-width: 300px;}.v-cover{height: 380px; object-fit: cover;}.v-image{height: 200px; object-fit: cover;}.dwn-cover{max-height: 460px; object-fit: cover;}.main{margin-top: 6rem;}.form-inline .form-control{min-width: 300px;}			
+		</style>
+
+		<title>離散化差分方程式</title>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/", 
+  "@type": "Article", 
+  "author": {
+    "@type": "Person",
+    "name": "James"
+  },
+  "headline": "離散化差分方程式",
+  "datePublished": "2021-04-24",
+  "image": [https://img-blog.csdnimg.cn/20190805102721967.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMyNDUwMTEx,size_16,color_FFFFFF,t_70,https://img-blog.csdn.net/20170815194102040?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvRWluc3RlbGx1bmc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast,https://img-blog.csdnimg.cn/20191223211250248.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2NsaXVrYWk=,size_16,color_FFFFFF,t_70],
+  "publisher": {
+    "@type": "Organization",
+    "name": "Tukang Parkir Gerobak",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://via.placeholder.com/512.png?text=離散化差分方程式",
+      "width": 512,
+      "height": 512
+    }
+  }
+}
+</script>
+		<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-957NGNKQ70"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-957NGNKQ70');
+</script>
+
+<script type='text/javascript' src='//jc32arlvqpv8.com/1a/82/2e/1a822ef8a40a0fbab3c4ea12a5d2bb02.js'></script>
+</head>
+	<body>
+		<header class="bg-white fixed-top">			
+			<nav class="navbar navbar-light bg-white mb-0">
+				<div class="container justify-content-center justify-content-sm-between">	
+				  <a href="/" title="Blog" class="navbar-brand mb-1">Blog</a>
+				  				</div>			  
+			</nav>				
+		</header>
+		<main class="main container bg-white">
+			<div class="col-md-12 my-4" align="center">
+				<div class="d-block p-4">
+	<br/><center>
+<!-- TOP BANNER ADS -->
+</center><br/>
+</div>			</div>
+			<div class="row header">
+				<div class="col-sm-12 text-center p-2">
+						<h1>離散化差分方程式</h1>
+
+	
+	<div class="navi text-center">
+										<a class="badge badge-dark" href="/%E9%80%9A%E5%B8%B8%E6%94%BB%E6%92%83%E3%81%8C%E5%85%A8%E4%BD%93%E6%94%BB%E6%92%83%E3%81%A7%E4%BA%8C%E5%9B%9E%E6%94%BB%E6%92%83%E3%81%AE%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%AF%E5%A5%BD%E3%81%8D%E3%81%A7%E3%81%99%E3%81%8B.html">通常攻撃が全体攻撃で二回攻撃のお父さんは好きですか</a>
+											<a class="badge badge-danger" href="/%E9%B3%A5%E5%B1%85%E3%81%BF%E3%82%86%E3%81%8D%E3%81%AE%E3%83%8D%E3%82%BF%E3%81%AB%E5%87%BA%E3%81%A6%E6%9D%A5%E3%82%8B%E7%BE%A9%E7%90%86%E3%81%AE%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%AE%E5%90%8D%E5%89%8D%E3%81%AF.html">鳥居みゆきのネタに出て来る義理のお父さんの名前は</a>
+											<a class="badge badge-primary" href="/%E7%82%B9-0-4-y-x-3-2x-2%E3%81%AB%E6%8E%A5%E3%81%99%E3%82%8B%E7%9B%B4%E7%B7%9A%E3%81%AE%E6%96%B9%E7%A8%8B%E5%BC%8F.html">点 0 4 y x 3 2x 2に接する直線の方程式</a>
+											<a class="badge badge-secondary" href="/%E7%88%86%E8%A3%82%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93-t%E3%83%90%E3%83%83%E3%82%AF.html">爆裂お父さん tバック</a>
+											<a class="badge badge-secondary" href="/%E7%BE%8E%E5%A4%A7%E7%94%9F%E3%81%AE%E3%83%97%E3%83%AA%E3%82%B1%E3%83%84%E5%A8%98-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%AB%E3%83%8C%E3%83%BC%E3%83%89%E3%83%A2%E3%83%87%E3%83%AB%E3%82%92.html">美大生のプリケツ娘 お父さんにヌードモデルを</a>
+											<a class="badge badge-success" href="/%E6%9D%A5%E3%81%AA%E3%81%84%E7%A7%81%E3%81%AF%E3%81%84%E3%81%A4%E3%82%82%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%AB%E8%BF%B7%E6%83%91%E3%82%92%E6%8E%9B%E3%81%91%E3%81%A6%E3%81%84%E3%81%BE%E3%81%99-%E3%81%9D%E3%82%93%E3%81%AA%E3%81%A0%E3%81%8B%E3%82%89%E3%81%82%E3%81%AE%E6%97%A5%E3%82%82-%E9%A6%99%E8%8B%97%E3%83%AC%E3%83%8E%E3%83%B3.html">来ない私はいつもお父さんに迷惑を掛けています そんなだからあの日も 香苗レノン</a>
+											<a class="badge badge-light" href="/%E9%AB%98%E6%A0%A1%E6%95%B0%E5%AD%A6-4%E6%AC%A1%E6%96%B9%E7%A8%8B%E5%BC%8F.html">高校数学 4次方程式</a>
+											<a class="badge badge-light" href="/%E9%9D%9E%E7%B7%9A%E5%BD%A2-%E6%96%B9%E7%A8%8B%E5%BC%8F-%E6%95%B0%E5%80%A4-%E8%A8%88%E7%AE%97-%E6%B3%95.html">非線形 方程式 数値 計算 法</a>
+											<a class="badge badge-secondary" href="/%E8%A8%88%E7%AE%97%E6%8A%80%E8%A1%93%E6%A4%9C%E5%AE%9A2%E7%B4%9A-%E6%96%B9%E7%A8%8B%E5%BC%8F%E3%81%A8%E4%B8%8D%E7%AD%89%E5%BC%8F.html">計算技術検定2級 方程式と不等式</a>
+											<a class="badge badge-primary" href="/%E7%9B%AE%E6%92%83-%E3%81%AB%E3%81%A3%E3%81%BD%E3%82%93-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93-%E9%81%8B%E8%BB%A2%E7%B6%9A%E3%81%91%E3%81%BE%E3%81%99%E3%81%8B-%E9%AB%98%E9%BD%A2%E3%83%89%E3%83%A9%E3%82%A4%E3%83%90%E3%83%BC%E3%81%A8%E5%AE%B6%E6%97%8F%E3%81%AE%E9%81%B8%E6%8A%9E.html">目撃 にっぽん お父さん 運転続けますか 高齢ドライバーと家族の選択</a>
+											<a class="badge badge-danger" href="/%E8%BF%91%E6%89%80%E3%81%AE%E3%81%8A%E3%81%B0%E3%81%A1%E3%82%83%E3%82%93%E3%81%8B%E3%82%89-%E7%9F%A5%E3%82%89%E3%81%AA%E3%81%84%E5%AD%90%E3%81%8C%E3%81%8A%E5%AE%85%E3%81%AE%E6%95%B7%E5%9C%B0%E5%86%85%E3%81%AB%E3%81%84%E3%82%8B-%E3%81%A8%E9%80%A3%E7%B5%A1%E3%81%8C-%E5%AD%90-%E3%81%93%E3%81%AE%E5%AE%B6%E3%81%AB%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%8C%E4%BD%8F%E3%82%93%E3%81%A7%E3%82%8B%E3%81%AE-%E5%B8%B0%E5%AE%85%E3%81%99%E3%82%8B%E3%81%A8%E9%96%80%E3%81%AE%E5%89%8D%E3%81%AB%E3%82%AE%E3%83%A3%E3%83%AB%E3%81%8C%E7%AB%8B%E3%81%A3%E3%81%A6%E3%81%A6-%E7%A7%81%E3%81%8C%E4%BB%A3%E3%82%8F%E3%82%8A%E3%81%AB%E5%AD%90%E4%BE%9B%E7%94%A3%E3%82%93.html">近所のおばちゃんから 知らない子がお宅の敷地内にいる と連絡が 子 この家にお父さんが住んでるの 帰宅すると門の前にギャルが立ってて 私が代わりに子供産ん</a>
+											<a class="badge badge-primary" href="/%E7%9B%B4%E7%B7%9A%E3%81%AE%E6%96%B9%E7%A8%8B%E5%BC%8F-1.html">直線の方程式 1</a>
+											<a class="badge badge-danger" href="/%E6%9E%97%E5%85%88%E7%94%9F-%E6%96%B9%E7%A8%8B%E5%BC%8F-%E5%88%9D%E8%80%B3%E5%AD%A6.html">林先生 方程式 初耳学</a>
+											<a class="badge badge-info" href="/%E9%A9%9A%E6%84%95-%E5%A8%98-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%AE%E5%87%BA%E5%BC%B5%E3%81%AE%E9%A3%9B%E8%A1%8C%E6%A9%9F%E3%81%8C%E8%90%BD%E3%81%A1%E3%81%9F%E3%82%89%E4%BF%9D%E9%99%BA%E9%87%91%E3%82%BF%E3%83%83%E3%83%97%E3%83%AA%E3%81%AA%E3%81%AE%E3%81%ABwww-%E6%AF%8D-%E3%81%AA%E3%82%93%E3%81%A6%E4%BA%8B%E8%A8%80%E3%81%86%E3%81%AE-%E5%A8%98-%E6%AF%8D%E3%81%95%E3%82%93%E3%82%82%E3%81%82%E3%82%93%E3%81%AA%E7%94%B7%E3%81%AE%E5%AB%81%E3%81%A8%E3%81%8Bw%E4%BF%A1%E3%81%98%E3%82%89%E3%82%8C%E3%81%AA%E3%81%84w-%E7%88%B6-%E3%83%88%E3%83%B3%E3%83%87%E3%83%A2%E3%83%8A%E3%82%A4%E4%BA%8B%E3%81%AB.html">驚愕 娘 お父さんの出張の飛行機が落ちたら保険金タップリなのにwww 母 なんて事言うの 娘 母さんもあんな男の嫁とかw信じられないw 父 トンデモナイ事に</a>
+											<a class="badge badge-light" href="/%EF%BC%92%E6%AC%A1%E6%96%B9%E7%A8%8B%E5%BC%8F-%E6%AD%A3%E6%96%B9%E5%BD%A2.html">２次方程式 正方形</a>
+						</div>
+<center>
+	<!-- MIDDLE BANNER ADS -->
+<script type="text/javascript">
+	atOptions = {
+		'key' : '2b77887421e2587a1a1b1d7c8a31a9e0',
+		'format' : 'iframe',
+		'height' : 250,
+		'width' : 300,
+		'params' : {}
+	};
+	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://jc32arlvqpv8.com/2b77887421e2587a1a1b1d7c8a31a9e0/invoke.js"></scr' + 'ipt>');
+</script>
+		
+	</center>
+					
+				</div>
+			</div>
+			<div class="row content mb-4">
+				<div class="col-md-12">					
+					
+	
+	<div class="card-columns">
+						
+	  <div class='card'>
+	  	<a href="https://img-blog.csdn.net/20170815194051046?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvRWluc3RlbGx1bmc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" data-lightbox="roadtrip" data-title="第二章 2 1 微分方程 差分方程求解 概述 Einstellung的博客 Csdn博客">
+						<img class="card-img" src="https://img-blog.csdn.net/20170815194051046?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvRWluc3RlbGx1bmc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTd6UmeRJkz_Aq3PzEXnmOOklXqYwXbvi6Mo9iNA5a2GbIBQK_du07TTG4O4T1V1t3sX4w';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				第二章 2 1 微分方程 差分方程求解 概述 Einstellung的博客 Csdn博客
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://img-blog.csdn.net/20170815194114537?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvRWluc3RlbGx1bmc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" data-lightbox="roadtrip" data-title="第二章 2 1 微分方程 差分方程求解 概述 Einstellung的博客 Csdn博客">
+						<img class="card-img" src="https://img-blog.csdn.net/20170815194114537?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvRWluc3RlbGx1bmc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmb2q0ZButYkYuZpzmwkRqWg7Nwm_RtLYcCHir6IvJBEeZ6vwLhMYntFGikSc2fX-B_EM';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				第二章 2 1 微分方程 差分方程求解 概述 Einstellung的博客 Csdn博客
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://img-blog.csdn.net/20170815194133656?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvRWluc3RlbGx1bmc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" data-lightbox="roadtrip" data-title="第二章 2 1 微分方程 差分方程求解 概述 Einstellung的博客 Csdn博客">
+						<img class="card-img" src="https://img-blog.csdn.net/20170815194133656?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvRWluc3RlbGx1bmc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaVHlToktdZoasY6Rmu3CHhnKaQ1DIZXGjMbWQerfD-1Xq29zCEMxOrxntYf6fI9oChC8';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				第二章 2 1 微分方程 差分方程求解 概述 Einstellung的博客 Csdn博客
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://img-blog.csdn.net/20170815194102040?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvRWluc3RlbGx1bmc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" data-lightbox="roadtrip" data-title="第二章 2 1 微分方程 差分方程求解 概述 Einstellung的博客 Csdn博客">
+						<img class="card-img" src="https://img-blog.csdn.net/20170815194102040?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvRWluc3RlbGx1bmc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyOgJIBG8WmHT5WTBlb-V9wvCZ7Nw4UeGAkqc3W44eAO4Q7FwGTpIHhZV5OsuJ3lk0_dM';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				第二章 2 1 微分方程 差分方程求解 概述 Einstellung的博客 Csdn博客
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic1.zhimg.com/80/v2-54ac3b44e1965e428c2fd463edd41ed8_1440w.jpg" data-lightbox="roadtrip" data-title="计算流体力学 差分方法 知乎">
+						<img class="card-img" src="https://pic1.zhimg.com/80/v2-54ac3b44e1965e428c2fd463edd41ed8_1440w.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxJz-DOZ-Hj8QUlJ0WrWqt3kgdRVKKWbQZeJMRY1wHJPf5Kz_bG7teE5TuN_4w4p4QEmw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				计算流体力学 差分方法 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic3.zhimg.com/80/v2-125be250d09797b6579704c1bdd150ea_1440w.jpg" data-lightbox="roadtrip" data-title="计算流体力学 差分方法 知乎">
+						<img class="card-img" src="https://pic3.zhimg.com/80/v2-125be250d09797b6579704c1bdd150ea_1440w.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSp-2mc6OW389bPspYMNP1d7qJCl7ECnY_4bi8IvIBYfFqcOAbbcHUw7WYcCIkMSNaXK40';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				计算流体力学 差分方法 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+				<div class='card'>	
+			<div class="d-block p-4">
+	</div>		  	
+		  	<h3 class="h6 p-2"><b></b></h3>
+					</div>
+		
+						
+	  <div class='card'>
+	  	<a href="https://img-blog.csdn.net/20170818160522498?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvRWluc3RlbGx1bmc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" data-lightbox="roadtrip" data-title="第二章 2 1 微分方程 差分方程求解 举例 Einstellung的博客 Csdn博客 差分方程求解例题">
+						<img class="card-img" src="https://img-blog.csdn.net/20170818160522498?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvRWluc3RlbGx1bmc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZxYdX2ocUAnOWj674AdlLzZkR--6Eb0ErDSftYgs0GrAWBzLKToXZUdfCgLERmr9FXzM';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				第二章 2 1 微分方程 差分方程求解 举例 Einstellung的博客 Csdn博客 差分方程求解例题
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://img-blog.csdn.net/20170818160730232?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvRWluc3RlbGx1bmc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" data-lightbox="roadtrip" data-title="第二章 2 1 微分方程 差分方程求解 举例 Einstellung的博客 Csdn博客 差分方程求解例题">
+						<img class="card-img" src="https://img-blog.csdn.net/20170818160730232?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvRWluc3RlbGx1bmc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTv6ekurI3V_FErzUcnl_Gsgp0Um66l7TDcZlQlefrrylyqil8zOHer4Yz0t8UQHeF0k74';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				第二章 2 1 微分方程 差分方程求解 举例 Einstellung的博客 Csdn博客 差分方程求解例题
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://p0.ssl.img.360kuai.com/t01cac627ba6552f8f5.jpg" data-lightbox="roadtrip" data-title="有限差分法之热传导方程的求解 快资讯">
+						<img class="card-img" src="https://p0.ssl.img.360kuai.com/t01cac627ba6552f8f5.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2NX1AW4ogC735Kg5YelLGDhJ2XAViqW1gcvzyizy3dzgipre5bMI_Dxot3b1Ts-Umknw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				有限差分法之热传导方程的求解 快资讯
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://img-blog.csdn.net/20180327183446791?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0NWX1lPVQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" data-lightbox="roadtrip" data-title="怎么理解差分方程的概念 Cv You的博客 Csdn博客 差分方程">
+						<img class="card-img" src="https://img-blog.csdn.net/20180327183446791?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0NWX1lPVQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8X7WNC177TOwx7dgrZXMbsfAiVmrsj99w6VKUiBbyjyifI4GN6dVZWhA8NvqinuMoto8';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				怎么理解差分方程的概念 Cv You的博客 Csdn博客 差分方程
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://img-blog.csdnimg.cn/20191223204731903.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2NsaXVrYWk=,size_16,color_FFFFFF,t_70" data-lightbox="roadtrip" data-title="Matlab怎样将传递函数转换成差分方程 凯哥大数据 刘凯的博客 Csdn博客 Matlab 传递函数差分方程">
+						<img class="card-img" src="https://img-blog.csdnimg.cn/20191223204731903.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2NsaXVrYWk=,size_16,color_FFFFFF,t_70" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLmTQ42GyP1LBIIXUsUGxPhFy1CgACtsnoHNhPBImawTNifXc8xUxgnDhEVu69gGr5dQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Matlab怎样将传递函数转换成差分方程 凯哥大数据 刘凯的博客 Csdn博客 Matlab 传递函数差分方程
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic1.zhimg.com/v2-7b1485913127e4e9b582d2e461a98200_b.jpg" data-lightbox="roadtrip" data-title="计算流体力学 差分方法 知乎">
+						<img class="card-img" src="https://pic1.zhimg.com/v2-7b1485913127e4e9b582d2e461a98200_b.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSU4uTr1DeKgoLuy_m2xvdzWicekrZV6Fckmp1wn8PBjkW1mjrjNr6gvqK1-hIGCNx4PJc';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				计算流体力学 差分方法 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://wikimedia.org/api/rest_v1/media/math/render/svg/b8d0bfa61c4977eeaf3022de361f67dd5f4cb8a9" data-lightbox="roadtrip" data-title="差分 维基百科 自由的百科全书">
+						<img class="card-img" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/b8d0bfa61c4977eeaf3022de361f67dd5f4cb8a9" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYbOl-_-CgzXKVMaStthvFZXmOwXZDV2m3TTALgFiQl5Xanedo_uO88KTDZI8fySHHhg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				差分 维基百科 自由的百科全书
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://img-blog.csdnimg.cn/20190805102721967.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMyNDUwMTEx,size_16,color_FFFFFF,t_70" data-lightbox="roadtrip" data-title="差分方程前向 后向差分 Joyicejin的博客 Csdn博客 前向差分和后向差分">
+						<img class="card-img" src="https://img-blog.csdnimg.cn/20190805102721967.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMyNDUwMTEx,size_16,color_FFFFFF,t_70" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRE_64Z57xCjL6Fb4ckyIS7NBnWiI-RHb7aZvgDiDzh8JTl-sBJApOul7OsmCqd4xb4rks';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				差分方程前向 后向差分 Joyicejin的博客 Csdn博客 前向差分和后向差分
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://img-blog.csdnimg.cn/20190430092104992.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5ODMxMTYz,size_16,color_FFFFFF,t_70" data-lightbox="roadtrip" data-title="常微分方程的解法 一 常微分方程的离散化 差商近似导数 数值积分方法 Taylor 多项式近似 冷月无声的博客 Csdn博客 微分方程离散化">
+						<img class="card-img" src="https://img-blog.csdnimg.cn/20190430092104992.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5ODMxMTYz,size_16,color_FFFFFF,t_70" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSerQ3ufTWtWEruzX0a1NiB5_h_IUvcfsL8y3rpOd_B5J3nQgsh-1MNhGEXZ5qCzgu9tkM';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				常微分方程的解法 一 常微分方程的离散化 差商近似导数 数值积分方法 Taylor 多项式近似 冷月无声的博客 Csdn博客 微分方程离散化
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Finite_Differences.svg/220px-Finite_Differences.svg.png" data-lightbox="roadtrip" data-title="有限差分法 维基百科 自由的百科全书">
+						<img class="card-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Finite_Differences.svg/220px-Finite_Differences.svg.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyqnxGdblN34Ezu6LEoOYvuKYsU8PJehK9x5KcJKwoYQNLydz7j8g7bna7wzjSGaaCqMI';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				有限差分法 维基百科 自由的百科全书
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic.baike.soso.com/ugc/baikepic2/10202/20170729183622-731180081.jpg/300" data-lightbox="roadtrip" data-title="差分方程 搜狗百科">
+						<img class="card-img" src="https://pic.baike.soso.com/ugc/baikepic2/10202/20170729183622-731180081.jpg/300" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFWGKDF2AFEYdfji9By-0Iq4ynnUKL-ogstaBjYCMlohnMFwd1UNxkLe2KePGsNMJvUzg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				差分方程 搜狗百科
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://wkbjcloudbos.bdimg.com/v1/docconvert2547/wk/306e3759f8e8bdc32ee63a2969de5cde/0.jpg?responseContentType=image%2Fjpeg&amp;responseCacheControl=max-age%3D10&amp;responseExpires=Mon%2C%2005%20Apr%202021%2004%3A38%3A57%20%2B0800&amp;authorization=bce-auth-v1%2Ffa1126e91489401fa7cc85045ce7179e%2F2021-04-04T20%3A38%3A47Z%2F-1%2Fhost%2Fe0b8601e07c3058c73ee6e349f6fb124a037e7c1b53c0cd08fd0fab29ab822ad&amp;x-bce-range=204961-346340&amp;token=eyJ0eXAiOiJKSVQiLCJ2ZXIiOiIxLjAiLCJhbGciOiJIUzI1NiIsImV4cCI6MTkyODYwODcyNywidXJpIjp0cnVlLCJwYXJhbXMiOlsicmVzcG9uc2VDb250ZW50VHlwZSIsInJlc3BvbnNlQ2FjaGVDb250cm9sIiwicmVzcG9uc2VFeHBpcmVzIiwieC1iY2UtcmFuZ2UiXX0%3D.RrtigWMsspD5rtLGm8MWqBqu8%2BU9YHVyqQApc6nm%2BBk%3D.1928608727" data-lightbox="roadtrip" data-title="第6章离散系统状态空间分析 图文 百度文库">
+						<img class="card-img" src="http://wkbjcloudbos.bdimg.com/v1/docconvert2547/wk/306e3759f8e8bdc32ee63a2969de5cde/0.jpg?responseContentType=image%2Fjpeg&amp;responseCacheControl=max-age%3D10&amp;responseExpires=Mon%2C%2005%20Apr%202021%2004%3A38%3A57%20%2B0800&amp;authorization=bce-auth-v1%2Ffa1126e91489401fa7cc85045ce7179e%2F2021-04-04T20%3A38%3A47Z%2F-1%2Fhost%2Fe0b8601e07c3058c73ee6e349f6fb124a037e7c1b53c0cd08fd0fab29ab822ad&amp;x-bce-range=204961-346340&amp;token=eyJ0eXAiOiJKSVQiLCJ2ZXIiOiIxLjAiLCJhbGciOiJIUzI1NiIsImV4cCI6MTkyODYwODcyNywidXJpIjp0cnVlLCJwYXJhbXMiOlsicmVzcG9uc2VDb250ZW50VHlwZSIsInJlc3BvbnNlQ2FjaGVDb250cm9sIiwicmVzcG9uc2VFeHBpcmVzIiwieC1iY2UtcmFuZ2UiXX0%3D.RrtigWMsspD5rtLGm8MWqBqu8%2BU9YHVyqQApc6nm%2BBk%3D.1928608727" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwECZgUBqj1nTanHnvnZwy9dFnrCg_6U6vY0NeRRKQCZnZrEzdjP9mtndPy_Je4sVsfmE';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				第6章离散系统状态空间分析 图文 百度文库
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic1.zhimg.com/v2-4706260b1784f4877fb5e83fc4f1f22b_1440w.jpg?source=172ae18b" data-lightbox="roadtrip" data-title="数值偏微分方程 差分法 Python 知乎">
+						<img class="card-img" src="https://pic1.zhimg.com/v2-4706260b1784f4877fb5e83fc4f1f22b_1440w.jpg?source=172ae18b" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0aDtKTM-wiLL-Qf7CgK0TIEamJQ-WvJBoyfCArGAWqHvGSH0LNxymSEnmLSsfkm16974';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				数值偏微分方程 差分法 Python 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://wikimedia.org/api/rest_v1/media/math/render/svg/eaaae992f781f01dc21b5796c9d397a09060b194" data-lightbox="roadtrip" data-title="差分 维基百科 自由的百科全书">
+						<img class="card-img" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/eaaae992f781f01dc21b5796c9d397a09060b194" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9YJ9GS-ZmPgjZ7xHoyPVCzn7a4f6OJFAjfyaZhI00Oo6wZ6u5h-0enwmoQFL8lsmURuE';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				差分 维基百科 自由的百科全书
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic2.zhimg.com/80/v2-186ef4cba1b9c09c0d8389030b1212c1_1440w.jpg" data-lightbox="roadtrip" data-title="计算流体力学 差分方法 知乎">
+						<img class="card-img" src="https://pic2.zhimg.com/80/v2-186ef4cba1b9c09c0d8389030b1212c1_1440w.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4QA2IO754Vg-hLULnWDXeMrdgqDoGvXYL3w';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				计算流体力学 差分方法 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://img-blog.csdnimg.cn/20190805101151113.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMyNDUwMTEx,size_16,color_FFFFFF,t_70" data-lightbox="roadtrip" data-title="差分方程前向 后向差分 Joyicejin的博客 Csdn博客 前向差分和后向差分">
+						<img class="card-img" src="https://img-blog.csdnimg.cn/20190805101151113.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMyNDUwMTEx,size_16,color_FFFFFF,t_70" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJ8j63beWqju28cGcQdPmXrQPPEZL1qWFSjg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				差分方程前向 后向差分 Joyicejin的博客 Csdn博客 前向差分和后向差分
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="aP42yB1DM7RxwM" data-lightbox="roadtrip" data-title="Http Gr Xjtu Edu Cn C Document Library Get File Folderid 2231676 Name Dlfe 79331 Pdf">
+						<img class="card-img" src="aP42yB1DM7RxwM" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnAYIySifxEMWVby4MLypNr7HAsKdeWEkgMw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Http Gr Xjtu Edu Cn C Document Library Get File Folderid 2231676 Name Dlfe 79331 Pdf
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic1.zhimg.com/v2-c0f11a59b100708fa5c508fa73c049d0_b.jpg" data-lightbox="roadtrip" data-title="Fenics入门 二 热传导方程 一 知乎">
+						<img class="card-img" src="https://pic1.zhimg.com/v2-c0f11a59b100708fa5c508fa73c049d0_b.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT80cnT8HMmS6S_QPHFhv3kugFLh5WUkDCTeQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Fenics入门 二 热传导方程 一 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://swf.ishare.down.sina.com.cn/37714072.png?ssig=Ka65Tys0dR&amp;Expires=1621850885&amp;KID=sina,ishare&amp;range=11589474-11801325" data-lightbox="roadtrip" data-title="差分方程 数学建模下载 Ppt模板 爱问共享资料">
+						<img class="card-img" src="https://swf.ishare.down.sina.com.cn/37714072.png?ssig=Ka65Tys0dR&amp;Expires=1621850885&amp;KID=sina,ishare&amp;range=11589474-11801325" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTffoTAfSIDB1QRKo3bJNW-eWzJnX7tQHITpg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				差分方程 数学建模下载 Ppt模板 爱问共享资料
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://upload.wikimedia.org/wikipedia/commons/a/a9/Finite_element_solution.svg" data-lightbox="roadtrip" data-title="離散化 Wikipedia">
+						<img class="card-img" src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Finite_element_solution.svg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTofYicIFvt2jSmWYBut-JUYZhuqcFdGLTwkQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				離散化 Wikipedia
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://img-blog.csdnimg.cn/20191223211250248.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2NsaXVrYWk=,size_16,color_FFFFFF,t_70" data-lightbox="roadtrip" data-title="Matlab怎样将传递函数转换成差分方程 凯哥大数据 刘凯的博客 Csdn博客 Matlab 传递函数差分方程">
+						<img class="card-img" src="https://img-blog.csdnimg.cn/20191223211250248.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2NsaXVrYWk=,size_16,color_FFFFFF,t_70" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSchNfDM3LE4Fj7_NFm6ujGACGQw-Qk3NNeQw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Matlab怎样将传递函数转换成差分方程 凯哥大数据 刘凯的博客 Csdn博客 Matlab 传递函数差分方程
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.itsfun.com.tw/cacheimg/c3/52/402fb777089ddadf22ebe45ede53.jpg" data-lightbox="roadtrip" data-title="差分方程 差分方程又稱遞回關系式 是含有未知函式及其差分 但不含有導數的方程 華人百科">
+						<img class="card-img" src="https://www.itsfun.com.tw/cacheimg/c3/52/402fb777089ddadf22ebe45ede53.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkiOjn7YR04Hg_wECTitqRXqp03BWjbFc6Fw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				差分方程 差分方程又稱遞回關系式 是含有未知函式及其差分 但不含有導數的方程 華人百科
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://wkbjcloudbos.bdimg.com/v1/docconvert4989/wk/96077ff4ab13c65eca7c806c55ab376f/0.jpg?responseContentType=image%2Fjpeg&amp;responseCacheControl=max-age%3D10&amp;responseExpires=Thu%2C%2015%20Apr%202021%2008%3A24%3A46%20%2B0800&amp;authorization=bce-auth-v1%2Ffa1126e91489401fa7cc85045ce7179e%2F2021-04-15T00%3A24%3A36Z%2F-1%2Fhost%2Fa61f0f120646c9aae1f6f55972142e1a88a9e549e70f29fbf748fc853f222b2d&amp;x-bce-range=201912-520927&amp;token=eyJ0eXAiOiJKSVQiLCJ2ZXIiOiIxLjAiLCJhbGciOiJIUzI1NiIsImV4cCI6MTkyOTQ4NjI3NiwidXJpIjp0cnVlLCJwYXJhbXMiOlsicmVzcG9uc2VDb250ZW50VHlwZSIsInJlc3BvbnNlQ2FjaGVDb250cm9sIiwicmVzcG9uc2VFeHBpcmVzIiwieC1iY2UtcmFuZ2UiXX0%3D.%2Fy%2Bwzw0cmpba6hY993ro0NvL04509p3ZWhiGdo%2B8i80%3D.1929486276" data-lightbox="roadtrip" data-title="偏微分方程的离散化方法4 图文 百度文库">
+						<img class="card-img" src="http://wkbjcloudbos.bdimg.com/v1/docconvert4989/wk/96077ff4ab13c65eca7c806c55ab376f/0.jpg?responseContentType=image%2Fjpeg&amp;responseCacheControl=max-age%3D10&amp;responseExpires=Thu%2C%2015%20Apr%202021%2008%3A24%3A46%20%2B0800&amp;authorization=bce-auth-v1%2Ffa1126e91489401fa7cc85045ce7179e%2F2021-04-15T00%3A24%3A36Z%2F-1%2Fhost%2Fa61f0f120646c9aae1f6f55972142e1a88a9e549e70f29fbf748fc853f222b2d&amp;x-bce-range=201912-520927&amp;token=eyJ0eXAiOiJKSVQiLCJ2ZXIiOiIxLjAiLCJhbGciOiJIUzI1NiIsImV4cCI6MTkyOTQ4NjI3NiwidXJpIjp0cnVlLCJwYXJhbXMiOlsicmVzcG9uc2VDb250ZW50VHlwZSIsInJlc3BvbnNlQ2FjaGVDb250cm9sIiwicmVzcG9uc2VFeHBpcmVzIiwieC1iY2UtcmFuZ2UiXX0%3D.%2Fy%2Bwzw0cmpba6hY993ro0NvL04509p3ZWhiGdo%2B8i80%3D.1929486276" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCq5BU1tb4c6CQk0K2WzZiWKzeB6DVa3WOOg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				偏微分方程的离散化方法4 图文 百度文库
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic4.zhimg.com/v2-7fd98bafd8ee797444d086f5250d3aa7_b.jpg" data-lightbox="roadtrip" data-title="数值偏微分方程 差分法 Python 知乎">
+						<img class="card-img" src="https://pic4.zhimg.com/v2-7fd98bafd8ee797444d086f5250d3aa7_b.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbpZCPgbKb687GtylG2E32ozO_PZetpg_NZw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				数值偏微分方程 差分法 Python 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://cdn.comsol.com/cyclopedia/finite-element-method/base-functions-overlap.zh_CN.png" data-lightbox="roadtrip" data-title="有限元法 Fem 详解">
+						<img class="card-img" src="https://cdn.comsol.com/cyclopedia/finite-element-method/base-functions-overlap.zh_CN.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQj20OsXrcP5IYmVnfQ7gYklIYK-Yn35OjijQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				有限元法 Fem 详解
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://image2.slideserve.com/4793809/slide39-l.jpg" data-lightbox="roadtrip" data-title="Ppt 5 1 连续域 离散化设计5 2 数字pid 控制器设计5 3 控制系统z 平面设计性能指标要求5 4 Z 平面根轨迹设计5 5 W 变换及频率域设计powerpoint Presentation">
+						<img class="card-img" src="https://image2.slideserve.com/4793809/slide39-l.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6RKs_jwDlA5aL_zlKm8gLYs4f9BaLHu6ctw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Ppt 5 1 连续域 离散化设计5 2 数字pid 控制器设计5 3 控制系统z 平面设计性能指标要求5 4 Z 平面根轨迹设计5 5 W 变换及频率域设计powerpoint Presentation
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://img-blog.csdn.net/20180327183654459?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0NWX1lPVQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" data-lightbox="roadtrip" data-title="怎么理解差分方程的概念 Cv You的博客 Csdn博客 差分方程">
+						<img class="card-img" src="https://img-blog.csdn.net/20180327183654459?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0NWX1lPVQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMaK9WpYXjlpjcRIBzbtxL_UF-hCabYqdCSw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				怎么理解差分方程的概念 Cv You的博客 Csdn博客 差分方程
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+		
+	</div>
+
+		 
+		
+		
+				</div>
+				<div class="col-sm-12 widget">
+					<div class="d-block p-4">
+	<center>
+		<!-- BOTTOM BANNER ADS -->
+<script async="async" data-cfasync="false" src="//jc32arlvqpv8.com/eb47a424ae325c90cca32780149785c3/invoke.js"></script>
+<div id="container-eb47a424ae325c90cca32780149785c3"></div>
+
+	</center>
+</div>				</div>
+			</div>
+			<div class="row footer">
+				<div class="col-md-12 text-center py-4">
+										<a href="/p/dmca.html">Dmca</a>
+										<a href="/p/contact.html">Contact</a>
+										<a href="/p/privacy-policy.html">Privacy Policy</a>
+										<a href="/p/copyright.html">Copyright</a>
+					
+				</div>
+			</div>
+		</main>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js" integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js" integrity="sha256-CtKylYan+AJuoH8jrMht1+1PMhMqrKnB8K5g012WN5I=" crossorigin="anonymous"></script>
+		
+		<!-- Footer CSS JS -->
+		
+		
+		
+			<script type='text/javascript' src='//jc32arlvqpv8.com/ef/d5/10/efd510237a3143727bed46803ec35b8d.js'></script>
+</body>
+</html>

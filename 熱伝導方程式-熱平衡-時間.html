@@ -1,0 +1,691 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha256-L/W5Wfqfa0sdBNIKN9cG6QA5F2qx4qICmU2VgLruv9Y=" crossorigin="anonymous" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/css/lightbox.min.css" integrity="sha256-tBxlolRHP9uMsEFKVk+hk//ekOlXOixLKvye5W2WR5c=" crossorigin="anonymous" />
+		<link href="https://fonts.googleapis.com/css?family=Mr+Dafoe" rel="stylesheet" type="text/css">
+
+		<style type="text/css">
+			html,body{font-family:"Open Sans",Arial,sans-serif;font-size:14px;font-weight:400;background:#f3f3f3 url(https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Temp_Rod_homobc.svg/300px-Temp_Rod_homobc.svg.png
+) no-repeat center center fixed;background-size:cover;height:100%}#title{font-family:"Mr Dafoe",Times,serif;font-size:34px;background:rgba(255,255,255,.8);margin-bottom:34px}.header{padding-bottom:13px;margin-bottom:13px;border-bottom:1px solid #eee}a{color:#26ADE4;text-decoration:none}#title a{color:#333;margin-left:21px}#title a:hover{text-decoration:none;color:#26ADE4}.sidebar ul{margin:0;padding:0}.sidebar ul li{list-style:none}.footer{margin-top:21px;padding-top:13px;border-top:1px solid #eee}.footer a{margin:0 15px}.navi{margin:13px 0 13px 0;padding:13px}.navi a{margin:5px 2px;font-size:95%}.main{margin-top: 6rem;}.form-inline .form-control{min-width: 300px;}.v-cover{height: 380px; object-fit: cover;}.v-image{height: 200px; object-fit: cover;}.dwn-cover{max-height: 460px; object-fit: cover;}.main{margin-top: 6rem;}.form-inline .form-control{min-width: 300px;}			
+		</style>
+
+		<title>熱伝導方程式 熱平衡 時間</title>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/", 
+  "@type": "Article", 
+  "author": {
+    "@type": "Person",
+    "name": "James"
+  },
+  "headline": "熱伝導方程式 熱平衡 時間",
+  "datePublished": "2021-04-24",
+  "image": [https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Black_body.svg/303px-Black_body.svg.png,https://slidesplayer.com/slide/11636028/62/images/22/3.2+%E9%9B%B6%E7%BB%B4%E9%97%AE%E9%A2%98%E7%9A%84%E5%88%86%E6%9E%90%E6%B3%95%EF%BC%8D%E9%9B%86%E4%B8%AD%E5%8F%82%E6%95%B0%E6%B3%95+1.%E5%AE%9A%E4%B9%89%EF%BC%9A%E5%BF%BD%E7%95%A5%E7%89%A9%E4%BD%93%E5%86%85%E9%83%A8%E5%AF%BC%E7%83%AD%E7%83%AD%E9%98%BB%E3%80%81%E8%AE%A4%E4%B8%BA%E7%89%A9%E4%BD%93%E6%B8%A9%E5%BA%A6%E5%9D%87%E5%8C%80%E4%B8%80%E8%87%B4%E7%9A%84%E5%88%86%E6%9E%90%E6%96%B9%E6%B3%95%E3%80%82%E6%AD%A4%E6%97%B6%EF%BC%8C+%EF%BC%8C%E6%B8%A9%E5%BA%A6%E5%88%86%E5%B8%83%E5%8F%AA%E4%B8%8E%E6%97%B6%E9%97%B4%E6%9C%89%E5%85%B3%EF%BC%8C%E5%8D%B3+%EF%BC%8C%E4%B8%8E%E7%A9%BA%E9%97%B4%E4%BD%8D%E7%BD%AE%E6%97%A0%E5%85%B3%EF%BC%8C%E5%9B%A0%E6%AD%A4%EF%BC%8C%E4%B9%9F%E7%A7%B0%E4%B8%BA%E9%9B%B6%E7%BB%B4%E9%97%AE%E9%A2%98%E3%80%82.jpg,https://slidesplayer.com/slide/11636028/62/images/24/%E5%BB%BA%E7%AB%8B%E6%95%B0%E5%AD%A6%E6%A8%A1%E5%9E%8B%EF%BC%8D%E5%88%A9%E7%94%A8%E4%B8%A4%E7%A7%8D%E6%96%B9%E6%B3%95+%E6%A0%B9%E6%8D%AE%E5%AF%BC%E7%83%AD%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B%E7%9A%84%E4%B8%80%E8%88%AC%E5%BD%A2%E5%BC%8F%E8%BF%9B%E8%A1%8C%E7%AE%80%E5%8C%96%EF%BC%9B+%E5%88%A9%E7%94%A8%E8%83%BD%E9%87%8F%E5%AE%88%E6%81%92.jpg],
+  "publisher": {
+    "@type": "Organization",
+    "name": "Tukang Parkir Gerobak",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://via.placeholder.com/512.png?text=熱伝導方程式 熱平衡 時間",
+      "width": 512,
+      "height": 512
+    }
+  }
+}
+</script>
+		<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-957NGNKQ70"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-957NGNKQ70');
+</script>
+
+<script type='text/javascript' src='//jc32arlvqpv8.com/1a/82/2e/1a822ef8a40a0fbab3c4ea12a5d2bb02.js'></script>
+</head>
+	<body>
+		<header class="bg-white fixed-top">			
+			<nav class="navbar navbar-light bg-white mb-0">
+				<div class="container justify-content-center justify-content-sm-between">	
+				  <a href="/" title="Blog" class="navbar-brand mb-1">Blog</a>
+				  				</div>			  
+			</nav>				
+		</header>
+		<main class="main container bg-white">
+			<div class="col-md-12 my-4" align="center">
+				<div class="d-block p-4">
+	<br/><center>
+<!-- TOP BANNER ADS -->
+</center><br/>
+</div>			</div>
+			<div class="row header">
+				<div class="col-sm-12 text-center p-2">
+						<h1>熱伝導方程式 熱平衡 時間</h1>
+
+	
+	<div class="navi text-center">
+					<p>ポアソン方程式 キャリヤ連続の式 1 n n R tq 1 p p R tq 輸送方程式 n. 呼吸流量計 呼吸気量計スパイロメータ 差圧式呼吸流量計 ニューモタコグラフィ 熱線型呼吸流量計. Research 2 023229 2020. <br>				
+			</p>
+										<a class="badge badge-danger" href="/%E7%94%B7%E3%81%A0%E3%82%89%E3%81%91%E3%81%AE%E5%AE%B6%E6%97%8F%E3%81%AB%E5%A5%B3%E6%80%A7%E3%81%AF%E7%A7%811%E4%BA%BA-%E5%AE%B6%E4%BA%8B%E3%82%92%E3%81%97%E3%81%AA%E3%81%8C%E3%82%899%E4%BA%BA%E5%85%84%E5%BC%9F-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%A8%E9%80%A3%E7%B6%9A%E3%82%BB%E3%83%83%E3%82%AF%E3%82%B9%E6%9C%9D%E7%94%9F%E6%B4%BB.html">男だらけの家族に女性は私1人 家事をしながら9人兄弟 お父さんと連続セックス朝生活</a>
+											<a class="badge badge-danger" href="/%E7%86%B1%E4%BC%9D%E5%B0%8E%E6%96%B9%E7%A8%8B%E5%BC%8F%E6%95%B0%E5%80%A4%E8%A8%88%E7%AE%97%E5%A2%83%E7%95%8C%E6%9D%A1%E4%BB%B6.html">熱伝導方程式数値計算境界条件</a>
+											<a class="badge badge-primary" href="/%E6%B5%81%E3%82%8C%E6%98%9F-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93-er-%E3%82%B8%E3%83%A7%E3%83%BC%E3%82%B8%E3%82%AF%E3%83%AB%E3%83%BC%E3%83%8B%E3%83%BC.html">流れ星 お父さん er ジョージクルーニー</a>
+											<a class="badge badge-danger" href="/%E6%A7%8B%E9%80%A0%E6%96%B9%E7%A8%8B%E5%BC%8F%E3%83%A2%E3%83%87%E3%83%AA%E3%83%B3%E3%82%B0-%E3%83%95%E3%83%AA%E3%83%BC%E3%82%BD%E3%83%95%E3%83%88.html">構造方程式モデリング フリーソフト</a>
+											<a class="badge badge-success" href="/%E7%86%B1%E4%BC%9D%E5%B0%8E%E6%96%B9%E7%A8%8B%E5%BC%8F-%E5%BE%AE%E5%B0%8F%E9%A0%98%E5%9F%9F.html">熱伝導方程式 微小領域</a>
+											<a class="badge badge-secondary" href="/%E7%9F%A5%E3%82%8A%E5%90%88%E3%81%84-%E3%81%AE-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93-%E3%81%8C-%E4%BA%A1%E3%81%8F%E3%81%AA%E3%81%A3-%E3%81%9F-%E6%99%82-%E3%81%AE-%E8%A8%80%E8%91%89.html">知り合い の お父さん が 亡くなっ た 時 の 言葉</a>
+											<a class="badge badge-warning" href="/%E9%9D%9E%E7%B7%9A%E5%BD%A2-%E6%96%B9%E7%A8%8B%E5%BC%8F-%E5%8F%8D%E5%BE%A9-%E5%BC%8F.html">非線形 方程式 反復 式</a>
+											<a class="badge badge-secondary" href="/%E6%9C%AC%E5%BD%93%E3%81%AF%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%8C%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%A0%E3%81%A3%E3%81%9F-%E5%A8%98.html">本当はお父さんが大好きだった 娘</a>
+											<a class="badge badge-danger" href="/%E8%A2%AB%E5%AE%B3%E8%80%85%E3%81%AE%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93-%E3%83%84%E3%82%A4%E3%83%83%E3%82%BF%E3%83%BC.html">被害者のお父さん ツイッター</a>
+											<a class="badge badge-dark" href="/%E8%99%9A%E6%95%B0%E8%A7%A3-a-2%E6%AC%A1%E6%96%B9%E7%A8%8B%E5%BC%8F.html">虚数解 a 2次方程式</a>
+											<a class="badge badge-primary" href="/%E8%A4%87%E7%B4%A0%E6%95%B0%E3%81%A8%E6%96%B9%E7%A8%8B%E5%BC%8F-%E8%A7%A3%E3%81%A8%E4%BF%82%E6%95%B0%E3%81%AE%E9%96%A2%E4%BF%82.html">複素数と方程式 解と係数の関係</a>
+											<a class="badge badge-primary" href="/%E9%AB%98%E6%AC%A1%E6%96%B9%E7%A8%8B%E5%BC%8F-%E5%A4%A7%E5%AD%A6%E6%95%B0%E5%AD%A6.html">高次方程式 大学数学</a>
+											<a class="badge badge-success" href="/%E9%A2%A8%E5%91%82%E6%B7%AB%E8%A1%8C1-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93-%E3%81%8A%E9%A2%A8%E5%91%82%E3%81%A7%E3%82%A8%E3%83%83%E3%83%81%E3%81%AA%E3%81%93%E3%81%A8%E3%81%97%E3%82%884%E6%99%82%E9%96%93.html">風呂淫行1 お父さん お風呂でエッチなことしよ4時間</a>
+											<a class="badge badge-warning" href="/%E8%B3%AA%E7%82%B9%E3%81%AB%E5%83%8D%E3%81%8F%E5%8A%9B-%E6%96%B9%E7%A8%8B%E5%BC%8F-%E5%81%9C%E7%95%99%E6%9D%A1%E4%BB%B6.html">質点に働く力 方程式 停留条件</a>
+											<a class="badge badge-success" href="/%E8%89%B2%E7%99%BD%E7%BE%8E%E5%B7%A8%E4%B9%B3%E3%81%AE%E4%BA%BA%E5%A6%BB%E3%81%8C%E7%BE%A9%E7%90%86%E3%81%AE%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%AE%E3%82%AB%E3%83%81%E3%82%AB%E3%83%81%E5%B7%A8%E6%A0%B9%E3%82%92-%E5%A4%89%E3%83%AB%E3%83%BC%E5%A1%9A%E6%9C%AC.html">色白美巨乳の人妻が義理のお父さんのカチカチ巨根を 変ルー塚本</a>
+						</div>
+<center>
+	<!-- MIDDLE BANNER ADS -->
+<script type="text/javascript">
+	atOptions = {
+		'key' : '2b77887421e2587a1a1b1d7c8a31a9e0',
+		'format' : 'iframe',
+		'height' : 250,
+		'width' : 300,
+		'params' : {}
+	};
+	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://jc32arlvqpv8.com/2b77887421e2587a1a1b1d7c8a31a9e0/invoke.js"></scr' + 'ipt>');
+</script>
+		
+	</center>
+					
+				</div>
+			</div>
+			<div class="row content mb-4">
+				<div class="col-md-12">					
+					
+	
+	<div class="card-columns">
+						
+	  <div class='card'>
+	  	<a href="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Heatequation_exampleB_frames.svg/186px-Heatequation_exampleB_frames.svg.png" data-lightbox="roadtrip" data-title="熱傳導方程式 维基百科 自由的百科全书">
+						<img class="card-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Heatequation_exampleB_frames.svg/186px-Heatequation_exampleB_frames.svg.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQj-dku4B6LNo9byd-kj3qrmhVjUF_hND38owxOLkCYYKjlihVfAEv_ic1geqtP7TmAnsw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				熱傳導方程式 维基百科 自由的百科全书
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Temp_Rod_homobc.svg/300px-Temp_Rod_homobc.svg.png" data-lightbox="roadtrip" data-title="熱傳導方程式 维基百科 自由的百科全书">
+						<img class="card-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Temp_Rod_homobc.svg/300px-Temp_Rod_homobc.svg.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvv2hjWrICjh_DJT9p7DWlc4Pt58X-27DPwchIa0nv4mTAaGNpsjGRSZUbOI3VCSRlPw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				熱傳導方程式 维基百科 自由的百科全书
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://images2017.cnblogs.com/blog/1230458/201709/1230458-20170901153153624-1259647172.jpg" data-lightbox="roadtrip" data-title="第一章热传导方程 简单快乐 Csdn博客">
+						<img class="card-img" src="https://images2017.cnblogs.com/blog/1230458/201709/1230458-20170901153153624-1259647172.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLtRTl8b9JxOK3RUjvJ6gBbPvO0xzWu8Oh0d_bW6A5YFViHfrcIRnKvx8AFhj4jcZJ4Ho';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				第一章热传导方程 简单快乐 Csdn博客
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://slidesplayer.com/slide/15940669/88/images/3/%E4%B8%8A%E5%BC%8F%E7%A7%B0%E4%B8%BAFourier%E5%AE%9A%E5%BE%8B%EF%BC%8C%E5%8F%B7%E7%A7%B0%E5%AF%BC%E7%83%AD%E5%9F%BA%E6%9C%AC%E5%AE%9A%E5%BE%8B%EF%BC%8C%E6%98%AF%E4%B8%80%E4%B8%AA%E4%B8%80%E7%BB%B4%E7%A8%B3%E6%80%81%E5%AF%BC%E7%83%AD%E3%80%82%E5%85%B6%E4%B8%AD%EF%BC%9A.jpg" data-lightbox="roadtrip" data-title="热量传递的三种基本方式 导热 热传导 对流 热对流 和热辐射 Ppt Download">
+						<img class="card-img" src="https://slidesplayer.com/slide/15940669/88/images/3/%E4%B8%8A%E5%BC%8F%E7%A7%B0%E4%B8%BAFourier%E5%AE%9A%E5%BE%8B%EF%BC%8C%E5%8F%B7%E7%A7%B0%E5%AF%BC%E7%83%AD%E5%9F%BA%E6%9C%AC%E5%AE%9A%E5%BE%8B%EF%BC%8C%E6%98%AF%E4%B8%80%E4%B8%AA%E4%B8%80%E7%BB%B4%E7%A8%B3%E6%80%81%E5%AF%BC%E7%83%AD%E3%80%82%E5%85%B6%E4%B8%AD%EF%BC%9A.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5DCYZ6HZkzSmt6eM0mQPMqAkY_u8PLZip6HK_RD5_Aqg9BqK1vXAOGvh6yhN4iolW01I';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				热量传递的三种基本方式 导热 热传导 对流 热对流 和热辐射 Ppt Download
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://img.google-info.cn/storage/big/556557.jpg?92873e213fc0e4caf4f8b403b3455424=40883a86dd18a8ab48cd902ff90357b7" data-lightbox="roadtrip" data-title="熱傳導方程式 热传导方程 或稱熱方程 是一個重要的偏微分">
+						<img class="card-img" src="https://img.google-info.cn/storage/big/556557.jpg?92873e213fc0e4caf4f8b403b3455424=40883a86dd18a8ab48cd902ff90357b7" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQae9oe2YHxqiG0_Ejm8pgDwO6iQ-jTSsWx1yfhbVNNp73z0Aq5FnEJ9s0Y76OgERaHNUQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				熱傳導方程式 热传导方程 或稱熱方程 是一個重要的偏微分
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://images2017.cnblogs.com/blog/1230458/201709/1230458-20170901153154218-178112749.jpg" data-lightbox="roadtrip" data-title="第一章热传导方程 简单快乐 Csdn博客">
+						<img class="card-img" src="https://images2017.cnblogs.com/blog/1230458/201709/1230458-20170901153154218-178112749.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9Y-xfDulIpwzmqlSL1BYg4QkPrv1ivuDRxmOrNmz7s1rsWI3Q1fM8NgzeOw6X_wZrwt0';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				第一章热传导方程 简单快乐 Csdn博客
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+				<div class='card'>	
+			<div class="d-block p-4">
+	</div>		  	
+		  	<h3 class="h6 p-2"><b>Schrdinger equation とは物理学の量子力学における基礎方程式である シュレーディンガー方程式という名前は提案者であるオーストリアの物理学者 エルヴィンシュレーディンガーにちなむ.</b></h3>
+							<p class="p-2" align="justify">
+											<strong>熱伝導方程式 熱平衡 時間</strong>. 
+					
+											この教育シートは一般社団法人日本溶接協会がiiw溶接管理技術者シラバスに準拠して作成した溶接管理技術者用教育教材です 制作にあたっては一般社団法人溶接学会に協力いただきjws-jwes協力事業として溶接情報センターで公開しております このコンテンツは日本溶接協会の. 
+											血流測定 色素希釈法と熱希釈法の比較 電磁血流計. 
+											電子ホール再結合率 Drift-Diffusion モデル n n j q pE qD p p p p 電子電流密度 ホール電流密度 ホール拡散定数. 
+									</p>
+					</div>
+		
+						
+	  <div class='card'>
+	  	<a href="https://slidetodoc.com/presentation_image_h/2e5af80ee8bebc9d14f32ba9a095b7e0/image-40.jpg" data-lightbox="roadtrip" data-title="Selfgravitating Stellar System A System With N Particles">
+						<img class="card-img" src="https://slidetodoc.com/presentation_image_h/2e5af80ee8bebc9d14f32ba9a095b7e0/image-40.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQmQLDTzZQuXrW2JYGFTuFRzgx5Dp1hEkO4Bxbpzm2UydFN2fLdAZ41gKxnBdzQtPA96U';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Selfgravitating Stellar System A System With N Particles
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic4.zhimg.com/v2-238280313212965157016281e73783a7_b.jpg" data-lightbox="roadtrip" data-title="一 二 三維球體的熱擴散 上 知乎">
+						<img class="card-img" src="https://pic4.zhimg.com/v2-238280313212965157016281e73783a7_b.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNZsCaWREWkMx0XlJgfdJYE4mvW52Rv45RSiQxsvwg4DsRhe0VJoIJXDukxswLYql8jP8';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				一 二 三維球體的熱擴散 上 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic1.zhimg.com/50/v2-d07037b1b46724c0a3128d751c742402_hd.jpg?source=1940ef5c" data-lightbox="roadtrip" data-title="如何理解 时间常数 Time Constant 这个概念 知乎">
+						<img class="card-img" src="https://pic1.zhimg.com/50/v2-d07037b1b46724c0a3128d751c742402_hd.jpg?source=1940ef5c" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5FNR_O2GFp5BhGNeCJ0FGyCoPuJFwhvN7QRx7Do9VMOhlkPmNYC-n2ztl2u_BYHTXTvY';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				如何理解 时间常数 Time Constant 这个概念 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://slideplayer.com/slide/4901562/16/images/14/3.%E9%AB%98%E4%BD%8E%E6%BA%AB%E5%B7%AE%E8%B6%8A%E5%A4%A7%EF%BC%8C%E7%86%B1%E5%82%B3%E5%B0%8E%E4%B9%9F%E8%B6%8A%E5%BF%AB%E9%80%9F%E3%80%82+4.%E5%BD%B1%E9%9F%BF%E7%86%B1%E5%82%B3%E5%B0%8E%E4%B9%8B%E5%9B%A0%E7%B4%A0%E6%9C%89%EF%BC%9A%E7%89%A9%E8%B3%AA%E6%9C%AC%E6%80%A7%28%E7%86%B1%E5%B0%8E%E4%BF%82%E6%95%B8%29+%E3%80%81%E5%82%B3%E5%B0%8E%E7%89%A9%E9%AB%94%E4%B9%8B%E6%88%AA%E9%9D%A2%E7%A9%8D%E3%80%81%E5%82%B3%E5%B0%8E%E4%B9%8B%E8%B7%9D%E9%9B%A2%E3%80%81%E5%82%B3%E5%B0%8E%E7%89%A9%E9%AB%94%E5%85%A9%E7%AB%AF%E4%B9%8B%E6%BA%AB%E5%B7%AE%E3%80%81%E5%82%B3%E5%B0%8E%E7%9A%84%E6%99%82%E9%96%93%E3%80%82.jpg" data-lightbox="roadtrip" data-title="熱力學the Laws Of Thermodynamics Ppt Video Online Download">
+						<img class="card-img" src="https://slideplayer.com/slide/4901562/16/images/14/3.%E9%AB%98%E4%BD%8E%E6%BA%AB%E5%B7%AE%E8%B6%8A%E5%A4%A7%EF%BC%8C%E7%86%B1%E5%82%B3%E5%B0%8E%E4%B9%9F%E8%B6%8A%E5%BF%AB%E9%80%9F%E3%80%82+4.%E5%BD%B1%E9%9F%BF%E7%86%B1%E5%82%B3%E5%B0%8E%E4%B9%8B%E5%9B%A0%E7%B4%A0%E6%9C%89%EF%BC%9A%E7%89%A9%E8%B3%AA%E6%9C%AC%E6%80%A7%28%E7%86%B1%E5%B0%8E%E4%BF%82%E6%95%B8%29+%E3%80%81%E5%82%B3%E5%B0%8E%E7%89%A9%E9%AB%94%E4%B9%8B%E6%88%AA%E9%9D%A2%E7%A9%8D%E3%80%81%E5%82%B3%E5%B0%8E%E4%B9%8B%E8%B7%9D%E9%9B%A2%E3%80%81%E5%82%B3%E5%B0%8E%E7%89%A9%E9%AB%94%E5%85%A9%E7%AB%AF%E4%B9%8B%E6%BA%AB%E5%B7%AE%E3%80%81%E5%82%B3%E5%B0%8E%E7%9A%84%E6%99%82%E9%96%93%E3%80%82.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzmESt8AXBgyMUzRDnhPeA08uoWqC_GAqvcledQ2ZCHham0MRVVrDk4y1iF9G59SAqKN4';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				熱力學the Laws Of Thermodynamics Ppt Video Online Download
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic2.zhimg.com/v2-c7452564b41d03b58d461a5517959cfd_b.jpg" data-lightbox="roadtrip" data-title="Pkwqvuco5hkukm">
+						<img class="card-img" src="https://pic2.zhimg.com/v2-c7452564b41d03b58d461a5517959cfd_b.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQR1SIz21gc4Kzn7wdZbvgp2Ap8escvkbB07nuldt_jA1tHbpUzqYC5XI0VHwhMEsGetyI';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Pkwqvuco5hkukm
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://slideplayer.com/slide/4901562/16/images/22/%E7%89%A9%E9%AB%94%E8%A1%A8%E9%9D%A2%E5%9C%A8%E5%96%AE%E4%BD%8D%E6%99%82%E9%96%93%E5%85%A7%E6%89%80%E8%BC%BB%E5%B0%84%E5%87%BA%E7%9A%84%E7%86%B1%E8%83%BD%EF%BC%8C%E5%92%8C%E5%85%B6%E8%A1%A8%E9%9D%A2%E6%BA%AB%E5%BA%A6%E5%8F%8A%E9%9D%A2%E7%A9%8D%E6%9C%89%E9%97%9C%E3%80%82%E6%BA%AB%E5%BA%A6%E8%B6%8A%E9%AB%98%E3%80%81%E8%A1%A8%E9%9D%A2%E7%A9%8D%E8%B6%8A%E5%A4%A7%EF%BC%8C%E5%89%87%E6%89%80%E8%BC%BB%E5%B0%84%E5%87%BA%E7%9A%84%E7%86%B1%E8%83%BD%E4%B9%9F%E8%B6%8A%E5%A4%9A%E3%80%82.jpg" data-lightbox="roadtrip" data-title="熱力學the Laws Of Thermodynamics Ppt Video Online Download">
+						<img class="card-img" src="https://slideplayer.com/slide/4901562/16/images/22/%E7%89%A9%E9%AB%94%E8%A1%A8%E9%9D%A2%E5%9C%A8%E5%96%AE%E4%BD%8D%E6%99%82%E9%96%93%E5%85%A7%E6%89%80%E8%BC%BB%E5%B0%84%E5%87%BA%E7%9A%84%E7%86%B1%E8%83%BD%EF%BC%8C%E5%92%8C%E5%85%B6%E8%A1%A8%E9%9D%A2%E6%BA%AB%E5%BA%A6%E5%8F%8A%E9%9D%A2%E7%A9%8D%E6%9C%89%E9%97%9C%E3%80%82%E6%BA%AB%E5%BA%A6%E8%B6%8A%E9%AB%98%E3%80%81%E8%A1%A8%E9%9D%A2%E7%A9%8D%E8%B6%8A%E5%A4%A7%EF%BC%8C%E5%89%87%E6%89%80%E8%BC%BB%E5%B0%84%E5%87%BA%E7%9A%84%E7%86%B1%E8%83%BD%E4%B9%9F%E8%B6%8A%E5%A4%9A%E3%80%82.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8YCp1hqfxdQbY8C2hHrALleG5UDKm7UUsdQJodnRwrILSTZBdsodCEezzfKfrIPaVMQY';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				熱力學the Laws Of Thermodynamics Ppt Video Online Download
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://i0.wp.com/examist.jp/wp-content/uploads/physics/thermodynamics/santai20170310@2x.png" data-lightbox="roadtrip" data-title="熱平衡時間計算 熱計算 Dnfiyv">
+						<img class="card-img" src="https://i0.wp.com/examist.jp/wp-content/uploads/physics/thermodynamics/santai20170310@2x.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNdE1BaEtJ3pZ6KE_aU_UAv0myOnUmaMXE33CN395x-Am5CxfpU1BOF3kqKRFGX5FZ2J8';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				熱平衡時間計算 熱計算 Dnfiyv
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://slidesplayer.com/slide/11636028/62/images/24/%E5%BB%BA%E7%AB%8B%E6%95%B0%E5%AD%A6%E6%A8%A1%E5%9E%8B%EF%BC%8D%E5%88%A9%E7%94%A8%E4%B8%A4%E7%A7%8D%E6%96%B9%E6%B3%95+%E6%A0%B9%E6%8D%AE%E5%AF%BC%E7%83%AD%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B%E7%9A%84%E4%B8%80%E8%88%AC%E5%BD%A2%E5%BC%8F%E8%BF%9B%E8%A1%8C%E7%AE%80%E5%8C%96%EF%BC%9B+%E5%88%A9%E7%94%A8%E8%83%BD%E9%87%8F%E5%AE%88%E6%81%92.jpg" data-lightbox="roadtrip" data-title="第三章非稳态热传导3 1 非稳态导热的基本概念3 2 零维问题的分析法 集中参数法3 3 典型一维物体非稳态导热的分析解 Ppt Download">
+						<img class="card-img" src="https://slidesplayer.com/slide/11636028/62/images/24/%E5%BB%BA%E7%AB%8B%E6%95%B0%E5%AD%A6%E6%A8%A1%E5%9E%8B%EF%BC%8D%E5%88%A9%E7%94%A8%E4%B8%A4%E7%A7%8D%E6%96%B9%E6%B3%95+%E6%A0%B9%E6%8D%AE%E5%AF%BC%E7%83%AD%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B%E7%9A%84%E4%B8%80%E8%88%AC%E5%BD%A2%E5%BC%8F%E8%BF%9B%E8%A1%8C%E7%AE%80%E5%8C%96%EF%BC%9B+%E5%88%A9%E7%94%A8%E8%83%BD%E9%87%8F%E5%AE%88%E6%81%92.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1Zycxv8UDH0hhRnEphNn-wMit1nPhsHM4wLN_gggL3EV2OWo3A1o8mT1fo2zClTrb3Ac';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				第三章非稳态热传导3 1 非稳态导热的基本概念3 2 零维问题的分析法 集中参数法3 3 典型一维物体非稳态导热的分析解 Ppt Download
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://p6-tt.byteimg.com/origin/pgc-image/57285e3e6fde4cc9a36b06260efabc3f?from=pc" data-lightbox="roadtrip" data-title="偏微分方程在物理學中的完美應用 熱方程 推導和示例 老胡説科學 Mdeditor">
+						<img class="card-img" src="https://p6-tt.byteimg.com/origin/pgc-image/57285e3e6fde4cc9a36b06260efabc3f?from=pc" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqsdCLasUKHPbz32dz3IU_qXWnrpgXdz6dekUzziwOYnYi7DBPtQtT4WWvYoMvOaPRa4M';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				偏微分方程在物理學中的完美應用 熱方程 推導和示例 老胡説科學 Mdeditor
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Black_body.svg/303px-Black_body.svg.png" data-lightbox="roadtrip" data-title="黑体辐射 维基百科 自由的百科全书">
+						<img class="card-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Black_body.svg/303px-Black_body.svg.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTt50W8iHhqLIuqCZ4Xb6i5hmoiALK2n5YoUj8rJ_ipPyJdVG35DwdG_q6JBU4Dq3rWdow';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				黑体辐射 维基百科 自由的百科全书
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://slidesplayer.net/slide/17532698/103/images/2/X%E6%96%B9%E5%90%91%E3%81%B8%E3%81%AE%E7%86%B1%E7%A7%BB%E5%8B%95%E9%87%8F+x%3Dx%E3%81%AB%E3%81%8A%E3%81%84%E3%81%A6%E3%80%81+%E6%99%82%E9%96%93dt%E3%81%AE%E9%96%93%E3%81%AB%E9%9D%A2dydz%E3%81%AB%E6%B5%81%E5%85%A5%E3%81%99%E3%82%8B%E7%86%B1%E9%87%8FdQxi%E3%81%AF%E3%80%81+%E4%B8%80%E6%96%B9%E3%80%81x%3Dx%2Bdx%E3%81%AB%E3%81%8A%E3%81%84%E3%81%A6%E3%80%81.jpg" data-lightbox="roadtrip" data-title="熱伝導方程式の導出 熱伝導 物質の移動を伴わずに高温側から低温側へ熱が伝わる現象 対流 輻射 フーリエの法則fourier S Law Ppt Download">
+						<img class="card-img" src="https://slidesplayer.net/slide/17532698/103/images/2/X%E6%96%B9%E5%90%91%E3%81%B8%E3%81%AE%E7%86%B1%E7%A7%BB%E5%8B%95%E9%87%8F+x%3Dx%E3%81%AB%E3%81%8A%E3%81%84%E3%81%A6%E3%80%81+%E6%99%82%E9%96%93dt%E3%81%AE%E9%96%93%E3%81%AB%E9%9D%A2dydz%E3%81%AB%E6%B5%81%E5%85%A5%E3%81%99%E3%82%8B%E7%86%B1%E9%87%8FdQxi%E3%81%AF%E3%80%81+%E4%B8%80%E6%96%B9%E3%80%81x%3Dx%2Bdx%E3%81%AB%E3%81%8A%E3%81%84%E3%81%A6%E3%80%81.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIb8UvC_DCUKBcKCsEEaOugfW8uj-nfASD0IyXyKnZfWSueRtepUvYrfEIeFjvm6Wj4KI';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				熱伝導方程式の導出 熱伝導 物質の移動を伴わずに高温側から低温側へ熱が伝わる現象 対流 輻射 フーリエの法則fourier S Law Ppt Download
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic2.zhimg.com/80/v2-b0bf06fe43b35c4e706f096a51641cb9_1440w.jpg" data-lightbox="roadtrip" data-title="适用于地球物理学研究的传热学与热力学有限元模拟基础 知乎">
+						<img class="card-img" src="https://pic2.zhimg.com/80/v2-b0bf06fe43b35c4e706f096a51641cb9_1440w.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPTXI_-fRl5Fb7Tp51-48uaRYe1fmcqZeCtFDa87vve9UCyu7fkZdWDso5GKba521mAE4';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				适用于地球物理学研究的传热学与热力学有限元模拟基础 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://slidesplayer.com/slide/11636028/62/images/22/3.2+%E9%9B%B6%E7%BB%B4%E9%97%AE%E9%A2%98%E7%9A%84%E5%88%86%E6%9E%90%E6%B3%95%EF%BC%8D%E9%9B%86%E4%B8%AD%E5%8F%82%E6%95%B0%E6%B3%95+1.%E5%AE%9A%E4%B9%89%EF%BC%9A%E5%BF%BD%E7%95%A5%E7%89%A9%E4%BD%93%E5%86%85%E9%83%A8%E5%AF%BC%E7%83%AD%E7%83%AD%E9%98%BB%E3%80%81%E8%AE%A4%E4%B8%BA%E7%89%A9%E4%BD%93%E6%B8%A9%E5%BA%A6%E5%9D%87%E5%8C%80%E4%B8%80%E8%87%B4%E7%9A%84%E5%88%86%E6%9E%90%E6%96%B9%E6%B3%95%E3%80%82%E6%AD%A4%E6%97%B6%EF%BC%8C+%EF%BC%8C%E6%B8%A9%E5%BA%A6%E5%88%86%E5%B8%83%E5%8F%AA%E4%B8%8E%E6%97%B6%E9%97%B4%E6%9C%89%E5%85%B3%EF%BC%8C%E5%8D%B3+%EF%BC%8C%E4%B8%8E%E7%A9%BA%E9%97%B4%E4%BD%8D%E7%BD%AE%E6%97%A0%E5%85%B3%EF%BC%8C%E5%9B%A0%E6%AD%A4%EF%BC%8C%E4%B9%9F%E7%A7%B0%E4%B8%BA%E9%9B%B6%E7%BB%B4%E9%97%AE%E9%A2%98%E3%80%82.jpg" data-lightbox="roadtrip" data-title="第三章非稳态热传导3 1 非稳态导热的基本概念3 2 零维问题的分析法 集中参数法3 3 典型一维物体非稳态导热的分析解 Ppt Download">
+						<img class="card-img" src="https://slidesplayer.com/slide/11636028/62/images/22/3.2+%E9%9B%B6%E7%BB%B4%E9%97%AE%E9%A2%98%E7%9A%84%E5%88%86%E6%9E%90%E6%B3%95%EF%BC%8D%E9%9B%86%E4%B8%AD%E5%8F%82%E6%95%B0%E6%B3%95+1.%E5%AE%9A%E4%B9%89%EF%BC%9A%E5%BF%BD%E7%95%A5%E7%89%A9%E4%BD%93%E5%86%85%E9%83%A8%E5%AF%BC%E7%83%AD%E7%83%AD%E9%98%BB%E3%80%81%E8%AE%A4%E4%B8%BA%E7%89%A9%E4%BD%93%E6%B8%A9%E5%BA%A6%E5%9D%87%E5%8C%80%E4%B8%80%E8%87%B4%E7%9A%84%E5%88%86%E6%9E%90%E6%96%B9%E6%B3%95%E3%80%82%E6%AD%A4%E6%97%B6%EF%BC%8C+%EF%BC%8C%E6%B8%A9%E5%BA%A6%E5%88%86%E5%B8%83%E5%8F%AA%E4%B8%8E%E6%97%B6%E9%97%B4%E6%9C%89%E5%85%B3%EF%BC%8C%E5%8D%B3+%EF%BC%8C%E4%B8%8E%E7%A9%BA%E9%97%B4%E4%BD%8D%E7%BD%AE%E6%97%A0%E5%85%B3%EF%BC%8C%E5%9B%A0%E6%AD%A4%EF%BC%8C%E4%B9%9F%E7%A7%B0%E4%B8%BA%E9%9B%B6%E7%BB%B4%E9%97%AE%E9%A2%98%E3%80%82.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSc_UfgXhJ_2PNtGFh6Lr6zaGSSLXQnL_ZcfOAbi1yM77jMH8urmZcEUUstsHTPv01cV5M';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				第三章非稳态热传导3 1 非稳态导热的基本概念3 2 零维问题的分析法 集中参数法3 3 典型一维物体非稳态导热的分析解 Ppt Download
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic4.zhimg.com/80/v2-f01aa174949acb79c0f9ddbb1679902f_1440w.jpg" data-lightbox="roadtrip" data-title="适用于地球物理学研究的传热学与热力学有限元模拟基础 知乎">
+						<img class="card-img" src="https://pic4.zhimg.com/80/v2-f01aa174949acb79c0f9ddbb1679902f_1440w.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTv-As7H2Chzq1bUxn0euBGGqsQxozpvXovnQWKuscJYXcQYD9EEe2Vdgp1ER5oigdCaws';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				适用于地球物理学研究的传热学与热力学有限元模拟基础 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.easyatm.com.tw/img/e/5ce/nBnauM3X0gzM3UDMxYDM0MzN0QTMwITOzEDMwADMwAjMwIzL2AzL2czLt92YucmbvRWdo5Cd0FmL0E2LvoDc0RHa.jpg" data-lightbox="roadtrip" data-title="熱平衡方程 熱平衡方程是指溫度不同的兩個或幾個系統之間發生熱量的傳遞 直 百科知識中文網">
+						<img class="card-img" src="https://www.easyatm.com.tw/img/e/5ce/nBnauM3X0gzM3UDMxYDM0MzN0QTMwITOzEDMwADMwAjMwIzL2AzL2czLt92YucmbvRWdo5Cd0FmL0E2LvoDc0RHa.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDgxV_xCbpi67Rq47jFXpD7_UpubXrOx9oiw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				熱平衡方程 熱平衡方程是指溫度不同的兩個或幾個系統之間發生熱量的傳遞 直 百科知識中文網
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://p1-tt.byteimg.com/origin/pgc-image/376dcc653ef84d4ca4a1d4f83c4f3f64?from=pc" data-lightbox="roadtrip" data-title="偏微分方程在物理學中的完美應用 熱方程 推導和示例 老胡説科學 Mdeditor">
+						<img class="card-img" src="https://p1-tt.byteimg.com/origin/pgc-image/376dcc653ef84d4ca4a1d4f83c4f3f64?from=pc" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9sotPPrDHRUr3pEAWCG0d8PyycBRqixBoPw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				偏微分方程在物理學中的完美應用 熱方程 推導和示例 老胡説科學 Mdeditor
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://5b0988e595225.cdn.sohucs.com/images/20180226/74acf9afb61f47419497059fb0dda0c9.jpeg" data-lightbox="roadtrip" data-title="传热学主要知识点">
+						<img class="card-img" src="http://5b0988e595225.cdn.sohucs.com/images/20180226/74acf9afb61f47419497059fb0dda0c9.jpeg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbGm3OX9DGldp4H4WS7ZwS-Vz5180ZM4q-sQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				传热学主要知识点
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Triple_expansion_engine_animation.gif/300px-Triple_expansion_engine_animation.gif" data-lightbox="roadtrip" data-title="热力学 维基百科 自由的百科全书">
+						<img class="card-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Triple_expansion_engine_animation.gif/300px-Triple_expansion_engine_animation.gif" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTf_Y1F9T3Le4xNFMpvecbIp7Mrz_1CU6H-Q';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				热力学 维基百科 自由的百科全书
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://slideplayer.com/slide/4901562/16/images/5/%E7%AC%AC%E4%B8%89%E5%80%8B%E9%9A%8E%E6%AE%B5%EF%BC%9A19%E4%B8%96%E7%B4%8070%E5%B9%B4%E6%9C%AB%E5%88%B020%E4%B8%96%E7%B4%80%E5%88%9D+%E9%80%99%E5%80%8B%E6%99%82%E9%96%93%E5%85%A7%EF%BC%8C%E9%A6%96%E5%85%88%E7%94%B1%E6%B3%A2%E8%8C%B2%E6%9B%BC%E5%B0%87%E7%86%B1%E5%8A%9B%E5%AD%B8%E8%88%87%E5%88%86%E5%AD%90%E5%8B%95%E5%8A%9B%E5%AD%B8%E7%9A%84%E7%90%86%E8%AB%96%E7%B5%90%E5%90%88%EF%BC%8C%E8%80%8C%E5%B0%8E%E8%87%B4%E7%B5%B1%E8%A8%88%E7%86%B1%E5%8A%9B%E5%AD%B8%E7%9A%84%E8%AA%95%E7%94%9F%EF%BC%8C%E5%90%8C%E6%99%82%E4%BB%96%E4%B9%9F%E6%8F%90%E5%87%BA%E9%9D%9E%E5%B9%B3%E8%A1%A1%E6%85%8B%E7%9A%84%E7%90%86%E8%AB%96%E5%9F%BA%E7%A4%8E%EF%BC%8C%E8%87%B320%E4%B8%96%E7%B4%80%E5%88%9D%E5%90%89%E5%B8%83%E6%96%AF%28Gibbs%29%E6%8F%90%E5%87%BA%E7%B3%BB%E7%B6%9C%E7%90%86%E8%AB%96%E5%BB%BA%E7%AB%8B%E7%B5%B1%E8%A8%88%E5%8A%9B%E5%AD%B8%E7%9A%84%E5%9F%BA%E7%A4%8E%E3%80%82.jpg" data-lightbox="roadtrip" data-title="熱力學the Laws Of Thermodynamics Ppt Video Online Download">
+						<img class="card-img" src="https://slideplayer.com/slide/4901562/16/images/5/%E7%AC%AC%E4%B8%89%E5%80%8B%E9%9A%8E%E6%AE%B5%EF%BC%9A19%E4%B8%96%E7%B4%8070%E5%B9%B4%E6%9C%AB%E5%88%B020%E4%B8%96%E7%B4%80%E5%88%9D+%E9%80%99%E5%80%8B%E6%99%82%E9%96%93%E5%85%A7%EF%BC%8C%E9%A6%96%E5%85%88%E7%94%B1%E6%B3%A2%E8%8C%B2%E6%9B%BC%E5%B0%87%E7%86%B1%E5%8A%9B%E5%AD%B8%E8%88%87%E5%88%86%E5%AD%90%E5%8B%95%E5%8A%9B%E5%AD%B8%E7%9A%84%E7%90%86%E8%AB%96%E7%B5%90%E5%90%88%EF%BC%8C%E8%80%8C%E5%B0%8E%E8%87%B4%E7%B5%B1%E8%A8%88%E7%86%B1%E5%8A%9B%E5%AD%B8%E7%9A%84%E8%AA%95%E7%94%9F%EF%BC%8C%E5%90%8C%E6%99%82%E4%BB%96%E4%B9%9F%E6%8F%90%E5%87%BA%E9%9D%9E%E5%B9%B3%E8%A1%A1%E6%85%8B%E7%9A%84%E7%90%86%E8%AB%96%E5%9F%BA%E7%A4%8E%EF%BC%8C%E8%87%B320%E4%B8%96%E7%B4%80%E5%88%9D%E5%90%89%E5%B8%83%E6%96%AF%28Gibbs%29%E6%8F%90%E5%87%BA%E7%B3%BB%E7%B6%9C%E7%90%86%E8%AB%96%E5%BB%BA%E7%AB%8B%E7%B5%B1%E8%A8%88%E5%8A%9B%E5%AD%B8%E7%9A%84%E5%9F%BA%E7%A4%8E%E3%80%82.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjxLFpdOyHz-4eYLSwsajFYhG0sViwOmwzEA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				熱力學the Laws Of Thermodynamics Ppt Video Online Download
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic4.zhimg.com/v2-f01aa174949acb79c0f9ddbb1679902f_b.jpg" data-lightbox="roadtrip" data-title="适用于地球物理学研究的传热学与热力学有限元模拟基础 知乎">
+						<img class="card-img" src="https://pic4.zhimg.com/v2-f01aa174949acb79c0f9ddbb1679902f_b.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRk9gpTqpOEq_3IzgU8iqTzdI-MFg77ybaQFg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				适用于地球物理学研究的传热学与热力学有限元模拟基础 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://slidesplayer.com/slide/15940669/88/images/20/4+%E7%89%A9%E7%90%86%E6%84%8F%E4%B9%89+%E6%97%A0%E9%87%8F%E7%BA%B2%E7%83%AD%E9%98%BB+%E6%97%A0%E9%87%8F%E7%BA%B2%E6%97%B6%E9%97%B4+Fo%E8%B6%8A%E5%A4%A7%EF%BC%8C%E7%83%AD%E6%89%B0%E5%8A%A8%E5%B0%B1%E8%83%BD%E8%B6%8A%E6%B7%B1%E5%85%A5%E5%9C%B0%E4%BC%A0%E6%92%AD%E5%88%B0%E7%89%A9%E4%BD%93%E5%86%85%E9%83%A8%EF%BC%8C%E5%9B%A0%E8%80%8C%EF%BC%8C%E7%89%A9%E4%BD%93%E5%90%84%E7%82%B9%E5%9C%B0%E6%B8%A9%E5%BA%A6%E5%B0%B1%E8%B6%8A%E6%8E%A5%E8%BF%91%E5%91%A8%E5%9B%B4%E4%BB%8B%E8%B4%A8%E7%9A%84%E6%B8%A9%E5%BA%A6%E3%80%82.jpg" data-lightbox="roadtrip" data-title="热量传递的三种基本方式 导热 热传导 对流 热对流 和热辐射 Ppt Download">
+						<img class="card-img" src="https://slidesplayer.com/slide/15940669/88/images/20/4+%E7%89%A9%E7%90%86%E6%84%8F%E4%B9%89+%E6%97%A0%E9%87%8F%E7%BA%B2%E7%83%AD%E9%98%BB+%E6%97%A0%E9%87%8F%E7%BA%B2%E6%97%B6%E9%97%B4+Fo%E8%B6%8A%E5%A4%A7%EF%BC%8C%E7%83%AD%E6%89%B0%E5%8A%A8%E5%B0%B1%E8%83%BD%E8%B6%8A%E6%B7%B1%E5%85%A5%E5%9C%B0%E4%BC%A0%E6%92%AD%E5%88%B0%E7%89%A9%E4%BD%93%E5%86%85%E9%83%A8%EF%BC%8C%E5%9B%A0%E8%80%8C%EF%BC%8C%E7%89%A9%E4%BD%93%E5%90%84%E7%82%B9%E5%9C%B0%E6%B8%A9%E5%BA%A6%E5%B0%B1%E8%B6%8A%E6%8E%A5%E8%BF%91%E5%91%A8%E5%9B%B4%E4%BB%8B%E8%B4%A8%E7%9A%84%E6%B8%A9%E5%BA%A6%E3%80%82.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSl0PZCJoEzQKoGzsw8XHT9iqqw_MwQkrYcwA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				热量传递的三种基本方式 导热 热传导 对流 热对流 和热辐射 Ppt Download
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://i1.kknews.cc/SIG=67a5bu/ctp-vzntr/08162q15r7r74op9941r580rr9pn1924.jpg" data-lightbox="roadtrip" data-title="成功逆轉 熱力學時間箭頭 方向 讓熱從冷物體流向熱物體 每日頭條">
+						<img class="card-img" src="https://i1.kknews.cc/SIG=67a5bu/ctp-vzntr/08162q15r7r74op9941r580rr9pn1924.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7dzwQRZ2KCZ1rFYf9EloYTmoFHQHBLVMpBg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				成功逆轉 熱力學時間箭頭 方向 讓熱從冷物體流向熱物體 每日頭條
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic4.zhimg.com/v2-0e96009b2ae19c2f67fe087f5165b02d_ipico.jpg?source=172ae18b" data-lightbox="roadtrip" data-title="一 二 三維球體的熱擴散 上 知乎">
+						<img class="card-img" src="https://pic4.zhimg.com/v2-0e96009b2ae19c2f67fe087f5165b02d_ipico.jpg?source=172ae18b" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgLGuCi4RsqT-XYYtNu6OD95P2SarZCB6Y5w';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				一 二 三維球體的熱擴散 上 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://images2017.cnblogs.com/blog/1230458/201709/1230458-20170901153150405-1594694318.jpg" data-lightbox="roadtrip" data-title="第一章热传导方程 简单快乐 Csdn博客">
+						<img class="card-img" src="https://images2017.cnblogs.com/blog/1230458/201709/1230458-20170901153150405-1594694318.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5cstc-V1YSmRGxVeoVUTtkLD1Afhm2IkVhQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				第一章热传导方程 简单快乐 Csdn博客
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.newton.com.tw/img/f/ef3/cGcq5CZ2IjNiFjZjZWZ3EmNjN2NlVTN3YTZldDZkVTZ1MTN4IjN1QmMjVGNv0WZ0l2LjlGcvU2apFmYv02bj5SdklWYi5yYyN3Ztl2LvoDc0RHa.jpg" data-lightbox="roadtrip" data-title="熱平衡 單個系統內 兩個系統間 三個系統間 熱平衡定律 熱平衡計算 相關延伸 機體 中文百科全書">
+						<img class="card-img" src="https://www.newton.com.tw/img/f/ef3/cGcq5CZ2IjNiFjZjZWZ3EmNjN2NlVTN3YTZldDZkVTZ1MTN4IjN1QmMjVGNv0WZ0l2LjlGcvU2apFmYv02bj5SdklWYi5yYyN3Ztl2LvoDc0RHa.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0QeSIZyu4LH0IPRCKlUyq4urRo25qlfhb9Q';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				熱平衡 單個系統內 兩個系統間 三個系統間 熱平衡定律 熱平衡計算 相關延伸 機體 中文百科全書
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://image.isu.pub/201201054540-b5af972c3a28764be5b5fbfd6ff58ab3/jpg/page_1.jpg" data-lightbox="roadtrip" data-title="第九期 沒人懂的量子世界by Ntucase Issuu">
+						<img class="card-img" src="https://image.isu.pub/201201054540-b5af972c3a28764be5b5fbfd6ff58ab3/jpg/page_1.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrs77_Hcnoyjne0nlvAOMcctrdksiwQIWKSg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				第九期 沒人懂的量子世界by Ntucase Issuu
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://image3.slideserve.com/5821930/slide27-l.jpg" data-lightbox="roadtrip" data-title="Ppt 第二篇数学物理方程powerpoint Presentation Free Download Id 5821930">
+						<img class="card-img" src="https://image3.slideserve.com/5821930/slide27-l.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqN5KAlkfjKsIAgOHzMQrcgf2SFam_cgcyNA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Ppt 第二篇数学物理方程powerpoint Presentation Free Download Id 5821930
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+		
+	</div>
+
+		 
+		
+		
+				</div>
+				<div class="col-sm-12 widget">
+					<div class="d-block p-4">
+	<center>
+		<!-- BOTTOM BANNER ADS -->
+<script async="async" data-cfasync="false" src="//jc32arlvqpv8.com/eb47a424ae325c90cca32780149785c3/invoke.js"></script>
+<div id="container-eb47a424ae325c90cca32780149785c3"></div>
+
+	</center>
+</div>				</div>
+			</div>
+			<div class="row footer">
+				<div class="col-md-12 text-center py-4">
+										<a href="/p/dmca.html">Dmca</a>
+										<a href="/p/contact.html">Contact</a>
+										<a href="/p/privacy-policy.html">Privacy Policy</a>
+										<a href="/p/copyright.html">Copyright</a>
+					
+				</div>
+			</div>
+		</main>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js" integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js" integrity="sha256-CtKylYan+AJuoH8jrMht1+1PMhMqrKnB8K5g012WN5I=" crossorigin="anonymous"></script>
+		
+		<!-- Footer CSS JS -->
+		
+		
+		
+			<script type='text/javascript' src='//jc32arlvqpv8.com/ef/d5/10/efd510237a3143727bed46803ec35b8d.js'></script>
+</body>
+</html>

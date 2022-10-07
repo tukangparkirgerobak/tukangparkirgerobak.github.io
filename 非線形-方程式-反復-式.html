@@ -1,0 +1,682 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha256-L/W5Wfqfa0sdBNIKN9cG6QA5F2qx4qICmU2VgLruv9Y=" crossorigin="anonymous" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/css/lightbox.min.css" integrity="sha256-tBxlolRHP9uMsEFKVk+hk//ekOlXOixLKvye5W2WR5c=" crossorigin="anonymous" />
+		<link href="https://fonts.googleapis.com/css?family=Mr+Dafoe" rel="stylesheet" type="text/css">
+
+		<style type="text/css">
+			html,body{font-family:"Open Sans",Arial,sans-serif;font-size:14px;font-weight:400;background:#f3f3f3 url(http://163.13.111.54/numerical_methods/nm_units/root_finding_basic_ideas_n_bisection_fig_01.gif
+) no-repeat center center fixed;background-size:cover;height:100%}#title{font-family:"Mr Dafoe",Times,serif;font-size:34px;background:rgba(255,255,255,.8);margin-bottom:34px}.header{padding-bottom:13px;margin-bottom:13px;border-bottom:1px solid #eee}a{color:#26ADE4;text-decoration:none}#title a{color:#333;margin-left:21px}#title a:hover{text-decoration:none;color:#26ADE4}.sidebar ul{margin:0;padding:0}.sidebar ul li{list-style:none}.footer{margin-top:21px;padding-top:13px;border-top:1px solid #eee}.footer a{margin:0 15px}.navi{margin:13px 0 13px 0;padding:13px}.navi a{margin:5px 2px;font-size:95%}.main{margin-top: 6rem;}.form-inline .form-control{min-width: 300px;}.v-cover{height: 380px; object-fit: cover;}.v-image{height: 200px; object-fit: cover;}.dwn-cover{max-height: 460px; object-fit: cover;}.main{margin-top: 6rem;}.form-inline .form-control{min-width: 300px;}			
+		</style>
+
+		<title>非線形 方程式 反復 式</title>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/", 
+  "@type": "Article", 
+  "author": {
+    "@type": "Person",
+    "name": "James"
+  },
+  "headline": "非線形 方程式 反復 式",
+  "datePublished": "2021-04-24",
+  "image": [https://mmbiz.qpic.cn/mmbiz_png/x0yLiaf5fF6xM3icydjt6T2jcSFItyAI0icojz7yDdmEiaic61JvPFkKGOYibxv4pMsibCgctkxJtS0dHprMJ4NnOIhgA/640?wx_fmt=png&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1,https://img2020.cnblogs.com/blog/1761941/202004/1761941-20200424135630795-2118054742.png,https://slidesplayer.com/15920657/88/images/slide_1.jpg],
+  "publisher": {
+    "@type": "Organization",
+    "name": "Tukang Parkir Gerobak",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://via.placeholder.com/512.png?text=非線形 方程式 反復 式",
+      "width": 512,
+      "height": 512
+    }
+  }
+}
+</script>
+		<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-957NGNKQ70"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-957NGNKQ70');
+</script>
+
+<script type='text/javascript' src='//jc32arlvqpv8.com/1a/82/2e/1a822ef8a40a0fbab3c4ea12a5d2bb02.js'></script>
+</head>
+	<body>
+		<header class="bg-white fixed-top">			
+			<nav class="navbar navbar-light bg-white mb-0">
+				<div class="container justify-content-center justify-content-sm-between">	
+				  <a href="/" title="Blog" class="navbar-brand mb-1">Blog</a>
+				  				</div>			  
+			</nav>				
+		</header>
+		<main class="main container bg-white">
+			<div class="col-md-12 my-4" align="center">
+				<div class="d-block p-4">
+	<br/><center>
+<!-- TOP BANNER ADS -->
+</center><br/>
+</div>			</div>
+			<div class="row header">
+				<div class="col-sm-12 text-center p-2">
+						<h1>非線形 方程式 反復 式</h1>
+
+	
+	<div class="navi text-center">
+										<a class="badge badge-info" href="/%E8%A4%87%E7%B4%A0%E6%95%B0%E5%B9%B3%E9%9D%A2-%E3%81%A7%E8%A7%A3%E3%81%8F-%E5%9B%B3%E5%BD%A2%E3%81%A8%E6%96%B9%E7%A8%8B%E5%BC%8F-%E3%83%96%E3%83%AD%E3%82%B0.html">複素数平面 で解く 図形と方程式 ブログ</a>
+											<a class="badge badge-warning" href="/%E8%AA%95%E7%94%9F%E6%97%A5%E3%83%97%E3%83%AC%E3%82%BC%E3%83%B3%E3%83%88-%E6%89%8B%E4%BD%9C%E3%82%8A-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%B8.html">誕生日プレゼント 手作り お父さんへ</a>
+											<a class="badge badge-warning" href="/%E9%9F%93%E5%9B%BD%E3%83%89%E3%83%A9%E3%83%9E-%E9%81%A9%E9%BD%A2%E6%9C%9F%E6%83%91%E3%80%85%E3%83%AD%E3%83%9E%E3%83%B3%E3%82%B9-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%8C%E5%A4%89-%E3%82%B9%E3%83%9A%E3%82%B7%E3%83%A3%E3%83%AB-%E3%82%A8%E3%83%87%E3%82%A3%E3%82%B7%E3%83%A7%E3%83%B3.html">韓国ドラマ 適齢期惑々ロマンス お父さんが変 スペシャル エディション</a>
+											<a class="badge badge-secondary" href="/%E6%9C%80%E5%B0%8F2%E4%B9%97%E6%B3%95-%E6%AD%A3%E8%A6%8F%E6%96%B9%E7%A8%8B%E5%BC%8F-2%E6%AC%A1-%E5%B0%8E%E5%87%BA.html">最小2乗法 正規方程式 2次 導出</a>
+											<a class="badge badge-secondary" href="/%E7%B4%A0%E4%BA%BA%E3%81%8A%E5%AC%A2%E3%81%95%E3%82%93-%E3%83%A9%E3%83%83%E3%83%971%E6%9E%9A%E9%9A%94%E3%81%A6%E3%81%A6%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%A8%E7%B4%A0%E8%82%A1%E4%BD%93%E9%A8%93%E3%81%97%E3%81%A6%E3%81%BF%E3%81%BE%E3%81%9B%E3%82%93%E3%81%8B-5.html">素人お嬢さん ラップ1枚隔ててお父さんと素股体験してみませんか 5</a>
+											<a class="badge badge-info" href="/%E9%AB%98%E6%A0%A1%E6%95%B0%E5%AD%A6-%E6%95%B4%E6%96%B9%E7%A8%8B%E5%BC%8F.html">高校数学 整方程式</a>
+											<a class="badge badge-secondary" href="/%E6%A1%90%E8%A3%BD-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%AE%E3%81%B2%E3%81%98%E6%8E%9B%E3%81%91.html">桐製 お父さんのひじ掛け</a>
+											<a class="badge badge-success" href="/%E9%AB%98%E6%AC%A1%E6%96%B9%E7%A8%8B%E5%BC%8F-%E8%A7%A3%E3%81%91%E3%81%AA%E3%81%84-%E7%90%86%E7%94%B1.html">高次方程式 解けない 理由</a>
+											<a class="badge badge-dark" href="/%E9%AB%98%E6%AC%A1%E6%96%B9%E7%A8%8B%E5%BC%8F-%E9%87%8D%E8%A7%A3.html">高次方程式 重解</a>
+											<a class="badge badge-secondary" href="/%E6%9C%9D-%E3%81%AE-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93-%E6%AD%8C.html">朝 の お父さん 歌</a>
+											<a class="badge badge-info" href="/%E7%A9%BA%E9%96%93-%E5%86%85-%E3%81%AE-%E5%86%86-%E3%81%AE-%E6%96%B9%E7%A8%8B%E5%BC%8F.html">空間 内 の 円 の 方程式</a>
+											<a class="badge badge-light" href="/%E9%80%9F%E3%81%95-%E3%83%9E%E3%82%A4%E3%83%8A%E3%82%B9%E3%81%AB%E3%81%AA%E3%82%8B-%E6%96%B9%E7%A8%8B%E5%BC%8F.html">速さ マイナスになる 方程式</a>
+											<a class="badge badge-danger" href="/%E6%98%AD%E5%92%8C-%E5%91%BC%E3%81%B3%E6%96%B9-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93-%E3%81%8A%E7%88%B6%E6%A7%98.html">昭和 呼び方 お父さん お父様</a>
+											<a class="badge badge-danger" href="/%E8%A4%87%E7%B4%A0%E6%95%B0%E3%81%A8%E6%96%B9%E7%A8%8B%E5%BC%8F-%E5%89%B2%E3%82%8A%E7%AE%97-%E7%AD%86%E7%AE%97.html">複素数と方程式 割り算 筆算</a>
+											<a class="badge badge-info" href="/%E8%B5%A4%E3%81%A1%E3%82%83%E3%82%93-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%AE%E5%A4%B1%E6%95%97-%E7%88%86%E7%AC%91.html">赤ちゃん お父さんの失敗 爆笑</a>
+						</div>
+<center>
+	<!-- MIDDLE BANNER ADS -->
+<script type="text/javascript">
+	atOptions = {
+		'key' : '2b77887421e2587a1a1b1d7c8a31a9e0',
+		'format' : 'iframe',
+		'height' : 250,
+		'width' : 300,
+		'params' : {}
+	};
+	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://jc32arlvqpv8.com/2b77887421e2587a1a1b1d7c8a31a9e0/invoke.js"></scr' + 'ipt>');
+</script>
+		
+	</center>
+					
+				</div>
+			</div>
+			<div class="row content mb-4">
+				<div class="col-md-12">					
+					
+	
+	<div class="card-columns">
+						
+	  <div class='card'>
+	  	<a href="https://slidesplayer.com/15920657/88/images/slide_1.jpg" data-lightbox="roadtrip" data-title="第二章非线性方程的数值解法非线性方程n次代数方程 超越方程 N 1 2 N 3 4 N 5 求根公式查数学手册 如 Ppt Download">
+						<img class="card-img" src="https://slidesplayer.com/15920657/88/images/slide_1.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5Q8g5b24ZnW4PtLIHHdQkbc0-1fW-kdtdMM3Zu0FJhPxyxdkh6xvQvbUUaoKUVZ2j23c';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				第二章非线性方程的数值解法非线性方程n次代数方程 超越方程 N 1 2 N 3 4 N 5 求根公式查数学手册 如 Ppt Download
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic1.xuehuaimg.com/proxy/csdn/https://img-blog.csdn.net/20171023224110185" data-lightbox="roadtrip" data-title="牛頓 拉夫遜簡單解釋 台部落">
+						<img class="card-img" src="https://pic1.xuehuaimg.com/proxy/csdn/https://img-blog.csdn.net/20171023224110185" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRy9mfDwF9e2Mu9FHLOtaX_ZHljD1blg-yGqm3Aa6JIqVotcLCG6R42IDbNWN1uoFW0TLk';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				牛頓 拉夫遜簡單解釋 台部落
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://i0.wp.com/4.bp.blogspot.com/-shCnl6Ki-YM/XZO2JXTSHTI/AAAAAAAAADw/qQabz7FuBR0opo0lpV1CB851D_3qJNW9ACLcBGAsYHQ/s1600/Fig.4.1.png" data-lightbox="roadtrip" data-title="Matlab 方程式近似解連立1次方程式 Liudong">
+						<img class="card-img" src="https://i0.wp.com/4.bp.blogspot.com/-shCnl6Ki-YM/XZO2JXTSHTI/AAAAAAAAADw/qQabz7FuBR0opo0lpV1CB851D_3qJNW9ACLcBGAsYHQ/s1600/Fig.4.1.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTB3iTyXlzv7N6qLn0uWpiZC99wNAxAkotVuusFjRDOe9EgvkSbanfFJNLiC72Wncfz9qc';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Matlab 方程式近似解連立1次方程式 Liudong
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.kushiro-ct.ac.jp/yanagawa/na-2016/iterative/fig/nt.png" data-lightbox="roadtrip" data-title="非線形方程式の反復解法">
+						<img class="card-img" src="https://www.kushiro-ct.ac.jp/yanagawa/na-2016/iterative/fig/nt.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgFn6zjEhZo5ztFuRjuKuOsBWEtJ1ZDEjzw8eRwnTcfNVpgWqfblj_fBSAFV4hS8H7bIs';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				非線形方程式の反復解法
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://i0.wp.com/inews.gtimg.com/newsapp_bt/0/11496064132/1000" data-lightbox="roadtrip" data-title="超越方程式解法關于超越方程的解法 Jvvx">
+						<img class="card-img" src="https://i0.wp.com/inews.gtimg.com/newsapp_bt/0/11496064132/1000" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmFrXYEmWThrPx6p-CpNoRH4LiIPY_FXSWrSlp4gxRQyuzMImyNs9lV9Ylly27GqNLyQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				超越方程式解法關于超越方程的解法 Jvvx
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://slidesplayer.net/slide/17717577/105/images/2/%E9%9D%9E%E7%B7%9A%E5%BD%A2%E6%96%B9%E7%A8%8B%E5%BC%8F%E3%81%A8%E3%81%AF%EF%BC%9F+%E6%96%B9%E7%A8%8B%E5%BC%8F+f%EF%BC%88x%EF%BC%89%EF%BC%9D%EF%BC%90+%EF%BC%88f%EF%BC%88x%EF%BC%89%E3%81%AFx%E3%81%AE%E9%96%A2%E6%95%B0%EF%BC%89+f%EF%BC%88x%EF%BC%89%E3%81%AF%E7%B7%9A%E5%BD%A2%EF%BC%88%E4%B8%80%E6%AC%A1%EF%BC%89+%EF%83%B3+f%EF%BC%88x%EF%BC%89%EF%BC%9Dax+%2B+b.jpg" data-lightbox="roadtrip" data-title="非線形方程式に対する 反復解法 Ppt Download">
+						<img class="card-img" src="https://slidesplayer.net/slide/17717577/105/images/2/%E9%9D%9E%E7%B7%9A%E5%BD%A2%E6%96%B9%E7%A8%8B%E5%BC%8F%E3%81%A8%E3%81%AF%EF%BC%9F+%E6%96%B9%E7%A8%8B%E5%BC%8F+f%EF%BC%88x%EF%BC%89%EF%BC%9D%EF%BC%90+%EF%BC%88f%EF%BC%88x%EF%BC%89%E3%81%AFx%E3%81%AE%E9%96%A2%E6%95%B0%EF%BC%89+f%EF%BC%88x%EF%BC%89%E3%81%AF%E7%B7%9A%E5%BD%A2%EF%BC%88%E4%B8%80%E6%AC%A1%EF%BC%89+%EF%83%B3+f%EF%BC%88x%EF%BC%89%EF%BC%9Dax+%2B+b.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTimYUcP9zDUW8sip6TO73uVmvmuPtdCWG1GexfK9AGIYCa9ixoaOjQzoY3yZ3HA4x-FGU';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				非線形方程式に対する 反復解法 Ppt Download
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+				<div class='card'>	
+			<div class="d-block p-4">
+	</div>		  	
+		  	<h3 class="h6 p-2"><b></b></h3>
+					</div>
+		
+						
+	  <div class='card'>
+	  	<a href="https://i0.wp.com/inews.gtimg.com/newsapp_bt/0/11496064129/1000" data-lightbox="roadtrip" data-title="超越方程式解法關于超越方程的解法 Jvvx">
+						<img class="card-img" src="https://i0.wp.com/inews.gtimg.com/newsapp_bt/0/11496064129/1000" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTz2w9_mold1myD7L6XUXBXNEwWSfCCvOLyKr8HLa2PFxpF_KtVC9xm8-IaxH0EJIc3Ag';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				超越方程式解法關于超越方程的解法 Jvvx
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://slidesplayer.com/slide/16472406/96/images/3/%E7%AC%AC%E5%8D%81%E4%B8%80%E7%AB%A0+%E9%9D%9E%E7%BA%BF%E6%80%A7%E8%8D%AF%E7%89%A9%E5%8A%A8%E5%8A%9B%E5%AD%A6+%E4%B8%80%E3%80%81%E9%9D%9E%E7%BA%BF%E6%80%A7%E8%8D%AF%E7%89%A9%E5%8A%A8%E5%8A%9B%E5%AD%A6%E7%8E%B0%E8%B1%A1+%E8%8D%AF%E7%89%A9%E8%BD%AC%E8%BF%90%E7%9A%84%E9%80%9F%E5%BA%A6%E8%BF%87%E7%A8%8B+%E7%AC%AC%E4%B8%80%E8%8A%82+%E6%A6%82%E8%BF%B0+0+%E7%BA%A7%E9%80%9F%E5%BA%A6%E8%BF%87%E7%A8%8B+1+%E7%BA%A7%E9%80%9F%E5%BA%A6%E8%BF%87%E7%A8%8B.jpg" data-lightbox="roadtrip" data-title="第十一章非线性药物动力学第一节概述第二节非线性药物动力学方程第三节非线性消除过程血药浓度与时间的关系及参数计算 Ppt Download">
+						<img class="card-img" src="https://slidesplayer.com/slide/16472406/96/images/3/%E7%AC%AC%E5%8D%81%E4%B8%80%E7%AB%A0+%E9%9D%9E%E7%BA%BF%E6%80%A7%E8%8D%AF%E7%89%A9%E5%8A%A8%E5%8A%9B%E5%AD%A6+%E4%B8%80%E3%80%81%E9%9D%9E%E7%BA%BF%E6%80%A7%E8%8D%AF%E7%89%A9%E5%8A%A8%E5%8A%9B%E5%AD%A6%E7%8E%B0%E8%B1%A1+%E8%8D%AF%E7%89%A9%E8%BD%AC%E8%BF%90%E7%9A%84%E9%80%9F%E5%BA%A6%E8%BF%87%E7%A8%8B+%E7%AC%AC%E4%B8%80%E8%8A%82+%E6%A6%82%E8%BF%B0+0+%E7%BA%A7%E9%80%9F%E5%BA%A6%E8%BF%87%E7%A8%8B+1+%E7%BA%A7%E9%80%9F%E5%BA%A6%E8%BF%87%E7%A8%8B.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2GTsIR8kjo1dULiMSRSDOKRD_Rbp0PRp_mPsgsClDCoE3oWBaIrk9gznn-fIBORwEVvo';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				第十一章非线性药物动力学第一节概述第二节非线性药物动力学方程第三节非线性消除过程血药浓度与时间的关系及参数计算 Ppt Download
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://163.13.111.54/numerical_methods/nm_units/root_finding_basic_ideas_n_bisection_fig_01.gif" data-lightbox="roadtrip" data-title="方程式求根 問題剖析 地毯式搜尋 二分法">
+						<img class="card-img" src="http://163.13.111.54/numerical_methods/nm_units/root_finding_basic_ideas_n_bisection_fig_01.gif" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZpfsq2rZSRvvr4lgyusrbOECzUPvAvYYg7L9QTyQbr4Vnzeuk7pRFQ_MckfNaZOZt6mU';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				方程式求根 問題剖析 地毯式搜尋 二分法
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://img-blog.csdn.net/20180708170103792?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1JlYm9ybl9MZWU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" data-lightbox="roadtrip" data-title="非线性方程求根的牛顿法 Reborn Lee Csdn博客">
+						<img class="card-img" src="https://img-blog.csdn.net/20180708170103792?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1JlYm9ybl9MZWU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFRdEFeUsEaNN_HVEnkcRGIwWY-akqtIk3XKBI5aXsVnYvNO1naPMWoh-AQOhce71SfMQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				非线性方程求根的牛顿法 Reborn Lee Csdn博客
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://swf.ishare.down.sina.com.cn/1kU0oguSjr.jpg?ssig=XMMYU1lph2&amp;Expires=1619736449&amp;KID=sina,ishare&amp;range=966161-1219142" data-lightbox="roadtrip" data-title="船舶迴旋運 動分析下载 Ppt模板 爱问共享资料">
+						<img class="card-img" src="https://swf.ishare.down.sina.com.cn/1kU0oguSjr.jpg?ssig=XMMYU1lph2&amp;Expires=1619736449&amp;KID=sina,ishare&amp;range=966161-1219142" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhL5k-E8kcEpzOVkl-ueUuRsYdtJEWC6wTNcfyfGP4EI1guWL3jnsng4WGBJ73SZiW5j8';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				船舶迴旋運 動分析下载 Ppt模板 爱问共享资料
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic4.zhimg.com/v2-ab67a6ad85cccfff108323264ba3d51c_720w.jpg?source=172ae18b" data-lightbox="roadtrip" data-title="第7章非线性方程与方程组的数值解法 基于matlab 知乎">
+						<img class="card-img" src="https://pic4.zhimg.com/v2-ab67a6ad85cccfff108323264ba3d51c_720w.jpg?source=172ae18b" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiSP2AsjZlDTedO-uoDztJUW8vLTh7ydRddE2fd3AV60Lwe9HQ8a8-00XjuY6tZ-f94_U';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				第7章非线性方程与方程组的数值解法 基于matlab 知乎
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://image3.slideserve.com/6643248/slide26-l.jpg" data-lightbox="roadtrip" data-title="Ppt 工程數學engineering Mathematics Powerpoint Presentation Free Download Id 6643248">
+						<img class="card-img" src="https://image3.slideserve.com/6643248/slide26-l.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4QnCFhtLnVxmTJRgut1k-knofc7g8I8AZSJ5Sr8aAPTnm2IJrD1ChUUnuxGDCAKrJm_k';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Ppt 工程數學engineering Mathematics Powerpoint Presentation Free Download Id 6643248
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://mmbiz.qpic.cn/mmbiz_png/x0yLiaf5fF6xM3icydjt6T2jcSFItyAI0icojz7yDdmEiaic61JvPFkKGOYibxv4pMsibCgctkxJtS0dHprMJ4NnOIhgA/640?wx_fmt=png&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" data-lightbox="roadtrip" data-title="Simsolid訣竅 非線性總述 Altair Taiwan Blog 痞客邦">
+						<img class="card-img" src="https://mmbiz.qpic.cn/mmbiz_png/x0yLiaf5fF6xM3icydjt6T2jcSFItyAI0icojz7yDdmEiaic61JvPFkKGOYibxv4pMsibCgctkxJtS0dHprMJ4NnOIhgA/640?wx_fmt=png&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTnp6cfYLYsyFFZi_1Km16EsVSTs9gvwtEguQ_1Em3bZtcFfMBWQffzUhtFY6bE5I7pqw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Simsolid訣竅 非線性總述 Altair Taiwan Blog 痞客邦
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://img2020.cnblogs.com/blog/1761941/202004/1761941-20200424135630795-2118054742.png" data-lightbox="roadtrip" data-title="形象地展示訊號與系統中的一些細節和原理 卷積 複數 傅里葉變換 拉普拉斯變換 零極圖唯一確定因果lti系統 Codingnote Cc">
+						<img class="card-img" src="https://img2020.cnblogs.com/blog/1761941/202004/1761941-20200424135630795-2118054742.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSU6yVkslYqnAuyUJSwzGVNioKeaTBpp4Flu0F9qzbqpuEyXRPjidxF_w44_d35aAGD4Ac';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				形象地展示訊號與系統中的一些細節和原理 卷積 複數 傅里葉變換 拉普拉斯變換 零極圖唯一確定因果lti系統 Codingnote Cc
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://slidetodoc.com/presentation_image_h/a03dc60ba17b52bc870e6f49ea57ee89/image-13.jpg" data-lightbox="roadtrip" data-title="1 5 5000000000 E00 1 138 E01 2">
+						<img class="card-img" src="https://slidetodoc.com/presentation_image_h/a03dc60ba17b52bc870e6f49ea57ee89/image-13.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9dcW2tTNLABDQIROPOZroOA6-aqdiGcAIfBAoK7PYVz8oqeKpMnOOaZgYjE7B5EhL3ms';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				1 5 5000000000 E00 1 138 E01 2
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://patentimages.storage.googleapis.com/31/d2/00/e4160bcf24de04/JPOXMLDOC01-appb-M000022.png" data-lightbox="roadtrip" data-title="Wo2014045368a1 Method For Setting Equivalent Fissile Coefficient Google Patents">
+						<img class="card-img" src="https://patentimages.storage.googleapis.com/31/d2/00/e4160bcf24de04/JPOXMLDOC01-appb-M000022.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUmUOUm-TM3_PTCtOIMOy49xJp1Gk-1_-cA__AP1nJ9wPQkM1uzbPhgLXyYv7I68zQqQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Wo2014045368a1 Method For Setting Equivalent Fissile Coefficient Google Patents
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://i0.wp.com/i.imgur.com/JeaY3sH.png" data-lightbox="roadtrip" data-title="Matlab 方程式近似解連立1次方程式 Liudong">
+						<img class="card-img" src="https://i0.wp.com/i.imgur.com/JeaY3sH.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLTKPq2JSz9R3eVF16nu2BnysYDx7IHtKiYVMjImRQ3xm-pSaMbTKDpgbE3UOQFv8wDPc';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Matlab 方程式近似解連立1次方程式 Liudong
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://swf.ishare.down.sina.com.cn/xUnfq0pXY9w.jpg?ssig=WvskQfNHf1&amp;Expires=1618844359&amp;KID=sina,ishare&amp;range=92816-364401" data-lightbox="roadtrip" data-title="Sup曲线拟合与回归分析ppt课件下载 Ppt模板 爱问共享资料">
+						<img class="card-img" src="https://swf.ishare.down.sina.com.cn/xUnfq0pXY9w.jpg?ssig=WvskQfNHf1&amp;Expires=1618844359&amp;KID=sina,ishare&amp;range=92816-364401" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaRsAVYEfV2eWqQV6k4WQeDWVIEfEMesJhO0B6KMwRUE8xvGXuAsJGkwJDmrroS1qSuqo';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Sup曲线拟合与回归分析ppt课件下载 Ppt模板 爱问共享资料
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://image2.slideserve.com/4691999/slide1-n.jpg" data-lightbox="roadtrip" data-title="Ppt 非線形方程式に対する 反復解法 Powerpoint Presentation Id 4691999">
+						<img class="card-img" src="https://image2.slideserve.com/4691999/slide1-n.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSs0ZLu4vztdSSUNeQYvXNfLrhSUUl674trXnlxCAfzU7I1HxxFAOB2mFxYw5nriCbhyM4';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Ppt 非線形方程式に対する 反復解法 Powerpoint Presentation Id 4691999
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://i0.wp.com/2.bp.blogspot.com/-M7EXVGvN8-Y/XZO2ThEGBhI/AAAAAAAAAD0/xJhXyYwLkYUw1qG7CQqKxwtuo8__jw8GwCLcBGAsYHQ/w1200-h630-p-k-no-nu/C4_ex01.png" data-lightbox="roadtrip" data-title="Matlab 方程式近似解連立1次方程式 Liudong">
+						<img class="card-img" src="https://i0.wp.com/2.bp.blogspot.com/-M7EXVGvN8-Y/XZO2ThEGBhI/AAAAAAAAAD0/xJhXyYwLkYUw1qG7CQqKxwtuo8__jw8GwCLcBGAsYHQ/w1200-h630-p-k-no-nu/C4_ex01.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToFxdQwUn2R_gQASc0_aGqe-SbYdBMK9DCsA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Matlab 方程式近似解連立1次方程式 Liudong
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://i0.wp.com/jp.mathworks.com/help/symbolic/ugztransforms_f1-123225_002.png" data-lightbox="roadtrip" data-title="Matlab 方程式近似解連立1次方程式 Liudong">
+						<img class="card-img" src="https://i0.wp.com/jp.mathworks.com/help/symbolic/ugztransforms_f1-123225_002.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwKbUmpE3O-3dga8SJY1LM-BeAk3M6metzZA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Matlab 方程式近似解連立1次方程式 Liudong
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://slidetodoc.com/presentation_image_h/a03dc60ba17b52bc870e6f49ea57ee89/image-12.jpg" data-lightbox="roadtrip" data-title="1 5 5000000000 E00 1 138 E01 2">
+						<img class="card-img" src="https://slidetodoc.com/presentation_image_h/a03dc60ba17b52bc870e6f49ea57ee89/image-12.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOJoIONA17KGbx1w1-spKW3yARSb31NPYPfg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				1 5 5000000000 E00 1 138 E01 2
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://img-blog.csdn.net/20180708165855873?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1JlYm9ybl9MZWU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" data-lightbox="roadtrip" data-title="非线性方程求根的牛顿法 Reborn Lee Csdn博客">
+						<img class="card-img" src="https://img-blog.csdn.net/20180708165855873?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1JlYm9ybl9MZWU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSi0Vh8KjPQcWMl7kkyP1JL35HbqJ_xS80DnQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				非线性方程求根的牛顿法 Reborn Lee Csdn博客
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://patentimages.storage.googleapis.com/85/14/a1/d8d92c6d354d1a/JPOXMLDOC01-appb-M000014.png" data-lightbox="roadtrip" data-title="Wo2011129288a1 Terrestrial Magnetism Detection Device Google Patents">
+						<img class="card-img" src="https://patentimages.storage.googleapis.com/85/14/a1/d8d92c6d354d1a/JPOXMLDOC01-appb-M000014.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUvHGDTVtbrSNda-CXsAHfxt5AvXYZqA-ETA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Wo2011129288a1 Terrestrial Magnetism Detection Device Google Patents
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://files.speakerdeck.com/presentations/bc292903227e454aa1d95038da80e4df/slide_17.jpg" data-lightbox="roadtrip" data-title="第8回 Dirichlet分布のパラメータ推定 Speaker Deck">
+						<img class="card-img" src="https://files.speakerdeck.com/presentations/bc292903227e454aa1d95038da80e4df/slide_17.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTJa8pMqKIXGvQ8UgXn5eQ-r6FQ8cXbk4nOQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				第8回 Dirichlet分布のパラメータ推定 Speaker Deck
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://chemeng.web.fc2.com/calc/pr02vb.png" data-lightbox="roadtrip" data-title="圧縮係数 ホームページプログラミング">
+						<img class="card-img" src="https://chemeng.web.fc2.com/calc/pr02vb.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPGxBIfYgDwonyxFeBo1LQtHFHhJOAQhFXrA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				圧縮係数 ホームページプログラミング
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://3.bp.blogspot.com/_AKoRtiUzO94/SbxnhqZKrZI/AAAAAAAAABY/C3uRjLRqkNU/w1200-h630-p-k-no-nu/600px-Logistic-curve_svg.jpg" data-lightbox="roadtrip" data-title="為了美麗的地面 邏輯迴歸分析 Logistic Regression">
+						<img class="card-img" src="http://3.bp.blogspot.com/_AKoRtiUzO94/SbxnhqZKrZI/AAAAAAAAABY/C3uRjLRqkNU/w1200-h630-p-k-no-nu/600px-Logistic-curve_svg.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAcpjpYx--LpXB5clmCYdqbYU2arWH99S6cA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				為了美麗的地面 邏輯迴歸分析 Logistic Regression
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://www-it.sci.waseda.ac.jp/teachers/w405201/CPR2/slide06.jpg" data-lightbox="roadtrip" data-title="Cプログラミング">
+						<img class="card-img" src="http://www-it.sci.waseda.ac.jp/teachers/w405201/CPR2/slide06.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTr40D-8GAnsKeXd7HD9_uMNXvsVjywiQHv-g';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Cプログラミング
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic.pimg.tw/altair6662/1584499752-3261389031.gif" data-lightbox="roadtrip" data-title="Optistruct要領 隱式非線性三大問題個個通關 Altair Taiwan Blog 痞客邦">
+						<img class="card-img" src="https://pic.pimg.tw/altair6662/1584499752-3261389031.gif" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRg0L3ue5FpyNbvxESrSEbQtacPpnbARYsaLA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Optistruct要領 隱式非線性三大問題個個通關 Altair Taiwan Blog 痞客邦
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://patentimages.storage.googleapis.com/4e/7a/16/2c11ce42e95684/JPOXMLDOC01-appb-M000008.png" data-lightbox="roadtrip" data-title="Wo2011129288a1 Terrestrial Magnetism Detection Device Google Patents">
+						<img class="card-img" src="https://patentimages.storage.googleapis.com/4e/7a/16/2c11ce42e95684/JPOXMLDOC01-appb-M000008.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQv_Q8p4RezjdwaI9G2U88BhNkh3rDo8XFXDw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Wo2011129288a1 Terrestrial Magnetism Detection Device Google Patents
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://pic.pimg.tw/altair6662/1584500128-1496249678_n.gif" data-lightbox="roadtrip" data-title="Optistruct要領 隱式非線性三大問題個個通關 Altair Taiwan Blog 痞客邦">
+						<img class="card-img" src="https://pic.pimg.tw/altair6662/1584500128-1496249678_n.gif" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJJRxVMc9XHcNFVd0z02zahZdMRUXgmgEY2A';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Optistruct要領 隱式非線性三大問題個個通關 Altair Taiwan Blog 痞客邦
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="mJ7mh_tX4_ZnuM" data-lightbox="roadtrip" data-title="2">
+						<img class="card-img" src="mJ7mh_tX4_ZnuM" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4ujYdC_59TXy_qO4-y3tmFJnE5pbtva0Yhw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				2
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+		
+	</div>
+
+		 
+		
+		
+				</div>
+				<div class="col-sm-12 widget">
+					<div class="d-block p-4">
+	<center>
+		<!-- BOTTOM BANNER ADS -->
+<script async="async" data-cfasync="false" src="//jc32arlvqpv8.com/eb47a424ae325c90cca32780149785c3/invoke.js"></script>
+<div id="container-eb47a424ae325c90cca32780149785c3"></div>
+
+	</center>
+</div>				</div>
+			</div>
+			<div class="row footer">
+				<div class="col-md-12 text-center py-4">
+										<a href="/p/dmca.html">Dmca</a>
+										<a href="/p/contact.html">Contact</a>
+										<a href="/p/privacy-policy.html">Privacy Policy</a>
+										<a href="/p/copyright.html">Copyright</a>
+					
+				</div>
+			</div>
+		</main>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js" integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js" integrity="sha256-CtKylYan+AJuoH8jrMht1+1PMhMqrKnB8K5g012WN5I=" crossorigin="anonymous"></script>
+		
+		<!-- Footer CSS JS -->
+		
+		
+		
+			<script type='text/javascript' src='//jc32arlvqpv8.com/ef/d5/10/efd510237a3143727bed46803ec35b8d.js'></script>
+</body>
+</html>

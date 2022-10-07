@@ -1,0 +1,682 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha256-L/W5Wfqfa0sdBNIKN9cG6QA5F2qx4qICmU2VgLruv9Y=" crossorigin="anonymous" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/css/lightbox.min.css" integrity="sha256-tBxlolRHP9uMsEFKVk+hk//ekOlXOixLKvye5W2WR5c=" crossorigin="anonymous" />
+		<link href="https://fonts.googleapis.com/css?family=Mr+Dafoe" rel="stylesheet" type="text/css">
+
+		<style type="text/css">
+			html,body{font-family:"Open Sans",Arial,sans-serif;font-size:14px;font-weight:400;background:#f3f3f3 url(http://help.solidworks.com/2014/japanese/SolidWorks/Cworks/doc1292870310745.image
+) no-repeat center center fixed;background-size:cover;height:100%}#title{font-family:"Mr Dafoe",Times,serif;font-size:34px;background:rgba(255,255,255,.8);margin-bottom:34px}.header{padding-bottom:13px;margin-bottom:13px;border-bottom:1px solid #eee}a{color:#26ADE4;text-decoration:none}#title a{color:#333;margin-left:21px}#title a:hover{text-decoration:none;color:#26ADE4}.sidebar ul{margin:0;padding:0}.sidebar ul li{list-style:none}.footer{margin-top:21px;padding-top:13px;border-top:1px solid #eee}.footer a{margin:0 15px}.navi{margin:13px 0 13px 0;padding:13px}.navi a{margin:5px 2px;font-size:95%}.main{margin-top: 6rem;}.form-inline .form-control{min-width: 300px;}.v-cover{height: 380px; object-fit: cover;}.v-image{height: 200px; object-fit: cover;}.dwn-cover{max-height: 460px; object-fit: cover;}.main{margin-top: 6rem;}.form-inline .form-control{min-width: 300px;}			
+		</style>
+
+		<title>粘弾性体モデル 方程式</title>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/", 
+  "@type": "Article", 
+  "author": {
+    "@type": "Person",
+    "name": "James"
+  },
+  "headline": "粘弾性体モデル 方程式",
+  "datePublished": "2021-04-24",
+  "image": [_qFxmRjv_w1p2M,http://www.ubm-rheology.co.jp/kouza/image/kiso03-img01.gif,http://www.ubm-rheology.co.jp/yougo/image/nendansei-04.gif],
+  "publisher": {
+    "@type": "Organization",
+    "name": "Tukang Parkir Gerobak",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://via.placeholder.com/512.png?text=粘弾性体モデル 方程式",
+      "width": 512,
+      "height": 512
+    }
+  }
+}
+</script>
+		<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-957NGNKQ70"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-957NGNKQ70');
+</script>
+
+<script type='text/javascript' src='//jc32arlvqpv8.com/1a/82/2e/1a822ef8a40a0fbab3c4ea12a5d2bb02.js'></script>
+</head>
+	<body>
+		<header class="bg-white fixed-top">			
+			<nav class="navbar navbar-light bg-white mb-0">
+				<div class="container justify-content-center justify-content-sm-between">	
+				  <a href="/" title="Blog" class="navbar-brand mb-1">Blog</a>
+				  				</div>			  
+			</nav>				
+		</header>
+		<main class="main container bg-white">
+			<div class="col-md-12 my-4" align="center">
+				<div class="d-block p-4">
+	<br/><center>
+<!-- TOP BANNER ADS -->
+</center><br/>
+</div>			</div>
+			<div class="row header">
+				<div class="col-sm-12 text-center p-2">
+						<h1>粘弾性体モデル 方程式</h1>
+
+	
+	<div class="navi text-center">
+										<a class="badge badge-dark" href="/%E8%A1%9D%E6%92%83%E3%81%AE%E3%83%A9%E3%82%B9%E3%83%88-24%E5%B9%B4%E5%89%8D%E3%81%AB%E9%9B%A2%E5%A9%9A%E3%81%97%E3%81%9F-%E3%81%9D%E3%81%AE%E3%81%A8%E3%81%8D%E7%BD%AE%E3%81%84%E3%81%A6%E3%81%8D%E3%81%9F%E5%BD%93%E6%99%82%E7%94%9F%E3%81%BE%E3%82%8C%E3%81%9F%E3%81%B0%E3%81%8B%E3%82%8A%E3%81%A0%E3%81%A3%E3%81%9F%E5%A8%98%E3%81%8B%E3%82%89-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%8C%E3%81%A9%E3%82%93%E3%81%AA%E4%BA%BA%E3%81%8B%E4%BC%9A%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F%E3%81%84-%E3%81%A8%E9%80%A3%E7%B5%A1%E3%81%8C%E3%81%82%E3%82%8A%E4%BC%9A%E3%81%86%E3%81%93%E3%81%A8.html">衝撃のラスト 24年前に離婚した そのとき置いてきた当時生まれたばかりだった娘から お父さんがどんな人か会ってみたい と連絡があり会うこと</a>
+											<a class="badge badge-danger" href="/%E6%AF%8D%E5%AD%90%E5%AE%B6%E5%BA%AD-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%A3%E3%81%A6%E3%81%AA%E3%81%AB.html">母子家庭 お父さんってなに</a>
+											<a class="badge badge-primary" href="/%E7%A5%9E%E5%87%BA%E9%AC%BC%E6%B2%A1-%E5%A8%98%E3%81%AE%E5%8F%8B%E9%81%94%E3%81%AE%E7%B5%B6%E5%80%ABjk%E3%81%AB%E7%8B%99%E3%82%8F%E3%82%8C%E3%81%9F%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93.html">神出鬼没 娘の友達の絶倫jkに狙われたお父さん</a>
+											<a class="badge badge-secondary" href="/%E6%AD%A9%E3%81%84%E3%81%A6%E3%81%84%E3%81%8F%E3%82%82%E3%82%93-%E5%B9%B8%E3%81%9B%E3%83%8E%E6%96%B9%E7%A8%8B%E5%BC%8F-%E3%82%A2%E3%83%B3%E3%82%B3%E3%83%BC%E3%83%AB.html">歩いていくもん 幸せノ方程式 アンコール</a>
+											<a class="badge badge-warning" href="/%E7%82%B9%E3%81%8B%E3%82%89%E5%BC%95%E3%81%84%E3%81%9F%E6%8E%A5%E7%B7%9A%E3%81%AE%E6%96%B9%E7%A8%8B%E5%BC%8F-3%E6%AC%A1%E9%96%A2%E6%95%B0.html">点から引いた接線の方程式 3次関数</a>
+											<a class="badge badge-success" href="/%E9%9F%93%E5%9B%BD%E3%83%89%E3%83%A9%E3%83%9E-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%E3%81%8C%E6%AD%BB%E3%82%93%E3%81%A0%E3%81%B5%E3%82%8A.html">韓国ドラマ お父さんが死んだふり</a>
+											<a class="badge badge-secondary" href="/%E7%AC%AC%E4%BA%8C%E3%83%AA%E3%83%83%E3%82%AB%E3%83%81%E6%96%B9%E7%A8%8B%E5%BC%8F-%E5%B0%8E%E5%87%BA.html">第二リッカチ方程式 導出</a>
+											<a class="badge badge-dark" href="/%E6%B5%81%E4%BD%93%E6%96%B9%E7%A8%8B%E5%BC%8F-%E7%A7%BB%E6%B5%81%E6%8B%A1%E6%95%A3%E6%96%B9%E7%A8%8B%E5%BC%8F-%E3%83%9D%E3%82%A2%E3%82%BD%E3%83%B3%E6%96%B9%E7%A8%8B%E5%BC%8F-%E3%82%B7%E3%83%9F%E3%83%A5%E3%83%AC%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E5%9F%BA%E7%A4%8E.html">流体方程式 移流拡散方程式 ポアソン方程式 シミュレーション基礎</a>
+											<a class="badge badge-info" href="/%E9%9B%A2%E6%95%A3-%E6%99%82%E9%96%93-%E3%83%AA%E3%82%A2%E3%83%97%E3%83%8E%E3%83%95-%E6%96%B9%E7%A8%8B%E5%BC%8F.html">離散 時間 リアプノフ 方程式</a>
+											<a class="badge badge-info" href="/%E6%9C%9D%E3%81%8C%E3%81%8D%E3%81%9F-%E3%81%B5%E3%82%86%E3%81%AE%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93.html">朝がきた ふゆのお父さん</a>
+											<a class="badge badge-success" href="/%E9%AD%94%E5%BC%BE-der-freischutz-pv-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93.html">魔弾 der freischutz pv お父さん</a>
+											<a class="badge badge-primary" href="/%E8%B5%A4%E3%81%A1%E3%82%83%E3%82%93-vs-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93-%E3%82%B2%E3%83%BC%E3%83%A0%E3%82%A2%E3%83%97%E3%83%AA.html">赤ちゃん vs お父さん ゲームアプリ</a>
+											<a class="badge badge-dark" href="/%E9%AC%BC%E5%A4%AA%E9%83%8E%E3%81%AE%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93-%E3%81%8A%E5%B0%BB.html">鬼太郎のお父さん お尻</a>
+											<a class="badge badge-secondary" href="/%E8%A6%9A%E3%81%88-%E3%81%A6%E3%82%8B-%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93-%E3%81%8A%E6%AF%8D%E3%81%95%E3%82%93-%E6%AD%8C%E8%A9%9E.html">覚え てる お父さん お母さん 歌詞</a>
+											<a class="badge badge-info" href="/%E7%9B%B4%E7%B7%9A%E3%81%AE%E6%96%B9%E7%A8%8B%E5%BC%8F-%E3%83%99%E3%82%AF%E3%83%88%E3%83%AB%E6%96%B9%E7%A8%8B%E5%BC%8F.html">直線の方程式 ベクトル方程式</a>
+						</div>
+<center>
+	<!-- MIDDLE BANNER ADS -->
+<script type="text/javascript">
+	atOptions = {
+		'key' : '2b77887421e2587a1a1b1d7c8a31a9e0',
+		'format' : 'iframe',
+		'height' : 250,
+		'width' : 300,
+		'params' : {}
+	};
+	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://jc32arlvqpv8.com/2b77887421e2587a1a1b1d7c8a31a9e0/invoke.js"></scr' + 'ipt>');
+</script>
+		
+	</center>
+					
+				</div>
+			</div>
+			<div class="row content mb-4">
+				<div class="col-md-12">					
+					
+	
+	<div class="card-columns">
+						
+	  <div class='card'>
+	  	<a href="https://info.ouj.ac.jp/~hamada/TextLib/rm/chap10/Figure/Cr99af05.jpg" data-lightbox="roadtrip" data-title="3 粘弾性">
+						<img class="card-img" src="https://info.ouj.ac.jp/~hamada/TextLib/rm/chap10/Figure/Cr99af05.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJrqZI91W7k622OLhpDqxSilQO7uVs46BUXpdYKKqUYs8Ig2FeYvi89WxbiZLgd0s6lKo';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				3 粘弾性
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.terrabyte.co.jp/discover/wp-content/uploads/2019/12/20191217_02_01.jpg" data-lightbox="roadtrip" data-title="樹脂成形とレオロジー 第5回 粘弾性体のモデル化 Discover Cae">
+						<img class="card-img" src="https://www.terrabyte.co.jp/discover/wp-content/uploads/2019/12/20191217_02_01.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqJzdaWiDDiSwzEPaKi-IoNAdDTwYKj1WOk7eECBiAH1RZ0UqdKVmEEROUozJCcycLZ_Q';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				樹脂成形とレオロジー 第5回 粘弾性体のモデル化 Discover Cae
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://info.ouj.ac.jp/~hamada/TextLib/rm/chap10/Figure/Cr99af06.jpg" data-lightbox="roadtrip" data-title="3 粘弾性">
+						<img class="card-img" src="https://info.ouj.ac.jp/~hamada/TextLib/rm/chap10/Figure/Cr99af06.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9sUcCR8HpHH67HMfJnF9z0SKZ9GQXWOBIE11Yx_5k8LvSrTLYxRWNJcFhoxZd74pm-5A';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				3 粘弾性
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.terrabyte.co.jp/discover/wp-content/uploads/2019/12/20191217_03_01.jpg" data-lightbox="roadtrip" data-title="樹脂成形とレオロジー 第5回 粘弾性体のモデル化 Discover Cae">
+						<img class="card-img" src="https://www.terrabyte.co.jp/discover/wp-content/uploads/2019/12/20191217_03_01.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQX4Tzpzsbx7fJI9ZRTzg63tIihso-JBxU8S9O6Y8yRUAvvLhwZ23ByiTgB0Pzi0kyqE1M';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				樹脂成形とレオロジー 第5回 粘弾性体のモデル化 Discover Cae
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.terrabyte.co.jp/discover/wp-content/uploads/2019/12/20191217_12_01.jpg" data-lightbox="roadtrip" data-title="樹脂成形とレオロジー 第5回 粘弾性体のモデル化 Discover Cae">
+						<img class="card-img" src="https://www.terrabyte.co.jp/discover/wp-content/uploads/2019/12/20191217_12_01.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSl49d46PY-Rmawe_lcGvUwlvRghFvzIn0P4wpV2hNcrX063rvCdjTlcoENUW_MeNuBjxw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				樹脂成形とレオロジー 第5回 粘弾性体のモデル化 Discover Cae
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://hr-inoue.net/zscience/topics/viscoelastic/vefig01.gif" data-lightbox="roadtrip" data-title="雑科学ノート 粘弾性の話">
+						<img class="card-img" src="https://hr-inoue.net/zscience/topics/viscoelastic/vefig01.gif" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWpmMdfIbjefZDhcUKpKtqVeBUjgiQSNihT7ONOLdC2pyZfBi-dj8HWS78dR_Spfv0y-8';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				雑科学ノート 粘弾性の話
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+				<div class='card'>	
+			<div class="d-block p-4">
+	</div>		  	
+		  	<h3 class="h6 p-2"><b></b></h3>
+					</div>
+		
+						
+	  <div class='card'>
+	  	<a href="_qFxmRjv_w1p2M" data-lightbox="roadtrip" data-title="Https Home Hiroshima U Ac Jp Shinpei Slide Pdf">
+						<img class="card-img" src="_qFxmRjv_w1p2M" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQo1CWJDdzn8bivZcICLRfi04b3rYdEJ5k-IM-4ay4EyRUT_TO2NJzpyOgj9yrSys2Tgw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Https Home Hiroshima U Ac Jp Shinpei Slide Pdf
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://tktmyd.github.io/OpenSWPC/fig/gzb.png" data-lightbox="roadtrip" data-title="粘弾性体 Openswpc">
+						<img class="card-img" src="https://tktmyd.github.io/OpenSWPC/fig/gzb.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROkK8aUXiavW3TXIKHZoLk4BOWa9fwmBoVFMp10rabYaxQl7Zh1hgfLFsIBoCM84lVlVE';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				粘弾性体 Openswpc
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://tktmyd.github.io/OpenSWPC/fig/qinv.png" data-lightbox="roadtrip" data-title="粘弾性体 Openswpc">
+						<img class="card-img" src="https://tktmyd.github.io/OpenSWPC/fig/qinv.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHQYiGG9dLOtK6zrW7J5KOtJHQAy703l-mSdvpwQZwuFEyIDVWDGf869ssk0PbCsM6628';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				粘弾性体 Openswpc
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://hr-inoue.net/zscience/topics/viscoelastic/vefig02.gif" data-lightbox="roadtrip" data-title="雑科学ノート 粘弾性の話">
+						<img class="card-img" src="https://hr-inoue.net/zscience/topics/viscoelastic/vefig02.gif" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrRggRr4Sf5Vn7N4rDLodT1-dKgcLrLWDPq6zPLck4ZLeS303BB7ixgo3u1AajglEDjJk';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				雑科学ノート 粘弾性の話
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://astamuse.com/ja/drawing/JP/990/85/829/A/000035.png" data-lightbox="roadtrip" data-title="1999 085829号 粘弾性体を含む構造物の振動解析方法及び記録媒体 Astamuse">
+						<img class="card-img" src="https://astamuse.com/ja/drawing/JP/990/85/829/A/000035.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWfONJmq8zy6Y7R0XMgSKWNu3AW5gWXoJBKoxyVbDMdUucynOGmDAeA-G3LXsLc7ymVr4';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				1999 085829号 粘弾性体を含む構造物の振動解析方法及び記録媒体 Astamuse
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.tatourui.com/wp-content/uploads/2016/01/eea38d1c9736dbb27fdbd165a9b1cd6d.png" data-lightbox="roadtrip" data-title="測定手法のお話 粘弾性測定の実際 その1 多糖類 Com Dsp五協フード ケミカル">
+						<img class="card-img" src="https://www.tatourui.com/wp-content/uploads/2016/01/eea38d1c9736dbb27fdbd165a9b1cd6d.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSL66vFYOClJDMBtZ1fEitiHt2II0bWXMo5kn2btyCu0e1RuuS7S8fUdI7ZrSTUzbCSurA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				測定手法のお話 粘弾性測定の実際 その1 多糖類 Com Dsp五協フード ケミカル
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://livedoor.blogimg.jp/aucu/imgs/d/c/dcd4b4c3.jpg" data-lightbox="roadtrip" data-title="応力緩和とクリープの基本 Creative Materials Science">
+						<img class="card-img" src="https://livedoor.blogimg.jp/aucu/imgs/d/c/dcd4b4c3.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEIqIXymauBsiHzXBMqUG2gtmKcyWGuvM0Dk9hp3RWc_RvVEo4gRSuDFX0ocNcylhTfKQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				応力緩和とクリープの基本 Creative Materials Science
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.cybernet.co.jp/ansys/images/download/mn/201409/mcmnp201411-0131/fig01.jpg" data-lightbox="roadtrip" data-title="粘弾性モデルの基礎 前編 有限要素法マルチフィジックス解析ツール Ansys サイバネット">
+						<img class="card-img" src="https://www.cybernet.co.jp/ansys/images/download/mn/201409/mcmnp201411-0131/fig01.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTi4Pb1c9VG8SHHnGMkCNzGrvStJB-A0yIwyInu4yb7Fwf_-Q1TwE0ONC_3Y21f10TbcpU';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				粘弾性モデルの基礎 前編 有限要素法マルチフィジックス解析ツール Ansys サイバネット
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.terrabyte.co.jp/discover/wp-content/uploads/2020/01/20200116_04_11.jpg" data-lightbox="roadtrip" data-title="樹脂成形とレオロジー 第6回 緩和弾性率の表わし方と時間 温度換算則 Discover Cae">
+						<img class="card-img" src="https://www.terrabyte.co.jp/discover/wp-content/uploads/2020/01/20200116_04_11.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJH0qPfKxN90sGfoeWlTHCdagfHMx8dRiX8-20-qTjli5Yzkknhnls3CdjWDt6R9WHZm0';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				樹脂成形とレオロジー 第6回 緩和弾性率の表わし方と時間 温度換算則 Discover Cae
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://help.solidworks.com/2014/japanese/SolidWorks/Cworks/doc1292870310745.image" data-lightbox="roadtrip" data-title="2014 Solidworks 粘弾性モデル">
+						<img class="card-img" src="http://help.solidworks.com/2014/japanese/SolidWorks/Cworks/doc1292870310745.image" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfKWmqtomXeVyS-dP9sDj3P1wLuUatWtFBAIA7nUdywMc69sUifPPMKqWTdBgmW_99gX8';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				2014 Solidworks 粘弾性モデル
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://livedoor.blogimg.jp/aucu/imgs/f/a/fa18bb92.jpg" data-lightbox="roadtrip" data-title="応力緩和とクリープの基本 Creative Materials Science">
+						<img class="card-img" src="http://livedoor.blogimg.jp/aucu/imgs/f/a/fa18bb92.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSex9F7AmIdkgcex9yRh1PLywREnc0Sr9piU73CWWQtIi7B7-JkSIVd-6suvRDvPuu3YW8';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				応力緩和とクリープの基本 Creative Materials Science
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://4.bp.blogspot.com/--RMlNsj5ml4/WhUSmt8oz1I/AAAAAAAAJPQ/4AS5hEXluLQ9wknCQSe71RCKKcKbk9qbwCLcBGAs/s1600/%25E5%259B%25B3%25EF%25BC%2594%25EF%25BC%258D%25EF%25BC%2591.jpg" data-lightbox="roadtrip" data-title="ポンコツ寸前 西川式微分方程式４章">
+						<img class="card-img" src="https://4.bp.blogspot.com/--RMlNsj5ml4/WhUSmt8oz1I/AAAAAAAAJPQ/4AS5hEXluLQ9wknCQSe71RCKKcKbk9qbwCLcBGAs/s1600/%25E5%259B%25B3%25EF%25BC%2594%25EF%25BC%258D%25EF%25BC%2591.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTWotelXaheYfEc9ua63Bbkv9x9IKNMFtLoxvd_yOkplrHkPdVnhuz1uUbhvQqNFtaI5U';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				ポンコツ寸前 西川式微分方程式４章
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://www.ubm-rheology.co.jp/kouza/image/kiso02-img01.gif" data-lightbox="roadtrip" data-title="粘弾性基礎講座 第2回 クリープと応力緩和 株式会社ユービーエム">
+						<img class="card-img" src="http://www.ubm-rheology.co.jp/kouza/image/kiso02-img01.gif" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrQ71Z0uJusws93tXh_4jgsvVN40Tqx6ClXKQ3obeXQEjsmTiqOcS32Wwo26oRA3hB5fo';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				粘弾性基礎講座 第2回 クリープと応力緩和 株式会社ユービーエム
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.cybernet.co.jp/ansys/images/case/lesson/021/fig09.jpg" data-lightbox="roadtrip" data-title="粘弾性モデルの基礎 後編 有限要素法マルチフィジックス解析ツール Ansys サイバネット">
+						<img class="card-img" src="https://www.cybernet.co.jp/ansys/images/case/lesson/021/fig09.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeDljVMOx9HJHoVbhqeICNdXCBSdXP23qB00AZBSPBYblNgS3i07mwuHwwhMcRN_IRlxM';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				粘弾性モデルの基礎 後編 有限要素法マルチフィジックス解析ツール Ansys サイバネット
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.terrabyte.co.jp/discover/wp-content/uploads/2020/02/20200214_03_02_01.jpg" data-lightbox="roadtrip" data-title="樹脂成形とレオロジー 第7回 Die Swellの基礎と無次元数 Discover Cae">
+						<img class="card-img" src="https://www.terrabyte.co.jp/discover/wp-content/uploads/2020/02/20200214_03_02_01.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQr_HHkCRiGDJQA9X5-H2uRFzwTX6kI8rbawQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				樹脂成形とレオロジー 第7回 Die Swellの基礎と無次元数 Discover Cae
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://www.ubm-rheology.co.jp/kouza/image/kiso03-img01.gif" data-lightbox="roadtrip" data-title="粘弾性基礎講座 第3回 遅延時間と緩和時間 株式会社ユービーエム">
+						<img class="card-img" src="http://www.ubm-rheology.co.jp/kouza/image/kiso03-img01.gif" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8vw6ufGsuISR_1mptnKrqdEoe0Xb1ZBtGdw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				粘弾性基礎講座 第3回 遅延時間と緩和時間 株式会社ユービーエム
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.cybernet.co.jp/ansys/images/case/lesson/012/fig03.jpg" data-lightbox="roadtrip" data-title="ゴムの実挙動とそのモデル化 有限要素法マルチフィジックス解析ツール Ansys サイバネット">
+						<img class="card-img" src="https://www.cybernet.co.jp/ansys/images/case/lesson/012/fig03.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQx5qJ8hL9ORa1fyXoQEkw3C45zyBbNzC7o7A';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				ゴムの実挙動とそのモデル化 有限要素法マルチフィジックス解析ツール Ansys サイバネット
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://oshiete.xgoo.jp/_/bucket/oshietegoo/images/media/7/542304644_56d0fe51a9231/M.jpg" data-lightbox="roadtrip" data-title="静的粘弾性について 図のように示す三要素のモデル １ 運動方程式 その他 教育 科学 学問 教えて Goo">
+						<img class="card-img" src="https://oshiete.xgoo.jp/_/bucket/oshietegoo/images/media/7/542304644_56d0fe51a9231/M.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-Jd1FVUZjWVuX3BgTInW7iWSLHIk_0HwpGA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				静的粘弾性について 図のように示す三要素のモデル １ 運動方程式 その他 教育 科学 学問 教えて Goo
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="/search?q=%E3%83%95%E3%82%A9%E3%83%BC%E3%82%AF%E3%83%88%E3%83%A2%E3%83%87%E3%83%AB&amp;tbm=isch" data-lightbox="roadtrip" data-title="Https Encrypted Tbn0 Gstatic Com Images Q Tbn And9gcqnpk47l5 Ufrss3mtih2wdpx2ybpdksh Zqjg6yrl1nzojx Xo Usqp Cau">
+						<img class="card-img" src="/search?q=%E3%83%95%E3%82%A9%E3%83%BC%E3%82%AF%E3%83%88%E3%83%A2%E3%83%87%E3%83%AB&amp;tbm=isch" onerror="this.onerror=null;this.src='/search?q=%E3%83%95%E3%82%A9%E3%83%BC%E3%82%AF%E3%83%88%E3%83%A2%E3%83%87%E3%83%AB&amp;tbm=isch';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Https Encrypted Tbn0 Gstatic Com Images Q Tbn And9gcqnpk47l5 Ufrss3mtih2wdpx2ybpdksh Zqjg6yrl1nzojx Xo Usqp Cau
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="_qFxmRjv_w1p2M" data-lightbox="roadtrip" data-title="Https Home Hiroshima U Ac Jp Shinpei Slide Pdf">
+						<img class="card-img" src="_qFxmRjv_w1p2M" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8ZZXASpKdgPuqf8P4YI6m_blrI8hnqKYdmQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Https Home Hiroshima U Ac Jp Shinpei Slide Pdf
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://astamuse.com/ja/drawing/JP/990/85/829/A/000002.png" data-lightbox="roadtrip" data-title="1999 085829号 粘弾性体を含む構造物の振動解析方法及び記録媒体 Astamuse">
+						<img class="card-img" src="https://astamuse.com/ja/drawing/JP/990/85/829/A/000002.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCpKidw3w1GGHRRduLrg9Yr28oDjlIzVbocw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				1999 085829号 粘弾性体を含む構造物の振動解析方法及び記録媒体 Astamuse
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://d1xtoaz9r71c9d.cloudfront.net/wp-content/uploads/2020/10/30165651/fdfde31d80b8a26ebb6a08149bd3ff12.jpg" data-lightbox="roadtrip" data-title="プラスチックはなぜ粘弾性を示すのか プラスチックの強度 ３">
+						<img class="card-img" src="https://d1xtoaz9r71c9d.cloudfront.net/wp-content/uploads/2020/10/30165651/fdfde31d80b8a26ebb6a08149bd3ff12.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdm3zFfL1jHTrhoZEr24DMY6ao75q1B9JZfg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				プラスチックはなぜ粘弾性を示すのか プラスチックの強度 ３
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://www.ubm-rheology.co.jp/yougo/image/nendansei-04.gif" data-lightbox="roadtrip" data-title="用語集 粘弾性 株式会社ユービーエム">
+						<img class="card-img" src="http://www.ubm-rheology.co.jp/yougo/image/nendansei-04.gif" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYyTQ3EOueDy3Nv17e0aGz3NKB2D2NeU5pHg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				用語集 粘弾性 株式会社ユービーエム
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.thermofisher.com/blog/wp-content/uploads/sites/13/2019/07/viscoelasticity-basic1-fig3.jpg" data-lightbox="roadtrip" data-title="初心者必見 粘弾性と動的粘弾性測定の基礎 Learning At The Bench">
+						<img class="card-img" src="https://www.thermofisher.com/blog/wp-content/uploads/sites/13/2019/07/viscoelasticity-basic1-fig3.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnDKTzgPxwveMw-FynCIW3r9nQA1dSiCpRXw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				初心者必見 粘弾性と動的粘弾性測定の基礎 Learning At The Bench
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.terrabyte.co.jp/discover/wp-content/uploads/2019/12/20191217_01_01-700x410.jpg" data-lightbox="roadtrip" data-title="樹脂成形とレオロジー 第5回 粘弾性体のモデル化 Discover Cae">
+						<img class="card-img" src="https://www.terrabyte.co.jp/discover/wp-content/uploads/2019/12/20191217_01_01-700x410.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLHGoE8dc8XpAF5ZoMU13CrPdSrLuKHirXsg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				樹脂成形とレオロジー 第5回 粘弾性体のモデル化 Discover Cae
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://astamuse.com/ja/drawing/JP/990/85/829/A/000029.png" data-lightbox="roadtrip" data-title="1999 085829号 粘弾性体を含む構造物の振動解析方法及び記録媒体 Astamuse">
+						<img class="card-img" src="https://astamuse.com/ja/drawing/JP/990/85/829/A/000029.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxg44u77QZ8AdSYYzkm5ySUYdwl8L-vxdVCg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				1999 085829号 粘弾性体を含む構造物の振動解析方法及び記録媒体 Astamuse
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://kotobank.jp/image/dictionary/housoku/f00000654.jpg" data-lightbox="roadtrip" data-title="マクスウェルの方程式 粘弾性 とは コトバンク">
+						<img class="card-img" src="https://kotobank.jp/image/dictionary/housoku/f00000654.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQl12iMH_mQBNAYKB9oGBzq4IsK37_2nMwCng';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				マクスウェルの方程式 粘弾性 とは コトバンク
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+		
+	</div>
+
+		 
+		
+		
+				</div>
+				<div class="col-sm-12 widget">
+					<div class="d-block p-4">
+	<center>
+		<!-- BOTTOM BANNER ADS -->
+<script async="async" data-cfasync="false" src="//jc32arlvqpv8.com/eb47a424ae325c90cca32780149785c3/invoke.js"></script>
+<div id="container-eb47a424ae325c90cca32780149785c3"></div>
+
+	</center>
+</div>				</div>
+			</div>
+			<div class="row footer">
+				<div class="col-md-12 text-center py-4">
+										<a href="/p/dmca.html">Dmca</a>
+										<a href="/p/contact.html">Contact</a>
+										<a href="/p/privacy-policy.html">Privacy Policy</a>
+										<a href="/p/copyright.html">Copyright</a>
+					
+				</div>
+			</div>
+		</main>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js" integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js" integrity="sha256-CtKylYan+AJuoH8jrMht1+1PMhMqrKnB8K5g012WN5I=" crossorigin="anonymous"></script>
+		
+		<!-- Footer CSS JS -->
+		
+		
+		
+			<script type='text/javascript' src='//jc32arlvqpv8.com/ef/d5/10/efd510237a3143727bed46803ec35b8d.js'></script>
+</body>
+</html>
